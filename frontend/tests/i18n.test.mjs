@@ -15,7 +15,7 @@ test('the complete analysis workflow has translated UI labels', () => {
     assert.notEqual(translateText(label, 'en'), label);
     assert.equal(translateText(label, 'zh'), label);
   }
-  assert.equal(translateText('模型分析语言：中文', 'en'), 'AI analysis: Chinese');
+  assert.equal(translateText('模型分析语言：中文', 'en'), 'AI analysis: English');
 });
 test('dynamic timestamps, measured delays and counts retain their values', () => {
   assert.equal(translateText('历史库 3,959 条', 'en'), 'Archive: 3,959 articles');

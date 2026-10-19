@@ -435,6 +435,11 @@ def prepare_context(context: dict, detail: bool = False, reserve_tokens: int = 0
     source_index.extend(_source(row, f"E{index}") for index, row in enumerate(events, 1))
     all_urls = {row["alias"]: row for row in source_index}
     price = _price_known(copy.deepcopy(context.get("price_reference") or {}), as_of, notes)
+    # The immutable snapshot keeps the full quote and source URL. The model
+    # needs its value and two clocks, not duplicated venue/contract metadata.
+    if isinstance(price, dict) and isinstance(price.get('intraday'), dict):
+        quote = price['intraday']
+        price['intraday'] = {key:quote[key] for key in ('value','observed_at','available_at','price_type','minimum_delay_minutes','stale') if key in quote}
     system = system_prompt(detail)
     selected = None
     # The triggering news always receives a protected 300-token fact budget.

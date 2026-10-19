@@ -17,7 +17,8 @@ async function snapshot<T>(path: string): Promise<T> {
   let file: string;
   if (route === 'news') file = `news/${url.searchParams.get('scope') || 'recent'}.json`;
   else if (/^analyses\/[A-Za-z0-9_.-]+$/.test(route)) file = `${route}.json`;
-  else if (['health', 'dashboard', 'events', 'coverage', 'monitoring'].includes(route)) file = `${route}.json`;
+  else if (/^analyses\/[A-Za-z0-9_.-]+\/translation$/.test(route)) file = `${route.replace('/translation', '')}.en.${url.searchParams.get('part') === 'detail' ? 'detail' : 'brief'}.json`;
+  else if (['health', 'dashboard', 'events', 'coverage', 'monitoring', 'market'].includes(route)) file = `${route}.json`;
   else throw new Error('当前快照没有这项记录；需要连接实时后端。');
   if (!snapshotCache.has(file)) snapshotCache.set(file, fetch(`${snapshotBase}${file}`).then(async r => {
     if (!r.ok) throw new Error('当前快照没有这项记录；需要连接实时后端。');

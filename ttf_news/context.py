@@ -86,7 +86,10 @@ def price_context(store, as_of: str) -> dict:
     complete_history = len(pairs)==60 and all(next_day(date.fromisoformat(a['day'])).isoformat()==b['day'] for a,b in pairs)
     deltas = [b["value"]-a["value"] for a,b in pairs] if complete_history else []
     last = same[-1]
+    from .market import known_quote
+    intraday = known_quote(store, contract, as_of)
     return {"available":True,"contract":contract,"contract_name":last.get("contract_name",last.get('contract_label',contract)),"price_type":last["price_type"],
+        "intraday":intraday,
         "verified":bool(last.get("verified",False)),"previous_price":last["value"],"price_date":last["day"],"reference_source":last.get("provider",last.get("source","DBnomics ICE")),"source_url":last.get('source_url'),
         "extreme_threshold":threshold(deltas),"sigma60":statistics.stdev(deltas[-60:]) if len(deltas)>=60 else None,
         "threshold_frozen_as_of":as_of,"flat_delta":0.30,"observation_count":len(same),

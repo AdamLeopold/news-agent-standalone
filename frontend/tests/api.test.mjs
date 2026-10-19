@@ -60,3 +60,22 @@ test('Offline manual analysis reports unavailable instead of inventing an analys
     assert.deepEqual(calls, ['https://api.example.test/api/manual/analyze']);
   } finally {globalThis.fetch = saved;}
 });
+
+test('offline English versions and market data use dated cached files', async () => {
+  const saved = globalThis.fetch;
+  globalThis.window = Object.assign(new EventTarget(), {location: {origin: 'https://adamleopold.github.io'}});
+  const paths = [];
+  globalThis.fetch = async url => {
+    if (url.startsWith('https://api.example.test')) throw new Error('offline');
+    paths.push(url);
+    if (url.endsWith('manifest.json')) return Response.json({captured_at:'2026-10-19T09:00:00Z'});
+    if (url.endsWith('market.json')) return Response.json({available:true, quote:{value:88.9}});
+    return Response.json({status:'completed',result:{analysis:{summary:'Verified English version'}}});
+  };
+  try {
+    const api = await loadApi();
+    assert.equal((await api.request('/api/analyses/existing/translation?part=detail')).result.analysis.summary, 'Verified English version');
+    assert.equal((await api.request('/api/market')).quote.value, 88.9);
+    assert.ok(paths.includes('/news-agent-standalone/snapshot/analyses/existing.en.detail.json'));
+  } finally {globalThis.fetch = saved;}
+});

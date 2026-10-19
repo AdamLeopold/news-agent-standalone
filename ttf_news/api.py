@@ -47,7 +47,9 @@ def create_app(store: Store | None = None, analyst=None, workers: bool = True) -
         tasks = []
         if workers:
             from .runtime import inference_worker,collection_worker,maintenance_worker
+            from .market import market_worker
             tasks.append(asyncio.create_task(inference_worker(store,analyst)))
+            tasks.append(asyncio.create_task(market_worker(store)))
             if os.environ.get("TTF_NEWS_COLLECT","1") != "0":
                 tasks.append(asyncio.create_task(collection_worker(store)))
                 tasks.append(asyncio.create_task(maintenance_worker(store)))
@@ -92,6 +94,11 @@ def create_app(store: Store | None = None, analyst=None, workers: bool = True) -
         events = store.retrieve_events(" ".join(str(n.get("title","")) for n in articles),now)
         return {"session":session,"daily":aggregate(articles),"latest_analysis":store.latest_analysis(trade_date=session["trade_date"],completed_only=True,live_only=True),
             "important_events":events,"coverage":{"counts":store.counts(),"sources":store.sources()},"price_reference":price_context(store,now),"monitoring":monitoring_report(store)}
+
+    @app.get('/api/market')
+    def market_data():
+        from .market import market_view
+        return market_view(store)
 
     def news_with_analysis(n):
         analysis = store.latest_analysis(news_id=n["id"])
@@ -142,6 +149,31 @@ def create_app(store: Store | None = None, analyst=None, workers: bool = True) -
             raise HTTPException(404,"Analysis not found")
         except ValueError as exc:
             raise HTTPException(409,str(exc))
+
+    @app.post('/api/analyses/{identifier}/translation',status_code=202)
+    def translate_record(identifier: str, part: str='brief', retry: bool=False):
+        try:
+            return store.request_translation(identifier,part=part,retry=retry)
+        except KeyError:
+            raise HTTPException(404,'Analysis not found')
+        except ValueError as exc:
+            raise HTTPException(409,str(exc))
+
+    @app.get('/api/analyses/{identifier}/translation')
+    def cached_translation(identifier: str, part: str='brief'):
+        try:
+            return store.cached_translation(identifier, part) or {'status': 'not_requested'}
+        except KeyError:
+            raise HTTPException(404, 'Analysis not found')
+        except ValueError as exc:
+            raise HTTPException(422, str(exc))
+
+    @app.get('/api/translations/{identifier}')
+    def translation_status(identifier: str):
+        data=store.translation_record(identifier)
+        if not data:
+            raise HTTPException(404,'Translation not found')
+        return data
 
     @app.get("/api/events")
     def events(limit:int=100):

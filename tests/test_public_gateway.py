@@ -70,3 +70,14 @@ def test_invalid_origin_oversized_body_and_full_model_queue_do_not_reach_backend
         assert client.post('/api/manual/analyze', headers={'Origin': ORIGIN}, content=b'x'*(MAX_BODY+1)).status_code == 413
         assert client.post('/api/manual/analyze', headers={'Origin': ORIGIN}, json={}).status_code == 429
     assert not calls
+
+
+def test_market_and_english_versions_use_application_allowlist():
+    app,calls=fixture_gateway()
+    with TestClient(app) as client:
+        assert client.get('/api/market').status_code==200
+        assert client.get('/api/analyses/sample/translation?part=detail').status_code==200
+        assert client.post('/api/analyses/sample/translation?part=brief',json={},headers={'Origin':ORIGIN}).status_code==202
+        assert client.get('/api/translations/cached').status_code==200
+        assert client.get('/proxy/trading/v1/quoteHistory').status_code==404
+        assert client.post('/api/chat',json={},headers={'Origin':ORIGIN}).status_code==404

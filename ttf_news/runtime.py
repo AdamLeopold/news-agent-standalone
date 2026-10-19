@@ -39,18 +39,32 @@ async def inference_worker(store, analyst):
         if not job:
             await asyncio.sleep(1)
             continue
-        record = store.analysis(job["analysis_id"],include_input=True)
         started = time.monotonic()
         try:
-            result = await analyst.analyze(record["input_snapshot"],detail=job["kind"]=="detail")
+            if job['kind']=='translation':
+                from .translation import translate_analysis, source_hash
+                translated=store.translation_record(job['analysis_id'])
+                record=store.analysis(translated['analysis_id'])
+                original=record['detail_result' if translated['part']=='detail' else 'result']
+                if source_hash(original)!=translated['source_hash']:
+                    raise ValueError('Source analysis changed; request a new English version')
+                result=await translate_analysis(analyst,original)
+            else:
+                record = store.analysis(job["analysis_id"],include_input=True)
+                result = await analyst.analyze(record["input_snapshot"],detail=job["kind"]=="detail")
             store.finish_job(job,result=result)
-            store.metric("model_success",{"analysis_id":record["id"],"kind":job["kind"],"seconds":round(time.monotonic()-started,3),"model_metadata":result.get("_meta",{})})
+            store.metric("translation_success" if job['kind']=='translation' else "model_success",{"analysis_id":record["id"],"kind":job["kind"],"seconds":round(time.monotonic()-started,3),"model_metadata":result.get("_meta",{})})
+            if job['kind']=='short' and record['kind']=='live':
+                try:
+                    store.request_translation(record['id'])
+                except Exception as exc:
+                    store.metric('translation_enqueue_failure',{'analysis_id':record['id'],'error':str(exc)[:300]})
         except asyncio.CancelledError:
             raise
         except Exception as exc:
             message = str(exc)[:1800]
             store.finish_job(job,error=message)
-            store.metric("model_failure",{"analysis_id":record["id"],"kind":job["kind"],"seconds":round(time.monotonic()-started,3),"error":message})
+            store.metric("translation_failure" if job['kind']=='translation' else "model_failure",{"analysis_id":job["analysis_id"],"kind":job["kind"],"seconds":round(time.monotonic()-started,3),"error":message})
             log.exception("Model job failed")
 
 

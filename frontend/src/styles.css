@@ -580,3 +580,109 @@ form textarea {width: 100%; padding: 13px 12px; font-size: 12px; line-height: 1.
   .coverage-sources {grid-template-columns: 1fr;}
 }
 @media (prefers-reduced-motion: reduce) {*, *::before, *::after {animation: none !important; transition: none !important; scroll-behavior: auto !important;}}
+
+/* Follow actual price/feed updates with lightweight, reduced-motion-aware transitions. */
+html {scroll-behavior: smooth;}
+.price-market-panel {margin: 0 0 22px; overflow: hidden; background: radial-gradient(ellipse at 90% 0, color-mix(in srgb, var(--accent) 5%, transparent), transparent 65%), var(--surface);}
+.price-market-heading {padding: 22px 24px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px;}
+.price-market-heading h2 {margin: 8px 0 0; font-size: 19px; font-weight: 550; letter-spacing: -.4px; display: flex; align-items: baseline; gap: 14px;}
+.price-market-heading h2 > span {font: 500 12px ui-monospace, monospace; color: var(--muted); letter-spacing: 0;}
+.price-market-heading h2 small {font-size: 10px; font-weight: 400;}
+.market-delay {display: inline-flex; align-items: center; gap: 7px; font-size: 9px; letter-spacing: .7px; color: var(--muted); white-space: nowrap;}
+.market-delay i {height: 5px; width: 5px; border-radius: 50%; background: #dfb675; box-shadow: 0 0 9px #dfb67535;}
+.quote-row {display: flex; align-items: end; justify-content: space-between; gap: 18px; padding: 20px 24px 23px;}
+.quote-value {display: flex; align-items: center; gap: 18px; font-variant-numeric: tabular-nums;}
+.positive {color: var(--accent);}
+.negative {color: var(--down);}
+.quote-value > strong {font: 450 clamp(30px, 3vw, 43px)/1.15 Inter, sans-serif; letter-spacing: -1.8px; color: var(--title); animation: quote-arrive .4s ease-out;}
+.quote-value b {font-size: 12px; font-weight: 500;}
+.quote-value b span {opacity: .8;}
+.quote-value small, .quote-clock small {display: block; margin-top: 5px; font-size: 9px; color: var(--muted);}
+.quote-clock {text-align: right; font-size: 10px; color: var(--muted);}
+.quote-clock strong {display: block; margin-top: 5px; font-size: 11px; color: var(--text); font-weight: 500; font-variant-numeric: tabular-nums;}
+.chart-controls {display: flex; align-items: center; gap: 5px; padding: 0 24px; border-bottom: 1px solid var(--border-subtle);}
+.chart-controls button {position: relative; border: 0; border-radius: 7px 7px 0 0; background: transparent; padding: 11px 12px 13px; font-size: 11px; color: var(--muted); transition: color .2s ease, background .2s ease;}
+.chart-controls button small {font-size: 8px; letter-spacing: .4px; margin-left: 8px; opacity: .7;}
+.chart-controls button::after {content: ''; position: absolute; left: 12px; right: 12px; bottom: -1px; height: 2px; background: var(--accent); transform: scaleX(0); transition: transform .25s ease;}
+.chart-controls button.active {color: var(--title); background: color-mix(in srgb, var(--accent) 4%, transparent);}
+.chart-controls button.active::after {transform: scaleX(1);}
+.chart-controls > span {margin-left: auto; color: var(--muted); font-size: 9px;}
+.chart-body {min-height: 285px;}
+.intraday-chart {padding: 18px 24px 16px; animation: chart-arrive .45s ease-out;}
+.chart-topline, .chart-time-axis {display: flex; justify-content: space-between; align-items: center; font-size: 9px; color: var(--muted); font-variant-numeric: tabular-nums; gap: 10px;}
+.chart-topline {height: 20px; margin-bottom: 8px;}
+.chart-topline > span:first-child {color: var(--text);}
+.intraday-chart svg {width: 100%; height: 213px; display: block; overflow: visible; touch-action: pan-y;}
+.chart-gridline {stroke: var(--border-subtle); stroke-dasharray: 3 6;}
+.chart-price-line {stroke-linejoin: round; stroke-linecap: round;}
+.chart-crosshair {stroke: var(--muted); stroke-dasharray: 4 4; opacity: .6;}
+.chart-time-axis {margin-top: 10px;}
+.chart-time-axis span:nth-child(2) {font-size: 8px; opacity: .75;}
+.chart-source-note {padding: 12px 24px 15px; border-top: 1px solid var(--border-subtle); display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; color: var(--muted); font-size: 9px; line-height: 1.8;}
+.chart-source-note a, .chart-source-note strong {color: var(--text); font-size: 10px; font-weight: 500;}
+.chart-source-note small {margin-left: auto; font-size: 8px;}
+.chart-empty {min-height: 285px; display: grid; place-content: center; padding: 28px; text-align: center; color: var(--muted); font-size: 12px;}
+.market-stale {padding: 9px 24px; color: var(--down); font-size: 10px; background: var(--down-bg); line-height: 1.7;}
+.daily-candles {height: 350px; width: 100%; animation: chart-arrive .35s ease-out;}
+.daily-candles > div {height: 100%;}
+.chart-attribution {display: block; padding: 7px 24px; color: var(--muted); font-size: 9px;}
+.translation-status {display: flex; gap: 14px; align-items: center; min-height: 160px; padding: 28px; color: var(--text); border: 1px solid var(--border-subtle); border-radius: 10px; background: var(--inset); margin: 20px 24px; font-size: 13px; animation: chart-arrive .3s ease-out;}
+.translation-status strong {font-weight: 500;}
+.translation-status p {font-size: 11px; color: var(--muted); line-height: 1.8; margin: 8px 0;}
+.translation-status .spinner {width: 18px; height: 18px; border: 2px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin 1s linear infinite; flex: 0 0 auto;}
+.drawer .translation-status {margin: 0;}
+.button, .icon-button, .text-button, .main-tabs button, .workspace-tools button {transition: background .2s ease, color .2s ease, border-color .2s ease, transform .2s ease, box-shadow .2s ease;}
+.button:active, .icon-button:active {transform: translateY(1px);}
+.news-card {animation: news-arrive .42s cubic-bezier(.2,.7,.3,1) both;}
+.drawer-backdrop {animation: overlay-arrive .2s ease-out;}
+.drawer {animation: drawer-arrive .35s cubic-bezier(.2,.8,.2,1);}
+.main-tabs button, .chart-controls button, .language-button, .theme-toggle {outline-offset: 4px;}
+@keyframes quote-arrive {from {opacity: .35; transform: translateY(3px);} to {opacity: 1; transform: translateY(0);}}
+@keyframes chart-arrive {from {opacity: 0; transform: translateY(5px);} to {opacity: 1; transform: translateY(0);}}
+@keyframes news-arrive {from {opacity: 0; transform: translateY(-8px);} to {opacity: 1; transform: translateY(0);}}
+@keyframes drawer-arrive {from {opacity: .6; transform: translateX(25px);} to {opacity: 1; transform: translateX(0);}}
+@keyframes overlay-arrive {from {opacity: 0;} to {opacity: 1;}}
+@media (max-width: 700px) {
+  .price-market-heading {padding: 18px 16px 0; align-items: flex-start;}
+  .price-market-heading h2 {display: block; font-size: 18px;}
+  .price-market-heading h2 > span {display: block; margin-top: 8px; font-size: 10px;}
+  .market-delay {font-size: 8px; letter-spacing: 0; margin-top: 2px;}
+  .quote-row {padding: 16px; gap: 9px;}
+  .quote-value {gap: 12px;}
+  .quote-value > strong {font-size: 32px;}
+  .quote-value b {font-size: 10px;}
+  .quote-value small {font-size: 8px; max-width: 125px; line-height: 1.5;}
+  .quote-clock {font-size: 8px;}
+  .quote-clock strong {font-size: 9px;}
+  .quote-clock small {font-size: 8px;}
+  .chart-controls {padding: 0 12px;}
+  .chart-controls > span {display: none;}
+  .intraday-chart {padding: 14px 16px;}
+  .intraday-chart svg {height: 180px;}
+  .chart-body, .chart-empty {min-height: 250px;}
+  .chart-time-axis span:nth-child(2) {font-size: 7px;}
+  .chart-source-note {padding: 11px 16px;}
+  .translation-status {margin: 16px; padding: 20px;}
+}
+@media (prefers-reduced-motion: reduce) {*, *::before, *::after {animation: none !important; transition: none !important; scroll-behavior: auto !important;}}
+.native-candles {padding: 15px 24px 16px; animation: chart-arrive .35s ease-out;}
+.candle-toolbar {display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: 9px; color: var(--muted);}
+.candle-toolbar strong {font-weight: 500; color: var(--text);}
+.candle-toolbar > div {display: flex; align-items: center; gap: 3px;}
+.candle-toolbar button {padding: 5px 7px; border: 1px solid transparent; border-radius: 5px; background: transparent; color: var(--muted); font-size: 9px; transition: color .2s, background .2s;}
+.candle-toolbar button.active {background: var(--accent-bg); color: var(--accent);}
+.candle-toolbar button.chart-save {margin-left: 6px; border-color: var(--border); color: var(--text);}
+.candle-readout {display: flex; align-items: center; flex-wrap: wrap; gap: 12px; padding: 14px 0; font-size: 9px; color: var(--muted); font-variant-numeric: tabular-nums;}
+.candle-readout b {font-weight: 450; color: var(--text);}
+.candle-readout small {margin-left: auto; color: var(--accent); font-size: 8px;}
+.native-candles svg {width: 100%; height: auto; display: block; overflow: visible; touch-action: pan-y;}
+.native-candles svg g {transition: opacity .16s ease;}
+@media (max-width: 700px) {.native-candles {padding: 14px 16px;} .candle-readout {gap: 7px; font-size: 8px;} .candle-toolbar {flex-wrap: wrap;}}
+@media (prefers-reduced-motion: reduce) {*, *::before, *::after {animation: none !important; transition: none !important; scroll-behavior: auto !important;}}
+.chart-export {width: min(1000px, 92vw); max-height: 90vh; padding: 24px; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); color: var(--text); box-shadow: 0 18px 80px #0005;}
+.chart-export::backdrop {background: #05101caa; backdrop-filter: blur(5px);}
+.chart-export > div {display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px;}
+.chart-export strong {font-size: 14px; font-weight: 500;}
+.chart-export button {border: 0; background: transparent; color: var(--muted); font-size: 24px;}
+.chart-export img {width: 100%; height: auto; display: block; margin-bottom: 22px; border-radius: 6px;}
+.chart-export > a {display: inline-flex; padding: 12px 18px; text-decoration: none;}

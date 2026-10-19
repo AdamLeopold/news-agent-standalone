@@ -34,7 +34,11 @@ cd /Users/adam/TTF/news-agent-standalone
 
 ## 界面和分析
 
-顶部支持中文 / English 切换，并在本机保存界面语言选择。来源新闻保留原文；AI分析按本版本默认中文，英文界面会标明分析语言。
+顶部支持中文 / English 切换，并保存语言选择。英文页的简报、风险、情景和完整详析由同一 `gpt-oss:20b` 翻译并缓存；原预测方向、分数、把握程度、数值和引用保持不变，不因切换语言重新预测。英文尚未生成或失败时显示等待/重试状态。来源新闻保留原文。
+
+行情面板提供 ICE 公开延迟盘中报价与分时曲线（来源标注至少延迟15分钟，每60秒检查），并显示同一月合约与前一完整交易日参考价的差额。报价保存成交时间和本机首次获取时间；只有分析当时已经获取的同合约报价进入新输入快照。
+
+日 K 使用 Capital.com 公开产品页确认合约身份后获取的 **CFD ASK D1 OHLC**，按来源UTC日线绘制，每10分钟刷新，支持20/60/90根窗口和PNG导出。当前月合约历史不足时只显示实际取得的K线；当日标为未收盘。CFD与ICE期货是不同报价口径，不用于官方结算评估，不把每日单一参考价拼成OHLC。来源失败时保留缓存并标明状态。换月必须重新确认该交割月的公开产品页和instrument ID；无法确认时留空并报告失败，不借用其他月份。
 
 - **实时新闻**：结算倒计时、当前窗口新闻、新闻压力与日结算方向、历史相关事件、来源健康，以及右侧最近新闻滚动栏。发现新闻后先显示卡片，模型完成后更新；源站延迟、轮询及推理分别计时。历史回补与未分析新闻明确标记，可主动请求分析。
 - **手动分析**：输入正文，可填写来源和发布时间；结合当前窗口、前五日摘要和历史事件分析。手动数据不进入正式新闻集或事件库。
@@ -71,7 +75,7 @@ cd /Users/adam/TTF/news-agent-standalone
 
 交互式接口文档：`http://127.0.0.1:8765/docs`。
 
-主要接口：`/api/health`、`/api/dashboard`、`/api/news?scope=recent|all|live`、`/api/manual/analyze`、`/api/analyses/{id}`、`/api/analyses/{id}/detail`、`/api/events`、`/api/coverage`、`/api/monitoring`、`/api/daily/{date}`、`/api/stream`。
+主要接口：`/api/health`、`/api/dashboard`、`/api/market`、`/api/news?scope=recent|all|live`、`/api/manual/analyze`、`/api/analyses/{id}`、`/api/analyses/{id}/detail`、`/api/analyses/{id}/translation?part=brief|detail`（GET读缓存，POST入队）、`/api/translations/{id}`、`/api/events`、`/api/coverage`、`/api/monitoring`、`/api/daily/{date}`、`/api/stream`。英文任务与原分析共用单并发队列，实时简报优先；翻译指标单独记录，不混入预测准确率和原推理耗时。
 
 CSV/JSONL 导出位于 `data/exports/`；包含逐条新闻、连续交易日精确窗口汇总、大事件库、合约参考价、旧日数据、分析输入与输出、覆盖报告。空窗口也保留记录，零条不等于源站已确认无新闻。`/api/export/{filename}` 同样支持浏览器下载。SSE 提供序号重放，后台任务重启后恢复。
 

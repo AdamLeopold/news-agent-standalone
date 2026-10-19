@@ -26,11 +26,11 @@ ROOT = Path(__file__).resolve().parents[1]
 MAX_BODY = 256_000
 ID = r"[A-Za-z0-9_.-]{1,150}"
 READ_ROUTES = re.compile(
-    rf"/api/(?:health|dashboard|news(?:/{ID})?|analyses/{ID}|events|coverage|monitoring|"
+    rf"/api/(?:health|dashboard|news(?:/{ID})?|analyses/{ID}(?:/translation)?|translations/{ID}|market|events|coverage|monitoring|"
     r"daily/\d{4}-\d{2}-\d{2}|stream|export/(?:news|daily|events|prices)\.(?:csv|jsonl)|"
     r"export/(?:legacy_daily\.jsonl|analyses\.jsonl|coverage\.json))\Z"
 )
-WRITE_ROUTES = re.compile(rf"/api/(?:manual/analyze|news/{ID}/analyze|analyses/{ID}/detail)\Z")
+WRITE_ROUTES = re.compile(rf"/api/(?:manual/analyze|news/{ID}/analyze|analyses/{ID}/(?:detail|translation))\Z")
 
 
 def queue_available():
@@ -97,7 +97,7 @@ def create_gateway(*, transport=None, queue_check=queue_available, allowed_origi
         is_stream = route == '/api/stream'
         if is_stream and streams >= 16:
             return JSONResponse({'detail': 'Stream capacity reached; polling remains available'}, status_code=429)
-        ttl = {'/api/health': 10, '/api/dashboard': 3, '/api/news': 2}.get(route, 0) if not write else 0
+        ttl = {'/api/health': 10, '/api/dashboard': 3, '/api/news': 2, '/api/market': 5}.get(route, 0) if not write else 0
         key = str(request.url.query) + route
         cached = cache.get(key)
         if ttl and cached and time.monotonic() - cached[0] < ttl:

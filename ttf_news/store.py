@@ -73,6 +73,17 @@ class Store:
               CREATE TABLE IF NOT EXISTS metrics (id INTEGER PRIMARY KEY AUTOINCREMENT, created_at TEXT, type TEXT, data TEXT);
               CREATE TABLE IF NOT EXISTS evaluations (trade_date TEXT PRIMARY KEY, analysis_id TEXT, contract TEXT, delta REAL,
                 threshold REAL, actual_direction TEXT, predicted_direction TEXT, correct INTEGER, status TEXT, data TEXT);
+              CREATE TABLE IF NOT EXISTS analysis_translations (id TEXT PRIMARY KEY, analysis_id TEXT, part TEXT,
+                language TEXT, source_hash TEXT, status TEXT, result TEXT, error TEXT, created_at TEXT, completed_at TEXT,
+                UNIQUE(analysis_id,part,language,source_hash));
+              CREATE TABLE IF NOT EXISTS market_quotes (id TEXT PRIMARY KEY, contract TEXT, observed_at TEXT,
+                available_at TEXT, data TEXT);
+              CREATE INDEX IF NOT EXISTS market_quote_known ON market_quotes(contract,available_at,observed_at);
+              CREATE TABLE IF NOT EXISTS market_points (contract TEXT, observed_at TEXT, available_at TEXT,
+                value REAL, PRIMARY KEY(contract,observed_at,value));
+              CREATE TABLE IF NOT EXISTS market_candles (source TEXT, contract TEXT, day TEXT,
+                content_hash TEXT, available_at TEXT, data TEXT,
+                PRIMARY KEY(source,contract,day,content_hash));
             ''')
 
     def emit(self, event_type: str, payload: dict):
@@ -331,6 +342,7 @@ class Store:
             c.execute("UPDATE jobs SET status='queued' WHERE status='running'")
             c.execute("UPDATE analyses SET status='queued' WHERE status='running'")
             c.execute("UPDATE analyses SET detail_status='queued' WHERE detail_status='running'")
+            c.execute("UPDATE analysis_translations SET status='queued' WHERE status='running'")
 
     def claim_job(self) -> dict | None:
         with self.connection() as c:
@@ -340,20 +352,77 @@ class Store:
                 return None
             job = dict(row)
             c.execute("UPDATE jobs SET status='running',attempts=attempts+1 WHERE id=?", (job["id"],))
-            field = "detail_status" if job["kind"] == "detail" else "status"
-            c.execute(f"UPDATE analyses SET {field}='running' WHERE id=?", (job["analysis_id"],))
+            if job['kind']=='translation':
+                c.execute("UPDATE analysis_translations SET status='running' WHERE id=?", (job['analysis_id'],))
+            else:
+                field = "detail_status" if job["kind"] == "detail" else "status"
+                c.execute(f"UPDATE analyses SET {field}='running' WHERE id=?", (job["analysis_id"],))
             return job
 
     def finish_job(self, job: dict, result: dict | None = None, error: str | None = None):
         now = iso()
         status = "failed" if error else "completed"
         with self.connection() as c:
-            if job["kind"] == "detail":
+            if job['kind']=='translation':
+                c.execute('UPDATE analysis_translations SET status=?,result=?,error=?,completed_at=? WHERE id=?',
+                          (status,dumps(result) if result else None,error,now,job['analysis_id']))
+            elif job["kind"] == "detail":
                 c.execute("UPDATE analyses SET detail_status=?,detail_result=?,detail_error=? WHERE id=?", (status,dumps(result) if result else None,error,job["analysis_id"]))
             else:
                 c.execute("UPDATE analyses SET status=?,result=?,error=?,completed_at=? WHERE id=?", (status,dumps(result) if result else None,error,now,job["analysis_id"]))
             c.execute("UPDATE jobs SET status=?,error=? WHERE id=?", (status,error,job["id"]))
-        self.emit("analysis_failed" if error else "analysis_completed", {"id": job["analysis_id"], "kind": job["kind"]})
+        self.emit(("translation_failed" if error else "translation_completed") if job['kind']=='translation' else ("analysis_failed" if error else "analysis_completed"), {"id": job["analysis_id"], "kind": job["kind"]})
+
+    def request_translation(self, analysis_id: str, part: str = 'brief', language: str = 'en', retry: bool = False):
+        from .translation import source_hash
+        if part not in ('brief','detail') or language!='en':
+            raise ValueError('Unsupported translation request')
+        record=self.analysis(analysis_id)
+        if not record:
+            raise KeyError(analysis_id)
+        result=record['detail_result' if part=='detail' else 'result']
+        if not result:
+            raise ValueError('Wait for the original analysis to complete')
+        digest=source_hash(result)
+        with self.connection() as c:
+            c.execute('BEGIN IMMEDIATE')
+            row=c.execute('SELECT * FROM analysis_translations WHERE analysis_id=? AND part=? AND language=? AND source_hash=?',
+                          (analysis_id,part,language,digest)).fetchone()
+            if row and (row['status']!='failed' or not retry):
+                return self.translation_record(row['id'])
+            identifier=row['id'] if row else str(uuid.uuid4())
+            if row:
+                c.execute("UPDATE analysis_translations SET status='queued',error=NULL WHERE id=?",(identifier,))
+            else:
+                c.execute("INSERT INTO analysis_translations VALUES (?,?,?,?,?,'queued',NULL,NULL,?,NULL)",
+                          (identifier,analysis_id,part,language,digest,iso()))
+            priority = 12 if part=='brief' and record['kind']=='live' else 30
+            c.execute("INSERT INTO jobs VALUES (?,?,?,?,?,?,0,NULL)",(str(uuid.uuid4()),'translation',identifier,priority,'queued',iso()))
+        return self.translation_record(identifier)
+
+    def translation_record(self, identifier: str):
+        with self.connection() as c:
+            row=c.execute('SELECT * FROM analysis_translations WHERE id=?',(identifier,)).fetchone()
+        if not row:
+            return None
+        data=dict(row)
+        data['result']=json.loads(data['result']) if data['result'] else None
+        return data
+
+    def cached_translation(self, analysis_id: str, part: str = 'brief'):
+        from .translation import source_hash
+        if part not in ('brief', 'detail'):
+            raise ValueError('Unsupported translation part')
+        record = self.analysis(analysis_id)
+        if not record:
+            raise KeyError(analysis_id)
+        result = record['detail_result' if part=='detail' else 'result']
+        if not result:
+            return None
+        with self.connection() as c:
+            row = c.execute('SELECT id FROM analysis_translations WHERE analysis_id=? AND part=? AND language=? AND source_hash=?',
+                            (analysis_id, part, 'en', source_hash(result))).fetchone()
+        return self.translation_record(row['id']) if row else None
 
     def metric(self, kind: str, data: dict):
         with self.connection() as c:
