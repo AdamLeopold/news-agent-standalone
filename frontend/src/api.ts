@@ -34,7 +34,7 @@ async function snapshot<T>(path: string): Promise<T> {
     const limit = Math.max(1, Math.min(route === 'news' ? 200 : 5000, Number(url.searchParams.get('limit')) || (route === 'news' ? 50 : 100)));
     return {...data, items: items.slice(offset, offset + limit)} as T;
   }
-  if (route === 'health') return {...data, collector: {...data.collector as object, enabled: false}, model: {...data.model as object, available: false}} as T;
+  if (route === 'health') return {...data, model: {...data.model as object, available: false}} as T;
   return data as T;
 }
 

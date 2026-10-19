@@ -34,6 +34,7 @@ test('An offline API preserves published news, pagination and a dated snapshot n
   globalThis.fetch = async url => {
     if (url.startsWith('https://api.example.test')) throw new TypeError('offline');
     if (url.endsWith('manifest.json')) return Response.json({captured_at: '2026-10-19T07:39:14Z'});
+    if (url.endsWith('health.json')) return Response.json({collector: {enabled: true}, model: {available: true}});
     return Response.json({items: [{id: 'n1'}, {id: 'n2'}, {id: 'n3'}], total: 3986});
   };
   try {
@@ -43,6 +44,9 @@ test('An offline API preserves published news, pagination and a dated snapshot n
     assert.equal(data.total, 3986);
     assert.equal(notice, '2026-10-19T07:39:14Z');
     assert.equal(api.apiUrl('/api/export/news.csv'), '/news-agent-standalone/snapshot/exports/news.csv');
+    const health = await api.request('/api/health');
+    assert.equal(health.collector.enabled, true, 'A website snapshot must not claim the local collector was paused');
+    assert.equal(health.model.available, false, 'A snapshot must not claim new inference is available');
   } finally {globalThis.fetch = saved;}
 });
 
