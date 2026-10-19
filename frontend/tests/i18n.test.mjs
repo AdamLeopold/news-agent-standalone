@@ -16,6 +16,7 @@ test('the complete analysis workflow has translated UI labels', () => {
     assert.equal(translateText(label, 'zh'), label);
   }
   assert.equal(translateText('模型分析语言：中文', 'en'), 'AI analysis: English');
+  assert.equal(translateText('模型把握程度未经统计校准，不代表已验证准确率', 'en'), 'Model confidence is uncalibrated and does not represent verified accuracy.');
 });
 test('dynamic timestamps, measured delays and counts retain their values', () => {
   assert.equal(translateText('历史库 3,959 条', 'en'), 'Archive: 3,959 articles');

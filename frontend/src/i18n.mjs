@@ -1,6 +1,9 @@
 import React from 'react';
 
 export const translations = Object.freeze({
+  '行情尚未验证为ICE官方日结算，不参与官方结算准确率评分': 'The price reference is not verified as an official ICE daily settlement price and is excluded from official settlement accuracy scoring.',
+  '价格类型尚未验证为ICE官方日结算，不用于官方结算评分': 'The price type is not verified as an official ICE daily settlement price and is excluded from settlement scoring.',
+  '模型把握程度未经统计校准，不代表已验证准确率': 'Model confidence is uncalibrated and does not represent verified accuracy.',
   '当前展示已发布数据快照。': 'Showing the published data snapshot.',
   '实时后端未连接；新分析需要模型服务在线。': 'Live backend disconnected; new analysis requires the model service to be online.',
   '天然气资讯工作台': 'Gas news workbench',
@@ -58,6 +61,7 @@ export const translations = Object.freeze({
   '异常波动条件': 'Conditions for an extreme move',
   '需要留意': 'Risks and limitations',
   '详细分析': 'Detailed analysis',
+  '分析固定链接': 'Analysis permalink',
   '详细分析是基于同一输入快照的按需复核，不代表新新闻。': 'Detailed analysis is an on-demand review of the same input snapshot, not a new report.',
   '查看进度': 'View progress',
   '生成分析': 'Generate analysis',
@@ -318,7 +322,7 @@ const templates = [
   [/^分析完成 (.+) SGT$/, (_, time) => `Analysis completed ${time} SGT`],
   [/^任务创建 (.+) SGT$/, (_, time) => `Task created ${time} SGT`],
   [/^完成于 (.+)$/, (_, time) => `Completed at ${time}`],
-  [/^分析记录 (.+) · (.+)（新加坡）$/, (_, id, time) => `Analysis ${id} · ${time} (Singapore)`],
+  [/^分析记录 (.+) · (.+)（新加坡）$/, (_, id, time) => `Analysis ${id} · ${translateText(time, 'en')} (Singapore)`],
   [/^本结算窗口已收录 (\d+) 条新闻，来自 (\d+) 个来源。$/, (_, n, s) => `This settlement window includes ${n} articles from ${s} sources.`],
   [/^发现延迟 (.+)$/, (_, time) => `Discovery latency ${translateText(time, 'en')}`],
   [/^(\d+(?:\.\d+)?) 秒$/, (_, n) => `${n} s`],

@@ -112,7 +112,7 @@ def main():
                 'model_weights': 'Download the same gpt-oss:20b digest with Ollama; no changed model or fine-tuning',
                 'excluded_runtime_files': ['virtual environment', 'node_modules', 'logs', 'tokenizer cache', 'duplicate dated backups'],
                 'files': {str(p.relative_to(snap)): {'bytes':p.stat().st_size, 'sha256': hashlib.sha256(p.read_bytes()).hexdigest()}
-                          for p in sorted(snap.rglob('*')) if p.is_file()}}
+                          for p in sorted(snap.rglob('*')) if p.is_file() and p.name!='manifest.json'}}
     save('manifest.json', manifest)
     (target/'reports/github_snapshot_manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2))
     # Dataset CSV/JSONL is served by Pages, complete SQLite is a GitHub release asset.

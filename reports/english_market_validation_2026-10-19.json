@@ -1,0 +1,106 @@
+{
+  "checked_at": "2026-10-19T09:19:29.438545+00:00",
+  "english_versions": [
+    {
+      "analysis_id": "a166a65c-4773-4343-ac6c-e1205a810f7b",
+      "part": "brief",
+      "translated_fields": 18,
+      "seconds": 186.943,
+      "source_hash": "95a73a40f0559aea70e01bb5c8309df138fe3965e2879aa7e42449dd09d0f37a",
+      "forecast_scalars_and_references_unchanged": true
+    },
+    {
+      "analysis_id": "fa20f079-0cec-4e82-a4a2-30cb27e42e6e",
+      "part": "brief",
+      "translated_fields": 14,
+      "seconds": 79.723,
+      "source_hash": "5aadddb85c59cbf603bbaa942e95ed7d9222d11ea0d66ac79e107c55a0faf82b",
+      "forecast_scalars_and_references_unchanged": true
+    },
+    {
+      "analysis_id": "ca8844dd-f4c0-4fd2-b4fd-8306ff877fff",
+      "part": "brief",
+      "translated_fields": 14,
+      "seconds": 77.442,
+      "source_hash": "7f8b364061b34c001028698c000ab1975965cf383a03d352d502a5f75536dc4f",
+      "forecast_scalars_and_references_unchanged": true
+    },
+    {
+      "analysis_id": "4ff43203-1b97-45aa-a57d-f547ae80d992",
+      "part": "brief",
+      "translated_fields": 16,
+      "seconds": 454.274,
+      "source_hash": "e8c91ce0faf56ce7c037f5a309b6a6332e508e633f8d794183b737489b55bfcd",
+      "forecast_scalars_and_references_unchanged": true
+    },
+    {
+      "analysis_id": "a166a65c-4773-4343-ac6c-e1205a810f7b",
+      "part": "detail",
+      "translated_fields": 26,
+      "seconds": 85.463,
+      "source_hash": "f8b06a806a33761987023db1faf9aa3281a9b505d4ed04cd8ef49bdc9ef532b3",
+      "forecast_scalars_and_references_unchanged": true
+    }
+  ],
+  "baseline_unchanged": true,
+  "frozen_predictions_unchanged": true,
+  "frozen_count": 3,
+  "active_jobs": [],
+  "backend_tests": {
+    "passed": 123,
+    "subtests_passed": 22
+  },
+  "frontend_tests": {
+    "passed": 23
+  },
+  "official_settlement_accuracy_reported": false,
+  "model": {
+    "available": true,
+    "model": "gpt-oss:20b",
+    "digest": "17052f91a42e97930aa6e28a6c6c06a983e6a58dbb00434885a0cf5313e376f7",
+    "error": null
+  },
+  "market": {
+    "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+    "last_quote": {
+      "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+      "contract_id": "6277389",
+      "contract_name": "Nov26",
+      "value": 89.37,
+      "observed_at": "2026-10-19T09:11:00+00:00",
+      "available_at": "2026-10-19T09:22:10.304378+00:00",
+      "unit": "EUR/MWh",
+      "source": "ICE public delayed market data",
+      "source_url": "https://www.ice.com/products/27996665/Dutch-TTF-Gas-Futures/data",
+      "price_type": "delayed_last_trade",
+      "verified_settlement": false,
+      "minimum_delay_minutes": 15,
+      "volume": 40524,
+      "age_seconds": 702,
+      "stale": false
+    },
+    "intraday_points": 56,
+    "ohlc_bars": 22,
+    "cfd_symbol": "TRNLTTFMX2026",
+    "source": "Capital.com public chart",
+    "quote_side": "ASK",
+    "official_settlement": false
+  },
+  "snapshot": {
+    "captured_at": "2026-10-19T09:21:56.421974+00:00",
+    "counts": {
+      "news": 3988,
+      "events": 1568,
+      "legacy_daily": 3456,
+      "prices": 65876,
+      "analyses": 103
+    },
+    "files_verified": 329,
+    "gzip_sha256": "1c78b36ad828e2dc6cecf597cc8a28f7513e1f66b5241b1170e333f491645c66"
+  },
+  "monitoring": {
+    "started_at": "2026-10-14T05:51:48.181167+00:00",
+    "seven_day_complete": false,
+    "official_evaluation_count": 0
+  }
+}

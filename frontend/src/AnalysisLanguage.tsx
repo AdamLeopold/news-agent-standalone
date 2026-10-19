@@ -2,6 +2,7 @@ import {useEffect, useState, type ReactNode} from 'react';
 import {request} from './api';
 import {useLanguage} from './Localized';
 import type {Result} from './types';
+import {translateText} from './i18n.mjs';
 
 type Translation = {id: string; status: string; result?: Result; error?: string};
 
@@ -9,6 +10,7 @@ export function AnalysisLanguage({id, result, part = 'brief', children}: {id: st
   const language = useLanguage();
   const [translated, setTranslated] = useState<{key: string; result: Result} | null>(null);
   const [error, setError] = useState('');
+  const [stage, setStage] = useState('queued');
   const [retry, setRetry] = useState(0);
   const version = JSON.stringify(result);
   const key = `${id}/${part}/${version}`;
@@ -16,9 +18,10 @@ export function AnalysisLanguage({id, result, part = 'brief', children}: {id: st
     if (language !== 'en') return;
     let active = true;
     let timer: ReturnType<typeof setTimeout>;
-    setTranslated(null); setError('');
+    setTranslated(null); setError(''); setStage('queued');
     async function poll(value: Translation) {
       if (!active) return;
+      setStage(value.status);
       if (value.status === 'completed' && value.result) {setTranslated({key, result: value.result}); return;}
       if (value.status === 'failed') {setError('English analysis could not be prepared. Please retry.'); return;}
       timer = setTimeout(() => {
@@ -37,6 +40,13 @@ export function AnalysisLanguage({id, result, part = 'brief', children}: {id: st
     return () => {active = false; clearTimeout(timer);};
   }, [id, part, language, version, key, retry]);
   if (language !== 'en') return <>{children(result)}</>;
-  if (translated?.key === key) return <>{children(translated.result)}</>;
-  return <div className="translation-status" role="status">{error ? <><p>{error}</p><button className="button outline" onClick={() => setRetry(n => n + 1)}>Retry English analysis</button></> : <><span className="spinner"/><div><strong>Preparing English analysis</strong><p>The original forecast, scores and evidence are preserved.</p></div></>}</div>;
+  if (translated?.key === key) {
+    const english = {...translated.result, risk_flags: translated.result.risk_flags?.map((flag, index) => {
+      const original = result.risk_flags?.[index];
+      const policy = original ? translateText(original, 'en') : original;
+      return policy && policy !== original ? policy : flag;
+    })};
+    return <>{children(english)}</>;
+  }
+  return <div className="translation-status" role="status">{error ? <><p>{error}</p><button className="button outline" onClick={() => setRetry(n => n + 1)}>Retry English analysis</button></> : <><span className="spinner"/><div><strong>{stage === 'queued' ? 'English analysis queued' : 'Preparing English analysis'}</strong><p>{stage === 'queued' ? 'Live briefs take priority in the local model queue. The English version is cached once ready.' : 'The original forecast, scores and evidence are preserved.'}</p></div></>}</div>;
 }

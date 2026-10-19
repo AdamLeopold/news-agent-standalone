@@ -13,6 +13,8 @@ React 页面使用同一套组件、CSS、中英双语字典和实际分析记�
 Pages 同时保存发布时的完整逐条新闻、每日新闻、事件、价格、旧数据、分析输入
 及输出。在线 API 不可用时显示明确的快照提示；不会假装生成新的模型分析。
 已生成的详情可继续查看；生成新简报/详情需要实时 API 在线。
+已生成的英文版本与行情同时进入快照，断网时按原时间显示。英文尚未生成时
+需要连接模型后端；不会把中文原分析标作英文。详析可用 `?analysis=<id>` 固定链接复查。
 
 完整 SQLite 压缩快照保存在 GitHub Release，含全部原表、版本、任务、心跳、
 冻结预测及评估。解压到 `data/ttf_news.sqlite3` 可恢复相同状态，恢复前先停止
@@ -35,6 +37,8 @@ HTTPS 10000 端口。`disable-funnel` 只关闭该端口，不重置其他 Tails
 
 1. `scripts/prepare-github.py` 在 `.runtime/github-publish` 准备独立发布目录，
    从在线 SQLite 备份生成一致快照，不修改原项目的 Git 历史。
+   已有发布目录时，用 `scripts/prepare-github.py --refresh-snapshot` 只更新数据快照；
+   应用源码另行显式同步，该选项不替换发布仓库历史。
 2. 检查数据清单、测试和发布目录内容后推送独立仓库的 main。
 3. GitHub Actions 构建并部署 Pages；新的完整 SQLite 快照作为 Release 附件。
 

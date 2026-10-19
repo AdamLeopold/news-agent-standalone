@@ -98,7 +98,7 @@ function AnalysisSummary({result, openDetail, analysisId}: {result: Result; open
     <div className="directional-evidence">{directionalEvidence.filter(([, items]) => Array.isArray(items) && items.length).map(([label, items, tone]) => <div className={tone} key={label}><span className="eyebrow">{label}</span><EvidenceList items={resolveReferences(items)}/></div>)}</div>
     {typeof result.close_forecast?.basis === 'string' && <div className="forecast-basis"><span className="eyebrow">收盘预判依据</span><p><OriginalText language={language === 'en' ? 'en' : 'zh-CN'}>{result.close_forecast.basis}</OriginalText></p></div>}
     {Boolean(result.close_forecast?.extreme_move_risk) && <div className="forecast-basis"><span className="eyebrow">异常波动条件</span><p><OriginalText language={language === 'en' ? 'en' : 'zh-CN'}>{contentText(result.close_forecast?.extreme_move_risk)}</OriginalText></p></div>}
-    {result.risk_flags && result.risk_flags.length > 0 && <div className="risk-box"><Icon name="alert" size={16}/><div><strong>需要留意</strong><p><OriginalText language={language === 'en' ? 'en' : 'zh-CN'}>{result.risk_flags.map(contentText).join('；')}</OriginalText></p></div></div>}
+    {result.risk_flags && result.risk_flags.length > 0 && <div className="risk-box"><Icon name="alert" size={16}/><div><strong>需要留意</strong><p><OriginalText language={language === 'en' ? 'en' : 'zh-CN'}>{result.risk_flags.map(contentText).join(language === 'en' ? '; ' : '；')}</OriginalText></p></div></div>}
     {openDetail && <button className="button outline full-detail" onClick={openDetail}>详细分析 <Icon name="arrow" size={16}/></button>}
   </div>}</Localized>;
 }
@@ -243,6 +243,7 @@ function AnalysisDrawer({id, close}: {id: string; close: () => void}) {
   return <Localized>{<Drawer title="详细分析" subtitle={`分析记录 ${id} · ${dateText(analysis?.created_at)}（新加坡）`} close={close}>
     {error && <div role="alert" className="error-box">{error}</div>}
     {loading ? <Loading text="正在读取分析记录…"/> : analysis ? <>
+      <ExternalLink url={`${window.location.origin}${import.meta.env.BASE_URL}?analysis=${encodeURIComponent(id)}`} className="text-link">分析固定链接</ExternalLink>
       <div className="analysis-record"><Badge tone={status.tone}>{status.label}</Badge><span>{analysis.kind === 'manual' ? '手动输入' : '新闻分析'} · {analysis.completed_at ? `完成于 ${dateText(analysis.completed_at)}` : '等待模型完成'}</span></div>
       <AnalysisTiming analysis={analysis}/>
       {analysis.error && <div className="error-box"><strong>简报分析失败</strong><p>{analysis.error}</p></div>}
@@ -371,7 +372,10 @@ export default function App() {
   const [snapshotAt, setSnapshotAt] = useState('');
   const [freshAt, setFreshAt] = useState('');
   const [now, setNow] = useState(Date.now());
-  const [analysisId, setAnalysisId] = useState<string | null>(null);
+  const [analysisId, setAnalysisId] = useState<string | null>(() => {
+    const value = new URLSearchParams(window.location.search).get('analysis');
+    return value && /^[A-Za-z0-9_.-]{1,150}$/.test(value) ? value : null;
+  });
   const [research, setResearch] = useState<'events' | 'coverage' | 'export' | null>(null);
   const [newsFilter, setNewsFilter] = useState('');
   const refreshing = useRef(false);
@@ -408,7 +412,11 @@ export default function App() {
     stream.addEventListener('update', () => void refresh());
     return () => {mounted.current = false; clearInterval(poll); clearInterval(tick); stream.close();};
   }, [refresh]);
-  const closeAnalysis = useCallback(() => setAnalysisId(null), []);
+  const closeAnalysis = useCallback(() => {
+    setAnalysisId(null);
+    const url = new URL(window.location.href); url.searchParams.delete('analysis');
+    window.history.replaceState(null, '', url);
+  }, []);
   const closeResearch = useCallback(() => setResearch(null), []);
   const session = dashboard?.session;
   const latest = dashboard?.latest_analysis;

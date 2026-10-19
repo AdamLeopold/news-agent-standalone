@@ -82,10 +82,11 @@ def market_view(store, as_of=None):
         # current-day endpoint can span the overnight session; retain the genuine timestamps.
         floor = iso(parse_time(quote['observed_at'])-timedelta(hours=30))
         with store.connection() as c:
-            rows = c.execute('SELECT observed_at,value,MIN(available_at) AS available_at FROM market_points '
+            rows = c.execute('SELECT observed_at,value,available_at FROM market_points '
                              'WHERE contract=? AND available_at<=? AND observed_at BETWEEN ? AND ? '
-                             'GROUP BY observed_at ORDER BY observed_at', (contract, as_of, floor, quote['observed_at'])).fetchall()
-        points = [dict(row) for row in rows]
+                             'ORDER BY observed_at,available_at', (contract, as_of, floor, quote['observed_at'])).fetchall()
+        latest = {row['observed_at']:dict(row) for row in rows}
+        points = list(latest.values())
     states = {row['id']: row for row in store.sources()}
     return {'available': bool(quote), 'as_of': as_of, 'quote': quote, 'intraday': points,
             'candles': candle_view(store, reference.get('contract_name'), as_of),
