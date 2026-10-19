@@ -15,7 +15,8 @@ export function AnalysisLanguage({id, result, part = 'brief', children}: {id: st
   const version = JSON.stringify(result);
   const key = `${id}/${part}/${version}`;
   useEffect(() => {
-    if (language !== 'en') return;
+    // Keep a completed English view when toggling languages; avoid a loading flash.
+    if (language !== 'en' || translated?.key === key) return;
     let active = true;
     let timer: ReturnType<typeof setTimeout>;
     setTranslated(null); setError(''); setStage('queued');
