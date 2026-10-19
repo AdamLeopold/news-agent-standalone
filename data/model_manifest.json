@@ -1,0 +1,60 @@
+{
+  "recorded_at": "2026-10-14T05:46:37.517966+00:00",
+  "runtime": "Ollama",
+  "model": "gpt-oss:20b",
+  "digest": "17052f91a42e97930aa6e28a6c6c06a983e6a58dbb00434885a0cf5313e376f7",
+  "local_only": true,
+  "fine_tuning": false,
+  "prompt_version": "ttf-news-v6-standalone-1.8",
+  "details": {
+    "parent_model": "",
+    "format": "gguf",
+    "family": "gptoss",
+    "families": [
+      "gptoss"
+    ],
+    "parameter_size": "20.9B",
+    "quantization_level": "MXFP4"
+  },
+  "model_info": {
+    "general.architecture": "gptoss",
+    "general.file_type": 4,
+    "general.parameter_count": 20914757184,
+    "general.quantization_version": 2,
+    "gptoss.attention.head_count": 64,
+    "gptoss.attention.head_count_kv": 8,
+    "gptoss.attention.key_length": 64,
+    "gptoss.attention.layer_norm_rms_epsilon": 1e-05,
+    "gptoss.attention.sliding_window": 128,
+    "gptoss.attention.value_length": 64,
+    "gptoss.block_count": 24,
+    "gptoss.context_length": 131072,
+    "gptoss.embedding_length": 2880,
+    "gptoss.expert_count": 32,
+    "gptoss.expert_used_count": 4,
+    "gptoss.feed_forward_length": 2880,
+    "gptoss.rope.freq_base": 150000,
+    "gptoss.rope.scaling.factor": 32,
+    "gptoss.rope.scaling.original_context_length": 4096,
+    "tokenizer.ggml.add_bos_token": false,
+    "tokenizer.ggml.add_eos_token": false,
+    "tokenizer.ggml.add_padding_token": false,
+    "tokenizer.ggml.bos_token_id": 199998,
+    "tokenizer.ggml.eos_token_id": 199999,
+    "tokenizer.ggml.eos_token_ids": [
+      199999,
+      200002,
+      200012
+    ],
+    "tokenizer.ggml.merges": [],
+    "tokenizer.ggml.model": "gpt2",
+    "tokenizer.ggml.padding_token_id": 199999,
+    "tokenizer.ggml.pre": "default",
+    "tokenizer.ggml.scores": [],
+    "tokenizer.ggml.token_type": [],
+    "tokenizer.ggml.tokens": []
+  },
+  "installation": "ollama pull gpt-oss:20b",
+  "api": "http://127.0.0.1:11434",
+  "service_concurrency": 1
+}

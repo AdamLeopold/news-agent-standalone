@@ -1,0 +1,14 @@
+{
+  "verified_at": "2026-10-14T05:28:57.679976+00:00",
+  "url": "http://127.0.0.1:8765/",
+  "status": "passed",
+  "checks": [
+    "Chinese interface rendered",
+    "English interface rendered with translated navigation and data status",
+    "English persists after browser reload",
+    "Restored Chinese interface",
+    "Original source headlines and AI Chinese prose remain unchanged by UI toggle"
+  ],
+  "frontend_tests": 13,
+  "typescript_and_vite_build": "passed"
+}

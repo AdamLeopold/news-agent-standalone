@@ -1,0 +1,31 @@
+{
+  "verified_at": "2026-10-15T06:55:41.874354+00:00",
+  "source_urls": {
+    "ice_contracts": "https://www.ice.com/marketdata/api/productguide/charting/contract-data?productId=4331&hubId=7979",
+    "ice_history": "https://www.ice.com/marketdata/api/productguide/charting/data/historical?marketId=6277389&historicalSpan=3"
+  },
+  "contract_metadata": [
+    {
+      "marketId": 6277389,
+      "marketStrip": "Nov26",
+      "endDate": 1796014800000,
+      "lastPrice": 85.265,
+      "volume": 10390,
+      "lastTime": "10/15/2026 06:45 AM GMT",
+      "change": -2.1494640684890687
+    }
+  ],
+  "response_market_id": 6277389,
+  "relevant_bars": [
+    [
+      "Tue Oct 13 00:00:00 2026",
+      87.223
+    ],
+    [
+      "Wed Oct 14 00:00:00 2026",
+      87.138
+    ]
+  ],
+  "source_field": "bars[][1]",
+  "settlement_verified": false
+}

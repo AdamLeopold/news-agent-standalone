@@ -1,0 +1,87 @@
+#!/usr/bin/env python3
+"""Control only this project's public adapter and its dedicated Funnel port."""
+import argparse
+import json
+import os
+from pathlib import Path
+import signal
+import subprocess
+import sys
+import time
+import urllib.request
+
+ROOT = Path(__file__).resolve().parents[1]
+RUNTIME = ROOT / '.runtime'
+CONFIG = json.loads((ROOT / 'deployment/public.json').read_text())
+PIDFILE = RUNTIME / 'public-gateway.pid'
+IDENTITY = 'ttf_news.public_gateway:app'
+
+
+def owned(pid):
+    result = subprocess.run(['ps', '-p', str(pid), '-o', 'args='], capture_output=True, text=True)
+    return IDENTITY in result.stdout
+
+
+def health():
+    try:
+        with urllib.request.urlopen(f"http://127.0.0.1:{CONFIG['gateway_port']}/api/health", timeout=10) as r:
+            return json.load(r)
+    except Exception:
+        return None
+
+
+def main():
+    p = argparse.ArgumentParser()
+    p.add_argument('command', choices=['start', 'stop', 'status', 'enable-funnel', 'disable-funnel'])
+    args = p.parse_args()
+    RUNTIME.mkdir(exist_ok=True)
+    pid = int(PIDFILE.read_text()) if PIDFILE.exists() else None
+    if args.command == 'start':
+        if pid and owned(pid):
+            print(json.dumps({'gateway_pid': pid, 'health': bool(health())})); return
+        if health():
+            raise SystemExit('Gateway port already occupied; inspect before starting')
+        with (RUNTIME / 'public-gateway.log').open('ab') as log:
+            process = subprocess.Popen([str(ROOT / '.venv/bin/python'), '-m', 'uvicorn', IDENTITY,
+                                        '--host', '127.0.0.1', '--port', str(CONFIG['gateway_port']),
+                                        '--timeout-graceful-shutdown', '5'],
+                                       cwd=ROOT, stdout=log, stderr=subprocess.STDOUT, start_new_session=True)
+        PIDFILE.write_text(str(process.pid))
+        for _ in range(30):
+            if process.poll() is not None:
+                raise SystemExit('Gateway startup failed; see .runtime/public-gateway.log')
+            if health():
+                print(json.dumps({'gateway_pid': process.pid, 'health': True})); return
+            time.sleep(.5)
+        raise SystemExit('Gateway did not become healthy')
+    elif args.command == 'stop':
+        if pid and owned(pid):
+            os.kill(pid, signal.SIGTERM)
+            print('Stopped project public gateway')
+        elif pid:
+            raise SystemExit('PID identity changed; refusing to stop any process')
+        PIDFILE.unlink(missing_ok=True)
+    elif args.command == 'status':
+        h = health()
+        print(json.dumps({'gateway_pid': pid, 'owned': bool(pid and owned(pid)),
+                          'backend_status': h.get('status') if h else None,
+                          'site': CONFIG['site_url'], 'api': CONFIG['api_base']}))
+    else:
+        port = str(CONFIG['funnel_port'])
+        target = f"http://127.0.0.1:{CONFIG['gateway_port']}"
+        raw = subprocess.check_output(['tailscale', 'serve', 'status', '--json'], text=True)
+        state = json.loads(raw or '{}')
+        web = state.get('Web', {})
+        entries = [v for k, v in web.items() if k.endswith(':' + port)]
+        if any(entry.get('Handlers', {}).get('/', {}).get('Proxy') not in (None, target) for entry in entries):
+            raise SystemExit('Dedicated Funnel port belongs to another service; refusing to overwrite')
+        if args.command == 'enable-funnel':
+            if not (pid and owned(pid) and health()):
+                raise SystemExit('Start and verify the gateway first')
+            subprocess.run(['tailscale', 'funnel', '--bg', '--https=' + port, '--yes', target], check=True)
+        elif entries:
+            subprocess.run(['tailscale', 'funnel', '--https=' + port, 'off'], check=True)
+
+
+if __name__ == '__main__':
+    main()

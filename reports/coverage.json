@@ -1,0 +1,1728 @@
+{
+  "generated_at": "2026-10-14T06:07:47.293021+00:00",
+  "requested_start": "2024-05-15",
+  "requested_through": "2026-10-14",
+  "total_articles": 3965,
+  "source_states": [
+    {
+      "source": "offshore_energy",
+      "name": "Offshore Energy",
+      "last_attempt_at": "2026-10-14T06:07:43.553875+00:00",
+      "status": "running",
+      "historical_requested_start": "2024-05-15",
+      "historical_status": "ok",
+      "historical_from": "2024-05-15",
+      "historical_through": "2026-10-14",
+      "id": "offshore_energy",
+      "last_success_at": "2026-10-14T06:06:24.109171+00:00",
+      "last_count": 18,
+      "last_created": 0,
+      "last_revised": 0,
+      "last_error": null,
+      "backfill_completed_at": "2026-10-14T03:31:45.363746+00:00",
+      "request_count": 45,
+      "failures": [
+        {
+          "url": "https://offshore-energy.biz/feed",
+          "at": "2026-10-14T05:55:04.522483+00:00",
+          "error": "Client error '404 Not Found' for url 'https://www.offshore-energy.biz/feed'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
+        },
+        {
+          "url": "https://offshore-energy.biz/feed",
+          "at": "2026-10-14T05:57:23.997518+00:00",
+          "error": "Client error '404 Not Found' for url 'https://www.offshore-energy.biz/feed'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
+        },
+        {
+          "url": "https://offshore-energy.biz/feed",
+          "at": "2026-10-14T05:59:23.886008+00:00",
+          "error": "Client error '404 Not Found' for url 'https://www.offshore-energy.biz/feed'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
+        },
+        {
+          "url": "https://offshore-energy.biz/feed",
+          "at": "2026-10-14T06:00:24.119920+00:00",
+          "error": "Client error '404 Not Found' for url 'https://www.offshore-energy.biz/feed'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
+        },
+        {
+          "url": "https://offshore-energy.biz/feed",
+          "at": "2026-10-14T06:02:24.200437+00:00",
+          "error": "Client error '404 Not Found' for url 'https://www.offshore-energy.biz/feed'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
+        }
+      ],
+      "last_finished_at": "2026-10-14T06:06:24.109175+00:00",
+      "archive_cursor": 29,
+      "historical_pages": 28,
+      "archive_candidate_count": 2718,
+      "historical_limited": false,
+      "last_run_request_count": 1,
+      "live_transport": "rss"
+    },
+    {
+      "source": "eia",
+      "name": "EIA Today in Energy",
+      "last_attempt_at": "2026-10-14T06:07:43.560210+00:00",
+      "status": "running",
+      "historical_requested_start": "2024-05-15",
+      "historical_status": "ok",
+      "historical_from": "2024-05-15",
+      "historical_through": "2026-10-14",
+      "id": "eia",
+      "completed_years": [
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "archive_cursor": "2026",
+      "last_success_at": "2026-10-14T06:07:28.970088+00:00",
+      "last_count": 7,
+      "last_created": 0,
+      "last_revised": 0,
+      "last_error": null,
+      "backfill_completed_at": "2026-10-14T03:49:38.855008+00:00",
+      "request_count": 140,
+      "failures": [],
+      "last_finished_at": "2026-10-14T06:07:28.970093+00:00",
+      "last_run_request_count": 1
+    },
+    {
+      "source": "eu_energy",
+      "name": "European Commission DG Energy",
+      "last_attempt_at": "2026-10-14T06:07:43.566051+00:00",
+      "status": "ok",
+      "historical_requested_start": "2024-05-15",
+      "historical_status": "ok",
+      "historical_from": "2024-05-15",
+      "historical_through": "2026-10-14",
+      "id": "eu_energy",
+      "archive_cursor": 73,
+      "last_success_at": "2026-10-14T06:07:44.466727+00:00",
+      "last_count": 3,
+      "last_created": 0,
+      "last_revised": 0,
+      "last_error": null,
+      "backfill_completed_at": "2026-10-14T03:18:52.914224+00:00",
+      "request_count": 91,
+      "failures": [],
+      "last_finished_at": "2026-10-14T06:07:44.466738+00:00",
+      "last_run_request_count": 1
+    },
+    {
+      "source": "equinor",
+      "name": "Equinor",
+      "last_attempt_at": "2026-10-14T06:07:46.545448+00:00",
+      "status": "running",
+      "historical_requested_start": "2024-05-15",
+      "historical_status": "ok",
+      "historical_from": "2024-05-15",
+      "historical_through": "2026-10-14",
+      "id": "equinor",
+      "last_error": null,
+      "last_count": 7,
+      "request_count": 148,
+      "failures": [],
+      "last_finished_at": "2026-10-14T06:07:30.110026+00:00",
+      "completed_urls": [
+        "https://www.equinor.com/news/20240524-investing-to-maintain-high-gas-production-at-troll",
+        "https://www.equinor.com/news/20240911-reducing-emissions-troll-field",
+        "https://www.equinor.com/news/20241029-strengthens-gas-portfolio",
+        "https://www.equinor.com/news/20241114-oil-gas-discovery-north-sea",
+        "https://www.equinor.com/news/20241205-equinor-and-shell-to-create-independent-oil-and-gas-company",
+        "https://www.equinor.com/news/20241217-new-oil-and-gas-discovery-near-troll",
+        "https://www.equinor.com/news/20250106-troll-highest-natural-gas-production-ever",
+        "https://www.equinor.com/news/20250305-gas-discovery-norwegian-sea",
+        "https://www.equinor.com/news/20250314-gas-to-europe-from-halten-east",
+        "https://www.equinor.com/news/20250605-uk-gas-sales-agreement",
+        "https://www.equinor.com/news/20250718-basf-and-equinor-confirm-strategic-partnership-and-sign-ten-year-natural-gas-supply-agreement",
+        "https://www.equinor.com/news/20250825-new-oil-and-gas-discovery-near-the-troll-field",
+        "https://www.equinor.com/news/20250923-askeladd-vest-more-lng-for-europe",
+        "https://www.equinor.com/news/20251118-investigation-exposure-incidents-hammerfest-lng-completed",
+        "https://www.equinor.com/news/20251121-signs-10-year-agreement-gas-supplies-czech-republic",
+        "https://www.equinor.com/news/20251222-status-update-snohvit-future-project",
+        "https://www.equinor.com/news/20260205-5-year-gas-agreement-to-the-netherlands",
+        "https://www.equinor.com/news/20260324-starts-drilling-major-gas-development-brazil",
+        "https://www.equinor.com/news/20260512-5000-oil-cargoes-from-gullfaks",
+        "https://www.equinor.com/news/20260619-expanding-troll-more-gas-to-europe",
+        "https://www.equinor.com/news/20260824-equinor-and-uniper-sign-15-year-gas-sales-agreement",
+        "https://www.equinor.com/news/20260825-more-gas-for-30-year-old-troll-a",
+        "https://www.equinor.com/news/20261007-updated-cost-estimate-snohvit-future",
+        "https://www.equinor.com/news/20261008-gas-discovery-gullfaks-field",
+        "https://www.equinor.com/news/20261013-eneco-five-year-gas-agreement"
+      ],
+      "archive_cursor": "2026-10-08",
+      "last_success_at": "2026-10-14T06:07:30.110022+00:00",
+      "last_created": 0,
+      "last_revised": 0,
+      "backfill_completed_at": "2026-10-14T03:24:30.378352+00:00",
+      "last_run_request_count": 8
+    },
+    {
+      "source": "cheniere",
+      "name": "Cheniere Energy",
+      "last_attempt_at": "2026-10-14T06:07:43.577544+00:00",
+      "status": "ok",
+      "historical_requested_start": "2024-05-15",
+      "historical_status": "ok",
+      "historical_from": "2024-05-15",
+      "historical_through": "2026-10-14",
+      "id": "cheniere",
+      "last_success_at": "2026-10-14T06:07:43.992169+00:00",
+      "last_count": 10,
+      "last_created": 0,
+      "last_revised": 0,
+      "last_error": null,
+      "backfill_completed_at": "2026-10-14T03:19:53.651871+00:00",
+      "request_count": 51,
+      "failures": [],
+      "last_finished_at": "2026-10-14T06:07:43.992178+00:00",
+      "archive_cursor": 6,
+      "historical_pages": 5,
+      "last_run_request_count": 1
+    },
+    {
+      "source": "gassco",
+      "name": "Gassco UMM",
+      "last_attempt_at": "2026-10-14T06:07:43.583792+00:00",
+      "status": "running",
+      "historical_requested_start": "2024-05-15",
+      "historical_status": "partial",
+      "historical_from": "2024-05-15",
+      "historical_through": "2026-10-14",
+      "id": "gassco",
+      "archive_cursor": "2026-10-15",
+      "historical_pages": 90,
+      "last_success_at": "2026-10-14T06:07:38.368081+00:00",
+      "last_count": 100,
+      "last_created": 0,
+      "last_revised": 0,
+      "last_error": null,
+      "backfill_completed_at": null,
+      "request_count": 179,
+      "failures": [],
+      "last_finished_at": "2026-10-14T06:07:38.368091+00:00",
+      "historical_limited": true,
+      "historical_limited_reasons": [
+        "No records observed in requested intervals; full historical archive retention is not confirmed"
+      ],
+      "empty_archive_intervals": [
+        [
+          "2024-05-15",
+          "2024-06-01"
+        ],
+        [
+          "2024-06-01",
+          "2024-07-01"
+        ],
+        [
+          "2024-07-01",
+          "2024-08-01"
+        ],
+        [
+          "2024-08-01",
+          "2024-09-01"
+        ]
+      ],
+      "last_run_request_count": 3
+    },
+    {
+      "source": "gdelt",
+      "name": "GDELT news discovery",
+      "last_attempt_at": "2026-10-14T06:07:43.589652+00:00",
+      "status": "running",
+      "historical_requested_start": "2024-05-15",
+      "historical_status": "failed",
+      "historical_from": "2024-05-15",
+      "historical_through": "2026-10-14",
+      "id": "gdelt",
+      "last_error": "Expecting value: line 1 column 1 (char 0)",
+      "last_count": 0,
+      "request_count": 3,
+      "failures": [
+        {
+          "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+          "at": "2026-10-14T03:19:33.029010+00:00",
+          "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20260716000000&enddatetime=20260723000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+        },
+        {
+          "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+          "at": "2026-10-14T05:52:06.172884+00:00",
+          "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20261012000000&enddatetime=20261015000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+        }
+      ],
+      "last_finished_at": "2026-10-14T06:07:33.960692+00:00",
+      "next_poll_at": "2026-10-14T06:07:06.170285+00:00",
+      "rate_limited_at": "2026-10-14T05:52:06.170299+00:00",
+      "rate_limit_backoff_seconds": 900,
+      "last_run_request_count": 1
+    }
+  ],
+  "monthly_counts": [
+    {
+      "source": "cheniere",
+      "month": "2024-05",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "cheniere",
+      "month": "2024-06",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "cheniere",
+      "month": "2024-07",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "cheniere",
+      "month": "2024-08",
+      "timestamp_precision": "exact",
+      "count": 3
+    },
+    {
+      "source": "cheniere",
+      "month": "2024-09",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "cheniere",
+      "month": "2024-10",
+      "timestamp_precision": "exact",
+      "count": 2
+    },
+    {
+      "source": "cheniere",
+      "month": "2024-11",
+      "timestamp_precision": "exact",
+      "count": 1
+    },
+    {
+      "source": "cheniere",
+      "month": "2024-12",
+      "timestamp_precision": "exact",
+      "count": 1
+    },
+    {
+      "source": "cheniere",
+      "month": "2025-01",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "cheniere",
+      "month": "2025-02",
+      "timestamp_precision": "exact",
+      "count": 1
+    },
+    {
+      "source": "cheniere",
+      "month": "2025-03",
+      "timestamp_precision": "exact",
+      "count": 1
+    },
+    {
+      "source": "cheniere",
+      "month": "2025-04",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "cheniere",
+      "month": "2025-05",
+      "timestamp_precision": "exact",
+      "count": 2
+    },
+    {
+      "source": "cheniere",
+      "month": "2025-06",
+      "timestamp_precision": "exact",
+      "count": 1
+    },
+    {
+      "source": "cheniere",
+      "month": "2025-07",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "cheniere",
+      "month": "2025-08",
+      "timestamp_precision": "exact",
+      "count": 3
+    },
+    {
+      "source": "cheniere",
+      "month": "2025-09",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "cheniere",
+      "month": "2025-10",
+      "timestamp_precision": "exact",
+      "count": 1
+    },
+    {
+      "source": "cheniere",
+      "month": "2025-11",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "cheniere",
+      "month": "2025-12",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "cheniere",
+      "month": "2026-01",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "cheniere",
+      "month": "2026-02",
+      "timestamp_precision": "exact",
+      "count": 3
+    },
+    {
+      "source": "cheniere",
+      "month": "2026-03",
+      "timestamp_precision": "exact",
+      "count": 2
+    },
+    {
+      "source": "cheniere",
+      "month": "2026-04",
+      "timestamp_precision": "exact",
+      "count": 1
+    },
+    {
+      "source": "cheniere",
+      "month": "2026-05",
+      "timestamp_precision": "exact",
+      "count": 1
+    },
+    {
+      "source": "cheniere",
+      "month": "2026-06",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "cheniere",
+      "month": "2026-07",
+      "timestamp_precision": "exact",
+      "count": 3
+    },
+    {
+      "source": "cheniere",
+      "month": "2026-08",
+      "timestamp_precision": "exact",
+      "count": 3
+    },
+    {
+      "source": "cheniere",
+      "month": "2026-09",
+      "timestamp_precision": "exact",
+      "count": 1
+    },
+    {
+      "source": "cheniere",
+      "month": "2026-10",
+      "timestamp_precision": "exact",
+      "count": 1
+    },
+    {
+      "source": "eia",
+      "month": "2024-05",
+      "timestamp_precision": "date",
+      "count": 4
+    },
+    {
+      "source": "eia",
+      "month": "2024-06",
+      "timestamp_precision": "date",
+      "count": 4
+    },
+    {
+      "source": "eia",
+      "month": "2024-07",
+      "timestamp_precision": "date",
+      "count": 6
+    },
+    {
+      "source": "eia",
+      "month": "2024-08",
+      "timestamp_precision": "date",
+      "count": 5
+    },
+    {
+      "source": "eia",
+      "month": "2024-09",
+      "timestamp_precision": "date",
+      "count": 7
+    },
+    {
+      "source": "eia",
+      "month": "2024-10",
+      "timestamp_precision": "date",
+      "count": 5
+    },
+    {
+      "source": "eia",
+      "month": "2024-11",
+      "timestamp_precision": "date",
+      "count": 3
+    },
+    {
+      "source": "eia",
+      "month": "2024-12",
+      "timestamp_precision": "date",
+      "count": 6
+    },
+    {
+      "source": "eia",
+      "month": "2025-01",
+      "timestamp_precision": "date",
+      "count": 5
+    },
+    {
+      "source": "eia",
+      "month": "2025-02",
+      "timestamp_precision": "date",
+      "count": 4
+    },
+    {
+      "source": "eia",
+      "month": "2025-03",
+      "timestamp_precision": "date",
+      "count": 6
+    },
+    {
+      "source": "eia",
+      "month": "2025-04",
+      "timestamp_precision": "date",
+      "count": 5
+    },
+    {
+      "source": "eia",
+      "month": "2025-05",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "eia",
+      "month": "2025-06",
+      "timestamp_precision": "date",
+      "count": 4
+    },
+    {
+      "source": "eia",
+      "month": "2025-07",
+      "timestamp_precision": "date",
+      "count": 2
+    },
+    {
+      "source": "eia",
+      "month": "2025-08",
+      "timestamp_precision": "date",
+      "count": 3
+    },
+    {
+      "source": "eia",
+      "month": "2025-09",
+      "timestamp_precision": "date",
+      "count": 4
+    },
+    {
+      "source": "eia",
+      "month": "2025-10",
+      "timestamp_precision": "date",
+      "count": 3
+    },
+    {
+      "source": "eia",
+      "month": "2025-11",
+      "timestamp_precision": "date",
+      "count": 5
+    },
+    {
+      "source": "eia",
+      "month": "2025-12",
+      "timestamp_precision": "date",
+      "count": 1
+    },
+    {
+      "source": "eia",
+      "month": "2026-01",
+      "timestamp_precision": "date",
+      "count": 4
+    },
+    {
+      "source": "eia",
+      "month": "2026-02",
+      "timestamp_precision": "date",
+      "count": 5
+    },
+    {
+      "source": "eia",
+      "month": "2026-03",
+      "timestamp_precision": "date",
+      "count": 7
+    },
+    {
+      "source": "eia",
+      "month": "2026-04",
+      "timestamp_precision": "date",
+      "count": 5
+    },
+    {
+      "source": "eia",
+      "month": "2026-05",
+      "timestamp_precision": "date",
+      "count": 3
+    },
+    {
+      "source": "eia",
+      "month": "2026-06",
+      "timestamp_precision": "date",
+      "count": 4
+    },
+    {
+      "source": "eia",
+      "month": "2026-07",
+      "timestamp_precision": "date",
+      "count": 2
+    },
+    {
+      "source": "eia",
+      "month": "2026-08",
+      "timestamp_precision": "date",
+      "count": 3
+    },
+    {
+      "source": "eia",
+      "month": "2026-09",
+      "timestamp_precision": "exact",
+      "count": 5
+    },
+    {
+      "source": "eia",
+      "month": "2026-10",
+      "timestamp_precision": "exact",
+      "count": 2
+    },
+    {
+      "source": "equinor",
+      "month": "2024-05",
+      "timestamp_precision": "exact",
+      "count": 1
+    },
+    {
+      "source": "equinor",
+      "month": "2024-06",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "equinor",
+      "month": "2024-07",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "equinor",
+      "month": "2024-08",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "equinor",
+      "month": "2024-09",
+      "timestamp_precision": "exact",
+      "count": 1
+    },
+    {
+      "source": "equinor",
+      "month": "2024-10",
+      "timestamp_precision": "exact",
+      "count": 1
+    },
+    {
+      "source": "equinor",
+      "month": "2024-11",
+      "timestamp_precision": "exact",
+      "count": 1
+    },
+    {
+      "source": "equinor",
+      "month": "2024-12",
+      "timestamp_precision": "exact",
+      "count": 2
+    },
+    {
+      "source": "equinor",
+      "month": "2025-01",
+      "timestamp_precision": "exact",
+      "count": 1
+    },
+    {
+      "source": "equinor",
+      "month": "2025-02",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "equinor",
+      "month": "2025-03",
+      "timestamp_precision": "exact",
+      "count": 2
+    },
+    {
+      "source": "equinor",
+      "month": "2025-04",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "equinor",
+      "month": "2025-05",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "equinor",
+      "month": "2025-06",
+      "timestamp_precision": "exact",
+      "count": 1
+    },
+    {
+      "source": "equinor",
+      "month": "2025-07",
+      "timestamp_precision": "exact",
+      "count": 1
+    },
+    {
+      "source": "equinor",
+      "month": "2025-08",
+      "timestamp_precision": "exact",
+      "count": 1
+    },
+    {
+      "source": "equinor",
+      "month": "2025-09",
+      "timestamp_precision": "exact",
+      "count": 1
+    },
+    {
+      "source": "equinor",
+      "month": "2025-10",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "equinor",
+      "month": "2025-11",
+      "timestamp_precision": "exact",
+      "count": 2
+    },
+    {
+      "source": "equinor",
+      "month": "2025-12",
+      "timestamp_precision": "exact",
+      "count": 1
+    },
+    {
+      "source": "equinor",
+      "month": "2026-01",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "equinor",
+      "month": "2026-02",
+      "timestamp_precision": "exact",
+      "count": 1
+    },
+    {
+      "source": "equinor",
+      "month": "2026-03",
+      "timestamp_precision": "exact",
+      "count": 1
+    },
+    {
+      "source": "equinor",
+      "month": "2026-04",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "equinor",
+      "month": "2026-05",
+      "timestamp_precision": "exact",
+      "count": 1
+    },
+    {
+      "source": "equinor",
+      "month": "2026-06",
+      "timestamp_precision": "exact",
+      "count": 1
+    },
+    {
+      "source": "equinor",
+      "month": "2026-07",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "equinor",
+      "month": "2026-08",
+      "timestamp_precision": "exact",
+      "count": 2
+    },
+    {
+      "source": "equinor",
+      "month": "2026-09",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "equinor",
+      "month": "2026-10",
+      "timestamp_precision": "exact",
+      "count": 3
+    },
+    {
+      "source": "eu_energy",
+      "month": "2024-05",
+      "timestamp_precision": "date",
+      "count": 2
+    },
+    {
+      "source": "eu_energy",
+      "month": "2024-06",
+      "timestamp_precision": "date",
+      "count": 2
+    },
+    {
+      "source": "eu_energy",
+      "month": "2024-07",
+      "timestamp_precision": "date",
+      "count": 1
+    },
+    {
+      "source": "eu_energy",
+      "month": "2024-08",
+      "timestamp_precision": "date",
+      "count": 1
+    },
+    {
+      "source": "eu_energy",
+      "month": "2024-09",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "eu_energy",
+      "month": "2024-10",
+      "timestamp_precision": "date",
+      "count": 2
+    },
+    {
+      "source": "eu_energy",
+      "month": "2024-11",
+      "timestamp_precision": "date",
+      "count": 4
+    },
+    {
+      "source": "eu_energy",
+      "month": "2024-12",
+      "timestamp_precision": "date",
+      "count": 2
+    },
+    {
+      "source": "eu_energy",
+      "month": "2025-01",
+      "timestamp_precision": "date",
+      "count": 1
+    },
+    {
+      "source": "eu_energy",
+      "month": "2025-02",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "eu_energy",
+      "month": "2025-03",
+      "timestamp_precision": "date",
+      "count": 3
+    },
+    {
+      "source": "eu_energy",
+      "month": "2025-04",
+      "timestamp_precision": "date",
+      "count": 1
+    },
+    {
+      "source": "eu_energy",
+      "month": "2025-05",
+      "timestamp_precision": "date",
+      "count": 2
+    },
+    {
+      "source": "eu_energy",
+      "month": "2025-06",
+      "timestamp_precision": "date",
+      "count": 1
+    },
+    {
+      "source": "eu_energy",
+      "month": "2025-07",
+      "timestamp_precision": "date",
+      "count": 1
+    },
+    {
+      "source": "eu_energy",
+      "month": "2025-08",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "eu_energy",
+      "month": "2025-09",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "eu_energy",
+      "month": "2025-10",
+      "timestamp_precision": "date",
+      "count": 1
+    },
+    {
+      "source": "eu_energy",
+      "month": "2025-11",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "eu_energy",
+      "month": "2025-12",
+      "timestamp_precision": "date",
+      "count": 2
+    },
+    {
+      "source": "eu_energy",
+      "month": "2026-01",
+      "timestamp_precision": "date",
+      "count": 1
+    },
+    {
+      "source": "eu_energy",
+      "month": "2026-02",
+      "timestamp_precision": "date",
+      "count": 1
+    },
+    {
+      "source": "eu_energy",
+      "month": "2026-03",
+      "timestamp_precision": "date",
+      "count": 2
+    },
+    {
+      "source": "eu_energy",
+      "month": "2026-04",
+      "timestamp_precision": "date",
+      "count": 3
+    },
+    {
+      "source": "eu_energy",
+      "month": "2026-05",
+      "timestamp_precision": "date",
+      "count": 1
+    },
+    {
+      "source": "eu_energy",
+      "month": "2026-06",
+      "timestamp_precision": "date",
+      "count": 3
+    },
+    {
+      "source": "eu_energy",
+      "month": "2026-07",
+      "timestamp_precision": "date",
+      "count": 2
+    },
+    {
+      "source": "eu_energy",
+      "month": "2026-08",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "eu_energy",
+      "month": "2026-09",
+      "timestamp_precision": "date",
+      "count": 2
+    },
+    {
+      "source": "eu_energy",
+      "month": "2026-10",
+      "timestamp_precision": "date",
+      "count": 2
+    },
+    {
+      "source": "gassco",
+      "month": "2024-05",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "gassco",
+      "month": "2024-06",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "gassco",
+      "month": "2024-07",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "gassco",
+      "month": "2024-08",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "gassco",
+      "month": "2024-09",
+      "timestamp_precision": "exact",
+      "count": 2
+    },
+    {
+      "source": "gassco",
+      "month": "2024-10",
+      "timestamp_precision": "exact",
+      "count": 55
+    },
+    {
+      "source": "gassco",
+      "month": "2024-11",
+      "timestamp_precision": "exact",
+      "count": 39
+    },
+    {
+      "source": "gassco",
+      "month": "2024-12",
+      "timestamp_precision": "exact",
+      "count": 27
+    },
+    {
+      "source": "gassco",
+      "month": "2025-01",
+      "timestamp_precision": "exact",
+      "count": 39
+    },
+    {
+      "source": "gassco",
+      "month": "2025-02",
+      "timestamp_precision": "exact",
+      "count": 29
+    },
+    {
+      "source": "gassco",
+      "month": "2025-03",
+      "timestamp_precision": "exact",
+      "count": 23
+    },
+    {
+      "source": "gassco",
+      "month": "2025-04",
+      "timestamp_precision": "exact",
+      "count": 41
+    },
+    {
+      "source": "gassco",
+      "month": "2025-05",
+      "timestamp_precision": "exact",
+      "count": 49
+    },
+    {
+      "source": "gassco",
+      "month": "2025-06",
+      "timestamp_precision": "exact",
+      "count": 50
+    },
+    {
+      "source": "gassco",
+      "month": "2025-07",
+      "timestamp_precision": "exact",
+      "count": 31
+    },
+    {
+      "source": "gassco",
+      "month": "2025-08",
+      "timestamp_precision": "exact",
+      "count": 45
+    },
+    {
+      "source": "gassco",
+      "month": "2025-09",
+      "timestamp_precision": "exact",
+      "count": 60
+    },
+    {
+      "source": "gassco",
+      "month": "2025-10",
+      "timestamp_precision": "exact",
+      "count": 69
+    },
+    {
+      "source": "gassco",
+      "month": "2025-11",
+      "timestamp_precision": "exact",
+      "count": 36
+    },
+    {
+      "source": "gassco",
+      "month": "2025-12",
+      "timestamp_precision": "exact",
+      "count": 26
+    },
+    {
+      "source": "gassco",
+      "month": "2026-01",
+      "timestamp_precision": "exact",
+      "count": 20
+    },
+    {
+      "source": "gassco",
+      "month": "2026-02",
+      "timestamp_precision": "exact",
+      "count": 30
+    },
+    {
+      "source": "gassco",
+      "month": "2026-03",
+      "timestamp_precision": "exact",
+      "count": 36
+    },
+    {
+      "source": "gassco",
+      "month": "2026-04",
+      "timestamp_precision": "exact",
+      "count": 54
+    },
+    {
+      "source": "gassco",
+      "month": "2026-05",
+      "timestamp_precision": "exact",
+      "count": 40
+    },
+    {
+      "source": "gassco",
+      "month": "2026-06",
+      "timestamp_precision": "exact",
+      "count": 55
+    },
+    {
+      "source": "gassco",
+      "month": "2026-07",
+      "timestamp_precision": "exact",
+      "count": 37
+    },
+    {
+      "source": "gassco",
+      "month": "2026-08",
+      "timestamp_precision": "exact",
+      "count": 58
+    },
+    {
+      "source": "gassco",
+      "month": "2026-09",
+      "timestamp_precision": "exact",
+      "count": 78
+    },
+    {
+      "source": "gassco",
+      "month": "2026-10",
+      "timestamp_precision": "exact",
+      "count": 50
+    },
+    {
+      "source": "gdelt",
+      "month": "2024-05",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "gdelt",
+      "month": "2024-06",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "gdelt",
+      "month": "2024-07",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "gdelt",
+      "month": "2024-08",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "gdelt",
+      "month": "2024-09",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "gdelt",
+      "month": "2024-10",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "gdelt",
+      "month": "2024-11",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "gdelt",
+      "month": "2024-12",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "gdelt",
+      "month": "2025-01",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "gdelt",
+      "month": "2025-02",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "gdelt",
+      "month": "2025-03",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "gdelt",
+      "month": "2025-04",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "gdelt",
+      "month": "2025-05",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "gdelt",
+      "month": "2025-06",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "gdelt",
+      "month": "2025-07",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "gdelt",
+      "month": "2025-08",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "gdelt",
+      "month": "2025-09",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "gdelt",
+      "month": "2025-10",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "gdelt",
+      "month": "2025-11",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "gdelt",
+      "month": "2025-12",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "gdelt",
+      "month": "2026-01",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "gdelt",
+      "month": "2026-02",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "gdelt",
+      "month": "2026-03",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "gdelt",
+      "month": "2026-04",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "gdelt",
+      "month": "2026-05",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "gdelt",
+      "month": "2026-06",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "gdelt",
+      "month": "2026-07",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "gdelt",
+      "month": "2026-08",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "gdelt",
+      "month": "2026-09",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "gdelt",
+      "month": "2026-10",
+      "timestamp_precision": "none_observed",
+      "count": 0
+    },
+    {
+      "source": "offshore_energy",
+      "month": "2024-05",
+      "timestamp_precision": "exact",
+      "count": 63
+    },
+    {
+      "source": "offshore_energy",
+      "month": "2024-06",
+      "timestamp_precision": "exact",
+      "count": 100
+    },
+    {
+      "source": "offshore_energy",
+      "month": "2024-07",
+      "timestamp_precision": "exact",
+      "count": 137
+    },
+    {
+      "source": "offshore_energy",
+      "month": "2024-08",
+      "timestamp_precision": "exact",
+      "count": 111
+    },
+    {
+      "source": "offshore_energy",
+      "month": "2024-09",
+      "timestamp_precision": "exact",
+      "count": 109
+    },
+    {
+      "source": "offshore_energy",
+      "month": "2024-10",
+      "timestamp_precision": "exact",
+      "count": 110
+    },
+    {
+      "source": "offshore_energy",
+      "month": "2024-11",
+      "timestamp_precision": "exact",
+      "count": 99
+    },
+    {
+      "source": "offshore_energy",
+      "month": "2024-12",
+      "timestamp_precision": "exact",
+      "count": 124
+    },
+    {
+      "source": "offshore_energy",
+      "month": "2025-01",
+      "timestamp_precision": "exact",
+      "count": 107
+    },
+    {
+      "source": "offshore_energy",
+      "month": "2025-02",
+      "timestamp_precision": "exact",
+      "count": 105
+    },
+    {
+      "source": "offshore_energy",
+      "month": "2025-03",
+      "timestamp_precision": "exact",
+      "count": 112
+    },
+    {
+      "source": "offshore_energy",
+      "month": "2025-04",
+      "timestamp_precision": "exact",
+      "count": 106
+    },
+    {
+      "source": "offshore_energy",
+      "month": "2025-05",
+      "timestamp_precision": "exact",
+      "count": 104
+    },
+    {
+      "source": "offshore_energy",
+      "month": "2025-06",
+      "timestamp_precision": "exact",
+      "count": 102
+    },
+    {
+      "source": "offshore_energy",
+      "month": "2025-07",
+      "timestamp_precision": "exact",
+      "count": 117
+    },
+    {
+      "source": "offshore_energy",
+      "month": "2025-08",
+      "timestamp_precision": "exact",
+      "count": 95
+    },
+    {
+      "source": "offshore_energy",
+      "month": "2025-09",
+      "timestamp_precision": "exact",
+      "count": 117
+    },
+    {
+      "source": "offshore_energy",
+      "month": "2025-10",
+      "timestamp_precision": "exact",
+      "count": 93
+    },
+    {
+      "source": "offshore_energy",
+      "month": "2025-11",
+      "timestamp_precision": "exact",
+      "count": 63
+    },
+    {
+      "source": "offshore_energy",
+      "month": "2025-12",
+      "timestamp_precision": "exact",
+      "count": 82
+    },
+    {
+      "source": "offshore_energy",
+      "month": "2026-01",
+      "timestamp_precision": "exact",
+      "count": 72
+    },
+    {
+      "source": "offshore_energy",
+      "month": "2026-02",
+      "timestamp_precision": "exact",
+      "count": 58
+    },
+    {
+      "source": "offshore_energy",
+      "month": "2026-03",
+      "timestamp_precision": "exact",
+      "count": 82
+    },
+    {
+      "source": "offshore_energy",
+      "month": "2026-04",
+      "timestamp_precision": "exact",
+      "count": 66
+    },
+    {
+      "source": "offshore_energy",
+      "month": "2026-05",
+      "timestamp_precision": "exact",
+      "count": 70
+    },
+    {
+      "source": "offshore_energy",
+      "month": "2026-06",
+      "timestamp_precision": "exact",
+      "count": 60
+    },
+    {
+      "source": "offshore_energy",
+      "month": "2026-07",
+      "timestamp_precision": "exact",
+      "count": 55
+    },
+    {
+      "source": "offshore_energy",
+      "month": "2026-08",
+      "timestamp_precision": "exact",
+      "count": 54
+    },
+    {
+      "source": "offshore_energy",
+      "month": "2026-09",
+      "timestamp_precision": "exact",
+      "count": 66
+    },
+    {
+      "source": "offshore_energy",
+      "month": "2026-10",
+      "timestamp_precision": "exact",
+      "count": 26
+    }
+  ],
+  "summary_coverage": [
+    {
+      "source": "offshore_energy",
+      "records": 2665,
+      "with_source_summary": 2665
+    },
+    {
+      "source": "eia",
+      "records": 122,
+      "with_source_summary": 122
+    },
+    {
+      "source": "eu_energy",
+      "records": 43,
+      "with_source_summary": 43
+    },
+    {
+      "source": "equinor",
+      "records": 25,
+      "with_source_summary": 25
+    },
+    {
+      "source": "cheniere",
+      "records": 31,
+      "with_source_summary": 31
+    },
+    {
+      "source": "gassco",
+      "records": 1079,
+      "with_source_summary": 1079
+    },
+    {
+      "source": "gdelt",
+      "records": 0,
+      "with_source_summary": 0
+    }
+  ],
+  "limitations": [
+    "Coverage means accessible selected-source news, not all global natural-gas news.",
+    "Date-only and unknown publication times cannot be precisely assigned across the 17:15 settlement boundary.",
+    "A zero month is not proof of no news. Consult source status and archive cursors.",
+    "GDELT history is limited to 90 recent days and capped discovery intervals are flagged.",
+    "DBnomics ICE observations remain reference prices until official settlement field is verified."
+  ],
+  "unobserved_source_months": [
+    {
+      "source": "offshore_energy",
+      "months": [],
+      "meaning": "No dated record observed; not proof of no news or full source coverage."
+    },
+    {
+      "source": "eia",
+      "months": [
+        "2025-05"
+      ],
+      "meaning": "No dated record observed; not proof of no news or full source coverage."
+    },
+    {
+      "source": "eu_energy",
+      "months": [
+        "2024-09",
+        "2025-02",
+        "2025-08",
+        "2025-09",
+        "2025-11",
+        "2026-08"
+      ],
+      "meaning": "No dated record observed; not proof of no news or full source coverage."
+    },
+    {
+      "source": "equinor",
+      "months": [
+        "2024-06",
+        "2024-07",
+        "2024-08",
+        "2025-02",
+        "2025-04",
+        "2025-05",
+        "2025-10",
+        "2026-01",
+        "2026-04",
+        "2026-07",
+        "2026-09"
+      ],
+      "meaning": "No dated record observed; not proof of no news or full source coverage."
+    },
+    {
+      "source": "cheniere",
+      "months": [
+        "2024-05",
+        "2024-06",
+        "2024-07",
+        "2024-09",
+        "2025-01",
+        "2025-04",
+        "2025-07",
+        "2025-09",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-06"
+      ],
+      "meaning": "No dated record observed; not proof of no news or full source coverage."
+    },
+    {
+      "source": "gassco",
+      "months": [
+        "2024-05",
+        "2024-06",
+        "2024-07",
+        "2024-08"
+      ],
+      "meaning": "No dated record observed; not proof of no news or full source coverage."
+    },
+    {
+      "source": "gdelt",
+      "months": [
+        "2024-05",
+        "2024-06",
+        "2024-07",
+        "2024-08",
+        "2024-09",
+        "2024-10",
+        "2024-11",
+        "2024-12",
+        "2025-01",
+        "2025-02",
+        "2025-03",
+        "2025-04",
+        "2025-05",
+        "2025-06",
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09",
+        "2026-10"
+      ],
+      "meaning": "No dated record observed; not proof of no news or full source coverage."
+    }
+  ],
+  "observed_ranges": [
+    {
+      "source": "offshore_energy",
+      "count": 2665,
+      "earliest": "2024-05-15",
+      "latest": "2026-10-13",
+      "exact": 2665,
+      "date_only": 0
+    },
+    {
+      "source": "eia",
+      "count": 122,
+      "earliest": "2024-05-16",
+      "latest": "2026-10-07",
+      "exact": 7,
+      "date_only": 115
+    },
+    {
+      "source": "eu_energy",
+      "count": 43,
+      "earliest": "2024-05-27",
+      "latest": "2026-10-12",
+      "exact": 0,
+      "date_only": 43
+    },
+    {
+      "source": "equinor",
+      "count": 25,
+      "earliest": "2024-05-24",
+      "latest": "2026-10-13",
+      "exact": 25,
+      "date_only": 0
+    },
+    {
+      "source": "cheniere",
+      "count": 31,
+      "earliest": "2024-08-05",
+      "latest": "2026-10-01",
+      "exact": 31,
+      "date_only": 0
+    },
+    {
+      "source": "gassco",
+      "count": 1079,
+      "earliest": "2024-09-19",
+      "latest": "2026-10-13",
+      "exact": 1079,
+      "date_only": 0
+    },
+    {
+      "source": "gdelt",
+      "count": 0,
+      "earliest": null,
+      "latest": null,
+      "exact": 0,
+      "date_only": 0
+    }
+  ]
+}

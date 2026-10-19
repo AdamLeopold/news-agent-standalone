@@ -1,0 +1,583 @@
+{
+  "generated_at": "2026-10-14T06:07:47.504820+00:00",
+  "project": "/Users/adam/TTF/news-agent-standalone",
+  "counts": {
+    "news": 3965,
+    "events": 1556,
+    "legacy_daily": 3456,
+    "prices": 65690,
+    "analyses": 28
+  },
+  "prompt_version": "ttf-news-v6-standalone-1.8",
+  "runtime_health": {
+    "status": "ok",
+    "server_pid": 71593,
+    "prompt_version": "ttf-news-v6-standalone-1.8",
+    "model": {
+      "available": true,
+      "model": "gpt-oss:20b",
+      "digest": "17052f91a42e97930aa6e28a6c6c06a983e6a58dbb00434885a0cf5313e376f7",
+      "error": null
+    },
+    "counts": {
+      "news": 3965,
+      "events": 1556,
+      "legacy_daily": 3456,
+      "prices": 65690,
+      "analyses": 28
+    },
+    "sources": [
+      {
+        "source": "cheniere",
+        "name": "Cheniere Energy",
+        "last_attempt_at": "2026-10-14T06:07:43.577544+00:00",
+        "status": "ok",
+        "historical_requested_start": "2024-05-15",
+        "historical_status": "ok",
+        "historical_from": "2024-05-15",
+        "historical_through": "2026-10-14",
+        "id": "cheniere",
+        "last_success_at": "2026-10-14T06:07:43.992169+00:00",
+        "last_count": 10,
+        "last_created": 0,
+        "last_revised": 0,
+        "last_error": null,
+        "backfill_completed_at": "2026-10-14T03:19:53.651871+00:00",
+        "request_count": 51,
+        "failures": [],
+        "last_finished_at": "2026-10-14T06:07:43.992178+00:00",
+        "archive_cursor": 6,
+        "historical_pages": 5,
+        "last_run_request_count": 1
+      },
+      {
+        "source": "dbnomics_ice",
+        "name": "ICE monthly contract references via DBnomics",
+        "status": "running",
+        "last_attempt_at": "2026-10-14T06:07:43.536473+00:00",
+        "id": "dbnomics_ice",
+        "last_success_at": "2026-10-14T06:06:38.956918+00:00",
+        "observations_imported": 372,
+        "series_scanned": 221,
+        "price_type": "reference",
+        "settlement_verified": false,
+        "last_error": null,
+        "direct_ice_chart": {
+          "status": "ok",
+          "observations_imported": 18,
+          "contracts": [
+            {
+              "contract_id": "6277389",
+              "label": "Nov26",
+              "latest_day": "2026-10-13"
+            },
+            {
+              "contract_id": "6277390",
+              "label": "Dec26",
+              "latest_day": "2026-10-13"
+            },
+            {
+              "contract_id": "6277391",
+              "label": "Jan27",
+              "latest_day": "2026-10-13"
+            }
+          ],
+          "last_error": null
+        }
+      },
+      {
+        "source": "eia",
+        "name": "EIA Today in Energy",
+        "last_attempt_at": "2026-10-14T06:07:43.560210+00:00",
+        "status": "running",
+        "historical_requested_start": "2024-05-15",
+        "historical_status": "ok",
+        "historical_from": "2024-05-15",
+        "historical_through": "2026-10-14",
+        "id": "eia",
+        "completed_years": [
+          "2024",
+          "2025",
+          "2026"
+        ],
+        "archive_cursor": "2026",
+        "last_success_at": "2026-10-14T06:07:28.970088+00:00",
+        "last_count": 7,
+        "last_created": 0,
+        "last_revised": 0,
+        "last_error": null,
+        "backfill_completed_at": "2026-10-14T03:49:38.855008+00:00",
+        "request_count": 140,
+        "failures": [],
+        "last_finished_at": "2026-10-14T06:07:28.970093+00:00",
+        "last_run_request_count": 1
+      },
+      {
+        "status": "ok",
+        "repaired": 120,
+        "attempted": 120,
+        "failures": [],
+        "id": "eia_summary_repair",
+        "source": "eia_summary_repair",
+        "started_at": "2026-10-14T03:49:39.741700+00:00",
+        "finished_at": "2026-10-14T03:57:44.876565+00:00"
+      },
+      {
+        "source": "equinor",
+        "name": "Equinor",
+        "last_attempt_at": "2026-10-14T06:07:46.545448+00:00",
+        "status": "running",
+        "historical_requested_start": "2024-05-15",
+        "historical_status": "ok",
+        "historical_from": "2024-05-15",
+        "historical_through": "2026-10-14",
+        "id": "equinor",
+        "last_error": null,
+        "last_count": 7,
+        "request_count": 148,
+        "failures": [],
+        "last_finished_at": "2026-10-14T06:07:30.110026+00:00",
+        "completed_urls": [
+          "https://www.equinor.com/news/20240524-investing-to-maintain-high-gas-production-at-troll",
+          "https://www.equinor.com/news/20240911-reducing-emissions-troll-field",
+          "https://www.equinor.com/news/20241029-strengthens-gas-portfolio",
+          "https://www.equinor.com/news/20241114-oil-gas-discovery-north-sea",
+          "https://www.equinor.com/news/20241205-equinor-and-shell-to-create-independent-oil-and-gas-company",
+          "https://www.equinor.com/news/20241217-new-oil-and-gas-discovery-near-troll",
+          "https://www.equinor.com/news/20250106-troll-highest-natural-gas-production-ever",
+          "https://www.equinor.com/news/20250305-gas-discovery-norwegian-sea",
+          "https://www.equinor.com/news/20250314-gas-to-europe-from-halten-east",
+          "https://www.equinor.com/news/20250605-uk-gas-sales-agreement",
+          "https://www.equinor.com/news/20250718-basf-and-equinor-confirm-strategic-partnership-and-sign-ten-year-natural-gas-supply-agreement",
+          "https://www.equinor.com/news/20250825-new-oil-and-gas-discovery-near-the-troll-field",
+          "https://www.equinor.com/news/20250923-askeladd-vest-more-lng-for-europe",
+          "https://www.equinor.com/news/20251118-investigation-exposure-incidents-hammerfest-lng-completed",
+          "https://www.equinor.com/news/20251121-signs-10-year-agreement-gas-supplies-czech-republic",
+          "https://www.equinor.com/news/20251222-status-update-snohvit-future-project",
+          "https://www.equinor.com/news/20260205-5-year-gas-agreement-to-the-netherlands",
+          "https://www.equinor.com/news/20260324-starts-drilling-major-gas-development-brazil",
+          "https://www.equinor.com/news/20260512-5000-oil-cargoes-from-gullfaks",
+          "https://www.equinor.com/news/20260619-expanding-troll-more-gas-to-europe",
+          "https://www.equinor.com/news/20260824-equinor-and-uniper-sign-15-year-gas-sales-agreement",
+          "https://www.equinor.com/news/20260825-more-gas-for-30-year-old-troll-a",
+          "https://www.equinor.com/news/20261007-updated-cost-estimate-snohvit-future",
+          "https://www.equinor.com/news/20261008-gas-discovery-gullfaks-field",
+          "https://www.equinor.com/news/20261013-eneco-five-year-gas-agreement"
+        ],
+        "archive_cursor": "2026-10-08",
+        "last_success_at": "2026-10-14T06:07:30.110022+00:00",
+        "last_created": 0,
+        "last_revised": 0,
+        "backfill_completed_at": "2026-10-14T03:24:30.378352+00:00",
+        "last_run_request_count": 8
+      },
+      {
+        "source": "eu_energy",
+        "name": "European Commission DG Energy",
+        "last_attempt_at": "2026-10-14T06:07:43.566051+00:00",
+        "status": "ok",
+        "historical_requested_start": "2024-05-15",
+        "historical_status": "ok",
+        "historical_from": "2024-05-15",
+        "historical_through": "2026-10-14",
+        "id": "eu_energy",
+        "archive_cursor": 73,
+        "last_success_at": "2026-10-14T06:07:44.466727+00:00",
+        "last_count": 3,
+        "last_created": 0,
+        "last_revised": 0,
+        "last_error": null,
+        "backfill_completed_at": "2026-10-14T03:18:52.914224+00:00",
+        "request_count": 91,
+        "failures": [],
+        "last_finished_at": "2026-10-14T06:07:44.466738+00:00",
+        "last_run_request_count": 1
+      },
+      {
+        "source": "gassco",
+        "name": "Gassco UMM",
+        "last_attempt_at": "2026-10-14T06:07:43.583792+00:00",
+        "status": "running",
+        "historical_requested_start": "2024-05-15",
+        "historical_status": "partial",
+        "historical_from": "2024-05-15",
+        "historical_through": "2026-10-14",
+        "id": "gassco",
+        "archive_cursor": "2026-10-15",
+        "historical_pages": 90,
+        "last_success_at": "2026-10-14T06:07:38.368081+00:00",
+        "last_count": 100,
+        "last_created": 0,
+        "last_revised": 0,
+        "last_error": null,
+        "backfill_completed_at": null,
+        "request_count": 179,
+        "failures": [],
+        "last_finished_at": "2026-10-14T06:07:38.368091+00:00",
+        "historical_limited": true,
+        "historical_limited_reasons": [
+          "No records observed in requested intervals; full historical archive retention is not confirmed"
+        ],
+        "empty_archive_intervals": [
+          [
+            "2024-05-15",
+            "2024-06-01"
+          ],
+          [
+            "2024-06-01",
+            "2024-07-01"
+          ],
+          [
+            "2024-07-01",
+            "2024-08-01"
+          ],
+          [
+            "2024-08-01",
+            "2024-09-01"
+          ]
+        ],
+        "last_run_request_count": 3
+      },
+      {
+        "source": "gdelt",
+        "name": "GDELT news discovery",
+        "last_attempt_at": "2026-10-14T06:07:43.589652+00:00",
+        "status": "running",
+        "historical_requested_start": "2024-05-15",
+        "historical_status": "failed",
+        "historical_from": "2024-05-15",
+        "historical_through": "2026-10-14",
+        "id": "gdelt",
+        "last_error": "Expecting value: line 1 column 1 (char 0)",
+        "last_count": 0,
+        "request_count": 3,
+        "failures": [
+          {
+            "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+            "at": "2026-10-14T03:19:33.029010+00:00",
+            "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20260716000000&enddatetime=20260723000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+          },
+          {
+            "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+            "at": "2026-10-14T05:52:06.172884+00:00",
+            "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20261012000000&enddatetime=20261015000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+          }
+        ],
+        "last_finished_at": "2026-10-14T06:07:33.960692+00:00",
+        "next_poll_at": "2026-10-14T06:07:06.170285+00:00",
+        "rate_limited_at": "2026-10-14T05:52:06.170299+00:00",
+        "rate_limit_backoff_seconds": 900,
+        "last_run_request_count": 1
+      },
+      {
+        "source": "ice_chart",
+        "name": "ICE public chart (reference prices)",
+        "status": "ok",
+        "last_attempt_at": "2026-10-14T06:06:38.961476+00:00",
+        "settlement_verified": false,
+        "id": "ice_chart",
+        "last_success_at": "2026-10-14T06:06:43.477117+00:00",
+        "observations_imported": 18,
+        "contracts": [
+          {
+            "contract_id": "6277389",
+            "label": "Nov26",
+            "latest_day": "2026-10-13"
+          },
+          {
+            "contract_id": "6277390",
+            "label": "Dec26",
+            "latest_day": "2026-10-13"
+          },
+          {
+            "contract_id": "6277391",
+            "label": "Jan27",
+            "latest_day": "2026-10-13"
+          }
+        ],
+        "last_error": null
+      },
+      {
+        "source": "offshore_energy",
+        "name": "Offshore Energy",
+        "last_attempt_at": "2026-10-14T06:07:43.553875+00:00",
+        "status": "running",
+        "historical_requested_start": "2024-05-15",
+        "historical_status": "ok",
+        "historical_from": "2024-05-15",
+        "historical_through": "2026-10-14",
+        "id": "offshore_energy",
+        "last_success_at": "2026-10-14T06:06:24.109171+00:00",
+        "last_count": 18,
+        "last_created": 0,
+        "last_revised": 0,
+        "last_error": null,
+        "backfill_completed_at": "2026-10-14T03:31:45.363746+00:00",
+        "request_count": 45,
+        "failures": [
+          {
+            "url": "https://offshore-energy.biz/feed",
+            "at": "2026-10-14T05:55:04.522483+00:00",
+            "error": "Client error '404 Not Found' for url 'https://www.offshore-energy.biz/feed'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
+          },
+          {
+            "url": "https://offshore-energy.biz/feed",
+            "at": "2026-10-14T05:57:23.997518+00:00",
+            "error": "Client error '404 Not Found' for url 'https://www.offshore-energy.biz/feed'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
+          },
+          {
+            "url": "https://offshore-energy.biz/feed",
+            "at": "2026-10-14T05:59:23.886008+00:00",
+            "error": "Client error '404 Not Found' for url 'https://www.offshore-energy.biz/feed'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
+          },
+          {
+            "url": "https://offshore-energy.biz/feed",
+            "at": "2026-10-14T06:00:24.119920+00:00",
+            "error": "Client error '404 Not Found' for url 'https://www.offshore-energy.biz/feed'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
+          },
+          {
+            "url": "https://offshore-energy.biz/feed",
+            "at": "2026-10-14T06:02:24.200437+00:00",
+            "error": "Client error '404 Not Found' for url 'https://www.offshore-energy.biz/feed'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
+          }
+        ],
+        "last_finished_at": "2026-10-14T06:06:24.109175+00:00",
+        "archive_cursor": 29,
+        "historical_pages": 28,
+        "archive_candidate_count": 2718,
+        "historical_limited": false,
+        "last_run_request_count": 1,
+        "live_transport": "rss"
+      }
+    ],
+    "collector": {
+      "enabled": true,
+      "poll_seconds": 60
+    },
+    "server_time": "2026-10-14T06:07:47.501848+00:00"
+  },
+  "real_model_smoke_status": "passed",
+  "smoke_prompt_version": "ttf-news-v6-standalone-1.8",
+  "seven_day_monitoring": {
+    "started_at": "2026-10-14T05:51:48.181167+00:00",
+    "elapsed_days": 0.0111,
+    "required_days": 7,
+    "seven_day_validation_complete": false,
+    "heartbeat_gap_seconds": [],
+    "model_successes": 8,
+    "model_failures": 0,
+    "last_heartbeat_at": "2026-10-14T06:07:43.551307+00:00",
+    "seconds_since_heartbeat": 4,
+    "model_failure_rate": 0.0,
+    "brief_latency": {
+      "count": 8,
+      "median": 81.922,
+      "p95": 203.264
+    },
+    "detail_latency": {
+      "count": 0,
+      "median": null,
+      "p95": null
+    },
+    "collection_cycles": 14,
+    "collection_failures": 0,
+    "evaluation_report": {
+      "status": "not_available",
+      "count": 0,
+      "correct_count": 0,
+      "accuracy": null,
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "per_class": {
+        "extreme_up": {
+          "count": 0,
+          "predicted_count": 0,
+          "true_positive": 0,
+          "precision": null,
+          "recall": null
+        },
+        "up": {
+          "count": 0,
+          "predicted_count": 0,
+          "true_positive": 0,
+          "precision": null,
+          "recall": null
+        },
+        "flat": {
+          "count": 0,
+          "predicted_count": 0,
+          "true_positive": 0,
+          "precision": null,
+          "recall": null
+        },
+        "down": {
+          "count": 0,
+          "predicted_count": 0,
+          "true_positive": 0,
+          "precision": null,
+          "recall": null
+        },
+        "extreme_down": {
+          "count": 0,
+          "predicted_count": 0,
+          "true_positive": 0,
+          "precision": null,
+          "recall": null
+        }
+      },
+      "abnormal_binary": {
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "true_negative": 0,
+        "actual_count": 0,
+        "predicted_count": 0,
+        "precision": null,
+        "recall": null,
+        "definition": "异常暴涨/暴跌合并为异常事件；异常方向对错仍计入五分类准确率。"
+      },
+      "class_order": [
+        "extreme_up",
+        "up",
+        "flat",
+        "down",
+        "extreme_down"
+      ],
+      "matrix_rows": "actual",
+      "matrix_columns": "predicted",
+      "total_records": 0,
+      "eligible_count": 0,
+      "excluded_count": 0,
+      "exclusion_reasons": {},
+      "monthly": [],
+      "scope": "仅本独立模型的已验证同合约日结算五分类预测；不使用reference价格或multiagent准确率。",
+      "reason": "没有合法且已验证的五分类结算评估记录，预测准确率与异常识别率暂不可报告。"
+    },
+    "latency_seconds": [
+      152.503,
+      11.576,
+      12.456,
+      28.291,
+      155.645,
+      203.264,
+      58.226,
+      105.619
+    ],
+    "evaluations": [],
+    "official_evaluation_count": 0,
+    "notes": [
+      "七天持续运行验收需要真实经过七天并核查心跳缺口。",
+      "无已验证日结算时不报告正式预测准确率。"
+    ]
+  },
+  "artifacts": [
+    {
+      "file": "data/exports/analyses.jsonl",
+      "bytes": 2390993,
+      "sha256": "ce22b00d6955a1af51f1d347e8fba688118d7b96616ed6db50c4c16ceff61b0a",
+      "records": 28
+    },
+    {
+      "file": "data/exports/coverage.json",
+      "bytes": 24802,
+      "sha256": "66b5b8244ba087fc9c92dccde3ea8f44d0b07d2ed12bcce8fd0a95bee60e1e43",
+      "records": null
+    },
+    {
+      "file": "data/exports/daily.csv",
+      "bytes": 3747541,
+      "sha256": "17c06f9d2fa3fce276646bd3863fbc87795dd3ddb4660a4acc7d2812f79e0407",
+      "records": null
+    },
+    {
+      "file": "data/exports/daily.jsonl",
+      "bytes": 3648467,
+      "sha256": "c088929c35526efbc5f2111868b90cab2a87db489be735b569986bb36f440fdb",
+      "records": 623
+    },
+    {
+      "file": "data/exports/events.csv",
+      "bytes": 5921616,
+      "sha256": "a8e967f21ff2484d9c97878e9834a944f49a041e79ee1ffb062b6a910e0c78c6",
+      "records": null
+    },
+    {
+      "file": "data/exports/events.jsonl",
+      "bytes": 6330816,
+      "sha256": "8776d63126dfe84ab9bd63d0100ce1df7171c6c1e695b3f115f89c7e428de7b0",
+      "records": 1556
+    },
+    {
+      "file": "data/exports/legacy_daily.jsonl",
+      "bytes": 11699842,
+      "sha256": "730e0d60ec9f2450d78eaf6ae36a226a8e804cfb6f177c6aa459a6ef138ff840",
+      "records": 3456
+    },
+    {
+      "file": "data/exports/news.csv",
+      "bytes": 4897496,
+      "sha256": "4ded71beebf5da06f6e1fd22e77adff8fe6716cdca4a039273743303508b12c7",
+      "records": null
+    },
+    {
+      "file": "data/exports/news.jsonl",
+      "bytes": 6595074,
+      "sha256": "0a972f059e8e174fb6b6b453284d16028e5859ac51beff10d4c3e74cb3c52b2e",
+      "records": 3965
+    },
+    {
+      "file": "data/exports/prices.csv",
+      "bytes": 26534937,
+      "sha256": "525064dc3ce8cb9c38e18f4c02691a5a2d5a8cbd7f9a8f0457dced1593df28a0",
+      "records": null
+    },
+    {
+      "file": "data/exports/prices.jsonl",
+      "bytes": 43614433,
+      "sha256": "73b31e3f57eb05076c114c227360c5d48b7f591e8189763219e3ea27c9ab1abf",
+      "records": 65690
+    }
+  ],
+  "limitations": [
+    "Selected free-source coverage is documented in reports/coverage.md.",
+    "Date-only articles are exported but not assigned a fabricated settlement window.",
+    "Reference prices are excluded from official settlement accuracy.",
+    "Seven-day validation requires seven actual days and recorded heartbeat continuity.",
+    "UI supports Chinese and English; model analysis defaults to Chinese."
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "brief": {
+    "input_token_estimate": 5298,
+    "input_token_ceiling": 5500,
+    "output_token_limit": 1024,
+    "context_window": 8192,
+    "adaptive_context_used": true,
+    "outcome_compression": [
+      {
+        "event_id": "event-gassco-2026-104",
+        "known_horizons": [
+          "1d",
+          "3d",
+          "5d"
+        ],
+        "included_horizons": [
+          "1d",
+          "3d"
+        ]
+      },
+      {
+        "event_id": "event-gassco-2026-206",
+        "known_horizons": [
+          "1d",
+          "3d",
+          "5d",
+          "10d"
+        ],
+        "included_horizons": [
+          "1d",
+          "3d"
+        ]
+      },
+      {
+        "event_id": "event-gassco-2026-103",
+        "known_horizons": [
+          "1d"
+        ],
+        "included_horizons": [
+          "1d"
+        ]
+      },
+      {
+        "event_id": "event-gassco-2026-222",
+        "known_horizons": [
+          "1d",
+          "3d"
+        ],
+        "included_horizons": [
+          "1d",
+          "3d"
+        ]
+      }
+    ]
+  },
+  "detail": {
+    "input_token_estimate": 5485,
+    "input_token_ceiling": 5500,
+    "output_token_limit": 2560,
+    "context_window": 8192,
+    "adaptive_context_used": true,
+    "outcome_compression": [
+      {
+        "event_id": "event-gassco-2026-104",
+        "known_horizons": [
+          "1d",
+          "3d",
+          "5d"
+        ],
+        "included_horizons": [
+          "1d",
+          "3d"
+        ]
+      },
+      {
+        "event_id": "event-gassco-2026-206",
+        "known_horizons": [
+          "1d",
+          "3d",
+          "5d",
+          "10d"
+        ],
+        "included_horizons": [
+          "1d",
+          "3d"
+        ]
+      },
+      {
+        "event_id": "event-gassco-2026-103",
+        "known_horizons": [
+          "1d"
+        ],
+        "included_horizons": [
+          "1d"
+        ]
+      },
+      {
+        "event_id": "event-gassco-2026-222",
+        "known_horizons": [
+          "1d",
+          "3d"
+        ],
+        "included_horizons": [
+          "1d",
+          "3d"
+        ]
+      }
+    ]
+  }
+}

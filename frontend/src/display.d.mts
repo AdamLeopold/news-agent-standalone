@@ -1,0 +1,12 @@
+import type {Article, Result, SourceState} from './types';
+export function signalInfo(direction?: string): {label: string; short: string; tone: string; symbol: string};
+export function analysisDirectionChanges(brief?: Result | null, detail?: Result | null): {key: string; label: string; brief: string; detail: string}[];
+export function displayConfidence(confidence?: number | string): string;
+export function statusInfo(status?: string): {label: string; tone: string};
+export function countdown(cutoff: string, now?: number): string;
+export function sourceInfo(source: SourceState): {label: string; tone: string};
+export function safeUrl(value?: string): string | null;
+export function dateDeltaSeconds(start?: string, end?: string): number | null;
+export function formatDuration(seconds: unknown): string;
+export function discoveryDelay(article: Article): string;
+export const directions: Record<string, {label: string; short: string; tone: string; symbol: string}>;

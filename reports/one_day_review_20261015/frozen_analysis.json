@@ -1,0 +1,2981 @@
+{
+  "id": "e68e76ef-e8c9-45c0-8361-c81c59d019f6",
+  "news_id": "af3b256e65f68dbb1d6f4fe5",
+  "kind": "live",
+  "status": "completed",
+  "created_at": "2026-10-14T14:05:09.295097+00:00",
+  "completed_at": "2026-10-14T14:06:22.804016+00:00",
+  "trade_date": "2026-10-14",
+  "input_snapshot": {
+    "as_of": "2026-10-14T14:05:08.777292+00:00",
+    "session": {
+      "trade_date": "2026-10-14",
+      "window_start": "2026-10-13T15:15:00+00:00",
+      "window_end": "2026-10-14T15:15:00+00:00",
+      "cutoff_utc": "2026-10-14T15:15:00+00:00",
+      "cutoff_local": "2026-10-14T17:15:00+02:00",
+      "cutoff_singapore": "2026-10-14T23:15:00+08:00",
+      "display_timezone": "Europe/Amsterdam",
+      "seconds_to_close": 4191,
+      "calendar_source": "https://www.ice.com/publicdocs/ICE_Endex_Trading_Schedule.pdf",
+      "calendar_quality": "official_2026_2027",
+      "boundary": "[previous_settlement, current_settlement)"
+    },
+    "current_news": {
+      "source": "offshore_energy",
+      "url": "https://offshore-energy.biz/2026/10/14/jera-deepens-australian-lng-foothold-with-larger-stake-in-chevrons-project",
+      "title": "JERA deepens Australian LNG foothold with larger stake in Chevron’s project",
+      "summary": "JERA has boosted its indirect participation in Chevron's LNG project to 50.1% following a strategic share acquisition from JOGMEC.",
+      "published_at": "2026-10-14T13:18:00+00:00",
+      "published_date": "2026-10-14",
+      "timestamp_precision": "exact",
+      "timestamp_source": "rss.pubDate",
+      "updated_at": null,
+      "first_seen_at": "2026-10-14T14:04:56.724397+00:00",
+      "summary_created_at": "2026-10-14T14:04:56.724399+00:00",
+      "category": "lng",
+      "entities": [],
+      "source_revision": "11a1a1cb6ecb9988",
+      "content_hash": "8545b54610c902a0ef1677638018c7b0c0de23534748ad1feed9dd67fc21cb32",
+      "discovered_via": "https://offshore-energy.biz/feed",
+      "ingestion_kind": "live",
+      "is_relevant": true,
+      "trade_date": "2026-10-14",
+      "id": "af3b256e65f68dbb1d6f4fe5",
+      "version": 1,
+      "version_seen_at": "2026-10-14T14:04:56.735077+00:00",
+      "_created": true,
+      "_revised": false
+    },
+    "window_news": [
+      {
+        "source": "offshore_energy",
+        "url": "https://offshore-energy.biz/2026/10/14/kistos-strengthens-its-presence-in-north-sea-oil-and-gas-hub-with-var-energi-deal",
+        "title": "Kistos strengthens its presence in North Sea oil & gas hub with Vår Energi deal",
+        "summary": "Kistos is expanding its North Sea footprint through a multimillion-dollar acquisition with Vår Energi, boosting its hydrocarbon portfolio.",
+        "published_at": "2026-10-14T06:34:56+00:00",
+        "published_date": "2026-10-14",
+        "timestamp_precision": "exact",
+        "timestamp_source": "rss.pubDate",
+        "updated_at": null,
+        "first_seen_at": "2026-10-14T07:03:53.548512+00:00",
+        "summary_created_at": "2026-10-14T07:03:53.548513+00:00",
+        "category": "other",
+        "entities": [],
+        "source_revision": "7137d461e14430f0",
+        "content_hash": "d4f67b0d188094784dfcc024eac424953cf8d03401614a143144319ac881fe9d",
+        "discovered_via": "https://offshore-energy.biz/feed",
+        "ingestion_kind": "live",
+        "is_relevant": true,
+        "trade_date": "2026-10-14",
+        "id": "092e9c5993afb0aa4341cc93",
+        "version": 1,
+        "version_seen_at": "2026-10-14T07:03:53.558676+00:00"
+      },
+      {
+        "source": "offshore_energy",
+        "url": "https://offshore-energy.biz/2026/10/14/sunda-steps-closer-to-dusting-off-1985-gas-field-as-new-zealand-bid-goes-exclusive",
+        "title": "Sunda steps closer to dusting off 1985 gas field as New Zealand bid goes exclusive",
+        "summary": "Sunda has secured exclusivity for its New Zealand exploration permit bid, paving the way for a potential appraisal of a 41-year-old gas field.",
+        "published_at": "2026-10-14T10:59:57+00:00",
+        "published_date": "2026-10-14",
+        "timestamp_precision": "exact",
+        "timestamp_source": "rss.pubDate",
+        "updated_at": null,
+        "first_seen_at": "2026-10-14T11:04:55.115636+00:00",
+        "summary_created_at": "2026-10-14T11:04:55.115639+00:00",
+        "category": "other",
+        "entities": [],
+        "source_revision": "4229a34cb357ecf9",
+        "content_hash": "5e6a1c09128fa9dcd97ea397fd22855ae0f770245cfbb413559eaee2a79baf4b",
+        "discovered_via": "https://offshore-energy.biz/feed",
+        "ingestion_kind": "live",
+        "is_relevant": true,
+        "trade_date": "2026-10-14",
+        "id": "175df1e3a33c2d3d9c16eac4",
+        "version": 1,
+        "version_seen_at": "2026-10-14T11:04:55.125078+00:00"
+      },
+      {
+        "source": "gassco",
+        "url": "https://umm.gassco.no/details?id=b766e260-f846-45f2-88ff-0f05a3e77b3a",
+        "title": "Gassco Kårstø: Planned Other unavailability (Active)",
+        "summary": "Message ID: 2026-347__________________001. Publication: 2026-10-14T13:44:00+0200. Event: 2026-10-18T06:00:00+0200 to 2026-10-19T06:00:00+0200. Technical capacity: 97.6 mcm/d; available: 90.0; unavailable: 7.6. Reason: Yearly maintenance. Remarks: .",
+        "published_at": "2026-10-14T11:44:00+00:00",
+        "published_date": "2026-10-14",
+        "timestamp_precision": "exact",
+        "timestamp_source": "UMM.Publication date/time",
+        "updated_at": null,
+        "first_seen_at": "2026-10-14T11:44:07.377735+00:00",
+        "summary_created_at": "2026-10-14T11:44:07.377736+00:00",
+        "category": "supply_outage",
+        "entities": [
+          "Gassco",
+          "Kårstø"
+        ],
+        "source_revision": "439be18b44d19cbf",
+        "content_hash": "c5da6492072a508a293a87ea098dc9f96c35bc4d469a66a75f84de11aaeca966",
+        "discovered_via": "https://umm.gassco.no/",
+        "ingestion_kind": "live",
+        "is_relevant": true,
+        "event_status": "Active",
+        "event_start": "2026-10-18T06:00:00+0200",
+        "event_end": "2026-10-19T06:00:00+0200",
+        "source_message_id": "2026-347__________________001",
+        "trade_date": "2026-10-14",
+        "id": "7223e6ce0dd6ad9a22c2b0aa",
+        "version": 1,
+        "version_seen_at": "2026-10-14T11:44:07.409006+00:00"
+      },
+      {
+        "source": "gassco",
+        "url": "https://umm.gassco.no/details?id=36ae37cd-deae-4405-a65c-b224da5097f9",
+        "title": "Gassco Kårstø: Planned Other unavailability (Active)",
+        "summary": "Message ID: 2026-348__________________001. Publication: 2026-10-14T13:44:00+0200. Event: 2026-10-19T06:00:00+0200 to 2026-10-26T05:00:00+0100. Technical capacity: 97.6 mcm/d; available: 85.0; unavailable: 12.6. Reason: Yearly maintenance. Remarks: .",
+        "published_at": "2026-10-14T11:44:00+00:00",
+        "published_date": "2026-10-14",
+        "timestamp_precision": "exact",
+        "timestamp_source": "UMM.Publication date/time",
+        "updated_at": null,
+        "first_seen_at": "2026-10-14T11:44:07.377960+00:00",
+        "summary_created_at": "2026-10-14T11:44:07.377961+00:00",
+        "category": "supply_outage",
+        "entities": [
+          "Gassco",
+          "Kårstø"
+        ],
+        "source_revision": "afc8607003fe4256",
+        "content_hash": "362b80c14f6e37b5bb5bd4e146e51ad72bac3493eb81a0d0b17818a877e116d7",
+        "discovered_via": "https://umm.gassco.no/",
+        "ingestion_kind": "live",
+        "is_relevant": true,
+        "event_status": "Active",
+        "event_start": "2026-10-19T06:00:00+0200",
+        "event_end": "2026-10-26T05:00:00+0100",
+        "source_message_id": "2026-348__________________001",
+        "trade_date": "2026-10-14",
+        "id": "7ae5aa276b31f6fadc183254",
+        "version": 1,
+        "version_seen_at": "2026-10-14T11:44:07.411210+00:00"
+      },
+      {
+        "source": "offshore_energy",
+        "url": "https://offshore-energy.biz/2026/10/14/new-oil-and-gas-discovery-set-to-join-north-sea-fast-track-plays-fuelling-europes-energy-security",
+        "title": "New oil & gas discovery set to join North Sea fast-track plays fuelling Europe’s energy security",
+        "summary": "Equinor, Petoro, and TotalEnergies have found up to 50 million barrels in the North Sea and are eyeing first production in under three years.",
+        "published_at": "2026-10-14T07:52:17+00:00",
+        "published_date": "2026-10-14",
+        "timestamp_precision": "exact",
+        "timestamp_source": "rss.pubDate",
+        "updated_at": null,
+        "first_seen_at": "2026-10-14T08:03:54.975441+00:00",
+        "summary_created_at": "2026-10-14T08:03:54.975444+00:00",
+        "category": "supply",
+        "entities": [
+          "Equinor",
+          "Europe"
+        ],
+        "source_revision": "4b36221df5ad3af8",
+        "content_hash": "3613324220001159539974df46dd3f703432068009c0db7d6132fc8724935eda",
+        "discovered_via": "https://offshore-energy.biz/feed",
+        "ingestion_kind": "live",
+        "is_relevant": true,
+        "trade_date": "2026-10-14",
+        "id": "98718c742060bf8fc4c07741",
+        "version": 1,
+        "version_seen_at": "2026-10-14T08:03:54.985039+00:00"
+      },
+      {
+        "source": "equinor",
+        "url": "https://www.equinor.com/news/20261014-oil-gas-discovery-oseberg",
+        "title": "Oil and gas discovery in the North Sea adding volumes to Oseberg",
+        "summary": "Equinor and its partners Petoro and TotalEnergies have made an oil and gas discovery in exploration well 30/8-7 S Grimsnes near the Oseberg field.",
+        "published_at": "2026-10-14T06:15:30.973000+00:00",
+        "published_date": "2026-10-14",
+        "timestamp_precision": "exact",
+        "timestamp_source": "jsonld.datePublished",
+        "updated_at": "2026-10-14T07:02:07.890000+00:00",
+        "first_seen_at": "2026-10-14T06:15:47.563106+00:00",
+        "summary_created_at": "2026-10-14T07:03:54.778938+00:00",
+        "category": "supply",
+        "entities": [
+          "Equinor"
+        ],
+        "source_revision": "2fd7f11fa28d63c9",
+        "content_hash": "f7732fe8a0c43f48b32e457fcc96f607ca4309b317e7896b0aeed6e38f50986d",
+        "discovered_via": "https://www.equinor.com/sitemap.xml?lang=en",
+        "ingestion_kind": "live",
+        "is_relevant": true,
+        "trade_date": "2026-10-14",
+        "id": "aba456f8db0e6169e4d19ede",
+        "version": 2,
+        "version_seen_at": "2026-10-14T07:04:02.817353+00:00"
+      },
+      {
+        "source": "offshore_energy",
+        "url": "https://offshore-energy.biz/2026/10/14/jera-deepens-australian-lng-foothold-with-larger-stake-in-chevrons-project",
+        "title": "JERA deepens Australian LNG foothold with larger stake in Chevron’s project",
+        "summary": "JERA has boosted its indirect participation in Chevron's LNG project to 50.1% following a strategic share acquisition from JOGMEC.",
+        "published_at": "2026-10-14T13:18:00+00:00",
+        "published_date": "2026-10-14",
+        "timestamp_precision": "exact",
+        "timestamp_source": "rss.pubDate",
+        "updated_at": null,
+        "first_seen_at": "2026-10-14T14:04:56.724397+00:00",
+        "summary_created_at": "2026-10-14T14:04:56.724399+00:00",
+        "category": "lng",
+        "entities": [],
+        "source_revision": "11a1a1cb6ecb9988",
+        "content_hash": "8545b54610c902a0ef1677638018c7b0c0de23534748ad1feed9dd67fc21cb32",
+        "discovered_via": "https://offshore-energy.biz/feed",
+        "ingestion_kind": "live",
+        "is_relevant": true,
+        "trade_date": "2026-10-14",
+        "id": "af3b256e65f68dbb1d6f4fe5",
+        "version": 1,
+        "version_seen_at": "2026-10-14T14:04:56.735077+00:00"
+      },
+      {
+        "source": "eu_energy",
+        "url": "https://energy.ec.europa.eu/news/methane-emissions-reporting-templates-commission-launches-call-feedback-2026-10-12_en",
+        "title": "Methane emissions reporting templates – Commission launches call for feedback",
+        "summary": "The European Commission has published a draft implementing regulation adopting reporting templates for methane emissions in the energy sector and launched a 4-week call for feedback on the document.",
+        "published_at": null,
+        "published_date": "2026-10-12",
+        "timestamp_precision": "date",
+        "timestamp_source": "RSS publication date (CMS clock unverified)",
+        "updated_at": null,
+        "first_seen_at": "2026-10-14T03:17:31.907683+00:00",
+        "summary_created_at": "2026-10-14T05:51:56.204369+00:00",
+        "category": "policy",
+        "entities": [],
+        "source_revision": "e2f8e8365c91666f",
+        "content_hash": "4b0a12dd9fc8c31a9c5d23f7e391b0d2e9adc74278b26eb81816039f875d90dc",
+        "discovered_via": "https://energy.ec.europa.eu/node/2/rss_en",
+        "ingestion_kind": "live",
+        "is_relevant": true,
+        "trade_date": null,
+        "id": "5320e23900322ce8761e20ad",
+        "version": 2,
+        "version_seen_at": "2026-10-14T05:51:56.213057+00:00",
+        "window_membership": "first_observed_in_window_publication_window_unknown"
+      },
+      {
+        "source": "eu_energy",
+        "url": "https://energy.ec.europa.eu/news/gas-coordination-group-continues-work-winter-preparedness-2026-09-25_en",
+        "title": "Gas Coordination Group continues work on winter preparedness",
+        "summary": "The Gas Coordination Group met again yesterday to take stock of the current gas market situation.",
+        "published_at": null,
+        "published_date": "2026-09-25",
+        "timestamp_precision": "date",
+        "timestamp_source": "RSS publication date (CMS clock unverified)",
+        "updated_at": null,
+        "first_seen_at": "2026-10-14T05:51:56.208232+00:00",
+        "summary_created_at": "2026-10-14T05:51:56.208233+00:00",
+        "category": "weather",
+        "entities": [],
+        "source_revision": "7f6b08aad9271478",
+        "content_hash": "2b1a0d23e8dc10a5b8fdb7af87200c056e675dad7365dbd4265711533a303b52",
+        "discovered_via": "https://energy.ec.europa.eu/node/2/rss_en",
+        "ingestion_kind": "live",
+        "is_relevant": true,
+        "trade_date": null,
+        "id": "795f0e3649dfcb78cc8d76c2",
+        "version": 1,
+        "version_seen_at": "2026-10-14T05:51:56.217747+00:00",
+        "window_membership": "first_observed_in_window_publication_window_unknown"
+      },
+      {
+        "source": "eu_energy",
+        "url": "https://energy.ec.europa.eu/news/eu-gas-system-prepared-winter-despite-lower-storage-levels-2026-10-08_en",
+        "title": "EU gas system prepared for the winter despite lower storage levels",
+        "summary": "The Gas Coordination Group has met again today to take stock of the current gas market situation in Europe.",
+        "published_at": null,
+        "published_date": "2026-10-08",
+        "timestamp_precision": "date",
+        "timestamp_source": "RSS publication date (CMS clock unverified)",
+        "updated_at": null,
+        "first_seen_at": "2026-10-14T05:51:56.204591+00:00",
+        "summary_created_at": "2026-10-14T05:51:56.204596+00:00",
+        "category": "storage",
+        "entities": [
+          "Europe"
+        ],
+        "source_revision": "c2a9d75bdbf9ee6b",
+        "content_hash": "12b6cacf9bba9926cc6b41a31db49ae33b4da1093db46742342ac1dfde3170a2",
+        "discovered_via": "https://energy.ec.europa.eu/node/2/rss_en",
+        "ingestion_kind": "live",
+        "is_relevant": true,
+        "trade_date": null,
+        "id": "cfd69a0af7c69bfa09bb8d73",
+        "version": 1,
+        "version_seen_at": "2026-10-14T05:51:56.215389+00:00",
+        "window_membership": "first_observed_in_window_publication_window_unknown"
+      }
+    ],
+    "daily_aggregate": {
+      "article_count": 7,
+      "source_count": 3,
+      "news_ids": [
+        "092e9c5993afb0aa4341cc93",
+        "175df1e3a33c2d3d9c16eac4",
+        "7223e6ce0dd6ad9a22c2b0aa",
+        "7ae5aa276b31f6fadc183254",
+        "98718c742060bf8fc4c07741",
+        "aba456f8db0e6169e4d19ede",
+        "af3b256e65f68dbb1d6f4fe5"
+      ],
+      "groups": {
+        "其他天然气新闻": [
+          {
+            "id": "092e9c5993afb0aa4341cc93",
+            "title": "Kistos strengthens its presence in North Sea oil & gas hub with Vår Energi deal",
+            "summary": "Kistos is expanding its North Sea footprint through a multimillion-dollar acquisition with Vår Energi, boosting its hydrocarbon portfolio.",
+            "source": "offshore_energy",
+            "url": "https://offshore-energy.biz/2026/10/14/kistos-strengthens-its-presence-in-north-sea-oil-and-gas-hub-with-var-energi-deal",
+            "version": 1,
+            "published_at": "2026-10-14T06:34:56+00:00",
+            "published_date": "2026-10-14",
+            "timestamp_precision": "exact",
+            "first_seen_at": "2026-10-14T07:03:53.548512+00:00"
+          },
+          {
+            "id": "175df1e3a33c2d3d9c16eac4",
+            "title": "Sunda steps closer to dusting off 1985 gas field as New Zealand bid goes exclusive",
+            "summary": "Sunda has secured exclusivity for its New Zealand exploration permit bid, paving the way for a potential appraisal of a 41-year-old gas field.",
+            "source": "offshore_energy",
+            "url": "https://offshore-energy.biz/2026/10/14/sunda-steps-closer-to-dusting-off-1985-gas-field-as-new-zealand-bid-goes-exclusive",
+            "version": 1,
+            "published_at": "2026-10-14T10:59:57+00:00",
+            "published_date": "2026-10-14",
+            "timestamp_precision": "exact",
+            "first_seen_at": "2026-10-14T11:04:55.115636+00:00"
+          },
+          {
+            "id": "aba456f8db0e6169e4d19ede",
+            "title": "Oil and gas discovery in the North Sea adding volumes to Oseberg",
+            "summary": "Equinor and its partners Petoro and TotalEnergies have made an oil and gas discovery in exploration well 30/8-7 S Grimsnes near the Oseberg field.",
+            "source": "equinor",
+            "url": "https://www.equinor.com/news/20261014-oil-gas-discovery-oseberg",
+            "version": 2,
+            "published_at": "2026-10-14T06:15:30.973000+00:00",
+            "published_date": "2026-10-14",
+            "timestamp_precision": "exact",
+            "first_seen_at": "2026-10-14T06:15:47.563106+00:00"
+          }
+        ],
+        "供应中断/复产": [
+          {
+            "id": "7223e6ce0dd6ad9a22c2b0aa",
+            "title": "Gassco Kårstø: Planned Other unavailability (Active)",
+            "summary": "Message ID: 2026-347__________________001. Publication: 2026-10-14T13:44:00+0200. Event: 2026-10-18T06:00:00+0200 to 2026-10-19T06:00:00+0200. Technical capacity: 97.6 mcm/d; available: 90.0; unavailable: 7.6. Reason: Yearly maintenance. Remarks: .",
+            "source": "gassco",
+            "url": "https://umm.gassco.no/details?id=b766e260-f846-45f2-88ff-0f05a3e77b3a",
+            "version": 1,
+            "published_at": "2026-10-14T11:44:00+00:00",
+            "published_date": "2026-10-14",
+            "timestamp_precision": "exact",
+            "first_seen_at": "2026-10-14T11:44:07.377735+00:00"
+          },
+          {
+            "id": "7ae5aa276b31f6fadc183254",
+            "title": "Gassco Kårstø: Planned Other unavailability (Active)",
+            "summary": "Message ID: 2026-348__________________001. Publication: 2026-10-14T13:44:00+0200. Event: 2026-10-19T06:00:00+0200 to 2026-10-26T05:00:00+0100. Technical capacity: 97.6 mcm/d; available: 85.0; unavailable: 12.6. Reason: Yearly maintenance. Remarks: .",
+            "source": "gassco",
+            "url": "https://umm.gassco.no/details?id=36ae37cd-deae-4405-a65c-b224da5097f9",
+            "version": 1,
+            "published_at": "2026-10-14T11:44:00+00:00",
+            "published_date": "2026-10-14",
+            "timestamp_precision": "exact",
+            "first_seen_at": "2026-10-14T11:44:07.377960+00:00"
+          }
+        ],
+        "政策与能源安全": [
+          {
+            "id": "98718c742060bf8fc4c07741",
+            "title": "New oil & gas discovery set to join North Sea fast-track plays fuelling Europe’s energy security",
+            "summary": "Equinor, Petoro, and TotalEnergies have found up to 50 million barrels in the North Sea and are eyeing first production in under three years.",
+            "source": "offshore_energy",
+            "url": "https://offshore-energy.biz/2026/10/14/new-oil-and-gas-discovery-set-to-join-north-sea-fast-track-plays-fuelling-europes-energy-security",
+            "version": 1,
+            "published_at": "2026-10-14T07:52:17+00:00",
+            "published_date": "2026-10-14",
+            "timestamp_precision": "exact",
+            "first_seen_at": "2026-10-14T08:03:54.975441+00:00"
+          }
+        ],
+        "LNG供应与流向": [
+          {
+            "id": "af3b256e65f68dbb1d6f4fe5",
+            "title": "JERA deepens Australian LNG foothold with larger stake in Chevron’s project",
+            "summary": "JERA has boosted its indirect participation in Chevron's LNG project to 50.1% following a strategic share acquisition from JOGMEC.",
+            "source": "offshore_energy",
+            "url": "https://offshore-energy.biz/2026/10/14/jera-deepens-australian-lng-foothold-with-larger-stake-in-chevrons-project",
+            "version": 1,
+            "published_at": "2026-10-14T13:18:00+00:00",
+            "published_date": "2026-10-14",
+            "timestamp_precision": "exact",
+            "first_seen_at": "2026-10-14T14:04:56.724397+00:00"
+          }
+        ]
+      },
+      "summary": "本结算窗口已收录 7 条新闻，来自 3 个来源。",
+      "version": "fa7a64c88529051c"
+    },
+    "previous_sessions": [
+      {
+        "trade_date": "2026-10-13",
+        "article_count": 10,
+        "source_count": 3,
+        "news_ids": [
+          "1aaba4eb6ff2a4887c6a9fad",
+          "2dafeba5161f81cbc56819a7",
+          "31a7020bf9536b0f536fcf85",
+          "4d2ebcc269c4d5288caddee3",
+          "57a73447a724302c60defd56",
+          "5f6ce43dc6d225aca744f0e8",
+          "93ca147dbaac0921951b28b4",
+          "d28e8af849c4cc106c66e9c7",
+          "d7d0d45a5fa8a74e26e0e462",
+          "e681e812f6b51ea7b2ef2bb9"
+        ],
+        "groups": {
+          "供应中断/复产": [
+            {
+              "id": "1aaba4eb6ff2a4887c6a9fad",
+              "title": "Gassco Kristin: Planned Other unavailability (Active)",
+              "summary": "Message ID: 2027-22___________________004. Publication: 2026-10-13T14:45:00+0200. Event: 2027-09-21T06:00:00+0200 to 2027-09-23T06:00:00+0200. Technical capacity: 13.1 mcm/d; available: 0.0; unavailable: 13.1. Reason: Yearly maintenance. Remarks: .",
+              "source": "gassco",
+              "url": "https://umm.gassco.no/details?id=0b47e165-e799-4795-9c86-2a59a5e65187",
+              "version": 2,
+              "published_at": "2026-10-13T12:45:00+00:00",
+              "published_date": "2026-10-13",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:18:21.672667+00:00"
+            },
+            {
+              "id": "31a7020bf9536b0f536fcf85",
+              "title": "Gassco Kristin: Planned Other unavailability (Active)",
+              "summary": "Message ID: 2027-21___________________005. Publication: 2026-10-13T14:45:00+0200. Event: 2027-03-18T06:00:00+0100 to 2027-03-20T06:00:00+0100. Technical capacity: 13.1 mcm/d; available: 0.0; unavailable: 13.1. Reason: Yearly maintenance. Remarks: .",
+              "source": "gassco",
+              "url": "https://umm.gassco.no/details?id=4298690c-fc40-463f-821a-f6bda984f495",
+              "version": 2,
+              "published_at": "2026-10-13T12:45:00+00:00",
+              "published_date": "2026-10-13",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:18:21.663089+00:00"
+            },
+            {
+              "id": "4d2ebcc269c4d5288caddee3",
+              "title": "Gassco Kårstø: Unplanned Gas treatment plant unavailability (Active)",
+              "summary": "Message ID: 2026-344-A________________005. Publication: 2026-10-13T13:20:16+0200. Event: 2026-10-12T06:00:00+0200 to 2026-10-14T06:00:00+0200. Technical capacity: 97.6 mcm/d; available: 87.0; unavailable: 10.6. Reason: Process problems. Remarks: .",
+              "source": "gassco",
+              "url": "https://umm.gassco.no/details?id=1ad09cdd-abca-4c8a-9418-8f5e3de474f9",
+              "version": 1,
+              "published_at": "2026-10-13T11:20:16+00:00",
+              "published_date": "2026-10-13",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:56:44.419914+00:00"
+            },
+            {
+              "id": "57a73447a724302c60defd56",
+              "title": "Gassco Kårstø: Unplanned Gas treatment plant unavailability (Active)",
+              "summary": "Message ID: 2026-344-B________________002. Publication: 2026-10-13T16:22:54+0200. Event: 2026-10-13T09:40:00+0200 to 2026-10-15T06:00:00+0200. Technical capacity: 97.6 mcm/d; available: 85.0; unavailable: 12.6. Reason: Process problems. Remarks: .",
+              "source": "gassco",
+              "url": "https://umm.gassco.no/details?id=d399b8bb-ed95-4d78-aa7b-f8957b666a2a",
+              "version": 2,
+              "published_at": "2026-10-13T14:22:54+00:00",
+              "published_date": "2026-10-13",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:18:21.659412+00:00"
+            },
+            {
+              "id": "d28e8af849c4cc106c66e9c7",
+              "title": "Gassco Kårstø: Unplanned Gas treatment plant unavailability (Active)",
+              "summary": "Message ID: 2026-346__________________002. Publication: 2026-10-13T13:17:58+0200. Event: 2026-10-13T09:40:00+0200 to 2026-10-14T05:59:00+0200. Technical capacity: 97.6 mcm/d; available: 85.0; unavailable: 12.6. Reason: Process problems. Remarks: .",
+              "source": "gassco",
+              "url": "https://umm.gassco.no/details?id=b3514550-ad1d-4b34-bf01-1daf5c246d6c",
+              "version": 1,
+              "published_at": "2026-10-13T11:17:58+00:00",
+              "published_date": "2026-10-13",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:56:44.419411+00:00"
+            }
+          ],
+          "地缘政治/制裁": [
+            {
+              "id": "2dafeba5161f81cbc56819a7",
+              "title": "TotalEnergies orders French tubular solutions for gas field in Azerbaijan",
+              "summary": "France’s energy giant TotalEnergies has awarded compatriot Vallourec a contract to deliver over 16,000 tons of tubular products for a gas field...",
+              "source": "offshore_energy",
+              "url": "https://offshore-energy.biz/2026/10/13/totalenergies-orders-french-tubular-solutions-for-gas-field-in-azerbaijan",
+              "version": 4,
+              "published_at": "2026-10-13T08:22:26+00:00",
+              "published_date": "2026-10-13",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:31:44.231652+00:00"
+            }
+          ],
+          "其他天然气新闻": [
+            {
+              "id": "5f6ce43dc6d225aca744f0e8",
+              "title": "Equinor and Eneco sign five-year gas agreement with verified emissions data",
+              "summary": "Equinor and Dutch energy company Eneco have signed a five-year agreement for natural gas deliveries.",
+              "source": "equinor",
+              "url": "https://www.equinor.com/news/20261013-eneco-five-year-gas-agreement",
+              "version": 2,
+              "published_at": "2026-10-13T05:00:48.652000+00:00",
+              "published_date": "2026-10-13",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:19:42.250133+00:00"
+            },
+            {
+              "id": "93ca147dbaac0921951b28b4",
+              "title": "Equinor to feed Dutch grid with low-emission Norwegian gas through 2031",
+              "summary": "Equinor has secured a multi-year deal to supply Eneco with roughly 0.9 billion cubic meters of Norwegian natural gas annually.",
+              "source": "offshore_energy",
+              "url": "https://offshore-energy.biz/2026/10/13/equinor-to-feed-dutch-grid-with-low-emission-norwegian-gas-through-2031",
+              "version": 5,
+              "published_at": "2026-10-13T12:52:01+00:00",
+              "published_date": "2026-10-13",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:19:29.656821+00:00"
+            },
+            {
+              "id": "e681e812f6b51ea7b2ef2bb9",
+              "title": "2002-built jack-up comes to Asian yard for MOPU conversion ahead of gas field deployment",
+              "summary": "A 24-year-old jack-up will undergo a rig-to-MOPU conversion before it embarks on its upcoming job at a gas development in Southeast Asia.",
+              "source": "offshore_energy",
+              "url": "https://offshore-energy.biz/2026/10/13/2002-built-jack-up-comes-to-asian-yard-for-mopu-conversion-ahead-of-gas-field-deployment",
+              "version": 4,
+              "published_at": "2026-10-13T07:52:48+00:00",
+              "published_date": "2026-10-13",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:31:44.229610+00:00"
+            }
+          ],
+          "LNG供应与流向": [
+            {
+              "id": "d7d0d45a5fa8a74e26e0e462",
+              "title": "Shell, GTT, and Lloyd’s Register eye hybrid-electric LNG carrier design",
+              "summary": "The trio has teamed up on a conceptual hybrid-electric tech 200,000-cubic-meter (cbm) LNG carrier to cut emissions without sacrificing cargo space.",
+              "source": "offshore_energy",
+              "url": "https://offshore-energy.biz/2026/10/13/shell-gtt-and-lloyds-register-eye-hybrid-electric-lng-carrier-design",
+              "version": 5,
+              "published_at": "2026-10-13T14:14:12+00:00",
+              "published_date": "2026-10-13",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:19:29.656568+00:00"
+            }
+          ]
+        },
+        "summary": "本结算窗口已收录 10 条新闻，来自 3 个来源。",
+        "version": "7800f650f0f4f28b"
+      },
+      {
+        "trade_date": "2026-10-12",
+        "article_count": 9,
+        "source_count": 2,
+        "news_ids": [
+          "114da5915f464df42dc17847",
+          "5152f8417ef1c45db5d8547d",
+          "548a29bed527f8ea2397d38b",
+          "71cc2a22f1ac394d0ae042b6",
+          "8f2027cb112b31262cbcb559",
+          "b725f9b506fb177a27e7d9c3",
+          "b7838c6b48e11463910740cf",
+          "e3c537b40f60dfa76bfae2f9",
+          "f0f0c99819172bdc380c1b6b"
+        ],
+        "groups": {
+          "供应中断/复产": [
+            {
+              "id": "114da5915f464df42dc17847",
+              "title": "Gassco Easington: Planned Other unavailability (Active)",
+              "summary": "Message ID: 2027-104__________________002. Publication: 2026-10-12T14:24:00+0200. Event: 2027-08-14T06:00:00+0200 to 2027-08-28T06:00:00+0200. Technical capacity: 73.8 mcm/d; available: 47.0; unavailable: 26.8. Reason: Upstream restriction. Remarks: Nyhamna dedicated to Easington due to valve repair at Sleipner riser, max equals min, uncertain timing, duration and concequence..",
+              "source": "gassco",
+              "url": "https://umm.gassco.no/details?id=5af0c8cc-ecf6-474f-8f5e-a77081d09fe3",
+              "version": 2,
+              "published_at": "2026-10-12T12:24:00+00:00",
+              "published_date": "2026-10-12",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:18:21.678500+00:00"
+            },
+            {
+              "id": "5152f8417ef1c45db5d8547d",
+              "title": "Gassco Easington: Planned Other unavailability (Active)",
+              "summary": "Message ID: 2027-9____________________003. Publication: 2026-10-12T14:24:00+0200. Event: 2027-09-09T06:00:00+0200 to 2027-09-10T06:00:00+0200. Technical capacity: 73.8 mcm/d; available: 30.0; unavailable: 43.8. Reason: Yearly maintenance. Remarks: .",
+              "source": "gassco",
+              "url": "https://umm.gassco.no/details?id=56fdca94-0bd9-462e-a8b5-8a515f12062b",
+              "version": 2,
+              "published_at": "2026-10-12T12:24:00+00:00",
+              "published_date": "2026-10-12",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:18:21.680004+00:00"
+            },
+            {
+              "id": "548a29bed527f8ea2397d38b",
+              "title": "Gassco Dvalin: Unplanned Gas production field unavailability (Inactive)",
+              "summary": "Message ID: 2026-341__________________003. Publication: 2026-10-10T02:12:36+0200. Event: 2026-10-07T06:00:00+0200 to 2026-10-10T06:00:00+0200. Technical capacity: 8.9 mcm/d; available: 0.0; unavailable: 8.9. Reason: Process problems. Remarks: Problems during startup.",
+              "source": "gassco",
+              "url": "https://umm.gassco.no/details?id=cd34a9a4-2bda-47a6-96ab-07bbb4e2a514",
+              "version": 1,
+              "published_at": "2026-10-10T00:12:36+00:00",
+              "published_date": "2026-10-10",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:56:44.417429+00:00"
+            },
+            {
+              "id": "71cc2a22f1ac394d0ae042b6",
+              "title": "Gassco Gullfaks: Unplanned Gas production field unavailability (Inactive)",
+              "summary": "Message ID: 2026-345__________________001. Publication: 2026-10-12T02:26:41+0200. Event: 2026-10-12T06:00:00+0200 to 2026-10-13T05:59:00+0200. Technical capacity: 17.4 mcm/d; available: 12.1; unavailable: 5.3. Reason: Reduced production. Remarks: Uncertain duration.",
+              "source": "gassco",
+              "url": "https://umm.gassco.no/details?id=3991ec5b-db7c-4b54-a32a-f8475e941246",
+              "version": 1,
+              "published_at": "2026-10-12T00:26:41+00:00",
+              "published_date": "2026-10-12",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:56:44.418920+00:00"
+            },
+            {
+              "id": "b725f9b506fb177a27e7d9c3",
+              "title": "Gassco Kårstø: Unplanned Other unavailability (Inactive)",
+              "summary": "Message ID: 2026-344__________________002. Publication: 2026-10-11T13:24:46+0200. Event: 2026-10-11T08:00:00+0200 to 2026-10-12T06:00:00+0200. Technical capacity: 97.6 mcm/d; available: 80.0; unavailable: 17.6. Reason: Process problems. Remarks: Uncertain duration.",
+              "source": "gassco",
+              "url": "https://umm.gassco.no/details?id=e216a965-9ac2-45f1-9d7b-82fdc15c0eff",
+              "version": 1,
+              "published_at": "2026-10-11T11:24:46+00:00",
+              "published_date": "2026-10-11",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:56:44.418453+00:00"
+            },
+            {
+              "id": "b7838c6b48e11463910740cf",
+              "title": "Gassco Emden: Planned Other unavailability (Active)",
+              "summary": "Message ID: 2027-12___________________002. Publication: 2026-10-12T14:24:00+0200. Event: 2027-09-02T06:00:00+0200 to 2027-09-03T06:00:00+0200. Technical capacity: 91.1 mcm/d; available: 45.0; unavailable: 46.1. Reason: Yearly maintenance. Remarks: .",
+              "source": "gassco",
+              "url": "https://umm.gassco.no/details?id=12b415ee-d848-4a69-b339-2e0326ac22ae",
+              "version": 2,
+              "published_at": "2026-10-12T12:24:00+00:00",
+              "published_date": "2026-10-12",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:18:21.679568+00:00"
+            },
+            {
+              "id": "e3c537b40f60dfa76bfae2f9",
+              "title": "Gassco Dvalin: Unplanned Gas production field unavailability (Inactive)",
+              "summary": "Message ID: 2026-341-B________________002. Publication: 2026-10-10T17:15:25+0200. Event: 2026-10-10T06:00:00+0200 to 2026-10-11T06:00:00+0200. Technical capacity: 8.9 mcm/d; available: 3.0; unavailable: 5.9. Reason: Process problems. Remarks: Ramp up.",
+              "source": "gassco",
+              "url": "https://umm.gassco.no/details?id=551f364c-7b69-47fc-b7ac-b057e28863d4",
+              "version": 1,
+              "published_at": "2026-10-10T15:15:25+00:00",
+              "published_date": "2026-10-10",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:56:44.417939+00:00"
+            }
+          ],
+          "其他天然气新闻": [
+            {
+              "id": "8f2027cb112b31262cbcb559",
+              "title": "Eni sheds partial stakes in Indonesian gas assets as Pertamina and Medco bolster portfolios",
+              "summary": "Eni’s divestment move follows multi-trillion-cubic-feet gas discoveries, giving two regional firms direct stakes in fast-tracked gas developments.",
+              "source": "offshore_energy",
+              "url": "https://offshore-energy.biz/2026/10/12/eni-sheds-partial-stakes-in-indonesian-gas-assets-as-pertamina-and-medco-bolster-portfolios",
+              "version": 2,
+              "published_at": "2026-10-12T13:30:55+00:00",
+              "published_date": "2026-10-12",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:31:44.227403+00:00"
+            }
+          ],
+          "LNG供应与流向": [
+            {
+              "id": "f0f0c99819172bdc380c1b6b",
+              "title": "ADNOC broadens its Asian horizons with Gulf Group LNG deal",
+              "summary": "ADNOC has inked a multi-year agreement with Gulf Group to ship 2 million tonnes of liquefied natural gas (LNG) starting in 2027.",
+              "source": "offshore_energy",
+              "url": "https://offshore-energy.biz/2026/10/12/adnoc-broadens-its-asian-horizons-with-gulf-group-lng-deal",
+              "version": 3,
+              "published_at": "2026-10-12T09:02:19+00:00",
+              "published_date": "2026-10-12",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:19:29.660708+00:00"
+            }
+          ]
+        },
+        "summary": "本结算窗口已收录 9 条新闻，来自 2 个来源。",
+        "version": "73f27e8dd2afb7ee"
+      },
+      {
+        "trade_date": "2026-10-09",
+        "article_count": 7,
+        "source_count": 2,
+        "news_ids": [
+          "033b3c5a974bfb09c8e36c1d",
+          "1a2ffcaee4616004af011c93",
+          "3051f7576909039ef2633bd1",
+          "4045ba505010ee6000f287e1",
+          "62bc1afa752cf6f81fbba09d",
+          "bc1af4c2661879f75b617232",
+          "fcdaa3a83544b89b36a6eeac"
+        ],
+        "groups": {
+          "其他天然气新闻": [
+            {
+              "id": "033b3c5a974bfb09c8e36c1d",
+              "title": "Offshore installation starts at Valeura's Gulf of Thailand field ahead of schedule",
+              "summary": "Canadian oil & gas company Valeura Energy has started offshore installation at its field in the Gulf of Thailand, some two months ahead of the...",
+              "source": "offshore_energy",
+              "url": "https://offshore-energy.biz/2026/10/09/offshore-installation-starts-at-valeuras-gulf-of-thailand-field-ahead-of-schedule",
+              "version": 1,
+              "published_at": "2026-10-09T08:07:00+00:00",
+              "published_date": "2026-10-09",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T05:51:57.133000+00:00"
+            }
+          ],
+          "供应中断/复产": [
+            {
+              "id": "1a2ffcaee4616004af011c93",
+              "title": "Gassco Emden: Planned Other unavailability (Active)",
+              "summary": "Message ID: 2027-75___________________002. Publication: 2026-10-09T10:36:00+0200. Event: 2027-01-12T06:00:00+0100 to 2027-01-15T06:00:00+0100. Technical capacity: 91.1 mcm/d; available: 77.0; unavailable: 14.1. Reason: Upstream restriction. Remarks: Uncertain date, duration and capacity.",
+              "source": "gassco",
+              "url": "https://umm.gassco.no/details?id=22363906-6aac-47f1-af5d-19ed5b6bdffd",
+              "version": 2,
+              "published_at": "2026-10-09T08:36:00+00:00",
+              "published_date": "2026-10-09",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:18:21.676317+00:00"
+            },
+            {
+              "id": "4045ba505010ee6000f287e1",
+              "title": "Gassco Gina Krog Import: Planned Other unavailability (Active)",
+              "summary": "Message ID: 2027-14___________________002. Publication: 2026-10-09T10:36:00+0200. Event: 2027-09-02T06:00:00+0200 to 2027-09-19T06:00:00+0200. Technical capacity: 8.0 mcm/d; available: 0.0; unavailable: 8.0. Reason: Yearly maintenance. Remarks: .",
+              "source": "gassco",
+              "url": "https://umm.gassco.no/details?id=295b617d-5c69-4ffb-82db-5bd421200e5e",
+              "version": 2,
+              "published_at": "2026-10-09T08:36:00+00:00",
+              "published_date": "2026-10-09",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:18:21.679351+00:00"
+            },
+            {
+              "id": "62bc1afa752cf6f81fbba09d",
+              "title": "Gassco Sleipner: Planned Other unavailability (Dismissed)",
+              "summary": "Message ID: 2027-84___________________004. Publication: 2026-10-09T10:36:00+0200. Event: 2027-08-27T06:00:00+0200 to 2027-08-31T06:00:00+0200. Technical capacity: 11.9 mcm/d; available: 4.6; unavailable: 7.3. Reason: Yearly maintenance. Remarks: Ramp-down.",
+              "source": "gassco",
+              "url": "https://umm.gassco.no/details?id=fb68d200-06b6-4a42-8351-bb0eee5a9e2e",
+              "version": 1,
+              "published_at": "2026-10-09T08:36:00+00:00",
+              "published_date": "2026-10-09",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:56:44.416910+00:00"
+            },
+            {
+              "id": "bc1af4c2661879f75b617232",
+              "title": "Gassco Dunkerque: Planned Other unavailability (Active)",
+              "summary": "Message ID: 2027-106__________________001. Publication: 2026-10-09T10:36:00+0200. Event: 2027-05-27T06:00:00+0200 to 2027-05-29T06:00:00+0200. Technical capacity: 49.4 mcm/d; available: 0.0; unavailable: 49.4. Reason: Yearly maintenance. Remarks: .",
+              "source": "gassco",
+              "url": "https://umm.gassco.no/details?id=47274f75-56f2-467f-9b37-3d50434e1e72",
+              "version": 2,
+              "published_at": "2026-10-09T08:36:00+00:00",
+              "published_date": "2026-10-09",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:18:21.677598+00:00"
+            },
+            {
+              "id": "fcdaa3a83544b89b36a6eeac",
+              "title": "Gassco Gina Krog Import: Planned Other unavailability (Active)",
+              "summary": "Message ID: 2027-107__________________001. Publication: 2026-10-09T10:36:00+0200. Event: 2027-08-31T06:00:00+0200 to 2027-09-05T06:00:00+0200. Technical capacity: 8.0 mcm/d; available: 0.0; unavailable: 8.0. Reason: Yearly maintenance. Remarks: .",
+              "source": "gassco",
+              "url": "https://umm.gassco.no/details?id=3ca68b9b-f601-4dcf-b2c3-515148160beb",
+              "version": 2,
+              "published_at": "2026-10-09T08:36:00+00:00",
+              "published_date": "2026-10-09",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:18:21.678705+00:00"
+            }
+          ],
+          "地缘政治/制裁": [
+            {
+              "id": "3051f7576909039ef2633bd1",
+              "title": "More work with Petrobras increases Brazilian firm's backlog to over $2 billion",
+              "summary": "Brazil’s oil & gas giant Petrobras has awarded a new long-term contract to compatriot company Oceânica Engenharia e Consultoria for work...",
+              "source": "offshore_energy",
+              "url": "https://offshore-energy.biz/2026/10/09/more-work-with-petrobras-increases-brazilian-firms-backlog-to-over-dollar2-billion",
+              "version": 1,
+              "published_at": "2026-10-09T06:54:41+00:00",
+              "published_date": "2026-10-09",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T05:51:57.133303+00:00"
+            }
+          ]
+        },
+        "summary": "本结算窗口已收录 7 条新闻，来自 2 个来源。",
+        "version": "2000a39d782f14ed"
+      },
+      {
+        "trade_date": "2026-10-08",
+        "article_count": 10,
+        "source_count": 3,
+        "news_ids": [
+          "053668b2310b91e882a89c6f",
+          "22e5401fb7205cc73d80c937",
+          "2897edb1af03e310bd7bfdd3",
+          "35c8503927444bdb557890ae",
+          "849a6fd98dc303a02752070f",
+          "90bee8a28ee37f36dfd7b06a",
+          "92ace9f9b6a5367cd35708b0",
+          "955593bafe160644a3582480",
+          "db6e0b0169dbc995e353730f",
+          "fbb28e8ce3d5e5ec20b570cf"
+        ],
+        "groups": {
+          "供应中断/复产": [
+            {
+              "id": "053668b2310b91e882a89c6f",
+              "title": "Gassco Dvalin: Planned Other unavailability (Dismissed)",
+              "summary": "Message ID: 2026-293__________________003. Publication: 2026-10-08T13:14:00+0200. Event: 2026-10-27T06:00:00+0100 to 2026-10-28T06:00:00+0100. Technical capacity: 8.9 mcm/d; available: 4.5; unavailable: 4.4. Reason: Yearly maintenance. Remarks: .",
+              "source": "gassco",
+              "url": "https://umm.gassco.no/details?id=ae0ea272-bbff-4546-b55a-968c91319e56",
+              "version": 1,
+              "published_at": "2026-10-08T11:14:00+00:00",
+              "published_date": "2026-10-08",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:56:43.690459+00:00"
+            },
+            {
+              "id": "22e5401fb7205cc73d80c937",
+              "title": "Gassco Dvalin: Unplanned Gas production field unavailability (Dismissed)",
+              "summary": "Message ID: 2026-341-A________________002. Publication: 2026-10-08T07:01:56+0200. Event: 2026-10-10T06:00:00+0200 to 2026-10-11T06:00:00+0200. Technical capacity: 8.7 mcm/d; available: 2.0; unavailable: 6.7. Reason: Process problems. Remarks: .",
+              "source": "gassco",
+              "url": "https://umm.gassco.no/details?id=30dfecd8-bf17-4a53-b2e4-ad6c3a68dd78",
+              "version": 1,
+              "published_at": "2026-10-08T05:01:56+00:00",
+              "published_date": "2026-10-08",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:56:43.689794+00:00"
+            },
+            {
+              "id": "2897edb1af03e310bd7bfdd3",
+              "title": "Gassco Dvalin: Planned Other unavailability (Active)",
+              "summary": "Message ID: 2026-170__________________006. Publication: 2026-10-08T13:14:00+0200. Event: 2026-11-24T06:00:00+0100 to 2026-11-25T06:00:00+0100. Technical capacity: 8.4 mcm/d; available: 0.0; unavailable: 8.4. Reason: Yearly maintenance. Remarks: .",
+              "source": "gassco",
+              "url": "https://umm.gassco.no/details?id=f4644f2a-695d-4adb-9a3e-3f92601ef322",
+              "version": 2,
+              "published_at": "2026-10-08T11:14:00+00:00",
+              "published_date": "2026-10-08",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:18:21.660695+00:00"
+            },
+            {
+              "id": "35c8503927444bdb557890ae",
+              "title": "Gassco Åsgard: Planned Other unavailability (Active)",
+              "summary": "Message ID: 2026-222__________________005. Publication: 2026-10-08T13:14:00+0200. Event: 2026-09-25T06:00:00+0200 to 2026-10-19T06:00:00+0200. Technical capacity: 29.2 mcm/d; available: 24.0; unavailable: 5.2. Reason: Yearly maintenance. Remarks: .",
+              "source": "gassco",
+              "url": "https://umm.gassco.no/details?id=588d9426-676d-4412-a98e-965706d016a9",
+              "version": 2,
+              "published_at": "2026-10-08T11:14:00+00:00",
+              "published_date": "2026-10-08",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:18:21.658267+00:00"
+            },
+            {
+              "id": "849a6fd98dc303a02752070f",
+              "title": "Gassco Heidrun: Unplanned Gas production field unavailability (Inactive)",
+              "summary": "Message ID: 2026-342__________________001. Publication: 2026-10-08T07:23:37+0200. Event: 2026-10-08T06:00:00+0200 to 2026-10-09T05:59:00+0200. Technical capacity: 5.8 mcm/d; available: 0.5; unavailable: 5.3. Reason: Process problems. Remarks: Delayed startup.",
+              "source": "gassco",
+              "url": "https://umm.gassco.no/details?id=fe00dfd7-6165-42a0-9ab2-29b0d74a327e",
+              "version": 1,
+              "published_at": "2026-10-08T05:23:37+00:00",
+              "published_date": "2026-10-08",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:56:43.690155+00:00"
+            },
+            {
+              "id": "955593bafe160644a3582480",
+              "title": "Gassco Troll: Planned Other unavailability (Active)",
+              "summary": "Message ID: 2026-343__________________001. Publication: 2026-10-08T13:14:00+0200. Event: 2026-10-14T06:00:00+0200 to 2026-10-16T06:00:00+0200. Technical capacity: 137.3 mcm/d; available: 131.0; unavailable: 6.3. Reason: Yearly maintenance. Remarks: .",
+              "source": "gassco",
+              "url": "https://umm.gassco.no/details?id=10cd0f0a-c5f4-4b86-a42e-f50d4355547e",
+              "version": 2,
+              "published_at": "2026-10-08T11:14:00+00:00",
+              "published_date": "2026-10-08",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:18:21.659794+00:00"
+            }
+          ],
+          "其他天然气新闻": [
+            {
+              "id": "90bee8a28ee37f36dfd7b06a",
+              "title": "Fresh North Sea gas discovery yields up to 10 million barrels of oil equivalent",
+              "summary": "A routine sidetrack drilling operation in the North Sea has paid off for Equinor, yielding a fresh gas discovery.",
+              "source": "offshore_energy",
+              "url": "https://offshore-energy.biz/2026/10/08/fresh-north-sea-gas-discovery-yields-up-to-10-million-barrels-of-oil-equivalent",
+              "version": 3,
+              "published_at": "2026-10-08T07:30:56+00:00",
+              "published_date": "2026-10-08",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:19:29.664544+00:00"
+            },
+            {
+              "id": "db6e0b0169dbc995e353730f",
+              "title": "Gas discovery at the Gullfaks field in the North Sea",
+              "summary": "Equinor and its partners have discovered gas at the Gullfaks South field, 190 kilometres northwest of Bergen.",
+              "source": "equinor",
+              "url": "https://www.equinor.com/news/20261008-gas-discovery-gullfaks-field",
+              "version": 2,
+              "published_at": "2026-10-08T06:30:06.165000+00:00",
+              "published_date": "2026-10-08",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:19:41.142142+00:00"
+            },
+            {
+              "id": "fbb28e8ce3d5e5ec20b570cf",
+              "title": "Excelerate entrusts FSRU conversion to Seatrium with another on the cards",
+              "summary": "Seatrium has secured an FSRU conversion assignment with Excelerate Energy, with delivery set for 2028.",
+              "source": "offshore_energy",
+              "url": "https://offshore-energy.biz/2026/10/08/excelerate-entrusts-fsru-conversion-to-seatrium-with-another-on-the-cards",
+              "version": 3,
+              "published_at": "2026-10-08T11:25:35+00:00",
+              "published_date": "2026-10-08",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:19:29.663872+00:00"
+            }
+          ],
+          "LNG供应与流向": [
+            {
+              "id": "92ace9f9b6a5367cd35708b0",
+              "title": "Golar secures 2013-built LNG carrier for conversion into fourth FLNG",
+              "summary": "Golar LNG has acquired a 13-year-old vessel from NYK Line to transform it into a floating liquefaction facility by 2029.",
+              "source": "offshore_energy",
+              "url": "https://offshore-energy.biz/2026/10/08/golar-secures-2013-built-lng-carrier-for-conversion-into-fourth-flng",
+              "version": 3,
+              "published_at": "2026-10-08T14:07:10+00:00",
+              "published_date": "2026-10-08",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:19:29.663234+00:00"
+            }
+          ]
+        },
+        "summary": "本结算窗口已收录 10 条新闻，来自 3 个来源。",
+        "version": "18c2afa06184e60a"
+      },
+      {
+        "trade_date": "2026-10-07",
+        "article_count": 9,
+        "source_count": 4,
+        "news_ids": [
+          "0e116a2d89283556c9da1d67",
+          "109f7d64c8d9628cdb1057d1",
+          "1a523f2fa4e4cb372c420e26",
+          "2e8ea47c22fa4abbeb245672",
+          "4940f4d11ffbebd9697c1344",
+          "5028fd40c413b645d561b5dc",
+          "56022641654bfaa543afccd4",
+          "7b47dd19c139c3ee51dcc1a4",
+          "bbce46f8420d2f764abb11fb"
+        ],
+        "groups": {
+          "供应中断/复产": [
+            {
+              "id": "0e116a2d89283556c9da1d67",
+              "title": "Gassco Heidrun: Unplanned Other unavailability (Inactive)",
+              "summary": "Message ID: 2026-339-A________________002. Publication: 2026-10-07T07:56:48+0200. Event: 2026-10-07T06:00:00+0200 to 2026-10-08T06:00:00+0200. Technical capacity: 5.8 mcm/d; available: 0.0; unavailable: 5.8. Reason: Process problems. Remarks: Delayed start-up.",
+              "source": "gassco",
+              "url": "https://umm.gassco.no/details?id=b8def0b9-f399-4c07-ba06-62da58f2855e",
+              "version": 1,
+              "published_at": "2026-10-07T05:56:48+00:00",
+              "published_date": "2026-10-07",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:56:43.688567+00:00"
+            },
+            {
+              "id": "2e8ea47c22fa4abbeb245672",
+              "title": "Gassco Sleipner: Planned Other unavailability (Active)",
+              "summary": "Message ID: 2027-45___________________005. Publication: 2026-10-07T12:41:00+0200. Event: 2027-08-31T06:00:00+0200 to 2027-09-05T06:00:00+0200. Technical capacity: 11.2 mcm/d; available: 0.0; unavailable: 11.2. Reason: Yearly maintenance. Remarks: .",
+              "source": "gassco",
+              "url": "https://umm.gassco.no/details?id=ac09a0b7-03bc-459a-91c3-24e208d38b97",
+              "version": 2,
+              "published_at": "2026-10-07T10:41:00+00:00",
+              "published_date": "2026-10-07",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:18:21.669498+00:00"
+            },
+            {
+              "id": "5028fd40c413b645d561b5dc",
+              "title": "Gassco Dvalin: Planned Other unavailability (Dismissed)",
+              "summary": "Message ID: 2026-6-C__________________002. Publication: 2026-10-07T13:55:35+0200. Event: 2026-10-08T06:00:00+0200 to 2026-10-09T06:00:00+0200. Technical capacity: 8.9 mcm/d; available: 3.0; unavailable: 5.9. Reason: Yearly maintenance. Remarks: .",
+              "source": "gassco",
+              "url": "https://umm.gassco.no/details?id=7f4019f6-8a37-4cf0-acdc-a8277fb69d58",
+              "version": 1,
+              "published_at": "2026-10-07T11:55:35+00:00",
+              "published_date": "2026-10-07",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:56:43.688870+00:00"
+            },
+            {
+              "id": "7b47dd19c139c3ee51dcc1a4",
+              "title": "Gassco Dvalin: Unplanned Gas production field unavailability (Inactive)",
+              "summary": "Message ID: 2026-340__________________003. Publication: 2026-10-07T14:17:19+0200. Event: 2026-10-10T06:00:00+0200 to 2026-10-12T06:00:00+0200. Technical capacity: 8.9 mcm/d; available: 2.0; unavailable: 6.9. Reason: Yearly maintenance. Remarks: Delayed start-up. Ramp up.",
+              "source": "gassco",
+              "url": "https://umm.gassco.no/details?id=4f42c8cb-1495-48a6-8f2d-60fd6043a38d",
+              "version": 1,
+              "published_at": "2026-10-07T12:17:19+00:00",
+              "published_date": "2026-10-07",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:56:43.689400+00:00"
+            },
+            {
+              "id": "bbce46f8420d2f764abb11fb",
+              "title": "Gassco Kollsnes: Planned Other unavailability (Active)",
+              "summary": "Message ID: 2027-19___________________006. Publication: 2026-10-07T10:20:00+0200. Event: 2027-08-10T06:00:00+0200 to 2027-09-02T06:00:00+0200. Technical capacity: 156.0 mcm/d; available: 138.0; unavailable: 18.0. Reason: Yearly maintenance. Remarks: .",
+              "source": "gassco",
+              "url": "https://umm.gassco.no/details?id=78982d65-ad77-4a5f-93b3-9caacf474840",
+              "version": 2,
+              "published_at": "2026-10-07T08:20:00+00:00",
+              "published_date": "2026-10-07",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:18:21.668665+00:00"
+            }
+          ],
+          "天气与需求": [
+            {
+              "id": "109f7d64c8d9628cdb1057d1",
+              "title": "Mixed outlook for energy expenditures this winter",
+              "summary": "We expect energy expenditures this winter to vary because of diverging trends in energy prices among fuels and regional variation in forecast temperatures. We expect that lower prices for natural gas and propane will drive decreases in expenditures this year for the half of U.S. households heating with those fuels. Higher prices for electricity and heating oil drive increased expenditures for households heating with those fuels in our forecast.",
+              "source": "eia",
+              "url": "https://www.eia.gov/todayinenergy/detail.php?id=68264",
+              "version": 1,
+              "published_at": "2026-10-07T14:00:00+00:00",
+              "published_date": "2026-10-07",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T05:52:03.048305+00:00"
+            }
+          ],
+          "其他天然气新闻": [
+            {
+              "id": "1a523f2fa4e4cb372c420e26",
+              "title": "Updated cost estimate for the Snøhvit Future project",
+              "summary": "On behalf of the partnership, Equinor has updated the cost estimate for Snøhvit Future to NOK 26.5 billion in 2026 value.",
+              "source": "equinor",
+              "url": "https://www.equinor.com/news/20261007-updated-cost-estimate-snohvit-future",
+              "version": 2,
+              "published_at": "2026-10-07T08:24:16.963000+00:00",
+              "published_date": "2026-10-07",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:19:40.025464+00:00"
+            },
+            {
+              "id": "4940f4d11ffbebd9697c1344",
+              "title": "Petrobras taps TechnipFMC for flexible pipe",
+              "summary": "TechnipFMC has won a subsea contract from Brazil's oil & gas company Petrobras to supply flexible pipe systems for developments in Brazilian...",
+              "source": "offshore_energy",
+              "url": "https://offshore-energy.biz/2026/10/07/petrobras-taps-technipfmc-for-flexible-pipe",
+              "version": 1,
+              "published_at": "2026-10-07T07:02:50+00:00",
+              "published_date": "2026-10-07",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T05:51:57.137846+00:00"
+            },
+            {
+              "id": "56022641654bfaa543afccd4",
+              "title": "Dutch design ultra-shallow-draft DSV for Gulf Region's oil & gas",
+              "summary": "Saudi Arabia's Zamil Offshore, established in 1977, has contracted Dutch ship design and engineering company Conoship International to design an...",
+              "source": "offshore_energy",
+              "url": "https://offshore-energy.biz/2026/10/07/dutch-design-ultra-shallow-draft-dsv-for-gulf-regions-oil-and-gas",
+              "version": 2,
+              "published_at": "2026-10-07T10:40:31+00:00",
+              "published_date": "2026-10-07",
+              "timestamp_precision": "exact",
+              "first_seen_at": "2026-10-14T03:31:44.214948+00:00"
+            }
+          ]
+        },
+        "summary": "本结算窗口已收录 9 条新闻，来自 4 个来源。",
+        "version": "b26b59915bac4e06"
+      }
+    ],
+    "historical_events": [
+      {
+        "id": "legacy-event-2022-11-01",
+        "event_date": "2022-11-01",
+        "title": "Shell exits Malampaya gas project off Philippines Japan gov't decides to retain stake in new Sakhalin-1 operator ADNOC, India's Gail sign LNG MoU JBIC provides another $680mn loan to Jera for LNG purchases Africa must use its gas reserves to drive the economy, industry officials say BP profits soar amid increasing calls for bigger UK windfall tax German industry curbed gas demand by a fifth in crisis - study Equitrans wants U.S. legislation to help finish Mountain Valley natgas pipe Mexico's Pemex gets go-ahead to develop once-abandoned deepwater gas field Netherlands to raise $3.2 billion with windfall tax on fossil fuel companies",
+        "summary": "The Malampaya field, discovered in 1991 and brought online just over a decade later, supplies gas to four power plants on the island of Luzon. Japan has decided to retain its stake in the new Russian operator of the Sakhalin-1 oil and gas project and has asked Japanese consortium members to stay to ensure the country's energy security, the industry minister said on Tuesday. The companies will also work on monitoring greenhouse gasses for LNG cargoes, to support low-carbon LNG supplies. [Image: ADNOC] JBIC had last month agreed to provide a $900mn loan to Jera for LNG purchases. African countries need to use their gas reserves to lift more people out of poverty and build industry as they try to catch up with more developed countries even while the world seeks to cut emissions, some industry officials said on Tuesday. The government is reportedly considering raising the windfall tax on industry profit from 25 to 30%. German industry cut its gas consumption by nearly a fifth last month, sustainability experts said on Tuesday, after a plunge in Russian gas exports sparked a continent-wide energy crisis that led to soaring energy prices. U.S. energy company Equitrans Midstream Corp said on Tuesday that the best path to complete its Mountain Valley natural gas pipeline from West Virginia to Virginia by the second half of 2023 was through U.S. permitting reform legislation. Pemex wants to develop the field in a partnership with New Fortress Energy. Proceeds will fund a price cap on household energy costs.",
+        "category": "政策监管/能源安全",
+        "matched_terms": "地缘政治/战争/制裁:russian:2; 地缘政治/战争/制裁:sakhalin:2; 地缘政治/战争/制裁:russian gas:1; LNG供应/跨区流动:lng:5; LNG供应/跨区流动:cargoes:1; 库存/补库:reserves:2; 需求/工业消费:demand:1; 需求/工业消费:curbed gas demand:1; 需求/工业消费:consumption:1; 政策监管/能源安全:price cap:1; 政策监管/能源安全:windfall tax:3; 政策监管/能源安全:energy security:1; 政策监管/能源安全:government:1; 政策监管/能源安全:minister:1; 期货市场/价格冲击:soar:1",
+        "state": "historical",
+        "known_at": "2026-10-14T03:20:17.305337+00:00",
+        "source": "legacy_daily",
+        "source_quality": "daily_aggregate_no_original_url",
+        "timestamp_precision": "date",
+        "outcome_available_at": null,
+        "risk_flags": [
+          "历史多条新闻日聚合；无单条来源链接与真实发布时间",
+          "旧事后影响标签仅供档案追溯，不进入预测输入"
+        ],
+        "updated_at": "2026-10-14T03:51:29.881196+00:00"
+      },
+      {
+        "id": "legacy-event-2022-03-30",
+        "event_date": "2022-03-30",
+        "title": "Fugro to support QatarEnergy's field redevelopment project Gas2Grid fails to close farm-in deal with Armour Comet Ridge gets approvals for APLNG Mahalo stake QatarEnergy acquires interest in exploration block off Egypt Spain's Molgas backs Greek LNG supplier Coro brings Italian field back online Mitsubishi Power to supply turbines to Uzbek gas power plant Lamprell receives early-stage acquisition proposal Serbia exempt from Russian ruble requirement EU currently has no alternative to Russian gas: Pouyanne CNOOC books $11.1bn net profit in 2021 Germany unveils plan to phase out Russian energy Sodium cyanide producer curbs output due to \"spiking gas prices\" BP courts Chinese, Indian investors for Rosneft stake: press March breaks European records for highest power costs",
+        "summary": "Fugro will deliver seabed geo-data acquisition and geo-consultancy services as part of the redevelopment of the Bul Hanine and Maydan Mahzam fields. Armour had in November last year agreed on indicative terms with Gas2Grid to farm-out 519 km2 of Surat basin acreage in Queensland. It has received key government approvals required for the acquisition of Australia Pacific LNG's (APLNG) 30% stake in the Mahalo gas project in Queensland. North Marakia block was awarded to ExxonMobil in 2020. Blue Grid said the investment would help it expand in the LNG and bio-LNG supply market of southeast Europe and the east Mediterranean region. Coro scrapped plans to sell its Italian gas business earlier this month. The power plant will be located in Tashkent. The offshore contractor has received a bid for 51% of its newly-restructured oil and gas business. Russia is demanding that all \"unfriendly\" states will have to pay for its gas in rubles. Cutting off Russian gas would \"seriously disrupt Europe's economic activity by winter 2023,\" TotalEnergies' CEO warned. The launch of the Shenhai 1 and Dongfang gas clusters helped CNOOC capitalise on higher oil and gas prices. Germany says it will take until 2024 for the country to become fully independent of Russian gas. Rising  production costs have led to Draslovka minimising European sodium cyanide output, just as the company expands its operation into the US. A sale to a Chinese or Indian firm seems plausible, though the valuation may be a bitter pill for BP to swallow. March 2022 will go into the record books as the most expensive month for power in European history with high gas prices underscoring the importance of gas as a provider of baseload energy.",
+        "category": "地缘政治/战争/制裁",
+        "matched_terms": "地缘政治/战争/制裁:russia:1; 地缘政治/战争/制裁:russian:5; 地缘政治/战争/制裁:russian gas:3; LNG供应/跨区流动:lng:4; LNG供应/跨区流动:lng supply:1; 天气/季节需求:winter:1; 政策监管/能源安全:government:1; 期货市场/价格冲击:gas prices:3",
+        "state": "historical",
+        "known_at": "2026-10-14T03:20:17.395964+00:00",
+        "source": "legacy_daily",
+        "source_quality": "daily_aggregate_no_original_url",
+        "timestamp_precision": "date",
+        "outcome_available_at": null,
+        "risk_flags": [
+          "历史多条新闻日聚合；无单条来源链接与真实发布时间",
+          "旧事后影响标签仅供档案追溯，不进入预测输入"
+        ],
+        "updated_at": "2026-10-14T03:51:30.012966+00:00"
+      },
+      {
+        "id": "legacy-event-2021-12-08",
+        "event_date": "2021-12-08",
+        "title": "Ukraine’s energy policy and prospects for the gas sector A Russian answer to satellite emissions monitoring China to dominate new petrochemicals projects in Asia through 2025 Baker Hughes wins Pluto LNG expansion contract PNG competition watchdog approves Santos, Oil Search merger Chinese gas imports up 22% in Jan-Nov McDermott wins EPCI deals in Saudi Arabia Putin asks for proposals for Rosneft supplying gas to Europe Jera to buy 12.5% stake in Barossa gas field Spirit exits Norway in deals worth over $1bn Diversified closes US Tapstone deal Baron updates on Chuditch seismic work LNG key to reduce South African emissions: DNG Henry Hub continues its rise Technip Energies scores another UAE contract US has German assurances on NS2: press Trafigura reports record profits in fiscal 2021 Amur GCC secures $9.1bn in loans Conoco eyes greater stake in Australia Pacific LNG Cheniere wants more time for Corpus Christi expansion",
+        "summary": "Key issues include the potential role of gas in electricity generation, as coal is phased out. Success Rockets' aim to provide objective and reliable information on the presence and concentration of GHG emissions from oil and gas facilities, both in Russia and elsewhere. China is likely to commence the operations of 412 petrochemicals projects between 2021 and 2025, according to GlobalData. Pluto Train 2 will process natural gas from the nearby offshore Scarborough field. The deal remains subject to approval from the National Court of Papua New Guinea. The arrivals in November were also higher. McDermott will provide work and services at the Zuluf, Ribyan, Abu Sa'fah and Safaniya fields in the Arabian Gulf. Rosneft appears closer than ever before to gaining access to Gazprom's export pipelines. The $3.6bn Barossa gas and condensate project offshore Australia's Northern Territory will help extend the life of the Darwin LNG project. Through the transactions, Spirit will become predominantly a natural gas business. It marks the company's fourth purchase in the space of a year. Baron’s Timor-Leste subsidiary SundaGas Banda Unipessoal holds a 75% operating interest in the Chuditch production sharing contract. DNG Energy is promoting the use of LNG for road and maritime transport, specifically for trucks, buses, and ships in South Africa. The benchmark is rebounding from the near-25% loss posted during the week ending December 3. The French services company to incorporate CCS at an offshore oil and gas complex. Washington has included the fate of the Nord Stream 2 natural gas pipeline in the broader context of a possible Russian invasion of Ukraine. The Swiss commodity trader said its performance today sets it up to do well in the energy sector of tomorrow. The facility will run on ethane and LPG that has been separated from natural gas on route to China via the Power of Siberia pipeline. The company said it would exercise its right to take on a greater stake in a $1.65bn buy. The US LNG exporter said it faced hurdles in reaching an investment decision due to the pandemic.",
+        "category": "地缘政治/战争/制裁",
+        "matched_terms": "地缘政治/战争/制裁:russia:1; 地缘政治/战争/制裁:russian:2; 地缘政治/战争/制裁:ukraine:2; 地缘政治/战争/制裁:invasion:1; 地缘政治/战争/制裁:gazprom:1; 地缘政治/战争/制裁:putin:1; 地缘政治/战争/制裁:nord stream:1; 管道中断/基础设施事故:nord stream:1; LNG供应/跨区流动:lng:6; LNG供应/跨区流动:cheniere:1; 政策监管/能源安全:policy:1",
+        "state": "historical",
+        "known_at": "2026-10-14T03:20:17.570075+00:00",
+        "source": "legacy_daily",
+        "source_quality": "daily_aggregate_no_original_url",
+        "timestamp_precision": "date",
+        "outcome_available_at": null,
+        "risk_flags": [
+          "历史多条新闻日聚合；无单条来源链接与真实发布时间",
+          "旧事后影响标签仅供档案追溯，不进入预测输入"
+        ],
+        "updated_at": "2026-10-14T03:51:30.242681+00:00"
+      },
+      {
+        "id": "legacy-event-2021-09-28",
+        "event_date": "2021-09-28",
+        "title": "Jera to buy 27% stake in Philippines' Aboitiz Power for $1.6bn Japan weighs its options [Gas in Transition] Kogas plans to supply 380,000 mt/yr of hydrogen by 2030 Ukrainian govt steps in to supervise Naftogaz directly Maersk partners with Chinese classification society on carbon-neutral tech Russian watchdog asks Gazprom to expand domestic gas sales Govt, industry propose CCUS hub near Darwin Sakhalin Energy to deliver carbon-neutral LNG to Japan's Toho Gas Gasum bunkers its first vessel with LNG in France Indian gas demand up 7% in Aug UK Shell Energy takes on customers  of failed Green Energy European IOCs hold largest volumes of unsanctioned reserves in Sub-Saharan Africa UK producer Serica enjoys price fillip as output grows HyNet’s Progressive Energy sets out UK hydrogen plan Origin makes further investment in UK's Octopus Energy Tallgrass commits to Project Canary Enbridge makes several environmental pledges SoCalGas settles over Aliso Canyon leak BP starts Phase 2 at Thunder Horse Russian petchems tie-up nears close UAE’s Dana Gas wins arbitration against Iran",
+        "summary": "The companies plan to jointly develop power projects, including LNG-to-power. The Japanese government has released draft proposals aimed at achieving more stringent greenhouse gas (GHG) emissions reductions by the end of the decade. The proposals include a sharp, but most likely unrealistic, fall in gas use and thus LNG imports. [Gas in Transition, Volume 1, Issue 6] The company expects to achieve an operating profit of 3 trillion won ($2.5bn) in 2030 based on its new hydrogen-related businesses. Three independent directors resigned from the board after Ukraine's government announced earlier this month it would hold a competition to replace them. Maersk is aspiring to become a net-zero emissions company by 2050. [image credit: Maersk] The recommendation comes at a time when the European gas market is in the grip of a severe supply squeeze. Industry and engineering companies that are participating include Santos, Inpex, Woodside, Eni, Origin Energy and Xodus. The delivery will be made early next month. It is also the first time LNG has been used to refuel a ship in the port of Le Havre. [image credit: Gasum] Indian gas production in August was up 20.2% yr/yr. The UK energy regulator has appointed the Anglo-Dutch major the supplier of last resort. With strategies leaning towards a lower carbon future and a shift away from high-risk investments, resources that no longer fit this narrative risk being left behind by the IOCs currently holding them. The North Sea producer is seeing spot prices at record levels as it brings more gas on stream this year. Hydrogen as a natural gas substitute is gathering momentum in the UK. [image credit: HyNet] The Australian company will maintain its 20% stake in the UK energy retailer. One of the longest natural gas pipelines in North America will be monitored for emissions. From hydrogen developments to CCS, the Canadian pipeline company is reviewing opportunities in the energy transition. A methane leak from an underground storage facility was among the largest ever in US history. The UK energy major said it was committed to producing more from the US Gulf of Mexico. The merger will establish one of the five biggest producers of polyolefins and rubber products in the world. Dana had a 25-year gas sales purchase agreement that was never honoured by Iran.",
+        "category": "地缘政治/战争/制裁",
+        "matched_terms": "地缘政治/战争/制裁:russian:2; 地缘政治/战争/制裁:ukraine:1; 地缘政治/战争/制裁:ukrainian:1; 地缘政治/战争/制裁:gazprom:1; 地缘政治/战争/制裁:sakhalin:1; 管道中断/基础设施事故:leak:2; LNG供应/跨区流动:lng:5; LNG供应/跨区流动:lng imports:1; 库存/补库:storage:1; 库存/补库:reserves:1; 需求/工业消费:demand:1; 政策监管/能源安全:government:2; 期货市场/价格冲击:spot prices:1",
+        "state": "historical",
+        "known_at": "2026-10-14T03:20:17.605355+00:00",
+        "source": "legacy_daily",
+        "source_quality": "daily_aggregate_no_original_url",
+        "timestamp_precision": "date",
+        "outcome_available_at": null,
+        "risk_flags": [
+          "历史多条新闻日聚合；无单条来源链接与真实发布时间",
+          "旧事后影响标签仅供档案追溯，不进入预测输入"
+        ],
+        "updated_at": "2026-10-14T03:51:30.284017+00:00"
+      },
+      {
+        "id": "event-gassco-2026-344-B",
+        "event_date": "2026-10-13",
+        "known_at": "2026-10-14T03:25:06.492834+00:00",
+        "state": "active",
+        "title": "Gassco Kårstø: Unplanned Gas treatment plant unavailability (Active)",
+        "summary": "Message ID: 2026-344-B________________002. Publication: 2026-10-13T16:22:54+0200. Event: 2026-10-13T09:40:00+0200 to 2026-10-15T06:00:00+0200. Technical capacity: 97.6 mcm/d; available: 85.0; unavailable: 12.6. Reason: Process problems. Remarks: .",
+        "category": "供应中断/复产",
+        "entities": [
+          "Gassco",
+          "Kårstø"
+        ],
+        "news_ids": [
+          "57a73447a724302c60defd56"
+        ],
+        "source": "gassco",
+        "url": "https://umm.gassco.no/details?id=d399b8bb-ed95-4d78-aa7b-f8957b666a2a",
+        "event_start": "2026-10-13T07:40:00+00:00",
+        "event_end": "2026-10-15T04:00:00+00:00",
+        "event_status": "Active",
+        "resolution_basis": null,
+        "source_quality": "source_announcement",
+        "source_revision": 2,
+        "source_message_id": "2026-344-B________________002",
+        "published_at": "2026-10-13T14:22:54+00:00",
+        "outcome_available_at": null,
+        "risk_flags": [
+          "重大事件候选；价格同期变化不等于事件因果影响",
+          "公告不可用容量不等于实际流量减少；未来计划事件不等于当前停供"
+        ],
+        "change_status": "ongoing",
+        "updated_at": "2026-10-14T04:38:11.038479+00:00",
+        "retrieval_role": "active_background"
+      },
+      {
+        "id": "event-gassco-2026-222",
+        "event_date": "2026-10-08",
+        "known_at": "2026-10-14T03:25:06.484556+00:00",
+        "state": "active",
+        "title": "Gassco Åsgard: Planned Other unavailability (Active)",
+        "summary": "Message ID: 2026-222__________________005. Publication: 2026-10-08T13:14:00+0200. Event: 2026-09-25T06:00:00+0200 to 2026-10-19T06:00:00+0200. Technical capacity: 29.2 mcm/d; available: 24.0; unavailable: 5.2. Reason: Yearly maintenance. Remarks: .",
+        "category": "供应中断/复产",
+        "entities": [
+          "Gassco",
+          "Åsgard"
+        ],
+        "news_ids": [
+          "35c8503927444bdb557890ae"
+        ],
+        "source": "gassco",
+        "url": "https://umm.gassco.no/details?id=588d9426-676d-4412-a98e-965706d016a9",
+        "event_start": "2026-09-25T04:00:00+00:00",
+        "event_end": "2026-10-19T04:00:00+00:00",
+        "event_status": "Active",
+        "resolution_basis": null,
+        "source_quality": "source_announcement",
+        "source_revision": 5,
+        "source_message_id": "2026-222__________________005",
+        "published_at": "2026-10-08T11:14:00+00:00",
+        "outcome_available_at": "2026-10-14T04:23:03.746514+00:00",
+        "risk_flags": [
+          "重大事件候选；价格同期变化不等于事件因果影响",
+          "公告不可用容量不等于实际流量减少；未来计划事件不等于当前停供"
+        ],
+        "change_status": "ongoing",
+        "outcomes": {
+          "1d": {
+            "change": 2.5849999999999937,
+            "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+            "price_type": "reference",
+            "base_date": "2026-10-08",
+            "end_date": "2026-10-09",
+            "available_at": "2026-10-14T04:23:03.746506+00:00",
+            "interpretation": "同期价格变化，非因果效应"
+          },
+          "3d": {
+            "change": 8.373999999999995,
+            "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+            "price_type": "reference",
+            "base_date": "2026-10-08",
+            "end_date": "2026-10-13",
+            "available_at": "2026-10-14T04:23:03.746512+00:00",
+            "interpretation": "同期价格变化，非因果效应"
+          }
+        },
+        "updated_at": "2026-10-14T04:38:11.045800+00:00",
+        "retrieval_role": "active_background"
+      }
+    ],
+    "price_reference": {
+      "available": true,
+      "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+      "contract_name": "Nov26",
+      "price_type": "reference",
+      "verified": false,
+      "previous_price": 87.223,
+      "price_date": "2026-10-13",
+      "reference_source": "ICE public chart",
+      "source_url": "https://www.ice.com/marketdata/api/productguide/charting/data/historical?marketId=6277389&historicalSpan=3",
+      "extreme_threshold": 4.7449572231704575,
+      "sigma60": 2.3724786115852288,
+      "threshold_frozen_as_of": "2026-10-14T14:05:08.777292+00:00",
+      "flat_delta": 0.3,
+      "observation_count": 697,
+      "risk_flags": [
+        "价格类型尚未验证为ICE官方日结算，不用于官方结算评分"
+      ]
+    },
+    "lexicon": {
+      "categories": {
+        "供应中断/复产": [
+          "outage",
+          "shutdown",
+          "restart",
+          "resume",
+          "force majeure",
+          "maintenance",
+          "disruption",
+          "halt",
+          "unavailability",
+          "process problems",
+          "停产",
+          "停供",
+          "中断",
+          "复产",
+          "检修",
+          "不可抗力"
+        ],
+        "地缘政治/制裁": [
+          "russia",
+          "ukraine",
+          "sanction",
+          "war",
+          "conflict",
+          "nord stream",
+          "俄罗斯",
+          "乌克兰",
+          "制裁",
+          "北溪"
+        ],
+        "LNG供应与流向": [
+          "lng",
+          "liquefaction",
+          "regasification",
+          "cargo",
+          "cheniere",
+          "freeport",
+          "液化天然气",
+          "到港",
+          "再气化"
+        ],
+        "库存与补库": [
+          "storage",
+          "inventory",
+          "inventories",
+          "withdrawal",
+          "injection",
+          "库存",
+          "补库",
+          "储气"
+        ],
+        "天气与需求": [
+          "weather",
+          "cold",
+          "warm",
+          "heating",
+          "demand",
+          "winter",
+          "天气",
+          "寒潮",
+          "温和",
+          "需求",
+          "取暖",
+          "暖冬"
+        ],
+        "政策与能源安全": [
+          "regulation",
+          "policy",
+          "price cap",
+          "energy security",
+          "commission",
+          "政策",
+          "限价",
+          "能源安全"
+        ]
+      },
+      "negation_terms": [
+        "not",
+        "no",
+        "without",
+        "unlikely",
+        "denied"
+      ],
+      "reversal_terms": [
+        "resume",
+        "restart",
+        "restored",
+        "cancelled"
+      ]
+    },
+    "coverage": {
+      "sources": [
+        {
+          "source": "cheniere",
+          "name": "Cheniere Energy",
+          "last_attempt_at": "2026-10-14T14:04:56.286486+00:00",
+          "status": "ok",
+          "historical_requested_start": "2024-05-15",
+          "historical_status": "ok",
+          "historical_from": "2024-05-15",
+          "historical_through": "2026-10-14",
+          "id": "cheniere",
+          "last_success_at": "2026-10-14T14:04:56.673153+00:00",
+          "last_count": 10,
+          "last_created": 0,
+          "last_revised": 0,
+          "last_error": null,
+          "backfill_completed_at": "2026-10-14T03:19:53.651871+00:00",
+          "request_count": 527,
+          "failures": [],
+          "last_finished_at": "2026-10-14T14:04:56.673160+00:00",
+          "archive_cursor": 6,
+          "historical_pages": 5,
+          "last_run_request_count": 1
+        },
+        {
+          "source": "dbnomics_ice",
+          "name": "ICE monthly contract references via DBnomics",
+          "status": "ok",
+          "last_attempt_at": "2026-10-14T13:18:49.892586+00:00",
+          "id": "dbnomics_ice",
+          "last_success_at": "2026-10-14T13:19:01.134098+00:00",
+          "observations_imported": 372,
+          "series_scanned": 221,
+          "price_type": "reference",
+          "settlement_verified": false,
+          "last_error": null,
+          "direct_ice_chart": {
+            "status": "ok",
+            "observations_imported": 18,
+            "contracts": [
+              {
+                "contract_id": "6277389",
+                "label": "Nov26",
+                "latest_day": "2026-10-13"
+              },
+              {
+                "contract_id": "6277390",
+                "label": "Dec26",
+                "latest_day": "2026-10-13"
+              },
+              {
+                "contract_id": "6277391",
+                "label": "Jan27",
+                "latest_day": "2026-10-13"
+              }
+            ],
+            "last_error": null
+          }
+        },
+        {
+          "source": "eia",
+          "name": "EIA Today in Energy",
+          "last_attempt_at": "2026-10-14T14:04:56.261687+00:00",
+          "status": "ok",
+          "historical_requested_start": "2024-05-15",
+          "historical_status": "ok",
+          "historical_from": "2024-05-15",
+          "historical_through": "2026-10-14",
+          "id": "eia",
+          "completed_years": [
+            "2024",
+            "2025",
+            "2026"
+          ],
+          "archive_cursor": "2026",
+          "last_success_at": "2026-10-14T14:05:05.628923+00:00",
+          "last_count": 7,
+          "last_created": 0,
+          "last_revised": 0,
+          "last_error": null,
+          "backfill_completed_at": "2026-10-14T03:49:38.855008+00:00",
+          "request_count": 617,
+          "failures": [],
+          "last_finished_at": "2026-10-14T14:05:05.628929+00:00",
+          "last_run_request_count": 1
+        },
+        {
+          "status": "ok",
+          "repaired": 120,
+          "attempted": 120,
+          "failures": [],
+          "id": "eia_summary_repair",
+          "source": "eia_summary_repair",
+          "started_at": "2026-10-14T03:49:39.741700+00:00",
+          "finished_at": "2026-10-14T03:57:44.876565+00:00"
+        },
+        {
+          "source": "equinor",
+          "name": "Equinor",
+          "last_attempt_at": "2026-10-14T14:05:05.604274+00:00",
+          "status": "ok",
+          "historical_requested_start": "2024-05-15",
+          "historical_status": "ok",
+          "historical_from": "2024-05-15",
+          "historical_through": "2026-10-14",
+          "id": "equinor",
+          "last_error": null,
+          "last_count": 8,
+          "request_count": 4433,
+          "failures": [
+            {
+              "url": "https://www.equinor.com/news/20261013-eneco-five-year-gas-agreement",
+              "at": "2026-10-14T07:03:12.665418+00:00",
+              "error": "ReadTimeout"
+            }
+          ],
+          "last_finished_at": "2026-10-14T14:05:05.612575+00:00",
+          "completed_urls": [
+            "https://www.equinor.com/news/20240524-investing-to-maintain-high-gas-production-at-troll",
+            "https://www.equinor.com/news/20240911-reducing-emissions-troll-field",
+            "https://www.equinor.com/news/20241029-strengthens-gas-portfolio",
+            "https://www.equinor.com/news/20241114-oil-gas-discovery-north-sea",
+            "https://www.equinor.com/news/20241205-equinor-and-shell-to-create-independent-oil-and-gas-company",
+            "https://www.equinor.com/news/20241217-new-oil-and-gas-discovery-near-troll",
+            "https://www.equinor.com/news/20250106-troll-highest-natural-gas-production-ever",
+            "https://www.equinor.com/news/20250305-gas-discovery-norwegian-sea",
+            "https://www.equinor.com/news/20250314-gas-to-europe-from-halten-east",
+            "https://www.equinor.com/news/20250605-uk-gas-sales-agreement",
+            "https://www.equinor.com/news/20250718-basf-and-equinor-confirm-strategic-partnership-and-sign-ten-year-natural-gas-supply-agreement",
+            "https://www.equinor.com/news/20250825-new-oil-and-gas-discovery-near-the-troll-field",
+            "https://www.equinor.com/news/20250923-askeladd-vest-more-lng-for-europe",
+            "https://www.equinor.com/news/20251118-investigation-exposure-incidents-hammerfest-lng-completed",
+            "https://www.equinor.com/news/20251121-signs-10-year-agreement-gas-supplies-czech-republic",
+            "https://www.equinor.com/news/20251222-status-update-snohvit-future-project",
+            "https://www.equinor.com/news/20260205-5-year-gas-agreement-to-the-netherlands",
+            "https://www.equinor.com/news/20260324-starts-drilling-major-gas-development-brazil",
+            "https://www.equinor.com/news/20260512-5000-oil-cargoes-from-gullfaks",
+            "https://www.equinor.com/news/20260619-expanding-troll-more-gas-to-europe",
+            "https://www.equinor.com/news/20260824-equinor-and-uniper-sign-15-year-gas-sales-agreement",
+            "https://www.equinor.com/news/20260825-more-gas-for-30-year-old-troll-a",
+            "https://www.equinor.com/news/20261007-updated-cost-estimate-snohvit-future",
+            "https://www.equinor.com/news/20261008-gas-discovery-gullfaks-field",
+            "https://www.equinor.com/news/20261013-eneco-five-year-gas-agreement",
+            "https://www.equinor.com/news/20261014-oil-gas-discovery-oseberg"
+          ],
+          "archive_cursor": "2026-05-12",
+          "last_success_at": "2026-10-14T14:05:05.612566+00:00",
+          "last_created": 0,
+          "last_revised": 0,
+          "backfill_completed_at": "2026-10-14T03:24:30.378352+00:00",
+          "last_run_request_count": 9
+        },
+        {
+          "source": "eu_energy",
+          "name": "European Commission DG Energy",
+          "last_attempt_at": "2026-10-14T14:04:56.269243+00:00",
+          "status": "ok",
+          "historical_requested_start": "2024-05-15",
+          "historical_status": "ok",
+          "historical_from": "2024-05-15",
+          "historical_through": "2026-10-14",
+          "id": "eu_energy",
+          "archive_cursor": 73,
+          "last_success_at": "2026-10-14T14:04:57.020814+00:00",
+          "last_count": 3,
+          "last_created": 0,
+          "last_revised": 0,
+          "last_error": null,
+          "backfill_completed_at": "2026-10-14T03:18:52.914224+00:00",
+          "request_count": 567,
+          "failures": [],
+          "last_finished_at": "2026-10-14T14:04:57.020819+00:00",
+          "last_run_request_count": 1
+        },
+        {
+          "source": "gassco",
+          "name": "Gassco UMM",
+          "last_attempt_at": "2026-10-14T14:04:56.292565+00:00",
+          "status": "ok",
+          "historical_requested_start": "2024-05-15",
+          "historical_status": "partial",
+          "historical_from": "2024-05-15",
+          "historical_through": "2026-10-14",
+          "id": "gassco",
+          "archive_cursor": "2026-10-15",
+          "historical_pages": 90,
+          "last_success_at": "2026-10-14T14:05:08.683647+00:00",
+          "last_count": 102,
+          "last_created": 0,
+          "last_revised": 0,
+          "last_error": null,
+          "backfill_completed_at": null,
+          "request_count": 1609,
+          "failures": [
+            {
+              "url": "https://umm.gassco.no/",
+              "at": "2026-10-14T06:59:50.888820+00:00",
+              "error": "Server disconnected without sending a response."
+            },
+            {
+              "url": "https://umm.gassco.no/",
+              "at": "2026-10-14T07:16:04.137512+00:00",
+              "error": "Server disconnected without sending a response."
+            },
+            {
+              "url": "https://umm.gassco.no/",
+              "at": "2026-10-14T07:22:00.959692+00:00",
+              "error": "Server disconnected without sending a response."
+            },
+            {
+              "url": "https://umm.gassco.no/",
+              "at": "2026-10-14T08:00:02.665708+00:00",
+              "error": "Server disconnected without sending a response."
+            },
+            {
+              "url": "https://umm.gassco.no/",
+              "at": "2026-10-14T08:19:03.252234+00:00",
+              "error": "Server disconnected without sending a response."
+            },
+            {
+              "url": "https://umm.gassco.no/",
+              "at": "2026-10-14T08:40:01.378924+00:00",
+              "error": "Server disconnected without sending a response."
+            },
+            {
+              "url": "https://umm.gassco.no/",
+              "at": "2026-10-14T08:45:01.474382+00:00",
+              "error": "Server disconnected without sending a response."
+            },
+            {
+              "url": "https://umm.gassco.no/",
+              "at": "2026-10-14T08:53:01.984421+00:00",
+              "error": "Server disconnected without sending a response."
+            },
+            {
+              "url": "https://umm.gassco.no/",
+              "at": "2026-10-14T08:58:01.307496+00:00",
+              "error": "Server disconnected without sending a response."
+            },
+            {
+              "url": "https://umm.gassco.no/",
+              "at": "2026-10-14T09:03:03.525245+00:00",
+              "error": "Server disconnected without sending a response."
+            },
+            {
+              "url": "https://umm.gassco.no/",
+              "at": "2026-10-14T09:19:01.501065+00:00",
+              "error": "Server disconnected without sending a response."
+            },
+            {
+              "url": "https://umm.gassco.no/",
+              "at": "2026-10-14T09:22:01.517672+00:00",
+              "error": "Server disconnected without sending a response."
+            },
+            {
+              "url": "https://umm.gassco.no/",
+              "at": "2026-10-14T09:37:01.521557+00:00",
+              "error": "Server disconnected without sending a response."
+            },
+            {
+              "url": "https://umm.gassco.no/",
+              "at": "2026-10-14T09:55:01.667307+00:00",
+              "error": "Server disconnected without sending a response."
+            },
+            {
+              "url": "https://umm.gassco.no/",
+              "at": "2026-10-14T10:15:01.864727+00:00",
+              "error": "Server disconnected without sending a response."
+            },
+            {
+              "url": "https://umm.gassco.no/",
+              "at": "2026-10-14T10:25:01.626786+00:00",
+              "error": "Server disconnected without sending a response."
+            },
+            {
+              "url": "https://umm.gassco.no/",
+              "at": "2026-10-14T10:28:01.626978+00:00",
+              "error": "Server disconnected without sending a response."
+            },
+            {
+              "url": "https://umm.gassco.no/",
+              "at": "2026-10-14T10:36:01.618242+00:00",
+              "error": "Server disconnected without sending a response."
+            },
+            {
+              "url": "https://umm.gassco.no/",
+              "at": "2026-10-14T10:40:01.799935+00:00",
+              "error": "Server disconnected without sending a response."
+            },
+            {
+              "url": "https://umm.gassco.no/",
+              "at": "2026-10-14T10:43:01.782535+00:00",
+              "error": "Server disconnected without sending a response."
+            },
+            {
+              "url": "https://umm.gassco.no/",
+              "at": "2026-10-14T10:45:01.846966+00:00",
+              "error": "Server disconnected without sending a response."
+            },
+            {
+              "url": "https://umm.gassco.no/",
+              "at": "2026-10-14T11:08:01.626739+00:00",
+              "error": "Server disconnected without sending a response."
+            },
+            {
+              "url": "https://umm.gassco.no/",
+              "at": "2026-10-14T11:17:01.691090+00:00",
+              "error": "Server disconnected without sending a response."
+            },
+            {
+              "url": "https://umm.gassco.no/",
+              "at": "2026-10-14T11:30:02.445422+00:00",
+              "error": "Server disconnected without sending a response."
+            },
+            {
+              "url": "https://umm.gassco.no/",
+              "at": "2026-10-14T13:22:02.075366+00:00",
+              "error": "Server disconnected without sending a response."
+            },
+            {
+              "url": "https://umm.gassco.no/disclaimer/acceptDisclaimer",
+              "at": "2026-10-14T13:43:48.774900+00:00",
+              "error": "ReadTimeout"
+            }
+          ],
+          "last_finished_at": "2026-10-14T14:05:08.683654+00:00",
+          "historical_limited": true,
+          "historical_limited_reasons": [
+            "No records observed in requested intervals; full historical archive retention is not confirmed"
+          ],
+          "empty_archive_intervals": [
+            [
+              "2024-05-15",
+              "2024-06-01"
+            ],
+            [
+              "2024-06-01",
+              "2024-07-01"
+            ],
+            [
+              "2024-07-01",
+              "2024-08-01"
+            ],
+            [
+              "2024-08-01",
+              "2024-09-01"
+            ]
+          ],
+          "last_run_request_count": 3
+        },
+        {
+          "source": "gdelt",
+          "name": "GDELT news discovery",
+          "last_attempt_at": "2026-10-14T14:01:12.649483+00:00",
+          "status": "failed",
+          "historical_requested_start": "2024-05-15",
+          "historical_status": "failed",
+          "historical_from": "2024-05-15",
+          "historical_through": "2026-10-14",
+          "id": "gdelt",
+          "last_error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20261012000000&enddatetime=20261015000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
+          "last_count": 0,
+          "request_count": 42,
+          "failures": [
+            {
+              "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+              "at": "2026-10-14T03:19:33.029010+00:00",
+              "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20260716000000&enddatetime=20260723000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+            },
+            {
+              "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+              "at": "2026-10-14T05:52:06.172884+00:00",
+              "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20261012000000&enddatetime=20261015000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+            },
+            {
+              "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+              "at": "2026-10-14T06:08:56.277809+00:00",
+              "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20261012000000&enddatetime=20261015000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+            },
+            {
+              "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+              "at": "2026-10-14T06:24:55.160218+00:00",
+              "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20261012000000&enddatetime=20261015000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+            },
+            {
+              "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+              "at": "2026-10-14T06:41:54.311929+00:00",
+              "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20261012000000&enddatetime=20261015000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+            },
+            {
+              "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+              "at": "2026-10-14T06:58:53.465739+00:00",
+              "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20261012000000&enddatetime=20261015000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+            },
+            {
+              "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+              "at": "2026-10-14T07:16:05.717831+00:00",
+              "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20261012000000&enddatetime=20261015000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+            },
+            {
+              "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+              "at": "2026-10-14T07:32:06.853898+00:00",
+              "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20261012000000&enddatetime=20261015000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+            },
+            {
+              "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+              "at": "2026-10-14T07:48:06.205249+00:00",
+              "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20261012000000&enddatetime=20261015000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+            },
+            {
+              "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+              "at": "2026-10-14T08:05:07.537329+00:00",
+              "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20261012000000&enddatetime=20261015000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+            },
+            {
+              "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+              "at": "2026-10-14T08:21:07.359311+00:00",
+              "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20261012000000&enddatetime=20261015000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+            },
+            {
+              "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+              "at": "2026-10-14T08:37:04.254322+00:00",
+              "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20261012000000&enddatetime=20261015000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+            },
+            {
+              "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+              "at": "2026-10-14T08:53:04.244981+00:00",
+              "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20261012000000&enddatetime=20261015000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+            },
+            {
+              "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+              "at": "2026-10-14T09:09:04.811820+00:00",
+              "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20261012000000&enddatetime=20261015000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+            },
+            {
+              "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+              "at": "2026-10-14T09:25:04.833059+00:00",
+              "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20261012000000&enddatetime=20261015000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+            },
+            {
+              "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+              "at": "2026-10-14T09:41:08.054024+00:00",
+              "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20261012000000&enddatetime=20261015000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+            },
+            {
+              "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+              "at": "2026-10-14T09:57:03.631982+00:00",
+              "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20261012000000&enddatetime=20261015000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+            },
+            {
+              "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+              "at": "2026-10-14T10:13:07.560399+00:00",
+              "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20261012000000&enddatetime=20261015000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+            },
+            {
+              "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+              "at": "2026-10-14T10:29:05.998810+00:00",
+              "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20261012000000&enddatetime=20261015000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+            },
+            {
+              "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+              "at": "2026-10-14T10:45:05.743944+00:00",
+              "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20261012000000&enddatetime=20261015000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+            },
+            {
+              "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+              "at": "2026-10-14T11:01:10.556389+00:00",
+              "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20261012000000&enddatetime=20261015000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+            },
+            {
+              "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+              "at": "2026-10-14T11:17:06.889521+00:00",
+              "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20261012000000&enddatetime=20261015000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+            },
+            {
+              "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+              "at": "2026-10-14T11:34:07.101314+00:00",
+              "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20261012000000&enddatetime=20261015000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+            },
+            {
+              "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+              "at": "2026-10-14T11:50:05.361496+00:00",
+              "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20261012000000&enddatetime=20261015000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+            },
+            {
+              "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+              "at": "2026-10-14T12:07:08.217099+00:00",
+              "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20261012000000&enddatetime=20261015000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+            },
+            {
+              "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+              "at": "2026-10-14T12:24:04.679551+00:00",
+              "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20261012000000&enddatetime=20261015000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+            },
+            {
+              "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+              "at": "2026-10-14T12:40:07.653242+00:00",
+              "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20261012000000&enddatetime=20261015000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+            },
+            {
+              "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+              "at": "2026-10-14T12:57:04.250446+00:00",
+              "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20261012000000&enddatetime=20261015000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+            },
+            {
+              "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+              "at": "2026-10-14T13:13:06.519996+00:00",
+              "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20261012000000&enddatetime=20261015000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+            },
+            {
+              "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+              "at": "2026-10-14T13:29:04.921012+00:00",
+              "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20261012000000&enddatetime=20261015000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+            },
+            {
+              "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+              "at": "2026-10-14T13:45:07.472516+00:00",
+              "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20261012000000&enddatetime=20261015000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+            },
+            {
+              "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+              "at": "2026-10-14T14:01:12.657094+00:00",
+              "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20261012000000&enddatetime=20261015000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+            }
+          ],
+          "last_finished_at": "2026-10-14T14:01:12.657308+00:00",
+          "next_poll_at": "2026-10-14T14:16:12.649456+00:00",
+          "rate_limited_at": "2026-10-14T14:01:12.649476+00:00",
+          "rate_limit_backoff_seconds": 900,
+          "last_run_request_count": 1
+        },
+        {
+          "source": "ice_chart",
+          "name": "ICE public chart (reference prices)",
+          "status": "ok",
+          "last_attempt_at": "2026-10-14T13:19:01.137467+00:00",
+          "settlement_verified": false,
+          "id": "ice_chart",
+          "last_success_at": "2026-10-14T13:19:05.850399+00:00",
+          "observations_imported": 18,
+          "contracts": [
+            {
+              "contract_id": "6277389",
+              "label": "Nov26",
+              "latest_day": "2026-10-13"
+            },
+            {
+              "contract_id": "6277390",
+              "label": "Dec26",
+              "latest_day": "2026-10-13"
+            },
+            {
+              "contract_id": "6277391",
+              "label": "Jan27",
+              "latest_day": "2026-10-13"
+            }
+          ],
+          "last_error": null
+        },
+        {
+          "source": "offshore_energy",
+          "name": "Offshore Energy",
+          "last_attempt_at": "2026-10-14T14:04:56.253345+00:00",
+          "status": "ok",
+          "historical_requested_start": "2024-05-15",
+          "historical_status": "ok",
+          "historical_from": "2024-05-15",
+          "historical_through": "2026-10-14",
+          "id": "offshore_energy",
+          "last_success_at": "2026-10-14T14:04:56.747410+00:00",
+          "last_count": 16,
+          "last_created": 1,
+          "last_revised": 0,
+          "last_error": null,
+          "backfill_completed_at": "2026-10-14T03:31:45.363746+00:00",
+          "request_count": 523,
+          "failures": [
+            {
+              "url": "https://offshore-energy.biz/feed",
+              "at": "2026-10-14T05:55:04.522483+00:00",
+              "error": "Client error '404 Not Found' for url 'https://www.offshore-energy.biz/feed'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
+            },
+            {
+              "url": "https://offshore-energy.biz/feed",
+              "at": "2026-10-14T05:57:23.997518+00:00",
+              "error": "Client error '404 Not Found' for url 'https://www.offshore-energy.biz/feed'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
+            },
+            {
+              "url": "https://offshore-energy.biz/feed",
+              "at": "2026-10-14T05:59:23.886008+00:00",
+              "error": "Client error '404 Not Found' for url 'https://www.offshore-energy.biz/feed'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
+            },
+            {
+              "url": "https://offshore-energy.biz/feed",
+              "at": "2026-10-14T06:00:24.119920+00:00",
+              "error": "Client error '404 Not Found' for url 'https://www.offshore-energy.biz/feed'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
+            },
+            {
+              "url": "https://offshore-energy.biz/feed",
+              "at": "2026-10-14T06:02:24.200437+00:00",
+              "error": "Client error '404 Not Found' for url 'https://www.offshore-energy.biz/feed'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
+            },
+            {
+              "url": "https://offshore-energy.biz/feed",
+              "at": "2026-10-14T06:07:54.022979+00:00",
+              "error": "Client error '404 Not Found' for url 'https://www.offshore-energy.biz/feed'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
+            }
+          ],
+          "last_finished_at": "2026-10-14T14:04:56.747415+00:00",
+          "archive_cursor": 29,
+          "historical_pages": 28,
+          "archive_candidate_count": 2718,
+          "historical_limited": false,
+          "last_run_request_count": 1,
+          "live_transport": "rss",
+          "last_rss_error": "Client error '404 Not Found' for url 'https://www.offshore-energy.biz/feed'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404",
+          "last_gap_recovery_at": "2026-10-14T06:07:58.000538+00:00",
+          "gap_recovered_from": "2026-10-13",
+          "gap_recovered_count": 4,
+          "last_api_fallback_at": "2026-10-14T06:07:58.000552+00:00"
+        }
+      ],
+      "article_count": 7,
+      "observed_imprecise_count": 3,
+      "risk_flags": [
+        "部分即时来源只有日期或缺少发布时间；按实际发现时刻提供当前分析背景，未伪造发布时间或写入精确结算窗口。"
+      ],
+      "historical_timestamps": "mixed_quality"
+    },
+    "analysis_kind": "live"
+  },
+  "result": {
+    "news_impact": {
+      "direction": "flat",
+      "contextual_news_score": 0.0,
+      "confidence": 0.4,
+      "signal_strength": "weak",
+      "summary": "JERA增持Chevron LNG项目对欧洲天然气供给无显著影响，因项目位于澳洲，距离欧洲市场较远，且增持比例仅为间接持股，未导致短期供应中断或价格冲击。",
+      "bullish_evidence": [],
+      "bearish_evidence": [],
+      "neutralizing_evidence": []
+    },
+    "close_forecast": {
+      "direction": "flat",
+      "confidence": 0.4,
+      "summary": "基于当前新闻及已知供需背景，预计本窗口结算价相对前一结算价基本维持不变。",
+      "basis": "JERA增持不构成供应中断或需求提升，且无其他显著供需冲击。",
+      "extreme_move_risk": "缺乏直接价格传导证据，极端波动风险低。"
+    },
+    "analysis": {
+      "summary": "JERA增持Chevron LNG项目为澳洲项目，未对欧洲天然气供给产生直接影响，净影响为中性。",
+      "evidence": [
+        "[N0]JERA增持Chevron LNG项目 → 供应来源远离欧洲，未导致短期供给缺口。"
+      ],
+      "negation_or_reversal": [],
+      "priced_in_comment": "price_reference:未提供盘中报价和公告前后价格反应，无法确认消息是否已计入价格",
+      "matched_terms": [],
+      "historical_comparisons": [
+        "[E1]历史记录日期2022-11-01，类别为政策监管/能源安全；该时点价格反应资料未提供，无法量化；日聚合缺少原始单条来源，类比可信度有限",
+        "[E2]历史记录日期2022-03-30，类别为地缘政治/战争/制裁；该时点价格反应资料未提供，无法量化；日聚合缺少原始单条来源，类比可信度有限"
+      ]
+    },
+    "risk_flags": [
+      "行情尚未验证为ICE官方日结算，不参与官方结算准确率评分",
+      "价格类型尚未验证为ICE官方日结算，不用于官方结算评分",
+      "部分即时来源只有日期或缺少发布时间；按实际发现时刻提供当前分析背景，未伪造发布时间或写入精确结算窗口。",
+      "部分新闻只有发布日：当前使用真实发现时刻作为背景，原始发布时间和结算窗口归属未知",
+      "模型把握程度未经统计校准，不代表已验证准确率",
+      "来源gdelt采集失败或尚未完成，本窗口新闻覆盖可能不完整",
+      "历史事件包含多条新闻日聚合，缺少原始单条来源，类比存在时间及来源限制"
+    ],
+    "references": [
+      {
+        "id": "af3b256e65f68dbb1d6f4fe5",
+        "url": "https://offshore-energy.biz/2026/10/14/jera-deepens-australian-lng-foothold-with-larger-stake-in-chevrons-project",
+        "title": "JERA deepens Australian LNG foothold with larger stake in Chevron’s project"
+      },
+      {
+        "id": "legacy-event-2022-11-01",
+        "url": "",
+        "title": "Shell exits Malampaya gas project off Philippines Japan gov't decides to retain stake in new Sakhalin-1 operator ADNOC, India's Gail sign LNG MoU JBIC provides another $680mn loan to Jera for LNG purchases Africa must use its gas reserves to drive the economy, industry officials say BP profits soar amid increasing calls for bigger UK windfall tax German industry curbed gas demand by a fifth in crisis - study Equitrans wants U.S. legislation to help finish Mountain Valley natgas pipe Mexico's Pemex gets go-ahead to develop once-abandoned deepwater gas field Netherlands to raise $3.2 billion with windfall tax on fossil fuel companies"
+      },
+      {
+        "id": "legacy-event-2022-03-30",
+        "url": "",
+        "title": "Fugro to support QatarEnergy's field redevelopment project Gas2Grid fails to close farm-in deal with Armour Comet Ridge gets approvals for APLNG Mahalo stake QatarEnergy acquires interest in exploration block off Egypt Spain's Molgas backs Greek LNG supplier Coro brings Italian field back online Mitsubishi Power to supply turbines to Uzbek gas power plant Lamprell receives early-stage acquisition proposal Serbia exempt from Russian ruble requirement EU currently has no alternative to Russian gas: Pouyanne CNOOC books $11.1bn net profit in 2021 Germany unveils plan to phase out Russian energy Sodium cyanide producer curbs output due to \"spiking gas prices\" BP courts Chinese, Indian investors for Rosneft stake: press March breaks European records for highest power costs"
+      }
+    ],
+    "missing_fields": [
+      "settlement_verification",
+      "observed_news.precise_publication_window",
+      "confidence_calibration",
+      "source_coverage:gdelt"
+    ],
+    "_meta": {
+      "prompt_version": "ttf-news-v6-standalone-1.8",
+      "prompt_baseline": "model/multiagent_v6_llm_reprompt_50_nonflat.py:SENTIMENT_PROMPT",
+      "as_of": "2026-10-14T14:05:08.777292+00:00",
+      "source_index": [
+        {
+          "alias": "N0",
+          "id": "af3b256e65f68dbb1d6f4fe5",
+          "url": "https://offshore-energy.biz/2026/10/14/jera-deepens-australian-lng-foothold-with-larger-stake-in-chevrons-project",
+          "title": "JERA deepens Australian LNG foothold with larger stake in Chevron’s project",
+          "version": 1,
+          "source": "offshore_energy",
+          "published_at": "2026-10-14T13:18:00+00:00",
+          "published_date": "2026-10-14",
+          "first_seen_at": "2026-10-14T14:04:56.724397+00:00",
+          "timestamp_precision": "exact"
+        },
+        {
+          "alias": "N1",
+          "id": "092e9c5993afb0aa4341cc93",
+          "url": "https://offshore-energy.biz/2026/10/14/kistos-strengthens-its-presence-in-north-sea-oil-and-gas-hub-with-var-energi-deal",
+          "title": "Kistos strengthens its presence in North Sea oil & gas hub with Vår Energi deal",
+          "version": 1,
+          "source": "offshore_energy",
+          "published_at": "2026-10-14T06:34:56+00:00",
+          "published_date": "2026-10-14",
+          "first_seen_at": "2026-10-14T07:03:53.548512+00:00",
+          "timestamp_precision": "exact"
+        },
+        {
+          "alias": "N2",
+          "id": "175df1e3a33c2d3d9c16eac4",
+          "url": "https://offshore-energy.biz/2026/10/14/sunda-steps-closer-to-dusting-off-1985-gas-field-as-new-zealand-bid-goes-exclusive",
+          "title": "Sunda steps closer to dusting off 1985 gas field as New Zealand bid goes exclusive",
+          "version": 1,
+          "source": "offshore_energy",
+          "published_at": "2026-10-14T10:59:57+00:00",
+          "published_date": "2026-10-14",
+          "first_seen_at": "2026-10-14T11:04:55.115636+00:00",
+          "timestamp_precision": "exact"
+        },
+        {
+          "alias": "N3",
+          "id": "7223e6ce0dd6ad9a22c2b0aa",
+          "url": "https://umm.gassco.no/details?id=b766e260-f846-45f2-88ff-0f05a3e77b3a",
+          "title": "Gassco Kårstø: Planned Other unavailability (Active)",
+          "version": 1,
+          "source": "gassco",
+          "published_at": "2026-10-14T11:44:00+00:00",
+          "published_date": "2026-10-14",
+          "first_seen_at": "2026-10-14T11:44:07.377735+00:00",
+          "timestamp_precision": "exact"
+        },
+        {
+          "alias": "N4",
+          "id": "7ae5aa276b31f6fadc183254",
+          "url": "https://umm.gassco.no/details?id=36ae37cd-deae-4405-a65c-b224da5097f9",
+          "title": "Gassco Kårstø: Planned Other unavailability (Active)",
+          "version": 1,
+          "source": "gassco",
+          "published_at": "2026-10-14T11:44:00+00:00",
+          "published_date": "2026-10-14",
+          "first_seen_at": "2026-10-14T11:44:07.377960+00:00",
+          "timestamp_precision": "exact"
+        },
+        {
+          "alias": "N5",
+          "id": "98718c742060bf8fc4c07741",
+          "url": "https://offshore-energy.biz/2026/10/14/new-oil-and-gas-discovery-set-to-join-north-sea-fast-track-plays-fuelling-europes-energy-security",
+          "title": "New oil & gas discovery set to join North Sea fast-track plays fuelling Europe’s energy security",
+          "version": 1,
+          "source": "offshore_energy",
+          "published_at": "2026-10-14T07:52:17+00:00",
+          "published_date": "2026-10-14",
+          "first_seen_at": "2026-10-14T08:03:54.975441+00:00",
+          "timestamp_precision": "exact"
+        },
+        {
+          "alias": "N6",
+          "id": "aba456f8db0e6169e4d19ede",
+          "url": "https://www.equinor.com/news/20261014-oil-gas-discovery-oseberg",
+          "title": "Oil and gas discovery in the North Sea adding volumes to Oseberg",
+          "version": 2,
+          "source": "equinor",
+          "published_at": "2026-10-14T06:15:30.973000+00:00",
+          "published_date": "2026-10-14",
+          "first_seen_at": "2026-10-14T06:15:47.563106+00:00",
+          "timestamp_precision": "exact"
+        },
+        {
+          "alias": "N7",
+          "id": "af3b256e65f68dbb1d6f4fe5",
+          "url": "https://offshore-energy.biz/2026/10/14/jera-deepens-australian-lng-foothold-with-larger-stake-in-chevrons-project",
+          "title": "JERA deepens Australian LNG foothold with larger stake in Chevron’s project",
+          "version": 1,
+          "source": "offshore_energy",
+          "published_at": "2026-10-14T13:18:00+00:00",
+          "published_date": "2026-10-14",
+          "first_seen_at": "2026-10-14T14:04:56.724397+00:00",
+          "timestamp_precision": "exact"
+        },
+        {
+          "alias": "N8",
+          "id": "5320e23900322ce8761e20ad",
+          "url": "https://energy.ec.europa.eu/news/methane-emissions-reporting-templates-commission-launches-call-feedback-2026-10-12_en",
+          "title": "Methane emissions reporting templates – Commission launches call for feedback",
+          "version": 2,
+          "source": "eu_energy",
+          "published_at": null,
+          "published_date": "2026-10-12",
+          "first_seen_at": "2026-10-14T03:17:31.907683+00:00",
+          "timestamp_precision": "date",
+          "window_membership": "first_observed_in_window_publication_window_unknown"
+        },
+        {
+          "alias": "N9",
+          "id": "795f0e3649dfcb78cc8d76c2",
+          "url": "https://energy.ec.europa.eu/news/gas-coordination-group-continues-work-winter-preparedness-2026-09-25_en",
+          "title": "Gas Coordination Group continues work on winter preparedness",
+          "version": 1,
+          "source": "eu_energy",
+          "published_at": null,
+          "published_date": "2026-09-25",
+          "first_seen_at": "2026-10-14T05:51:56.208232+00:00",
+          "timestamp_precision": "date",
+          "window_membership": "first_observed_in_window_publication_window_unknown"
+        },
+        {
+          "alias": "N10",
+          "id": "cfd69a0af7c69bfa09bb8d73",
+          "url": "https://energy.ec.europa.eu/news/eu-gas-system-prepared-winter-despite-lower-storage-levels-2026-10-08_en",
+          "title": "EU gas system prepared for the winter despite lower storage levels",
+          "version": 1,
+          "source": "eu_energy",
+          "published_at": null,
+          "published_date": "2026-10-08",
+          "first_seen_at": "2026-10-14T05:51:56.204591+00:00",
+          "timestamp_precision": "date",
+          "window_membership": "first_observed_in_window_publication_window_unknown"
+        },
+        {
+          "alias": "E1",
+          "id": "legacy-event-2022-11-01",
+          "url": "",
+          "title": "Shell exits Malampaya gas project off Philippines Japan gov't decides to retain stake in new Sakhalin-1 operator ADNOC, India's Gail sign LNG MoU JBIC provides another $680mn loan to Jera for LNG purchases Africa must use its gas reserves to drive the economy, industry officials say BP profits soar amid increasing calls for bigger UK windfall tax German industry curbed gas demand by a fifth in crisis - study Equitrans wants U.S. legislation to help finish Mountain Valley natgas pipe Mexico's Pemex gets go-ahead to develop once-abandoned deepwater gas field Netherlands to raise $3.2 billion with windfall tax on fossil fuel companies",
+          "source": "legacy_daily",
+          "known_at": "2026-10-14T03:20:17.305337+00:00",
+          "timestamp_precision": "date",
+          "source_quality": "daily_aggregate_no_original_url"
+        },
+        {
+          "alias": "E2",
+          "id": "legacy-event-2022-03-30",
+          "url": "",
+          "title": "Fugro to support QatarEnergy's field redevelopment project Gas2Grid fails to close farm-in deal with Armour Comet Ridge gets approvals for APLNG Mahalo stake QatarEnergy acquires interest in exploration block off Egypt Spain's Molgas backs Greek LNG supplier Coro brings Italian field back online Mitsubishi Power to supply turbines to Uzbek gas power plant Lamprell receives early-stage acquisition proposal Serbia exempt from Russian ruble requirement EU currently has no alternative to Russian gas: Pouyanne CNOOC books $11.1bn net profit in 2021 Germany unveils plan to phase out Russian energy Sodium cyanide producer curbs output due to \"spiking gas prices\" BP courts Chinese, Indian investors for Rosneft stake: press March breaks European records for highest power costs",
+          "source": "legacy_daily",
+          "known_at": "2026-10-14T03:20:17.395964+00:00",
+          "timestamp_precision": "date",
+          "source_quality": "daily_aggregate_no_original_url"
+        },
+        {
+          "alias": "E3",
+          "id": "legacy-event-2021-12-08",
+          "url": "",
+          "title": "Ukraine’s energy policy and prospects for the gas sector A Russian answer to satellite emissions monitoring China to dominate new petrochemicals projects in Asia through 2025 Baker Hughes wins Pluto LNG expansion contract PNG competition watchdog approves Santos, Oil Search merger Chinese gas imports up 22% in Jan-Nov McDermott wins EPCI deals in Saudi Arabia Putin asks for proposals for Rosneft supplying gas to Europe Jera to buy 12.5% stake in Barossa gas field Spirit exits Norway in deals worth over $1bn Diversified closes US Tapstone deal Baron updates on Chuditch seismic work LNG key to reduce South African emissions: DNG Henry Hub continues its rise Technip Energies scores another UAE contract US has German assurances on NS2: press Trafigura reports record profits in fiscal 2021 Amur GCC secures $9.1bn in loans Conoco eyes greater stake in Australia Pacific LNG Cheniere wants more time for Corpus Christi expansion",
+          "source": "legacy_daily",
+          "known_at": "2026-10-14T03:20:17.570075+00:00",
+          "timestamp_precision": "date",
+          "source_quality": "daily_aggregate_no_original_url"
+        },
+        {
+          "alias": "E4",
+          "id": "legacy-event-2021-09-28",
+          "url": "",
+          "title": "Jera to buy 27% stake in Philippines' Aboitiz Power for $1.6bn Japan weighs its options [Gas in Transition] Kogas plans to supply 380,000 mt/yr of hydrogen by 2030 Ukrainian govt steps in to supervise Naftogaz directly Maersk partners with Chinese classification society on carbon-neutral tech Russian watchdog asks Gazprom to expand domestic gas sales Govt, industry propose CCUS hub near Darwin Sakhalin Energy to deliver carbon-neutral LNG to Japan's Toho Gas Gasum bunkers its first vessel with LNG in France Indian gas demand up 7% in Aug UK Shell Energy takes on customers  of failed Green Energy European IOCs hold largest volumes of unsanctioned reserves in Sub-Saharan Africa UK producer Serica enjoys price fillip as output grows HyNet’s Progressive Energy sets out UK hydrogen plan Origin makes further investment in UK's Octopus Energy Tallgrass commits to Project Canary Enbridge makes several environmental pledges SoCalGas settles over Aliso Canyon leak BP starts Phase 2 at Thunder Horse Russian petchems tie-up nears close UAE’s Dana Gas wins arbitration against Iran",
+          "source": "legacy_daily",
+          "known_at": "2026-10-14T03:20:17.605355+00:00",
+          "timestamp_precision": "date",
+          "source_quality": "daily_aggregate_no_original_url"
+        },
+        {
+          "alias": "E5",
+          "id": "event-gassco-2026-344-B",
+          "url": "https://umm.gassco.no/details?id=d399b8bb-ed95-4d78-aa7b-f8957b666a2a",
+          "title": "Gassco Kårstø: Unplanned Gas treatment plant unavailability (Active)",
+          "source": "gassco",
+          "published_at": "2026-10-13T14:22:54+00:00",
+          "known_at": "2026-10-14T03:25:06.492834+00:00",
+          "source_quality": "source_announcement"
+        },
+        {
+          "alias": "E6",
+          "id": "event-gassco-2026-222",
+          "url": "https://umm.gassco.no/details?id=588d9426-676d-4412-a98e-965706d016a9",
+          "title": "Gassco Åsgard: Planned Other unavailability (Active)",
+          "source": "gassco",
+          "published_at": "2026-10-08T11:14:00+00:00",
+          "known_at": "2026-10-14T03:25:06.484556+00:00",
+          "source_quality": "source_announcement"
+        }
+      ],
+      "previous_source_index": [
+        {
+          "date": "2026-10-13",
+          "news_ids": [
+            "1aaba4eb6ff2a4887c6a9fad",
+            "2dafeba5161f81cbc56819a7",
+            "31a7020bf9536b0f536fcf85",
+            "4d2ebcc269c4d5288caddee3",
+            "57a73447a724302c60defd56",
+            "5f6ce43dc6d225aca744f0e8",
+            "93ca147dbaac0921951b28b4",
+            "d28e8af849c4cc106c66e9c7",
+            "d7d0d45a5fa8a74e26e0e462",
+            "e681e812f6b51ea7b2ef2bb9"
+          ],
+          "sources": [
+            {
+              "alias": "P1.1",
+              "id": "1aaba4eb6ff2a4887c6a9fad",
+              "url": "https://umm.gassco.no/details?id=0b47e165-e799-4795-9c86-2a59a5e65187",
+              "title": "Gassco Kristin: Planned Other unavailability (Active)",
+              "version": 2,
+              "source": "gassco",
+              "published_at": "2026-10-13T12:45:00+00:00",
+              "published_date": "2026-10-13",
+              "first_seen_at": "2026-10-14T03:18:21.672667+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P1.2",
+              "id": "31a7020bf9536b0f536fcf85",
+              "url": "https://umm.gassco.no/details?id=4298690c-fc40-463f-821a-f6bda984f495",
+              "title": "Gassco Kristin: Planned Other unavailability (Active)",
+              "version": 2,
+              "source": "gassco",
+              "published_at": "2026-10-13T12:45:00+00:00",
+              "published_date": "2026-10-13",
+              "first_seen_at": "2026-10-14T03:18:21.663089+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P1.3",
+              "id": "4d2ebcc269c4d5288caddee3",
+              "url": "https://umm.gassco.no/details?id=1ad09cdd-abca-4c8a-9418-8f5e3de474f9",
+              "title": "Gassco Kårstø: Unplanned Gas treatment plant unavailability (Active)",
+              "version": 1,
+              "source": "gassco",
+              "published_at": "2026-10-13T11:20:16+00:00",
+              "published_date": "2026-10-13",
+              "first_seen_at": "2026-10-14T03:56:44.419914+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P1.4",
+              "id": "57a73447a724302c60defd56",
+              "url": "https://umm.gassco.no/details?id=d399b8bb-ed95-4d78-aa7b-f8957b666a2a",
+              "title": "Gassco Kårstø: Unplanned Gas treatment plant unavailability (Active)",
+              "version": 2,
+              "source": "gassco",
+              "published_at": "2026-10-13T14:22:54+00:00",
+              "published_date": "2026-10-13",
+              "first_seen_at": "2026-10-14T03:18:21.659412+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P1.5",
+              "id": "d28e8af849c4cc106c66e9c7",
+              "url": "https://umm.gassco.no/details?id=b3514550-ad1d-4b34-bf01-1daf5c246d6c",
+              "title": "Gassco Kårstø: Unplanned Gas treatment plant unavailability (Active)",
+              "version": 1,
+              "source": "gassco",
+              "published_at": "2026-10-13T11:17:58+00:00",
+              "published_date": "2026-10-13",
+              "first_seen_at": "2026-10-14T03:56:44.419411+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P1.6",
+              "id": "2dafeba5161f81cbc56819a7",
+              "url": "https://offshore-energy.biz/2026/10/13/totalenergies-orders-french-tubular-solutions-for-gas-field-in-azerbaijan",
+              "title": "TotalEnergies orders French tubular solutions for gas field in Azerbaijan",
+              "version": 4,
+              "source": "offshore_energy",
+              "published_at": "2026-10-13T08:22:26+00:00",
+              "published_date": "2026-10-13",
+              "first_seen_at": "2026-10-14T03:31:44.231652+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P1.7",
+              "id": "5f6ce43dc6d225aca744f0e8",
+              "url": "https://www.equinor.com/news/20261013-eneco-five-year-gas-agreement",
+              "title": "Equinor and Eneco sign five-year gas agreement with verified emissions data",
+              "version": 2,
+              "source": "equinor",
+              "published_at": "2026-10-13T05:00:48.652000+00:00",
+              "published_date": "2026-10-13",
+              "first_seen_at": "2026-10-14T03:19:42.250133+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P1.8",
+              "id": "93ca147dbaac0921951b28b4",
+              "url": "https://offshore-energy.biz/2026/10/13/equinor-to-feed-dutch-grid-with-low-emission-norwegian-gas-through-2031",
+              "title": "Equinor to feed Dutch grid with low-emission Norwegian gas through 2031",
+              "version": 5,
+              "source": "offshore_energy",
+              "published_at": "2026-10-13T12:52:01+00:00",
+              "published_date": "2026-10-13",
+              "first_seen_at": "2026-10-14T03:19:29.656821+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P1.9",
+              "id": "e681e812f6b51ea7b2ef2bb9",
+              "url": "https://offshore-energy.biz/2026/10/13/2002-built-jack-up-comes-to-asian-yard-for-mopu-conversion-ahead-of-gas-field-deployment",
+              "title": "2002-built jack-up comes to Asian yard for MOPU conversion ahead of gas field deployment",
+              "version": 4,
+              "source": "offshore_energy",
+              "published_at": "2026-10-13T07:52:48+00:00",
+              "published_date": "2026-10-13",
+              "first_seen_at": "2026-10-14T03:31:44.229610+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P1.10",
+              "id": "d7d0d45a5fa8a74e26e0e462",
+              "url": "https://offshore-energy.biz/2026/10/13/shell-gtt-and-lloyds-register-eye-hybrid-electric-lng-carrier-design",
+              "title": "Shell, GTT, and Lloyd’s Register eye hybrid-electric LNG carrier design",
+              "version": 5,
+              "source": "offshore_energy",
+              "published_at": "2026-10-13T14:14:12+00:00",
+              "published_date": "2026-10-13",
+              "first_seen_at": "2026-10-14T03:19:29.656568+00:00",
+              "timestamp_precision": "exact"
+            }
+          ]
+        },
+        {
+          "date": "2026-10-12",
+          "news_ids": [
+            "114da5915f464df42dc17847",
+            "5152f8417ef1c45db5d8547d",
+            "548a29bed527f8ea2397d38b",
+            "71cc2a22f1ac394d0ae042b6",
+            "8f2027cb112b31262cbcb559",
+            "b725f9b506fb177a27e7d9c3",
+            "b7838c6b48e11463910740cf",
+            "e3c537b40f60dfa76bfae2f9",
+            "f0f0c99819172bdc380c1b6b"
+          ],
+          "sources": [
+            {
+              "alias": "P2.1",
+              "id": "114da5915f464df42dc17847",
+              "url": "https://umm.gassco.no/details?id=5af0c8cc-ecf6-474f-8f5e-a77081d09fe3",
+              "title": "Gassco Easington: Planned Other unavailability (Active)",
+              "version": 2,
+              "source": "gassco",
+              "published_at": "2026-10-12T12:24:00+00:00",
+              "published_date": "2026-10-12",
+              "first_seen_at": "2026-10-14T03:18:21.678500+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P2.2",
+              "id": "5152f8417ef1c45db5d8547d",
+              "url": "https://umm.gassco.no/details?id=56fdca94-0bd9-462e-a8b5-8a515f12062b",
+              "title": "Gassco Easington: Planned Other unavailability (Active)",
+              "version": 2,
+              "source": "gassco",
+              "published_at": "2026-10-12T12:24:00+00:00",
+              "published_date": "2026-10-12",
+              "first_seen_at": "2026-10-14T03:18:21.680004+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P2.3",
+              "id": "548a29bed527f8ea2397d38b",
+              "url": "https://umm.gassco.no/details?id=cd34a9a4-2bda-47a6-96ab-07bbb4e2a514",
+              "title": "Gassco Dvalin: Unplanned Gas production field unavailability (Inactive)",
+              "version": 1,
+              "source": "gassco",
+              "published_at": "2026-10-10T00:12:36+00:00",
+              "published_date": "2026-10-10",
+              "first_seen_at": "2026-10-14T03:56:44.417429+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P2.4",
+              "id": "71cc2a22f1ac394d0ae042b6",
+              "url": "https://umm.gassco.no/details?id=3991ec5b-db7c-4b54-a32a-f8475e941246",
+              "title": "Gassco Gullfaks: Unplanned Gas production field unavailability (Inactive)",
+              "version": 1,
+              "source": "gassco",
+              "published_at": "2026-10-12T00:26:41+00:00",
+              "published_date": "2026-10-12",
+              "first_seen_at": "2026-10-14T03:56:44.418920+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P2.5",
+              "id": "b725f9b506fb177a27e7d9c3",
+              "url": "https://umm.gassco.no/details?id=e216a965-9ac2-45f1-9d7b-82fdc15c0eff",
+              "title": "Gassco Kårstø: Unplanned Other unavailability (Inactive)",
+              "version": 1,
+              "source": "gassco",
+              "published_at": "2026-10-11T11:24:46+00:00",
+              "published_date": "2026-10-11",
+              "first_seen_at": "2026-10-14T03:56:44.418453+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P2.6",
+              "id": "b7838c6b48e11463910740cf",
+              "url": "https://umm.gassco.no/details?id=12b415ee-d848-4a69-b339-2e0326ac22ae",
+              "title": "Gassco Emden: Planned Other unavailability (Active)",
+              "version": 2,
+              "source": "gassco",
+              "published_at": "2026-10-12T12:24:00+00:00",
+              "published_date": "2026-10-12",
+              "first_seen_at": "2026-10-14T03:18:21.679568+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P2.7",
+              "id": "e3c537b40f60dfa76bfae2f9",
+              "url": "https://umm.gassco.no/details?id=551f364c-7b69-47fc-b7ac-b057e28863d4",
+              "title": "Gassco Dvalin: Unplanned Gas production field unavailability (Inactive)",
+              "version": 1,
+              "source": "gassco",
+              "published_at": "2026-10-10T15:15:25+00:00",
+              "published_date": "2026-10-10",
+              "first_seen_at": "2026-10-14T03:56:44.417939+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P2.8",
+              "id": "8f2027cb112b31262cbcb559",
+              "url": "https://offshore-energy.biz/2026/10/12/eni-sheds-partial-stakes-in-indonesian-gas-assets-as-pertamina-and-medco-bolster-portfolios",
+              "title": "Eni sheds partial stakes in Indonesian gas assets as Pertamina and Medco bolster portfolios",
+              "version": 2,
+              "source": "offshore_energy",
+              "published_at": "2026-10-12T13:30:55+00:00",
+              "published_date": "2026-10-12",
+              "first_seen_at": "2026-10-14T03:31:44.227403+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P2.9",
+              "id": "f0f0c99819172bdc380c1b6b",
+              "url": "https://offshore-energy.biz/2026/10/12/adnoc-broadens-its-asian-horizons-with-gulf-group-lng-deal",
+              "title": "ADNOC broadens its Asian horizons with Gulf Group LNG deal",
+              "version": 3,
+              "source": "offshore_energy",
+              "published_at": "2026-10-12T09:02:19+00:00",
+              "published_date": "2026-10-12",
+              "first_seen_at": "2026-10-14T03:19:29.660708+00:00",
+              "timestamp_precision": "exact"
+            }
+          ]
+        },
+        {
+          "date": "2026-10-09",
+          "news_ids": [
+            "033b3c5a974bfb09c8e36c1d",
+            "1a2ffcaee4616004af011c93",
+            "3051f7576909039ef2633bd1",
+            "4045ba505010ee6000f287e1",
+            "62bc1afa752cf6f81fbba09d",
+            "bc1af4c2661879f75b617232",
+            "fcdaa3a83544b89b36a6eeac"
+          ],
+          "sources": [
+            {
+              "alias": "P3.1",
+              "id": "033b3c5a974bfb09c8e36c1d",
+              "url": "https://offshore-energy.biz/2026/10/09/offshore-installation-starts-at-valeuras-gulf-of-thailand-field-ahead-of-schedule",
+              "title": "Offshore installation starts at Valeura's Gulf of Thailand field ahead of schedule",
+              "version": 1,
+              "source": "offshore_energy",
+              "published_at": "2026-10-09T08:07:00+00:00",
+              "published_date": "2026-10-09",
+              "first_seen_at": "2026-10-14T05:51:57.133000+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P3.2",
+              "id": "1a2ffcaee4616004af011c93",
+              "url": "https://umm.gassco.no/details?id=22363906-6aac-47f1-af5d-19ed5b6bdffd",
+              "title": "Gassco Emden: Planned Other unavailability (Active)",
+              "version": 2,
+              "source": "gassco",
+              "published_at": "2026-10-09T08:36:00+00:00",
+              "published_date": "2026-10-09",
+              "first_seen_at": "2026-10-14T03:18:21.676317+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P3.3",
+              "id": "4045ba505010ee6000f287e1",
+              "url": "https://umm.gassco.no/details?id=295b617d-5c69-4ffb-82db-5bd421200e5e",
+              "title": "Gassco Gina Krog Import: Planned Other unavailability (Active)",
+              "version": 2,
+              "source": "gassco",
+              "published_at": "2026-10-09T08:36:00+00:00",
+              "published_date": "2026-10-09",
+              "first_seen_at": "2026-10-14T03:18:21.679351+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P3.4",
+              "id": "62bc1afa752cf6f81fbba09d",
+              "url": "https://umm.gassco.no/details?id=fb68d200-06b6-4a42-8351-bb0eee5a9e2e",
+              "title": "Gassco Sleipner: Planned Other unavailability (Dismissed)",
+              "version": 1,
+              "source": "gassco",
+              "published_at": "2026-10-09T08:36:00+00:00",
+              "published_date": "2026-10-09",
+              "first_seen_at": "2026-10-14T03:56:44.416910+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P3.5",
+              "id": "bc1af4c2661879f75b617232",
+              "url": "https://umm.gassco.no/details?id=47274f75-56f2-467f-9b37-3d50434e1e72",
+              "title": "Gassco Dunkerque: Planned Other unavailability (Active)",
+              "version": 2,
+              "source": "gassco",
+              "published_at": "2026-10-09T08:36:00+00:00",
+              "published_date": "2026-10-09",
+              "first_seen_at": "2026-10-14T03:18:21.677598+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P3.6",
+              "id": "fcdaa3a83544b89b36a6eeac",
+              "url": "https://umm.gassco.no/details?id=3ca68b9b-f601-4dcf-b2c3-515148160beb",
+              "title": "Gassco Gina Krog Import: Planned Other unavailability (Active)",
+              "version": 2,
+              "source": "gassco",
+              "published_at": "2026-10-09T08:36:00+00:00",
+              "published_date": "2026-10-09",
+              "first_seen_at": "2026-10-14T03:18:21.678705+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P3.7",
+              "id": "3051f7576909039ef2633bd1",
+              "url": "https://offshore-energy.biz/2026/10/09/more-work-with-petrobras-increases-brazilian-firms-backlog-to-over-dollar2-billion",
+              "title": "More work with Petrobras increases Brazilian firm's backlog to over $2 billion",
+              "version": 1,
+              "source": "offshore_energy",
+              "published_at": "2026-10-09T06:54:41+00:00",
+              "published_date": "2026-10-09",
+              "first_seen_at": "2026-10-14T05:51:57.133303+00:00",
+              "timestamp_precision": "exact"
+            }
+          ]
+        },
+        {
+          "date": "2026-10-08",
+          "news_ids": [
+            "053668b2310b91e882a89c6f",
+            "22e5401fb7205cc73d80c937",
+            "2897edb1af03e310bd7bfdd3",
+            "35c8503927444bdb557890ae",
+            "849a6fd98dc303a02752070f",
+            "90bee8a28ee37f36dfd7b06a",
+            "92ace9f9b6a5367cd35708b0",
+            "955593bafe160644a3582480",
+            "db6e0b0169dbc995e353730f",
+            "fbb28e8ce3d5e5ec20b570cf"
+          ],
+          "sources": [
+            {
+              "alias": "P4.1",
+              "id": "053668b2310b91e882a89c6f",
+              "url": "https://umm.gassco.no/details?id=ae0ea272-bbff-4546-b55a-968c91319e56",
+              "title": "Gassco Dvalin: Planned Other unavailability (Dismissed)",
+              "version": 1,
+              "source": "gassco",
+              "published_at": "2026-10-08T11:14:00+00:00",
+              "published_date": "2026-10-08",
+              "first_seen_at": "2026-10-14T03:56:43.690459+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P4.2",
+              "id": "22e5401fb7205cc73d80c937",
+              "url": "https://umm.gassco.no/details?id=30dfecd8-bf17-4a53-b2e4-ad6c3a68dd78",
+              "title": "Gassco Dvalin: Unplanned Gas production field unavailability (Dismissed)",
+              "version": 1,
+              "source": "gassco",
+              "published_at": "2026-10-08T05:01:56+00:00",
+              "published_date": "2026-10-08",
+              "first_seen_at": "2026-10-14T03:56:43.689794+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P4.3",
+              "id": "2897edb1af03e310bd7bfdd3",
+              "url": "https://umm.gassco.no/details?id=f4644f2a-695d-4adb-9a3e-3f92601ef322",
+              "title": "Gassco Dvalin: Planned Other unavailability (Active)",
+              "version": 2,
+              "source": "gassco",
+              "published_at": "2026-10-08T11:14:00+00:00",
+              "published_date": "2026-10-08",
+              "first_seen_at": "2026-10-14T03:18:21.660695+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P4.4",
+              "id": "35c8503927444bdb557890ae",
+              "url": "https://umm.gassco.no/details?id=588d9426-676d-4412-a98e-965706d016a9",
+              "title": "Gassco Åsgard: Planned Other unavailability (Active)",
+              "version": 2,
+              "source": "gassco",
+              "published_at": "2026-10-08T11:14:00+00:00",
+              "published_date": "2026-10-08",
+              "first_seen_at": "2026-10-14T03:18:21.658267+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P4.5",
+              "id": "849a6fd98dc303a02752070f",
+              "url": "https://umm.gassco.no/details?id=fe00dfd7-6165-42a0-9ab2-29b0d74a327e",
+              "title": "Gassco Heidrun: Unplanned Gas production field unavailability (Inactive)",
+              "version": 1,
+              "source": "gassco",
+              "published_at": "2026-10-08T05:23:37+00:00",
+              "published_date": "2026-10-08",
+              "first_seen_at": "2026-10-14T03:56:43.690155+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P4.6",
+              "id": "955593bafe160644a3582480",
+              "url": "https://umm.gassco.no/details?id=10cd0f0a-c5f4-4b86-a42e-f50d4355547e",
+              "title": "Gassco Troll: Planned Other unavailability (Active)",
+              "version": 2,
+              "source": "gassco",
+              "published_at": "2026-10-08T11:14:00+00:00",
+              "published_date": "2026-10-08",
+              "first_seen_at": "2026-10-14T03:18:21.659794+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P4.7",
+              "id": "90bee8a28ee37f36dfd7b06a",
+              "url": "https://offshore-energy.biz/2026/10/08/fresh-north-sea-gas-discovery-yields-up-to-10-million-barrels-of-oil-equivalent",
+              "title": "Fresh North Sea gas discovery yields up to 10 million barrels of oil equivalent",
+              "version": 3,
+              "source": "offshore_energy",
+              "published_at": "2026-10-08T07:30:56+00:00",
+              "published_date": "2026-10-08",
+              "first_seen_at": "2026-10-14T03:19:29.664544+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P4.8",
+              "id": "db6e0b0169dbc995e353730f",
+              "url": "https://www.equinor.com/news/20261008-gas-discovery-gullfaks-field",
+              "title": "Gas discovery at the Gullfaks field in the North Sea",
+              "version": 2,
+              "source": "equinor",
+              "published_at": "2026-10-08T06:30:06.165000+00:00",
+              "published_date": "2026-10-08",
+              "first_seen_at": "2026-10-14T03:19:41.142142+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P4.9",
+              "id": "fbb28e8ce3d5e5ec20b570cf",
+              "url": "https://offshore-energy.biz/2026/10/08/excelerate-entrusts-fsru-conversion-to-seatrium-with-another-on-the-cards",
+              "title": "Excelerate entrusts FSRU conversion to Seatrium with another on the cards",
+              "version": 3,
+              "source": "offshore_energy",
+              "published_at": "2026-10-08T11:25:35+00:00",
+              "published_date": "2026-10-08",
+              "first_seen_at": "2026-10-14T03:19:29.663872+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P4.10",
+              "id": "92ace9f9b6a5367cd35708b0",
+              "url": "https://offshore-energy.biz/2026/10/08/golar-secures-2013-built-lng-carrier-for-conversion-into-fourth-flng",
+              "title": "Golar secures 2013-built LNG carrier for conversion into fourth FLNG",
+              "version": 3,
+              "source": "offshore_energy",
+              "published_at": "2026-10-08T14:07:10+00:00",
+              "published_date": "2026-10-08",
+              "first_seen_at": "2026-10-14T03:19:29.663234+00:00",
+              "timestamp_precision": "exact"
+            }
+          ]
+        },
+        {
+          "date": "2026-10-07",
+          "news_ids": [
+            "0e116a2d89283556c9da1d67",
+            "109f7d64c8d9628cdb1057d1",
+            "1a523f2fa4e4cb372c420e26",
+            "2e8ea47c22fa4abbeb245672",
+            "4940f4d11ffbebd9697c1344",
+            "5028fd40c413b645d561b5dc",
+            "56022641654bfaa543afccd4",
+            "7b47dd19c139c3ee51dcc1a4",
+            "bbce46f8420d2f764abb11fb"
+          ],
+          "sources": [
+            {
+              "alias": "P5.1",
+              "id": "0e116a2d89283556c9da1d67",
+              "url": "https://umm.gassco.no/details?id=b8def0b9-f399-4c07-ba06-62da58f2855e",
+              "title": "Gassco Heidrun: Unplanned Other unavailability (Inactive)",
+              "version": 1,
+              "source": "gassco",
+              "published_at": "2026-10-07T05:56:48+00:00",
+              "published_date": "2026-10-07",
+              "first_seen_at": "2026-10-14T03:56:43.688567+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P5.2",
+              "id": "2e8ea47c22fa4abbeb245672",
+              "url": "https://umm.gassco.no/details?id=ac09a0b7-03bc-459a-91c3-24e208d38b97",
+              "title": "Gassco Sleipner: Planned Other unavailability (Active)",
+              "version": 2,
+              "source": "gassco",
+              "published_at": "2026-10-07T10:41:00+00:00",
+              "published_date": "2026-10-07",
+              "first_seen_at": "2026-10-14T03:18:21.669498+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P5.3",
+              "id": "5028fd40c413b645d561b5dc",
+              "url": "https://umm.gassco.no/details?id=7f4019f6-8a37-4cf0-acdc-a8277fb69d58",
+              "title": "Gassco Dvalin: Planned Other unavailability (Dismissed)",
+              "version": 1,
+              "source": "gassco",
+              "published_at": "2026-10-07T11:55:35+00:00",
+              "published_date": "2026-10-07",
+              "first_seen_at": "2026-10-14T03:56:43.688870+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P5.4",
+              "id": "7b47dd19c139c3ee51dcc1a4",
+              "url": "https://umm.gassco.no/details?id=4f42c8cb-1495-48a6-8f2d-60fd6043a38d",
+              "title": "Gassco Dvalin: Unplanned Gas production field unavailability (Inactive)",
+              "version": 1,
+              "source": "gassco",
+              "published_at": "2026-10-07T12:17:19+00:00",
+              "published_date": "2026-10-07",
+              "first_seen_at": "2026-10-14T03:56:43.689400+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P5.5",
+              "id": "bbce46f8420d2f764abb11fb",
+              "url": "https://umm.gassco.no/details?id=78982d65-ad77-4a5f-93b3-9caacf474840",
+              "title": "Gassco Kollsnes: Planned Other unavailability (Active)",
+              "version": 2,
+              "source": "gassco",
+              "published_at": "2026-10-07T08:20:00+00:00",
+              "published_date": "2026-10-07",
+              "first_seen_at": "2026-10-14T03:18:21.668665+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P5.6",
+              "id": "109f7d64c8d9628cdb1057d1",
+              "url": "https://www.eia.gov/todayinenergy/detail.php?id=68264",
+              "title": "Mixed outlook for energy expenditures this winter",
+              "version": 1,
+              "source": "eia",
+              "published_at": "2026-10-07T14:00:00+00:00",
+              "published_date": "2026-10-07",
+              "first_seen_at": "2026-10-14T05:52:03.048305+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P5.7",
+              "id": "1a523f2fa4e4cb372c420e26",
+              "url": "https://www.equinor.com/news/20261007-updated-cost-estimate-snohvit-future",
+              "title": "Updated cost estimate for the Snøhvit Future project",
+              "version": 2,
+              "source": "equinor",
+              "published_at": "2026-10-07T08:24:16.963000+00:00",
+              "published_date": "2026-10-07",
+              "first_seen_at": "2026-10-14T03:19:40.025464+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P5.8",
+              "id": "4940f4d11ffbebd9697c1344",
+              "url": "https://offshore-energy.biz/2026/10/07/petrobras-taps-technipfmc-for-flexible-pipe",
+              "title": "Petrobras taps TechnipFMC for flexible pipe",
+              "version": 1,
+              "source": "offshore_energy",
+              "published_at": "2026-10-07T07:02:50+00:00",
+              "published_date": "2026-10-07",
+              "first_seen_at": "2026-10-14T05:51:57.137846+00:00",
+              "timestamp_precision": "exact"
+            },
+            {
+              "alias": "P5.9",
+              "id": "56022641654bfaa543afccd4",
+              "url": "https://offshore-energy.biz/2026/10/07/dutch-design-ultra-shallow-draft-dsv-for-gulf-regions-oil-and-gas",
+              "title": "Dutch design ultra-shallow-draft DSV for Gulf Region's oil & gas",
+              "version": 2,
+              "source": "offshore_energy",
+              "published_at": "2026-10-07T10:40:31+00:00",
+              "published_date": "2026-10-07",
+              "first_seen_at": "2026-10-14T03:31:44.214948+00:00",
+              "timestamp_precision": "exact"
+            }
+          ]
+        }
+      ],
+      "compression": {
+        "level": 3,
+        "news_count": 10,
+        "every_news_id_retained": true,
+        "lossy": true,
+        "context_window": 8192,
+        "input_budget": 5500,
+        "output_budget": 1024,
+        "method": "当前事实保护300tokens；全部当日ID保留；前5日为日摘要并另存来源；历史价格反应仅1d/3d紧凑字段，完整1/3/5/10d在输入快照；背景先压缩",
+        "citation_note": "URL不在压缩输入；references只填id和空url，由系统恢复原来源",
+        "ground_history": true,
+        "ground_priced_in": true
+      },
+      "input_token_estimate": 4727,
+      "uncompressed_context_token_estimate": 31392,
+      "input_token_limit": 5468,
+      "input_token_ceiling": 5500,
+      "context_window": 8192,
+      "output_token_limit": 1024,
+      "adaptive_context_used": true,
+      "window_news_count": 10,
+      "filtered_future_news_count": 0,
+      "filtered_future_event_count": 0,
+      "outcome_compression": [
+        {
+          "event_id": "event-gassco-2026-222",
+          "known_horizons": [
+            "1d",
+            "3d"
+          ],
+          "included_horizons": [
+            "1d",
+            "3d"
+          ]
+        }
+      ],
+      "temporal_notes": [],
+      "context_sha256": "8a7e89f7679486616618571350240d155af7731d3e443b9d068adde9b1936390",
+      "model": "gpt-oss:20b",
+      "detail": false,
+      "schema_repair_used": false,
+      "model_calls": [
+        {
+          "prompt_eval_count": 4674,
+          "eval_count": 344,
+          "done_reason": "stop",
+          "total_duration_ns": 73323286042,
+          "system_prompt_sha256": "a23eca5b5b1b001ae19f18206df3fad3c423ecaeb0ad828a98695f18b25ff05f",
+          "response_schema_sha256": "ac2fc06b215d68bd42ed994b32498ce2599433c0853da925b1bb5c384b20010f",
+          "context_sha256": "8a7e89f7679486616618571350240d155af7731d3e443b9d068adde9b1936390"
+        }
+      ],
+      "elapsed_seconds": 73.5,
+      "system_prompt_sha256": "a23eca5b5b1b001ae19f18206df3fad3c423ecaeb0ad828a98695f18b25ff05f",
+      "response_schema_sha256": "ac2fc06b215d68bd42ed994b32498ce2599433c0853da925b1bb5c384b20010f",
+      "evidence_grounding_used": true,
+      "raw_generated_evidence": {
+        "analysis.historical_comparisons": [],
+        "analysis.priced_in_comment": "未确认已定价，缺乏价格变动证据。"
+      },
+      "grounded_evidence_fields": [
+        "analysis.historical_comparisons",
+        "analysis.priced_in_comment"
+      ],
+      "raw_response_sha256": "cd1ff7100afba357ff556ea45ad7d5d02bb0a4c7ab0d65e8c43d778815da3bf2",
+      "deterministic_risk_flags": [
+        "行情尚未验证为ICE官方日结算，不参与官方结算准确率评分",
+        "价格类型尚未验证为ICE官方日结算，不用于官方结算评分",
+        "部分即时来源只有日期或缺少发布时间；按实际发现时刻提供当前分析背景，未伪造发布时间或写入精确结算窗口。",
+        "部分新闻只有发布日：当前使用真实发现时刻作为背景，原始发布时间和结算窗口归属未知",
+        "模型把握程度未经统计校准，不代表已验证准确率",
+        "来源gdelt采集失败或尚未完成，本窗口新闻覆盖可能不完整",
+        "历史事件包含多条新闻日聚合，缺少原始单条来源，类比存在时间及来源限制"
+      ],
+      "deterministic_missing_fields": [
+        "settlement_verification",
+        "observed_news.precise_publication_window",
+        "confidence_calibration",
+        "source_coverage:gdelt"
+      ]
+    }
+  },
+  "error": null,
+  "detail_status": "not_requested",
+  "detail_result": null,
+  "detail_error": null,
+  "frozen": 1
+}

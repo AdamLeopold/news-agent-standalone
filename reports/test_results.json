@@ -1,0 +1,16 @@
+{
+  "verified_at": "2026-10-14T06:07:44.066010+00:00",
+  "backend": {
+    "command": ".venv/bin/python -m pytest -q --junitxml=reports/backend_tests.xml",
+    "tests_passed": 101,
+    "subtests_passed": 22,
+    "status": "passed",
+    "note": "One Starlette testclient deprecation warning; no failing tests."
+  },
+  "frontend": {
+    "tests_passed": 15,
+    "typescript_and_vite_build": "passed",
+    "status": "passed"
+  },
+  "prompt_version": "ttf-news-v6-standalone-1.8"
+}

@@ -1,0 +1,117 @@
+{
+  "checked_at": "2026-10-16T11:18:16.588163+00:00",
+  "baseline_preserved": "2026-10-14T05:51:48.181167+00:00",
+  "incident": "New heartbeat continuity gaps coincide with macOS sleep/dark-wake events while the managed app and caffeinate idle assertion remain alive.",
+  "gaps": [
+    {
+      "previous_heartbeat": "2026-10-16T07:46:12.130240+00:00",
+      "resumed_heartbeat": "2026-10-16T07:51:57.896451+00:00",
+      "seconds": 345.766
+    },
+    {
+      "previous_heartbeat": "2026-10-16T07:51:57.896451+00:00",
+      "resumed_heartbeat": "2026-10-16T07:56:54.504148+00:00",
+      "seconds": 296.608
+    },
+    {
+      "previous_heartbeat": "2026-10-16T10:27:28.895713+00:00",
+      "resumed_heartbeat": "2026-10-16T10:43:51.540181+00:00",
+      "seconds": 982.644
+    },
+    {
+      "previous_heartbeat": "2026-10-16T10:43:51.540181+00:00",
+      "resumed_heartbeat": "2026-10-16T10:48:27.516290+00:00",
+      "seconds": 275.976
+    },
+    {
+      "previous_heartbeat": "2026-10-16T10:48:27.516290+00:00",
+      "resumed_heartbeat": "2026-10-16T11:05:15.406952+00:00",
+      "seconds": 1007.891
+    },
+    {
+      "previous_heartbeat": "2026-10-16T11:06:20.843544+00:00",
+      "resumed_heartbeat": "2026-10-16T11:10:26.243248+00:00",
+      "seconds": 245.4
+    }
+  ],
+  "max_gap_seconds": 1007.891,
+  "current_service_recovered": true,
+  "sources": [
+    {
+      "source": "cheniere",
+      "status": "ok",
+      "last_success_at": "2026-10-16T11:17:56.403202+00:00",
+      "last_error": null
+    },
+    {
+      "source": "eia",
+      "status": "ok",
+      "last_success_at": "2026-10-16T11:18:05.232044+00:00",
+      "last_error": null
+    },
+    {
+      "source": "equinor",
+      "status": "ok",
+      "last_success_at": "2026-10-16T11:18:06.445156+00:00",
+      "last_error": null
+    },
+    {
+      "source": "eu_energy",
+      "status": "ok",
+      "last_success_at": "2026-10-16T11:17:56.819906+00:00",
+      "last_error": null
+    },
+    {
+      "source": "gassco",
+      "status": "ok",
+      "last_success_at": "2026-10-16T11:18:03.810475+00:00",
+      "last_error": null
+    },
+    {
+      "source": "offshore_energy",
+      "status": "ok",
+      "last_success_at": "2026-10-16T11:17:56.459248+00:00",
+      "last_error": null
+    }
+  ],
+  "pending_jobs": [],
+  "model_failures_since_baseline": 5,
+  "actions": [
+    "Kept managed app and unrelated Ollama running; no restart required.",
+    "Kept all gap evidence and original validation baseline.",
+    "Checked current source recovery and successful new inference."
+  ],
+  "sleep_prevention": "Existing caffeinate -i -w 71593 assertion is alive. Idle assertion does not establish uninterrupted machine availability during sleep/dark-wake.",
+  "seven_day_continuity_has_failed_observations": true,
+  "seven_day_complete": false,
+  "user_action": "Keep the Mac awake and available on power for continuous operation; avoid lid-closed or explicit sleep periods.",
+  "notified_at": "2026-10-16T11:18:16.588171+00:00",
+  "macos_sleep_evidence": [
+    {
+      "sleep_local": "2026-10-16T15:47:05+08:00",
+      "dark_wake_local": "2026-10-16T15:51:57+08:00",
+      "reason": "Maintenance Sleep",
+      "recorded_sleep_seconds": 292
+    },
+    {
+      "sleep_local": "2026-10-16T15:52:48+08:00",
+      "dark_wake_local": "2026-10-16T15:56:54+08:00",
+      "reason": "Maintenance Sleep",
+      "recorded_sleep_seconds": 246
+    },
+    {
+      "full_wake_local": "2026-10-16T15:58:38+08:00",
+      "reason": "lid / HID Activity"
+    },
+    {
+      "dark_wake_local": "2026-10-16T19:05:15+08:00",
+      "reason": "SleepService"
+    },
+    {
+      "sleep_local": "2026-10-16T19:06:47+08:00",
+      "reason": "Maintenance Sleep",
+      "recorded_sleep_seconds": 219
+    }
+  ],
+  "evidence_source": "Filtered local pmset -g log; only sleep/wake evidence retained."
+}

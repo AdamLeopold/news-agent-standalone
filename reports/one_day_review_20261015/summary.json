@@ -1,0 +1,374 @@
+{
+  "generated_at": "2026-10-15T06:57:51.773527+00:00",
+  "timezone": "Asia/Singapore",
+  "baseline": "2026-10-14T05:51:48.181167+00:00",
+  "elapsed_hours": 25.1,
+  "counts": {
+    "news": 3973,
+    "events": 1558,
+    "legacy_daily": 3456,
+    "prices": 65693,
+    "analyses": 64
+  },
+  "newly_discovered_since_baseline": 14,
+  "source_counts": [
+    {
+      "source": "cheniere",
+      "count": 31
+    },
+    {
+      "source": "eia",
+      "count": 122
+    },
+    {
+      "source": "equinor",
+      "count": 26
+    },
+    {
+      "source": "eu_energy",
+      "count": 44
+    },
+    {
+      "source": "gassco",
+      "count": 1081
+    },
+    {
+      "source": "offshore_energy",
+      "count": 2669
+    }
+  ],
+  "monitoring": {
+    "started_at": "2026-10-14T05:51:48.181167+00:00",
+    "elapsed_days": 1.0459,
+    "required_days": 7,
+    "seven_day_validation_complete": false,
+    "heartbeat_gap_seconds": [],
+    "model_successes": 41,
+    "model_failures": 5,
+    "last_heartbeat_at": "2026-10-15T06:57:30.753872+00:00",
+    "seconds_since_heartbeat": 21,
+    "model_failure_rate": 0.1087,
+    "brief_latency": {
+      "count": 41,
+      "median": 14.448,
+      "p95": 152.503
+    },
+    "detail_latency": {
+      "count": 0,
+      "median": null,
+      "p95": null
+    },
+    "collection_cycles": 1502,
+    "collection_failures": 0,
+    "evaluation_report": {
+      "status": "not_available",
+      "count": 0,
+      "correct_count": 0,
+      "accuracy": null,
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "per_class": {
+        "extreme_up": {
+          "count": 0,
+          "predicted_count": 0,
+          "true_positive": 0,
+          "precision": null,
+          "recall": null
+        },
+        "up": {
+          "count": 0,
+          "predicted_count": 0,
+          "true_positive": 0,
+          "precision": null,
+          "recall": null
+        },
+        "flat": {
+          "count": 0,
+          "predicted_count": 0,
+          "true_positive": 0,
+          "precision": null,
+          "recall": null
+        },
+        "down": {
+          "count": 0,
+          "predicted_count": 0,
+          "true_positive": 0,
+          "precision": null,
+          "recall": null
+        },
+        "extreme_down": {
+          "count": 0,
+          "predicted_count": 0,
+          "true_positive": 0,
+          "precision": null,
+          "recall": null
+        }
+      },
+      "abnormal_binary": {
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "true_negative": 0,
+        "actual_count": 0,
+        "predicted_count": 0,
+        "precision": null,
+        "recall": null,
+        "definition": "异常暴涨/暴跌合并为异常事件；异常方向对错仍计入五分类准确率。"
+      },
+      "class_order": [
+        "extreme_up",
+        "up",
+        "flat",
+        "down",
+        "extreme_down"
+      ],
+      "matrix_rows": "actual",
+      "matrix_columns": "predicted",
+      "total_records": 1,
+      "eligible_count": 0,
+      "excluded_count": 1,
+      "exclusion_reasons": {
+        "not_verified_evaluated": 1
+      },
+      "monthly": [],
+      "scope": "仅本独立模型的已验证同合约日结算五分类预测；不使用reference价格或multiagent准确率。",
+      "reason": "没有合法且已验证的五分类结算评估记录，预测准确率与异常识别率暂不可报告。"
+    },
+    "latency_seconds": [
+      152.503,
+      11.576,
+      12.456,
+      28.291,
+      155.645,
+      203.264,
+      58.226,
+      105.619,
+      116.962,
+      149.958,
+      40.073,
+      13.109,
+      11.629,
+      12.832,
+      12.839,
+      10.603,
+      16.011,
+      20.2,
+      18.847,
+      18.52,
+      12.113,
+      73.505,
+      29.683,
+      74.682,
+      22.94,
+      12.114,
+      12.596,
+      22.258,
+      11.783,
+      12.178,
+      11.511,
+      14.448,
+      13.404,
+      13.33,
+      12.77,
+      13.027,
+      26.34,
+      13.356,
+      12.032,
+      13.623,
+      35.492
+    ],
+    "evaluations": [
+      {
+        "trade_date": "2026-10-14",
+        "analysis_id": "e68e76ef-e8c9-45c0-8361-c81c59d019f6",
+        "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+        "delta": null,
+        "threshold": 4.7449572231704575,
+        "actual_direction": null,
+        "predicted_direction": "flat",
+        "correct": null,
+        "status": "awaiting_verified_settlement",
+        "data": "{\"price_source\": \"ICE public chart\", \"reason\": \"仅已验证的同合约日结算参与正式评分\", \"evaluation_updated_at\": \"2026-10-15T06:45:01.304919+00:00\"}"
+      }
+    ],
+    "official_evaluation_count": 0,
+    "notes": [
+      "七天持续运行验收需要真实经过七天并核查心跳缺口。",
+      "无已验证日结算时不报告正式预测准确率。"
+    ]
+  },
+  "queue": [],
+  "successful_close_forecast_distribution": [
+    {
+      "kind": "article",
+      "direction": "flat",
+      "count": 1
+    },
+    {
+      "kind": "live",
+      "direction": "flat",
+      "count": 40
+    }
+  ],
+  "discovery_latency": {
+    "eligible_new_published_articles": 7,
+    "median_seconds": 298.115636,
+    "max_seconds": 2816.724397,
+    "definition": "first_seen_at minus precise publication time, only live articles newly published since validation baseline; includes publisher/feed latency",
+    "items": [
+      {
+        "news_id": "aba456f8db0e6169e4d19ede",
+        "source": "equinor",
+        "title": "Oil and gas discovery in the North Sea adding volumes to Oseberg",
+        "seconds": 16.590106
+      },
+      {
+        "news_id": "092e9c5993afb0aa4341cc93",
+        "source": "offshore_energy",
+        "title": "Kistos strengthens its presence in North Sea oil & gas hub with Vår Energi deal",
+        "seconds": 1737.548512
+      },
+      {
+        "news_id": "98718c742060bf8fc4c07741",
+        "source": "offshore_energy",
+        "title": "New oil & gas discovery set to join North Sea fast-track plays fuelling Europe’s energy security",
+        "seconds": 697.975441
+      },
+      {
+        "news_id": "175df1e3a33c2d3d9c16eac4",
+        "source": "offshore_energy",
+        "title": "Sunda steps closer to dusting off 1985 gas field as New Zealand bid goes exclusive",
+        "seconds": 298.115636
+      },
+      {
+        "news_id": "7223e6ce0dd6ad9a22c2b0aa",
+        "source": "gassco",
+        "title": "Gassco Kårstø: Planned Other unavailability (Active)",
+        "seconds": 7.377735
+      },
+      {
+        "news_id": "7ae5aa276b31f6fadc183254",
+        "source": "gassco",
+        "title": "Gassco Kårstø: Planned Other unavailability (Active)",
+        "seconds": 7.37796
+      },
+      {
+        "news_id": "af3b256e65f68dbb1d6f4fe5",
+        "source": "offshore_energy",
+        "title": "JERA deepens Australian LNG foothold with larger stake in Chevron’s project",
+        "seconds": 2816.724397
+      }
+    ]
+  },
+  "yesterday_comparison": {
+    "trade_date": "2026-10-14",
+    "snapshot": {
+      "trade_date": "2026-10-14",
+      "cutoff": "2026-10-14T15:15:00+00:00",
+      "analysis_id": "e68e76ef-e8c9-45c0-8361-c81c59d019f6",
+      "frozen_at": "2026-10-14T15:15:01.452969+00:00"
+    },
+    "analysis_id": "e68e76ef-e8c9-45c0-8361-c81c59d019f6",
+    "created_at": "2026-10-14T14:05:09.295097+00:00",
+    "completed_at": "2026-10-14T14:06:22.804016+00:00",
+    "input_as_of": "2026-10-14T14:05:08.777292+00:00",
+    "forecast": {
+      "direction": "flat",
+      "confidence": 0.4,
+      "summary": "基于当前新闻及已知供需背景，预计本窗口结算价相对前一结算价基本维持不变。",
+      "basis": "JERA增持不构成供应中断或需求提升，且无其他显著供需冲击。",
+      "extreme_move_risk": "缺乏直接价格传导证据，极端波动风险低。"
+    },
+    "last_eligible_prediction_verified": true,
+    "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+    "contract_name": "Nov26",
+    "prices": [
+      {
+        "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+        "contract_id": "6277389",
+        "contract_label": "Nov26",
+        "delivery_month": "2026-11-01",
+        "day": "2026-10-13",
+        "value": 87.223,
+        "price_type": "reference",
+        "verified": false,
+        "provider": "ICE public chart",
+        "unit": "EUR/MWh",
+        "fetched_at": "2026-10-15T06:44:55.315301+00:00",
+        "source_url": "https://www.ice.com/marketdata/api/productguide/charting/data/historical?marketId=6277389&historicalSpan=3",
+        "source_field": "bars[][1]",
+        "provider_documentation": "https://www.ice.com/products/27996665/Dutch-TTF-Gas-Futures/data",
+        "fetcher_evidence": "https://git.nomics.world/dbnomics-fetchers/ice-fetcher/-/blob/3eb9e399588113f014e8341dd016f22feaf220bd/download.py",
+        "price_type_note": "Official ICE chart bar field is not explicitly named settlement; remains reference and excluded from settlement scoring."
+      },
+      {
+        "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+        "contract_id": "6277389",
+        "contract_label": "Nov26",
+        "delivery_month": "2026-11-01",
+        "day": "2026-10-14",
+        "value": 87.138,
+        "price_type": "reference",
+        "verified": false,
+        "provider": "ICE public chart",
+        "unit": "EUR/MWh",
+        "fetched_at": "2026-10-15T06:44:55.315301+00:00",
+        "source_url": "https://www.ice.com/marketdata/api/productguide/charting/data/historical?marketId=6277389&historicalSpan=3",
+        "source_field": "bars[][1]",
+        "provider_documentation": "https://www.ice.com/products/27996665/Dutch-TTF-Gas-Futures/data",
+        "fetcher_evidence": "https://git.nomics.world/dbnomics-fetchers/ice-fetcher/-/blob/3eb9e399588113f014e8341dd016f22feaf220bd/download.py",
+        "price_type_note": "Official ICE chart bar field is not explicitly named settlement; remains reference and excluded from settlement scoring."
+      }
+    ],
+    "delta_eur_mwh": "-0.085",
+    "percent_change": "-0.09745136030634121733946321498",
+    "flat_band_eur_mwh": 0.3,
+    "frozen_extreme_threshold": 4.7449572231704575,
+    "reference_actual_label": "flat",
+    "reference_classification_matches": true,
+    "official_settlement_verified": false,
+    "official_score": null,
+    "comparison_scope": "Five-class comparison using reference daily bars, not official settlement grading or intraday path verification"
+  },
+  "limitations": [
+    "Only one completed settlement day; no validated accuracy estimate.",
+    "All 41 successful post-baseline forecasts are flat; they are repeated task outputs, not 41 independent daily forecasts.",
+    "GDELT remains rate-limited; Gassco early archive partial coverage unchanged.",
+    "Successful-task latency excludes queue time and the five failed 600-second requests."
+  ]
+}

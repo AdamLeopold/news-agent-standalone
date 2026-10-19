@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-10-14T10:26:30.595446+00:00",
+  "baseline_preserved": "2026-10-14T05:51:48.181167+00:00",
+  "incident": "Five consecutive 600-second local model read timeouts from 06:12 to 07:02 UTC; later analyses recovered automatically.",
+  "original_failure_ids": [
+    "26c5e70a-e042-4718-8a4a-fb8d81c5bb6e",
+    "521485ac-8b67-4b66-873b-8b5d818a4579",
+    "858b8b44-9801-4a25-9f15-6c592935f889",
+    "e65cc3d9-8c5e-4d04-af7a-3dbd22f0b56a",
+    "51a76d42-a5c8-45bb-b53b-ae026d75aa86"
+  ],
+  "remaining_missing_latest_news_id": "d7d0d45a5fa8a74e26e0e462",
+  "recovery_analysis_id": "ff9dd5f8-52a5-4f98-afcf-2727629865e3",
+  "recovery_status": "completed",
+  "root_cause": "not established; health/tag availability is not proof that inference succeeded",
+  "unrelated_ollama_untouched": true,
+  "recovery_completed_at": "2026-10-14T10:26:51.748568+00:00",
+  "recovery_model_seconds": 20.195,
+  "checked_after_recovery_at": "2026-10-14T10:28:12.435459+00:00",
+  "all_affected_news_now_have_completed_latest_analysis": true,
+  "heartbeat_gaps_seconds": [],
+  "notified_at": "2026-10-14T10:28:12.449874+00:00"
+}

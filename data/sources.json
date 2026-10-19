@@ -1,0 +1,12 @@
+{
+  "verified_at": "2026-10-14",
+  "sources": [
+    {"id": "offshore_energy", "name": "Offshore Energy", "feed_url": "https://offshore-energy.biz/feed", "api_url": "https://offshore-energy.biz/api/articles", "archive_url": "https://offshore-energy.biz/api/articles", "enabled": true, "note": "Verified public API Payload pagination/date/OR-title filters; only gas/LNG/FSRU candidates since requested date. Bare-domain RSS works while www feed endpoint is misconfigured."},
+    {"id": "eia", "name": "EIA Today in Energy", "feed_url": "https://www.eia.gov/rss/todayinenergy.xml", "archive_url": "https://www.eia.gov/todayinenergy/archive.php", "timezone": "America/New_York", "enabled": true, "note": "Annual archive parameter my=YEAR verified in publisher navigation"},
+    {"id": "eu_energy", "name": "European Commission DG Energy", "feed_url": "https://energy.ec.europa.eu/node/2/rss_en", "archive_url": "https://energy.ec.europa.eu/news_en", "enabled": true, "note": "Archive pages use page=N. Visible date-only dates retained as date precision despite Drupal synthetic noon datetime."},
+    {"id": "equinor", "name": "Equinor", "live_url": "https://www.equinor.com/news", "archive_url": "https://www.equinor.com/sitemap.xml?lang=en", "timezone": "Europe/Oslo", "enabled": true, "note": "English public sitemap contains historical news; article metadata checked for exact times."},
+    {"id": "cheniere", "name": "Cheniere Energy", "feed_url": "https://lngir.cheniere.com/news-events/press-releases/rss", "archive_url": "https://lngir.cheniere.com/news-events/press-releases", "timezone": "America/New_York", "enabled": true, "note": "Publisher RSS advertises historical press releases with timezone-aware pubDate; short descriptions only are retained."},
+    {"id": "gassco", "name": "Gassco UMM", "live_url": "https://umm.gassco.no/", "archive_url": "https://umm.gassco.no/", "timezone": "Europe/Oslo", "enabled": true, "note": "Official Gassco homepage links UMM; legacy flow.gassco.no refused connection. No unverified private endpoint guessed."},
+    {"id": "gdelt", "name": "GDELT news discovery", "live_url": "https://api.gdeltproject.org/api/v2/doc/doc", "request_interval_seconds": 6, "enabled": true, "note": "At most 90 recent days, weekly bounded slices, 250 result cap flagged. Discovery time is not publication time. HTTP429 pauses polling for at least15minutes, respecting Retry-After."}
+  ]
+}

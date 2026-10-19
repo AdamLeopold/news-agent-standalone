@@ -1,0 +1,651 @@
+{
+  "status": "invalidated",
+  "source_analysis_id": "9c30b3a1-10d2-4e77-9e07-6d25d4314cbe",
+  "elapsed": 36.63074154104106,
+  "result": {
+    "news_impact": {
+      "direction": "flat",
+      "contextual_news_score": 0.0,
+      "confidence": 0.4,
+      "signal_strength": "moderate",
+      "summary": "挪威停产与欧洲温和天气、LNG到港增加相互抵消，净影响不明显。",
+      "bullish_evidence": [
+        "[N0]挪威天然气处理设施停产 → 供应中断导致TTF价格上行"
+      ],
+      "bearish_evidence": [
+        "[N0]欧洲天气温和 → 需求下降导致TTF价格下行",
+        "[N0]LNG到港增加 → 供应改善导致TTF价格下行"
+      ],
+      "neutralizing_evidence": []
+    },
+    "close_forecast": {
+      "direction": "flat",
+      "confidence": 0.4,
+      "summary": "基于供应中断与需求缓解相互抵消，预计本结算价相对前一结算价基本维持。",
+      "basis": "供应中断与需求缓解双重机制缺乏定量数据，无法确定单边影响。",
+      "extreme_move_risk": "缺乏量化供应缺口与LNG到港量化数据，极端波动风险不确定。"
+    },
+    "analysis": {
+      "summary": "新情景中供应中断与需求缓解相互抵消，净影响不大。",
+      "evidence": [
+        "[N0]挪威停产 → 供应中断机制",
+        "[N0]欧洲天气温和 → 需求下降机制",
+        "[N0]LNG到港增加 → 供应改善机制"
+      ],
+      "negation_or_reversal": [],
+      "priced_in_comment": "无法确认已定价，缺乏历史价格反应。",
+      "matched_terms": [],
+      "historical_comparisons": []
+    },
+    "risk_flags": [
+      "手动输入仅作条件情景分析，事实尚未由本系统独立核实",
+      "当前新闻缺少精确发布时间，无法确认其原始结算窗口归属",
+      "行情尚未验证为ICE官方日结算，不参与官方结算准确率评分",
+      "价格类型尚未验证为ICE官方日结算，不用于官方结算评分",
+      "模型把握程度未经统计校准，不代表已验证准确率",
+      "来源gdelt采集失败或尚未完成，本窗口新闻覆盖可能不完整",
+      "历史事件包含多条新闻日聚合，缺少原始单条来源，类比存在时间及来源限制"
+    ],
+    "references": [
+      {
+        "id": "manual-6b9db75f-39a1-494b-9087-39aee70ca926",
+        "url": "",
+        "title": "测试情景：挪威天然气处理设施发生意外停产，运营方预计持续三天；与此同时欧洲天气温和，LNG到港增加。请判断供应中断与需求缓解对TTF价格的净影响，不把这个手动情景视为已核实新闻。"
+      }
+    ],
+    "missing_fields": [
+      "independent_news_verification",
+      "current_news.published_at",
+      "current_news.source_url",
+      "settlement_verification",
+      "confidence_calibration",
+      "source_coverage:gdelt"
+    ],
+    "detail": {
+      "new_facts": [
+        "[N0]挪威天然气处理设施停产预计持续三天；欧洲天气温和；LNG到港增加。"
+      ],
+      "transmission": [
+        "[N0]挪威停产 → 欧洲天然气供应减少 → TTF价格上行；[N0]欧洲天气温和 → 欧洲天然气需求下降 → TTF价格下行；[N0]LNG到港增加 → 供应改善 → TTF价格下行。"
+      ],
+      "daily_balance": [
+        "[N0]供应中断与需求缓解相互抵消，净影响不明显。"
+      ],
+      "historical_comparisons": [
+        "[E1] 2022年管道爆炸导致供应中断但未影响价格，说明供应中断未必导致价格上行。"
+      ],
+      "priced_in_assessment": "无已定价证据。",
+      "scenarios": {
+        "bullish": "若停产导致供应缺口扩大且LNG到港未显著增加，价格可能上行。",
+        "base": "供应中断与需求缓解相互抵消，价格基本维持。",
+        "bearish": "若LNG到港显著增加且供应恢复快，价格可能下行。"
+      },
+      "invalidation_conditions": [
+        "[N0]停产持续时间延长或LNG到港量不足以抵消供应缺口。"
+      ],
+      "limitations": [
+        "price_reference: 价格未验证为官方结算价，影响参考可靠性。",
+        "current_news: 未提供停产量化或LNG到港量化数据。"
+      ],
+      "references": [
+        {
+          "id": "manual-6b9db75f-39a1-494b-9087-39aee70ca926",
+          "url": "",
+          "title": "测试情景：挪威天然气处理设施发生意外停产，运营方预计持续三天；与此同时欧洲天气温和，LNG到港增加。请判断供应中断与需求缓解对TTF价格的净影响，不把这个手动情景视为已核实新闻。"
+        }
+      ]
+    },
+    "_meta": {
+      "prompt_version": "ttf-news-v6-standalone-1.5",
+      "prompt_baseline": "model/multiagent_v6_llm_reprompt_50_nonflat.py:SENTIMENT_PROMPT",
+      "as_of": "2026-10-14T04:06:50.960373+00:00",
+      "source_index": [
+        {
+          "alias": "N0",
+          "id": "manual-6b9db75f-39a1-494b-9087-39aee70ca926",
+          "url": "",
+          "title": "测试情景：挪威天然气处理设施发生意外停产，运营方预计持续三天；与此同时欧洲天气温和，LNG到港增加。请判断供应中断与需求缓解对TTF价格的净影响，不把这个手动情景视为已核实新闻。",
+          "version": 1,
+          "source": "手动测试情景",
+          "published_at": null,
+          "first_seen_at": "2026-10-14T04:06:50.960366+00:00",
+          "timestamp_precision": "unknown"
+        },
+        {
+          "alias": "E1",
+          "id": "legacy-event-2022-12-21",
+          "url": "",
+          "title": "Canada’s Tenaz Energy acquires Dutch gas assets U.S. allows Sempra to re-export LNG from Mexico Gas starts to flow to Freeport LNG export plant in Texas, data shows Vintage to begin supplying gas from Queensland's Vali field in January Japan's MOL signs LNGC charter with India's Gail TTF gas prices dip to six-month low Russia's Lavrov: EU not conducting fair investigation into Nord Stream explosions ADNOC to buy 25% stake in Austria's OMV Webinar: NATURAL GAS VEHICLES – A smart choice to meet emissions reductions in heavy transport around the world Eni, TotalEnergies hit gas off Cyprus Easy to dodge EU gas cap unlikely to tame prices CNOOC turns to gas and wind to power its climate efforts [Gas in Transition] Venice glassblowers get lifeline to cope with high gas prices TotalEnergies to market capacity at Le Havre FSRU",
+          "source": "legacy_daily",
+          "known_at": "2026-10-14T03:20:17.444239+00:00",
+          "timestamp_precision": "date",
+          "source_quality": "daily_aggregate_no_original_url"
+        },
+        {
+          "alias": "E2",
+          "id": "legacy-event-2022-12-19",
+          "url": "",
+          "title": "Beijing pursues closer energy ties with Moscow despite political risk Uniper expects Brussels to clear bailout in coming days Iranian oil workers protest for higher wages -social media Moldova moves closer to breaking dependence on Russian gas, deputy PM says Azerbaijan sees gas exports to Europe edging up in 2023 - Interfax Breakneck LNG build-out shows Germany can move fast, Scholz says Strike increases bid for Warrego Mineral Resources bids for Perth basin-focused Norwest Energy Indian LNG imports down 6% in November China's LNG imports drop 5% in November Norway's Hoegh LNG in talks to supply more regasification vessels to Europe EU considers lower gas price cap in hunt for Monday deal Vietnam on the cusp of LNG market entry [Gas in Transition] EU makes final push for gas price cap deal this year GE, Mytilineos to provide backup gas-fired power for Ireland TotalEnergies, QatarEnergy, Petronas land rights to offshore Brazilian licence Novatek secures gas block in north Krasnoyarsk region QazaqGaz’s long road to relevance [Gas in Transition] Indian panel suggestions will help gas consumers: ICRA Capricorn shareholder Palliser calls for board overhaul meeting The hardest part is yet to come for gas-hoarding Europe Key takeaways from China’s Communist Party congress [Gas in Transition] EU countries agree gas price cap to contain energy crisis AGDC hopes to add value to Alaska LNG with hydrogen hub proposal [Gas in Transition]",
+          "source": "legacy_daily",
+          "known_at": "2026-10-14T03:20:17.459675+00:00",
+          "timestamp_precision": "date",
+          "source_quality": "daily_aggregate_no_original_url"
+        },
+        {
+          "alias": "E3",
+          "id": "legacy-event-2022-11-08",
+          "url": "",
+          "title": "India's ONGC applies to retain 20% in Russia's Sakhalin-1- source UK to announce U.S. gas deal after climate change summit -Telegraph Indonesia awards 2 oil and gas blocks to Conrad Asia Energy Aussie energy companies boost topline on surging prices Australian firm signs trio of UK North Sea farm-out deals Ample LNG and full storage offers Europe short-term relief [Gas in Transition] Turkey starts paying for some Russian gas in roubles Inpex reports 94% jump in profit in January-September Russian gas supply decline continues through October Moldova may sue Gazprom over supply shortfall, official says Greece paves way for seismic surveys for gas off Crete New Fortress Energy reverses Q2 loss in Q3 EU Commission told member states gas cap impossible as requested - diplomats Tanzania to pen accords with Equinor, Shell on $40bn LNG project next year, govt official says EU Commission said gas price cap impossible as requested -sources",
+          "source": "legacy_daily",
+          "known_at": "2026-10-14T03:20:17.428368+00:00",
+          "timestamp_precision": "date",
+          "source_quality": "daily_aggregate_no_original_url"
+        },
+        {
+          "alias": "E4",
+          "id": "legacy-event-2022-10-10",
+          "url": "",
+          "title": "RISC certifies Strike's Ocean Hill gas field resources Angkor Resources wins oil, gas exploration licence in Cambodia China’s reliance on gas imports threatens security: Kemp Petronas declares force majeure on gas supply to MLNG Dua German gas commission wants one-off payment now, price break next year Romania's OMV Petrom sees further slide in output in Q3 European gas prices slide further at market opening NNPC targets FID on Nigeria-Morocco gas pipe in 2023: press Equinor upstream VP leaves to lead diamond mining giant Russian gas embargo will trigger sharp fall in EU GDP, even with rationing and windfall taxes [Gas in Transition] UPDATE 2-Norway inspects subsea gas pipeline after Nord Stream blasts European gas prices dip on strong LNG supply, improved nuclear power output UPDATE 1-Technical issues affecting plan to send gas from France to Germany  now solved -operator Qatar delivers commissioning LNG cargo to Cnooc’s terminal Ukraine and Moldova move to disarm Vladimir Putin’s energy weapon [GGP] EU countries eye deal on more energy measures within weeks Energean launches gas flow tests at Karish field UPDATE 1-Anti-nuclear Austria seeks allies against EU green investment rules ADNOC dishes out $1.5bn offshore contract Sweden won't share Nord Stream investigation findings with Russia European energy traders push back against gas price cap proposal Outlook and challenges that will be faced at COP27, Africa, India and Saudi Arabia [GGP]",
+          "source": "legacy_daily",
+          "known_at": "2026-10-14T03:20:17.709120+00:00",
+          "timestamp_precision": "date",
+          "source_quality": "daily_aggregate_no_original_url"
+        },
+        {
+          "alias": "E5",
+          "id": "legacy-event-2022-07-13",
+          "url": "",
+          "title": "Indonesia Energy finds gas while drilling Kruh-28 oil well Empire starts fracture stimulation of C-2H well in Beetaloo Iveco to supply LNG engines to Indian truck maker Sound loses Moroccan tax case Aker BP strikes gas in Norwegian Sea Europe on edge while NS1 is down Chinese gas imports drop 10% in H1 Uzbekistan creates free economic zone to host gas chemical complex Tullow in talks to unlock Ghana gas potential Montenegro launches gas-fired power study TTF gas futures spike at $1,970/'000 m3 amid Russian, Norwegian cuts Industry experts weigh up outlook for LNG contracts, financing Traders withdraw from Russian Arctic megaproject Samsung Engineering to build gas plant for Shell in Malaysia Buckeye plans green hydrogen for Bear Head LNG site Tellurian seals Haynesville shale acquisition EU backs Dutch gas storage filling scheme Canadian deal allows Russia to send turbines for repairs for two years: press",
+          "source": "legacy_daily",
+          "known_at": "2026-10-14T03:20:17.446746+00:00",
+          "timestamp_precision": "date",
+          "source_quality": "daily_aggregate_no_original_url"
+        },
+        {
+          "alias": "E6",
+          "id": "legacy-event-2022-06-14",
+          "url": "",
+          "title": "Vintage Energy completes A$10mn debt facility Comet Ridge close to completing Mahalo deal Santos spuds Yoorn-1 well Poland to auction off cross-border gas capacity Turkey begins laying Sakarya pipeline Lauren Services: The Right Place at the Right Time. Engineering Solutions for the Energy Transition. Western Gas completes Sasanof-1 well off Australia SDX Energy issues trading update Nord Stream 1 to shut down in July for maintenance: press BW Energy confirms talks to buy offshore Brazilian fields European LNG imports reach record in April Piedmont inks Transco gas supply deal Avenir lands three-year LNG bunkering deal Freeport LNG faces three-month shutdown after incident Wood to renovate Gassco gas receiving facilities",
+          "source": "legacy_daily",
+          "known_at": "2026-10-14T03:20:17.365322+00:00",
+          "timestamp_precision": "date",
+          "source_quality": "daily_aggregate_no_original_url"
+        }
+      ],
+      "previous_source_index": [
+        {
+          "date": "2026-10-13",
+          "news_ids": [
+            "1aaba4eb6ff2a4887c6a9fad",
+            "2dafeba5161f81cbc56819a7",
+            "31a7020bf9536b0f536fcf85",
+            "4d2ebcc269c4d5288caddee3",
+            "57a73447a724302c60defd56",
+            "5f6ce43dc6d225aca744f0e8",
+            "93ca147dbaac0921951b28b4",
+            "d28e8af849c4cc106c66e9c7",
+            "d7d0d45a5fa8a74e26e0e462",
+            "e681e812f6b51ea7b2ef2bb9"
+          ],
+          "sources": [
+            {
+              "alias": "P1.1",
+              "id": "1aaba4eb6ff2a4887c6a9fad",
+              "url": "",
+              "title": "Gassco Kristin: Planned Other unavailability (Active)",
+              "version": 2,
+              "source": "gassco"
+            },
+            {
+              "alias": "P1.2",
+              "id": "31a7020bf9536b0f536fcf85",
+              "url": "",
+              "title": "Gassco Kristin: Planned Other unavailability (Active)",
+              "version": 2,
+              "source": "gassco"
+            },
+            {
+              "alias": "P1.3",
+              "id": "4d2ebcc269c4d5288caddee3",
+              "url": "",
+              "title": "Gassco Kårstø: Unplanned Gas treatment plant unavailability (Active)",
+              "version": 1,
+              "source": "gassco"
+            },
+            {
+              "alias": "P1.4",
+              "id": "57a73447a724302c60defd56",
+              "url": "",
+              "title": "Gassco Kårstø: Unplanned Gas treatment plant unavailability (Active)",
+              "version": 2,
+              "source": "gassco"
+            },
+            {
+              "alias": "P1.5",
+              "id": "d28e8af849c4cc106c66e9c7",
+              "url": "",
+              "title": "Gassco Kårstø: Unplanned Gas treatment plant unavailability (Active)",
+              "version": 1,
+              "source": "gassco"
+            },
+            {
+              "alias": "P1.6",
+              "id": "2dafeba5161f81cbc56819a7",
+              "url": "",
+              "title": "TotalEnergies orders French tubular solutions for gas field in Azerbaijan",
+              "version": 1,
+              "source": "offshore_energy"
+            },
+            {
+              "alias": "P1.7",
+              "id": "5f6ce43dc6d225aca744f0e8",
+              "url": "",
+              "title": "Equinor and Eneco sign five-year gas agreement with verified emissions data",
+              "version": 1,
+              "source": "equinor"
+            },
+            {
+              "alias": "P1.8",
+              "id": "93ca147dbaac0921951b28b4",
+              "url": "",
+              "title": "Equinor to feed Dutch grid with low-emission Norwegian gas through 2031",
+              "version": 2,
+              "source": "offshore_energy"
+            },
+            {
+              "alias": "P1.9",
+              "id": "e681e812f6b51ea7b2ef2bb9",
+              "url": "",
+              "title": "2002-built jack-up comes to Asian yard for MOPU conversion ahead of gas field deployment",
+              "version": 1,
+              "source": "offshore_energy"
+            },
+            {
+              "alias": "P1.10",
+              "id": "d7d0d45a5fa8a74e26e0e462",
+              "url": "",
+              "title": "Shell, GTT, and Lloyd’s Register eye hybrid-electric LNG carrier design",
+              "version": 2,
+              "source": "offshore_energy"
+            }
+          ]
+        },
+        {
+          "date": "2026-10-12",
+          "news_ids": [
+            "114da5915f464df42dc17847",
+            "5152f8417ef1c45db5d8547d",
+            "548a29bed527f8ea2397d38b",
+            "71cc2a22f1ac394d0ae042b6",
+            "8f2027cb112b31262cbcb559",
+            "b725f9b506fb177a27e7d9c3",
+            "b7838c6b48e11463910740cf",
+            "e3c537b40f60dfa76bfae2f9",
+            "f0f0c99819172bdc380c1b6b"
+          ],
+          "sources": [
+            {
+              "alias": "P2.1",
+              "id": "114da5915f464df42dc17847",
+              "url": "",
+              "title": "Gassco Easington: Planned Other unavailability (Active)",
+              "version": 2,
+              "source": "gassco"
+            },
+            {
+              "alias": "P2.2",
+              "id": "5152f8417ef1c45db5d8547d",
+              "url": "",
+              "title": "Gassco Easington: Planned Other unavailability (Active)",
+              "version": 2,
+              "source": "gassco"
+            },
+            {
+              "alias": "P2.3",
+              "id": "548a29bed527f8ea2397d38b",
+              "url": "",
+              "title": "Gassco Dvalin: Unplanned Gas production field unavailability (Inactive)",
+              "version": 1,
+              "source": "gassco"
+            },
+            {
+              "alias": "P2.4",
+              "id": "71cc2a22f1ac394d0ae042b6",
+              "url": "",
+              "title": "Gassco Gullfaks: Unplanned Gas production field unavailability (Inactive)",
+              "version": 1,
+              "source": "gassco"
+            },
+            {
+              "alias": "P2.5",
+              "id": "b725f9b506fb177a27e7d9c3",
+              "url": "",
+              "title": "Gassco Kårstø: Unplanned Other unavailability (Inactive)",
+              "version": 1,
+              "source": "gassco"
+            },
+            {
+              "alias": "P2.6",
+              "id": "b7838c6b48e11463910740cf",
+              "url": "",
+              "title": "Gassco Emden: Planned Other unavailability (Active)",
+              "version": 2,
+              "source": "gassco"
+            },
+            {
+              "alias": "P2.7",
+              "id": "e3c537b40f60dfa76bfae2f9",
+              "url": "",
+              "title": "Gassco Dvalin: Unplanned Gas production field unavailability (Inactive)",
+              "version": 1,
+              "source": "gassco"
+            },
+            {
+              "alias": "P2.8",
+              "id": "8f2027cb112b31262cbcb559",
+              "url": "",
+              "title": "Eni sheds partial stakes in Indonesian gas assets as Pertamina and Medco bolster portfolios",
+              "version": 1,
+              "source": "offshore_energy"
+            },
+            {
+              "alias": "P2.9",
+              "id": "f0f0c99819172bdc380c1b6b",
+              "url": "",
+              "title": "ADNOC broadens its Asian horizons with Gulf Group LNG deal",
+              "version": 2,
+              "source": "offshore_energy"
+            }
+          ]
+        },
+        {
+          "date": "2026-10-09",
+          "news_ids": [
+            "1a2ffcaee4616004af011c93",
+            "4045ba505010ee6000f287e1",
+            "62bc1afa752cf6f81fbba09d",
+            "bc1af4c2661879f75b617232",
+            "fcdaa3a83544b89b36a6eeac"
+          ],
+          "sources": [
+            {
+              "alias": "P3.1",
+              "id": "1a2ffcaee4616004af011c93",
+              "url": "",
+              "title": "Gassco Emden: Planned Other unavailability (Active)",
+              "version": 2,
+              "source": "gassco"
+            },
+            {
+              "alias": "P3.2",
+              "id": "4045ba505010ee6000f287e1",
+              "url": "",
+              "title": "Gassco Gina Krog Import: Planned Other unavailability (Active)",
+              "version": 2,
+              "source": "gassco"
+            },
+            {
+              "alias": "P3.3",
+              "id": "62bc1afa752cf6f81fbba09d",
+              "url": "",
+              "title": "Gassco Sleipner: Planned Other unavailability (Dismissed)",
+              "version": 1,
+              "source": "gassco"
+            },
+            {
+              "alias": "P3.4",
+              "id": "bc1af4c2661879f75b617232",
+              "url": "",
+              "title": "Gassco Dunkerque: Planned Other unavailability (Active)",
+              "version": 2,
+              "source": "gassco"
+            },
+            {
+              "alias": "P3.5",
+              "id": "fcdaa3a83544b89b36a6eeac",
+              "url": "",
+              "title": "Gassco Gina Krog Import: Planned Other unavailability (Active)",
+              "version": 2,
+              "source": "gassco"
+            }
+          ]
+        },
+        {
+          "date": "2026-10-08",
+          "news_ids": [
+            "053668b2310b91e882a89c6f",
+            "22e5401fb7205cc73d80c937",
+            "2897edb1af03e310bd7bfdd3",
+            "35c8503927444bdb557890ae",
+            "849a6fd98dc303a02752070f",
+            "90bee8a28ee37f36dfd7b06a",
+            "92ace9f9b6a5367cd35708b0",
+            "955593bafe160644a3582480",
+            "db6e0b0169dbc995e353730f",
+            "fbb28e8ce3d5e5ec20b570cf"
+          ],
+          "sources": [
+            {
+              "alias": "P4.1",
+              "id": "053668b2310b91e882a89c6f",
+              "url": "",
+              "title": "Gassco Dvalin: Planned Other unavailability (Dismissed)",
+              "version": 1,
+              "source": "gassco"
+            },
+            {
+              "alias": "P4.2",
+              "id": "22e5401fb7205cc73d80c937",
+              "url": "",
+              "title": "Gassco Dvalin: Unplanned Gas production field unavailability (Dismissed)",
+              "version": 1,
+              "source": "gassco"
+            },
+            {
+              "alias": "P4.3",
+              "id": "2897edb1af03e310bd7bfdd3",
+              "url": "",
+              "title": "Gassco Dvalin: Planned Other unavailability (Active)",
+              "version": 2,
+              "source": "gassco"
+            },
+            {
+              "alias": "P4.4",
+              "id": "35c8503927444bdb557890ae",
+              "url": "",
+              "title": "Gassco Åsgard: Planned Other unavailability (Active)",
+              "version": 2,
+              "source": "gassco"
+            },
+            {
+              "alias": "P4.5",
+              "id": "849a6fd98dc303a02752070f",
+              "url": "",
+              "title": "Gassco Heidrun: Unplanned Gas production field unavailability (Inactive)",
+              "version": 1,
+              "source": "gassco"
+            },
+            {
+              "alias": "P4.6",
+              "id": "955593bafe160644a3582480",
+              "url": "",
+              "title": "Gassco Troll: Planned Other unavailability (Active)",
+              "version": 2,
+              "source": "gassco"
+            },
+            {
+              "alias": "P4.7",
+              "id": "90bee8a28ee37f36dfd7b06a",
+              "url": "",
+              "title": "Fresh North Sea gas discovery yields up to 10 million barrels of oil equivalent",
+              "version": 2,
+              "source": "offshore_energy"
+            },
+            {
+              "alias": "P4.8",
+              "id": "db6e0b0169dbc995e353730f",
+              "url": "",
+              "title": "Gas discovery at the Gullfaks field in the North Sea",
+              "version": 1,
+              "source": "equinor"
+            },
+            {
+              "alias": "P4.9",
+              "id": "fbb28e8ce3d5e5ec20b570cf",
+              "url": "",
+              "title": "Excelerate entrusts FSRU conversion to Seatrium with another on the cards",
+              "version": 2,
+              "source": "offshore_energy"
+            },
+            {
+              "alias": "P4.10",
+              "id": "92ace9f9b6a5367cd35708b0",
+              "url": "",
+              "title": "Golar secures 2013-built LNG carrier for conversion into fourth FLNG",
+              "version": 2,
+              "source": "offshore_energy"
+            }
+          ]
+        },
+        {
+          "date": "2026-10-07",
+          "news_ids": [
+            "0e116a2d89283556c9da1d67",
+            "1a523f2fa4e4cb372c420e26",
+            "2e8ea47c22fa4abbeb245672",
+            "5028fd40c413b645d561b5dc",
+            "56022641654bfaa543afccd4",
+            "7b47dd19c139c3ee51dcc1a4",
+            "bbce46f8420d2f764abb11fb"
+          ],
+          "sources": [
+            {
+              "alias": "P5.1",
+              "id": "0e116a2d89283556c9da1d67",
+              "url": "",
+              "title": "Gassco Heidrun: Unplanned Other unavailability (Inactive)",
+              "version": 1,
+              "source": "gassco"
+            },
+            {
+              "alias": "P5.2",
+              "id": "2e8ea47c22fa4abbeb245672",
+              "url": "",
+              "title": "Gassco Sleipner: Planned Other unavailability (Active)",
+              "version": 2,
+              "source": "gassco"
+            },
+            {
+              "alias": "P5.3",
+              "id": "5028fd40c413b645d561b5dc",
+              "url": "",
+              "title": "Gassco Dvalin: Planned Other unavailability (Dismissed)",
+              "version": 1,
+              "source": "gassco"
+            },
+            {
+              "alias": "P5.4",
+              "id": "7b47dd19c139c3ee51dcc1a4",
+              "url": "",
+              "title": "Gassco Dvalin: Unplanned Gas production field unavailability (Inactive)",
+              "version": 1,
+              "source": "gassco"
+            },
+            {
+              "alias": "P5.5",
+              "id": "bbce46f8420d2f764abb11fb",
+              "url": "",
+              "title": "Gassco Kollsnes: Planned Other unavailability (Active)",
+              "version": 2,
+              "source": "gassco"
+            },
+            {
+              "alias": "P5.6",
+              "id": "1a523f2fa4e4cb372c420e26",
+              "url": "",
+              "title": "Updated cost estimate for the Snøhvit Future project",
+              "version": 1,
+              "source": "equinor"
+            },
+            {
+              "alias": "P5.7",
+              "id": "56022641654bfaa543afccd4",
+              "url": "",
+              "title": "Dutch design ultra-shallow-draft DSV for Gulf Region's oil & gas",
+              "version": 1,
+              "source": "offshore_energy"
+            }
+          ]
+        }
+      ],
+      "compression": {
+        "level": 2,
+        "news_count": 0,
+        "every_news_id_retained": true,
+        "lossy": true,
+        "context_window": 8192,
+        "input_budget": 5000,
+        "output_budget": 3072,
+        "method": "当前事实保护300tokens；全部当日ID保留；前5日为日摘要并另存来源；历史价格反应仅1d/3d紧凑字段，完整1/3/5/10d在输入快照；背景先压缩",
+        "citation_note": "URL不在压缩输入；references只填id和空url，由系统恢复原来源"
+      },
+      "input_token_estimate": 4458,
+      "uncompressed_context_token_estimate": 16552,
+      "input_token_limit": 4939,
+      "input_token_ceiling": 5000,
+      "context_window": 8192,
+      "output_token_limit": 3072,
+      "adaptive_context_used": false,
+      "window_news_count": 0,
+      "filtered_future_news_count": 0,
+      "filtered_future_event_count": 0,
+      "outcome_compression": [],
+      "temporal_notes": [],
+      "context_sha256": "89ecb25855c1c6c00f7cbab3c74a6349043d4ce49565881907559665cc18c34e",
+      "model": "gpt-oss:20b",
+      "detail": true,
+      "schema_repair_used": true,
+      "model_calls": [
+        {
+          "prompt_eval_count": 4469,
+          "eval_count": 700,
+          "done_reason": "stop",
+          "total_duration_ns": 18692398417,
+          "system_prompt_sha256": "3227b64170793e016535f2242c01f8ed4eaa2dbe805b6d635b48b2843983b6c9",
+          "response_schema_sha256": "f573d5b9b3674f02f290d7cb67c9956974bcaf03b46c29f7364efe5caf93f2b0",
+          "context_sha256": "89ecb25855c1c6c00f7cbab3c74a6349043d4ce49565881907559665cc18c34e"
+        },
+        {
+          "prompt_eval_count": 4530,
+          "eval_count": 735,
+          "done_reason": "stop",
+          "total_duration_ns": 17605664542,
+          "system_prompt_sha256": "f5e479fa3d4117073f9d29be2c139f3819bd5215c9dc90f4bd4e2bc145c18b80",
+          "response_schema_sha256": "f573d5b9b3674f02f290d7cb67c9956974bcaf03b46c29f7364efe5caf93f2b0",
+          "context_sha256": "89ecb25855c1c6c00f7cbab3c74a6349043d4ce49565881907559665cc18c34e"
+        }
+      ],
+      "elapsed_seconds": 36.63,
+      "system_prompt_sha256": "f5e479fa3d4117073f9d29be2c139f3819bd5215c9dc90f4bd4e2bc145c18b80",
+      "response_schema_sha256": "f573d5b9b3674f02f290d7cb67c9956974bcaf03b46c29f7364efe5caf93f2b0",
+      "deterministic_risk_flags": [
+        "手动输入仅作条件情景分析，事实尚未由本系统独立核实",
+        "当前新闻缺少精确发布时间，无法确认其原始结算窗口归属",
+        "行情尚未验证为ICE官方日结算，不参与官方结算准确率评分",
+        "价格类型尚未验证为ICE官方日结算，不用于官方结算评分",
+        "模型把握程度未经统计校准，不代表已验证准确率",
+        "来源gdelt采集失败或尚未完成，本窗口新闻覆盖可能不完整",
+        "历史事件包含多条新闻日聚合，缺少原始单条来源，类比存在时间及来源限制"
+      ],
+      "deterministic_missing_fields": [
+        "independent_news_verification",
+        "current_news.published_at",
+        "current_news.source_url",
+        "settlement_verification",
+        "confidence_calibration",
+        "source_coverage:gdelt"
+      ]
+    }
+  },
+  "quality_note": "缓存旧案例的历史比较把供应稳定误写为价格未受影响；后续版本已经加历史价格反应校验与有界修复。原输出保留用于复查，不作为验收通过记录。"
+}

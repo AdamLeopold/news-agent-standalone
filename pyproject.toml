@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ttf-news-standalone"
+version = "0.1.0"
+description = "Local TTF news and settlement-window analysis workbench"
+requires-python = ">=3.10"
+dependencies = ["fastapi>=0.115", "uvicorn>=0.30", "httpx>=0.27", "pydantic>=2", "feedparser>=6", "beautifulsoup4>=4.12", "openpyxl>=3.1", "python-dateutil>=2.9", "tiktoken>=0.11"]
+
+[project.optional-dependencies]
+test = ["pytest>=8", "pytest-asyncio>=0.24"]
+
+[project.scripts]
+ttf-news = "ttf_news.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["ttf_news*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+
