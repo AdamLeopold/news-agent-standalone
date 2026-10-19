@@ -1,7 +1,8 @@
+import json
 import httpx
 import pytest
 from fastapi.testclient import TestClient
-from ttf_news.public_gateway import create_gateway
+from ttf_news.public_gateway import create_gateway, MAX_BODY
 
 ORIGIN = 'https://adamleopold.github.io'
 
@@ -44,6 +45,15 @@ def test_pages_preflight_and_sse_cursor_are_preserved():
     assert calls[0].headers['last-event-id'] == '41'
 
 
+def test_original_thirty_thousand_chinese_character_input_passes_gateway():
+    app, calls = fixture_gateway()
+    text = '气' * 30000
+    with TestClient(app) as client:
+        response = client.post('/api/manual/analyze', json={'text': text}, headers={'Origin': ORIGIN})
+    assert response.status_code == 202
+    assert json.loads(calls[0].content)['text'] == text
+
+
 @pytest.mark.parametrize('path', ['/api/generate', '/api/tags', '/docs', '/openapi.json', '/.env', '/etc/passwd'])
 def test_gateway_cannot_expose_model_files_or_unlisted_routes(path):
     app, calls = fixture_gateway()
@@ -57,6 +67,6 @@ def test_invalid_origin_oversized_body_and_full_model_queue_do_not_reach_backend
     with TestClient(app) as client:
         assert client.post('/api/manual/analyze', json={}).status_code == 403
         assert client.post('/api/manual/analyze', headers={'Origin': 'https://other.example'}, json={}).status_code == 403
-        assert client.post('/api/manual/analyze', headers={'Origin': ORIGIN}, content=b'x'*40001).status_code == 413
+        assert client.post('/api/manual/analyze', headers={'Origin': ORIGIN}, content=b'x'*(MAX_BODY+1)).status_code == 413
         assert client.post('/api/manual/analyze', headers={'Origin': ORIGIN}, json={}).status_code == 429
     assert not calls

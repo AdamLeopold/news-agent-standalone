@@ -21,7 +21,9 @@ from fastapi.responses import JSONResponse, Response, StreamingResponse
 from starlette.background import BackgroundTask
 
 ROOT = Path(__file__).resolve().parents[1]
-MAX_BODY = 40_000
+# The original form accepts 30,000 Unicode characters. UTF-8 and JSON escapes
+# can use several bytes per character; keep that form contract through the proxy.
+MAX_BODY = 256_000
 ID = r"[A-Za-z0-9_.-]{1,150}"
 READ_ROUTES = re.compile(
     rf"/api/(?:health|dashboard|news(?:/{ID})?|analyses/{ID}|events|coverage|monitoring|"

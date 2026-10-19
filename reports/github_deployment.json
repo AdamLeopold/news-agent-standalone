@@ -1,8 +1,7 @@
 {
-  "checked_at": "2026-10-19T07:56:13.315823+00:00",
+  "checked_at": "2026-10-19T07:58:17.273976+00:00",
   "repository": "https://github.com/AdamLeopold/news-agent-standalone",
   "website": "https://adamleopold.github.io/news-agent-standalone/",
-  "commit": "e97df4477506fe12011b53b37b3bf6242e10c0c1",
   "actions_run": "https://github.com/AdamLeopold/news-agent-standalone/actions/runs/39217855170",
   "pages_deployment": "success",
   "snapshot_captured_at": "2026-10-19T07:39:14.132213+00:00",
@@ -50,7 +49,8 @@
     "css_unchanged": true,
     "public_end_to_end": "passed",
     "no_test_news_added": true,
-    "pending_jobs_after_smoke": 0
+    "pending_jobs_after_smoke": 0,
+    "gateway_tests_after_unicode_fix": 10
   },
   "preserved_local_service": {
     "pid": 71593,
@@ -66,7 +66,7 @@
     "authorization": "User explicitly answered: allow public real-time API and preserve full functionality",
     "api_base": "https://macbook-pro--5.tail9a0a45.ts.net:10000",
     "gateway_loopback": "127.0.0.1:8766",
-    "gateway_pid": 31648,
+    "gateway_pid": 45642,
     "funnel_port": 10000,
     "public_https_health": "200; model available; allowed Pages origin returned",
     "public_news_and_dashboard": "200",
@@ -133,7 +133,13 @@
       "detail_close_forecast": "flat"
     },
     "browser_screenshot": "reports/github_pages_live.png",
-    "browser_detail_screenshot": "reports/github_live_detail.png"
+    "browser_detail_screenshot": "reports/github_live_detail.png",
+    "input_size_validation": {
+      "original_max_characters": 30000,
+      "gateway_max_bytes": 256000,
+      "maximum_chinese_input_test": "passed",
+      "over_limit_chinese_text_reaches_backend_validation": 422
+    }
   },
   "scope": "All current application content, source, data, analysis snapshots and full database. Runtime dependencies, caches, duplicate backups and downloadable Ollama weights are not uploaded.",
   "prior_public_api_status": {
@@ -154,5 +160,12 @@
     "Smoke input is an explicit reuse of an existing announcement, stored as manual; not added to formal news or event memory.",
     "Successful end-to-end checks do not establish predictive accuracy.",
     "Mac, Tailscale, local backend and public gateway must stay online."
-  ]
+  ],
+  "initial_pages_commit": "e97df4477506fe12011b53b37b3bf6242e10c0c1",
+  "code_files_sha256": {
+    "ttf_news/public_gateway.py": "14543341fbcf0db55cf41b7d7d34041f7ae8ca3fae89eee86fedc7762c92ba95",
+    "ttf_news/prompts.py": "8a0603162a8be4c88d675817c01dc5470f7bbdf52fe4a1793d59b5d1e7401f35",
+    "frontend/src/App.tsx": "f7461e7fd6a32ab4c429e3a7d4c764c9f0f2753cdf69e2ec7a0b557cfc1f8a52",
+    "frontend/src/api.ts": "60ab9c49c76003e7d2d3d805e7ec9e0a50e52da4488f176afc63888ff451d1f3"
+  }
 }
