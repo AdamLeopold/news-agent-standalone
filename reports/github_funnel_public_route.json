@@ -1,0 +1,14 @@
+{
+  "public_dns_address": "103.84.155.153",
+  "forced_public_funnel_route": true,
+  "status": "ok",
+  "model_available": true,
+  "model_digest": "17052f91a42e97930aa6e28a6c6c06a983e6a58dbb00434885a0cf5313e376f7",
+  "counts": {
+    "news": 3986,
+    "events": 1567,
+    "legacy_daily": 3456,
+    "prices": 65876,
+    "analyses": 100
+  }
+}

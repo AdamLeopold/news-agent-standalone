@@ -1,0 +1,29 @@
+{
+  "analysis_id": "a166a65c-4773-4343-ac6c-e1205a810f7b",
+  "kind": "manual",
+  "status": "completed",
+  "created_at": "2026-10-19T07:51:40.186620+00:00",
+  "completed_at": "2026-10-19T07:53:08.467154+00:00",
+  "brief_model_seconds": 87.904,
+  "brief_model": "gpt-oss:20b",
+  "brief_prompt_version": "ttf-news-v6-standalone-1.8",
+  "detail_status": "completed",
+  "detail_model_seconds": 69.181,
+  "detail_model": "gpt-oss:20b",
+  "detail_prompt_version": "ttf-news-v6-standalone-1.8",
+  "detail_sections": [
+    "new_facts",
+    "transmission",
+    "daily_balance",
+    "historical_comparisons",
+    "priced_in_assessment",
+    "scenarios",
+    "invalidation_conditions",
+    "limitations",
+    "references"
+  ],
+  "brief_news_impact": "flat",
+  "brief_close_forecast": "flat",
+  "detail_news_impact": "flat",
+  "detail_close_forecast": "flat"
+}

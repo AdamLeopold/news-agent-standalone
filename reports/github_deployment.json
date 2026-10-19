@@ -1,0 +1,158 @@
+{
+  "checked_at": "2026-10-19T07:56:13.315823+00:00",
+  "repository": "https://github.com/AdamLeopold/news-agent-standalone",
+  "website": "https://adamleopold.github.io/news-agent-standalone/",
+  "commit": "e97df4477506fe12011b53b37b3bf6242e10c0c1",
+  "actions_run": "https://github.com/AdamLeopold/news-agent-standalone/actions/runs/39217855170",
+  "pages_deployment": "success",
+  "snapshot_captured_at": "2026-10-19T07:39:14.132213+00:00",
+  "snapshot_counts": {
+    "news": 3986,
+    "events": 1567,
+    "legacy_daily": 3456,
+    "prices": 65876,
+    "analyses": 99
+  },
+  "release": "https://github.com/AdamLeopold/news-agent-standalone/releases/tag/snapshot-20261019",
+  "release_gzip_sha256": "4acbf0a0a45e18933a6f0c122a3eacddd2f75af9663b42a334344b2383874bc5",
+  "github_reported_gzip_sha256": "4acbf0a0a45e18933a6f0c122a3eacddd2f75af9663b42a334344b2383874bc5",
+  "download_checks": {
+    "news/recent.json": {
+      "status": 200,
+      "bytes": 1338462,
+      "sha256_matches": true
+    },
+    "events.json": {
+      "status": 200,
+      "bytes": 6213117,
+      "sha256_matches": true
+    },
+    "exports/news.jsonl": {
+      "status": 200,
+      "bytes": 6620294,
+      "sha256_matches": true
+    },
+    "exports/daily.jsonl": {
+      "status": 200,
+      "bytes": 3667327,
+      "sha256_matches": true
+    }
+  },
+  "validation": {
+    "backend_tests": 110,
+    "backend_subtests": 22,
+    "frontend_tests": 18,
+    "pages_ci": "passed",
+    "chinese_english_ui": "verified in published browser",
+    "events_and_exports": "verified",
+    "existing_cached_detail_count": 7,
+    "screenshot": "reports/github_pages_preview.png",
+    "css_unchanged": true,
+    "public_end_to_end": "passed",
+    "no_test_news_added": true,
+    "pending_jobs_after_smoke": 0
+  },
+  "preserved_local_service": {
+    "pid": 71593,
+    "html_sha256": "beaa9002c3f3a9a74694f4c10a75dfa2c86f143812d001ad62a92b57b95f691c",
+    "prompt_version": "ttf-news-v6-standalone-1.8",
+    "validation_started": "2026-10-14T05:51:48.181167+00:00",
+    "collector_enabled": true,
+    "ollama_unchanged": true
+  },
+  "public_live_api": {
+    "status": "enabled_and_verified",
+    "authorized_at": "2026-10-19T07:53:13.200117+00:00",
+    "authorization": "User explicitly answered: allow public real-time API and preserve full functionality",
+    "api_base": "https://macbook-pro--5.tail9a0a45.ts.net:10000",
+    "gateway_loopback": "127.0.0.1:8766",
+    "gateway_pid": 31648,
+    "funnel_port": 10000,
+    "public_https_health": "200; model available; allowed Pages origin returned",
+    "public_news_and_dashboard": "200",
+    "public_preflight": "200",
+    "browser_live_status": "消息推送正常",
+    "public_csv_export": {
+      "status": 200,
+      "bytes": 4913874,
+      "sha256": "a8ca8723ccf99801913c5a616c519ab5abcf64008f2b31254694c11415d57025"
+    },
+    "restricted_routes": {
+      "/api/tags": 404,
+      "/api/generate": 404,
+      "/.env": 404,
+      "/docs": 404
+    },
+    "manual_validation_id": "a166a65c-4773-4343-ac6c-e1205a810f7b",
+    "manual_validation_state": "completed",
+    "prior_approval_rejection_resolved_by_explicit_authorization": true,
+    "detail_validation_state": "completed",
+    "public_route_verification": {
+      "public_dns_address": "103.84.155.153",
+      "forced_public_funnel_route": true,
+      "status": "ok",
+      "model_available": true,
+      "model_digest": "17052f91a42e97930aa6e28a6c6c06a983e6a58dbb00434885a0cf5313e376f7",
+      "counts": {
+        "news": 3986,
+        "events": 1567,
+        "legacy_daily": 3456,
+        "prices": 65876,
+        "analyses": 100
+      }
+    },
+    "sse_reconnect_verified": true,
+    "analysis_completion_push_verified": true,
+    "model_validation": {
+      "analysis_id": "a166a65c-4773-4343-ac6c-e1205a810f7b",
+      "kind": "manual",
+      "status": "completed",
+      "created_at": "2026-10-19T07:51:40.186620+00:00",
+      "completed_at": "2026-10-19T07:53:08.467154+00:00",
+      "brief_model_seconds": 87.904,
+      "brief_model": "gpt-oss:20b",
+      "brief_prompt_version": "ttf-news-v6-standalone-1.8",
+      "detail_status": "completed",
+      "detail_model_seconds": 69.181,
+      "detail_model": "gpt-oss:20b",
+      "detail_prompt_version": "ttf-news-v6-standalone-1.8",
+      "detail_sections": [
+        "new_facts",
+        "transmission",
+        "daily_balance",
+        "historical_comparisons",
+        "priced_in_assessment",
+        "scenarios",
+        "invalidation_conditions",
+        "limitations",
+        "references"
+      ],
+      "brief_news_impact": "flat",
+      "brief_close_forecast": "flat",
+      "detail_news_impact": "flat",
+      "detail_close_forecast": "flat"
+    },
+    "browser_screenshot": "reports/github_pages_live.png",
+    "browser_detail_screenshot": "reports/github_live_detail.png"
+  },
+  "scope": "All current application content, source, data, analysis snapshots and full database. Runtime dependencies, caches, duplicate backups and downloadable Ollama weights are not uploaded.",
+  "prior_public_api_status": {
+    "status": "awaiting_explicit_user_authorization",
+    "auto_review_rejected_action": "Enable Tailscale Funnel on dedicated HTTPS port 10000",
+    "reason": "Persistent public exposure of local application API requires explicit authorization of the endpoint and data scope",
+    "no_public_tunnel_enabled": true,
+    "gateway_loopback_only": "127.0.0.1:8766",
+    "features_pending": [
+      "new manual analysis",
+      "new detailed analysis",
+      "continuous live news updates"
+    ]
+  },
+  "notes": [
+    "Public API enabled after direct user authorization.",
+    "GitHub website uses the same local collector, database and gpt-oss:20b service.",
+    "Smoke input is an explicit reuse of an existing announcement, stored as manual; not added to formal news or event memory.",
+    "Successful end-to-end checks do not establish predictive accuracy.",
+    "Mac, Tailscale, local backend and public gateway must stay online."
+  ]
+}

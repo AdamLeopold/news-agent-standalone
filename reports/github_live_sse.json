@@ -1,0 +1,141 @@
+{
+  "url": "https://macbook-pro--5.tail9a0a45.ts.net:10000/api/stream",
+  "events": [
+    {
+      "type": "stream_ready"
+    },
+    {
+      "type": "analysis_queued",
+      "id": "a166a65c-4773-4343-ac6c-e1205a810f7b"
+    },
+    {
+      "type": "source_update",
+      "id": "offshore_energy"
+    },
+    {
+      "type": "source_update",
+      "id": "eia"
+    },
+    {
+      "type": "source_update",
+      "id": "eu_energy"
+    },
+    {
+      "type": "source_update",
+      "id": "equinor"
+    },
+    {
+      "type": "source_update",
+      "id": "cheniere"
+    },
+    {
+      "type": "source_update",
+      "id": "gassco"
+    },
+    {
+      "type": "source_update",
+      "id": "cheniere"
+    },
+    {
+      "type": "source_update",
+      "id": "offshore_energy"
+    },
+    {
+      "type": "source_update",
+      "id": "eu_energy"
+    },
+    {
+      "type": "source_update",
+      "id": "equinor"
+    },
+    {
+      "type": "source_update",
+      "id": "equinor"
+    },
+    {
+      "type": "source_update",
+      "id": "equinor"
+    },
+    {
+      "type": "source_update",
+      "id": "equinor"
+    },
+    {
+      "type": "source_update",
+      "id": "equinor"
+    },
+    {
+      "type": "source_update",
+      "id": "equinor"
+    },
+    {
+      "type": "source_update",
+      "id": "equinor"
+    },
+    {
+      "type": "source_update",
+      "id": "eia"
+    },
+    {
+      "type": "source_update",
+      "id": "equinor"
+    },
+    {
+      "type": "source_update",
+      "id": "equinor"
+    },
+    {
+      "type": "source_update",
+      "id": "equinor"
+    },
+    {
+      "type": "source_update",
+      "id": "gassco"
+    },
+    {
+      "type": "source_update",
+      "id": "offshore_energy"
+    },
+    {
+      "type": "source_update",
+      "id": "eia"
+    },
+    {
+      "type": "source_update",
+      "id": "eu_energy"
+    },
+    {
+      "type": "source_update",
+      "id": "equinor"
+    },
+    {
+      "type": "source_update",
+      "id": "cheniere"
+    },
+    {
+      "type": "source_update",
+      "id": "gassco"
+    },
+    {
+      "type": "source_update",
+      "id": "cheniere"
+    },
+    {
+      "type": "source_update",
+      "id": "offshore_energy"
+    },
+    {
+      "type": "source_update",
+      "id": "eu_energy"
+    },
+    {
+      "type": "analysis_completed",
+      "id": "a166a65c-4773-4343-ac6c-e1205a810f7b",
+      "kind": "short"
+    }
+  ],
+  "status": 200,
+  "sse_received": true,
+  "cors": "https://adamleopold.github.io",
+  "elapsed_seconds": 102.63
+}
