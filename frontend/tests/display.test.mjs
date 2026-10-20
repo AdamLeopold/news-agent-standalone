@@ -50,9 +50,9 @@ test('failed analysis preserves a visible failure state', () => {
 test('publication delay never treats backfill or date-only records as real-time latency', () => {
   const news = {published_at: '2026-10-14T01:00:00Z', first_seen_at: '2026-10-14T01:01:30Z', timestamp_precision: 'exact', ingestion_kind: 'live'};
   assert.equal(discoveryDelay(news), '发现延迟 1 分 30 秒');
-  assert.equal(discoveryDelay({...news, ingestion_kind: 'backfill'}), '历史回补，不计实时发现延迟');
-  assert.equal(discoveryDelay({...news, timestamp_precision: 'date'}), '发现延迟：原始时间精度不足');
-  assert.equal(discoveryDelay({...news, first_seen_at: '2026-10-13T23:00:00Z'}), '发现延迟：无法计算');
+  assert.equal(discoveryDelay({...news, ingestion_kind: 'backfill'}), '历史回补');
+  assert.equal(discoveryDelay({...news, timestamp_precision: 'date'}), '发现延迟 —');
+  assert.equal(discoveryDelay({...news, first_seen_at: '2026-10-13T23:00:00Z'}), '发现延迟 —');
 });
 test('model duration uses observed values and rejects absent or invalid times', () => {
   assert.equal(dateDeltaSeconds('2026-10-14T01:00:00Z', '2026-10-14T01:00:13Z'), 13);

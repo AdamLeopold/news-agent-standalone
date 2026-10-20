@@ -686,3 +686,209 @@ html {scroll-behavior: smooth;}
 .chart-export button {border: 0; background: transparent; color: var(--muted); font-size: 24px;}
 .chart-export img {width: 100%; height: auto; display: block; margin-bottom: 22px; border-radius: 6px;}
 .chart-export > a {display: inline-flex; padding: 12px 18px; text-decoration: none;}
+
+/* A calmer terminal: one visual rhythm, with motion concentrated on live signals. */
+:root {
+  --bg: #080f19;
+  --surface: #101b29;
+  --raised: #152334;
+  --inset: #0c1623;
+  --border: #253347;
+  --border-subtle: #1b293b;
+  --muted: #91a1b6;
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+  --panel-radius: 16px;
+}
+:root[data-theme="light"] {
+  --bg: #f1f4f8;
+  --surface: #fff;
+  --raised: #f5f8fc;
+  --inset: #f8fafd;
+  --border: #dce4ed;
+  --border-subtle: #eaf0f5;
+  --muted: #64788d;
+}
+body {background: radial-gradient(ellipse at 15% 0, color-mix(in srgb, var(--accent) 3%, transparent), transparent 52%), var(--bg);}
+button, a, input, textarea {transition: color .2s, background .2s, border-color .2s, box-shadow .25s, transform .3s var(--ease-out);}
+button:not(:disabled):active, .button:not(:disabled):active {transform: scale(.97);}
+.app-header {height: 80px; background: color-mix(in srgb, var(--bg) 88%, transparent);}
+.brand-mark {border-color: color-mix(in srgb, var(--accent) 40%, var(--border)); box-shadow: inset 0 1px 0 #ffffff10, 0 0 24px color-mix(in srgb, var(--accent) 6%, transparent); border-radius: 13px;}
+.brand-mark svg {transition: transform .5s var(--ease-out);}
+.brand:hover .brand-mark svg {transform: scale(1.1);}
+.local-chip {display: inline-flex; align-items: center; gap: 8px; border: 0; background: var(--raised); border-radius: 30px; padding: 9px 12px; font-size: 9px; letter-spacing: 1px;}
+.workspace-bar {height: 56px; background: transparent;}
+.main-tabs button {font-weight: 500;}
+.main-tabs button::after {content: ''; position: absolute; bottom: -1px; left: 0; right: 0; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease-out); border-radius: 3px;}
+.main-tabs button.active::after {transform: scaleX(1);}
+.icon-button, .language-button {border-radius: 10px;}
+.icon-button:hover {box-shadow: 0 3px 16px color-mix(in srgb, var(--accent) 9%, transparent); transform: translateY(-1px);}
+.live-layout {grid-template-columns: minmax(0, 1fr) clamp(320px, 27vw, 400px); gap: 0;}
+.live-main {padding-top: 32px; padding-bottom: 30px;}
+.page-title {margin-bottom: 25px;}
+.page-title .eyebrow {font-size: 9px; letter-spacing: 1.8px; margin-bottom: 12px;}
+.page-title h1 {font-size: clamp(25px, 2.2vw, 34px); font-weight: 560; line-height: 1.22; letter-spacing: -1px; margin-bottom: 12px;}
+.page-title p {font-size: 12px;}
+.market-label {border: 0; border-radius: 30px; background: var(--raised); padding: 9px 12px;}
+.panel, .session-panel {border-radius: var(--panel-radius); box-shadow: 0 8px 30px #00000007, inset 0 1px 0 #ffffff04;}
+.panel {transition: border-color .35s, box-shadow .35s;}
+.session-panel {position: relative; border-top: 1px solid color-mix(in srgb, var(--accent) 30%, var(--border)); padding: 20px 0; background: linear-gradient(110deg, color-mix(in srgb, var(--accent) 3%, var(--surface)), var(--surface));}
+.session-main > strong {font-size: 24px; letter-spacing: -.4px;}
+.countdown > strong {font-size: 27px;}
+.session-panel .eyebrow {font-size: 10px;}
+.panel-heading {padding-top: 25px; padding-bottom: 21px;}
+.panel-heading h2 {font-weight: 560; font-size: 17px; letter-spacing: -.3px;}
+.price-market-panel {background: radial-gradient(ellipse at 100% 0, color-mix(in srgb, var(--accent) 7%, transparent), transparent 60%), var(--surface); border-color: color-mix(in srgb, var(--accent) 12%, var(--border));}
+.price-market-heading {padding-top: 25px;}
+.price-market-heading .eyebrow {letter-spacing: 1.5px; font-size: 9px;}
+.price-market-heading h2 {font-size: 20px; margin-top: 9px;}
+.quote-row {padding-top: 22px; padding-bottom: 24px;}
+.quote-value > strong {font-size: clamp(36px, 3.8vw, 52px); letter-spacing: -2px;}
+.quote-value b {font-size: 13px;}
+.market-delay {border: 1px solid var(--border); border-radius: 20px; padding: 6px 9px; font-size: 8px; letter-spacing: .5px;}
+.market-delay i {box-shadow: none; background: var(--muted);}
+.chart-controls {gap: 4px;}
+.chart-controls button {font-size: 11px; padding-left: 14px; padding-right: 14px;}
+.market-chart-layout {display: grid; grid-template-columns: minmax(0, 1fr) 148px; min-height: 300px;}
+.market-chart-content {min-width: 0; animation: terminal-reveal .5s var(--ease-out) both;}
+.chart-body {min-height: 0;}
+.intraday-chart {padding-right: 18px; animation: none;}
+.intraday-chart svg {height: 228px;}
+.chart-time-axis {font-size: 9px; gap: 7px;}
+.chart-time-axis span:nth-child(2) {font-size: 8px;}
+.chart-price-line {stroke-dasharray: 1; stroke-dashoffset: 0; animation: price-line-reveal 1.1s var(--ease-out) both; transition: d .8s var(--ease-out);}
+.last-price-dot {filter: drop-shadow(0 0 4px currentColor);}
+.native-candles {padding-right: 15px;}
+.native-candles svg {min-height: 178px;}
+.candle-toolbar {gap: 8px; font-size: 9px;}
+.candle-toolbar button {min-height: 28px; padding: 5px 6px;}
+.candle-toolbar button.active {box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 18%, transparent);}
+.candle-readout {font-size: 10px; padding: 16px 0; gap: 10px;}
+.chart-source-note {padding-top: 13px; padding-bottom: 14px; gap: 7px 14px; background: color-mix(in srgb, var(--inset) 55%, transparent); font-size: 9px;}
+.chart-source-note a {font-size: 9px;}
+.market-feed-status {display: flex; align-items: center; gap: 6px; padding: 9px 24px; font-size: 9px; color: var(--muted);}
+.market-feed-status i {width: 4px; height: 4px; border-radius: 50%; background: var(--muted);}
+.market-feed-status span {margin-left: auto;}
+.forecast-lane {--forecast-color: var(--flat); --forecast-drift-y: 0px; position: relative; display: flex; flex-direction: column; align-items: center; padding: 22px 13px 16px; border-left: 1px dashed color-mix(in srgb, var(--forecast-color) 27%, var(--border)); background: linear-gradient(180deg, color-mix(in srgb, var(--forecast-color) 4%, transparent), color-mix(in srgb, var(--forecast-color) 1%, transparent)); color: var(--forecast-color); overflow: hidden;}
+.forecast-lane.up {--forecast-color: var(--accent); --forecast-drift-y: -3px;}
+.forecast-lane.down {--forecast-color: var(--down); --forecast-drift-y: 3px;}
+.forecast-lane.muted {--forecast-color: var(--muted);}
+.forecast-lane-heading {display: flex; align-items: center; justify-content: center; gap: 7px; width: 100%;}
+.forecast-lane-heading > span {font-size: 8px; font-weight: 600; letter-spacing: 1.5px;}
+.forecast-lane-heading > i {height: 4px; width: 4px; background: currentColor; border-radius: 50%; box-shadow: 0 0 8px color-mix(in srgb, var(--forecast-color) 40%, transparent);}
+.forecast-horizon {color: var(--muted); font-size: 9px; margin-top: 9px; letter-spacing: .4px;}
+.forecast-motion {position: relative; width: 128px; height: 112px; margin: auto 0 4px; display: grid; place-items: center;}
+.forecast-aura {position: absolute; width: 106px; height: 106px; border-radius: 50%; background: radial-gradient(circle, color-mix(in srgb, var(--forecast-color) 18%, transparent), transparent 69%); animation: forecast-breathe 3.5s ease-in-out infinite;}
+.forecast-orbit {position: absolute; width: 88px; height: 88px; border-radius: 50%; border: 1px solid color-mix(in srgb, var(--forecast-color) 9%, transparent);}
+.forecast-arrow-scene {position: relative; width: 128px; height: 100px; overflow: visible;}
+.forecast-guide {stroke: currentColor; opacity: .15; stroke-width: .7; stroke-dasharray: 2 5;}
+.forecast-arrow {fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; filter: drop-shadow(0 0 5px color-mix(in srgb, var(--forecast-color) 40%, transparent));}
+.forecast-origin {fill: currentColor; opacity: .65;}
+.forecast-arrow-drift {animation: forecast-drift 3.5s ease-in-out infinite;}
+.forecast-lane.extreme .forecast-arrow-drift, .forecast-lane.extreme .forecast-aura {animation-duration: 2.5s;}
+.forecast-lane.extreme .forecast-arrow {stroke-width: 2.9;}
+.forecast-direction {font-size: 17px; font-weight: 550; color: var(--forecast-color); line-height: 1.4; letter-spacing: -.3px; text-align: center; animation: terminal-reveal .5s var(--ease-out);}
+:root[lang="en"] .forecast-direction {font-size: 15px; letter-spacing: -.3px;}
+.forecast-update {font-size: 8px; font-variant-numeric: tabular-nums; color: var(--muted); text-align: center; line-height: 1.8; margin-top: 9px;}
+.forecast-update small {font-size: 7px; margin-left: 4px; opacity: .7;}
+.forecast-detail {min-height: 32px; display: inline-flex; align-items: center; justify-content: center; gap: 7px; border: 1px solid color-mix(in srgb, var(--forecast-color) 18%, transparent); background: color-mix(in srgb, var(--forecast-color) 5%, transparent); color: var(--forecast-color); font-size: 9px; border-radius: 30px; padding: 7px 10px; margin-top: 15px;}
+.forecast-detail:hover {background: color-mix(in srgb, var(--forecast-color) 12%, transparent); border-color: color-mix(in srgb, var(--forecast-color) 40%, transparent);}
+.forecast-detail svg {transition: transform .4s var(--ease-out);}
+.forecast-detail:hover svg {transform: translateX(3px);}
+.forecast-pending {display: flex; gap: 6px;}
+.forecast-pending i {height: 5px; width: 5px; border-radius: 50%; background: var(--muted); animation: forecast-breathe 1.6s ease-in-out infinite;}
+.forecast-pending i:nth-child(2) {animation-delay: .2s;}
+.forecast-pending i:nth-child(3) {animation-delay: .4s;}
+.daily-reference-strip {display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin: -6px 0 24px; padding: 2px 3px; font-size: 9px; color: var(--muted); font-variant-numeric: tabular-nums;}
+.daily-reference-strip > div {display: flex; align-items: center; gap: 8px;}
+.daily-reference-strip strong {font-weight: 500; font-size: 13px; color: var(--text);}
+.daily-reference-strip strong small {font-size: 8px; color: var(--muted); font-weight: 400;}
+.daily-reference-strip a {display: inline-flex; align-items: center; gap: 5px;}
+.daily-reference-strip a:hover {color: var(--accent);}
+.reference-threshold {margin-left: auto;}
+.signal {border-radius: 11px; padding-top: 20px; background: color-mix(in srgb, var(--inset) 80%, transparent); transition: border-color .3s, box-shadow .3s;}
+.signal.up {background: linear-gradient(130deg, color-mix(in srgb, var(--accent) 8%, var(--surface)), var(--accent-bg));}
+.signal.flat {background: linear-gradient(130deg, color-mix(in srgb, var(--flat) 8%, var(--surface)), var(--flat-bg));}
+.signal.down {background: linear-gradient(130deg, color-mix(in srgb, var(--down) 8%, var(--surface)), var(--down-bg));}
+.signal-value > span {font-size: 25px;}
+.signal-value strong {letter-spacing: -.8px;}
+.analyst-note p {line-height: 1.95;}
+.score-track i {transition: left .8s var(--ease-out);}
+.confidence {border-top-color: color-mix(in srgb, currentColor 10%, transparent);}
+.button {border-radius: 9px; min-height: 39px;}
+.button:hover:not(:disabled) {transform: translateY(-1px); box-shadow: 0 5px 18px #0000000d;}
+.full-detail {width: 100%; margin-top: 6px; border-color: color-mix(in srgb, var(--accent) 25%, var(--border)); color: var(--accent) !important;}
+.full-detail svg, .text-button svg {transition: transform .4s var(--ease-out);}
+.full-detail:hover svg, .text-button:hover svg {transform: translateX(3px);}
+.news-rail {border: 1px solid var(--border); border-radius: var(--panel-radius); margin: 28px 22px 28px 0; top: 18px; height: calc(100dvh - 180px); min-height: 620px; box-shadow: 0 10px 32px #00000008; overflow: hidden;}
+.rail-header {padding-top: 23px;}
+.news-card {position: relative; transition: background .3s;}
+.news-card h3 {font-size: 13px; line-height: 1.75;}
+.news-card:hover h3 a {color: var(--title);}
+.news-card::before {position: absolute; content: ''; left: -21px; top: 27px; height: 25px; width: 2px; border-radius: 2px; background: var(--accent); transform: scaleY(0); transform-origin: top; transition: transform .35s var(--ease-out);}
+.news-card:hover::before {transform: scaleY(1);}
+.news-summary {font-size: 11px;}
+.signal.compact {padding: 10px; border-radius: 8px;}
+.news-search {border-radius: 9px;}
+.news-search:focus-within {box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 7%, transparent);}
+.news-latencies {opacity: .75; transition: opacity .3s;}
+.news-card:hover .news-latencies {opacity: 1;}
+.live-status.good > .status-dot {box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 9%, transparent);}
+.source-list {padding-bottom: 12px;}
+.source-row {padding-top: 12px; padding-bottom: 12px;}
+.event-number {border-radius: 7px; background: var(--raised);}
+.export-card, .coverage-sources > div {border-radius: 11px; transition: transform .35s var(--ease-out), border-color .3s;}
+.export-card:hover {transform: translateY(-2px);}
+.drawer-backdrop {backdrop-filter: blur(8px);}
+.drawer {animation-duration: .5s; border-radius: 20px 0 0 20px;}
+.drawer-backdrop.closing {animation: overlay-away .2s ease-in both;}
+.drawer-backdrop.closing .drawer {animation: drawer-away .2s ease-in both;}
+.drawer-header {background: color-mix(in srgb, var(--surface) 92%, transparent); backdrop-filter: blur(16px);}
+.drawer-header h2 {font-weight: 550;}
+.scenario {border-radius: 10px;}
+.detail-review-note {border-radius: 9px;}
+.detail-review-note .direction-change:first-child {margin-top: 0;}
+.manual-layout {padding-top: 32px; animation: terminal-reveal .5s var(--ease-out) both;}
+.manual-input input, .manual-input textarea {border-radius: 9px;}
+.manual-input input:focus, .manual-input textarea:focus {box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 8%, transparent);}
+.manual-output .empty-state {min-height: 290px;}
+.manual-process {padding-bottom: 36px;}
+.live-main > .page-title, .session-panel, .price-market-panel {animation: terminal-reveal .65s var(--ease-out) both;}
+.session-panel {animation-delay: .06s;}
+.price-market-panel {animation-delay: .12s;}
+.app-footer {background: transparent; padding-top: 21px; padding-bottom: 21px;}
+@keyframes terminal-reveal {from {opacity: 0; transform: translateY(10px);} to {opacity: 1; transform: translateY(0);}}
+@keyframes overlay-away {to {opacity: 0;}}
+@keyframes drawer-away {to {transform: translateX(30px); opacity: .4;}}
+@keyframes price-line-reveal {from {stroke-dashoffset: 1; opacity: .5;} to {stroke-dashoffset: 0; opacity: 1;}}
+@keyframes forecast-breathe {0%, 100% {opacity: .5; transform: scale(.85);} 50% {opacity: 1; transform: scale(1.08);}}
+@keyframes forecast-drift {0%, 100% {transform: translate(-3px, 0); opacity: .6;} 50% {transform: translate(4px, var(--forecast-drift-y)); opacity: 1;}}
+@media (min-width: 1700px) {.market-chart-layout {grid-template-columns: minmax(0, 1fr) 178px;} .forecast-direction {font-size: 20px;} :root[lang="en"] .forecast-direction {font-size: 18px;} .forecast-motion {height: 138px;}}
+@media (max-width: 1250px) {.market-chart-layout {grid-template-columns: minmax(0, 1fr) 130px;} .forecast-lane {padding-left: 8px; padding-right: 8px;} .forecast-motion, .forecast-arrow-scene {width: 114px;} .forecast-direction {font-size: 16px;} :root[lang="en"] .forecast-direction {font-size: 14px;} .candle-toolbar {flex-wrap: wrap;} .candle-toolbar > div {margin-left: auto;} .chart-time-axis span:nth-child(2) {display: none;} .reference-threshold {display: none;} .news-rail {margin-right: 18px;} .local-chip {font-size: 8px;}}
+@media (max-width: 960px) {.live-layout {grid-template-columns: 1fr;} .news-rail {height: 740px; min-height: 0; margin: 0 24px 28px; position: static;} .market-chart-layout {grid-template-columns: minmax(0, 1fr) 148px;} .local-chip {display: none;}}
+@media (max-width: 600px) {
+  .app-header {height: 74px;} .workspace-bar {height: 53px;} .header-meta {gap: 12px;}
+  .page-title h1 {font-size: 26px;} .page-title p {font-size: 10px;}
+  .live-main {padding-top: 26px; padding-bottom: 24px;}
+  .session-panel {padding-top: 18px; padding-bottom: 18px;} .session-main > strong {font-size: 20px;} .countdown > strong {font-size: 23px;}
+  .price-market-heading {padding-top: 20px;} .price-market-heading h2 {font-size: 18px;}
+  .quote-row {padding-top: 18px; padding-bottom: 18px;} .quote-value > strong {font-size: 36px;} .quote-value b {font-size: 10px;}
+  .market-delay {font-size: 7px; padding: 5px 7px;}
+  .market-chart-layout {grid-template-columns: minmax(0, 1fr) 100px; min-height: 250px;}
+  .forecast-lane {padding-top: 18px; padding-bottom: 13px;}
+  .forecast-lane-heading {gap: 4px;} .forecast-lane-heading > span {font-size: 7px; letter-spacing: .8px;}
+  .forecast-horizon {font-size: 8px;} .forecast-motion {height: 85px; width: 90px;} .forecast-arrow-scene {width: 90px;}
+  .forecast-aura {width: 90px; height: 90px;} .forecast-orbit {width: 67px; height: 67px;}
+  .forecast-direction {font-size: 14px;} :root[lang="en"] .forecast-direction {font-size: 12px;}
+  .forecast-update {font-size: 7px; max-width: 76px;} .forecast-update small {font-size: 6px; margin-left: 2px;}
+  .forecast-detail {padding: 6px 8px; font-size: 8px; gap: 3px; margin-top: 12px;} .forecast-detail svg {width: 11px;}
+  .native-candles {padding: 13px 10px 13px 12px;} .native-candles svg {min-height: 155px;}
+  .candle-toolbar {font-size: 8px; gap: 5px;} .candle-toolbar > div {width: 100%; margin-left: 0; justify-content: space-between; gap: 0;}
+  .candle-toolbar button {padding: 4px; font-size: 8px;} .candle-toolbar button.chart-save {margin-left: 2px;}
+  .candle-readout {gap: 5px 7px; font-size: 8px; padding: 13px 0;} .candle-readout time {width: 100%;}
+  .intraday-chart {padding-left: 12px; padding-right: 12px;} .intraday-chart svg {height: 190px;}
+  .daily-reference-strip {gap: 8px 12px; margin-bottom: 22px; font-size: 8px;} .daily-reference-strip > div {gap: 5px;} .daily-reference-strip strong {font-size: 12px;}
+  .news-rail {margin-left: 18px; margin-right: 18px; border-radius: 14px;}
+  .panel-heading h2 {font-size: 15px;} .drawer {border-radius: 0;}
+  .local-chip {display: none;}
+}
+@media (prefers-reduced-motion: reduce) {*, *::before, *::after {animation: none !important; transition: none !important; scroll-behavior: auto !important;}}

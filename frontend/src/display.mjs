@@ -86,8 +86,8 @@ export function formatDuration(seconds) {
 }
 
 export function discoveryDelay(article) {
-  if (article.ingestion_kind === 'backfill') return '历史回补，不计实时发现延迟';
-  if (!['exact', 'second', 'minute', 'datetime'].includes(article.timestamp_precision)) return '发现延迟：原始时间精度不足';
+  if (article.ingestion_kind === 'backfill') return '历史回补';
+  if (!['exact', 'second', 'minute', 'datetime'].includes(article.timestamp_precision)) return '发现延迟 —';
   const seconds = dateDeltaSeconds(article.published_at, article.first_seen_at);
-  return seconds === null ? '发现延迟：无法计算' : `发现延迟 ${formatDuration(seconds)}`;
+  return seconds === null ? '发现延迟 —' : `发现延迟 ${formatDuration(seconds)}`;
 }

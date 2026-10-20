@@ -49,5 +49,5 @@ export function AnalysisLanguage({id, result, part = 'brief', children}: {id: st
     })};
     return <>{children(english)}</>;
   }
-  return <div className="translation-status" role="status">{error ? <><p>{error}</p><button className="button outline" onClick={() => setRetry(n => n + 1)}>Retry English analysis</button></> : <><span className="spinner"/><div><strong>{stage === 'queued' ? 'English analysis queued' : 'Preparing English analysis'}</strong><p>{stage === 'queued' ? 'Live briefs take priority in the local model queue. The English version is cached once ready.' : 'The original forecast, scores and evidence are preserved.'}</p></div></>}</div>;
+  return <div className="translation-status" role="status">{error ? <><p>{error}</p><button className="button outline" onClick={() => setRetry(n => n + 1)}>Retry English analysis</button></> : <><span className="spinner"/><div><strong>{stage === 'queued' ? 'English analysis queued' : 'Preparing English analysis'}</strong></div></>}</div>;
 }
