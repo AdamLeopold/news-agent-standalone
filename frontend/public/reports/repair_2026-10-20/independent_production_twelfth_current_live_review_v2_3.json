@@ -1,0 +1,134 @@
+{
+  "generated_at": "2026-10-21T07:54:21.792208+00:00",
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "status": "confirmed_invalid",
+  "scope": "Independent complete free-prose and source review of the completed P12 current brief and its actual English translation; not a workflow pass.",
+  "actual_record": {
+    "file": "reports/repair_2026-10-20/production_twelfth_current_live_actual_v2_3.json",
+    "sha256": "7f3de0d2ff9babf6eb619922c628b3f48b95983f200423f3519786e2b6157178",
+    "analysis_id": "e713a962-366e-4608-aec7-2a3bf032077b",
+    "raw_sha256": "2759581b969997024ad32ecfc846dbe01ff59f72d1f317549a797794e5ad42ff",
+    "source_sha256": {
+      "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+      "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+      "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+      "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+      "ttf_news/public_gateway.py": "08990e223d5e7d1d348967c9625fd29fc2d1e7e58bb000c964b9cfea43b59952",
+      "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+      "ttf_news/analysis.py": "781127633591c780709be6cc43d1a18c0c44a61a6ef873160778c82671bbe2cb",
+      "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+      "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+      "ttf_news/semantics.py": "d054bc812a80e0d28bfc95a098731b6b556ad0304a9775db0ec4d00d660d2d9a",
+      "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+      "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+      "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+      "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+      "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+      "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+      "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+      "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+      "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+      "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+      "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+      "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+      "ttf_news/translation.py": "d47b232a5f77ea68e2d5bc5d092021e9727e555c6b1dd702922325519982d7c5",
+      "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+      "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+      "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+      "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+      "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987"
+    }
+  },
+  "input_as_of": "2026-10-21T07:41:45.877083+00:00",
+  "known_logic_errors": [
+    {
+      "priority": "P2",
+      "family": "supply_demand_evidence_polarity",
+      "field": "news_impact.bullish_evidence[0]",
+      "text": "[N0]英国监管批准Jackdaw天然气田 → 未来北海产能增加，潜在供应提升",
+      "finding": "Future potential gas supply expansion is placed in the bullish TTF bucket without a cited opposite mechanism. Company/project approval is not itself a bullish TTF supply mechanism.",
+      "source": "N0 Jackdaw regulatory approval is a future project with potential around 6% of projected UK North Sea production; no current production asserted."
+    },
+    {
+      "priority": "P2",
+      "family": "notice_state_and_unknown_flow",
+      "fields": [
+        "news_impact.summary",
+        "analysis.summary",
+        "close_forecast.basis"
+      ],
+      "texts": [
+        "英国批准Jackdaw天然气田为未来北海产能提供约6%产量，属于未来供给扩张；Gassco Troll的容量约束公告均为未来计划，未导致当前供给损失。两者对当日TTF价格影响有限，整体新闻冲击为中性。",
+        "Jackdaw批准为未来北海产能提供潜在供应，Gassco Troll容量约束均为未来计划，未导致当前供给损失。两者对当日TTF价格影响有限，整体新闻冲击为中性。",
+        "截至2026‑10‑21，TTF参考价已从前一交易日上涨2.44 EUR/MWh，且无即时供给冲击。新闻冲击为中性，故预期价格继续沿上升趋势延续。"
+      ],
+      "finding": "All Gassco notices are described as future plans with no current loss, although N3 already spans the as-of instant and has unknown actual flow; N4 is explicitly unplanned. No actual-flow observation supports the categorical no-current-loss/no-immediate-shock claim.",
+      "source_controls": {
+        "N2": {
+          "status": "future_planned",
+          "period_utc": [
+            "2026-10-22T04:00Z",
+            "2026-10-23T04:00Z"
+          ],
+          "unavailable_capacity_mcm_d": 13.6
+        },
+        "N3": {
+          "status": "current_planned_other_unknown_flow",
+          "period_utc": [
+            "2026-10-21T04:00Z",
+            "2026-10-22T04:00Z"
+          ],
+          "unavailable_capacity_mcm_d": 13.0
+        },
+        "N4": {
+          "status": "future_unplanned",
+          "period_utc": [
+            "2026-10-23T04:00Z",
+            "2026-10-24T04:00Z"
+          ],
+          "unavailable_capacity_mcm_d": 13.0
+        }
+      }
+    }
+  ],
+  "price_check": {
+    "verdict": "correct_observed_current_vs_previous_reference_comparison",
+    "previous_price": 85.062,
+    "previous_price_date": "2026-10-20",
+    "current_price": 87.505,
+    "observed_at": "2026-10-21T07:31:00+00:00",
+    "available_at": "2026-10-21T07:41:14.057808+00:00",
+    "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+    "unit": "EUR/MWh",
+    "observed_delta": 2.443,
+    "displayed_delta": 2.44,
+    "official_settlement_accuracy": null
+  },
+  "english": {
+    "file": "reports/repair_2026-10-20/production_twelfth_current_live_english_actual_v2_3.json",
+    "sha256": "2711f661c1e2a98865ea055d78533e3c8ef2d456eb5401f9ce828a8249ffefb0",
+    "translation_id": "a1feffde-6b8f-4430-a36b-115e4f7a4b7c",
+    "source_hash": "4b4eb1e9fa2ddb6039d1eca6fdd3b5d6f37135ac4fbc401b4a0d6f3794e45c4c",
+    "source_result_sha256": "4b4eb1e9fa2ddb6039d1eca6fdd3b5d6f37135ac4fbc401b4a0d6f3794e45c4c",
+    "source_hash_matches": true,
+    "verdict": "Faithfully repeats the same material source errors; translation completion does not make the analysis suitable for display.",
+    "texts": [
+      "[N0] UK regulatory approval of Jackdaw gas field → future North Sea capacity increase, potential supply boost",
+      "The UK approval of the Jackdaw gas field provides approximately 6% of future North Sea production capacity, representing future supply expansion; Gassco Troll capacity constraint announcements are all future plans and have not caused current supply loss. Both have limited impact on the TTF price on the day, with the overall news impact being neutral.",
+      "As of 2026‑10‑21, the TTF reference price has risen from the previous trading day by 2.44 EUR/MWh, with no immediate supply shock. The news impact is neutral, so the price is expected to continue along the upward trend."
+    ],
+    "directions_scores_numbers_references_preserved": true,
+    "fixed_source_fact_checks_translated": false,
+    "qualification": "Fixed provenance source_fact_checks retains Chinese terms; natural-language displayed analysis is English. No additional material translation error identified."
+  },
+  "qualifications": [
+    "A neutral news judgment and conditional up close outlook are not rejected merely for their labels.",
+    "The degree judgment that price impact is limited is not treated as observed zero price reaction.",
+    "N2 unavailable-capacity revision and N3 shortened duration are correctly copied in evidence but not adequately reflected in the summary.",
+    "No obvious extreme risk wording is overconfident (P3), not a guarantee of zero tail risk.",
+    "Mixed Jackdaw plus three Gassco notices falls outside the narrow factual grammar eligibility and uses the original free-prose fallback."
+  ],
+  "canonical_records_modified": false,
+  "workflow_status": "failed; twelfth whole-workflow attempt remains failed, 0 complete whole-workflow successes"
+}

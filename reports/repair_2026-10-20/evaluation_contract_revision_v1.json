@@ -1,0 +1,45 @@
+{
+  "revision_id": "evaluation_contract_revision_v1",
+  "created_at_utc": "2026-10-20 19:02:21 UTC",
+  "comparison_cases_file": "reports/repair_2026-10-20/comparison_cases.json",
+  "comparison_cases_sha256": "8d6f9202d21a3d27ac0f6714802d8da2eda76d321e4c820c0d4f73aae41eacd5",
+  "scope": "Only the two additional synthetic same-contract flat-baseline controls; the source fixture and every recorded model result remain immutable.",
+  "rationale": [
+    "News pressure direction is not a calibrated settlement-price magnitude. A 40 mcm/d flow change does not alone identify a move beyond the ±0.30 EUR/MWh flat band.",
+    "A conditionally slightly lower or higher close may remain in the flat band. Requiring the close class to copy the news sign was stronger than the supplied evidence.",
+    "Both controls are amended symmetrically. News mechanism sign remains strict; a supported conditional close forecast may have the same directional family or flat.",
+    "This amendment does not establish actual forecast accuracy, a price elasticity, or any movement magnitude."
+  ],
+  "cases": {
+    "supply_loss_40_with_flat_baseline": {
+      "original_expectations": {
+        "expected_news": "up",
+        "expected_close_sign": "up"
+      },
+      "allowed_close_directions": [
+        "up",
+        "extreme_up",
+        "flat"
+      ],
+      "required_close_evidence_status": "forecast"
+    },
+    "supply_restore_40_with_flat_baseline": {
+      "original_expectations": {
+        "expected_news": "down",
+        "expected_close_sign": "down"
+      },
+      "allowed_close_directions": [
+        "down",
+        "extreme_down",
+        "flat"
+      ],
+      "required_close_evidence_status": "forecast"
+    }
+  },
+  "unchanged_requirements": [
+    "Source facts, as-of boundaries, supply/demand mechanism checks, citations, and no invented announcement price reaction or priced-in attribution remain mandatory.",
+    "The original expectation check, record.contract_passed, raw answers, failed attempts, and latest-stage failure selection remain visible.",
+    "No-result, request failure, null/insufficient close, unsupported opposite direction, or semantically invalid prose cannot pass merely through this amendment.",
+    "Earlier fabricated post-announcement reaction and missing-data-as-neutral errors remain failures; a later logically consistent flat forecast does not relabel those records."
+  ]
+}

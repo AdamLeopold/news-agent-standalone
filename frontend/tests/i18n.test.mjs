@@ -16,6 +16,11 @@ test('the complete analysis workflow has translated UI labels', () => {
     assert.equal(translateText(label, 'zh'), label);
   }
   assert.equal(translateText('模型分析语言：中文', 'en'), 'AI analysis: English');
+  assert.equal(translateText('价格基准复核未通过','en'),'Price baseline review failed');
+  assert.equal(translateText('来源事实复核未通过','en'),'Source facts review failed');
+  assert.equal(translateText('查看原始分析','en'),'View original analysis');
+  assert.equal(translateText('历史日价参考','en'),'Historical daily reference');
+  assert.equal(translateText('上一交易日日价','en'),'Previous-session reference');
   assert.equal(translateText('模型把握程度未经统计校准，不代表已验证准确率', 'en'), 'Model confidence is uncalibrated and does not represent verified accuracy.');
 });
 test('dynamic timestamps, measured delays and counts retain their values', () => {

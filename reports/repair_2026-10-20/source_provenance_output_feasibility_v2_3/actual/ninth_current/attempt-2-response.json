@@ -1,0 +1,22 @@
+{
+  "response": {
+    "model": "gpt-oss:20b",
+    "created_at": "2026-10-21T05:14:16.499772Z",
+    "message": {
+      "role": "assistant",
+      "content": "{\"news_impact\":{\"bullish_evidence\":[],\"bearish_evidence\":[\"[N0] Gassco Troll计划维护导致可用产能下降7.6 mcm/d → TTF价格上行机制\",\"[N2] Gassco Troll计划维护导致可用产能下降13.0 mcm/d → TTF价格上行机制\"],\"neutralizing_evidence\":[],\"summary\":\"Gassco Troll计划维护导致未来两天内可用产能分别下降7.6 mcm/d（10/22‑10/23）和13.0 mcm/d（10/21‑10/22），未确认实际流量损失，可能对TTF价格产生上行压力。\",\"contextual_news_score\":1,\"direction\":\"up\",\"confidence\":0.6,\"signal_strength\":\"moderate\"},\"close_forecast\":{\"basis\":\"市场基准已上行（+2.668 EUR/MWh）且未见逆转迹象，且两条计划维护公告均为容量约束，预期收盘价相对前一交易日继续上涨。\",\"summary\":\"基于市场基准已上行且未见逆转迹象，预计收盘价相对前一交易日继续上涨。\",\"evidence_status\":\"forecast\",\"direction\":\"up\",\"confidence\":0.7,\"extreme_move_risk\":\"\"},\"analysis\":{\"summary\":\"两条Gassco Troll计划维护公告导致未来两天内可用产能下降20.6 mcm/d，未确认实际流量损失，预期对TTF价格产生上行压力。\",\"evidence\":[\"[N0] Gassco Troll计划维护导致可用产能下降7.6 mcm/d → TTF价格上行机制\",\"[N2] Gassco Troll计划维护导致可用产能下降13.0 mcm/d → TTF价格上行机制\"],\"negation_or_reversal\":[],\"priced_in_comment\":\"price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格\",\"matched_terms\":[\"capacity_constraint\"],\"historical_comparisons\":[\"[E1]历史记录日期2026-10-19，类别为供应中断/复产；公告容量限制不等于已核实流量损失；1d同合约参考价差-2.98欧元/MWh（截止2026-10-20）；同期价差不能归因于事件；输入未提供可验证的天气及LNG差异，需核对具体供需情景\"]},\"risk_flags\":[],\"references\":[{\"id\":\"N0\",\"url\":\"\"},{\"id\":\"N2\",\"url\":\"\"}],\"missing_fields\":[]}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 33763969166,
+    "load_duration": 10482750,
+    "prompt_eval_count": 9119,
+    "prompt_eval_cached_count": 0,
+    "prompt_eval_duration": 9258111000,
+    "eval_count": 1348,
+    "eval_duration": 24320064000
+  },
+  "raw_content": "{\"news_impact\":{\"bullish_evidence\":[],\"bearish_evidence\":[\"[N0] Gassco Troll计划维护导致可用产能下降7.6 mcm/d → TTF价格上行机制\",\"[N2] Gassco Troll计划维护导致可用产能下降13.0 mcm/d → TTF价格上行机制\"],\"neutralizing_evidence\":[],\"summary\":\"Gassco Troll计划维护导致未来两天内可用产能分别下降7.6 mcm/d（10/22‑10/23）和13.0 mcm/d（10/21‑10/22），未确认实际流量损失，可能对TTF价格产生上行压力。\",\"contextual_news_score\":1,\"direction\":\"up\",\"confidence\":0.6,\"signal_strength\":\"moderate\"},\"close_forecast\":{\"basis\":\"市场基准已上行（+2.668 EUR/MWh）且未见逆转迹象，且两条计划维护公告均为容量约束，预期收盘价相对前一交易日继续上涨。\",\"summary\":\"基于市场基准已上行且未见逆转迹象，预计收盘价相对前一交易日继续上涨。\",\"evidence_status\":\"forecast\",\"direction\":\"up\",\"confidence\":0.7,\"extreme_move_risk\":\"\"},\"analysis\":{\"summary\":\"两条Gassco Troll计划维护公告导致未来两天内可用产能下降20.6 mcm/d，未确认实际流量损失，预期对TTF价格产生上行压力。\",\"evidence\":[\"[N0] Gassco Troll计划维护导致可用产能下降7.6 mcm/d → TTF价格上行机制\",\"[N2] Gassco Troll计划维护导致可用产能下降13.0 mcm/d → TTF价格上行机制\"],\"negation_or_reversal\":[],\"priced_in_comment\":\"price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格\",\"matched_terms\":[\"capacity_constraint\"],\"historical_comparisons\":[\"[E1]历史记录日期2026-10-19，类别为供应中断/复产；公告容量限制不等于已核实流量损失；1d同合约参考价差-2.98欧元/MWh（截止2026-10-20）；同期价差不能归因于事件；输入未提供可验证的天气及LNG差异，需核对具体供需情景\"]},\"risk_flags\":[],\"references\":[{\"id\":\"N0\",\"url\":\"\"},{\"id\":\"N2\",\"url\":\"\"}],\"missing_fields\":[]}",
+  "raw_content_sha256": "ebff8390994e266ae05f6c8f69831915609b675df1f21f73facf3e4dcd49d3bf",
+  "elapsed_seconds": 33.77960741589777
+}

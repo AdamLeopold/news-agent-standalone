@@ -1,0 +1,48 @@
+{
+  "schema_version": "ttf-operational-anchor-policy-correction-v1",
+  "created_at": "2026-10-21T03:29:34.601261+00:00",
+  "reviewer_type": "codex_subagent",
+  "compiled_by": "/root/event_retrieval",
+  "status": "report_policy_consistency_fix_verified_not_release_approval",
+  "policy": {
+    "file": "reports/repair_2026-10-20/release_policy_v1.json",
+    "sha256": "b60aa328874ba58eea2114da80e9b5a480089c6b7f9c86e0bc8adc0e8e6114f8"
+  },
+  "helper": {
+    "file": "scripts/repair-validation-report.py",
+    "sha256": "07e49fbc82c5acc6987a9a6890e2cce34869895c67f5f2c210c2580a5260747c"
+  },
+  "self_tests": {
+    "file": "reports/repair_2026-10-20/anchor-operational-report-self-tests.log",
+    "sha256": "39eabb682f3ffc51ad543f97265baa2c5663b82786db8248da202b2470103ace"
+  },
+  "independent_review": {
+    "file": "reports/repair_2026-10-20/independent_operational_anchor_policy_and_public_log_review_v2_3.json",
+    "sha256": "b974d9560d79c1d4132565cc73054f0858a60b7e71c49cbf0a73cd7c82689121"
+  },
+  "full_unit_binding": {
+    "file": "reports/repair_2026-10-20/price_zero_full_unit_binding_v2_3.json",
+    "sha256": "60530c7d5d968b25eb913cca3901eba506a926072c123de95888b0008b0af73d"
+  },
+  "original_policy_has_diagnostic_availability_quota": false,
+  "reason": "原运营判据把四个锚点诊断样本全部出稿成功混入运营门，产生原计划未要求的子集100%可用率。严格全成功仍保留事实false，失败不算正确预测。",
+  "strict_field_preserved": "anchor_current_version_real_model_validation",
+  "operational_field": "operational_anchor_terminal",
+  "requirements": [
+    "四条独立当前输入真实模型记录和完整最终源码执行路径绑定",
+    "接受输出最终校验通过并精确独立全文复核无已知P2",
+    "拒绝输出result=null，真实两次校验失败（或既有严格审计预算终态），最后原raw在当前门仍被拒，完整路径和精确记录SHA的独立拒绝复核",
+    "真实生产manual/detail/English/current_live完整成功仍为硬要求"
+  ],
+  "no_generic_status_or_error_waiver": true,
+  "strict_standard_changed": false,
+  "expectations_changed": false,
+  "direction_changed": false,
+  "failed_raw_reclassified_as_delivered": false,
+  "rejected_counted_as_correct_predictions": false,
+  "no_model_calls": true,
+  "no_database_access": true,
+  "no_network_calls": true,
+  "release_ready": false,
+  "boundary": "本文件证明报告判据与原明确错误合同一致，不证明生产成功、全部诊断出稿或市场预测准确。当前拒绝的真实缺锚EPCM仍无有效方向。"
+}

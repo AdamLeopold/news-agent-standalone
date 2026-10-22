@@ -1,0 +1,50 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T05:16:29.692346+00:00",
+  "decision": "NO_GO_DO_NOT_ADOPT_PRIVATE_OUTPUT_COPY_REDUCTION",
+  "scope": "One exact frozen two-context feasibility pilot, maximum2actual requests each. No further sample search or production adoption.",
+  "plan": {
+    "file": ".runtime/source-provenance-pilot-final/proposal_manifest.json",
+    "sha256": "dc6875635339a6d462879ca62030956ce213e4efcbe2874f47aaa33dd8679c62"
+  },
+  "private_candidate": {
+    "file": ".runtime/source-provenance-pilot-final/candidate_analysis.py",
+    "sha256": "f5ae74f4c5aaab81c8c40e9db737aab2b9baaf6d716d51eae18510df8131792a"
+  },
+  "static_source_review": {
+    "file": "reports/repair_2026-10-20/independent_source_provenance_pilot_final_source_review_v2_3.json",
+    "sha256": "0db12ae9cb186d7121c2e3977bc537f025a67a84781e43813837ff4757f3aba3"
+  },
+  "actual_terminal": {
+    "file": ".runtime/source-provenance-pilot-final/actual-frozen-two-contexts-1/terminal.json",
+    "sha256": "0b01dcb4e58e97b3890dbc07a68eff51fa1a254f6734dc0e96cc416737850923"
+  },
+  "manual_complete_actual_review": {
+    "file": "reports/repair_2026-10-20/independent_source_provenance_pilot_ninth_manual_actual_review_v2_3.json",
+    "sha256": "89b26cceab90fd62913e487a1e841a69822b6f9f5919e748e42e66f24d2ee139"
+  },
+  "current_complete_actual_review": {
+    "file": "reports/repair_2026-10-20/independent_source_provenance_pilot_ninth_current_actual_review_v2_3.json",
+    "sha256": "4d4561a19fa0a69449488d0d2b128bd0ff99c97e75a7a6701ae017b2113035f6"
+  },
+  "actual_contexts": 2,
+  "actual_model_requests": 4,
+  "safe_delivered_context_results": 0,
+  "manual_parser_completed_but_unsafe": true,
+  "current_genuine_failed_null": true,
+  "reason": "Static guard preservation and reduced deterministic copying did not establish safe generation in these two actual contexts. The accepted manual prose incorrectly puts a future capacity reduction into the current close window; current actual drafts remain genuinely invalid. A correct separate backend provenance table does not repair model free prose.",
+  "secondary_diagnostic_not_counted_as_true_logic_failure": "供给约束压力上升 describes increasing supply constraints and can be a valid bullish risk channel. Its erroneous supply-increase diagnostic is preserved separately; true unknown-flow-zero and wrong-slot/rate-sum errors still reject those raw bodies.",
+  "production_action": "Retain original source_fact_checks native output contract and long operator evidence prefixes; do not deploy this private source-provenance variant. The separately reviewed8ac price-role marker correction remains applied independently.",
+  "root_analysis_current_sha256": "8ac01ca8120def7f963cdeab8f4eb0bd2dae4c71eb921a9ab5941f70bf1fe1a5",
+  "original_outputs_states_and_private_attempts_preserved": true,
+  "no_cherry_picked_retry_or_label_change": true,
+  "does_not_establish_market_or_settlement_accuracy": true,
+  "does_not_establish_causal_tokenburden_effect": true,
+  "prior_nine_production_whole_failures_remain_failed": true,
+  "overall_release_passed": false,
+  "new_model_calls_by_reviewer": 0,
+  "database_access": false,
+  "network_calls_by_reviewer": 0,
+  "source_modification": false
+}

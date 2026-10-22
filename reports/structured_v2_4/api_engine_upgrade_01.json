@@ -1,0 +1,440 @@
+{
+  "status": "passed",
+  "started_at": "2026-10-22T16:16:57.888203+00:00",
+  "expected_prompt_version": "ttf-news-standalone-2.4.4",
+  "scope": "engine_upgrade_current_window_forecast_refresh",
+  "synthetic_live_input": false,
+  "raw_thinking_included": false,
+  "stages": [
+    {
+      "name": "preservation_before",
+      "status": "passed",
+      "started_at": "2026-10-22T16:16:57.920765+00:00",
+      "checks": {
+        "passed": true,
+        "protected_analysis_count": 602,
+        "protected_nonnull_field_count": 1014,
+        "current_analysis_count": 603,
+        "new_analysis_count": 1,
+        "protected_snapshot_count": 7,
+        "new_snapshot_count": 0,
+        "original_validation_record_count": 1,
+        "latest_baseline_unchanged": true,
+        "original_baseline": {
+          "id": 210,
+          "created_at": "2026-10-14T05:51:48.181167+00:00",
+          "type": "validation_started"
+        },
+        "failures": []
+      },
+      "finished_at": "2026-10-22T16:16:58.410611+00:00",
+      "elapsed_seconds": 0.49
+    },
+    {
+      "name": "live_api_v4_and_managed_identity",
+      "status": "passed",
+      "started_at": "2026-10-22T16:16:58.411403+00:00",
+      "checks": {
+        "analysis_generation_version": "ttf-news-standalone-2.4.4",
+        "server_pid": 59805,
+        "inference_enabled": true,
+        "collector_enabled": true,
+        "deployment": {
+          "file": ".runtime/structured-reasoning-v4/20261022T160627262875Z-resume/switch.json",
+          "sha256": "48a710c0be870b769a3e0b3ec00b355d00f8ea1c61904ade80c42eccdefbf473"
+        },
+        "health": {
+          "file": "reports/structured_v2_4/api_engine_upgrade_01_artifacts/health_before.json",
+          "sha256": "bf56fb95ca4bad42b4df1a263618c9c008dcbbc12240e564130796df79a9459c"
+        }
+      },
+      "finished_at": "2026-10-22T16:16:58.620607+00:00",
+      "elapsed_seconds": 0.209
+    },
+    {
+      "name": "sse_initial_connection",
+      "status": "passed",
+      "started_at": "2026-10-22T16:16:58.621259+00:00",
+      "checks": {
+        "id": 261719,
+        "type": "stream_ready",
+        "kind": null,
+        "matched_analysis_id": null,
+        "replayed_event_count": 1,
+        "cursor_mode": "initial_ready"
+      },
+      "finished_at": "2026-10-22T16:16:58.625072+00:00",
+      "elapsed_seconds": 0.004
+    },
+    {
+      "name": "append_engine_upgrade_current_window",
+      "status": "passed",
+      "started_at": "2026-10-22T16:16:58.625638+00:00",
+      "checks": {
+        "actual_as_of": "2026-10-22T16:16:58.626202+00:00",
+        "session": {
+          "trade_date": "2026-10-23",
+          "window_start": "2026-10-22T15:15:00+00:00",
+          "window_end": "2026-10-23T15:15:00+00:00",
+          "cutoff_utc": "2026-10-23T15:15:00+00:00",
+          "cutoff_local": "2026-10-23T17:15:00+02:00",
+          "cutoff_singapore": "2026-10-23T23:15:00+08:00",
+          "display_timezone": "Europe/Amsterdam",
+          "seconds_to_close": 82681,
+          "calendar_source": "https://www.ice.com/publicdocs/ICE_Endex_Trading_Schedule.pdf",
+          "calendar_quality": "official_2026_2027",
+          "boundary": "[previous_settlement, current_settlement)"
+        },
+        "outlook_trigger": "engine_upgrade",
+        "source_id": "2221a75361f049315f77be94",
+        "source_version": 1,
+        "source_published_at": "2026-10-22T13:00:00+00:00",
+        "source_is_historical_background": true,
+        "window_news_count": 0,
+        "fresh_news_ids_observed": [],
+        "fresh_news_workflow_satisfied": false,
+        "input": {
+          "file": "reports/structured_v2_4/api_engine_upgrade_01_artifacts/engine_upgrade_exact_creation_input.json",
+          "sha256": "c1bf09130bce67a3c3820feb7127c249532c2d912021611ed03be9e5edb1973c"
+        },
+        "source": {
+          "file": "reports/structured_v2_4/api_engine_upgrade_01_artifacts/engine_upgrade_background_source.json",
+          "sha256": "255978a2fec62d80833b79faad781cfabf804b296b1a23c1bb25734753c94e4f"
+        },
+        "analysis_id": "eea9e279-ea05-4d4f-87c9-0eb46839f30d",
+        "append_only_normal_store_job": true
+      },
+      "finished_at": "2026-10-22T16:17:00.651834+00:00",
+      "elapsed_seconds": 2.026
+    },
+    {
+      "name": "sse_engine_queued_event",
+      "status": "passed",
+      "started_at": "2026-10-22T16:17:00.653222+00:00",
+      "checks": {
+        "id": 261720,
+        "type": "analysis_queued",
+        "kind": null,
+        "matched_analysis_id": "eea9e279-ea05-4d4f-87c9-0eb46839f30d",
+        "replayed_event_count": 1,
+        "cursor_mode": "Last-Event-ID"
+      },
+      "finished_at": "2026-10-22T16:17:00.662837+00:00",
+      "elapsed_seconds": 0.01
+    },
+    {
+      "name": "engine_live_structural_identity",
+      "status": "passed",
+      "started_at": "2026-10-22T16:17:00.663970+00:00",
+      "checks": {
+        "prompt_version": "ttf-news-standalone-2.4.4",
+        "workflow_version": "ttf-structured-reasoning-2.4.4",
+        "typed_plan_sha256": "91ea110a0b591bcb4170c731a9869cc373198f5770d0892dac7d15d0f2ac8a52",
+        "catalog_sha256": "73abfc735825c752e81f22399794d31fe6fbc7b7b4d9d4c89ced2f5daa91b7be",
+        "source_documents_sha256": "77d1369e641af7364d758da5ff2baceffabd3b5786a577f16c4650adf0bb581b",
+        "source_document_count": 1,
+        "prepared_context_sha256": "18aa6efeea7e63a2fc005f1bf45f7b8f8afad02e938b00c833767329e804625a",
+        "news_direction": "flat",
+        "close_direction": null,
+        "summary_sha256": "485db5f1e561ff358fb9ca9948d7a23a4179d3ad33bc570f7dcac62e7a5ec8de",
+        "shared_plan_body_identity": true,
+        "ordinary_classification_semantics_independently_verified": false,
+        "analysis_id": "eea9e279-ea05-4d4f-87c9-0eb46839f30d",
+        "actual": {
+          "file": "reports/structured_v2_4/api_engine_upgrade_01_artifacts/current_live_actual.json",
+          "sha256": "5090f96b7ff2405d23a3b3e4842fb7f16fdf41cb3e4a5a26f7c23b74d1b452b5"
+        }
+      },
+      "finished_at": "2026-10-22T16:18:29.207310+00:00",
+      "elapsed_seconds": 88.543
+    },
+    {
+      "name": "sse_engine_completed_event",
+      "status": "passed",
+      "started_at": "2026-10-22T16:18:29.209301+00:00",
+      "checks": {
+        "id": 261748,
+        "type": "analysis_completed",
+        "kind": "short",
+        "matched_analysis_id": "eea9e279-ea05-4d4f-87c9-0eb46839f30d",
+        "replayed_event_count": 29,
+        "cursor_mode": "Last-Event-ID"
+      },
+      "finished_at": "2026-10-22T16:18:29.214742+00:00",
+      "elapsed_seconds": 0.005
+    },
+    {
+      "name": "engine_automatic_english_same_plan",
+      "status": "passed",
+      "started_at": "2026-10-22T16:18:29.215710+00:00",
+      "checks": {
+        "same_original_catalog_and_plan": true,
+        "same_news_and_close_decision": true,
+        "additional_model_calls": 0,
+        "typed_plan_sha256": "91ea110a0b591bcb4170c731a9869cc373198f5770d0892dac7d15d0f2ac8a52",
+        "catalog_sha256": "73abfc735825c752e81f22399794d31fe6fbc7b7b4d9d4c89ced2f5daa91b7be",
+        "same_plan_bilingual_body_identity": true,
+        "protected_labels_numbers_citations_unchanged": true,
+        "summary_sha256": "1bb1a720ee3cf1819e45726d727bbd1f0f972f19cd18017c6b5944f62e949789",
+        "ordinary_classification_semantics_independently_verified": false,
+        "translation_id": "7a06e6d3-cbe4-47c0-950e-aa6fc64d5796",
+        "analysis_id": "eea9e279-ea05-4d4f-87c9-0eb46839f30d",
+        "actual": {
+          "file": "reports/structured_v2_4/api_engine_upgrade_01_artifacts/engine_english_actual.json",
+          "sha256": "dedae5863aa3546d76574b712ef408724990e6a5c71c8e3fc2831e5cb8fa2659"
+        },
+        "automatic_enqueue_verified": true
+      },
+      "finished_at": "2026-10-22T16:18:29.242402+00:00",
+      "elapsed_seconds": 0.027
+    },
+    {
+      "name": "dashboard_engine_current_window",
+      "status": "passed",
+      "started_at": "2026-10-22T16:18:29.243577+00:00",
+      "checks": {
+        "analysis_id": "eea9e279-ea05-4d4f-87c9-0eb46839f30d",
+        "trade_date": "2026-10-23",
+        "exact_new_id": true,
+        "natural_rollover": false,
+        "requested_at": "2026-10-22T16:18:29.244413+00:00",
+        "received_at": "2026-10-22T16:18:30.178261+00:00",
+        "actual": {
+          "file": "reports/structured_v2_4/api_engine_upgrade_01_artifacts/dashboard_live_checkpoint.json",
+          "sha256": "f1e192f7c1e860e21deb739adaab6927ca71f8dcf517ec9f428b9608c2af9556"
+        }
+      },
+      "finished_at": "2026-10-22T16:18:30.185142+00:00",
+      "elapsed_seconds": 0.942
+    },
+    {
+      "name": "csv_jsonl_exports",
+      "status": "passed",
+      "started_at": "2026-10-22T16:18:30.186094+00:00",
+      "checks": {
+        "news": {
+          "csv": {
+            "rows": 4006,
+            "bytes": 5030740,
+            "sha256": "a439d4776b4cd2ecec7f7396a90eb6c837fe50f16d2e65ee0bfe92e901fbd072",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 4006,
+            "bytes": 6724698,
+            "sha256": "db9b10b8be0cfb51ab3e3329848f8c07399f59229d1c34a7ee25c8331bc16175",
+            "parsed": true
+          },
+          "independent_snapshot_requests": true,
+          "row_counts_match": true
+        },
+        "daily": {
+          "csv": {
+            "rows": 630,
+            "bytes": 3936425,
+            "sha256": "d1c18c74aeee489ce86d842941f0deb777250137b723d8dd5c30061c7f23c58d",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 630,
+            "bytes": 3827706,
+            "sha256": "d49a89091f1af303ee03849a04397cdd09f5af4a679bd201afd73a6f5c2a6b5c",
+            "parsed": true
+          },
+          "independent_snapshot_requests": true,
+          "row_counts_match": true
+        },
+        "events": {
+          "csv": {
+            "rows": 1580,
+            "bytes": 5990440,
+            "sha256": "893c1335332e517684b3150af6e13e277a464562f9d3db388418f14d8a7c807b",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 1580,
+            "bytes": 6404461,
+            "sha256": "1034cf5dae96816e9a30ca57893137b6003eaaac85ae7e9e4808b5a233bef838",
+            "parsed": true
+          },
+          "independent_snapshot_requests": true,
+          "row_counts_match": true
+        },
+        "prices": {
+          "csv": {
+            "rows": 65885,
+            "bytes": 26616744,
+            "sha256": "f5388d831234ef146328e968f62866450d94c25d9b9711264fbd8ceff9bc8a00",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 65885,
+            "bytes": 43747246,
+            "sha256": "6865feba919414e763ad17e4689eeaca975bb4891a7150c049c38d3fd569adfb",
+            "parsed": true
+          },
+          "independent_snapshot_requests": true,
+          "row_counts_match": true
+        }
+      },
+      "finished_at": "2026-10-22T16:18:34.589072+00:00",
+      "elapsed_seconds": 4.403
+    },
+    {
+      "name": "dashboard_final_window_isolation",
+      "status": "passed",
+      "started_at": "2026-10-22T16:18:34.590390+00:00",
+      "checks": {
+        "analysis_id": "eea9e279-ea05-4d4f-87c9-0eb46839f30d",
+        "trade_date": "2026-10-23",
+        "exact_new_id": true,
+        "natural_rollover": false,
+        "requested_at": "2026-10-22T16:18:34.591291+00:00",
+        "received_at": "2026-10-22T16:18:35.232175+00:00",
+        "actual": {
+          "file": "reports/structured_v2_4/api_engine_upgrade_01_artifacts/dashboard_final_checkpoint.json",
+          "sha256": "c0329b2f445e18139335378e04d4f5763675832326a08a32c21c57be92cba788"
+        }
+      },
+      "finished_at": "2026-10-22T16:18:35.239230+00:00",
+      "elapsed_seconds": 0.649
+    },
+    {
+      "name": "deployed_source_bytes_stable",
+      "status": "passed",
+      "started_at": "2026-10-22T16:18:35.240173+00:00",
+      "checks": {
+        "current_source_bytes_unchanged": true,
+        "core_sha256": "0b15b314721e86afd9d32e191deaf939b1db30b58ec8565d0c017f38c3047c06"
+      },
+      "finished_at": "2026-10-22T16:18:35.250759+00:00",
+      "elapsed_seconds": 0.011
+    },
+    {
+      "name": "preservation_after",
+      "status": "passed",
+      "started_at": "2026-10-22T16:18:35.251684+00:00",
+      "checks": {
+        "passed": true,
+        "protected_analysis_count": 602,
+        "protected_nonnull_field_count": 1014,
+        "current_analysis_count": 604,
+        "new_analysis_count": 2,
+        "protected_snapshot_count": 7,
+        "new_snapshot_count": 0,
+        "original_validation_record_count": 1,
+        "latest_baseline_unchanged": true,
+        "original_baseline": {
+          "id": 210,
+          "created_at": "2026-10-14T05:51:48.181167+00:00",
+          "type": "validation_started"
+        },
+        "failures": []
+      },
+      "finished_at": "2026-10-22T16:18:35.499083+00:00",
+      "elapsed_seconds": 0.247
+    }
+  ],
+  "job_timeout_including_queue_seconds": 600,
+  "live_first": true,
+  "old_release_or_83_record_replay_required": false,
+  "whole_workflow_retry": false,
+  "source_sha256": {
+    "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+    "ttf_news/analysis.py": "781127633591c780709be6cc43d1a18c0c44a61a6ef873160778c82671bbe2cb",
+    "ttf_news/api.py": "afe04d7c94a1dcb40840adffb58c5a4ade76552e173b103375e88d7cd4190c48",
+    "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+    "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+    "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+    "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+    "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+    "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+    "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+    "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+    "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987",
+    "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+    "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+    "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+    "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+    "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+    "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+    "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+    "ttf_news/public_gateway.py": "08990e223d5e7d1d348967c9625fd29fc2d1e7e58bb000c964b9cfea43b59952",
+    "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+    "ttf_news/runtime.py": "bd1e951334fc9117be11f5937ac18d7262d53c3576e9fcb8b8f63fc8ac7bf239",
+    "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+    "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+    "ttf_news/semantics.py": "d054bc812a80e0d28bfc95a098731b6b556ad0304a9775db0ec4d00d660d2d9a",
+    "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+    "ttf_news/store.py": "022cb9b606ee22f01274e3673b22b58df096f60c446703deac157881e681749f",
+    "ttf_news/structured_analysis.py": "915a8920306c671e86f2a07dd592356e3930be38c4a4a43d28542db4d986b47a",
+    "ttf_news/structured_core.py": "0b15b314721e86afd9d32e191deaf939b1db30b58ec8565d0c017f38c3047c06",
+    "ttf_news/structured_core_v2_4_0.py": "e85e97d0825b01320b15e33419a283bd7ba1666f48401e78b13f34bbb4e883ab",
+    "ttf_news/structured_core_v2_4_1.py": "5bbf59d8f58d18ccede7c44a4b8f611313952975273f2b971db8372700049bd7",
+    "ttf_news/structured_core_v2_4_2.py": "6980cbafddf2d84f7ec51f9cb71660af8ed6e0f6c89d3fc1f11ce9eceb6cd372",
+    "ttf_news/structured_core_v2_4_3.py": "7b66352892b7a24d47cb2959a447425cc96d36446003e20f03f7850f1d9619ac",
+    "ttf_news/translation.py": "384072fe3139d8ece9a15915c014c683cfee91b02a2ee9ae059c073655b04d21"
+  },
+  "harness": {
+    "file": ".runtime/structured-reasoning-v4/workflow_v2_4_4_formal.py",
+    "sha256": "24b2fe3d11c78b2d9b5925c2477423a366bd5cb5f8e3f6356a34cf1c348a66fd"
+  },
+  "legacy_mechanics": {
+    "file": ".runtime/live-repair-smoke.py",
+    "sha256": "34978f56573820a44b461cc2f019d05cc77ac6665377b0043612a2e1da31eaa3"
+  },
+  "structured_core": {
+    "file": "ttf_news/structured_core.py",
+    "sha256": "0b15b314721e86afd9d32e191deaf939b1db30b58ec8565d0c017f38c3047c06"
+  },
+  "outlook_trigger": "engine_upgrade",
+  "fresh_news_workflow_satisfied": false,
+  "fresh_ingestion_workflow_passed": false,
+  "engine_harness": {
+    "file": ".runtime/structured-reasoning-v4/engine_upgrade_v2_4_4_formal.py",
+    "sha256": "b1476f9cc7f0f545af905e04bafb84542a61affbcb19cfd76469e46a4be85194"
+  },
+  "preservation_manifest": {
+    "file": ".runtime/structured-reasoning-v4/20261022T160627262875Z-resume/preservation_manifest.json",
+    "sha256": "92cc69d1374ffa9c63d709a288a1a0a6b3259d55db75b5193fe2323466dffb57"
+  },
+  "new_live_analysis_id": "eea9e279-ea05-4d4f-87c9-0eb46839f30d",
+  "engine_upgrade_basis": {
+    "actual_as_of": "2026-10-22T16:16:58.626202+00:00",
+    "session": {
+      "trade_date": "2026-10-23",
+      "window_start": "2026-10-22T15:15:00+00:00",
+      "window_end": "2026-10-23T15:15:00+00:00",
+      "cutoff_utc": "2026-10-23T15:15:00+00:00",
+      "cutoff_local": "2026-10-23T17:15:00+02:00",
+      "cutoff_singapore": "2026-10-23T23:15:00+08:00",
+      "display_timezone": "Europe/Amsterdam",
+      "seconds_to_close": 82681,
+      "calendar_source": "https://www.ice.com/publicdocs/ICE_Endex_Trading_Schedule.pdf",
+      "calendar_quality": "official_2026_2027",
+      "boundary": "[previous_settlement, current_settlement)"
+    },
+    "outlook_trigger": "engine_upgrade",
+    "source_id": "2221a75361f049315f77be94",
+    "source_version": 1,
+    "source_published_at": "2026-10-22T13:00:00+00:00",
+    "source_is_historical_background": true,
+    "window_news_count": 0,
+    "fresh_news_ids_observed": [],
+    "fresh_news_workflow_satisfied": false,
+    "input": {
+      "file": "reports/structured_v2_4/api_engine_upgrade_01_artifacts/engine_upgrade_exact_creation_input.json",
+      "sha256": "c1bf09130bce67a3c3820feb7127c249532c2d912021611ed03be9e5edb1973c"
+    },
+    "source": {
+      "file": "reports/structured_v2_4/api_engine_upgrade_01_artifacts/engine_upgrade_background_source.json",
+      "sha256": "255978a2fec62d80833b79faad781cfabf804b296b1a23c1bb25734753c94e4f"
+    }
+  },
+  "finished_at": "2026-10-22T16:18:35.500620+00:00",
+  "elapsed_seconds": 97.58,
+  "failed_stages": [],
+  "missing_required_stages": [],
+  "structural_workflow_is_market_accuracy": false,
+  "independent_ordinary_source_semantics_review_still_required": true
+}

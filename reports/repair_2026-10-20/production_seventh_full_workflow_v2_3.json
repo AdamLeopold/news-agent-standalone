@@ -1,0 +1,365 @@
+{
+  "status": "failed",
+  "started_at": "2026-10-21T03:54:59.431906+00:00",
+  "expected_prompt_version": "ttf-news-standalone-2.3",
+  "scope": "real_local_manual_detail_english_exports_sse_and_preservation",
+  "synthetic_live_input": false,
+  "raw_thinking_included": false,
+  "stages": [
+    {
+      "name": "preservation_before",
+      "status": "passed",
+      "started_at": "2026-10-21T03:54:59.457332+00:00",
+      "checks": {
+        "passed": true,
+        "protected_analysis_count": 150,
+        "protected_nonnull_field_count": 280,
+        "current_analysis_count": 150,
+        "new_analysis_count": 0,
+        "protected_snapshot_count": 5,
+        "new_snapshot_count": 0,
+        "original_validation_record_count": 1,
+        "latest_baseline_unchanged": true,
+        "original_baseline": {
+          "id": 210,
+          "created_at": "2026-10-14T05:51:48.181167+00:00",
+          "type": "validation_started"
+        },
+        "failures": []
+      },
+      "finished_at": "2026-10-21T03:54:59.501029+00:00",
+      "elapsed_seconds": 0.044
+    },
+    {
+      "name": "live_api_v2_and_managed_identity",
+      "status": "passed",
+      "started_at": "2026-10-21T03:54:59.501540+00:00",
+      "checks": {
+        "prompt_version": "ttf-news-standalone-2.3",
+        "model": "gpt-oss:20b",
+        "server_pid": 26218,
+        "managed_pid_identity_verified": true,
+        "collector": {
+          "enabled": true,
+          "poll_seconds": 60
+        },
+        "counts": {
+          "news": 3996,
+          "events": 1575,
+          "legacy_daily": 3456,
+          "prices": 65882,
+          "analyses": 150
+        },
+        "monitoring_reachable": true
+      },
+      "finished_at": "2026-10-21T03:54:59.677941+00:00",
+      "elapsed_seconds": 0.176
+    },
+    {
+      "name": "select_real_existing_news",
+      "status": "passed",
+      "started_at": "2026-10-21T03:54:59.678681+00:00",
+      "checks": {
+        "news_id": "90bfbf6adb1183517cbc00ca",
+        "title": "Gassco Troll: Planned Gas production field unavailability (Active)",
+        "source": "gassco",
+        "url": "https://umm.gassco.no/details?id=f1f667ff-1ee3-45f2-bedf-7eed367ea614",
+        "published_at": "2026-10-20T20:13:18+00:00",
+        "source_version": 1,
+        "body_characters": 270,
+        "body_sha256": "0d655dfd6a6900bdb276e7a00d478b97e61cc5415ccaa234f3ff81b889b237cf",
+        "fact_excerpt_used": false
+      },
+      "finished_at": "2026-10-21T03:54:59.688436+00:00",
+      "elapsed_seconds": 0.01
+    },
+    {
+      "name": "ensure_current_v2_live_forecast",
+      "status": "passed",
+      "started_at": "2026-10-21T03:54:59.688959+00:00",
+      "checks": {
+        "analysis_id": "d7628bcf-d68a-4d14-8ce0-20bc21beaa42",
+        "status": "queued",
+        "created": true,
+        "trade_date": "2026-10-21",
+        "source_news_id": "90bfbf6adb1183517cbc00ca",
+        "reason": "explicit_new_source_profile_live_analysis_via_normal_news_api",
+        "old_forecasts_overwritten": false,
+        "validation_baseline_reset": false
+      },
+      "finished_at": "2026-10-21T03:55:02.626358+00:00",
+      "elapsed_seconds": 2.937
+    },
+    {
+      "name": "sse_initial_connection",
+      "status": "passed",
+      "started_at": "2026-10-21T03:55:02.626962+00:00",
+      "checks": {
+        "id": 215678,
+        "type": "stream_ready",
+        "kind": null,
+        "matched_analysis_id": null,
+        "replayed_event_count": 1,
+        "cursor_mode": "initial_ready"
+      },
+      "finished_at": "2026-10-21T03:55:02.631709+00:00",
+      "elapsed_seconds": 0.005
+    },
+    {
+      "name": "manual_submit_real_news",
+      "status": "passed",
+      "started_at": "2026-10-21T03:55:02.632218+00:00",
+      "checks": {
+        "analysis_id": "e444cb07-a3d1-402d-868d-dcb98a91f586",
+        "status": "queued",
+        "real_source_news_id": "90bfbf6adb1183517cbc00ca"
+      },
+      "finished_at": "2026-10-21T03:55:04.318389+00:00",
+      "elapsed_seconds": 1.686
+    },
+    {
+      "name": "sse_last_event_id_reconnect",
+      "status": "passed",
+      "started_at": "2026-10-21T03:55:04.319036+00:00",
+      "checks": {
+        "id": 215679,
+        "type": "analysis_queued",
+        "kind": null,
+        "matched_analysis_id": "e444cb07-a3d1-402d-868d-dcb98a91f586",
+        "replayed_event_count": 1,
+        "cursor_mode": "Last-Event-ID"
+      },
+      "finished_at": "2026-10-21T03:55:04.323099+00:00",
+      "elapsed_seconds": 0.004
+    },
+    {
+      "name": "sse_after_query_reconnect",
+      "status": "passed",
+      "started_at": "2026-10-21T03:55:04.323761+00:00",
+      "checks": {
+        "id": 215679,
+        "type": "analysis_queued",
+        "kind": null,
+        "matched_analysis_id": "e444cb07-a3d1-402d-868d-dcb98a91f586",
+        "replayed_event_count": 1,
+        "cursor_mode": "after_query"
+      },
+      "finished_at": "2026-10-21T03:55:04.328611+00:00",
+      "elapsed_seconds": 0.005
+    },
+    {
+      "name": "manual_real_brief",
+      "status": "passed",
+      "started_at": "2026-10-21T03:55:04.329247+00:00",
+      "checks": {
+        "prompt_version": "ttf-news-standalone-2.3",
+        "news_direction": "up",
+        "close_direction": "up",
+        "close_evidence_status": "forecast",
+        "english_close_label": "Up",
+        "summary_sha256": "f1c54ca7b2a8dc428ea992805ee68bb91b2981f2642958db3addbd47756994a4",
+        "summary_characters": 36,
+        "model_seconds": 84.792,
+        "as_of": "2026-10-21T03:55:02.635301+00:00",
+        "raw_evidence_validated": true,
+        "analysis_id": "e444cb07-a3d1-402d-868d-dcb98a91f586",
+        "poll_count": 47,
+        "completed_at": "2026-10-21T03:58:13.937297+00:00",
+        "source_body_unchanged": true
+      },
+      "finished_at": "2026-10-21T03:58:16.562707+00:00",
+      "elapsed_seconds": 192.233
+    },
+    {
+      "name": "sse_completed_event_replay",
+      "status": "passed",
+      "started_at": "2026-10-21T03:58:16.564202+00:00",
+      "checks": {
+        "id": 215747,
+        "type": "analysis_completed",
+        "kind": "short",
+        "matched_analysis_id": "e444cb07-a3d1-402d-868d-dcb98a91f586",
+        "replayed_event_count": 69,
+        "cursor_mode": "Last-Event-ID"
+      },
+      "finished_at": "2026-10-21T03:58:16.573790+00:00",
+      "elapsed_seconds": 0.01
+    },
+    {
+      "name": "manual_detail_request",
+      "status": "passed",
+      "started_at": "2026-10-21T03:58:16.574615+00:00",
+      "checks": {
+        "id": "e444cb07-a3d1-402d-868d-dcb98a91f586",
+        "status": "queued"
+      },
+      "finished_at": "2026-10-21T03:58:16.580881+00:00",
+      "elapsed_seconds": 0.006
+    },
+    {
+      "name": "english_brief_request",
+      "status": "passed",
+      "started_at": "2026-10-21T03:58:16.581721+00:00",
+      "checks": {
+        "translation_id": "9f5f1c64-d54e-4f9f-b47a-92706234ee49",
+        "part": "brief",
+        "status": "queued"
+      },
+      "finished_at": "2026-10-21T03:58:16.621425+00:00",
+      "elapsed_seconds": 0.04
+    },
+    {
+      "name": "manual_real_detail",
+      "status": "failed",
+      "started_at": "2026-10-21T03:58:16.622270+00:00",
+      "error_type": "RuntimeError",
+      "error": "Detail failed: 模型JSON两次校验失败，未生成方向：逐日期列出的容量时段没有唯一N来源；须保留日期/年份及对应容量，不得借另一公告原值；detail.invalidation_conditions[0]:Gassco公告撤销/结束或实际流量未确认，不能证明未形成供需冲击、供应不受影响或实际流量无变化；须有独立无变化计量事实。可写输入未；detail.invalidation_conditions[0]:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景",
+      "finished_at": "2026-10-21T04:00:22.290364+00:00",
+      "elapsed_seconds": 125.668
+    },
+    {
+      "name": "english_brief_actual_text_labels_numbers",
+      "status": "passed",
+      "started_at": "2026-10-21T04:00:22.292035+00:00",
+      "checks": {
+        "translated_fields_checked": 14,
+        "protected_labels_numbers_citations_unchanged": true,
+        "untranslated_chinese_fields": 0,
+        "source_sha256": "422a32888a1ec5fc408ff52e34926b38dd8aa543cbce6234c3c5b08e7c290353",
+        "news_direction": "up",
+        "close_direction": "up",
+        "close_evidence_status": "forecast",
+        "english_close_label": "Up",
+        "english_summary_sha256": "2fb34e3af8e5ee1de6b8cd3c32863fa321e68c3c3c8f889b0627833a56868436",
+        "english_summary_characters": 115,
+        "translation_model_seconds": 12.066,
+        "translation_id": "9f5f1c64-d54e-4f9f-b47a-92706234ee49",
+        "part": "brief",
+        "poll_count": 3,
+        "cache_endpoint_verified": true
+      },
+      "finished_at": "2026-10-21T04:00:35.979202+00:00",
+      "elapsed_seconds": 13.687
+    },
+    {
+      "name": "csv_jsonl_exports",
+      "status": "passed",
+      "started_at": "2026-10-21T04:00:35.980174+00:00",
+      "checks": {
+        "news": {
+          "csv": {
+            "rows": 3996,
+            "bytes": 5003954,
+            "sha256": "b496625bc4ee7ede5feb52e9f861d8056cb74f615fa3bee41163854ff016e57b",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 3996,
+            "bytes": 6693114,
+            "sha256": "5a704b12d7a5d06c069e4ee190e00b457032f04b2e7f02a78faeb78a5684a5e4",
+            "parsed": true
+          },
+          "row_counts_match": true,
+          "independent_snapshot_requests": true
+        },
+        "daily": {
+          "csv": {
+            "rows": 628,
+            "bytes": 3916578,
+            "sha256": "88536d2c357c6bdc92d01c2236d48f69971c072d4892d7823d415c99ac9cc339",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 628,
+            "bytes": 3808065,
+            "sha256": "8abd151fc28871df650bbd8bc6dcf3330e0d6a4f6ca9f9956a013fdb92ad9435",
+            "parsed": true
+          },
+          "row_counts_match": true,
+          "independent_snapshot_requests": true
+        },
+        "events": {
+          "csv": {
+            "rows": 1575,
+            "bytes": 5979381,
+            "sha256": "c8fa45efe424c3a98f3b5145db81d81f92f7a6ac9c49a1c20349fd3ba79fb051",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 1575,
+            "bytes": 6391644,
+            "sha256": "a6815c7f232cc4a3795c1d2e0ac34cb4cbf23b046a169dfeb9e7e6759ed156c3",
+            "parsed": true
+          },
+          "row_counts_match": true,
+          "independent_snapshot_requests": true
+        },
+        "prices": {
+          "csv": {
+            "rows": 65882,
+            "bytes": 26615025,
+            "sha256": "af0585ba4c8e981390647e02cec79d2ddbf9121f84e21e0eef08c7616f79c890",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 65882,
+            "bytes": 43744696,
+            "sha256": "b9c61bc370266885bf607df1cb4a4d48be2303633ee34b8915c174d6ad6baef8",
+            "parsed": true
+          },
+          "row_counts_match": true,
+          "independent_snapshot_requests": true
+        }
+      },
+      "finished_at": "2026-10-21T04:00:40.784207+00:00",
+      "elapsed_seconds": 4.804
+    },
+    {
+      "name": "current_live_forecast_v2",
+      "status": "failed",
+      "started_at": "2026-10-21T04:00:40.785231+00:00",
+      "error_type": "RuntimeError",
+      "error": "Current dashboard forecast did not reach v2: Wait for the explicitly appended current-source live record",
+      "finished_at": "2026-10-21T04:09:51.469533+00:00",
+      "elapsed_seconds": 550.682
+    },
+    {
+      "name": "preservation_after",
+      "status": "passed",
+      "started_at": "2026-10-21T04:09:51.470896+00:00",
+      "checks": {
+        "passed": true,
+        "protected_analysis_count": 150,
+        "protected_nonnull_field_count": 280,
+        "current_analysis_count": 152,
+        "new_analysis_count": 2,
+        "protected_snapshot_count": 5,
+        "new_snapshot_count": 0,
+        "original_validation_record_count": 1,
+        "latest_baseline_unchanged": true,
+        "original_baseline": {
+          "id": 210,
+          "created_at": "2026-10-14T05:51:48.181167+00:00",
+          "type": "validation_started"
+        },
+        "failures": []
+      },
+      "finished_at": "2026-10-21T04:09:51.570160+00:00",
+      "elapsed_seconds": 0.099
+    }
+  ],
+  "new_live_analysis_id": "d7628bcf-d68a-4d14-8ce0-20bc21beaa42",
+  "new_analysis_id": "e444cb07-a3d1-402d-868d-dcb98a91f586",
+  "finished_at": "2026-10-21T04:09:51.571603+00:00",
+  "failed_stages": [
+    "manual_real_detail",
+    "current_live_forecast_v2"
+  ],
+  "missing_required_stages": [
+    "chinese_originals_unchanged_after_translation",
+    "current_live_forecast_v2",
+    "english_detail_actual_text_labels_numbers",
+    "manual_real_detail"
+  ],
+  "elapsed_seconds": 892.136
+}

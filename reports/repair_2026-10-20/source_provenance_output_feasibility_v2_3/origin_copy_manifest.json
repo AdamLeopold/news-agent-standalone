@@ -1,0 +1,193 @@
+{
+  "schema_version": "ttf-private-feasibility-origin-copy-manifest-v1",
+  "created_at": "2026-10-21T05:19:29.535237+00:00",
+  "copies": [
+    {
+      "origin_path": ".runtime/source-provenance-pilot-final/proposal_manifest.json",
+      "published_evidence_path": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/proposal_manifest.json",
+      "source_bytes_sha256": "dc6875635339a6d462879ca62030956ce213e4efcbe2874f47aaa33dd8679c62",
+      "copied_bytes_sha256": "dc6875635339a6d462879ca62030956ce213e4efcbe2874f47aaa33dd8679c62",
+      "original_bytes_preserved": true
+    },
+    {
+      "origin_path": ".runtime/source-provenance-pilot-final/build_proof.json",
+      "published_evidence_path": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/build_proof.json",
+      "source_bytes_sha256": "fc3389acb35d2901b768c1d55224c720122f0e4a98a69d7bc9d15af70584c5df",
+      "copied_bytes_sha256": "fc3389acb35d2901b768c1d55224c720122f0e4a98a69d7bc9d15af70584c5df",
+      "original_bytes_preserved": true
+    },
+    {
+      "origin_path": ".runtime/source-provenance-pilot-final/backend_source_provenance_examples.json",
+      "published_evidence_path": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/backend_source_provenance_examples.json",
+      "source_bytes_sha256": "2609e51a952b2b8165207e7f105748174a027dc6b7718f4b32b1d115d284b6f6",
+      "copied_bytes_sha256": "2609e51a952b2b8165207e7f105748174a027dc6b7718f4b32b1d115d284b6f6",
+      "original_bytes_preserved": true
+    },
+    {
+      "origin_path": ".runtime/source-provenance-pilot-final/ninth_manual_candidate_request.json",
+      "published_evidence_path": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/ninth_manual_candidate_request.json",
+      "source_bytes_sha256": "f047c90e00f75320e97ec1e2bee951b2694a88fe0f570f9fbf32a601fafe119f",
+      "copied_bytes_sha256": "f047c90e00f75320e97ec1e2bee951b2694a88fe0f570f9fbf32a601fafe119f",
+      "original_bytes_preserved": true
+    },
+    {
+      "origin_path": ".runtime/source-provenance-pilot-final/ninth_current_candidate_request.json",
+      "published_evidence_path": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/ninth_current_candidate_request.json",
+      "source_bytes_sha256": "00fb5cd36e529cb6cc5ff292733b56d1e8d3487e2e359c4b4938da7f40fe0d2d",
+      "copied_bytes_sha256": "00fb5cd36e529cb6cc5ff292733b56d1e8d3487e2e359c4b4938da7f40fe0d2d",
+      "original_bytes_preserved": true
+    },
+    {
+      "origin_path": ".runtime/source-provenance-pilot-final/self-tests.log",
+      "published_evidence_path": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/self-tests.log",
+      "source_bytes_sha256": "929b24ae0f14cf4d1220365028aa3f5ab1904f4b4818193e3572db2cacac4076",
+      "copied_bytes_sha256": "929b24ae0f14cf4d1220365028aa3f5ab1904f4b4818193e3572db2cacac4076",
+      "original_bytes_preserved": true
+    },
+    {
+      "origin_path": ".runtime/source-provenance-pilot-final/prepare.log",
+      "published_evidence_path": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/prepare.log",
+      "source_bytes_sha256": "e59c59cb0c34526848a27a6ec86fc18d0ab2a273ac85038f9e25d0a3c7ed0f3f",
+      "copied_bytes_sha256": "e59c59cb0c34526848a27a6ec86fc18d0ab2a273ac85038f9e25d0a3c7ed0f3f",
+      "original_bytes_preserved": true
+    },
+    {
+      "origin_path": ".runtime/source-provenance-pilot-final/actual-frozen-two-contexts-1/ninth_current/attempt-1-request.json",
+      "published_evidence_path": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/actual/ninth_current/attempt-1-request.json",
+      "source_bytes_sha256": "9ca78826d0972cc276ea91eb39d902b4b4a75df85d9bffd6f6a0ccc2decf4bd9",
+      "copied_bytes_sha256": "9ca78826d0972cc276ea91eb39d902b4b4a75df85d9bffd6f6a0ccc2decf4bd9",
+      "original_bytes_preserved": true
+    },
+    {
+      "origin_path": ".runtime/source-provenance-pilot-final/actual-frozen-two-contexts-1/ninth_current/attempt-1-response.json",
+      "published_evidence_path": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/actual/ninth_current/attempt-1-response.json",
+      "source_bytes_sha256": "d05b3d5328c91ba0e0c44f338a728a6b68948203aa9a46e323058bf1cdc3bf49",
+      "copied_bytes_sha256": "d05b3d5328c91ba0e0c44f338a728a6b68948203aa9a46e323058bf1cdc3bf49",
+      "original_bytes_preserved": true
+    },
+    {
+      "origin_path": ".runtime/source-provenance-pilot-final/actual-frozen-two-contexts-1/ninth_current/attempt-2-request.json",
+      "published_evidence_path": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/actual/ninth_current/attempt-2-request.json",
+      "source_bytes_sha256": "7f5ccde25ea7b63928c763f35a04bbab6b03ac0bd3aaab31f2fda7cc4f8cf1dc",
+      "copied_bytes_sha256": "7f5ccde25ea7b63928c763f35a04bbab6b03ac0bd3aaab31f2fda7cc4f8cf1dc",
+      "original_bytes_preserved": true
+    },
+    {
+      "origin_path": ".runtime/source-provenance-pilot-final/actual-frozen-two-contexts-1/ninth_current/attempt-2-response.json",
+      "published_evidence_path": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/actual/ninth_current/attempt-2-response.json",
+      "source_bytes_sha256": "fba86e56080b015153d93d9d5fc1cc4f95cafa87530a8a057a99a6fec8a8f49b",
+      "copied_bytes_sha256": "fba86e56080b015153d93d9d5fc1cc4f95cafa87530a8a057a99a6fec8a8f49b",
+      "original_bytes_preserved": true
+    },
+    {
+      "origin_path": ".runtime/source-provenance-pilot-final/actual-frozen-two-contexts-1/ninth_current/result.json",
+      "published_evidence_path": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/actual/ninth_current/result.json",
+      "source_bytes_sha256": "2583ba2fc37bc57f50e22397e4e2686e598bb0501159bc104221d71015946b9a",
+      "copied_bytes_sha256": "2583ba2fc37bc57f50e22397e4e2686e598bb0501159bc104221d71015946b9a",
+      "original_bytes_preserved": true
+    },
+    {
+      "origin_path": ".runtime/source-provenance-pilot-final/actual-frozen-two-contexts-1/ninth_manual/attempt-1-request.json",
+      "published_evidence_path": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/actual/ninth_manual/attempt-1-request.json",
+      "source_bytes_sha256": "c3464afd0304ba949ac4b5797a030f645f11f5e4859c2248c5be0b741595f384",
+      "copied_bytes_sha256": "c3464afd0304ba949ac4b5797a030f645f11f5e4859c2248c5be0b741595f384",
+      "original_bytes_preserved": true
+    },
+    {
+      "origin_path": ".runtime/source-provenance-pilot-final/actual-frozen-two-contexts-1/ninth_manual/attempt-1-response.json",
+      "published_evidence_path": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/actual/ninth_manual/attempt-1-response.json",
+      "source_bytes_sha256": "d2d027547c827bbdcd7f9d54f520cd62e5e892ceac2dde9082fdd3eb2fe4a889",
+      "copied_bytes_sha256": "d2d027547c827bbdcd7f9d54f520cd62e5e892ceac2dde9082fdd3eb2fe4a889",
+      "original_bytes_preserved": true
+    },
+    {
+      "origin_path": ".runtime/source-provenance-pilot-final/actual-frozen-two-contexts-1/ninth_manual/attempt-2-request.json",
+      "published_evidence_path": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/actual/ninth_manual/attempt-2-request.json",
+      "source_bytes_sha256": "f035f0c66f3c3d5ee0746a293317ac1c6fb22c26a2a4dcfe702e77e91034962f",
+      "copied_bytes_sha256": "f035f0c66f3c3d5ee0746a293317ac1c6fb22c26a2a4dcfe702e77e91034962f",
+      "original_bytes_preserved": true
+    },
+    {
+      "origin_path": ".runtime/source-provenance-pilot-final/actual-frozen-two-contexts-1/ninth_manual/attempt-2-response.json",
+      "published_evidence_path": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/actual/ninth_manual/attempt-2-response.json",
+      "source_bytes_sha256": "2cc9dad33f7586c8fc8a933a0ff92f89130b2554392e201973bf323c8650919b",
+      "copied_bytes_sha256": "2cc9dad33f7586c8fc8a933a0ff92f89130b2554392e201973bf323c8650919b",
+      "original_bytes_preserved": true
+    },
+    {
+      "origin_path": ".runtime/source-provenance-pilot-final/actual-frozen-two-contexts-1/ninth_manual/result.json",
+      "published_evidence_path": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/actual/ninth_manual/result.json",
+      "source_bytes_sha256": "2e01dae4f73d76d37ab00f526b351b565b580c95190de6a021583749953fa30e",
+      "copied_bytes_sha256": "2e01dae4f73d76d37ab00f526b351b565b580c95190de6a021583749953fa30e",
+      "original_bytes_preserved": true
+    },
+    {
+      "origin_path": ".runtime/source-provenance-pilot-final/actual-frozen-two-contexts-1/started.json",
+      "published_evidence_path": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/actual/started.json",
+      "source_bytes_sha256": "b0047aee0b346ef06f05fbedbeb41a95a3231b93d4d574daea46bb67b936095a",
+      "copied_bytes_sha256": "b0047aee0b346ef06f05fbedbeb41a95a3231b93d4d574daea46bb67b936095a",
+      "original_bytes_preserved": true
+    },
+    {
+      "origin_path": ".runtime/source-provenance-pilot-final/actual-frozen-two-contexts-1/terminal.json",
+      "published_evidence_path": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/actual/terminal.json",
+      "source_bytes_sha256": "0b01dcb4e58e97b3890dbc07a68eff51fa1a254f6734dc0e96cc416737850923",
+      "copied_bytes_sha256": "0b01dcb4e58e97b3890dbc07a68eff51fa1a254f6734dc0e96cc416737850923",
+      "original_bytes_preserved": true
+    },
+    {
+      "origin_path": "reports/repair_2026-10-20/production_ninth_manual_brief_failed_actual_v2_3.json",
+      "published_evidence_path": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/baseline/production_ninth_manual_brief_failed_actual_v2_3.json",
+      "source_bytes_sha256": "2ef79ddad979f6696a8e5153fde38a55c45b047af20dac551fd83b1dbe9db676",
+      "copied_bytes_sha256": "2ef79ddad979f6696a8e5153fde38a55c45b047af20dac551fd83b1dbe9db676",
+      "original_bytes_preserved": true
+    },
+    {
+      "origin_path": "reports/repair_2026-10-20/production_ninth_current_live_actual_v2_3.json",
+      "published_evidence_path": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/baseline/production_ninth_current_live_actual_v2_3.json",
+      "source_bytes_sha256": "4b8231a5e400b83a2cd872e9294bfe58c2b6b0c7871d6952c56d986b65272ab0",
+      "copied_bytes_sha256": "4b8231a5e400b83a2cd872e9294bfe58c2b6b0c7871d6952c56d986b65272ab0",
+      "original_bytes_preserved": true
+    },
+    {
+      "origin_path": "reports/repair_2026-10-20/independent_source_provenance_pilot_final_source_review_v2_3.json",
+      "published_evidence_path": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/independent_reviews/independent_source_provenance_pilot_final_source_review_v2_3.json",
+      "source_bytes_sha256": "0db12ae9cb186d7121c2e3977bc537f025a67a84781e43813837ff4757f3aba3",
+      "copied_bytes_sha256": "0db12ae9cb186d7121c2e3977bc537f025a67a84781e43813837ff4757f3aba3",
+      "original_bytes_preserved": true
+    },
+    {
+      "origin_path": "reports/repair_2026-10-20/independent_source_provenance_pilot_ninth_manual_actual_review_v2_3.json",
+      "published_evidence_path": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/independent_reviews/independent_source_provenance_pilot_ninth_manual_actual_review_v2_3.json",
+      "source_bytes_sha256": "89b26cceab90fd62913e487a1e841a69822b6f9f5919e748e42e66f24d2ee139",
+      "copied_bytes_sha256": "89b26cceab90fd62913e487a1e841a69822b6f9f5919e748e42e66f24d2ee139",
+      "original_bytes_preserved": true
+    },
+    {
+      "origin_path": "reports/repair_2026-10-20/independent_source_provenance_pilot_ninth_current_actual_review_v2_3.json",
+      "published_evidence_path": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/independent_reviews/independent_source_provenance_pilot_ninth_current_actual_review_v2_3.json",
+      "source_bytes_sha256": "4d4561a19fa0a69449488d0d2b128bd0ff99c97e75a7a6701ae017b2113035f6",
+      "copied_bytes_sha256": "4d4561a19fa0a69449488d0d2b128bd0ff99c97e75a7a6701ae017b2113035f6",
+      "original_bytes_preserved": true
+    },
+    {
+      "origin_path": "reports/repair_2026-10-20/independent_source_provenance_pilot_no_go_decision_v2_3.json",
+      "published_evidence_path": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/independent_reviews/independent_source_provenance_pilot_no_go_decision_v2_3.json",
+      "source_bytes_sha256": "430ab9581209834cd52d8e880f6293dc3bbad6b31e14c62d8d62155ff97b9222",
+      "copied_bytes_sha256": "430ab9581209834cd52d8e880f6293dc3bbad6b31e14c62d8d62155ff97b9222",
+      "original_bytes_preserved": true
+    }
+  ],
+  "source_utf8_archive": {
+    "file": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/source_utf8_archive.json",
+    "sha256": "6a53fced2bae27126f586e22d5cdc8e55918692a6437702150cc01a22da698c4"
+  },
+  "all_json_copies_byte_exact": true,
+  "all_raw_content_preserved": true,
+  "no_originals_modified": true,
+  "root_source_modified": false,
+  "network_calls_by_archival_step": 0,
+  "model_calls_by_archival_step": 0,
+  "database_access": false,
+  "public_derivation_boundary": "These are exact local evidence copies. Any later public sanitization must be separately mapped as derived source/public bytes by the publication manifest; no local source hash is silently changed."
+}

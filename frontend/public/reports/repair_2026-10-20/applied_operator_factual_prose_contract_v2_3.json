@@ -1,0 +1,15 @@
+{
+  "source_sha256": {
+    "ttf_news/analysis.py": "d56e5501def567e153f587646af23891c20a5508f09c2e79ecb87500a0ac0706",
+    "tests/test_operator_factual_grammar.py": "4c945c85cf3eacf71bf8b3ce2ce2218288100518d091d0b72a908d70f765995c",
+    "tests/fixtures/operator_factual_grammar_contexts_v2_3.json": "ab03e991d2555b440e3400000b9207c2224648f9b15fd115dd0355f3f6396a4c"
+  },
+  "actual_generation_analysis_sha256": "a8e8e0125f3174bc1298b0a58b4aa5690dd3fab2c06c56162529c998cd1a5803",
+  "integration_zero_call_equivalence_sha256": "9744493c69989f9dcce0248717d9308aabf915cf8c8d6fb947d93f6f091682bc",
+  "sourcebank_scope": "1..2 canonical pure Gassco capacity notices, valid same-contract baseline; mixed news unchanged",
+  "all_five_direction_choices_and_confidence_retained": true,
+  "post_hoc_model_output_rewriting": false,
+  "production_restart_pending": true,
+  "private_pilot_closing_outlooks": "Both final outputs abstain on cited opposing mechanisms; not a proof of five-way forecast availability or whole-workflow success",
+  "old_predictions_unchanged": true
+}

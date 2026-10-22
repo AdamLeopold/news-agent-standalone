@@ -1,7 +1,29 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {analysisDirectionChanges, countdown, dateDeltaSeconds, discoveryDelay, displayConfidence, formatDuration, safeUrl, signalInfo, sourceInfo, statusInfo} from '../src/display.mjs';
+import {analysisDirectionChanges, analysisPartInvalid, analysisReviewTitle, countdown, dailyReferenceLabel, dateDeltaSeconds, discoveryDelay, displayConfidence, formatDuration, safeUrl, signalInfo, sourceInfo, statusInfo} from '../src/display.mjs';
 
+test('invalid brief and independently reviewed detail stay separate without rewriting forecasts', () => {
+  const review = Object.freeze({status:'invalid', invalid_parts:Object.freeze(['brief']), parts:{detail:{status:'cleared'}}});
+  const result = Object.freeze({close_forecast:Object.freeze({direction:'down'})});
+  assert.equal(analysisPartInvalid(review),true);
+  assert.equal(analysisPartInvalid(review,'detail'),false);
+  assert.equal(analysisPartInvalid({status:'cleared',invalid_parts:['brief']}),false);
+  assert.equal(analysisPartInvalid(undefined),false);
+  assert.equal(result.close_forecast.direction,'down');
+  assert.equal(analysisReviewTitle({reason_code:'price_baseline_review_failed'}),'价格基准复核未通过');
+  assert.equal(analysisReviewTitle({reason_code:'source_fact_review_failed'}),'来源事实复核未通过');
+  assert.equal(analysisReviewTitle({reason_code:'price_baseline_review_failed',parts:{brief:{reason_code:'source_fact_review_failed'},detail:{reason_code:'price_baseline_review_failed'}}}),'来源事实复核未通过');
+  assert.equal(analysisReviewTitle({reason_code:'source_fact_review_failed',parts:{detail:{reason_code:'price_baseline_review_failed'}}},'detail'),'价格基准复核未通过');
+});
+
+test('daily reference identity follows the verified target-session anchor without changing source facts', () => {
+  const historical = Object.freeze({available:true, price_date:'2026-10-19', contract:'Nov26', settlement_anchor:Object.freeze({available:false})});
+  assert.equal(dailyReferenceLabel(historical), '历史日价参考');
+  assert.equal(dailyReferenceLabel({...historical, settlement_anchor:{available:true}}), '上一交易日日价');
+  assert.equal(dailyReferenceLabel({available:true, price_date:'2026-10-19'}), '历史日价参考');
+  assert.equal(historical.price_date, '2026-10-19');
+  assert.equal(historical.contract, 'Nov26');
+});
 test('missing or malformed direction never becomes a prediction', () => {
   assert.equal(signalInfo(undefined).label, '尚未分析');
   assert.equal(signalInfo('invalid').tone, 'muted');
@@ -27,6 +49,17 @@ test('source failure is distinct from an empty successful poll', () => {
   assert.equal(sourceInfo({status: 'unknown'}).label, '尚未检查');
   assert.equal(sourceInfo({status: 'partial'}).label, '部分覆盖');
   assert.equal(sourceInfo({status: 'ok', historical_limited: true}).label, '部分覆盖');
+});
+test('detail can acquire or lose a closing basis without rewriting an unavailable brief as flat', () => {
+  const brief = Object.freeze({close_forecast: Object.freeze({direction: null, evidence_status: 'insufficient_evidence'})});
+  const detail = {close_forecast: {direction: 'down', evidence_status: 'forecast'}};
+  assert.deepEqual(analysisDirectionChanges(brief, detail), [
+    {key: 'close_forecast', label: '当日收盘方向预判', brief: '暂缺收盘判断', detail: '跌'},
+  ]);
+  assert.deepEqual(analysisDirectionChanges(detail, brief), [
+    {key: 'close_forecast', label: '当日收盘方向预判', brief: '跌', detail: '暂缺收盘判断'},
+  ]);
+  assert.equal(brief.close_forecast.direction, null);
 });
 test('confidence supports model fractions and qualitative levels without claiming calibration', () => {
   assert.equal(displayConfidence(0.72), '72%');

@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "observed_at": "2026-10-20T21:53:49.652062+00:00",
+  "analysis_id": "ec3f2c31-6f49-48bb-acbd-48474ce670e2",
+  "record_origin_prompt_version": "ttf-news-standalone-2.0",
+  "backend_prompt_version": "ttf-news-standalone-2.3",
+  "backend_pid": 12598,
+  "api_result_is_null": true,
+  "ui_error_visible": true,
+  "ui_direction_element_count": 0,
+  "default_flat_used": false,
+  "screenshot_file": "reports/repair_2026-10-20/error_ui_v2_3.jpg",
+  "screenshot_sha256": "af94db6c70dcd5c147fc609a36ea54fc644e17515bec95e53ff275700acbb2bc",
+  "api_response_sha256": "35d29f818485868fbe04305d2d1ff4b76bb214464e44f5ef73936ab58f326c89",
+  "frontend_index_sha256": "e42072c502369749d68c2f5bbf97fe400e91e4d77366faf04d4517e7a6351624",
+  "dom_observation_sha256": "12f93bd274b7c2d03f1d2e0e5661dd34f697d3c4ea05d037fc438048bdddd918",
+  "evidence_boundary": "Actual 2.3 backend/UI rendering of the retained 2.0 failed analysis; no new model failure is claimed. Inference is deliberately paused for separately recorded isolated comparisons, collection and heartbeats remain enabled."
+}

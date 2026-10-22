@@ -1,0 +1,83 @@
+{
+  "policy_id": "ttf-explicit-error-release-v1",
+  "expected_prompt_version": "ttf-news-standalone-2.3",
+  "status": "not_ready_sixth_full_production_detail_failed_price_observation_review_pending",
+  "main_report_sha256": "65759b09b2af8c0b166ea4ac0f6b8019c454d11cdf064934f7aa9848351a36d5",
+  "evidence": {
+    "independent_review": {
+      "file": "reports/repair_2026-10-20/independent_release_review_v2_3.json",
+      "sha256": "26c453e68feae55d3344c3194a34b7d79ce4450add2300d3c4b94a47fb1c681c"
+    },
+    "live_smoke": {
+      "file": "reports/repair_2026-10-20/production_sixth_full_workflow_v2_3.json",
+      "sha256": "fe0ed676474bbe36241629ed70edd42cb73d6888415e0f0acfaf75e7b77fd54f",
+      "status": "failed_not_reclassified"
+    },
+    "error_ui": {
+      "file": "reports/repair_2026-10-20/error_ui_composite_final_binding_v2_3.json",
+      "sha256": "a01bc1613ab735135dc7f32a283aebf948bd138857cf3531aeee426b854e08a2"
+    },
+    "public_scan": {
+      "file": "reports/repair_2026-10-20/public_scan_final.json",
+      "sha256": null
+    },
+    "frontend_build": {
+      "file": "reports/repair_2026-10-20/publish-frontend-risk-final-build.log",
+      "sha256": "9dd9ee57be7f3dab8415b6f8d3dda402e989612b1f6f4c006d665dbabc9a61c1"
+    },
+    "backend_deployment": {
+      "file": "reports/repair_2026-10-20/backend_physical_unit_resumed.json",
+      "sha256": "28f9173b6059c90082b704d5527721bdcfb7ef05ed42c3f7f2e8eece5adb1f44"
+    }
+  },
+  "note": "Final isolated20+detail are source/path bound:15safe outputs and5unavailable scenarios. Four-anchor strictall-success remainsfalse; noavailability quota is added. Sixth real production detail failed and brief/current reaction wording awaits independent review. All8known-error families remainopen. No final scan or public deployment success is claimed.",
+  "production_attempt_history": {
+    "file": "reports/repair_2026-10-20/production_e2e_attempt_history_v2_3.json",
+    "sha256": "6fdeed6a8371db3486535081703ab855bb9d63ceefcb9d1835b15f9e790146a5"
+  },
+  "updated_at": "2026-10-21T03:02:26.468618+00:00",
+  "current_maintenance_deployment": null,
+  "previous_readiness": {
+    "file": "reports/repair_2026-10-20/release_readiness_checks_v2_3.d158ca3c3a478c38.json",
+    "sha256": "d158ca3c3a478c386d6dbb0abc7d1b51a7610447756f544f545a051b13136a55"
+  },
+  "current_unit_binding": {
+    "file": "reports/repair_2026-10-20/price_zero_full_unit_binding_v2_3.json",
+    "sha256": "60530c7d5d968b25eb913cca3901eba506a926072c123de95888b0008b0af73d"
+  },
+  "current_selected_cohort": {
+    "file": "reports/repair_2026-10-20/current_price_zero_twenty_plus_detail_manifest_v2_3.json",
+    "sha256": "ce6c4f2829b86ed162c001c31445fbbb450e9335b64fcdff6ed11499f2a51562"
+  },
+  "known_accepted_error_ledger": {
+    "file": "reports/repair_2026-10-20/release_known_accepted_errors.json",
+    "sha256": "6225413f7a81cf76b2baacbcf895df13d7014bb6dc00786e6b1df6bad6b92c94"
+  },
+  "latest_physical_six_actual_manifest": {
+    "file": "reports/repair_2026-10-20/physical_unit_six_actual_manifest_v2_3.json",
+    "sha256": "11791d3ee3bb74ae7c4c6f6035b7ef14cd9045428bfd9eaf75b860ac4699a008"
+  },
+  "latest_accepted_error_supplement": {
+    "file": "reports/repair_2026-10-20/physical_unit_accepted_evidence_and_price_scope_defects_v2_3.json",
+    "sha256": "7e3932d0bb39781199187f78d493ac1d3d03a6c379a1cc30be804bf80654de98"
+  },
+  "next_registered_case_only_stage": null,
+  "registered_stage_is_not_actual_model_evidence": false,
+  "main_report_current_phase_not_finalized": true,
+  "latest_retained_future_price_zero_reassessment": {
+    "file": "reports/repair_2026-10-20/independent_retained_future_price_zero_reassessment_v2_3.json",
+    "sha256": "712fb98fd7c3ec0e32fcca74f03f7f57f2702b6a32e4cd056d973588bf4882a3"
+  },
+  "latest_price_zero_three_actual_manifest": {
+    "file": "reports/repair_2026-10-20/price_zero_consistency_three_actual_manifest_v2_3.json",
+    "sha256": "42b94eaf8f2083fb007c21df1ba7603aa4b95b7908f8660ad6b455c69f9a7326"
+  },
+  "current_complete_path_proof": {
+    "file": "reports/repair_2026-10-20/full_path_equivalence_v2_3.f08377819ba7459b.json",
+    "sha256": "f08377819ba7459b483eeff427cf9411dddc4565168f96f07350f94348e79054"
+  },
+  "operational_anchor_policy_correction": {
+    "file": "reports/repair_2026-10-20/operational_anchor_policy_correction_v2_3.json",
+    "sha256": "c06338ddb16f56eb145be7543574bb7a8cefd0952ac2d92aec88989730566027"
+  }
+}

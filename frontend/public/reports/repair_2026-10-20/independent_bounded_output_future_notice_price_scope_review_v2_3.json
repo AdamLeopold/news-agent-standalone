@@ -1,0 +1,301 @@
+{
+  "audit": "independent_bounded_future_notice_accepted_price_scope_defect_v2_3",
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "audited_at": "2026-10-21T00:09:48.225441+00:00",
+  "verdict": "accepted_body_has_P2_unsupported_zero_price_response_and_future_physical_timing_inference",
+  "file": "reports/repair_2026-10-20/candidate-bounded-output-validation/future_planned_notice.json",
+  "file_sha256": "ed1939b87c3ef14220eb5c824df3cd3eeb87553a6f39df78a3c625bf442c5c79",
+  "generation_source_hashes": {
+    "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+    "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+    "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+    "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+    "ttf_news/public_gateway.py": "fac8fe10429bc62a6be241817491d1f35eecdaa7f8a37357cb8dbcab7f43fae5",
+    "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+    "ttf_news/analysis.py": "1087340777d4a0b10883420d76f8ce142bc53dd7542c8ebc84893e317553a16f",
+    "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+    "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+    "ttf_news/semantics.py": "3efbab0f772839b2249a544c6c39aa4beb9386c1de9850dfe37a989129139e90",
+    "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+    "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+    "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+    "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+    "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+    "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+    "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+    "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+    "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+    "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+    "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+    "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+    "ttf_news/translation.py": "d47b232a5f77ea68e2d5bc5d092021e9727e555c6b1dd702922325519982d7c5",
+    "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+    "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+    "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+    "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+    "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987"
+  },
+  "recorded_contract_passed_preserved": true,
+  "recorded_delivered_result": true,
+  "human_semantic_pass": false,
+  "input_sha256_recorded": "99aa1883186e4c7746647f781489670cf07addc2c015b7bbd5f4d28310eef1e8",
+  "source_snapshot": {
+    "as_of": "2026-10-20T12:10:58.642680+00:00",
+    "session": {
+      "trade_date": "2026-10-20",
+      "window_start": "2026-10-19T15:15:00+00:00",
+      "window_end": "2026-10-20T15:15:00+00:00",
+      "cutoff_utc": "2026-10-20T15:15:00+00:00",
+      "cutoff_local": "2026-10-20T17:15:00+02:00",
+      "cutoff_singapore": "2026-10-20T23:15:00+08:00",
+      "display_timezone": "Europe/Amsterdam",
+      "seconds_to_close": 11041,
+      "calendar_source": "https://www.ice.com/publicdocs/ICE_Endex_Trading_Schedule.pdf",
+      "calendar_quality": "official_2026_2027",
+      "boundary": "[previous_settlement, current_settlement)"
+    },
+    "analysis_kind": "manual",
+    "current_news": {
+      "id": "diagnostic-current",
+      "title": "Gassco test: Planned Gas production field unavailability (Active)",
+      "summary": "隔离假设运营公告。Technical capacity: 100 mcm/d; available: 80; unavailable: 20. No independent actual flow measurement or recovery confirmation is provided.",
+      "source": "gassco",
+      "published_at": "2026-10-20T12:10:58.642680+00:00",
+      "first_seen_at": "2026-10-20T12:10:58.642680+00:00",
+      "timestamp_precision": "exact",
+      "url": "",
+      "version": 1,
+      "event_start": "2027-05-22T06:00:00+02:00",
+      "event_end": "2027-05-25T06:00:00+02:00",
+      "event_status": "Active"
+    },
+    "window_news": [
+      {
+        "id": "diagnostic-current",
+        "title": "Gassco test: Planned Gas production field unavailability (Active)",
+        "summary": "隔离假设运营公告。Technical capacity: 100 mcm/d; available: 80; unavailable: 20. No independent actual flow measurement or recovery confirmation is provided.",
+        "source": "gassco",
+        "published_at": "2026-10-20T12:10:58.642680+00:00",
+        "first_seen_at": "2026-10-20T12:10:58.642680+00:00",
+        "timestamp_precision": "exact",
+        "url": "",
+        "version": 1,
+        "event_start": "2027-05-22T06:00:00+02:00",
+        "event_end": "2027-05-25T06:00:00+02:00",
+        "event_status": "Active"
+      }
+    ],
+    "previous_sessions": [],
+    "historical_events": [],
+    "price_reference": {
+      "available": false,
+      "verified": false,
+      "missing_fields": [
+        "previous_contract_price",
+        "intraday_quote",
+        "sigma60"
+      ]
+    },
+    "coverage": {
+      "observation_limits": {
+        "weather": "not_measured",
+        "storage": "not_measured",
+        "actual_flow": "not_measured"
+      }
+    },
+    "lexicon": {}
+  },
+  "all_returned_body_fields": {
+    "news_impact": {
+      "direction": "flat",
+      "contextual_news_score": 0.0,
+      "confidence": 0.5,
+      "signal_strength": "weak",
+      "summary": "Gassco宣布计划在2027年5月22日至25日停产，容量从100 mcm/d降至80 mcm/d，减少20 mcm/d。该事件为未来公告，未导致当前供气损失或价格反应，因而对TTF价格无即时影响。",
+      "bullish_evidence": [],
+      "bearish_evidence": [],
+      "neutralizing_evidence": []
+    },
+    "close_forecast": {
+      "confidence": 0.0,
+      "summary": "缺乏前一交易日参考价和市场基准，无法判断收盘价相对前一日的走势。",
+      "basis": "缺乏前一交易日参考价和市场基准，无法判断收盘价相对前一日的走势。",
+      "extreme_move_risk": "",
+      "evidence_status": "insufficient_evidence",
+      "direction": null
+    },
+    "analysis": {
+      "summary": "新增事实：Gassco计划在2027年5月22日至25日停产，容量减少20 mcm/d。该事件为未来公告，未导致当前供气损失或价格反应。",
+      "evidence": [
+        "[N0]test；计划；公告不可用容量20mcm/d；未来容量公告；实流未知；TTF机制：供需约束"
+      ],
+      "negation_or_reversal": [],
+      "priced_in_comment": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格",
+      "matched_terms": [
+        "planned outage",
+        "capacity constraint"
+      ],
+      "historical_comparisons": []
+    },
+    "risk_flags": [
+      "手动输入仅作条件情景分析，事实尚未由本系统独立核实",
+      "缺少前一交易日可用行情；收盘预判仅由新闻证据驱动",
+      "缺少60日同合约波动率，异常等级尚不能按行情阈值核验",
+      "行情尚未验证为ICE官方日结算，不参与官方结算准确率评分",
+      "模型把握程度未经统计校准，不代表已验证准确率"
+    ],
+    "references": [
+      {
+        "id": "diagnostic-current",
+        "url": "",
+        "title": "Gassco test: Planned Gas production field unavailability (Active)"
+      }
+    ],
+    "missing_fields": [
+      "independent_news_verification",
+      "current_news.source_url",
+      "previous_contract_price",
+      "sigma60",
+      "settlement_verification",
+      "intraday_quote",
+      "confidence_calibration"
+    ],
+    "source_fact_checks": {
+      "fact_contract_version": "operator-facts-2.2",
+      "operator_notices": [
+        {
+          "id": "N0",
+          "facility": "test",
+          "facility_type": "气田/生产设施",
+          "notice_type": "计划",
+          "unavailable_capacity": "20",
+          "period_utc": [
+            "2027-05-22T04:00Z",
+            "2027-05-25T04:00Z"
+          ],
+          "state_description": "未来公告"
+        }
+      ],
+      "capacity_scope": "公告不可用容量，非实际流量计量",
+      "pricing_observation": {
+        "clock_roles": {
+          "observed_at": "报价发生时刻",
+          "available_at": "本机获知时刻；不是报价发生时刻"
+        },
+        "current_news_timing": {
+          "id": "N0",
+          "publication_time": "2026-10-20T12:10:58.642680+00:00",
+          "quote_relation": "unknown",
+          "quote_role": "观测/发布时间精度不足，前后关系未知"
+        },
+        "reaction_evidence_available": false,
+        "pricing_status": "无法确认是否已计价；不是尚未计价或价格无反应"
+      }
+    }
+  },
+  "findings": [
+    {
+      "severity": "P2",
+      "id": "coordinated_physical_and_price_negative_leaks_price_observation",
+      "fields": [
+        "news_impact.summary",
+        "analysis.summary"
+      ],
+      "quote": "该事件为未来公告，未导致当前供气损失或价格反应，因而对TTF价格无即时影响。",
+      "reason": "Specificfutureeventnot-yetphysical-loss claim may be correct, but coordinated或价格反应 extends that denial to marketreaction without independentreactionobservations. Futurephysicaltiming doesnot imply currentannouncement/expectationpriceeffect iszero. ExplicitTTF价格无即时影响 reinforces a categoricalabsenceofeffect rather than boundedweaktransmissionjudgement. price_reference.availablefalse and missingquotes do notsupportzero reaction.",
+      "source_contradiction": "Sameoutput factchecks andpriced_in_comment correctlysay before/afterreactionnotprovided/pricingunknown; this doesnotrescue oppositefreeprose."
+    }
+  ],
+  "direction_and_capacity_assessment": "Flatnews andnullclose are reasonable possibilities forfarlaterplannedmaintenancewithoutanchor; neitherisdeclaredwrongbecauseofclass. Capacities100technical/80available/20unavailable appearindividually, no20.6sum or20mcm/dmeasuredloss isstated. Wordingcapacityfrom100to80 is lessprecise thantechnical100/announcedavailable80, but the materialidentifieddefect is zero priceeffect, notforceddirection.",
+  "actual_attempts": [
+    {
+      "attempt": 1,
+      "raw_content_sha256": "09d26b8dcbf07c35d44803abf0d0aee8ce3c8cc4a1e4af0a5032d30259a2b63c",
+      "done_reason": "stop",
+      "parsed_raw_body": {
+        "source_fact_checks": {
+          "fact_contract_version": "operator-facts-2.2",
+          "operator_notices": [
+            {
+              "id": "N0",
+              "facility": "test",
+              "facility_type": "气田/生产设施",
+              "notice_type": "计划",
+              "unavailable_capacity": "20",
+              "period_utc": [
+                "2027-05-22T04:00Z",
+                "2027-05-25T04:00Z"
+              ],
+              "state_description": "未来公告"
+            }
+          ],
+          "capacity_scope": "公告不可用容量，非实际流量计量",
+          "pricing_observation": {
+            "clock_roles": {
+              "observed_at": "报价发生时刻",
+              "available_at": "本机获知时刻；不是报价发生时刻"
+            },
+            "current_news_timing": {
+              "id": "N0",
+              "publication_time": "2026-10-20T12:10:58.642680+00:00",
+              "quote_relation": "unknown",
+              "quote_role": "观测/发布时间精度不足，前后关系未知"
+            },
+            "reaction_evidence_available": false,
+            "pricing_status": "无法确认是否已计价；不是尚未计价或价格无反应"
+          }
+        },
+        "news_impact": {
+          "bullish_evidence": [],
+          "bearish_evidence": [],
+          "neutralizing_evidence": [],
+          "summary": "Gassco宣布计划在2027年5月22日至25日停产，容量从100 mcm/d降至80 mcm/d，减少20 mcm/d。该事件为未来公告，未导致当前供气损失或价格反应，因而对TTF价格无即时影响。",
+          "contextual_news_score": 0,
+          "direction": "flat",
+          "confidence": 0.5,
+          "signal_strength": "weak"
+        },
+        "close_forecast": {
+          "basis": "缺乏前一交易日参考价和市场基准，无法判断收盘价相对前一日的走势。",
+          "summary": "缺乏前一交易日参考价和市场基准，无法判断收盘价相对前一日的走势。",
+          "evidence_status": "insufficient_evidence",
+          "direction": null,
+          "confidence": 0.0,
+          "extreme_move_risk": ""
+        },
+        "analysis": {
+          "summary": "新增事实：Gassco计划在2027年5月22日至25日停产，容量减少20 mcm/d。该事件为未来公告，未导致当前供气损失或价格反应。",
+          "evidence": [
+            "[N0]test；计划；公告不可用容量20mcm/d；未来容量公告；实流未知；TTF机制：供需约束"
+          ],
+          "negation_or_reversal": [],
+          "priced_in_comment": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格",
+          "matched_terms": [
+            "planned outage",
+            "capacity constraint"
+          ],
+          "historical_comparisons": []
+        },
+        "risk_flags": [],
+        "references": [
+          {
+            "id": "N0",
+            "url": ""
+          }
+        ],
+        "missing_fields": []
+      }
+    }
+  ],
+  "recommendation": "Preserve the actualacceptedrecord andrecordedstrictclasspass; list humansemanticfailure separately. Keepcurrent20source frozenuntilcohortend. Anylaterfix shouldtargetcoordinatednegativepricephrasing/currentpricezero inference while retainingvalidfutureeventphysicaldenials andweak/flatpressurejudgements. Do notchange expectedlabels or postprocesspredictions.",
+  "no_model_calls_by_reviewer": true,
+  "no_network_calls": true,
+  "no_database_access": true,
+  "no_tests_run": true,
+  "no_core_edits": true,
+  "limits": [
+    "This is a materialdefect inoneacceptedactual, notproof allfuture/flatjudgements arewrong.",
+    "No originaloutput/status/scoreedited andno modelregenerationrequestedbyreviewer."
+  ]
+}

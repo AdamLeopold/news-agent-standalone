@@ -1,0 +1,170 @@
+{
+  "reviewer": "/root/final_semantic_audit",
+  "candidate_sha256": "d8dbb58192b5c9fbfd04726d3309127142bfa02f2d18f11ee6de82c0a33204b9",
+  "new_model_calls": 0,
+  "passed": true,
+  "control_count": 21,
+  "controls": [
+    {
+      "name": "explicit_up_wrong_bearish",
+      "expected_allowed": false,
+      "actual_allowed": false,
+      "passed": true,
+      "error": "news_impact.bearish_evidence[0]:明写的TTF价格方向与证据栏相反，价格上行属看涨栏、价格下行属看跌栏；须按该N来源分栏/解释，不改变净方向"
+    },
+    {
+      "name": "explicit_up_correct_bullish",
+      "expected_allowed": true,
+      "actual_allowed": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "bare_company_endpoint",
+      "expected_allowed": false,
+      "actual_allowed": false,
+      "passed": true,
+      "error": "news_impact.bullish_evidence[0]:项目开启或公司合同事实不能只接TTF涨跌模板；须说明该N有来源的供需/容量风险/预期差传导，不能把公司利好直接当气价利好；净方向仍可flat"
+    },
+    {
+      "name": "future_supply_growth_bearish",
+      "expected_allowed": true,
+      "actual_allowed": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "upward_pressure_weakens",
+      "expected_allowed": true,
+      "actual_allowed": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "fact_previously_not_historical_waiver",
+      "expected_allowed": false,
+      "actual_allowed": false,
+      "passed": true,
+      "error": "news_impact.bearish_evidence[0]:明写的TTF价格方向与证据栏相反，价格上行属看涨栏、价格下行属看跌栏；须按该N来源分栏/解释，不改变净方向"
+    },
+    {
+      "name": "price_scope_对TTF价格暂无即时影响。",
+      "expected_allowed": false,
+      "actual_allowed": false,
+      "passed": true,
+      "error": "analysis.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应"
+    },
+    {
+      "name": "price_scope_预计对TTF价格暂无即时影响。",
+      "expected_allowed": true,
+      "actual_allowed": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "price_scope_对TTF价格影响有限。",
+      "expected_allowed": true,
+      "actual_allowed": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "price_scope_无法确认对TTF价格暂无即时影响。",
+      "expected_allowed": true,
+      "actual_allowed": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "price_scope_若供给尚未投产，对TTF价格暂无即时影响。",
+      "expected_allowed": true,
+      "actual_allowed": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "same_source_confirmation_Åsgard已确认实际停产。",
+      "expected_allowed": true,
+      "actual_allowed": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "same_source_confirmation_Åsgard实际生产未停止。",
+      "expected_allowed": false,
+      "actual_allowed": false,
+      "passed": true,
+      "error": "analysis.summary:Åsgard输入仅有该设施不可用容量公告且实流未知，不能裸称设施停产/停供已发生；可写停产公告/公告容量风险、若/未来条件，实际停产须该实体截至as_of已知的独立生产/流量确认，不改变净方向"
+    },
+    {
+      "name": "same_source_confirmation_Åsgard实际生产没有停止。",
+      "expected_allowed": false,
+      "actual_allowed": false,
+      "passed": true,
+      "error": "analysis.summary:Åsgard输入仅有该设施不可用容量公告且实流未知，不能裸称设施停产/停供已发生；可写停产公告/公告容量风险、若/未来条件，实际停产须该实体截至as_of已知的独立生产/流量确认，不改变净方向"
+    },
+    {
+      "name": "notice_scope_[N5]未来维护尚未开始，无显著供应中断。",
+      "expected_allowed": true,
+      "actual_allowed": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "notice_scope_[N3]无显著供应中断。",
+      "expected_allowed": false,
+      "actual_allowed": false,
+      "passed": true,
+      "error": "close_forecast.summary:Gassco公告撤销/结束或实际流量未确认，不能证明未形成供需冲击、供应不受影响或实际流量无变化；须有独立无变化计量事实。可写输入未显示冲击证据或恢复待核实，不能把缺测写成无冲击"
+    },
+    {
+      "name": "notice_scope_[N5][N3]无显著供应中断。",
+      "expected_allowed": false,
+      "actual_allowed": false,
+      "passed": true,
+      "error": "close_forecast.summary:Gassco公告撤销/结束或实际流量未确认，不能证明未形成供需冲击、供应不受影响或实际流量无变化；须有独立无变化计量事实。可写输入未显示冲击证据或恢复待核实，不能把缺测写成无冲击"
+    },
+    {
+      "name": "notice_scope_[N5]欧洲全网无显著供应中断。",
+      "expected_allowed": false,
+      "actual_allowed": false,
+      "passed": true,
+      "error": "close_forecast.summary:Gassco公告撤销/结束或实际流量未确认，不能证明未形成供需冲击、供应不受影响或实际流量无变化；须有独立无变化计量事实。可写输入未显示冲击证据或恢复待核实，不能把缺测写成无冲击"
+    },
+    {
+      "name": "new_actual_real_eni_rejected_unchanged",
+      "passed": true,
+      "errors": [
+        "close_forecast.basis:Gassco公告撤销/结束或实际流量未确认，不能证明未形成供需冲击、供应不受影响或实际流量无变化；须有独立无变化计量事实。可写输入未显示冲击证据或恢复待核实，不能把缺测写成无冲击",
+        "news_impact.summary:Åsgard输入仅有该设施不可用容量公告且实流未知，不能裸称设施停产/停供已发生；可写停产公告/公告容量风险、若/未来条件，实际停产须该实体截至as_of已知的独立生产/流量确认，不改变净方向",
+        "news_impact.bullish_evidence[0]:项目开启或公司合同事实不能只接TTF涨跌模板；须说明该N有来源的供需/容量风险/预期差传导，不能把公司利好直接当气价利好；净方向仍可flat；news_impact.bearish_evidence[0]:明写的TTF价格方向与证据栏相反，价格上行属看涨栏、价格下行属看跌栏；须按该N来源分栏/解释，不改变净方向"
+      ]
+    },
+    {
+      "name": "new_actual_anchor_real_manual_missing_prevday_rejected_unchanged",
+      "passed": true,
+      "errors": [
+        "news_impact.summary、analysis.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应"
+      ]
+    },
+    {
+      "name": "new_slot_gate_never_coerces_net_labels_or_null_close",
+      "passed": true
+    }
+  ],
+  "shared_source_ast_unchanged": {
+    "_matching_mechanisms": true,
+    "extract_mechanisms": true,
+    "_source_text": true,
+    "source_fact_projection": true
+  },
+  "changed_existing_functions": [
+    "_check_gassco_physical_state",
+    "_check_observed_absence_of_price_reaction",
+    "_analysis_semantic_checks"
+  ],
+  "added_functions": [
+    "_check_source_bound_evidence_slot_prices",
+    "_check_notice_entity_production_stop"
+  ]
+}

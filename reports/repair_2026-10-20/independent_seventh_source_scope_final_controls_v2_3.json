@@ -1,0 +1,258 @@
+{
+  "candidate": {
+    "analysis": {
+      "file": ".runtime/seventh-source-scope-proposal/revision-aggregate-scope/ttf_news/analysis.py",
+      "sha256": "baec41f3ee2f67949264bcb3790365bf2ce9270071a0923ed8a39cb078d62dfb"
+    },
+    "semantics": {
+      "file": ".runtime/seventh-source-scope-proposal/revision-aggregate-scope/ttf_news/semantics.py",
+      "sha256": "07632831d7335b0138203b78f55e4bc221c92d761628a40f09a4330834049028"
+    }
+  },
+  "unique_aggregate_controls": [
+    {
+      "text": "两条未来维护公告分别有7.6和13mcm/d容量损失，不能合计20.6mcm/d。",
+      "expected_reject": false,
+      "actual_error": null
+    },
+    {
+      "text": "两条未来维护公告分别有7.6和13mcm/d容量损失，不得合计20.6mcm/d。",
+      "expected_reject": false,
+      "actual_error": null
+    },
+    {
+      "text": "两条未来维护公告分别有7.6和13mcm/d容量损失，合计20.6mcm/d。",
+      "expected_reject": true,
+      "actual_error": "分别容量列表不能代替合计时段来源；须逐N说明同一时段后再核对合计，不能跨不重叠时段相加速率"
+    },
+    {
+      "text": "两条未来维护公告分别有7.6和13mcm/d容量损失，合计20.6mcm/d，若天气转暖则价格可能下跌。",
+      "expected_reject": true,
+      "actual_error": "分别容量列表不能代替合计时段来源；须逐N说明同一时段后再核对合计，不能跨不重叠时段相加速率"
+    }
+  ],
+  "twenty_original_bad_raw_replays": [
+    {
+      "case": "weak_exploration_no_quote",
+      "raw_sha256": "6ac8df5561c98897f3663043065321959121cfc5606a32833336b8ef529eff0b",
+      "rejected": true,
+      "errors": [
+        "close_forecast.basis、analysis.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应"
+      ]
+    },
+    {
+      "case": "weak_news_observed_market_up",
+      "raw_sha256": "ed947244f6672f8ecf2ee878e7106d28a7830ddee4d02f75bc99d0adee7df251",
+      "rejected": true,
+      "errors": [
+        "close_forecast:已有有效同合约盘中方向基准；新闻影响较弱或无法证明单新闻价格因果、未知是否计价，不能单独取消相对已给前价的条件性收盘预判。请权衡真实基准与有来源的冲突机制，保留五档选择，不得自动复制新闻方向或把参考变化当已实现收盘"
+      ]
+    },
+    {
+      "case": "supply_restore_40_with_flat_baseline",
+      "raw_sha256": "e70b1eeced61a0ca82702ee329ca6bee674dac90bc2e65abf54822c95deeffb9",
+      "rejected": true,
+      "errors": [
+        "close_forecast.basis:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应"
+      ]
+    },
+    {
+      "case": "anchor_legal_prevday_weak_market_up",
+      "raw_sha256": "978e0af10124b6ac118527bced66cb752c93310dd08bb7e5ac45f875cb8d1968",
+      "rejected": true,
+      "errors": [
+        "news_impact.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应",
+        "没有校准价格预测输入，禁止编造上涨/下跌幅度或目标价；仅可引用输入已观察的同合约参考变化"
+      ]
+    },
+    {
+      "case": "anchor_real_manual_missing_prevday",
+      "raw_sha256": "bdc3f17c8ff05ac997aeba24d96f987478fa8968823d0426ee030321003253cb",
+      "rejected": true,
+      "errors": [
+        "news_impact.bearish_evidence[0]:N0原来源合同授予/委托方为LNG Canada、获授/承接方为Técnicas Reunidas，不能把授予方写成获授方或反转双方角色；请保留该N具体交易，不套用其他N的合同，不要求复述角色或改变价格方向"
+      ]
+    },
+    {
+      "case": "future_planned_notice",
+      "raw_sha256": "09d26b8dcbf07c35d44803abf0d0aee8ce3c8cc4a1e4af0a5032d30259a2b63c",
+      "rejected": true,
+      "errors": [
+        "news_impact.summary、analysis.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应"
+      ]
+    },
+    {
+      "case": "supply_loss_40_with_flat_baseline",
+      "raw_sha256": "dd1f44e9ef94887f17bd051dbac3e4c282131e5bfe637ec2957c5b114f645ef5",
+      "rejected": true,
+      "errors": [
+        "close_forecast.basis:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应"
+      ]
+    },
+    {
+      "case": "anchor_real_manual_missing_prevday",
+      "raw_sha256": "11e4dd39600e3cac0308bf3ad4100900431e4314173de83e25cfd1b034e815b9",
+      "rejected": true,
+      "errors": [
+        "news_impact.summary、analysis.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应"
+      ]
+    },
+    {
+      "case": "v2_0_missing_previous_trading_day_anchor",
+      "raw_sha256": "42094e73a35ea27e1306bf4b94f757072fa0329d4ee4515375dcb00313613770",
+      "rejected": true,
+      "errors": [
+        "close_forecast:目标2026-10-21缺少前交易日2026-10-20同合约锚点；当前绝对报价或其他日期参考差不能当昨收涨跌。新闻也无方向依据时须insufficient_evidence且direction=null；有方向新闻仍可给有据条件预测，不补flat或强制复制新闻方向"
+      ]
+    },
+    {
+      "case": "v2_1_future_abandonment_asserted_completed",
+      "raw_sha256": "2be1a16116bf38be121aaeb0147abf35f97b6f71155de52979308245d1a87a91",
+      "rejected": true,
+      "errors": [
+        "news_impact.summary:N0来源仅说该井将封堵/弃置，不能写已被永久封堵/井已弃置/已完成封井；请保留将/计划等未来时态，不从报道日期已过推断完成。原句will now be plugged and abandoned；实际has been/was plugged完成事实须有相应来源，不改新闻或收盘方向"
+      ]
+    },
+    {
+      "case": "v2_1_field_misidentified_as_pipeline",
+      "raw_sha256": "979e22270e7d00c609a22825a40cfd0d258e67feb7af0292bb1f14aac05d9964",
+      "rejected": true,
+      "errors": [
+        "news_impact.summary:N1来源设施类型为Gas production field（气田/生产设施），不得称Troll等该实体为pipeline/管道维护；须保留对应N的原设施类别或泛称设施公告，不能借另一N的管道合同套类型，不改方向"
+      ]
+    },
+    {
+      "case": "dismissed_notice_not_verified_recovery",
+      "raw_sha256": "ff0860953edcff8326137e7680741f231c60ac52ca4cc792b735ecd278bb613d",
+      "rejected": true,
+      "errors": [
+        "close_forecast.basis:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应"
+      ]
+    },
+    {
+      "case": "dismissed_notice_not_verified_recovery",
+      "raw_sha256": "5a173dcdbcc64f841702d81853e17bc28d7f122bb27ff3e3ae3a8a154cf6c2d5",
+      "rejected": true,
+      "errors": [
+        "news_impact.bullish_evidence[0]:供应风险降低是TTF边际下行/中和机制，供应风险上升是边际上行机制；风险变化不等于实际流量恢复或损失，不能反放证据栏。须按引用事实重算/分栏，净方向仍可flat，不补实际流量。",
+        "news_impact.bullish_evidence[0]:证据栏与供需机制相反；请移动/重算证据，不能把供应增加放作看涨或供应减少放作看跌"
+      ]
+    },
+    {
+      "case": "anchor_legal_prevday_weak_market_up",
+      "raw_sha256": "b1ac4f872330d717ddf0748cfa4f65f536d9ac2a7d389d2d3786ac2d69985d6f",
+      "rejected": true,
+      "errors": [
+        "close_forecast:已有有效同合约盘中方向基准；新闻影响较弱或无法证明单新闻价格因果、未知是否计价，不能单独取消相对已给前价的条件性收盘预判。请权衡真实基准与有来源的冲突机制，保留五档选择，不得自动复制新闻方向或把参考变化当已实现收盘"
+      ]
+    },
+    {
+      "case": "fifth_current_wrong_price_unit",
+      "raw_sha256": "11b38edc3c6117ce32e855dd47806552f4950cbb02c7e2a146a1ac508f995124",
+      "rejected": true,
+      "errors": [
+        "close_forecast.basis:TTF报价/参考变动单位必须保留输入EUR/mwh，不能写成EUR/mcm；能源报价不是体积容量，未经已给换算依据不得替换货币或分母。不改变预测方向"
+      ]
+    },
+    {
+      "case": "real_eni",
+      "raw_sha256": "17fcc5caae952ca8feb2ad05892d96d6bf6c10c35c96886bfe6d2fda015fa3cf",
+      "rejected": true,
+      "errors": [
+        "close_forecast.basis:Gassco公告撤销/结束或实际流量未确认，不能证明未形成供需冲击、供应不受影响或实际流量无变化；须有独立无变化计量事实。可写输入未显示冲击证据或恢复待核实，不能把缺测写成无冲击",
+        "news_impact.summary:Åsgard输入仅有该设施不可用容量公告且实流未知，不能裸称设施停产/停供已发生；可写停产公告/公告容量风险、若/未来条件，实际停产须该实体截至as_of已知的独立生产/流量确认，不改变净方向",
+        "news_impact.bullish_evidence[0]:项目开启或公司合同事实不能只接TTF涨跌模板；须说明该N有来源的供需/容量风险/预期差传导，不能把公司利好直接当气价利好；净方向仍可flat；news_impact.bearish_evidence[0]:明写的TTF价格方向与证据栏相反，价格上行属看涨栏、价格下行属看跌栏；须按该N来源分栏/解释，不改变净方向"
+      ]
+    },
+    {
+      "case": "anchor_real_manual_missing_prevday",
+      "raw_sha256": "217e26d7eec7c19e54b2c9eaed8071d1496512be83f3b2d60a49d00ed7c932e9",
+      "rejected": true,
+      "errors": [
+        "news_impact.summary、analysis.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应"
+      ]
+    },
+    {
+      "case": "retained_future_price_zero",
+      "raw_sha256": "bbff4e9280b02e22641542c24941d03738d933c8093123125bc3aa0a18d4e405",
+      "rejected": true,
+      "errors": [
+        "news_impact.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应"
+      ]
+    },
+    {
+      "case": "manual_reaction_degree",
+      "raw_sha256": "d72b3686938aa585d99f2359ee1b3813dd13e63716169c9842f0590063038e80",
+      "rejected": true,
+      "errors": [
+        "news_impact.summary、analysis.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应"
+      ]
+    },
+    {
+      "case": "current_pricing_unknown",
+      "raw_sha256": "f2ba2e925a1e4ed3b601d5b0238dfe7b81a1ef8634e42443e2a2f54101ad06ae",
+      "rejected": true,
+      "errors": [
+        "close_forecast.basis:计价未知或缺少计价证据不能作为额外看涨、看跌或持平依据；请将未知单列，方向只依据已给行情基准和来源供需机制。可保留有据的条件预测，不得由未知推未计价，不改变任何方向枚举"
+      ]
+    }
+  ],
+  "four_original_actual_raw_replays": [
+    {
+      "detail": false,
+      "attempt": 1,
+      "raw_sha256": "d608115d4370e28cdac94157afbf6bb10ef310f2de298850b85da4eb2dbc84ac",
+      "errors": [
+        "价格时间角色不符：从前交易日参考价到当前同合约报价的两个已知价位，不是前一交易日自身从前者涨跌至后者；请明确前日参考与当前观察时钟，不改变预测方向"
+      ],
+      "offline_validation_pass": false,
+      "original_failed_status_preserved": true
+    },
+    {
+      "detail": false,
+      "attempt": 2,
+      "raw_sha256": "6dc52549fcfa076601b4d6b4ec595bb6d0f1c0ae4af0a02a69ee07cc35b7a1ed",
+      "errors": [
+        "news_impact.summary、close_forecast.basis、analysis.summary:缺少公告前后价格反应，不能宣称已计价/已消化；须区分计价未知",
+        "close_forecast.basis:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景"
+      ],
+      "offline_validation_pass": false,
+      "original_failed_status_preserved": true
+    },
+    {
+      "detail": true,
+      "attempt": 1,
+      "raw_sha256": "729d15c499c91c913d849f9c2dfcf62f9127b5c2fd7913009787cb02c44139dd",
+      "errors": [
+        "news_impact.summary:公告不可用容量不等于计划停产/减供的实际数量；输入未给独立实物流量或交付计划依据，不能把容量改称停产13.0mcm/d。可列公告不可用容量、未来时段及其条件风险",
+        "N0容量字段未指明原值为137.4/129.8/7.6mcm/d，不是13.0；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算",
+        "价格时间角色不符：输入给的是当前同合约报价相对前一交易日参考价的差值，不是前一交易日自身的涨跌；请明确当前报价/前日比较基准，不把该观察差当未来目标幅度"
+      ],
+      "offline_validation_pass": false,
+      "original_failed_status_preserved": true
+    },
+    {
+      "detail": true,
+      "attempt": 2,
+      "raw_sha256": "769d8f1738ceecc738d798e4e7469fdd6b98cdf23f70e5749d958c8f0c2db180",
+      "errors": [],
+      "offline_validation_pass": true,
+      "original_failed_status_preserved": true
+    }
+  ],
+  "changed_ast_nodes": {
+    "analysis": [
+      "_parse_result",
+      "_validate_notice_source_facts",
+      "_validate_prediction_semantics"
+    ],
+    "semantics": [
+      "_future_notice_not_yet_physical_claim",
+      "_check_unknown_as_fact",
+      "_check_gassco_physical_state"
+    ]
+  },
+  "new_model_calls": 0,
+  "database_access": false,
+  "source_or_original_record_mutation": false
+}

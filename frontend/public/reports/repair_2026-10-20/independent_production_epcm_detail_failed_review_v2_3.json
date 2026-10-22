@@ -1,0 +1,389 @@
+{
+  "audit": "fresh_production_epcm_detail_failure_full_review_v2_3",
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "audited_at": "2026-10-20T23:21:19.432346+00:00",
+  "verdict": "whole_detail_failure_preserved_with_real_expectation_logic_error_and_conditional_field_false_positive_reasons",
+  "analysis_id": "8d1b57ef-422e-48e7-90af-745694e3a298",
+  "actual_record_path": "reports/repair_2026-10-20/production_manual_detail_failed_epcm_v2_3.json",
+  "actual_record_sha256": "bac799ad80a64cad579e830ab01c8ab83b821a38535d0d2218260f99a904bc2b",
+  "failure_metric_path": "reports/repair_2026-10-20/production_manual_detail_failed_epcm_metric_v2_3.json",
+  "failure_metric_sha256": "528bf17cf390cd73448e4d0a882295133292120231520e9035e359bb5ae39207",
+  "input_snapshot_canonical_sha256": "ecc75c61f2a8c5885bca566ebb62a849e2c6b01330c1fcc0a8900b4cdb6dca85",
+  "generation_semantics_sha256": "a0b8c530ba84b912801f2a294a2f5e94aed419d8083cd9f72270b76e3e53f000",
+  "detail_delivered": false,
+  "failed_run_not_upgraded": true,
+  "false_positive_rejection_reasons_identified": true,
+  "whole_run_unjustified_rejection": false,
+  "field_semantics": "detail.invalidation_conditions describes hypothetical facts which would invalidate a conclusion. Merely listing a not-yet-observed flow loss or accelerated project delivery there does not assert it occurred; explicit若 strengthens this, but omission of若 does not erase the field contract. Unconditional observations elsewhere retain their usual evidentiary burden.",
+  "attempt_reviews": [
+    {
+      "attempt": 1,
+      "raw_content_sha256": "f6b617332f535ec61009f65ffd5c874ecb29163783dd8d93132729c4a96d6b27",
+      "done_reason": "stop",
+      "all_body_fields": {
+        "source_fact_checks": {
+          "fact_contract_version": "operator-facts-2.2",
+          "operator_notices": [
+            {
+              "id": "N1",
+              "facility": "Troll",
+              "facility_type": "气田/生产设施",
+              "notice_type": "计划",
+              "unavailable_capacity": "7.6",
+              "period_utc": [
+                "2026-10-22T04:00Z",
+                "2026-10-23T04:00Z"
+              ],
+              "state_description": "未来公告",
+              "cause_original": "Yearly maintenance"
+            },
+            {
+              "id": "N2",
+              "facility": "Troll",
+              "facility_type": "类别未给",
+              "notice_type": "计划",
+              "unavailable_capacity": "13.0",
+              "period_utc": [
+                "2026-10-21T04:00Z",
+                "2026-10-22T04:00Z"
+              ],
+              "state_description": "未来公告",
+              "cause_original": "Yearly maintenance"
+            }
+          ],
+          "capacity_scope": "公告不可用容量，非实际流量计量",
+          "pricing_observation": {
+            "observed_at": "2026-10-20T20:59:00+00:00",
+            "available_at": "2026-10-20T21:09:54.498786+00:00",
+            "clock_roles": {
+              "observed_at": "报价发生时刻",
+              "available_at": "本机获知时刻；不是报价发生时刻"
+            },
+            "current_news_timing": {
+              "id": "N0",
+              "publication_time": "2026-10-20T13:11:12+00:00",
+              "quote_relation": "at_or_after_publication",
+              "quote_role": "已观察市场基准；单个报价不证明公告反应"
+            },
+            "reaction_evidence_available": false,
+            "pricing_status": "无法确认是否已计价；不是尚未计价或价格无反应"
+          },
+          "non_overlapping_notice_ids": [
+            [
+              "N1",
+              "N2"
+            ]
+          ]
+        },
+        "news_impact": {
+          "bullish_evidence": [],
+          "bearish_evidence": [],
+          "neutralizing_evidence": [],
+          "summary": "截至2026‑10‑20，LNG Canada签署的EPCM合同并未立即影响天然气供应；Troll场站的两项计划维护公告属于未来事件，当前并未导致供气损失。整体来看，未出现可计价的供需冲击，净影响为平稳。",
+          "contextual_news_score": 0,
+          "direction": "flat",
+          "confidence": 0.6,
+          "signal_strength": "weak"
+        },
+        "close_forecast": {
+          "basis": "截至2026‑10‑20，TTF参考价为86.325欧元/MWh，但缺乏前一交易日的官方结算基准，无法确定价格相对前一日的涨跌。",
+          "summary": "由于缺少上一交易日的官方结算价格，且未来维护公告尚未生效，无法判断本日收盘价相对前一日的走势。",
+          "evidence_status": "insufficient_evidence",
+          "direction": null,
+          "confidence": 0.4,
+          "extreme_move_risk": "缺乏前一交易日基准导致无法评估极端价格变动风险"
+        },
+        "analysis": {
+          "summary": "本窗口内无可计价的供需冲击。LNG Canada的EPCM合同属于长期项目，未对即时供应产生影响；Troll场站的两项计划维护公告属于未来事件，当前不构成供气损失。",
+          "evidence": [
+            "[N0] LNG Canada签署EPCM合同 → 未来项目，未即时影响TTF供需",
+            "[N1]Troll；计划；公告不可用容量7.6mcm/d；未来容量公告；实流未知；TTF机制：未来供需约束",
+            "[N2]Troll；计划；公告不可用容量13.0mcm/d；未来容量公告；实流未知；结束时间修订：2026-10-23T06:00:00+0200→2026-10-22T06:00:00+0200；TTF机制：未来供需约束"
+          ],
+          "negation_or_reversal": [],
+          "priced_in_comment": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格",
+          "matched_terms": [],
+          "historical_comparisons": []
+        },
+        "risk_flags": [
+          "price_reference:输入未提供可用的前一同合约价格锚点",
+          "price_reference:输入未提供可用的前一同合约价格锚点",
+          "price_reference:输入未提供可用的前一同合约价格锚点",
+          "price_reference:输入未提供可用的前一同合约价格锚点",
+          "price_reference:输入未提供可用的前一同合约价格锚点"
+        ],
+        "references": [
+          {
+            "id": "N0",
+            "url": ""
+          },
+          {
+            "id": "N1",
+            "url": ""
+          },
+          {
+            "id": "N2",
+            "url": ""
+          }
+        ],
+        "missing_fields": [],
+        "detail": {
+          "new_facts": [
+            "[N0] LNG Canada签署EPCM合同，价值>€200M，涉及Coastal GasLink Phase 2；未立即影响天然气供应",
+            "[N1] Troll场站计划维护，未来不可用容量7.6mcm/d，起始2026-10-22",
+            "[N2] Troll场站计划维护，未来不可用容量13.0mcm/d，起始2026-10-21"
+          ],
+          "transmission": [
+            "[N0] 该合同为未来项目，未对欧洲天然气供需产生即时传导；[N1] 与[N2] 未来公告不构成当前供气损失，未对TTF产生即时传导"
+          ],
+          "daily_balance": [
+            "window_news:本结算窗口内无可计价的供需冲击，净影响为平稳"
+          ],
+          "historical_comparisons": [
+            "[E1]历史记录日期2026-10-19，类别为供应中断/复产；公告容量限制不等于已核实流量损失；该时点价格反应资料未提供，无法量化；输入未提供可验证的天气及LNG差异，需核对具体供需情景"
+          ],
+          "priced_in_assessment": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格",
+          "scenarios": {
+            "bullish": "若Troll维护提前至本窗口，导致实际供气损失，可能推升TTF",
+            "base": "若维护按公告时间执行，未对本窗口价格产生影响",
+            "bearish": "若维护期间出现其他供给改善或库存补充，可能压低TTF"
+          },
+          "invalidation_conditions": [
+            "[N1]或[N2] 维护提前至本窗口并导致实际供气损失",
+            "[N0] 若合同涉及即时产能扩张并已投产"
+          ],
+          "limitations": [
+            "price_reference:输入未提供可用的前一同合约价格锚点",
+            "price_reference:输入未提供可用的前一同合约价格锚点",
+            "price_reference:输入未提供可用的前一同合约价格锚点",
+            "price_reference:输入未提供可用的前一同合约价格锚点",
+            "price_reference:输入未提供可用的前一同合约价格锚点"
+          ],
+          "references": [
+            {
+              "id": "N0",
+              "url": ""
+            },
+            {
+              "id": "N1",
+              "url": ""
+            },
+            {
+              "id": "N2",
+              "url": ""
+            }
+          ]
+        }
+      },
+      "reported_validation_errors": [
+        "detail.invalidation_conditions[0]:Gassco未来维护公告不能写成当前实际停供或流量损失；应写未来容量风险并保留起止时间",
+        "analysis.summary:新闻覆盖不足不能证明市场没有供需变化；只能说明输入新闻未显示相应冲击"
+      ],
+      "false_positive_reasons": [
+        {
+          "field": "detail.invalidation_conditions[0]",
+          "quote": "[N1]或[N2] 维护提前至本窗口并导致实际供气损失",
+          "reason": "Hypothetical invalidating maintenance timing/flowconfirmation, not present actual loss."
+        }
+      ],
+      "remaining_real_issue": {
+        "severity": "P2",
+        "field": "analysis.summary",
+        "quote": "本窗口内无可计价的供需冲击。LNG Canada的EPCM合同属于长期项目，未对即时供应产生影响；Troll场站的两项计划维护公告属于未来事件，当前不构成供气损失。",
+        "reason": "Second explicit futureevents→no currentloss→故对TTF价格无可计价冲击 is an unsupported economic inference; future announcements can change expected supply/currentpricing before physical execution. First no-priceable-shock assertion carries the same excessive scope. Missing reaction evidence does not validate a categorical priceability denial. This is not a demand to changeflat or to declare a measured market reaction."
+      },
+      "other_wording_qualification": "First base scenario 若维护按公告时间执行，未对本窗口价格产生影响 is noted as a potentially overstrong hypothesis; scenarios retain hypothetical freedom and this is not used alone as an asserted-current-observation error.",
+      "overall_failure_judgment": "Preserve failed terminalstatus; conditional FP can be fixed prospectively without accepting remaining real logic issue."
+    },
+    {
+      "attempt": 2,
+      "raw_content_sha256": "6bddffd081120908e12e52ffbd4fa4d9fb48f801aaaee880ab0ccfc67d75c5f1",
+      "done_reason": "stop",
+      "all_body_fields": {
+        "source_fact_checks": {
+          "fact_contract_version": "operator-facts-2.2",
+          "operator_notices": [
+            {
+              "id": "N1",
+              "facility": "Troll",
+              "facility_type": "气田/生产设施",
+              "notice_type": "计划",
+              "unavailable_capacity": "7.6",
+              "period_utc": [
+                "2026-10-22T04:00Z",
+                "2026-10-23T04:00Z"
+              ],
+              "state_description": "未来公告",
+              "cause_original": "Yearly maintenance"
+            },
+            {
+              "id": "N2",
+              "facility": "Troll",
+              "facility_type": "类别未给",
+              "notice_type": "计划",
+              "unavailable_capacity": "13.0",
+              "period_utc": [
+                "2026-10-21T04:00Z",
+                "2026-10-22T04:00Z"
+              ],
+              "state_description": "未来公告",
+              "cause_original": "Yearly maintenance"
+            }
+          ],
+          "capacity_scope": "公告不可用容量，非实际流量计量",
+          "pricing_observation": {
+            "observed_at": "2026-10-20T20:59:00+00:00",
+            "available_at": "2026-10-20T21:09:54.498786+00:00",
+            "clock_roles": {
+              "observed_at": "报价发生时刻",
+              "available_at": "本机获知时刻；不是报价发生时刻"
+            },
+            "current_news_timing": {
+              "id": "N0",
+              "publication_time": "2026-10-20T13:11:12+00:00",
+              "quote_relation": "at_or_after_publication",
+              "quote_role": "已观察市场基准；单个报价不证明公告反应"
+            },
+            "reaction_evidence_available": false,
+            "pricing_status": "无法确认是否已计价；不是尚未计价或价格无反应"
+          },
+          "non_overlapping_notice_ids": [
+            [
+              "N1",
+              "N2"
+            ]
+          ]
+        },
+        "news_impact": {
+          "bullish_evidence": [],
+          "bearish_evidence": [],
+          "neutralizing_evidence": [],
+          "summary": "LNG Canada EPCM合同及Troll场站两项计划维护公告均为未来事件，未导致当前供气损失，故对TTF价格无可计价的供需冲击。",
+          "contextual_news_score": 0,
+          "direction": "flat",
+          "confidence": 0.5,
+          "signal_strength": "weak"
+        },
+        "close_forecast": {
+          "basis": "截至2026‑10‑20，TTF参考价为86.325欧元/MWh，但缺乏前一交易日的官方结算基准，无法确定价格相对前一日的涨跌。",
+          "summary": "缺少前一交易日结算基准，无法判断价格相对前一日的涨跌。",
+          "evidence_status": "insufficient_evidence",
+          "direction": null,
+          "confidence": 0.3,
+          "extreme_move_risk": "缺乏前一交易日结算基准，无法评估极端价格变动风险。"
+        },
+        "analysis": {
+          "summary": "本窗口内无可计价的供需冲击。LNG Canada EPCM合同属于长期项目，未对即时供应产生影响；Troll场站的两项计划维护公告属于未来事件，当前不构成供气损失。",
+          "evidence": [
+            "[N0] LNG Canada EPCM合同 → 未来项目，未即时影响TTF供需",
+            "[N1]Troll；计划；公告不可用容量7.6mcm/d；未来容量公告；实流未知；TTF机制：无当前供需冲击",
+            "[N2]Troll；计划；公告不可用容量13.0mcm/d；未来容量公告；实流未知；结束时间修订：2026-10-23T06:00:00+0200→2026-10-22T06:00:00+0200；TTF机制：无当前供需冲击"
+          ],
+          "negation_or_reversal": [],
+          "priced_in_comment": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格",
+          "matched_terms": [],
+          "historical_comparisons": []
+        },
+        "risk_flags": [],
+        "references": [
+          {
+            "id": "N0",
+            "url": ""
+          },
+          {
+            "id": "N1",
+            "url": ""
+          },
+          {
+            "id": "N2",
+            "url": ""
+          }
+        ],
+        "missing_fields": [],
+        "detail": {
+          "new_facts": [
+            "[N0] LNG Canada EPCM合同，价值>€200M，计划Phase 2，未对即时供气产生影响",
+            "[N1] Troll场站计划维护，开始2026-10-22，容量7.6mcm/d，未来公告",
+            "[N2] Troll场站计划维护，开始2026-10-21，容量13.0mcm/d，未来公告"
+          ],
+          "transmission": [
+            "[N0]未显示对欧洲天然气供需的即时传导",
+            "[N1]未产生当前供气损失，未影响欧洲天然气供需",
+            "[N2]未产生当前供气损失，未影响欧洲天然气供需"
+          ],
+          "daily_balance": [
+            "window_news:本结算窗口暂无其他新闻导致净涨跌"
+          ],
+          "historical_comparisons": [
+            "[E4]历史记录日期2026-10-08，类别为供应中断/复产；公告容量限制不等于已核实流量损失；1d同合约参考价差+2.58欧元/MWh（截止2026-10-09）；3d同合约参考价差+8.37欧元/MWh（截止2026-10-13）；同期价差不能归因于事件；输入未提供可验证的天气及LNG差异，需核对具体供需情景"
+          ],
+          "priced_in_assessment": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格",
+          "scenarios": {
+            "bullish": "若未来维护导致实际流量损失，可能推升价格",
+            "base": "若无实际流量损失，价格维持现状",
+            "bearish": "若实际流量恢复或其他供应增加，价格维持或略降"
+          },
+          "invalidation_conditions": [
+            "[N1]或[N2]实际流量损失被确认",
+            "[N0]合同导致的项目进度提前导致即时供气增加"
+          ],
+          "limitations": [
+            "price_reference:输入未提供该公告前后的独立可比价格反应，无法确认是否已计价",
+            "coverage:来源gdelt：最近采集失败；错误后等待重试"
+          ],
+          "references": [
+            {
+              "id": "N0",
+              "url": ""
+            },
+            {
+              "id": "N1",
+              "url": ""
+            },
+            {
+              "id": "N2",
+              "url": ""
+            }
+          ]
+        }
+      },
+      "reported_validation_errors": [
+        "detail.invalidation_conditions[0]:Gassco未来维护公告不能写成当前实际停供或流量损失；应写未来容量风险并保留起止时间",
+        "analysis.summary:新闻覆盖不足不能证明市场没有供需变化；只能说明输入新闻未显示相应冲击",
+        "detail.invalidation_conditions[1]:N0输入仅有资源发现/勘探/许可/合作前瞻，未给已投产或实际交付事实；不能写成当前实物增供并抵消当日容量约束。可分析长期供给预期、未来投产条件及其与当前供给的时间差，不得据此补默认方向"
+      ],
+      "false_positive_reasons": [
+        {
+          "field": "detail.invalidation_conditions[0]",
+          "quote": "[N1]或[N2]实际流量损失被确认",
+          "reason": "Hypothetical invalidating maintenance timing/flowconfirmation, not present actual loss."
+        },
+        {
+          "field": "detail.invalidation_conditions[1]",
+          "quote": "[N0]合同导致的项目进度提前导致即时供气增加",
+          "reason": "Hypothetical accelerated project supplies moregas; in an invalidation field this is not an asserted current operational project."
+        }
+      ],
+      "remaining_real_issue": {
+        "severity": "P2",
+        "field": "news_impact.summary",
+        "quote": "LNG Canada EPCM合同及Troll场站两项计划维护公告均为未来事件，未导致当前供气损失，故对TTF价格无可计价的供需冲击。",
+        "reason": "Second explicit futureevents→no currentloss→故对TTF价格无可计价冲击 is an unsupported economic inference; future announcements can change expected supply/currentpricing before physical execution. First no-priceable-shock assertion carries the same excessive scope. Missing reaction evidence does not validate a categorical priceability denial. This is not a demand to changeflat or to declare a measured market reaction."
+      },
+      "other_wording_qualification": null,
+      "overall_failure_judgment": "Preserve failed terminalstatus; conditional FP can be fixed prospectively without accepting remaining real logic issue."
+    }
+  ],
+  "source_and_price_assessment": "EPCM N0 is a future construction award, current Troll N1/N2 are future announced unavailablecapacity, actual flows unknown. They can be weak/current physical channels without producing current flow, yet future notices can change expectations and prices now. Absent a valid Oct20 reference for Oct21, closeNone is independently justified; no post-news reaction or priced-in status is established. A flat judgement is allowed; the problematic claim is the categorical inference that futurephysical timing entails no priceable shock.",
+  "limits": [
+    "No new modelcall or validator execution was used in this review.",
+    "Fixing the conditional-field scope FP alone does not turn this old run into a successful detail, and rawattempts/errors must remain preserved.",
+    "The reviewer does not require hypothetical scenarios to be proven current facts and does not force a nonflat direction."
+  ],
+  "no_model_calls_by_reviewer": true,
+  "no_network_calls": true,
+  "no_database_access": true,
+  "no_tests_run": true,
+  "no_core_edits": true
+}

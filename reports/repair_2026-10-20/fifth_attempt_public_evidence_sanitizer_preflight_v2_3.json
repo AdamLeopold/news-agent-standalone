@@ -1,0 +1,134 @@
+{
+  "created_at": "2026-10-21T02:12:04.130167+00:00",
+  "status": "passed_preflight_only",
+  "scope": "New fifth-attempt saved JSON evidence sanitized in memory only; not a final published snapshot or production database scan. No copy/sync/git/model/HTTP/service operation performed.",
+  "source_files": [
+    {
+      "file": "reports/repair_2026-10-20/production_fifth_full_workflow_v2_3.json",
+      "source_bytes_sha256": "a84ae778df82c79e18e7dfdd861b7e10cae2c0bcf0ab4ef77b431d8d5da21dc2",
+      "prospective_public_bytes_sha256": "a84ae778df82c79e18e7dfdd861b7e10cae2c0bcf0ab4ef77b431d8d5da21dc2",
+      "public_check_passed": true,
+      "checked_key_count": 219,
+      "source_unchanged": true,
+      "source_structural_transformation_needed": false
+    },
+    {
+      "file": "reports/repair_2026-10-20/production_fifth_manual_failed_actual_v2_3.json",
+      "source_bytes_sha256": "d390107f7566501e38fbcce5aa519bdafb1a6020644936eaabc71f0a15e1f12c",
+      "prospective_public_bytes_sha256": "f0f601a3004a20a1fbd6a630a5f6bba25cce58cf2e9223d6c02640545d30b6c2",
+      "public_check_passed": true,
+      "checked_key_count": 1434,
+      "source_unchanged": true,
+      "source_structural_transformation_needed": true
+    },
+    {
+      "file": "reports/repair_2026-10-20/production_fifth_current_live_actual_v2_3.json",
+      "source_bytes_sha256": "92b20f26bce74f4107e5fa42af0ef7b3f8ff09409882b5b6a327ee38c92ee384",
+      "prospective_public_bytes_sha256": "38979780251b31c0ab6605ffa1c03ca9c87c001385dd9cd8fae1ef4fe8e3d459",
+      "public_check_passed": true,
+      "checked_key_count": 2063,
+      "source_unchanged": true,
+      "source_structural_transformation_needed": true
+    },
+    {
+      "file": "reports/repair_2026-10-20/production_fifth_current_live_english_actual_v2_3.json",
+      "source_bytes_sha256": "1d0cf4bd22fe6b51d11bd60938fd09cb3c88411c7dea71ff4a5ffb9a2bbc2e49",
+      "prospective_public_bytes_sha256": "38802f9172ff9215ecc8905ab77b1df1743f0ed83aa3fbedb0693f4ea39ca885",
+      "public_check_passed": true,
+      "checked_key_count": 832,
+      "source_unchanged": true,
+      "source_structural_transformation_needed": true
+    },
+    {
+      "file": "reports/repair_2026-10-20/production_fifth_price_unit_analysis_review_v2_3.json",
+      "source_bytes_sha256": "d295723f2585d374f6c3b9b7283ea23167a2b41677cc0c2f1d907b45957c22b4",
+      "prospective_public_bytes_sha256": "d295723f2585d374f6c3b9b7283ea23167a2b41677cc0c2f1d907b45957c22b4",
+      "public_check_passed": true,
+      "checked_key_count": 18,
+      "source_unchanged": true,
+      "source_structural_transformation_needed": false
+    },
+    {
+      "file": "reports/repair_2026-10-20/applied-production-fifth-price-unit-review-v2_3.json",
+      "source_bytes_sha256": "7998b2f4db72a1052d8532758582124737e56b927b1fef46f68f17a27b7a6007",
+      "prospective_public_bytes_sha256": "7998b2f4db72a1052d8532758582124737e56b927b1fef46f68f17a27b7a6007",
+      "public_check_passed": true,
+      "checked_key_count": 7,
+      "source_unchanged": true,
+      "source_structural_transformation_needed": false
+    },
+    {
+      "file": "reports/repair_2026-10-20/independent_production_fifth_manual_failure_review_v2_3.json",
+      "source_bytes_sha256": "2e4e7b936d900b49e95e9b83c7fbca56e1d83aa0b9cac93c6eba6fea5abedf7d",
+      "prospective_public_bytes_sha256": "2e4e7b936d900b49e95e9b83c7fbca56e1d83aa0b9cac93c6eba6fea5abedf7d",
+      "public_check_passed": true,
+      "checked_key_count": 1453,
+      "source_unchanged": true,
+      "source_structural_transformation_needed": false
+    },
+    {
+      "file": "reports/repair_2026-10-20/independent_production_fifth_current_live_and_english_review_v2_3.json",
+      "source_bytes_sha256": "60e35775fea240c11ed1bf29940fa4118c5feb3e4acd48cb5b39eae4e2f0d7b6",
+      "prospective_public_bytes_sha256": "60e35775fea240c11ed1bf29940fa4118c5feb3e4acd48cb5b39eae4e2f0d7b6",
+      "public_check_passed": true,
+      "checked_key_count": 125,
+      "source_unchanged": true,
+      "source_structural_transformation_needed": false
+    },
+    {
+      "file": "reports/repair_2026-10-20/production_e2e_attempt_history_v2_3.json",
+      "source_bytes_sha256": "ee013f1ecaf28016e366c80ffb54f2a083af0fcfdd870404628758fc53eef94b",
+      "prospective_public_bytes_sha256": "ee013f1ecaf28016e366c80ffb54f2a083af0fcfdd870404628758fc53eef94b",
+      "public_check_passed": true,
+      "checked_key_count": 268,
+      "source_unchanged": true,
+      "source_structural_transformation_needed": false
+    },
+    {
+      "file": "reports/repair_2026-10-20/release_known_accepted_errors.json",
+      "source_bytes_sha256": "e8678ecc833d43029d6da6d3157f941f34e78fde24378710e983ff67ba858c48",
+      "prospective_public_bytes_sha256": "e8678ecc833d43029d6da6d3157f941f34e78fde24378710e983ff67ba858c48",
+      "public_check_passed": true,
+      "checked_key_count": 194,
+      "source_unchanged": true,
+      "source_structural_transformation_needed": false
+    },
+    {
+      "file": "reports/repair_2026-10-20/production_fifth_failure_and_physical_unit_pending_v2_3.json",
+      "source_bytes_sha256": "0e615f47f87e56375939ef6f6a92dbf7ed11abb7e48d1be05c982fb91083c68e",
+      "prospective_public_bytes_sha256": "0e615f47f87e56375939ef6f6a92dbf7ed11abb7e48d1be05c982fb91083c68e",
+      "public_check_passed": true,
+      "checked_key_count": 73,
+      "source_unchanged": true,
+      "source_structural_transformation_needed": false
+    },
+    {
+      "file": "reports/repair_2026-10-20/production_fifth_pending_reports_binding_v2_3.json",
+      "source_bytes_sha256": "76b212ada8f95b1e9ff155244f7dfdef47ece7f9f84e1951dd5aceadc2aff9e3",
+      "prospective_public_bytes_sha256": "76b212ada8f95b1e9ff155244f7dfdef47ece7f9f84e1951dd5aceadc2aff9e3",
+      "public_check_passed": true,
+      "checked_key_count": 24,
+      "source_unchanged": true,
+      "source_structural_transformation_needed": false
+    }
+  ],
+  "all_source_files_unchanged": true,
+  "public_clone_modified": false,
+  "database_access": false,
+  "model_calls": 0,
+  "network_calls": 0,
+  "scanner_self_tests": {
+    "tests": 26,
+    "passed": true,
+    "temporary_fixtures_only": true
+  },
+  "sanitizer_self_tests": {
+    "tests": 23,
+    "passed": true
+  },
+  "script_sha256": {
+    "scripts/sync-public-evidence.py": "45ff0d35795a6123f11efb2d33cded0e25d19e1875c5c946a2e0860fa7d58c2d",
+    "scripts/scan-public-snapshot.py": "16ed4d1d2af99b5935cc73e7af168e965d3b959daa2b61b0a3a99788b49c0ebf"
+  },
+  "does_not_satisfy_release_final_public_scan": true
+}

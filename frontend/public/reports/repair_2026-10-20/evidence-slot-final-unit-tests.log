@@ -1,0 +1,51 @@
+............................................. [  4%]
+.................................................................... [ 10%]
+........................................................................................................................................... [ 23%]
+........................................................................ [ 30%]
+........................................................................ [ 37%]
+........................................................................ [ 43%]
+...................................................................... [ 50%]
+........................................................................ [ 57%]
+........................................................................ [ 63%]
+........................................................................................................................... [ 75%]
+..................................................................... [ 81%]
+......................................... [ 85%]
+............... [ 86%]
+....F.......................... [ 89%]
+....................................................... [ 94%]
+.................................................... [ 99%]
+..                                                                       [100%]
+=================================== FAILURES ===================================
+_ SemanticTests.test_resource_conflicts_and_sourced_expectation_shortfall_remain_valid _
+ValueError: news_impact.bullish_evidence[0]:项目开启或公司合同事实不能只接TTF涨跌模板；须说明该N有来源的供需/容量风险/预期差传导，不能把公司利好直接当气价利好；净方向仍可flat
+
+During handling of the above exception, another exception occurred:
+
+self = <test_semantics.SemanticTests testMethod=test_resource_conflicts_and_sourced_expectation_shortfall_remain_valid>
+
+    def test_resource_conflicts_and_sourced_expectation_shortfall_remain_valid(self):
+        discovery={'id':'N4','source':'offshore_energy','title':'New gas discovery','facts':'New gas discovery may increase future supply.'}
+        demand={'id':'N5','source':'weather','title':'欧洲天气转冷','facts':'欧洲采暖需求上升。'}
+        ctx=context('欧洲天气转冷，需求增加。')
+        out=analysis('up','欧洲天气转冷','需求增加带来上行压力')
+        out['news_impact']['bullish_evidence']=['[N4]潜在供给↑，但[N5]欧洲采暖需求上升形成上行压力']
+        self.assertValid(out,ctx,{'window_news':[discovery,demand]})
+        out['news_impact']['bullish_evidence']=['[N4]潜在供给↑，但[N5]采暖需求↑，存在相反供需压力']
+        self.assertValid(out,ctx,{'window_news':[discovery,demand]})
+        discovery['facts']='发现规模低于此前预期；新增远期供给预期下修。'
+        out['news_impact']['bullish_evidence']=['[N4]潜在供给↑但发现规模低于此前预期，远期预期被下修 → TTF看涨']
+        self.assertValid(out,ctx,{'window_news':[discovery]})
+        discovery['facts']='New gas discovery may increase future supply; no expected discovery estimate is provided.'
+>       with self.assertRaisesRegex(ValueError,'物理量箭头不是TTF价格箭头|资源发现仅支持'):
+E       AssertionError: "物理量箭头不是TTF价格箭头|资源发现仅支持" does not match "news_impact.bullish_evidence[0]:项目开启或公司合同事实不能只接TTF涨跌模板；须说明该N有来源的供需/容量风险/预期差传导，不能把公司利好直接当气价利好；净方向仍可flat"
+
+tests/test_semantics.py:1233: AssertionError
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/fastapi/testclient.py:1
+  .venv/lib/python3.10/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_semantics.py::SemanticTests::test_resource_conflicts_and_sourced_expectation_shortfall_remain_valid
+1 failed, 1069 passed, 1 warning, 372 subtests passed in 45.46s

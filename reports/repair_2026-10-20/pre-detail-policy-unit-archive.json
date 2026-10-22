@@ -1,0 +1,15 @@
+{
+  "source_phase": "a0b8 final semantic gate / d854918 report helper, before operational detail policy consistency fix",
+  "passed": 749,
+  "subtests_passed": 375,
+  "artifacts": {
+    "pre-detail-policy-unit-tests.xml": {
+      "sha256": "c98eaced15d201444815167d4e50c71294a559b862246cb1bfe2158149a352ee",
+      "bytes": 119517
+    },
+    "pre-detail-policy-unit-tests.log": {
+      "sha256": "a18c07671bbc06e249d44989228cb3369f2ff5cfe45819141ba5abf870b3bf80",
+      "bytes": 1429
+    }
+  }
+}

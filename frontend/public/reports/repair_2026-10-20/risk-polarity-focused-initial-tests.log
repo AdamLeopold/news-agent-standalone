@@ -1,0 +1,150 @@
+...................................F...............................................................................................F...........................................................................     [100%]
+=================================== FAILURES ===================================
+__ test_source_operator_risk_extraction_preserves_conditional_capacity_scope ___
+
+    def test_source_operator_risk_extraction_preserves_conditional_capacity_scope():
+        context,_=ctx()
+        signals=candidate.extract_mechanisms(context['current_news'])
+>       assert [(row['mechanism'],row['pressure']) for row in signals]==[('capacity_risk_removed','down')]
+E       AssertionError: assert [] == [('capacity_r...ved', 'down')]
+E         
+E         Right contains one more item: ('capacity_risk_removed', 'down')
+E         Use -v to get more diff
+
+tests/test_risk_polarity_anchor.py:113: AssertionError
+_ SemanticTests.test_available_baseline_cannot_be_claimed_absent_even_when_abstaining (sentence='缺乏可用市场基准') _
+ValueError: close_forecast:已有有效同合约盘中方向基准；新闻影响较弱或无法证明单新闻价格因果、未知是否计价，不能单独取消相对已给前价的条件性收盘预判。请权衡真实基准与有来源的冲突机制，保留五档选择，不得自动复制新闻方向或把参考变化当已实现收盘
+
+During handling of the above exception, another exception occurred:
+
+self = <test_semantics.SemanticTests testMethod=test_available_baseline_cannot_be_claimed_absent_even_when_abstaining>
+
+    def test_available_baseline_cannot_be_claimed_absent_even_when_abstaining(self):
+        prepared = {"price_reference": {"market_baseline": {"available": True, "observed_direction": "up", "observed_delta": 1.5}}}
+        for sentence in ["缺乏可用市场基准", "未提供盘中报价和事件前后反应", "市场基准数据不可用", "没有当日价格基准"]:
+            out = analysis("flat", "牙买加许可证", "传导有限")
+            out["close_forecast"].update(direction=None, evidence_status="insufficient_evidence", summary="信息不足以判断收盘", basis=sentence)
+>           with self.subTest(sentence=sentence), self.assertRaisesRegex(ValueError, "已提供"):
+E           AssertionError: "已提供" does not match "close_forecast:已有有效同合约盘中方向基准；新闻影响较弱或无法证明单新闻价格因果、未知是否计价，不能单独取消相对已给前价的条件性收盘预判。请权衡真实基准与有来源的冲突机制，保留五档选择，不得自动复制新闻方向或把参考变化当已实现收盘"
+
+tests/test_semantics.py:493: AssertionError
+_ SemanticTests.test_available_baseline_cannot_be_claimed_absent_even_when_abstaining (sentence='未提供盘中报价和事件前后反应') _
+ValueError: close_forecast:已有有效同合约盘中方向基准；新闻影响较弱或无法证明单新闻价格因果、未知是否计价，不能单独取消相对已给前价的条件性收盘预判。请权衡真实基准与有来源的冲突机制，保留五档选择，不得自动复制新闻方向或把参考变化当已实现收盘
+
+During handling of the above exception, another exception occurred:
+
+self = <test_semantics.SemanticTests testMethod=test_available_baseline_cannot_be_claimed_absent_even_when_abstaining>
+
+    def test_available_baseline_cannot_be_claimed_absent_even_when_abstaining(self):
+        prepared = {"price_reference": {"market_baseline": {"available": True, "observed_direction": "up", "observed_delta": 1.5}}}
+        for sentence in ["缺乏可用市场基准", "未提供盘中报价和事件前后反应", "市场基准数据不可用", "没有当日价格基准"]:
+            out = analysis("flat", "牙买加许可证", "传导有限")
+            out["close_forecast"].update(direction=None, evidence_status="insufficient_evidence", summary="信息不足以判断收盘", basis=sentence)
+>           with self.subTest(sentence=sentence), self.assertRaisesRegex(ValueError, "已提供"):
+E           AssertionError: "已提供" does not match "close_forecast:已有有效同合约盘中方向基准；新闻影响较弱或无法证明单新闻价格因果、未知是否计价，不能单独取消相对已给前价的条件性收盘预判。请权衡真实基准与有来源的冲突机制，保留五档选择，不得自动复制新闻方向或把参考变化当已实现收盘"
+
+tests/test_semantics.py:493: AssertionError
+_ SemanticTests.test_available_baseline_cannot_be_claimed_absent_even_when_abstaining (sentence='市场基准数据不可用') _
+ValueError: close_forecast:已有有效同合约盘中方向基准；新闻影响较弱或无法证明单新闻价格因果、未知是否计价，不能单独取消相对已给前价的条件性收盘预判。请权衡真实基准与有来源的冲突机制，保留五档选择，不得自动复制新闻方向或把参考变化当已实现收盘
+
+During handling of the above exception, another exception occurred:
+
+self = <test_semantics.SemanticTests testMethod=test_available_baseline_cannot_be_claimed_absent_even_when_abstaining>
+
+    def test_available_baseline_cannot_be_claimed_absent_even_when_abstaining(self):
+        prepared = {"price_reference": {"market_baseline": {"available": True, "observed_direction": "up", "observed_delta": 1.5}}}
+        for sentence in ["缺乏可用市场基准", "未提供盘中报价和事件前后反应", "市场基准数据不可用", "没有当日价格基准"]:
+            out = analysis("flat", "牙买加许可证", "传导有限")
+            out["close_forecast"].update(direction=None, evidence_status="insufficient_evidence", summary="信息不足以判断收盘", basis=sentence)
+>           with self.subTest(sentence=sentence), self.assertRaisesRegex(ValueError, "已提供"):
+E           AssertionError: "已提供" does not match "close_forecast:已有有效同合约盘中方向基准；新闻影响较弱或无法证明单新闻价格因果、未知是否计价，不能单独取消相对已给前价的条件性收盘预判。请权衡真实基准与有来源的冲突机制，保留五档选择，不得自动复制新闻方向或把参考变化当已实现收盘"
+
+tests/test_semantics.py:493: AssertionError
+_ SemanticTests.test_available_baseline_cannot_be_claimed_absent_even_when_abstaining (sentence='没有当日价格基准') _
+ValueError: close_forecast:已有有效同合约盘中方向基准；新闻影响较弱或无法证明单新闻价格因果、未知是否计价，不能单独取消相对已给前价的条件性收盘预判。请权衡真实基准与有来源的冲突机制，保留五档选择，不得自动复制新闻方向或把参考变化当已实现收盘
+
+During handling of the above exception, another exception occurred:
+
+self = <test_semantics.SemanticTests testMethod=test_available_baseline_cannot_be_claimed_absent_even_when_abstaining>
+
+    def test_available_baseline_cannot_be_claimed_absent_even_when_abstaining(self):
+        prepared = {"price_reference": {"market_baseline": {"available": True, "observed_direction": "up", "observed_delta": 1.5}}}
+        for sentence in ["缺乏可用市场基准", "未提供盘中报价和事件前后反应", "市场基准数据不可用", "没有当日价格基准"]:
+            out = analysis("flat", "牙买加许可证", "传导有限")
+            out["close_forecast"].update(direction=None, evidence_status="insufficient_evidence", summary="信息不足以判断收盘", basis=sentence)
+>           with self.subTest(sentence=sentence), self.assertRaisesRegex(ValueError, "已提供"):
+E           AssertionError: "已提供" does not match "close_forecast:已有有效同合约盘中方向基准；新闻影响较弱或无法证明单新闻价格因果、未知是否计价，不能单独取消相对已给前价的条件性收盘预判。请权衡真实基准与有来源的冲突机制，保留五档选择，不得自动复制新闻方向或把参考变化当已实现收盘"
+
+tests/test_semantics.py:493: AssertionError
+______ SemanticTests.test_observed_path_is_not_a_hardcoded_close_forecast ______
+
+self = <test_semantics.SemanticTests testMethod=test_observed_path_is_not_a_hardcoded_close_forecast>
+
+    def test_observed_path_is_not_a_hardcoded_close_forecast(self):
+        out = analysis("flat", "牙买加许可证", "传导有限")
+        out["close_forecast"].update(direction=None, evidence_status="insufficient_evidence", summary="不足以判断结算方向", basis="无法确定盘中变化在结算前延续或反转")
+        prepared = {"price_reference": {"market_baseline": {"available": True, "observed_direction": "up", "observed_delta": 1.5}}}
+>       self.assertValid(out, context("牙买加长期勘探许可证。"), prepared)
+
+tests/test_semantics.py:474: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_semantics.py:122: in assertValid
+    validate_analysis_semantics(output, ctx, prepared or {"price_reference": ctx.get("price_reference", {})})
+ttf_news/semantics.py:2032: in validate_analysis_semantics
+    check(*args)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+result = {'news_impact': {'direction': 'flat', 'contextual_news_score': 0, 'summary': '欧洲供需消息产生有限价格压力', 'bullish_evidence': [],...牙买加许可证 → TTF传导有限'], 'priced_in_comment': '未提供事件前后价格反应，无法确认是否已计价', 'historical_comparisons': []}, 'risk_flags': [], ...}
+context = {'as_of': '2026-10-20T12:00:00Z', 'analysis_kind': 'manual', 'current_news': {'id': 'manual-1', 'title': '条件情景', 'summary': '牙买加长期勘探许可证。'}, 'window_news': [], ...}
+prepared = {'price_reference': {'market_baseline': {'available': True, 'observed_direction': 'up', 'observed_delta': 1.5}}}
+
+    def _check_known_price_not_claimed_missing(result: dict, context: dict, prepared: dict) -> None:
+        reference = _known_price_reference(context, prepared)
+        baseline = reference.get("market_baseline") or {}
+        if not baseline.get("available"):
+            return
+        news=result.get('news_impact') or {}
+        close=result.get('close_forecast') or {}
+        if close.get('evidence_status')=='insufficient_evidence' and news.get('direction') in {'up','extreme_up','down','extreme_down'}:
+            explanation=str(close.get('summary') or '')+'。'+str(close.get('basis') or '')
+            missing_reaction = re.search(r'(?:缺少|缺乏|没有|未提供|尚无|无)[^。；;]{0,25}(?:价格反应|市场反应|公告前后|事件前后)|(?:无法确定|无法确认|无法判断|不能确认|不能判断|未知|不知|不确定)[^。；;]{0,25}(?:是否已(?:计入|计价|定价|消化)|已计价|已定价)|(?:lack|missing|no)[^.;]{0,20}(?:price reaction|announcement reaction)|uncertain[^.;]{0,20}priced',explanation,re.I)
+            if missing_reaction:
+                opposite='up' if news['direction'] in {'down','extreme_down'} else 'down'
+                explained={s['mechanism'] for s in _validation_mechanisms(explanation) if s['pressure']==opposite}
+                supplied={s['mechanism'] for row in _current_source_rows(context,prepared)
+                          if row.get('temporal_state') not in {'scheduled_notice','dismissed_notice','announced_end_elapsed_unverified_flow'}
+                          for s in extract_mechanisms(row) if s['pressure']==opposite}
+                conflict=bool(re.search(r'冲突|抵消|拉锯|反向|相反|分歧|难以权衡|conflict|offset|opposing',explanation,re.I))
+                if not conflict or not (explained & supplied):
+                    raise ValueError('close_forecast:合法同合约比较锚点已给；报价若早于消息仅是基准，未知后续反应不等于零反应或未计价。请据源供需与锚点给条件收盘预判，五档自由、不自动复制新闻方向；缺少公告前后反应不能单独作为拒绝收盘预判的理由，真实冲突须引用具体反向事实')
+        if (close.get('evidence_status')=='insufficient_evidence' and news.get('direction')=='flat'
+                and baseline.get('observed_direction') in {'up','down','extreme_up','extreme_down'}
+                and isinstance(baseline.get('observed_delta'),(int,float)) and not isinstance(baseline.get('observed_delta'),bool)
+                and abs(baseline['observed_delta'])>float(baseline.get('flat_band',.3))
+                and not baseline.get('stale') and not (reference.get('intraday') or {}).get('stale')):
+            explanation=str(close.get('summary') or '')+'。'+str(close.get('basis') or '')
+            opposite='down' if baseline.get('observed_direction') in {'up','extreme_up'} else 'up'
+            explained={signal['mechanism'] for signal in _validation_mechanisms(explanation) if signal['pressure']==opposite}
+            cards={row.get('id'):row for row in prepared.get('window_news',[]) if isinstance(row,dict) and row.get('id')}
+            cards['N0']=prepared.get('current_news') or context.get('current_news') or {}
+            for alias,row in list(cards.items()):
+                if row.get('same_as_current_news_id') in cards:cards[alias]=cards[row['same_as_current_news_id']]
+            cited=re.findall(r'(?<![A-Za-z0-9_])N\d+(?![A-Za-z0-9_])',explanation)
+            supplied={signal['mechanism'] for alias in cited if alias in cards
+                      for row in (cards[alias],) if _known_source(row,_moment(context.get('as_of') or prepared.get('as_of')))
+                      and row.get('temporal_state') not in {'scheduled_notice','dismissed_notice','announced_end_elapsed_unverified_flow'}
+                      for signal in extract_mechanisms(row) if signal['pressure']==opposite}
+            conflict=bool(re.search(r'冲突|抵消|拉锯|反向|相反|分歧|难以权衡|conflict|offset|opposing',explanation,re.I))
+            if not conflict or not (explained & supplied):
+>               raise ValueError('close_forecast:已有有效同合约盘中方向基准；新闻影响较弱或无法证明单新闻价格因果、未知是否计价，不能单独取消相对已给前价的条件性收盘预判。请权衡真实基准与有来源的冲突机制，保留五档选择，不得自动复制新闻方向或把参考变化当已实现收盘')
+E               ValueError: close_forecast:已有有效同合约盘中方向基准；新闻影响较弱或无法证明单新闻价格因果、未知是否计价，不能单独取消相对已给前价的条件性收盘预判。请权衡真实基准与有来源的冲突机制，保留五档选择，不得自动复制新闻方向或把参考变化当已实现收盘
+
+ttf_news/semantics.py:1463: ValueError
+=========================== short test summary info ============================
+FAILED tests/test_risk_polarity_anchor.py::test_source_operator_risk_extraction_preserves_conditional_capacity_scope
+SUBFAILED(sentence='缺乏可用市场基准') tests/test_semantics.py::SemanticTests::test_available_baseline_cannot_be_claimed_absent_even_when_abstaining
+SUBFAILED(sentence='未提供盘中报价和事件前后反应') tests/test_semantics.py::SemanticTests::test_available_baseline_cannot_be_claimed_absent_even_when_abstaining
+SUBFAILED(sentence='市场基准数据不可用') tests/test_semantics.py::SemanticTests::test_available_baseline_cannot_be_claimed_absent_even_when_abstaining
+SUBFAILED(sentence='没有当日价格基准') tests/test_semantics.py::SemanticTests::test_available_baseline_cannot_be_claimed_absent_even_when_abstaining
+FAILED tests/test_semantics.py::SemanticTests::test_observed_path_is_not_a_hardcoded_close_forecast
+6 failed, 205 passed, 289 subtests passed in 7.67s

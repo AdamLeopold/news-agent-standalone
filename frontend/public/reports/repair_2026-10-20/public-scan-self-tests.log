@@ -1,0 +1,31 @@
+test_clean_counts_and_reasoning_configuration_allowed (__main__.ScanTests) ... ok
+test_credential_values_and_assignments_never_echoed (__main__.ScanTests) ... ok
+test_csv_json_field_decodes_thinking (__main__.ScanTests) ... ok
+test_csv_multiline_and_duplicate_headers_scan_every_cell (__main__.ScanTests) ... ok
+test_csv_original_request_enum_cells_and_metadata_are_allowed (__main__.ScanTests) ... ok
+test_csv_sqlite_path_fields_report_location_without_value (__main__.ScanTests) ... ok
+test_invalid_csv_and_extra_columns_fail_closed (__main__.ScanTests) ... ok
+test_invalid_json_is_blocking_and_still_checks_text (__main__.ScanTests) ... ok
+test_jsonl_each_record_and_encoded_payload_scanned (__main__.ScanTests) ... ok
+test_jsonl_original_metadata_enums_and_non_enum_blocking (__main__.ScanTests) ... ok
+test_jsonl_unicode_separators_are_string_content (__main__.ScanTests) ... ok
+test_large_csv_field_is_not_skipped_by_default_csv_limit (__main__.ScanTests) ... ok
+test_nested_encoded_json_thinking_detected_without_echo (__main__.ScanTests) ... ok
+test_nested_encoded_request_enum_is_allowed_but_partial_json_is_blocked (__main__.ScanTests) ... ok
+test_non_enum_think_and_all_thinking_bodies_stay_blocked (__main__.ScanTests) ... ok
+test_nonfinite_json_is_invalid (__main__.ScanTests) ... ok
+test_original_model_metadata_request_enums_are_not_private_thinking (__main__.ScanTests) ... ok
+test_partial_private_key_and_url_credentials_detected (__main__.ScanTests) ... ok
+test_path_keys_are_redacted_in_locations (__main__.ScanTests) ... ok
+test_plain_redacted_assignments_are_not_credentials (__main__.ScanTests) ... ok
+test_public_url_home_path_is_not_a_local_filesystem_path (__main__.ScanTests) ... ok
+test_sqlite_all_tables_all_actual_text_types_and_unchanged (__main__.ScanTests) ... ok
+test_sqlite_original_request_enums_and_nested_metadata_unchanged (__main__.ScanTests) ... ok
+test_symlink_snapshot_not_followed (__main__.ScanTests) ... ok
+test_uses_current_source_checker (__main__.ScanTests) ... ok
+test_windows_file_uri_and_url_encoded_paths (__main__.ScanTests) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.068s
+
+OK

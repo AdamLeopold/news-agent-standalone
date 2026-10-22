@@ -13,10 +13,12 @@ export function signalInfo(direction) {
 export function analysisDirectionChanges(brief, detail) {
   const fields = [['close_forecast', '当日收盘方向预判'], ['news_impact', '新闻价格压力']];
   return fields.flatMap(([key, label]) => {
+    const beforeUnknown = brief?.[key]?.evidence_status === 'insufficient_evidence';
+    const afterUnknown = detail?.[key]?.evidence_status === 'insufficient_evidence';
     const before = brief?.[key]?.direction;
     const after = detail?.[key]?.direction;
-    if (!Object.hasOwn(directions, before) || !Object.hasOwn(directions, after) || before === after) return [];
-    return [{key, label, brief: directions[before].label, detail: directions[after].label}];
+    if ((!beforeUnknown && !Object.hasOwn(directions, before)) || (!afterUnknown && !Object.hasOwn(directions, after)) || (before === after && beforeUnknown === afterUnknown)) return [];
+    return [{key, label, brief: beforeUnknown ? '暂缺收盘判断' : directions[before].label, detail: afterUnknown ? '暂缺收盘判断' : directions[after].label}];
   });
 }
 
@@ -90,4 +92,16 @@ export function discoveryDelay(article) {
   if (!['exact', 'second', 'minute', 'datetime'].includes(article.timestamp_precision)) return '发现延迟 —';
   const seconds = dateDeltaSeconds(article.published_at, article.first_seen_at);
   return seconds === null ? '发现延迟 —' : `发现延迟 ${formatDuration(seconds)}`;
+}
+export function analysisPartInvalid(review, part = 'brief') {
+  return review?.status === 'invalid' && Array.isArray(review.invalid_parts) && review.invalid_parts.includes(part);
+}
+
+export function analysisReviewTitle(review, part = 'brief') {
+  const reason = review?.parts?.[part]?.reason_code || review?.reason_code;
+  return reason === 'price_baseline_review_failed' ? '价格基准复核未通过' : '来源事实复核未通过';
+}
+
+export function dailyReferenceLabel(price) {
+  return price?.settlement_anchor?.available === true ? '上一交易日日价' : '历史日价参考';
 }

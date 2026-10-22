@@ -1,0 +1,88 @@
+{
+  "id": 19609,
+  "created_at": "2026-10-20T23:31:38.898674+00:00",
+  "type": "model_failure",
+  "data": {
+    "analysis_id": "7d35d08d-759a-486c-9aed-fe8baceb96a5",
+    "kind": "detail",
+    "seconds": 184.975,
+    "error": "模型JSON两次校验失败，未生成方向：news_impact.summary:Gassco未来维护公告不能写成当前实际停供或流量损失；应写未来容量风险并保留起止时间；news_impact.summary:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景",
+    "model_metadata": {
+      "prompt_version": "ttf-news-standalone-2.3",
+      "reasoning": "medium",
+      "configured_reasoning": "medium",
+      "semantic_high_retry_enabled": false,
+      "semantic_high_scope": "operator_notice",
+      "semantic_high_scope_eligible": false,
+      "semantic_high_eligible": false,
+      "semantic_independent_regeneration": false,
+      "model_calls": [
+        {
+          "num_ctx": 16384,
+          "num_predict": 3072,
+          "input_token_ceiling": 12800,
+          "input_token_estimate": 11013,
+          "retry_policy": "disabled",
+          "semantic_independent_regeneration": false,
+          "semantic_high_scope": "operator_notice",
+          "semantic_high_scope_eligible": false,
+          "semantic_high_eligible": false,
+          "system_prompt_sha256": "71205499dc98dc43d04b5fc45016549723c525f6a1d9199f0161bbf77975cc2d",
+          "response_schema_sha256": "fb02c4a80f7e4d590bd299e80e4297833e2da201652906994a8e04b0a2dc5ce2",
+          "context_sha256": "e5110a090629b7dfe20bfda18df75c9e5f99e7d15a0af750a25726f0131e7d80",
+          "prompt_eval_count": 10960,
+          "eval_count": 3072,
+          "done_reason": "length",
+          "total_duration_ns": 95770048416,
+          "raw_content": "{\"source_fact_checks\":{\"fact_contract_version\":\"operator-facts-2.2\",\"operator_notices\":[{\"id\":\"N1\",\"facility\":\"Troll\",\"facility_type\":\"气田/生产设施\",\"notice_type\":\"计划\",\"unavailable_capacity\":\"7.6\",\"period_utc\":[\"2026-10-22T04:00Z\",\"2026-10-23T04:00Z\"],\"state_description\":\"未来公告\",\"cause_original\":\"Yearly maintenance\"},{\"id\":\"N2\",\"facility\":\"Troll\",\"facility_type\":\"类别未给\",\"notice_type\":\"计划\",\"unavailable_capacity\":\"13.0\",\"period_utc\":[\"2026-10-21T04:00Z\",\"2026-10-22T04:00Z\"],\"state_description\":\"未来公告\",\"cause_original\":\"Yearly maintenance\"}],\"capacity_scope\":\"公告不可用容量，非实际流量计量\",\"pricing_observation\":{\"observed_at\":\"2026-10-20T20:59:00+00:00\",\"available_at\":\"2026-10-20T21:09:54.498786+00:00\",\"clock_roles\":{\"observed_at\":\"报价发生时刻\",\"available_at\":\"本机获知时刻；不是报价发生时刻\"},\"current_news_timing\":{\"id\":\"N0\",\"publication_time\":\"2026-10-20T13:11:12+00:00\",\"quote_relation\":\"at_or_after_publication\",\"quote_role\":\"已观察市场基准；单个报价不证明公告反应\"},\"reaction_evidence_available\":false,\"pricing_status\":\"无法确认是否已计价；不是尚未计价或价格无反应\"},\"non_overlapping_notice_ids\":[[\"N1\",\"N2\"]]},\"news_impact\":{\"bullish_evidence\":[],\"bearish_evidence\":[],\"neutralizing_evidence\":[],\"summary\":\"LNG Canada EPCM合同为未来项目，Troll场站维护计划在本结算窗口之后，未产生即时供给约束，故对TTF价格无明显方向性影响。\",\"contextual_news_score\":0,\"direction\":\"flat\",\"confidence\":0.6,\"signal_strength\":\"weak\"},\"close_forecast\":{\"basis\":\"缺乏前一交易日基准价，且未观察到价格对N0或N1/N2的即时反应，故无法判断是否会继续上涨或下跌。\",\"summary\":\"缺乏前一交易日基准，无法判断价格走势。\",\"evidence_status\":\"insufficient_evidence\",\"direction\":null,\"confidence\":0.4,\"extreme_move_risk\":\"前一交易日基准缺失导致无法确认价格基准，且N0为早期窗口新闻，未计价风险\"},\"analysis\":{\"summary\":\"LNG Canada EPCM合同为未来发展，Troll维护计划在本结算窗口之后，未产生即时供给约束，故对TTF价格无明显方向性影响。\",\"evidence\":[\"[N0] LNG Canada EPCM合同 → 未来供给扩张（无即时影响）\",\"[N1]Troll；计划；公告不可用容量7.6mcm/d；未来容量公告；实流未知；TTF机制：供应约束（未来）\",\"[N2]Troll；计划；公告不可用容量13.0mcm/d；未来容量公告；实流未知；结束时间修订：2026-10-23T06:00:00+0200→2026-10-22T06:00:00+0200；TTF机制：供应约束（未来）\"],\"negation_or_reversal\":[],\"priced_in_comment\":\"price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格\",\"matched_terms\":[],\"historical_comparisons\":[]},\"risk_flags\":[\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price",
+          "validation_stage": "truncation",
+          "validation_error": "模型生成达到输出额度上限；重新生成简洁完整JSON，每个风险只写一句，不重复情景",
+          "request_reasoning": "medium"
+        },
+        {
+          "num_ctx": 16384,
+          "num_predict": 4096,
+          "input_token_ceiling": 12200,
+          "input_token_estimate": 11166,
+          "retry_policy": "disabled",
+          "semantic_independent_regeneration": false,
+          "semantic_high_scope": "operator_notice",
+          "semantic_high_scope_eligible": false,
+          "semantic_high_eligible": false,
+          "system_prompt_sha256": "f435cc534c659ca806359dd24ce4511cde5325843aeee2a3055e7da653f2b510",
+          "response_schema_sha256": "fb02c4a80f7e4d590bd299e80e4297833e2da201652906994a8e04b0a2dc5ce2",
+          "context_sha256": "beef219a7655e8573d5a449db1f95430df7c16f7228749106f6a314532f97bca",
+          "repair_draft": {
+            "version": "ttf-untrusted-repair-draft-1",
+            "previous_raw_sha256": "c98dc5eaed4f514d232e85cbfa2bd7ea9eaa1be0d2980854f6cb128c3bae730a",
+            "is_evidence": false,
+            "included": false,
+            "reason": "previous_candidate_not_valid_json"
+          },
+          "prompt_eval_count": 11113,
+          "eval_count": 1912,
+          "done_reason": "stop",
+          "total_duration_ns": 85942097792,
+          "raw_content": "{\"source_fact_checks\":{\"fact_contract_version\":\"operator-facts-2.2\",\"operator_notices\":[{\"id\":\"N1\",\"facility\":\"Troll\",\"facility_type\":\"气田/生产设施\",\"notice_type\":\"计划\",\"unavailable_capacity\":\"7.6\",\"period_utc\":[\"2026-10-22T04:00Z\",\"2026-10-23T04:00Z\"],\"state_description\":\"未来公告\",\"cause_original\":\"Yearly maintenance\"},{\"id\":\"N2\",\"facility\":\"Troll\",\"facility_type\":\"类别未给\",\"notice_type\":\"计划\",\"unavailable_capacity\":\"13.0\",\"period_utc\":[\"2026-10-21T04:00Z\",\"2026-10-22T04:00Z\"],\"state_description\":\"未来公告\",\"cause_original\":\"Yearly maintenance\"}],\"capacity_scope\":\"公告不可用容量，非实际流量计量\",\"pricing_observation\":{\"observed_at\":\"2026-10-20T20:59:00+00:00\",\"available_at\":\"2026-10-20T21:09:54.498786+00:00\",\"clock_roles\":{\"observed_at\":\"报价发生时刻\",\"available_at\":\"本机获知时刻；不是报价发生时刻\"},\"current_news_timing\":{\"id\":\"N0\",\"publication_time\":\"2026-10-20T13:11:12+00:00\",\"quote_relation\":\"at_or_after_publication\",\"quote_role\":\"已观察市场基准；单个报价不证明公告反应\"},\"reaction_evidence_available\":false,\"pricing_status\":\"无法确认是否已计价；不是尚未计价或价格无反应\"},\"non_overlapping_notice_ids\":[[\"N1\",\"N2\"]]},\"news_impact\":{\"bullish_evidence\":[],\"bearish_evidence\":[],\"neutralizing_evidence\":[],\"summary\":\"LNG Canada签署的€200M+ EPCM合同属于未来建设项目，对当日供给无直接影响；Troll场站的两项计划性停产公告均在本窗口之后生效，尚未导致实际流量损失。\",\"contextual_news_score\":0,\"direction\":\"flat\",\"confidence\":0.3,\"signal_strength\":\"weak\"},\"close_forecast\":{\"basis\":\"缺乏前一交易日参考价，且未观察到价格对N0、N1、N2的即时反应，无法判断是否已计价。\",\"summary\":\"缺乏足够的基准和价格反应证据，无法给出收盘预测。\",\"evidence_status\":\"insufficient_evidence\",\"direction\":null,\"confidence\":0.0,\"extreme_move_risk\":\"缺乏前一交易日参考价导致无法判断价格走势。\"},\"analysis\":{\"summary\":\"N0为未来建设合同，对当前供给无影响；N1、N2为未来计划停产，未导致实际流量损失。\",\"evidence\":[\"[N0] LNG Canada签署€200M+ EPCM合同 → TTF供给不受影响\",\"[N1]Troll；计划；公告不可用容量7.6mcm/d；未来容量公告；实流未知；TTF机制：无即时供给缺口\",\"[N2]Troll；计划；公告不可用容量13.0mcm/d；未来容量公告；实流未知；结束时间修订：2026-10-23T06:00:00+0200→2026-10-22T06:00:00+0200；TTF机制：无即时供给缺口\"],\"negation_or_reversal\":[],\"priced_in_comment\":\"price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格\",\"matched_terms\":[],\"historical_comparisons\":[]},\"risk_flags\":[\"price_reference:输入未提供当前窗口可用的同合约盘中变化基准\",\"price_reference:输入未提供当前窗口可用的同合约盘中变化基准\",\"price_reference:输入未提供当前窗口可用的同合约盘中变化基准\"],\"references\":[{\"id\":\"N0\",\"url\":\"\"},{\"id\":\"N1\",\"url\":\"\"},{\"id\":\"N2\",\"url\":\"\"}],\"missing_fields\":[],\"detail\":{\"new_facts\":[\"[N0] LNG Canada签署€200M+ EPCM合同，属于未来建设项目\",\"[N1] Troll场站计划停产，未开始，容量7.6mcm/d\",\"[N2] Troll场站计划停产，未开始，容量13.0mcm/d\"],\"transmission\":[\"[N0]无欧洲传导证据\",\"[N1]无欧洲传导证据\",\"[N2]无欧洲传导证据\"],\"daily_balance\":[\"window_news:本结算窗口暂无其他新闻冲击\"],\"historical_comparisons\":[\"[E1]历史记录日期2026-10-19，类别为供应中断/复产；公告容量限制不等于已核实流量损失；该时点价格反应资料未提供，无法量化；输入未提供可验证的天气及LNG差异，需核对具体供需情景\"],\"priced_in_assessment\":\"price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格\",\"scenarios\":{\"bullish\":\"若未来停产导致实际流量损失，可能推升价格\",\"base\":\"若无实际流量损失，价格维持基准\",\"bearish\":\"若实际流量未受影响，价格维持基准\"},\"invalidation_conditions\":[\"[N1]或[N2]实际流量在结算日前出现损失\",\"[N0]合同签署后立即导致产能提升并影响供给\"],\"limitations\":[\"price_reference:输入未提供当前窗口可用的同合约盘中变化基准\",\"price_reference:输入未提供当前窗口可用的同合约盘中变化基准\",\"price_reference:输入未提供当前窗口可用的同合约盘中变化基准\"],\"references\":[{\"id\":\"N0\",\"url\":\"\"},{\"id\":\"N1\",\"url\":\"\"},{\"id\":\"N2\",\"url\":\"\"}]}}",
+          "reference_resolution": {
+            "raw_reference_ids": [
+              "N0",
+              "N1",
+              "N2"
+            ],
+            "added_by_backend": [],
+            "input_provenance": {}
+          },
+          "validation_stage": "fact_or_mechanism",
+          "validation_errors": [
+            "news_impact.summary:Gassco未来维护公告不能写成当前实际停供或流量损失；应写未来容量风险并保留起止时间",
+            "news_impact.summary:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景"
+          ],
+          "validation_error": "news_impact.summary:Gassco未来维护公告不能写成当前实际停供或流量损失；应写未来容量风险并保留起止时间；news_impact.summary:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景",
+          "request_reasoning": "medium"
+        }
+      ],
+      "context_sha256": "beef219a7655e8573d5a449db1f95430df7c16f7228749106f6a314532f97bca"
+    }
+  }
+}

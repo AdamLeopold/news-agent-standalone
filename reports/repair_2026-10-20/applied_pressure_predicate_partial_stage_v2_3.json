@@ -1,0 +1,17 @@
+{
+  "at": "2026-10-21T05:54:08.892229+00:00",
+  "execution_plan": {
+    "file": "reports/repair_2026-10-20/pressure_predicate_partial_final_execution_plan_v2_3.json",
+    "sha256": "bc3a0d205a038d14714d19519ef1607b0dc84b5dae91b71ed2df193ad2eb52d5"
+  },
+  "new_helper_sha256": "8fb767f83f41e559c1f3463abdc71764c367c55dc2ff133d462075e7bf05d085",
+  "private_selftests_passed": 297,
+  "root_primary_full_diff_review_passed": true,
+  "independent_review_requested": true,
+  "core28_unchanged": true,
+  "affected_actual_case_only": [
+    "real_eni"
+  ],
+  "model_calls_so_far": 0,
+  "fixture_or_hard_gates_changed": false
+}

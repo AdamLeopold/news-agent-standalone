@@ -1,0 +1,255 @@
+{
+  "schema_version": "independent-revision-evidence-finite-review-v1",
+  "created_at": "2026-10-22T16:55:59.539052+00:00",
+  "status": "passed_finite_source_and_zero_call_review_real_revision_generation_unobserved",
+  "model_calls": 0,
+  "network_calls": 0,
+  "production_db_writes": 0,
+  "source_edits": 0,
+  "proposal_proof_file": ".runtime/revision-evidence-proposal/v2/proposal-proof-final.json",
+  "proposal_proof_sha256": "2a0cf89d33dc2fda12cca326a0e0eb01c65e819d8f3e3c74977ef7064903835b",
+  "candidate_sha256": {
+    "ttf_news/structured_core.py": "28f75f146687b311ab4c2ae464c86512ca3ff61f14de34f7954cf1a321f465fc",
+    "ttf_news/context.py": "464bfbc789ea5e8768fe94fa5bfe0cf74827a9b58e3cee7eceb4052a3b8f9108",
+    "tests/test_revision_evidence.py": "ddeee5a6d6c9f920697fbb1fac1230c0feceb702fd235672dc36163949d03fe7"
+  },
+  "reconstructed_baseline_sha256": {
+    "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+    "ttf_news/structured_core.py": "027bc8d862b3cc3f8eff7ea54b881a51030372009c9087dbdac2815c0582e4cc"
+  },
+  "baseline_reconstruction": "In memory reverse of exact frozen unified diff, SHA asserted. No source file was written.",
+  "independent_tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m pytest -q .runtime/revision-evidence-proposal/v2/tests/test_revision_evidence.py -p no:cacheprovider",
+    "passed": 13,
+    "failed": 0,
+    "seconds": 0.11
+  },
+  "real_api_id_migration_negatives": {
+    "count": 13,
+    "source_audit_sha256": "977e13992fe784b2ba19be7d60a56e3ca55a7c0cea34324d95d37c6ab9449cf4",
+    "snapshot_sha256": "d5a0f9ab57e9837ec07d40d50ce4860a17d05f68555064c583e0338d786bb5ba",
+    "mode": "mode=ro/query_only",
+    "rows": [
+      {
+        "news_id": "d1d6c38bd8a3a5924fcd029e",
+        "old_version": 3,
+        "new_version": 4,
+        "before_raw_sha256": "ed74a0866163fd6b2583faecaeb585c18d84ec7c186b203ff3fe5ec5331d8d52",
+        "after_raw_sha256": "a8851921d7adc1966848b160cc465ee29d778ad0b5c13ca5056c38ca29a1c923",
+        "before_publisher_id": 420262,
+        "after_publisher_id": 420469,
+        "revision_bundle": null,
+        "raw_data_unchanged": true
+      },
+      {
+        "news_id": "6775f604af0c02aa43520aab",
+        "old_version": 2,
+        "new_version": 3,
+        "before_raw_sha256": "e5cdd684bfaf8e6523c46afa03ffdb44c376bfe3d5d54b5ba0ac244145ea0c52",
+        "after_raw_sha256": "e4aaf247c4d77c2588ce18dae1fc3edb04c66112b4c06ea188ecf91b0a29f46e",
+        "before_publisher_id": 420279,
+        "after_publisher_id": 420503,
+        "revision_bundle": null,
+        "raw_data_unchanged": true
+      },
+      {
+        "news_id": "03235c38f718bf429e0a2f3a",
+        "old_version": 2,
+        "new_version": 3,
+        "before_raw_sha256": "f9a2e4e9606682e02add96d6c7c1204478027c99ec1434fbb1ce29ddb7e681cd",
+        "after_raw_sha256": "9906e032cbe5393ef8534a02a159ed3e4b6c0c26af6eb6a207e98a70d49e5046",
+        "before_publisher_id": 83920,
+        "after_publisher_id": 124471,
+        "revision_bundle": null,
+        "raw_data_unchanged": true
+      },
+      {
+        "news_id": "3182c27f6cf2172dbfa94349",
+        "old_version": 3,
+        "new_version": 4,
+        "before_raw_sha256": "c2af73abca0efeb4899c234c0d3aa272904b39b19934c1655bde2df1c4e8e768",
+        "after_raw_sha256": "bff63e86ee675082b2802f84a9a897981466ba462da631ac40c36f2741911bae",
+        "before_publisher_id": 487,
+        "after_publisher_id": 126143,
+        "revision_bundle": null,
+        "raw_data_unchanged": true
+      },
+      {
+        "news_id": "f670026e3dd1838f11fa611b",
+        "old_version": 2,
+        "new_version": 3,
+        "before_raw_sha256": "00c82a927d879999fdf3af552c45a2d4265214c43ec24750e5413570236eb9e8",
+        "after_raw_sha256": "07ff6e398b790681ca4c1b64a19fe1ea4c01cc437f94eafedb2a86013b34ff06",
+        "before_publisher_id": 128138,
+        "after_publisher_id": 84158,
+        "revision_bundle": null,
+        "raw_data_unchanged": true
+      },
+      {
+        "news_id": "2d3d06a6225cb35d25fd4018",
+        "old_version": 3,
+        "new_version": 4,
+        "before_raw_sha256": "d8d57de91e7d31ba6294d50c8e4e436951e72e51c08031fd18f64664c50445c2",
+        "after_raw_sha256": "aeeb79f2fe0b7d0638546a1730899cfabaa5695253c4a713ce49492550528854",
+        "before_publisher_id": 84169,
+        "after_publisher_id": 128204,
+        "revision_bundle": null,
+        "raw_data_unchanged": true
+      },
+      {
+        "news_id": "0391ce6dfb8cebea52b3260e",
+        "old_version": 3,
+        "new_version": 4,
+        "before_raw_sha256": "b5812e5f83ffe3dc85ee4cf4844df9862873a52826880dba784b0e33d15ae9d2",
+        "after_raw_sha256": "f6a33de5e501568bf61d54e115200864e018712bf54f467f38e307b442ff20f5",
+        "before_publisher_id": 85218,
+        "after_publisher_id": 132625,
+        "revision_bundle": null,
+        "raw_data_unchanged": true
+      },
+      {
+        "news_id": "31abba8167b54ca4fec735ff",
+        "old_version": 3,
+        "new_version": 4,
+        "before_raw_sha256": "5025268c75582e1681d47d746e8ff27a856905b7b041a8b008f82e663b6e4572",
+        "after_raw_sha256": "efb9e16ad4dd9d0a12419862b8c998147967c3c9656c0ba031037f035668494b",
+        "before_publisher_id": 85284,
+        "after_publisher_id": 132866,
+        "revision_bundle": null,
+        "raw_data_unchanged": true
+      },
+      {
+        "news_id": "d1d6c38bd8a3a5924fcd029e",
+        "old_version": 1,
+        "new_version": 2,
+        "before_raw_sha256": "530bc717a8cd59c95aacb8a717d9f5f933c36155a1cf3d58cba4b583bd1d9040",
+        "after_raw_sha256": "cb354e3c8aa37284c680b9950c47067aac67b7da2d3353968f98dc5f25fd2947",
+        "before_publisher_id": 420262,
+        "after_publisher_id": 420469,
+        "revision_bundle": null,
+        "raw_data_unchanged": true
+      },
+      {
+        "news_id": "3182c27f6cf2172dbfa94349",
+        "old_version": 1,
+        "new_version": 2,
+        "before_raw_sha256": "c7b40be8d10f96ca6143cc23b5b3006acc3098b09ee511bad39f5ab13eb0c017",
+        "after_raw_sha256": "7fdadcef641aeda3f696d1f8f417c69852dd6e0b9059ae306b89619be7c87910",
+        "before_publisher_id": 487,
+        "after_publisher_id": 126143,
+        "revision_bundle": null,
+        "raw_data_unchanged": true
+      },
+      {
+        "news_id": "2d3d06a6225cb35d25fd4018",
+        "old_version": 1,
+        "new_version": 2,
+        "before_raw_sha256": "20e3086ac8813d34525e8011f6b6f2a931085b7b95168755215b1f1777340099",
+        "after_raw_sha256": "95b842cc7e76aaa2c15d35688a586090b5544966c37ef9a09b41d8b7b7294599",
+        "before_publisher_id": 84169,
+        "after_publisher_id": 128204,
+        "revision_bundle": null,
+        "raw_data_unchanged": true
+      },
+      {
+        "news_id": "0391ce6dfb8cebea52b3260e",
+        "old_version": 1,
+        "new_version": 2,
+        "before_raw_sha256": "8ac2371499574b23b269ba866348ce279d9c304f9d1aaa214e3926b73a2c50c8",
+        "after_raw_sha256": "b82615ec73361768966407f79dd380f2a7586ecad4a3e72f1bd6797b96f5d143",
+        "before_publisher_id": 85218,
+        "after_publisher_id": 132625,
+        "revision_bundle": null,
+        "raw_data_unchanged": true
+      },
+      {
+        "news_id": "31abba8167b54ca4fec735ff",
+        "old_version": 1,
+        "new_version": 2,
+        "before_raw_sha256": "dc5387d4a209ff277e427453bec24a24c97c1a09d8c981d51abb25623a9982de",
+        "after_raw_sha256": "e83cf715013b6180953c9dbbc40defdc3557d212cf2e73d805d72fe444913be6",
+        "before_publisher_id": 85284,
+        "after_publisher_id": 132866,
+        "revision_bundle": null,
+        "raw_data_unchanged": true
+      }
+    ]
+  },
+  "nonrevision_real_mixed_zero_call_replay": {
+    "actual_file": "reports/structured_v2_4/api_engine_upgrade_01_artifacts/current_live_actual.json",
+    "actual_file_sha256": "5090f96b7ff2405d23a3b3e4842fb7f16fdf41cb3e4a5a26f7c23b74d1b452b5",
+    "input_snapshot_sha256": "94ac1d2e02ad715716d4b87a399c1e823ee8f3fdf485c73343c4b09733b5d4d3",
+    "checks": {
+      "classification_requests": true,
+      "facts": true,
+      "mechanisms": true,
+      "conditions": true,
+      "weight_request": true,
+      "closing_request": true,
+      "plan": true,
+      "result_body": true,
+      "english_body": true,
+      "detail_body": true,
+      "detail_english_body": true
+    },
+    "signatures": {
+      "classification_requests": {
+        "baseline_sha256": "d3849a8ef83e65478b599268dbde1b8f732f8567b7fcdc1faedaf44777f6cdf2",
+        "candidate_sha256": "d3849a8ef83e65478b599268dbde1b8f732f8567b7fcdc1faedaf44777f6cdf2"
+      },
+      "facts": {
+        "baseline_sha256": "e191a817a27d5e4ddd8df4fdf28e8ea8ceeb21eba2249940744d0f8a68954d4e",
+        "candidate_sha256": "e191a817a27d5e4ddd8df4fdf28e8ea8ceeb21eba2249940744d0f8a68954d4e"
+      },
+      "mechanisms": {
+        "baseline_sha256": "9080dadefe2d250a8b76f1287318203093fd7998f0043fb48ede1fe95319f550",
+        "candidate_sha256": "9080dadefe2d250a8b76f1287318203093fd7998f0043fb48ede1fe95319f550"
+      },
+      "conditions": {
+        "baseline_sha256": "a1c2cf0a32cdd5d1befa69ff4645bfda8bce4dcc1742a61a1141a0aa46560218",
+        "candidate_sha256": "a1c2cf0a32cdd5d1befa69ff4645bfda8bce4dcc1742a61a1141a0aa46560218"
+      },
+      "weight_request": {
+        "baseline_sha256": "ab49cacf155a33d065271301988cc1be5fa6ea392fcb4d00a24602a63b53bf91",
+        "candidate_sha256": "ab49cacf155a33d065271301988cc1be5fa6ea392fcb4d00a24602a63b53bf91"
+      },
+      "closing_request": {
+        "baseline_sha256": "f076c8c610354d60095e04654106590c5c06bed40736bee55fc0f9168b2b3680",
+        "candidate_sha256": "f076c8c610354d60095e04654106590c5c06bed40736bee55fc0f9168b2b3680"
+      },
+      "plan": {
+        "baseline_sha256": "36aabc3b79e0f605987d8cf940eecb9e190f9d13d710c30bebfe294100acf662",
+        "candidate_sha256": "36aabc3b79e0f605987d8cf940eecb9e190f9d13d710c30bebfe294100acf662"
+      },
+      "result_body": {
+        "baseline_sha256": "a025b21f85d56e8011b556e220a3bc5a7db6eea025f817f12c8e96146a853570",
+        "candidate_sha256": "a025b21f85d56e8011b556e220a3bc5a7db6eea025f817f12c8e96146a853570"
+      },
+      "english_body": {
+        "baseline_sha256": "2486762e4e2e505c81652d4ff5f290a3973ed710ebbb979d509a3f1a6dd8307f",
+        "candidate_sha256": "2486762e4e2e505c81652d4ff5f290a3973ed710ebbb979d509a3f1a6dd8307f"
+      },
+      "detail_body": {
+        "baseline_sha256": "fce21b1eabb5f15adc8bef2281ce4d908d6775f167b0d500c85ad22289bea89a",
+        "candidate_sha256": "fce21b1eabb5f15adc8bef2281ce4d908d6775f167b0d500c85ad22289bea89a"
+      },
+      "detail_english_body": {
+        "baseline_sha256": "b469cba1ef39adcac912989c43347c78c6e088e12a04787b6c595770f07dae0c",
+        "candidate_sha256": "b469cba1ef39adcac912989c43347c78c6e088e12a04787b6c595770f07dae0c"
+      }
+    },
+    "all11_equal": true
+  },
+  "findings": [
+    "Publisher API revision eligibility requires the same nonempty publisher_article_id, same body authority, advancing publisher update and actually known local versions. The 13 real different-ID pairs cannot become fresh publisher revisions.",
+    "Publication, publisher update and locally known clocks remain separate; first-observed old content and metadata-only/authority changes do not qualify.",
+    "Novelty is per selected classified claim, with prior immutable evidence IDs. An unchanged fact sharing a changed paragraph remains historical when classified unchanged. Program checks bind references and exact paragraph equality; semantic novelty remains a model judgment, never certified by this source change.",
+    "English prior Chinese text is not emitted into analytical prose; ID/source version/full SHA stay visible while raw prior text is preserved in source/catalog metadata.",
+    "For the supplied real mixed non-revision analysis, classification, weights, closing, typed plan and both locales/lengths render exactly as baseline."
+  ],
+  "acceptance_limits": [
+    "Stored history contains zero defensible same-publisher-record factual revision pairs. Positive tests use constructed diagnostic clocks with real source paragraphs and do not establish real publisher-revision model accuracy.",
+    "Deletion-only retractions without a current corrective paragraph are explicitly outside this minimal contract.",
+    "This review is finite CPU/source/path evidence, not production E2E acceptance or a claim that model semantic novelty is verified."
+  ]
+}

@@ -1,0 +1,1287 @@
+{
+  "schema_version": "ttf-read-only-current-price-anchor-audit-v1",
+  "created_at": "2026-10-20T23:51:31.272005+00:00",
+  "method": {
+    "database": "data/ttf_news.sqlite3",
+    "sqlite_uri_mode": "ro",
+    "pragma_query_only": 1,
+    "Store_init_called": false,
+    "no_migrations": true,
+    "no_DB_write_API_model_service_action": true,
+    "source_unchanged": true
+  },
+  "source_sha256": {
+    "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+    "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+    "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+    "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918"
+  },
+  "as_of_comparisons": [
+    {
+      "as_of": "2026-10-20T23:27:29.790162+00:00",
+      "session": {
+        "trade_date": "2026-10-21",
+        "window_start": "2026-10-20T15:15:00+00:00",
+        "window_end": "2026-10-21T15:15:00+00:00",
+        "cutoff_utc": "2026-10-21T15:15:00+00:00",
+        "cutoff_local": "2026-10-21T17:15:00+02:00",
+        "cutoff_singapore": "2026-10-21T23:15:00+08:00",
+        "display_timezone": "Europe/Amsterdam",
+        "seconds_to_close": 56850,
+        "calendar_source": "https://www.ice.com/publicdocs/ICE_Endex_Trading_Schedule.pdf",
+        "calendar_quality": "official_2026_2027",
+        "boundary": "[previous_settlement, current_settlement)"
+      },
+      "price_context": {
+        "available": true,
+        "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+        "contract_name": "Nov26",
+        "price_type": "reference",
+        "intraday": {
+          "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+          "contract_id": "6277389",
+          "contract_name": "Nov26",
+          "value": 86.325,
+          "observed_at": "2026-10-20T20:59:00+00:00",
+          "available_at": "2026-10-20T21:09:54.498786+00:00",
+          "unit": "EUR/MWh",
+          "source": "ICE public delayed market data",
+          "source_url": "https://www.ice.com/products/27996665/Dutch-TTF-Gas-Futures/data",
+          "price_type": "delayed_last_trade",
+          "verified_settlement": false,
+          "minimum_delay_minutes": 15,
+          "volume": 173025,
+          "age_seconds": 8909,
+          "stale": true
+        },
+        "verified": false,
+        "previous_price": 88.04,
+        "price_date": "2026-10-19",
+        "price_known_at": "2026-10-20T15:09:02.021914+00:00",
+        "reference_source": "ICE public chart",
+        "source_url": "https://www.ice.com/marketdata/api/productguide/charting/data/historical?marketId=6277389&historicalSpan=3",
+        "extreme_threshold": 4.466853677887938,
+        "sigma60": 2.233426838943969,
+        "threshold_frozen_as_of": "2026-10-20T23:27:29.790162+00:00",
+        "flat_delta": 0.3,
+        "observation_count": 701,
+        "risk_flags": [
+          "价格类型尚未验证为ICE官方日结算，不用于官方结算评分",
+          "最近价格并非上一完整交易日，存在行情缺口"
+        ],
+        "market_baseline": {
+          "available": false,
+          "kind": "observed_reference_move",
+          "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+          "as_of": "2026-10-20T23:27:29.790162+00:00",
+          "verified_settlement": false,
+          "flat_band": 0.3,
+          "interpretation": "已观察同合约参考变化；延续或反转均为待验证情景，不是目标日已实现结算",
+          "reason": "previous_trading_day_reference_missing"
+        },
+        "settlement_anchor": {
+          "available": false,
+          "target_trade_date": "2026-10-21",
+          "expected_previous_trade_date": "2026-10-20",
+          "reference_date": "2026-10-19",
+          "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+          "known_time_precision": "exact",
+          "scope": "仅目标日前一交易日同合约参考价可作前结算比较；其他日价不是昨收",
+          "reason": "previous_trading_day_reference_missing"
+        }
+      }
+    },
+    {
+      "as_of": "2026-10-20T23:27:40+00:00",
+      "session": {
+        "trade_date": "2026-10-21",
+        "window_start": "2026-10-20T15:15:00+00:00",
+        "window_end": "2026-10-21T15:15:00+00:00",
+        "cutoff_utc": "2026-10-21T15:15:00+00:00",
+        "cutoff_local": "2026-10-21T17:15:00+02:00",
+        "cutoff_singapore": "2026-10-21T23:15:00+08:00",
+        "display_timezone": "Europe/Amsterdam",
+        "seconds_to_close": 56840,
+        "calendar_source": "https://www.ice.com/publicdocs/ICE_Endex_Trading_Schedule.pdf",
+        "calendar_quality": "official_2026_2027",
+        "boundary": "[previous_settlement, current_settlement)"
+      },
+      "price_context": {
+        "available": true,
+        "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+        "contract_name": "Nov26",
+        "price_type": "reference",
+        "intraday": {
+          "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+          "contract_id": "6277389",
+          "contract_name": "Nov26",
+          "value": 86.325,
+          "observed_at": "2026-10-20T20:59:00+00:00",
+          "available_at": "2026-10-20T21:09:54.498786+00:00",
+          "unit": "EUR/MWh",
+          "source": "ICE public delayed market data",
+          "source_url": "https://www.ice.com/products/27996665/Dutch-TTF-Gas-Futures/data",
+          "price_type": "delayed_last_trade",
+          "verified_settlement": false,
+          "minimum_delay_minutes": 15,
+          "volume": 173025,
+          "age_seconds": 8920,
+          "stale": true
+        },
+        "verified": false,
+        "previous_price": 85.062,
+        "price_date": "2026-10-20",
+        "price_known_at": "2026-10-20T23:27:31.613875+00:00",
+        "reference_source": "ICE public chart",
+        "source_url": "https://www.ice.com/marketdata/api/productguide/charting/data/historical?marketId=6277389&historicalSpan=3",
+        "extreme_threshold": 4.546830435110782,
+        "sigma60": 2.273415217555391,
+        "threshold_frozen_as_of": "2026-10-20T23:27:40+00:00",
+        "flat_delta": 0.3,
+        "observation_count": 702,
+        "risk_flags": [
+          "价格类型尚未验证为ICE官方日结算，不用于官方结算评分"
+        ],
+        "market_baseline": {
+          "available": false,
+          "kind": "observed_reference_move",
+          "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+          "as_of": "2026-10-20T23:27:40+00:00",
+          "verified_settlement": false,
+          "flat_band": 0.3,
+          "interpretation": "已观察同合约参考变化；延续或反转均为待验证情景，不是目标日已实现结算",
+          "reason": "fresh_intraday_quote_missing"
+        },
+        "settlement_anchor": {
+          "available": true,
+          "target_trade_date": "2026-10-21",
+          "expected_previous_trade_date": "2026-10-20",
+          "reference_date": "2026-10-20",
+          "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+          "known_time_precision": "exact",
+          "scope": "仅目标日前一交易日同合约参考价可作前结算比较；其他日价不是昨收",
+          "reason": "exact_previous_trading_day_same_contract"
+        }
+      }
+    },
+    {
+      "as_of": "2026-10-20T23:50:00+00:00",
+      "session": {
+        "trade_date": "2026-10-21",
+        "window_start": "2026-10-20T15:15:00+00:00",
+        "window_end": "2026-10-21T15:15:00+00:00",
+        "cutoff_utc": "2026-10-21T15:15:00+00:00",
+        "cutoff_local": "2026-10-21T17:15:00+02:00",
+        "cutoff_singapore": "2026-10-21T23:15:00+08:00",
+        "display_timezone": "Europe/Amsterdam",
+        "seconds_to_close": 55500,
+        "calendar_source": "https://www.ice.com/publicdocs/ICE_Endex_Trading_Schedule.pdf",
+        "calendar_quality": "official_2026_2027",
+        "boundary": "[previous_settlement, current_settlement)"
+      },
+      "price_context": {
+        "available": true,
+        "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+        "contract_name": "Nov26",
+        "price_type": "reference",
+        "intraday": {
+          "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+          "contract_id": "6277389",
+          "contract_name": "Nov26",
+          "value": 86.325,
+          "observed_at": "2026-10-20T20:59:00+00:00",
+          "available_at": "2026-10-20T21:09:54.498786+00:00",
+          "unit": "EUR/MWh",
+          "source": "ICE public delayed market data",
+          "source_url": "https://www.ice.com/products/27996665/Dutch-TTF-Gas-Futures/data",
+          "price_type": "delayed_last_trade",
+          "verified_settlement": false,
+          "minimum_delay_minutes": 15,
+          "volume": 173025,
+          "age_seconds": 10260,
+          "stale": true
+        },
+        "verified": false,
+        "previous_price": 85.062,
+        "price_date": "2026-10-20",
+        "price_known_at": "2026-10-20T23:27:31.613875+00:00",
+        "reference_source": "ICE public chart",
+        "source_url": "https://www.ice.com/marketdata/api/productguide/charting/data/historical?marketId=6277389&historicalSpan=3",
+        "extreme_threshold": 4.546830435110782,
+        "sigma60": 2.273415217555391,
+        "threshold_frozen_as_of": "2026-10-20T23:50:00+00:00",
+        "flat_delta": 0.3,
+        "observation_count": 702,
+        "risk_flags": [
+          "价格类型尚未验证为ICE官方日结算，不用于官方结算评分"
+        ],
+        "market_baseline": {
+          "available": false,
+          "kind": "observed_reference_move",
+          "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+          "as_of": "2026-10-20T23:50:00+00:00",
+          "verified_settlement": false,
+          "flat_band": 0.3,
+          "interpretation": "已观察同合约参考变化；延续或反转均为待验证情景，不是目标日已实现结算",
+          "reason": "fresh_intraday_quote_missing"
+        },
+        "settlement_anchor": {
+          "available": true,
+          "target_trade_date": "2026-10-21",
+          "expected_previous_trade_date": "2026-10-20",
+          "reference_date": "2026-10-20",
+          "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+          "known_time_precision": "exact",
+          "scope": "仅目标日前一交易日同合约参考价可作前结算比较；其他日价不是昨收",
+          "reason": "exact_previous_trading_day_same_contract"
+        }
+      }
+    },
+    {
+      "as_of": "2026-10-20T23:51:31.272005+00:00",
+      "session": {
+        "trade_date": "2026-10-21",
+        "window_start": "2026-10-20T15:15:00+00:00",
+        "window_end": "2026-10-21T15:15:00+00:00",
+        "cutoff_utc": "2026-10-21T15:15:00+00:00",
+        "cutoff_local": "2026-10-21T17:15:00+02:00",
+        "cutoff_singapore": "2026-10-21T23:15:00+08:00",
+        "display_timezone": "Europe/Amsterdam",
+        "seconds_to_close": 55408,
+        "calendar_source": "https://www.ice.com/publicdocs/ICE_Endex_Trading_Schedule.pdf",
+        "calendar_quality": "official_2026_2027",
+        "boundary": "[previous_settlement, current_settlement)"
+      },
+      "price_context": {
+        "available": true,
+        "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+        "contract_name": "Nov26",
+        "price_type": "reference",
+        "intraday": {
+          "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+          "contract_id": "6277389",
+          "contract_name": "Nov26",
+          "value": 86.325,
+          "observed_at": "2026-10-20T20:59:00+00:00",
+          "available_at": "2026-10-20T21:09:54.498786+00:00",
+          "unit": "EUR/MWh",
+          "source": "ICE public delayed market data",
+          "source_url": "https://www.ice.com/products/27996665/Dutch-TTF-Gas-Futures/data",
+          "price_type": "delayed_last_trade",
+          "verified_settlement": false,
+          "minimum_delay_minutes": 15,
+          "volume": 173025,
+          "age_seconds": 10351,
+          "stale": true
+        },
+        "verified": false,
+        "previous_price": 85.062,
+        "price_date": "2026-10-20",
+        "price_known_at": "2026-10-20T23:27:31.613875+00:00",
+        "reference_source": "ICE public chart",
+        "source_url": "https://www.ice.com/marketdata/api/productguide/charting/data/historical?marketId=6277389&historicalSpan=3",
+        "extreme_threshold": 4.546830435110782,
+        "sigma60": 2.273415217555391,
+        "threshold_frozen_as_of": "2026-10-20T23:51:31.272005+00:00",
+        "flat_delta": 0.3,
+        "observation_count": 702,
+        "risk_flags": [
+          "价格类型尚未验证为ICE官方日结算，不用于官方结算评分"
+        ],
+        "market_baseline": {
+          "available": false,
+          "kind": "observed_reference_move",
+          "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+          "as_of": "2026-10-20T23:51:31.272005+00:00",
+          "verified_settlement": false,
+          "flat_band": 0.3,
+          "interpretation": "已观察同合约参考变化；延续或反转均为待验证情景，不是目标日已实现结算",
+          "reason": "fresh_intraday_quote_missing"
+        },
+        "settlement_anchor": {
+          "available": true,
+          "target_trade_date": "2026-10-21",
+          "expected_previous_trade_date": "2026-10-20",
+          "reference_date": "2026-10-20",
+          "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+          "known_time_precision": "exact",
+          "scope": "仅目标日前一交易日同合约参考价可作前结算比较；其他日价不是昨收",
+          "reason": "exact_previous_trading_day_same_contract"
+        }
+      }
+    }
+  ],
+  "recent_daily_reference_versions": [
+    {
+      "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277391",
+      "day": "2026-10-20",
+      "price_type": "reference",
+      "known_at": "2026-10-20T23:27:35.543737+00:00",
+      "value": 85.062,
+      "data": {
+        "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277391",
+        "contract_id": "6277391",
+        "contract_label": "Jan27",
+        "delivery_month": "2027-01-01",
+        "day": "2026-10-20",
+        "value": 85.062,
+        "price_type": "reference",
+        "verified": false,
+        "provider": "ICE public chart",
+        "unit": "EUR/MWh",
+        "fetched_at": "2026-10-20T23:27:35.543737+00:00",
+        "source_url": "https://www.ice.com/marketdata/api/productguide/charting/data/historical?marketId=6277391&historicalSpan=3",
+        "source_field": "bars[][1]",
+        "provider_documentation": "https://www.ice.com/products/27996665/Dutch-TTF-Gas-Futures/data",
+        "fetcher_evidence": "https://git.nomics.world/dbnomics-fetchers/ice-fetcher/-/blob/3eb9e399588113f014e8341dd016f22feaf220bd/download.py",
+        "price_type_note": "Official ICE chart bar field is not explicitly named settlement; remains reference and excluded from settlement scoring."
+      }
+    },
+    {
+      "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277390",
+      "day": "2026-10-20",
+      "price_type": "reference",
+      "known_at": "2026-10-20T23:27:33.630813+00:00",
+      "value": 85.139,
+      "data": {
+        "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277390",
+        "contract_id": "6277390",
+        "contract_label": "Dec26",
+        "delivery_month": "2026-12-01",
+        "day": "2026-10-20",
+        "value": 85.139,
+        "price_type": "reference",
+        "verified": false,
+        "provider": "ICE public chart",
+        "unit": "EUR/MWh",
+        "fetched_at": "2026-10-20T23:27:33.630813+00:00",
+        "source_url": "https://www.ice.com/marketdata/api/productguide/charting/data/historical?marketId=6277390&historicalSpan=3",
+        "source_field": "bars[][1]",
+        "provider_documentation": "https://www.ice.com/products/27996665/Dutch-TTF-Gas-Futures/data",
+        "fetcher_evidence": "https://git.nomics.world/dbnomics-fetchers/ice-fetcher/-/blob/3eb9e399588113f014e8341dd016f22feaf220bd/download.py",
+        "price_type_note": "Official ICE chart bar field is not explicitly named settlement; remains reference and excluded from settlement scoring."
+      }
+    },
+    {
+      "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+      "day": "2026-10-20",
+      "price_type": "reference",
+      "known_at": "2026-10-20T23:27:31.613875+00:00",
+      "value": 85.062,
+      "data": {
+        "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+        "contract_id": "6277389",
+        "contract_label": "Nov26",
+        "delivery_month": "2026-11-01",
+        "day": "2026-10-20",
+        "value": 85.062,
+        "price_type": "reference",
+        "verified": false,
+        "provider": "ICE public chart",
+        "unit": "EUR/MWh",
+        "fetched_at": "2026-10-20T23:27:31.613875+00:00",
+        "source_url": "https://www.ice.com/marketdata/api/productguide/charting/data/historical?marketId=6277389&historicalSpan=3",
+        "source_field": "bars[][1]",
+        "provider_documentation": "https://www.ice.com/products/27996665/Dutch-TTF-Gas-Futures/data",
+        "fetcher_evidence": "https://git.nomics.world/dbnomics-fetchers/ice-fetcher/-/blob/3eb9e399588113f014e8341dd016f22feaf220bd/download.py",
+        "price_type_note": "Official ICE chart bar field is not explicitly named settlement; remains reference and excluded from settlement scoring."
+      }
+    },
+    {
+      "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277391",
+      "day": "2026-10-19",
+      "price_type": "reference",
+      "known_at": "2026-10-20T15:09:02.021914+00:00",
+      "value": 88.009,
+      "data": {
+        "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277391",
+        "contract_id": "6277391",
+        "contract_label": "Jan27",
+        "delivery_month": "2027-01-01",
+        "day": "2026-10-19",
+        "value": 88.009,
+        "price_type": "reference",
+        "verified": false,
+        "provider": "ICE public chart",
+        "unit": "EUR/MWh",
+        "fetched_at": "2026-10-20T15:09:02.021914+00:00",
+        "source_url": "https://www.ice.com/marketdata/api/productguide/charting/data/historical?marketId=6277391&historicalSpan=3",
+        "source_field": "bars[][1]",
+        "provider_documentation": "https://www.ice.com/products/27996665/Dutch-TTF-Gas-Futures/data",
+        "fetcher_evidence": "https://git.nomics.world/dbnomics-fetchers/ice-fetcher/-/blob/3eb9e399588113f014e8341dd016f22feaf220bd/download.py",
+        "price_type_note": "Official ICE chart bar field is not explicitly named settlement; remains reference and excluded from settlement scoring."
+      }
+    },
+    {
+      "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277390",
+      "day": "2026-10-19",
+      "price_type": "reference",
+      "known_at": "2026-10-20T15:09:02.021914+00:00",
+      "value": 88.106,
+      "data": {
+        "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277390",
+        "contract_id": "6277390",
+        "contract_label": "Dec26",
+        "delivery_month": "2026-12-01",
+        "day": "2026-10-19",
+        "value": 88.106,
+        "price_type": "reference",
+        "verified": false,
+        "provider": "ICE public chart",
+        "unit": "EUR/MWh",
+        "fetched_at": "2026-10-20T15:09:02.021914+00:00",
+        "source_url": "https://www.ice.com/marketdata/api/productguide/charting/data/historical?marketId=6277390&historicalSpan=3",
+        "source_field": "bars[][1]",
+        "provider_documentation": "https://www.ice.com/products/27996665/Dutch-TTF-Gas-Futures/data",
+        "fetcher_evidence": "https://git.nomics.world/dbnomics-fetchers/ice-fetcher/-/blob/3eb9e399588113f014e8341dd016f22feaf220bd/download.py",
+        "price_type_note": "Official ICE chart bar field is not explicitly named settlement; remains reference and excluded from settlement scoring."
+      }
+    },
+    {
+      "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+      "day": "2026-10-19",
+      "price_type": "reference",
+      "known_at": "2026-10-20T15:09:02.021914+00:00",
+      "value": 88.04,
+      "data": {
+        "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+        "contract_id": "6277389",
+        "contract_label": "Nov26",
+        "delivery_month": "2026-11-01",
+        "day": "2026-10-19",
+        "value": 88.04,
+        "price_type": "reference",
+        "verified": false,
+        "provider": "ICE public chart",
+        "unit": "EUR/MWh",
+        "fetched_at": "2026-10-20T15:09:02.021914+00:00",
+        "source_url": "https://www.ice.com/marketdata/api/productguide/charting/data/historical?marketId=6277389&historicalSpan=3",
+        "source_field": "bars[][1]",
+        "provider_documentation": "https://www.ice.com/products/27996665/Dutch-TTF-Gas-Futures/data",
+        "fetcher_evidence": "https://git.nomics.world/dbnomics-fetchers/ice-fetcher/-/blob/3eb9e399588113f014e8341dd016f22feaf220bd/download.py",
+        "price_type_note": "Official ICE chart bar field is not explicitly named settlement; remains reference and excluded from settlement scoring."
+      }
+    }
+  ],
+  "price_source_states": {
+    "dbnomics_ice": {
+      "source": "dbnomics_ice",
+      "name": "ICE monthly contract references via DBnomics",
+      "status": "ok",
+      "last_attempt_at": "2026-10-20T23:50:56.291313+00:00",
+      "id": "dbnomics_ice",
+      "last_success_at": "2026-10-20T23:51:26.928955+00:00",
+      "observations_imported": 248,
+      "series_scanned": 221,
+      "price_type": "reference",
+      "settlement_verified": false,
+      "last_error": null,
+      "direct_ice_chart": {
+        "status": "ok",
+        "observations_imported": 21,
+        "contracts": [
+          {
+            "contract_id": "6277389",
+            "label": "Nov26",
+            "latest_day": "2026-10-20"
+          },
+          {
+            "contract_id": "6277390",
+            "label": "Dec26",
+            "latest_day": "2026-10-20"
+          },
+          {
+            "contract_id": "6277391",
+            "label": "Jan27",
+            "latest_day": "2026-10-20"
+          }
+        ],
+        "last_error": null
+      }
+    },
+    "ice_chart": {
+      "source": "ice_chart",
+      "name": "ICE public chart (reference prices)",
+      "status": "running",
+      "last_attempt_at": "2026-10-20T23:51:27.299100+00:00",
+      "settlement_verified": false,
+      "id": "ice_chart",
+      "last_success_at": "2026-10-20T23:27:36.043050+00:00",
+      "observations_imported": 21,
+      "contracts": [
+        {
+          "contract_id": "6277389",
+          "label": "Nov26",
+          "latest_day": "2026-10-20"
+        },
+        {
+          "contract_id": "6277390",
+          "label": "Dec26",
+          "latest_day": "2026-10-20"
+        },
+        {
+          "contract_id": "6277391",
+          "label": "Jan27",
+          "latest_day": "2026-10-20"
+        }
+      ],
+      "last_error": null
+    },
+    "ice_intraday": {
+      "source": "ice_intraday",
+      "name": "ICE intraday (delayed ≥15m)",
+      "last_attempt_at": "2026-10-20T23:50:55.871480+00:00",
+      "status": "ok",
+      "last_success_at": "2026-10-20T23:50:58.332713+00:00",
+      "last_error": null,
+      "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+      "quote_time": "2026-10-20T20:59:00+00:00",
+      "point_count": 115,
+      "minimum_delay_minutes": 15,
+      "id": "ice_intraday"
+    }
+  },
+  "recent_observed_quotes": [
+    {
+      "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+      "observed_at": "2026-10-20T20:59:00+00:00",
+      "available_at": "2026-10-20T21:09:54.498786+00:00",
+      "data": {
+        "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+        "contract_id": "6277389",
+        "contract_name": "Nov26",
+        "value": 86.325,
+        "observed_at": "2026-10-20T20:59:00+00:00",
+        "available_at": "2026-10-20T21:09:54.498786+00:00",
+        "unit": "EUR/MWh",
+        "source": "ICE public delayed market data",
+        "source_url": "https://www.ice.com/products/27996665/Dutch-TTF-Gas-Futures/data",
+        "price_type": "delayed_last_trade",
+        "verified_settlement": false,
+        "minimum_delay_minutes": 15,
+        "volume": 173025
+      }
+    },
+    {
+      "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+      "observed_at": "2026-10-20T20:57:00+00:00",
+      "available_at": "2026-10-20T21:07:52.839546+00:00",
+      "data": {
+        "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+        "contract_id": "6277389",
+        "contract_name": "Nov26",
+        "value": 86.315,
+        "observed_at": "2026-10-20T20:57:00+00:00",
+        "available_at": "2026-10-20T21:07:52.839546+00:00",
+        "unit": "EUR/MWh",
+        "source": "ICE public delayed market data",
+        "source_url": "https://www.ice.com/products/27996665/Dutch-TTF-Gas-Futures/data",
+        "price_type": "delayed_last_trade",
+        "verified_settlement": false,
+        "minimum_delay_minutes": 15,
+        "volume": 173025
+      }
+    },
+    {
+      "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+      "observed_at": "2026-10-20T20:56:00+00:00",
+      "available_at": "2026-10-20T21:06:51.786184+00:00",
+      "data": {
+        "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+        "contract_id": "6277389",
+        "contract_name": "Nov26",
+        "value": 86.39,
+        "observed_at": "2026-10-20T20:56:00+00:00",
+        "available_at": "2026-10-20T21:06:51.786184+00:00",
+        "unit": "EUR/MWh",
+        "source": "ICE public delayed market data",
+        "source_url": "https://www.ice.com/products/27996665/Dutch-TTF-Gas-Futures/data",
+        "price_type": "delayed_last_trade",
+        "verified_settlement": false,
+        "minimum_delay_minutes": 15,
+        "volume": 173095
+      }
+    },
+    {
+      "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+      "observed_at": "2026-10-20T20:55:00+00:00",
+      "available_at": "2026-10-20T21:06:00.378287+00:00",
+      "data": {
+        "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+        "contract_id": "6277389",
+        "contract_name": "Nov26",
+        "value": 86.38,
+        "observed_at": "2026-10-20T20:55:00+00:00",
+        "available_at": "2026-10-20T21:06:00.378287+00:00",
+        "unit": "EUR/MWh",
+        "source": "ICE public delayed market data",
+        "source_url": "https://www.ice.com/products/27996665/Dutch-TTF-Gas-Futures/data",
+        "price_type": "delayed_last_trade",
+        "verified_settlement": false,
+        "minimum_delay_minutes": 15,
+        "volume": 173025
+      }
+    },
+    {
+      "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+      "observed_at": "2026-10-20T20:50:00+00:00",
+      "available_at": "2026-10-20T21:01:12.839297+00:00",
+      "data": {
+        "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+        "contract_id": "6277389",
+        "contract_name": "Nov26",
+        "value": 86.39,
+        "observed_at": "2026-10-20T20:50:00+00:00",
+        "available_at": "2026-10-20T21:01:12.839297+00:00",
+        "unit": "EUR/MWh",
+        "source": "ICE public delayed market data",
+        "source_url": "https://www.ice.com/products/27996665/Dutch-TTF-Gas-Futures/data",
+        "price_type": "delayed_last_trade",
+        "verified_settlement": false,
+        "minimum_delay_minutes": 15,
+        "volume": 173095
+      }
+    },
+    {
+      "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+      "observed_at": "2026-10-20T20:48:00+00:00",
+      "available_at": "2026-10-20T20:59:10.802822+00:00",
+      "data": {
+        "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+        "contract_id": "6277389",
+        "contract_name": "Nov26",
+        "value": 86.465,
+        "observed_at": "2026-10-20T20:48:00+00:00",
+        "available_at": "2026-10-20T20:59:10.802822+00:00",
+        "unit": "EUR/MWh",
+        "source": "ICE public delayed market data",
+        "source_url": "https://www.ice.com/products/27996665/Dutch-TTF-Gas-Futures/data",
+        "price_type": "delayed_last_trade",
+        "verified_settlement": false,
+        "minimum_delay_minutes": 15,
+        "volume": 173090
+      }
+    }
+  ],
+  "latest_live_analyses": [
+    {
+      "id": "e2285944-9e11-498e-ab62-431d7c093536",
+      "kind": "live",
+      "status": "completed",
+      "created_at": "2026-10-20T22:55:26.128098+00:00",
+      "completed_at": "2026-10-20T22:58:12.882758+00:00",
+      "trade_date": "2026-10-21",
+      "input_as_of": "2026-10-20T22:55:24.492322+00:00",
+      "outlook_trigger": "model_version_update",
+      "outlook_refresh_reason": null,
+      "price_reference": {
+        "available": true,
+        "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+        "contract_name": "Nov26",
+        "price_type": "reference",
+        "intraday": {
+          "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+          "contract_id": "6277389",
+          "contract_name": "Nov26",
+          "value": 86.325,
+          "observed_at": "2026-10-20T20:59:00+00:00",
+          "available_at": "2026-10-20T21:09:54.498786+00:00",
+          "unit": "EUR/MWh",
+          "source": "ICE public delayed market data",
+          "source_url": "https://www.ice.com/products/27996665/Dutch-TTF-Gas-Futures/data",
+          "price_type": "delayed_last_trade",
+          "verified_settlement": false,
+          "minimum_delay_minutes": 15,
+          "volume": 173025,
+          "age_seconds": 6984,
+          "stale": true
+        },
+        "verified": false,
+        "previous_price": 88.04,
+        "price_date": "2026-10-19",
+        "price_known_at": "2026-10-20T15:09:02.021914+00:00",
+        "reference_source": "ICE public chart",
+        "source_url": "https://www.ice.com/marketdata/api/productguide/charting/data/historical?marketId=6277389&historicalSpan=3",
+        "extreme_threshold": 4.466853677887938,
+        "sigma60": 2.233426838943969,
+        "threshold_frozen_as_of": "2026-10-20T22:55:24.492322+00:00",
+        "flat_delta": 0.3,
+        "observation_count": 701,
+        "risk_flags": [
+          "价格类型尚未验证为ICE官方日结算，不用于官方结算评分",
+          "最近价格并非上一完整交易日，存在行情缺口"
+        ],
+        "market_baseline": {
+          "available": false,
+          "kind": "observed_reference_move",
+          "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+          "as_of": "2026-10-20T22:55:24.492322+00:00",
+          "verified_settlement": false,
+          "flat_band": 0.3,
+          "interpretation": "已观察同合约参考变化；延续或反转均为待验证情景，不是目标日已实现结算",
+          "reason": "previous_trading_day_reference_missing"
+        },
+        "settlement_anchor": {
+          "available": false,
+          "target_trade_date": "2026-10-21",
+          "expected_previous_trade_date": "2026-10-20",
+          "reference_date": "2026-10-19",
+          "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+          "known_time_precision": "exact",
+          "scope": "仅目标日前一交易日同合约参考价可作前结算比较；其他日价不是昨收",
+          "reason": "previous_trading_day_reference_missing"
+        }
+      },
+      "input_sha256": "8ee195b998b52593ebf3a21cca75cdd71f215691daa1c00c985581fb6bf84b73"
+    },
+    {
+      "id": "9fa53da2-74ec-4fab-9443-bd501f3ba59e",
+      "kind": "live",
+      "status": "completed",
+      "created_at": "2026-10-20T21:33:58.800157+00:00",
+      "completed_at": "2026-10-20T21:37:49.135733+00:00",
+      "trade_date": "2026-10-21",
+      "input_as_of": "2026-10-20T21:33:54.395855+00:00",
+      "outlook_trigger": "model_version_update",
+      "outlook_refresh_reason": null,
+      "price_reference": {
+        "available": true,
+        "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+        "contract_name": "Nov26",
+        "price_type": "reference",
+        "intraday": {
+          "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+          "contract_id": "6277389",
+          "contract_name": "Nov26",
+          "value": 86.325,
+          "observed_at": "2026-10-20T20:59:00+00:00",
+          "available_at": "2026-10-20T21:09:54.498786+00:00",
+          "unit": "EUR/MWh",
+          "source": "ICE public delayed market data",
+          "source_url": "https://www.ice.com/products/27996665/Dutch-TTF-Gas-Futures/data",
+          "price_type": "delayed_last_trade",
+          "verified_settlement": false,
+          "minimum_delay_minutes": 15,
+          "volume": 173025,
+          "age_seconds": 2094,
+          "stale": false
+        },
+        "verified": false,
+        "previous_price": 88.04,
+        "price_date": "2026-10-19",
+        "price_known_at": "2026-10-20T15:09:02.021914+00:00",
+        "reference_source": "ICE public chart",
+        "source_url": "https://www.ice.com/marketdata/api/productguide/charting/data/historical?marketId=6277389&historicalSpan=3",
+        "extreme_threshold": 4.466853677887938,
+        "sigma60": 2.233426838943969,
+        "threshold_frozen_as_of": "2026-10-20T21:33:54.395855+00:00",
+        "flat_delta": 0.3,
+        "observation_count": 701,
+        "risk_flags": [
+          "价格类型尚未验证为ICE官方日结算，不用于官方结算评分",
+          "最近价格并非上一完整交易日，存在行情缺口"
+        ],
+        "market_baseline": {
+          "available": false,
+          "kind": "observed_reference_move",
+          "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+          "as_of": "2026-10-20T21:33:54.395855+00:00",
+          "verified_settlement": false,
+          "flat_band": 0.3,
+          "interpretation": "已观察同合约参考变化；延续或反转均为待验证情景，不是目标日已实现结算",
+          "reason": "previous_trading_day_reference_missing"
+        },
+        "settlement_anchor": {
+          "available": false,
+          "target_trade_date": "2026-10-21",
+          "expected_previous_trade_date": "2026-10-20",
+          "reference_date": "2026-10-19",
+          "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+          "known_time_precision": "exact",
+          "scope": "仅目标日前一交易日同合约参考价可作前结算比较；其他日价不是昨收",
+          "reason": "previous_trading_day_reference_missing"
+        }
+      },
+      "input_sha256": "695218b52072f6459efed05643df96d40045ec0f75e7741768c97e463e796e52"
+    },
+    {
+      "id": "69c389a8-c205-4f97-a637-a1bc8eb1a267",
+      "kind": "live",
+      "status": "failed",
+      "created_at": "2026-10-20T21:05:46.961265+00:00",
+      "completed_at": "2026-10-20T21:08:59.280434+00:00",
+      "trade_date": "2026-10-21",
+      "input_as_of": "2026-10-20T21:05:42.425143+00:00",
+      "outlook_trigger": "model_version_update",
+      "outlook_refresh_reason": null,
+      "price_reference": {
+        "available": true,
+        "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+        "contract_name": "Nov26",
+        "price_type": "reference",
+        "intraday": {
+          "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+          "contract_id": "6277389",
+          "contract_name": "Nov26",
+          "value": 86.39,
+          "observed_at": "2026-10-20T20:50:00+00:00",
+          "available_at": "2026-10-20T21:01:12.839297+00:00",
+          "unit": "EUR/MWh",
+          "source": "ICE public delayed market data",
+          "source_url": "https://www.ice.com/products/27996665/Dutch-TTF-Gas-Futures/data",
+          "price_type": "delayed_last_trade",
+          "verified_settlement": false,
+          "minimum_delay_minutes": 15,
+          "volume": 173095,
+          "age_seconds": 942,
+          "stale": false
+        },
+        "verified": false,
+        "previous_price": 88.04,
+        "price_date": "2026-10-19",
+        "price_known_at": "2026-10-20T15:09:02.021914+00:00",
+        "reference_source": "ICE public chart",
+        "source_url": "https://www.ice.com/marketdata/api/productguide/charting/data/historical?marketId=6277389&historicalSpan=3",
+        "extreme_threshold": 4.466853677887938,
+        "sigma60": 2.233426838943969,
+        "threshold_frozen_as_of": "2026-10-20T21:05:42.425143+00:00",
+        "flat_delta": 0.3,
+        "observation_count": 701,
+        "risk_flags": [
+          "价格类型尚未验证为ICE官方日结算，不用于官方结算评分",
+          "最近价格并非上一完整交易日，存在行情缺口"
+        ],
+        "market_baseline": {
+          "available": false,
+          "kind": "observed_reference_move",
+          "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+          "as_of": "2026-10-20T21:05:42.425143+00:00",
+          "verified_settlement": false,
+          "flat_band": 0.3,
+          "interpretation": "已观察同合约参考变化；延续或反转均为待验证情景，不是目标日已实现结算",
+          "reason": "previous_trading_day_reference_missing"
+        },
+        "settlement_anchor": {
+          "available": false,
+          "target_trade_date": "2026-10-21",
+          "expected_previous_trade_date": "2026-10-20",
+          "reference_date": "2026-10-19",
+          "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+          "known_time_precision": "exact",
+          "scope": "仅目标日前一交易日同合约参考价可作前结算比较；其他日价不是昨收",
+          "reason": "previous_trading_day_reference_missing"
+        }
+      },
+      "input_sha256": "81603d1ee8707a352c8210ba295b370c92d164056fae0794f51727ccfc3cca0e"
+    },
+    {
+      "id": "1508ce10-8dd8-4ab7-adb6-3e4da345b095",
+      "kind": "live",
+      "status": "failed",
+      "created_at": "2026-10-20T20:45:35.154100+00:00",
+      "completed_at": "2026-10-20T20:51:35.645499+00:00",
+      "trade_date": "2026-10-21",
+      "input_as_of": "2026-10-20T20:45:25.588344+00:00",
+      "outlook_trigger": null,
+      "outlook_refresh_reason": null,
+      "price_reference": {
+        "available": true,
+        "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+        "contract_name": "Nov26",
+        "price_type": "reference",
+        "intraday": {
+          "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+          "contract_id": "6277389",
+          "contract_name": "Nov26",
+          "value": 86.47,
+          "observed_at": "2026-10-20T20:32:00+00:00",
+          "available_at": "2026-10-20T20:42:25.311604+00:00",
+          "unit": "EUR/MWh",
+          "source": "ICE public delayed market data",
+          "source_url": "https://www.ice.com/products/27996665/Dutch-TTF-Gas-Futures/data",
+          "price_type": "delayed_last_trade",
+          "verified_settlement": false,
+          "minimum_delay_minutes": 15,
+          "volume": 172920,
+          "age_seconds": 805,
+          "stale": false
+        },
+        "verified": false,
+        "previous_price": 88.04,
+        "price_date": "2026-10-19",
+        "price_known_at": "2026-10-20T15:09:02.021914+00:00",
+        "reference_source": "ICE public chart",
+        "source_url": "https://www.ice.com/marketdata/api/productguide/charting/data/historical?marketId=6277389&historicalSpan=3",
+        "extreme_threshold": 4.466853677887938,
+        "sigma60": 2.233426838943969,
+        "threshold_frozen_as_of": "2026-10-20T20:45:25.588344+00:00",
+        "flat_delta": 0.3,
+        "observation_count": 701,
+        "risk_flags": [
+          "价格类型尚未验证为ICE官方日结算，不用于官方结算评分",
+          "最近价格并非上一完整交易日，存在行情缺口"
+        ],
+        "market_baseline": {
+          "available": false,
+          "kind": "observed_reference_move",
+          "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+          "as_of": "2026-10-20T20:45:25.588344+00:00",
+          "verified_settlement": false,
+          "flat_band": 0.3,
+          "interpretation": "已观察同合约参考变化；延续或反转均为待验证情景，不是目标日已实现结算",
+          "reason": "previous_trading_day_reference_missing"
+        },
+        "settlement_anchor": {
+          "available": false,
+          "target_trade_date": "2026-10-21",
+          "expected_previous_trade_date": "2026-10-20",
+          "reference_date": "2026-10-19",
+          "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+          "known_time_precision": "exact",
+          "scope": "仅目标日前一交易日同合约参考价可作前结算比较；其他日价不是昨收",
+          "reason": "previous_trading_day_reference_missing"
+        }
+      },
+      "input_sha256": "e7da0b4e4baab15c8ace00e41ff5bb08f84433048192cb1537cf5e68ed55f995"
+    },
+    {
+      "id": "4783a016-ef55-4cf5-accc-799e4584f2aa",
+      "kind": "live",
+      "status": "failed",
+      "created_at": "2026-10-20T20:34:37.268210+00:00",
+      "completed_at": "2026-10-20T20:37:27.616175+00:00",
+      "trade_date": "2026-10-21",
+      "input_as_of": "2026-10-20T20:34:35.326422+00:00",
+      "outlook_trigger": "model_version_update",
+      "outlook_refresh_reason": null,
+      "price_reference": {
+        "available": true,
+        "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+        "contract_name": "Nov26",
+        "price_type": "reference",
+        "intraday": {
+          "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+          "contract_id": "6277389",
+          "contract_name": "Nov26",
+          "value": 86.51,
+          "observed_at": "2026-10-20T20:21:00+00:00",
+          "available_at": "2026-10-20T20:31:11.212923+00:00",
+          "unit": "EUR/MWh",
+          "source": "ICE public delayed market data",
+          "source_url": "https://www.ice.com/products/27996665/Dutch-TTF-Gas-Futures/data",
+          "price_type": "delayed_last_trade",
+          "verified_settlement": false,
+          "minimum_delay_minutes": 15,
+          "volume": 172915,
+          "age_seconds": 815,
+          "stale": false
+        },
+        "verified": false,
+        "previous_price": 88.04,
+        "price_date": "2026-10-19",
+        "price_known_at": "2026-10-20T15:09:02.021914+00:00",
+        "reference_source": "ICE public chart",
+        "source_url": "https://www.ice.com/marketdata/api/productguide/charting/data/historical?marketId=6277389&historicalSpan=3",
+        "extreme_threshold": 4.466853677887938,
+        "sigma60": 2.233426838943969,
+        "threshold_frozen_as_of": "2026-10-20T20:34:35.326422+00:00",
+        "flat_delta": 0.3,
+        "observation_count": 701,
+        "risk_flags": [
+          "价格类型尚未验证为ICE官方日结算，不用于官方结算评分",
+          "最近价格并非上一完整交易日，存在行情缺口"
+        ],
+        "market_baseline": {
+          "available": false,
+          "kind": "observed_reference_move",
+          "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+          "as_of": "2026-10-20T20:34:35.326422+00:00",
+          "verified_settlement": false,
+          "flat_band": 0.3,
+          "interpretation": "已观察同合约参考变化；延续或反转均为待验证情景，不是目标日已实现结算",
+          "reason": "previous_trading_day_reference_missing"
+        },
+        "settlement_anchor": {
+          "available": false,
+          "target_trade_date": "2026-10-21",
+          "expected_previous_trade_date": "2026-10-20",
+          "reference_date": "2026-10-19",
+          "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+          "known_time_precision": "exact",
+          "scope": "仅目标日前一交易日同合约参考价可作前结算比较；其他日价不是昨收",
+          "reason": "previous_trading_day_reference_missing"
+        }
+      },
+      "input_sha256": "3c914f2b53737013b5efa3fbc9e41fd62ebdf2d91bd8b4fefe117eb0d1c471a9"
+    },
+    {
+      "id": "dccc98cf-e3e9-4d5f-b8e6-b30ce1899933",
+      "kind": "live",
+      "status": "failed",
+      "created_at": "2026-10-20T20:15:17.883446+00:00",
+      "completed_at": "2026-10-20T20:40:56.351788+00:00",
+      "trade_date": "2026-10-21",
+      "input_as_of": "2026-10-20T20:15:12.061513+00:00",
+      "outlook_trigger": null,
+      "outlook_refresh_reason": null,
+      "price_reference": {
+        "available": true,
+        "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+        "contract_name": "Nov26",
+        "price_type": "reference",
+        "intraday": {
+          "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+          "contract_id": "6277389",
+          "contract_name": "Nov26",
+          "value": 86.575,
+          "observed_at": "2026-10-20T20:03:00+00:00",
+          "available_at": "2026-10-20T20:14:48.555528+00:00",
+          "unit": "EUR/MWh",
+          "source": "ICE public delayed market data",
+          "source_url": "https://www.ice.com/products/27996665/Dutch-TTF-Gas-Futures/data",
+          "price_type": "delayed_last_trade",
+          "verified_settlement": false,
+          "minimum_delay_minutes": 15,
+          "volume": 172770,
+          "age_seconds": 732,
+          "stale": false
+        },
+        "verified": false,
+        "previous_price": 88.04,
+        "price_date": "2026-10-19",
+        "price_known_at": "2026-10-20T15:09:02.021914+00:00",
+        "reference_source": "ICE public chart",
+        "source_url": "https://www.ice.com/marketdata/api/productguide/charting/data/historical?marketId=6277389&historicalSpan=3",
+        "extreme_threshold": 4.466853677887938,
+        "sigma60": 2.233426838943969,
+        "threshold_frozen_as_of": "2026-10-20T20:15:12.061513+00:00",
+        "flat_delta": 0.3,
+        "observation_count": 701,
+        "risk_flags": [
+          "价格类型尚未验证为ICE官方日结算，不用于官方结算评分",
+          "最近价格并非上一完整交易日，存在行情缺口"
+        ],
+        "market_baseline": {
+          "available": false,
+          "kind": "observed_reference_move",
+          "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+          "as_of": "2026-10-20T20:15:12.061513+00:00",
+          "verified_settlement": false,
+          "flat_band": 0.3,
+          "interpretation": "已观察同合约参考变化；延续或反转均为待验证情景，不是目标日已实现结算",
+          "reason": "previous_trading_day_reference_missing"
+        }
+      },
+      "input_sha256": "b08da96b172edc52ee173cf9ad3f6316db79ccd669ec3fea1842c7261fe3a836"
+    },
+    {
+      "id": "751b4cbd-7da1-4d1a-8e3a-f7f9de49031a",
+      "kind": "live",
+      "status": "completed",
+      "created_at": "2026-10-20T20:11:30.469563+00:00",
+      "completed_at": "2026-10-20T20:39:31.234346+00:00",
+      "trade_date": "2026-10-21",
+      "input_as_of": "2026-10-20T20:11:28.514165+00:00",
+      "outlook_trigger": null,
+      "outlook_refresh_reason": null,
+      "price_reference": {
+        "available": true,
+        "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+        "contract_name": "Nov26",
+        "price_type": "reference",
+        "intraday": {
+          "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+          "contract_id": "6277389",
+          "contract_name": "Nov26",
+          "value": 86.59,
+          "observed_at": "2026-10-20T20:00:00+00:00",
+          "available_at": "2026-10-20T20:10:51.964337+00:00",
+          "unit": "EUR/MWh",
+          "source": "ICE public delayed market data",
+          "source_url": "https://www.ice.com/products/27996665/Dutch-TTF-Gas-Futures/data",
+          "price_type": "delayed_last_trade",
+          "verified_settlement": false,
+          "minimum_delay_minutes": 15,
+          "volume": 172755,
+          "age_seconds": 688,
+          "stale": false
+        },
+        "verified": false,
+        "previous_price": 88.04,
+        "price_date": "2026-10-19",
+        "price_known_at": "2026-10-20T15:09:02.021914+00:00",
+        "reference_source": "ICE public chart",
+        "source_url": "https://www.ice.com/marketdata/api/productguide/charting/data/historical?marketId=6277389&historicalSpan=3",
+        "extreme_threshold": 4.466853677887938,
+        "sigma60": 2.233426838943969,
+        "threshold_frozen_as_of": "2026-10-20T20:11:28.514165+00:00",
+        "flat_delta": 0.3,
+        "observation_count": 701,
+        "risk_flags": [
+          "价格类型尚未验证为ICE官方日结算，不用于官方结算评分",
+          "最近价格并非上一完整交易日，存在行情缺口"
+        ],
+        "market_baseline": {
+          "available": false,
+          "kind": "observed_reference_move",
+          "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+          "as_of": "2026-10-20T20:11:28.514165+00:00",
+          "verified_settlement": false,
+          "flat_band": 0.3,
+          "interpretation": "已观察同合约参考变化；延续或反转均为待验证情景，不是目标日已实现结算",
+          "reason": "previous_trading_day_reference_missing"
+        }
+      },
+      "input_sha256": "77a95e89be4d8b03fcb65daf72db89d640b152bf25275de204b00a3ebacf208c"
+    },
+    {
+      "id": "c95895db-8b57-469f-a98a-25d5df4ee7b2",
+      "kind": "live",
+      "status": "failed",
+      "created_at": "2026-10-20T20:08:05.877050+00:00",
+      "completed_at": "2026-10-20T20:39:00.348435+00:00",
+      "trade_date": "2026-10-21",
+      "input_as_of": "2026-10-20T20:08:03.826670+00:00",
+      "outlook_trigger": null,
+      "outlook_refresh_reason": null,
+      "price_reference": {
+        "available": true,
+        "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+        "contract_name": "Nov26",
+        "price_type": "reference",
+        "intraday": {
+          "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+          "contract_id": "6277389",
+          "contract_name": "Nov26",
+          "value": 86.585,
+          "observed_at": "2026-10-20T19:49:00+00:00",
+          "available_at": "2026-10-20T19:59:49.921375+00:00",
+          "unit": "EUR/MWh",
+          "source": "ICE public delayed market data",
+          "source_url": "https://www.ice.com/products/27996665/Dutch-TTF-Gas-Futures/data",
+          "price_type": "delayed_last_trade",
+          "verified_settlement": false,
+          "minimum_delay_minutes": 15,
+          "volume": 172580,
+          "age_seconds": 1143,
+          "stale": false
+        },
+        "verified": false,
+        "previous_price": 88.04,
+        "price_date": "2026-10-19",
+        "price_known_at": "2026-10-20T15:09:02.021914+00:00",
+        "reference_source": "ICE public chart",
+        "source_url": "https://www.ice.com/marketdata/api/productguide/charting/data/historical?marketId=6277389&historicalSpan=3",
+        "extreme_threshold": 4.466853677887938,
+        "sigma60": 2.233426838943969,
+        "threshold_frozen_as_of": "2026-10-20T20:08:03.826670+00:00",
+        "flat_delta": 0.3,
+        "observation_count": 701,
+        "risk_flags": [
+          "价格类型尚未验证为ICE官方日结算，不用于官方结算评分",
+          "最近价格并非上一完整交易日，存在行情缺口"
+        ],
+        "market_baseline": {
+          "available": false,
+          "kind": "observed_reference_move",
+          "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+          "as_of": "2026-10-20T20:08:03.826670+00:00",
+          "verified_settlement": false,
+          "flat_band": 0.3,
+          "interpretation": "已观察同合约参考变化；延续或反转均为待验证情景，不是目标日已实现结算",
+          "reason": "previous_trading_day_reference_missing"
+        }
+      },
+      "input_sha256": "6ba31fd58a909c480aaae9d47a4b5a553e1ef1efd3050daa89c6f3dcf7448b53"
+    }
+  ],
+  "current_market_refresh_reason": null,
+  "recent_collector_metrics": [
+    {
+      "id": 19653,
+      "created_at": "2026-10-20T23:51:20.252221+00:00",
+      "type": "collection_cycle",
+      "data": {
+        "seconds": 24.085,
+        "created": 0,
+        "revised": 0
+      }
+    },
+    {
+      "id": 19648,
+      "created_at": "2026-10-20T23:50:28.563676+00:00",
+      "type": "collection_cycle",
+      "data": {
+        "seconds": 24.435,
+        "created": 0,
+        "revised": 0
+      }
+    },
+    {
+      "id": 19646,
+      "created_at": "2026-10-20T23:49:33.746766+00:00",
+      "type": "collection_cycle",
+      "data": {
+        "seconds": 29.62,
+        "created": 0,
+        "revised": 0
+      }
+    },
+    {
+      "id": 19644,
+      "created_at": "2026-10-20T23:48:30.220566+00:00",
+      "type": "collection_cycle",
+      "data": {
+        "seconds": 26.097,
+        "created": 0,
+        "revised": 0
+      }
+    },
+    {
+      "id": 19642,
+      "created_at": "2026-10-20T23:47:31.109711+00:00",
+      "type": "collection_cycle",
+      "data": {
+        "seconds": 26.989,
+        "created": 0,
+        "revised": 0
+      }
+    },
+    {
+      "id": 19640,
+      "created_at": "2026-10-20T23:46:27.208219+00:00",
+      "type": "collection_cycle",
+      "data": {
+        "seconds": 23.09,
+        "created": 0,
+        "revised": 0
+      }
+    },
+    {
+      "id": 19638,
+      "created_at": "2026-10-20T23:45:35.737302+00:00",
+      "type": "collection_cycle",
+      "data": {
+        "seconds": 31.621,
+        "created": 0,
+        "revised": 0
+      }
+    },
+    {
+      "id": 19636,
+      "created_at": "2026-10-20T23:44:31.753677+00:00",
+      "type": "collection_cycle",
+      "data": {
+        "seconds": 27.639,
+        "created": 0,
+        "revised": 0
+      }
+    }
+  ],
+  "interpretation": {
+    "version_known_at_is_local_availability": "price_versions.known_at from fetched_at/known_at or collector fallback; original bar day is not its locally known timestamp.",
+    "daily_bar_observed_at": "ICE historical chart stores day only, not a verified official settlement timestamp; absent observed_at is not fabricated.",
+    "price_type": "ICE public chart remains reference with verified=false. The known daily reference is eligible only for conditional same-contract comparison, never official settlement scoring.",
+    "refresh_gate": "market_refresh_reason returns no update when market_baseline.available=false; a newly valid daily anchor alone does not make an old/stale intraday quote fresh."
+  }
+}

@@ -1,0 +1,546 @@
+{
+  "created_at": "2026-10-20T19:09:26.837121+00:00",
+  "records": [
+    {
+      "review_key": "dismissed_notice_not_verified_recovery",
+      "case": "dismissed_notice_not_verified_recovery",
+      "stage": "candidate-contract-validation",
+      "file": "reports/repair_2026-10-20/candidate-contract-validation/dismissed_notice_not_verified_recovery.json",
+      "file_sha256": "4aefabe50ea4cde0d3f6b74bc67b92932ff6db935e0dead45f9a0c2f15bccf6b",
+      "input_sha256": "dc8a50f0ed4b2e64a5a97b9b3d697e61aa88afa3e25f195a97a44e8b017f36a0",
+      "final_raw_sha256": "afdc3c837b0a595ceb284ce4b9a0a18d288b638653ad3fe347ad8dcc68ddd745",
+      "has_final_result": true,
+      "recorded_contract_passed": true,
+      "original_expectation_checks": {
+        "passed": true,
+        "expected_news": null,
+        "news_direction": "down",
+        "news_direction_checked": false,
+        "news_direction_passed": true,
+        "close_contract_checked": false,
+        "expected_close": null,
+        "expected_status": null,
+        "expected_close_sign": null,
+        "close_sign_checked": false,
+        "close_sign_passed": true,
+        "allowed_close_directions": null,
+        "allowed_close_passed": true,
+        "close_direction": null,
+        "close_evidence_status": "insufficient_evidence",
+        "close_contract_passed": true
+      },
+      "current_expectation_checks": {
+        "passed": true,
+        "expected_news": null,
+        "news_direction": "down",
+        "news_direction_checked": false,
+        "news_direction_passed": true,
+        "close_contract_checked": false,
+        "expected_close": null,
+        "expected_status": null,
+        "expected_close_sign": null,
+        "close_sign_checked": false,
+        "close_sign_passed": true,
+        "allowed_close_directions": null,
+        "allowed_close_passed": true,
+        "close_direction": null,
+        "close_evidence_status": "insufficient_evidence",
+        "close_contract_passed": true
+      },
+      "evaluation_contract_revision": {
+        "applied": false,
+        "revision_id": null,
+        "file": null,
+        "sha256": null
+      },
+      "current_logic_revalidation": {
+        "passed": true,
+        "prepared_context_sha256": "a1f3676f3f1b4fa0fc0d4cd03a1ce93ca52e8f3521e1b2ce0fd622432363e0d1",
+        "source_reference_count": 2,
+        "context_window": 8192
+      },
+      "current_generation_policy_compatibility": {
+        "current_semantic_high_retry_enabled": false,
+        "current_semantic_high_scope": "operator_notice",
+        "recorded_semantic_high_scope": "operator_notice",
+        "semantic_high_independent_regeneration_used": false,
+        "compatible": true,
+        "current_news_is_operator_notice": null,
+        "reason": "no_independent_high_path_used"
+      },
+      "current_pipeline_passed": true,
+      "generation_source_sha256": {
+        "ttf_news/analysis.py": "6f5f01523cfaba60c4f0e7bca42d833a78228d8efe62b72e5169ea1168de081d",
+        "ttf_news/semantics.py": "59babcd94d9369ce37f1677ba1fb38c43a7830a2adfca95cd19cf5783d79e88f",
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56"
+      },
+      "revalidation_source_files_changed": [
+        "ttf_news/analysis.py",
+        "ttf_news/semantics.py"
+      ],
+      "verdict": "pass",
+      "notes": [
+        "证据逐条完整绑定‘非计划、公告不可用20mcm/d、仅该公告撤销、实流未知’，结构化事实明确整体供应风险是否消除仍未知。",
+        "正文‘供应约束消除/供应约束风险消除’在这张单公告容量卡片范围内读为该约束风险撤销，不读作实流已恢复或全部供应风险消失；analysis仍写实际流量/基准缺失、影响不确定。",
+        "弱下行来自公告风险缓解，不强迫neutral/flat；缺前价与市场锚点close=null。单次medium、默认False、未用独立high。"
+      ]
+    },
+    {
+      "review_key": "future_planned_notice",
+      "case": "future_planned_notice",
+      "stage": "candidate-contract-validation",
+      "file": "reports/repair_2026-10-20/candidate-contract-validation/future_planned_notice.json",
+      "file_sha256": "e203be0624c1502f0c584b8dfd26e57443366f38572b1c4f22fc77477f0e0483",
+      "input_sha256": "99aa1883186e4c7746647f781489670cf07addc2c015b7bbd5f4d28310eef1e8",
+      "final_raw_sha256": "b75555b7443de14dd4896b63590b324bdbddc585d3860ec42c9382948ee4813d",
+      "has_final_result": true,
+      "recorded_contract_passed": true,
+      "original_expectation_checks": {
+        "passed": true,
+        "expected_news": null,
+        "news_direction": "flat",
+        "news_direction_checked": false,
+        "news_direction_passed": true,
+        "close_contract_checked": false,
+        "expected_close": null,
+        "expected_status": null,
+        "expected_close_sign": null,
+        "close_sign_checked": false,
+        "close_sign_passed": true,
+        "allowed_close_directions": null,
+        "allowed_close_passed": true,
+        "close_direction": null,
+        "close_evidence_status": "insufficient_evidence",
+        "close_contract_passed": true
+      },
+      "current_expectation_checks": {
+        "passed": true,
+        "expected_news": null,
+        "news_direction": "flat",
+        "news_direction_checked": false,
+        "news_direction_passed": true,
+        "close_contract_checked": false,
+        "expected_close": null,
+        "expected_status": null,
+        "expected_close_sign": null,
+        "close_sign_checked": false,
+        "close_sign_passed": true,
+        "allowed_close_directions": null,
+        "allowed_close_passed": true,
+        "close_direction": null,
+        "close_evidence_status": "insufficient_evidence",
+        "close_contract_passed": true
+      },
+      "evaluation_contract_revision": {
+        "applied": false,
+        "revision_id": null,
+        "file": null,
+        "sha256": null
+      },
+      "current_logic_revalidation": {
+        "passed": true,
+        "prepared_context_sha256": "8a00f129ad7dbfc0415495137f0c4ea3f7e45cd61db6f761c6a020e84185c058",
+        "source_reference_count": 2,
+        "context_window": 8192
+      },
+      "current_generation_policy_compatibility": {
+        "current_semantic_high_retry_enabled": false,
+        "current_semantic_high_scope": "operator_notice",
+        "recorded_semantic_high_scope": "operator_notice",
+        "semantic_high_independent_regeneration_used": false,
+        "compatible": true,
+        "current_news_is_operator_notice": null,
+        "reason": "no_independent_high_path_used"
+      },
+      "current_pipeline_passed": true,
+      "generation_source_sha256": {
+        "ttf_news/analysis.py": "6f5f01523cfaba60c4f0e7bca42d833a78228d8efe62b72e5169ea1168de081d",
+        "ttf_news/semantics.py": "59babcd94d9369ce37f1677ba1fb38c43a7830a2adfca95cd19cf5783d79e88f",
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56"
+      },
+      "revalidation_source_files_changed": [
+        "ttf_news/analysis.py",
+        "ttf_news/semantics.py"
+      ],
+      "verdict": "pass",
+      "notes": [
+        "强制事实前缀现含TTF机制标记，保留计划、公告不可用容量20mcm/d、未来公告和实流未知，没有把20写为实际当前减供量。",
+        "最终‘价格可能未受影响/当前影响有限’按整段读为弱直接传导的可能性判断，非已观察报价未变：仍明确价格反应未知、close因缺前价/市场基准为null，不强迫未来公告非flat。",
+        "首轮无依据确定‘价格不受影响’已被拒，第二轮medium修复；默认semantic_high_retry=False且未用独立high。"
+      ]
+    },
+    {
+      "review_key": "real_eni",
+      "case": "real_eni",
+      "stage": "candidate-contract-validation",
+      "file": "reports/repair_2026-10-20/candidate-contract-validation/real_eni.json",
+      "file_sha256": "76bbac1b7d0bd68b8864dec56140be60c3993fcda76813fdb452aa870dc5db33",
+      "input_sha256": "0dd52f2daf32aeaf1edc94d3394b0df67eba21b6f8d1b3b6ca0652c0faf8f075",
+      "final_raw_sha256": "2de040ebcbf152f9d433f9938466420fbd16ae9bdab9b70ff5933c0c1cedd089",
+      "has_final_result": true,
+      "recorded_contract_passed": true,
+      "original_expectation_checks": {
+        "passed": true,
+        "expected_news": null,
+        "news_direction": "up",
+        "news_direction_checked": false,
+        "news_direction_passed": true,
+        "close_contract_checked": false,
+        "expected_close": null,
+        "expected_status": null,
+        "expected_close_sign": null,
+        "close_sign_checked": false,
+        "close_sign_passed": true,
+        "allowed_close_directions": null,
+        "allowed_close_passed": true,
+        "close_direction": "up",
+        "close_evidence_status": "forecast",
+        "close_contract_passed": true
+      },
+      "current_expectation_checks": {
+        "passed": true,
+        "expected_news": null,
+        "news_direction": "up",
+        "news_direction_checked": false,
+        "news_direction_passed": true,
+        "close_contract_checked": false,
+        "expected_close": null,
+        "expected_status": null,
+        "expected_close_sign": null,
+        "close_sign_checked": false,
+        "close_sign_passed": true,
+        "allowed_close_directions": null,
+        "allowed_close_passed": true,
+        "close_direction": "up",
+        "close_evidence_status": "forecast",
+        "close_contract_passed": true
+      },
+      "evaluation_contract_revision": {
+        "applied": false,
+        "revision_id": null,
+        "file": null,
+        "sha256": null
+      },
+      "current_logic_revalidation": {
+        "passed": true,
+        "prepared_context_sha256": "abc5da76c19954e299c4d346a7bb70028f7c3556eee11e1e431ff6841ac0673e",
+        "source_reference_count": 17,
+        "context_window": 16384
+      },
+      "current_generation_policy_compatibility": {
+        "current_semantic_high_retry_enabled": false,
+        "current_semantic_high_scope": "operator_notice",
+        "recorded_semantic_high_scope": "operator_notice",
+        "semantic_high_independent_regeneration_used": false,
+        "compatible": true,
+        "current_news_is_operator_notice": null,
+        "reason": "no_independent_high_path_used"
+      },
+      "current_pipeline_passed": true,
+      "generation_source_sha256": {
+        "ttf_news/analysis.py": "6f5f01523cfaba60c4f0e7bca42d833a78228d8efe62b72e5169ea1168de081d",
+        "ttf_news/semantics.py": "59babcd94d9369ce37f1677ba1fb38c43a7830a2adfca95cd19cf5783d79e88f",
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56"
+      },
+      "revalidation_source_files_changed": [
+        "ttf_news/analysis.py",
+        "ttf_news/semantics.py"
+      ],
+      "verdict": "pass",
+      "notes": [
+        "冻结输入与此前完全相同；N3 Åsgard非计划5.2、N7 Nyhamna计划19.8逐条事实前缀正确，active_notice_summary明确一计划一非计划。正文不再把两项统称非计划或实际停产。",
+        "两个当前容量风险放bullish且明确‘可能’、实流未知；非洲项目只作未来供给、没有当即输欧交付或错误扩供看涨。",
+        "同合约+.178参考在flat带内，close明确基准平稳但容量风险可产生上行压力而作条件up，未编造幅度/计价/公告反应；不强制仅因基准flat而报flat。未来E1排除，无历史同期价格伪因果。",
+        "单轮medium成功，没有独立high。"
+      ]
+    },
+    {
+      "review_key": "real_nyhamna",
+      "case": "real_nyhamna",
+      "stage": "candidate-contract-validation",
+      "file": "reports/repair_2026-10-20/candidate-contract-validation/real_nyhamna.json",
+      "file_sha256": "1cc5ccbbe0e676791bf48d69046c4afddbe734e3eee4d438cc9bca29dc17fb48",
+      "input_sha256": "4ba9dbdac43a9ce84acad5d9dde536a9d5e5a5fa02b6e1a3d65fc64ad7c7990a",
+      "final_raw_sha256": "c2f475f55e9d8f3d7ca895fbcb9864ca5a1fb993f8dc9093e505d7df4bf88b06",
+      "has_final_result": false,
+      "recorded_contract_passed": false,
+      "original_expectation_checks": {
+        "passed": true,
+        "expected_news": null,
+        "news_direction": "up",
+        "news_direction_checked": false,
+        "news_direction_passed": true,
+        "close_contract_checked": false,
+        "expected_close": null,
+        "expected_status": null,
+        "expected_close_sign": null,
+        "close_sign_checked": false,
+        "close_sign_passed": true,
+        "allowed_close_directions": null,
+        "allowed_close_passed": true,
+        "close_direction": "up",
+        "close_evidence_status": "forecast",
+        "close_contract_passed": true
+      },
+      "current_expectation_checks": {
+        "passed": true,
+        "expected_news": null,
+        "news_direction": "up",
+        "news_direction_checked": false,
+        "news_direction_passed": true,
+        "close_contract_checked": false,
+        "expected_close": null,
+        "expected_status": null,
+        "expected_close_sign": null,
+        "close_sign_checked": false,
+        "close_sign_passed": true,
+        "allowed_close_directions": null,
+        "allowed_close_passed": true,
+        "close_direction": "up",
+        "close_evidence_status": "forecast",
+        "close_contract_passed": true
+      },
+      "evaluation_contract_revision": {
+        "applied": false,
+        "revision_id": null,
+        "file": null,
+        "sha256": null
+      },
+      "current_logic_revalidation": {
+        "passed": false,
+        "error_type": "ValueError",
+        "reason": "news_impact.summary:公告不可用容量不等于计划停产/减供的实际数量；输入未给独立实物流量或交付计划依据，不能把容量改称停产19.8mcm/d。可列公告不可用容量、未来时段及其条件风险"
+      },
+      "current_generation_policy_compatibility": {
+        "current_semantic_high_retry_enabled": false,
+        "current_semantic_high_scope": "operator_notice",
+        "recorded_semantic_high_scope": "operator_notice",
+        "semantic_high_independent_regeneration_used": false,
+        "compatible": true,
+        "current_news_is_operator_notice": null,
+        "reason": "no_independent_high_path_used"
+      },
+      "current_pipeline_passed": false,
+      "generation_source_sha256": {
+        "ttf_news/analysis.py": "6f5f01523cfaba60c4f0e7bca42d833a78228d8efe62b72e5169ea1168de081d",
+        "ttf_news/semantics.py": "59babcd94d9369ce37f1677ba1fb38c43a7830a2adfca95cd19cf5783d79e88f",
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56"
+      },
+      "revalidation_source_files_changed": [
+        "ttf_news/analysis.py",
+        "ttf_news/semantics.py"
+      ],
+      "verdict": "failed_with_validator_false_positive",
+      "notes": [
+        "没有有效final。第一轮N0计划/N3非计划的绑定证据事实上正确，却因validator按分号拆句，N3后续‘非计划’丢alias并默认套N0，出现可复现假阳性；正确的最小两条前缀样例同样误拒。",
+        "第一轮也有真实语义错误：N4气体资源发现/潜在供给↑被列bullish，并称资源发现看涨；资源供给预期不能无依据写成TTF上涨机制。",
+        "末轮进一步把不可用容量19.8/5.2当停产数量，并将已过时段、实流未知的Troll6.6当当前约束合计31.6，均不能接受；修alias误拒不等于此记录可通过。",
+        "已将精确复现和真实错误分开报告root与证据代理，未改源码、原始回答或方向。"
+      ]
+    },
+    {
+      "review_key": "supply_restore_40_with_flat_baseline",
+      "case": "supply_restore_40_with_flat_baseline",
+      "stage": "candidate-contract-validation",
+      "file": "reports/repair_2026-10-20/candidate-contract-validation/supply_restore_40_with_flat_baseline.json",
+      "file_sha256": "614ab0cb16b58b81e9d61e614324ed61724db736466cdf502717b3f5cea0689f",
+      "input_sha256": "464d1b4829706e3760d34f544c7b1028ab149fdf9aae15c7c9f40febbcb66e9c",
+      "final_raw_sha256": "be4b4037f4340d9bcfe1bae49926bfe7b92fc5f2b1b51e06a1e26aa22da5abd6",
+      "has_final_result": true,
+      "recorded_contract_passed": false,
+      "original_expectation_checks": {
+        "passed": false,
+        "expected_news": "down",
+        "news_direction": "down",
+        "news_direction_checked": true,
+        "news_direction_passed": true,
+        "close_contract_checked": true,
+        "expected_close": null,
+        "expected_status": null,
+        "expected_close_sign": "down",
+        "close_sign_checked": true,
+        "close_sign_passed": false,
+        "allowed_close_directions": null,
+        "allowed_close_passed": true,
+        "close_direction": "flat",
+        "close_evidence_status": "forecast",
+        "close_contract_passed": false
+      },
+      "current_expectation_checks": {
+        "passed": true,
+        "expected_news": "down",
+        "news_direction": "down",
+        "news_direction_checked": true,
+        "news_direction_passed": true,
+        "close_contract_checked": true,
+        "expected_close": null,
+        "expected_status": null,
+        "expected_close_sign": null,
+        "close_sign_checked": false,
+        "close_sign_passed": true,
+        "allowed_close_directions": [
+          "down",
+          "extreme_down",
+          "flat"
+        ],
+        "allowed_close_passed": true,
+        "close_direction": "flat",
+        "close_evidence_status": "forecast",
+        "close_contract_passed": true
+      },
+      "evaluation_contract_revision": {
+        "applied": true,
+        "revision_id": "evaluation_contract_revision_v1",
+        "file": "reports/repair_2026-10-20/evaluation_contract_revision_v1.json",
+        "sha256": "f4944dfcbd02f85b4473b489d2d967061313bf82caeb88997e55f70724180b2d"
+      },
+      "current_logic_revalidation": {
+        "passed": true,
+        "prepared_context_sha256": "a30c23621e61b7b54438c7122f02ef3e229757936777054604414a75d772dee7",
+        "source_reference_count": 2,
+        "context_window": 8192
+      },
+      "current_generation_policy_compatibility": {
+        "current_semantic_high_retry_enabled": false,
+        "current_semantic_high_scope": "operator_notice",
+        "recorded_semantic_high_scope": "operator_notice",
+        "semantic_high_independent_regeneration_used": false,
+        "compatible": true,
+        "current_news_is_operator_notice": null,
+        "reason": "no_independent_high_path_used"
+      },
+      "current_pipeline_passed": true,
+      "generation_source_sha256": {
+        "ttf_news/analysis.py": "6f5f01523cfaba60c4f0e7bca42d833a78228d8efe62b72e5169ea1168de081d",
+        "ttf_news/semantics.py": "59babcd94d9369ce37f1677ba1fb38c43a7830a2adfca95cd19cf5783d79e88f",
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56"
+      },
+      "revalidation_source_files_changed": [
+        "ttf_news/analysis.py",
+        "ttf_news/semantics.py"
+      ],
+      "verdict": "semantically_consistent_original_close_contract_overstrict",
+      "notes": [
+        "来源明确供给恢复40mcm/d，最终news down与供增→下行机制正确；close参考同合约Δ0基准作‘若无新冲击，平稳或略跌’的条件forecast，未把冲击前quote当消息后无反应，未宣称已/未计价。",
+        "平档定义±0.30欧元/MWh，40mcm/d没有给价格弹性或跨阈值幅度依据；略跌仍可能属flat，不能从新闻压力方向必然推出close类别down。当前close flat不构成供需反向，也不是把缺测当0。",
+        "原新增expected_close_sign=down强制把news方向复制成close类别，过严。已向root建议对供减/恢复两个控制对称、显式版本化修订评估合同，保留原fixture/raw/recorded_contract_passed=False；未改code或fixture。",
+        "更强跨±0.30分类测试需另提供校准价格反应输入。此意见不翻案symmetric伪造事后反应或scopeguard仅因未知计价拒绝forecast的旧错误，两者仍应保留失败。"
+      ],
+      "decision_history": [
+        {
+          "decision": "original_close_sign_control_supported_in_earlier_design",
+          "basis": "先前将强单向流量变化+持平基准视为应形成同向close类别，未充分区分压力方向与±0.30分类幅度。"
+        },
+        {
+          "decision": "revise_evaluation_judgment_not_model_direction",
+          "basis": "实际最终原文给出有基准的条件forecast且允许略跌仍在flat带内；没有弹性时不能要求必然跨0.30。对两项新增控制应对称修订评估并保留原契约失败。"
+        }
+      ]
+    },
+    {
+      "review_key": "detail:supply_restore_40",
+      "case": "supply_restore_40",
+      "stage": "candidate-contract-validation-detail",
+      "file": "reports/repair_2026-10-20/candidate-contract-validation-detail/supply_restore_40.json",
+      "file_sha256": "d093e6ecd6c116a109f1e29a4b23674a032cb172b1c080c36180b98482db597d",
+      "input_sha256": "34528870d8c93ae88245489993d0a452b219603f455aebefe082e48742003c94",
+      "final_raw_sha256": "099ee8c887613287b842ffe559b73a250294863dcaa408d74b2160748b6752d4",
+      "has_final_result": true,
+      "recorded_contract_passed": true,
+      "original_expectation_checks": {
+        "passed": true,
+        "expected_news": "down",
+        "news_direction": "down",
+        "news_direction_checked": true,
+        "news_direction_passed": true,
+        "close_contract_checked": false,
+        "expected_close": null,
+        "expected_status": null,
+        "expected_close_sign": null,
+        "close_sign_checked": false,
+        "close_sign_passed": true,
+        "allowed_close_directions": null,
+        "allowed_close_passed": true,
+        "close_direction": null,
+        "close_evidence_status": "insufficient_evidence",
+        "close_contract_passed": true
+      },
+      "current_expectation_checks": {
+        "passed": true,
+        "expected_news": "down",
+        "news_direction": "down",
+        "news_direction_checked": true,
+        "news_direction_passed": true,
+        "close_contract_checked": false,
+        "expected_close": null,
+        "expected_status": null,
+        "expected_close_sign": null,
+        "close_sign_checked": false,
+        "close_sign_passed": true,
+        "allowed_close_directions": null,
+        "allowed_close_passed": true,
+        "close_direction": null,
+        "close_evidence_status": "insufficient_evidence",
+        "close_contract_passed": true
+      },
+      "evaluation_contract_revision": {
+        "applied": false,
+        "revision_id": null,
+        "file": null,
+        "sha256": null
+      },
+      "current_logic_revalidation": {
+        "passed": false,
+        "error_type": "ValueError",
+        "reason": "detail.invalidation_conditions[0]:假设公告后价格单向涨跌不能说明/证明已计价或未计价，或存在其他因素也不是计价证据；须有该消息前后独立可比反应。可把价格变化列为重新检查供需与预测的条件，保留若已计价的明确假设，不得由价变推出计价事实"
+      },
+      "current_generation_policy_compatibility": {
+        "current_semantic_high_retry_enabled": false,
+        "current_semantic_high_scope": "operator_notice",
+        "recorded_semantic_high_scope": "operator_notice",
+        "semantic_high_independent_regeneration_used": false,
+        "compatible": true,
+        "current_news_is_operator_notice": null,
+        "reason": "no_independent_high_path_used"
+      },
+      "current_pipeline_passed": false,
+      "generation_source_sha256": {
+        "ttf_news/analysis.py": "6f5f01523cfaba60c4f0e7bca42d833a78228d8efe62b72e5169ea1168de081d",
+        "ttf_news/semantics.py": "59babcd94d9369ce37f1677ba1fb38c43a7830a2adfca95cd19cf5783d79e88f",
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56"
+      },
+      "revalidation_source_files_changed": [
+        "ttf_news/analysis.py",
+        "ttf_news/semantics.py"
+      ],
+      "verdict": "needs_attention",
+      "notes": [
+        "供给恢复40mcm/d→下行，bullish需求上升/库存下降抵消下行、base持续供增下行等情景方向正确，缺价格基准close=null可成立。",
+        "invalidation_conditions原句‘若市场报价在公告后出现显著上涨，表明已计价或存在其他上行因素’将假设中单一报价方向当作已计价归因的充分条件；若/或不补识别证据，不能接受。",
+        "报价上涨可要求重查下行情景是否成立，不能据此认定这条供增消息已计价或识别具体上涨原因；旧机器contract_passed=True保留，独立复核判需处理，不改raw。"
+      ]
+    }
+  ],
+  "revalidation_source_sha256": {
+    "ttf_news/analysis.py": "4609312cf537a13e95e8a4fecb7f520a877d044ee19290c5cd74f376b8115f63",
+    "ttf_news/semantics.py": "553d389d1cd0ad077acdc51491775bacc52e2f451667582452caa1bc647dc2d8",
+    "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56",
+    "scripts/repair-validation-report.py": "f57ce9c14cb3af25815d32e9aa7e6cf054d6eb12fba76c2ae5330f71005fa55f"
+  },
+  "evaluation_revision": {
+    "file": "reports/repair_2026-10-20/evaluation_contract_revision_v1.json",
+    "sha256": "f4944dfcbd02f85b4473b489d2d967061313bf82caeb88997e55f70724180b2d",
+    "comparison_cases_sha256": "8d6f9202d21a3d27ac0f6714802d8da2eda76d321e4c820c0d4f73aae41eacd5"
+  },
+  "status": "needs_attention_pending_binding_replays",
+  "review_method": "逐句核对原始输入、最终回答及失败尝试；区分源事实、机制、价格观察、条件归因和幅度分类，原始记录不改写。",
+  "model_calls_requested_by_reviewer": 0,
+  "database_access": false,
+  "summary": {
+    "brief_semantically_passed": 3,
+    "brief_consistent_with_explicit_evaluation_amendment": 1,
+    "brief_failed_with_validator_false_positive_and_real_prose_errors": 1,
+    "detail_needs_attention": 1
+  },
+  "evaluation_revision_note": "两项新增控制的新闻方向与收盘幅度分类是不同合同；修订对称允许有依据的同向或flat条件forecast，不改原fixture及recorded_contract=False，不宣称实际准确率，也不翻案旧伪造反应或拒绝有效forecast的错误。"
+}

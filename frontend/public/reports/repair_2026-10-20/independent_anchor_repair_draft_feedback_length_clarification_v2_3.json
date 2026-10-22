@@ -1,0 +1,19 @@
+{
+  "schema_version": "ttf-independent-review-clarification-v1",
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/event_retrieval",
+  "generated_at": "2026-10-21T00:48:24.143692+00:00",
+  "review_file": "reports/repair_2026-10-20/independent_anchor_repair_draft_exposure_review_v2_3.json",
+  "review_sha256": "aeab80fd23d2b3945c640eaa11c14630875924fcb57a820e33a5e403bf28f2a8",
+  "source_record_file": "reports/repair_2026-10-20/candidate-final-output-scope-validation/anchor_real_manual_missing_prevday.json",
+  "source_record_sha256": "ec1a6b3aaa0702762d1f8b47e2a1fe9295eb29581069f95f519d2854f393d15e",
+  "correction": "前份独审约150字为目测估计，精确计数为100字符；不代表repair_prompt函数最大长度。",
+  "actual_validation_error_character_count": 100,
+  "full_validation_issue_character_count": 133,
+  "actual_feedback_suffix": "不等于观测为零。可保留弱",
+  "original_review_modified": false,
+  "original_model_record_modified": false,
+  "interpretation_changed": false,
+  "new_model_calls": 0,
+  "database_writes": 0
+}

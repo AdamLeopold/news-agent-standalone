@@ -1,0 +1,11 @@
+{
+  "stopped_at": "2026-10-20T21:21:59.655191+00:00",
+  "runner_pid": 94830,
+  "server_stopped": false,
+  "model_stopped": false,
+  "copies_sha256": {
+    "attempted_v2_1_pre_generation_policy_smoke.json": "db9af56ec4754f21cd81e0e86b553cfe79e347984e40f785ab44924fe0fd6372",
+    "attempted_v2_1_pre_generation_policy_smoke.log": "7805ffcf079e31b7677f1e51928a95a43ffb22269bd2a150b741105e482f0db5"
+  },
+  "reason": "Preserve v2.1 actual successful manual/detail/English/export stages and failed69c current-live; final v2.2 first-prompt repair requires a fresh end-to-end run. No failed stage is relabelled passed."
+}

@@ -1,0 +1,16 @@
+{
+  "observed_at": "2026-10-20T20:37:21.029868+00:00",
+  "status": "passed",
+  "analysis_id": "ec3f2c31-6f49-48bb-acbd-48474ce670e2",
+  "record_origin_prompt_version": "ttf-news-standalone-2.0",
+  "backend_prompt_version": "ttf-news-standalone-2.1",
+  "api_result_is_null": true,
+  "ui_error_visible": true,
+  "ui_direction_element_count": 0,
+  "default_flat_used": false,
+  "screenshot_file": "reports/repair_2026-10-20/error_ui_final.png",
+  "screenshot_sha256": "a00c87322c4a5106e6fe7c22d848db8624033cd1ee88740f76f5b2765d552ce4",
+  "api_response_sha256": "35d29f818485868fbe04305d2d1ff4b76bb214464e44f5ef73936ab58f326c89",
+  "frontend_index_sha256": "de22cf471702ee6d48466d613a9cea7d3f5c4862b3f45e93386d46c72aa69170",
+  "evidence_boundary": "Observed existing real 2.0 failed record in the actual current backend/UI; this is not a new 2.1 model failure."
+}

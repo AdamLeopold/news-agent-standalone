@@ -1,0 +1,67 @@
+{
+  "recorded_at": "2026-10-21T00:35:32.262602+00:00",
+  "reviewer_type": "codex_subagent",
+  "scope": "Append-only same-family accepted-error evidence from the first final-output-scope followup. This is not a new direction/contract rule.",
+  "known_error_family": "v2_3_isolated_price_observation_or_baseline_errors",
+  "case": "dismissed_notice_not_verified_recovery",
+  "source_record": {
+    "file": "reports/repair_2026-10-20/candidate-final-output-scope-validation/dismissed_notice_not_verified_recovery.json",
+    "sha256": "eac8fdca4d7d9ee56172c5ecbf9ed3043aabcfecc1e97c4ebc72a83bb608c2cd"
+  },
+  "input_sha256": "dc8a50f0ed4b2e64a5a97b9b3d697e61aa88afa3e25f195a97a44e8b017f36a0",
+  "generation_source_hashes": {
+    "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+    "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+    "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+    "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+    "ttf_news/public_gateway.py": "fac8fe10429bc62a6be241817491d1f35eecdaa7f8a37357cb8dbcab7f43fae5",
+    "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+    "ttf_news/analysis.py": "d1bd8f44d4611a6f2aaee82a0e1b5255fdabdc57e34ef134f6edf0fb8bfb0b4b",
+    "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+    "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+    "ttf_news/semantics.py": "f719c02ef7f2c4017d4cc9a2e428befd1f6e6dc104895e6a5776d475ea8f86d3",
+    "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+    "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+    "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+    "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+    "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+    "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+    "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+    "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+    "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+    "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+    "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+    "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+    "ttf_news/translation.py": "d47b232a5f77ea68e2d5bc5d092021e9727e555c6b1dd702922325519982d7c5",
+    "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+    "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+    "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+    "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+    "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987"
+  },
+  "recorded_contract_passed": true,
+  "recorded_result_returned": true,
+  "human_semantic_failed": true,
+  "independent_review_execution_type": "codex_subagent",
+  "field": "close_forecast.basis",
+  "quote": "无可用前一交易日参考价，缺乏独立流量确认，新闻未产生可观测冲击。",
+  "material_error": "The price-forecast basis asserts that the news did not cause an observable impact, despite absent announcement reaction and absent flow confirmation. Completed observable-impact absence is not equivalent to unknown evidence or a qualified weak-transmission judgment.",
+  "independent_reviews": [
+    {
+      "file": "reports/repair_2026-10-20/dismissed_observable_impact_read_only_review_v2_3.json",
+      "sha256": "fbfd08578279830fcdbc6844dda58aeef8481fcb6998b2faddb40d92f6dd246e"
+    },
+    {
+      "file": "reports/repair_2026-10-20/independent_actual_final_output_scope_review_v2_3_partial_3.json",
+      "sha256": "11cb7955bd2b9ad36d8ef5af083e06743295738097b4900ac2b7d1c80417b81e"
+    }
+  ],
+  "status": "open_pending_final_source_rejection_new_actual_terminal_and_review",
+  "source_record_unchanged": true,
+  "raw_result_strict_flag_not_modified": true,
+  "not_correct_prediction": true,
+  "no_model_calls": true,
+  "no_network_calls": true,
+  "no_database_access": true,
+  "no_source_edits": true
+}

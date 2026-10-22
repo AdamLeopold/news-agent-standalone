@@ -1,0 +1,541 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="7" skipped="0" tests="637" time="10.021" timestamp="2026-10-21T10:20:53.995979+08:00" hostname="MacBook-Pro-8.local"><testcase classname="tests.test_production_price_unit_scopes" name="test_actual_fifth_second_is_scoped_epistemic_not_observed_zero" time="0.344" /><testcase classname="tests.test_production_price_unit_scopes" name="test_local_epistemic_physical_clause_allowed[\u622a\u81f3\u5206\u6790\u65f6\u70b9\uff0cGassco Troll\u8ba1\u5212\u7ef4\u62a4\u5c1a\u672a\u5f00\u59cb\uff0c\u672a\u89c1\u5b9e\u9645\u6d41\u91cf\u635f\u5931\u3002]" time="0.076" /><testcase classname="tests.test_production_price_unit_scopes" name="test_local_epistemic_physical_clause_allowed[Gassco Troll\u8ba1\u5212\u5c1a\u672a\u5f00\u59cb\uff0c\u5c1a\u672a\u89c2\u5bdf\u5230\u5b9e\u9645\u6d41\u91cf\u635f\u5931\u3002]" time="0.187" /><testcase classname="tests.test_production_price_unit_scopes" name="test_local_epistemic_physical_clause_allowed[Gassco Troll\u8ba1\u5212\u7ef4\u62a4\u672a\u5f00\u59cb\uff0c\u672a\u786e\u8ba4\u5b9e\u9645\u6d41\u91cf\u635f\u5931\u3002]" time="0.088" /><testcase classname="tests.test_production_price_unit_scopes" name="test_epistemic_prefix_does_not_hide_later_or_global_measured_claim[\u672a\u89c1\u5b9e\u9645\u6d41\u91cf\u635f\u5931\uff0c\u4f46\u5b9e\u9645\u6d41\u91cf\u4fdd\u6301\u4e0d\u53d8\u3002]" time="0.082" /><testcase classname="tests.test_production_price_unit_scopes" name="test_epistemic_prefix_does_not_hide_later_or_global_measured_claim[\u672a\u786e\u8ba4\u5b9e\u9645\u6d41\u91cf\u635f\u5931\uff0c\u4f46\u5b9e\u9645\u6d41\u91cf\u4fdd\u6301\u4e0d\u53d8\u3002]" time="0.078" /><testcase classname="tests.test_production_price_unit_scopes" name="test_epistemic_prefix_does_not_hide_later_or_global_measured_claim[Gassco Troll\u8ba1\u5212\u7ef4\u62a4\u672a\u5f00\u59cb\uff0c\u5b9e\u9645\u6d41\u91cf\u4fdd\u6301\u4e0d\u53d8\u3002]" time="0.076" /><testcase classname="tests.test_production_price_unit_scopes" name="test_epistemic_prefix_does_not_hide_later_or_global_measured_claim[\u672a\u89c1\u5b9e\u9645\u6d41\u91cf\u635f\u5931\uff1b\u5b9e\u9645\u6d41\u91cf\u4fdd\u6301\u4e0d\u53d8\u3002]" time="0.076" /><testcase classname="tests.test_production_price_unit_scopes" name="test_epistemic_prefix_does_not_hide_later_or_global_measured_claim[Gassco Troll\u516c\u544a\u7f3a\u5c11\u6d41\u91cf\u8d44\u6599\uff0c\u56e0\u6b64\u5b9e\u9645\u6d41\u91cf\u4fdd\u6301\u4e0d\u53d8\u3002]" time="0.075" /><testcase classname="tests.test_production_price_unit_scopes" name="test_epistemic_prefix_does_not_hide_later_or_global_measured_claim[Gassco Troll\u8ba1\u5212\u7ef4\u62a4\u672a\u5f00\u59cb\uff0c\u6b27\u6d32\u5b9e\u9645\u6d41\u91cf\u6ca1\u6709\u635f\u5931\u3002]" time="0.074" /><testcase classname="tests.test_production_price_unit_scopes" name="test_future_news_pressure_degree_not_measurement[\u65e0\u663e\u8457\u4f9b\u9700\u51b2\u51fb]" time="0.072" /><testcase classname="tests.test_production_price_unit_scopes" name="test_future_news_pressure_degree_not_measurement[\u6ca1\u6709\u660e\u663e\u4f9b\u5e94\u5f71\u54cd]" time="0.075" /><testcase classname="tests.test_production_price_unit_scopes" name="test_degree_not_future_scope_escape_for_unknown_active_cancelled_ended[active]" time="0.074" /><testcase classname="tests.test_production_price_unit_scopes" name="test_degree_not_future_scope_escape_for_unknown_active_cancelled_ended[dismissed]" time="0.076" /><testcase classname="tests.test_production_price_unit_scopes" name="test_degree_not_future_scope_escape_for_unknown_active_cancelled_ended[elapsed]" time="0.077" /><testcase classname="tests.test_production_price_unit_scopes" name="test_degree_or_future_words_never_hide_explicit_bad_observation[\u6b27\u6d32\u603b\u4f53\u5b9e\u9645\u6d41\u91cf\u65e0\u663e\u8457\u4f9b\u5e94\u5f71\u54cd]" time="0.083" /><testcase classname="tests.test_production_price_unit_scopes" name="test_degree_or_future_words_never_hide_explicit_bad_observation[\u6ca1\u6709\u5b9e\u9645\u6d41\u91cf\u635f\u5931]" time="0.079" /><testcase classname="tests.test_production_price_unit_scopes" name="test_degree_or_future_words_never_hide_explicit_bad_observation[\u7f3a\u4e4f\u5b9e\u9645\u6d41\u91cf\u786e\u8ba4\uff0c\u56e0\u6b64\u65e0\u663e\u8457\u4f9b\u9700\u51b2\u51fb]" time="0.075" /><testcase classname="tests.test_production_price_unit_scopes" name="test_degree_or_future_words_never_hide_explicit_bad_observation[\u65b0\u95fb\u672a\u4ea7\u751f\u53ef\u89c2\u6d4b\u4ef7\u683c\u53cd\u5e94]" time="0.075" /><testcase classname="tests.test_production_price_unit_scopes" name="test_degree_or_future_words_never_hide_explicit_bad_observation[\u622a\u81f3\u76ee\u524d\u65e0\u4ef7\u683c\u53cd\u5e94]" time="0.081" /><testcase classname="tests.test_production_price_unit_scopes" name="test_actual_price_unit_wrong_is_newly_rejected" time="0.076" /><testcase classname="tests.test_production_price_unit_scopes" name="test_unit_spelling_preserved_energy_identity[EUR/MWh]" time="0.066" /><testcase classname="tests.test_production_price_unit_scopes" name="test_unit_spelling_preserved_energy_identity[\u20ac/MWh]" time="0.066" /><testcase classname="tests.test_production_price_unit_scopes" name="test_unit_spelling_preserved_energy_identity[\u6b27\u5143/\u5146\u74e6\u65f6]" time="0.068" /><testcase classname="tests.test_production_price_unit_scopes" name="test_unit_spelling_preserved_energy_identity[EUR per MWh]" time="0.065" /><testcase classname="tests.test_production_price_unit_scopes" name="test_unit_spelling_preserved_energy_identity[\u6b27\u5143/ MWh]" time="0.067" /><testcase classname="tests.test_production_price_unit_scopes" name="test_quote_currency_and_denominator_not_silently_replaced[EUR/mcm]" time="0.068" /><testcase classname="tests.test_production_price_unit_scopes" name="test_quote_currency_and_denominator_not_silently_replaced[EUR/m3]" time="0.067" /><testcase classname="tests.test_production_price_unit_scopes" name="test_quote_currency_and_denominator_not_silently_replaced[\u6b27\u5143/\u767e\u4e07\u7acb\u65b9\u7c73]" time="0.069" /><testcase classname="tests.test_production_price_unit_scopes" name="test_quote_currency_and_denominator_not_silently_replaced[EUR/MW]" time="0.067" /><testcase classname="tests.test_production_price_unit_scopes" name="test_quote_currency_and_denominator_not_silently_replaced[USD/MWh]" time="0.065" /><testcase classname="tests.test_production_price_unit_scopes" name="test_quote_currency_and_denominator_not_silently_replaced[USD/MMBtu]" time="0.067" /><testcase classname="tests.test_production_price_unit_scopes" name="test_nonprice_quantity_or_unit_warning_unchanged[\u8bbe\u65bd\u516c\u544a\u4e0d\u53ef\u7528\u5bb9\u91cf13.0mcm/d\uff0c\u82e5\u4f9b\u7ed9\u98ce\u9669\u6269\u5927\u5219\u5f71\u54cd\u6c14\u4ef7\u3002]" time="0.064" /><testcase classname="tests.test_production_price_unit_scopes" name="test_nonprice_quantity_or_unit_warning_unchanged[\u9879\u76ee\u5408\u540c\u91d1\u989d200M EUR\uff0c\u4e3a\u957f\u671f\u5efa\u8bbe\u652f\u51fa\u3002]" time="0.066" /><testcase classname="tests.test_production_price_unit_scopes" name="test_nonprice_quantity_or_unit_warning_unchanged[TTF\u53c2\u8003\u4ef7\u683c\u4e3a86.795 EUR/MWh\uff0c\u4f9b\u5e94\u516c\u544a\u5bb9\u91cf\u4e3a13mcm/d\u3002]" time="0.067" /><testcase classname="tests.test_production_price_unit_scopes" name="test_nonprice_quantity_or_unit_warning_unchanged[TTF\u62a5\u4ef7\u5355\u4f4d\u4e0d\u662f1 EUR/mcm\uff0c\u5e94\u4fdd\u6301EUR/MWh\u3002]" time="0.065" /><testcase classname="tests.test_production_price_unit_scopes" name="test_filtered_reference_does_not_recover_future_unit" time="0.000" /><testcase classname="tests.test_production_price_unit_scopes" name="test_all_fourteen_known_bad_original_bodies_still_rejected[0]" time="0.007" /><testcase classname="tests.test_production_price_unit_scopes" name="test_all_fourteen_known_bad_original_bodies_still_rejected[1]" time="0.007" /><testcase classname="tests.test_production_price_unit_scopes" name="test_all_fourteen_known_bad_original_bodies_still_rejected[2]" time="0.008" /><testcase classname="tests.test_production_price_unit_scopes" name="test_all_fourteen_known_bad_original_bodies_still_rejected[3]" time="0.007" /><testcase classname="tests.test_production_price_unit_scopes" name="test_all_fourteen_known_bad_original_bodies_still_rejected[4]" time="0.093" /><testcase classname="tests.test_production_price_unit_scopes" name="test_all_fourteen_known_bad_original_bodies_still_rejected[5]" time="0.008" /><testcase classname="tests.test_production_price_unit_scopes" name="test_all_fourteen_known_bad_original_bodies_still_rejected[6]" time="0.008" /><testcase classname="tests.test_production_price_unit_scopes" name="test_all_fourteen_known_bad_original_bodies_still_rejected[7]" time="0.095" /><testcase classname="tests.test_production_price_unit_scopes" name="test_all_fourteen_known_bad_original_bodies_still_rejected[8]" time="0.082" /><testcase classname="tests.test_production_price_unit_scopes" name="test_all_fourteen_known_bad_original_bodies_still_rejected[9]" time="0.089" /><testcase classname="tests.test_production_price_unit_scopes" name="test_all_fourteen_known_bad_original_bodies_still_rejected[10]" time="0.110" /><testcase classname="tests.test_production_price_unit_scopes" name="test_all_fourteen_known_bad_original_bodies_still_rejected[11]" time="0.007" /><testcase classname="tests.test_production_price_unit_scopes" name="test_all_fourteen_known_bad_original_bodies_still_rejected[12]" time="0.007" /><testcase classname="tests.test_production_price_unit_scopes" name="test_all_fourteen_known_bad_original_bodies_still_rejected[13]" time="0.007" /><testcase classname="tests.test_production_price_unit_scopes" name="test_unit_recovery_never_borrows_filtered_changed_or_future_quote[change0]" time="0.067"><failure message="ValueError: close_forecast.basis:TTF报价/参考变动单位必须保留输入EUR/mwh，不能写成EUR/mcm；能源报价不是体积容量，未经已给换算依据不得替换货币或分母。不改变预测方向">live = ({'as_of': '2026-10-21T01:45:08.003186+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:...限→价格上行'], 'negation_or_reversal': [], 'priced_in_comment': 'price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格', ...}, ...})
+change = {'observed_at': '2026-10-21T02:00:00Z'}
+
+    @pytest.mark.parametrize('change',[
+     {'observed_at':'2026-10-21T02:00:00Z'},
+     {'available_at':'2026-10-21T02:00:00Z'},
+     {'fetched_at':'2026-10-21T02:00:00Z'},
+     {'contract':'another contract'},
+     {'value':999.0},
+    ])
+    def test_unit_recovery_never_borrows_filtered_changed_or_future_quote(live,change):
+     ctx,_=live;p,_=prepare_context(ctx)
+     changed=copy.deepcopy(ctx);changed['price_reference']['intraday'].update(change)
+     body={'close_forecast':{'basis':'参考价上涨1.733 EUR/mcm'}}
+     # The candidate has no authority to reintroduce a discarded unit/quote.
+&gt;    candidate._check_ttf_price_unit_identity(body,changed,p)
+
+tests/test_production_price_unit_scopes.py:153: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+result = {'close_forecast': {'basis': '参考价上涨1.733 EUR/mcm'}}
+context = {'as_of': '2026-10-21T01:45:08.003186+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1....3 mcm/d; available: 124.3; unavailable: 13.0. Reason: Yearly maintenance. Remarks: Extended maintenance.', ...}], ...}
+prepared = {'as_of': '2026-10-21T01:45:08.003186+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1... 'facts': 'Reason: Yearly maintenance. Remarks: Extended maintenance.', 'time': '2026-10-20T20:13:18+00:00', ...}, ...}
+
+    def _check_ttf_price_unit_identity(result: dict, context: dict, prepared: dict) -&gt; None:
+        """An observed TTF price/delta keeps its supplied monetary-energy unit."""
+        reference=_known_price_reference(context,prepared)
+        quote_rows=[reference,reference.get('intraday') or {},reference.get('market_baseline') or {}]
+        units={identity for row in quote_rows if isinstance(row,dict) and (identity:=_price_unit_identity(row.get('unit','')))}
+        # Compression may omit unit from a retained observation. Its immutable
+        # source unit is usable only when the exact same known quote survived,
+        # never by recovering a filtered/future quote from the original snapshot.
+        original=(context.get('price_reference') or {}).get('intraday') or {}
+        retained=reference.get('intraday') or {}
+        now=_moment(context.get('as_of') or prepared.get('as_of'))
+        same_quote=(isinstance(original,dict) and isinstance(retained,dict)
+            and original.get('contract') and all(original.get(key)==retained.get(key)
+                for key in ('contract','value','observed_at','available_at'))
+            and retained.get('value') is not None and retained.get('observed_at')
+            and _known_source(original,now)
+            and not any((stamp:=_moment(original.get(key))) is not None and now is not None and stamp&gt;now
+                        for key in ('fetched_at','known_at','price_known_at')))
+        if same_quote and (identity:=_price_unit_identity(original.get('unit',''))):units.add(identity)
+        # Only apply an identity contract when the supplied quote has an
+        # unambiguous unit. Missing/filtered quotes do not invent a default unit.
+        if len(units)!=1:return
+        expected=next(iter(units))
+        amount_unit=re.compile(r"(?P&lt;amount&gt;[+-]?\d+(?:\.\d+)?)\s*(?P&lt;unit&gt;(?:EUR|USD|GBP|€|£|\$|欧元|美元|英镑)\s*(?:/|per)\s*(?:MWh|kWh|MMBtu|therm|mcm|m3|m³|MW|百万立方米|立方米|兆瓦时|千瓦时))(?![A-Za-z0-9])",re.I)
+        instrument=re.compile(r'(?P&lt;ttf&gt;TTF|荷兰天然气)|(?P&lt;foreign&gt;JKM|NBP|Henry\s+Hub|亨利港|英国天然气)',re.I)
+        cards={row.get('id'):row for row in prepared.get('window_news',[]) if isinstance(row,dict) and row.get('id')}
+        cards['N0']=context.get('current_news') or prepared.get('current_news') or {}
+        for alias,row in list(cards.items()):
+            if row.get('same_as_current_news_id') in cards:cards[alias]=cards[row['same_as_current_news_id']]
+        known=_current_source_rows(context,prepared)
+        quote_values=[reference.get('previous_price'),(reference.get('intraday') or {}).get('value')]
+        quote_values.extend((reference.get('market_baseline') or {}).get(k) for k in ('previous_price','latest_price','observed_delta'))
+        def source_rate_supported(source_topic,amount,identity,clause):
+            aliases=re.findall(r'(?&lt;![A-Za-z0-9_])N\d+(?![A-Za-z0-9_])',clause)
+            sources=[cards[a] for a in aliases if a in cards] if aliases else known
+            for source in sources:
+                if not _known_source(source,now):continue
+                for source_clause in _clauses(_source_text(source)):
+                    if not re.search(source_topic,source_clause,re.I):continue
+                    for supplied in amount_unit.finditer(source_clause):
+                        if (_price_unit_identity(supplied['unit'])==identity and abs(float(supplied['amount'])-amount)&lt;1e-9
+                                and not re.search(r'若|如果|假设|预计|预期|可能|未提供|缺少|无法确认|whether|\bif\b|expected|forecast',source_clause[:supplied.start()],re.I)):
+                            return True
+            return False
+        for path,text in _strings(result):
+            for clause in _clauses(text):
+                for match in amount_unit.finditer(clause):
+                    local=re.split(r'[，,；;]|→|-&gt;|但是|但',clause[:match.start()])[-1]
+                    instruments=list(instrument.finditer(local))
+                    scope=instruments[-1] if instruments else None
+                    observed=_price_unit_identity(match['unit'])
+                    if observed is None or observed==expected:continue
+                    cost_topic=r'transport(?:ation)?\s+(?:tariff|cost)|pipeline\s+tariff|tariff|输气(?:成本|费用|费率|资费)|运输(?:成本|费用|费率)|管道(?:成本|费用|费率|资费)'
+                    costs=list(re.finditer(cost_topic,local,re.I))
+                    price_nouns=list(re.finditer(r'气价|价格|报价|结算价|收盘价|price|quote',local,re.I))
+                    cost_object=bool(costs and (not price_nouns or costs[-1].start()&gt;price_nouns[-1].start()))
+                    if cost_object and source_rate_supported(cost_topic,float(match['amount']),observed,clause):
+                        continue  # A sourced transport cost is not a TTF quote.
+                    # A distinct quoted market retains its own unit, backed by
+                    # that cited/known instrument's observation, not the TTF unit.
+                    if scope is not None and scope['foreign']:
+                        if (source_rate_supported(re.escape(scope['foreign']),float(match['amount']),observed,clause)
+                                or re.search(r'若|如果|假设|一旦|\bif\b',local,re.I)):
+                            continue
+                        raise ValueError(f'{path}:不同市场{scope["foreign"]}报价{match.group()}须有该市场截至as_of已知的同单位来源，不能借TTF报价补其价格或单位；同句后续TTF价格仍须保留输入能源单位')
+                    exact_quote_amount=any(isinstance(value,(int,float)) and not isinstance(value,bool)
+                        and abs(float(match['amount'])-value)&lt;1e-9 for value in quote_values)
+                    price_scope=(bool(scope is not None and scope['ttf']) or exact_quote_amount
+                        or bool(re.search(r'(?:本|该|此)合约|参考价|市场基准|收盘(?:价)?|结算(?:价)?|价格(?:上升|上涨|下降|下跌)|TTF|气价',local,re.I)))
+                    if not price_scope:continue
+                    # A warning not to substitute units is not a price assertion.
+                    if re.search(r'(?:单位|计量口径)(?:并非|不是|不应为|不能为)\s*$|(?:不能|不得)(?:写成|当作|改成|换成)\s*$',local):continue
+&gt;                   raise ValueError(f'{path}:TTF报价/参考变动单位必须保留输入{expected[0].upper()}/{expected[1]}，不能写成{match["unit"]}；能源报价不是体积容量，未经已给换算依据不得替换货币或分母。不改变预测方向')
+E                   ValueError: close_forecast.basis:TTF报价/参考变动单位必须保留输入EUR/mwh，不能写成EUR/mcm；能源报价不是体积容量，未经已给换算依据不得替换货币或分母。不改变预测方向
+
+ttf_news/semantics.py:2097: ValueError</failure></testcase><testcase classname="tests.test_production_price_unit_scopes" name="test_unit_recovery_never_borrows_filtered_changed_or_future_quote[change1]" time="0.070"><failure message="ValueError: close_forecast.basis:TTF报价/参考变动单位必须保留输入EUR/mwh，不能写成EUR/mcm；能源报价不是体积容量，未经已给换算依据不得替换货币或分母。不改变预测方向">live = ({'as_of': '2026-10-21T01:45:08.003186+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:...限→价格上行'], 'negation_or_reversal': [], 'priced_in_comment': 'price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格', ...}, ...})
+change = {'available_at': '2026-10-21T02:00:00Z'}
+
+    @pytest.mark.parametrize('change',[
+     {'observed_at':'2026-10-21T02:00:00Z'},
+     {'available_at':'2026-10-21T02:00:00Z'},
+     {'fetched_at':'2026-10-21T02:00:00Z'},
+     {'contract':'another contract'},
+     {'value':999.0},
+    ])
+    def test_unit_recovery_never_borrows_filtered_changed_or_future_quote(live,change):
+     ctx,_=live;p,_=prepare_context(ctx)
+     changed=copy.deepcopy(ctx);changed['price_reference']['intraday'].update(change)
+     body={'close_forecast':{'basis':'参考价上涨1.733 EUR/mcm'}}
+     # The candidate has no authority to reintroduce a discarded unit/quote.
+&gt;    candidate._check_ttf_price_unit_identity(body,changed,p)
+
+tests/test_production_price_unit_scopes.py:153: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+result = {'close_forecast': {'basis': '参考价上涨1.733 EUR/mcm'}}
+context = {'as_of': '2026-10-21T01:45:08.003186+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1....3 mcm/d; available: 124.3; unavailable: 13.0. Reason: Yearly maintenance. Remarks: Extended maintenance.', ...}], ...}
+prepared = {'as_of': '2026-10-21T01:45:08.003186+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1... 'facts': 'Reason: Yearly maintenance. Remarks: Extended maintenance.', 'time': '2026-10-20T20:13:18+00:00', ...}, ...}
+
+    def _check_ttf_price_unit_identity(result: dict, context: dict, prepared: dict) -&gt; None:
+        """An observed TTF price/delta keeps its supplied monetary-energy unit."""
+        reference=_known_price_reference(context,prepared)
+        quote_rows=[reference,reference.get('intraday') or {},reference.get('market_baseline') or {}]
+        units={identity for row in quote_rows if isinstance(row,dict) and (identity:=_price_unit_identity(row.get('unit','')))}
+        # Compression may omit unit from a retained observation. Its immutable
+        # source unit is usable only when the exact same known quote survived,
+        # never by recovering a filtered/future quote from the original snapshot.
+        original=(context.get('price_reference') or {}).get('intraday') or {}
+        retained=reference.get('intraday') or {}
+        now=_moment(context.get('as_of') or prepared.get('as_of'))
+        same_quote=(isinstance(original,dict) and isinstance(retained,dict)
+            and original.get('contract') and all(original.get(key)==retained.get(key)
+                for key in ('contract','value','observed_at','available_at'))
+            and retained.get('value') is not None and retained.get('observed_at')
+            and _known_source(original,now)
+            and not any((stamp:=_moment(original.get(key))) is not None and now is not None and stamp&gt;now
+                        for key in ('fetched_at','known_at','price_known_at')))
+        if same_quote and (identity:=_price_unit_identity(original.get('unit',''))):units.add(identity)
+        # Only apply an identity contract when the supplied quote has an
+        # unambiguous unit. Missing/filtered quotes do not invent a default unit.
+        if len(units)!=1:return
+        expected=next(iter(units))
+        amount_unit=re.compile(r"(?P&lt;amount&gt;[+-]?\d+(?:\.\d+)?)\s*(?P&lt;unit&gt;(?:EUR|USD|GBP|€|£|\$|欧元|美元|英镑)\s*(?:/|per)\s*(?:MWh|kWh|MMBtu|therm|mcm|m3|m³|MW|百万立方米|立方米|兆瓦时|千瓦时))(?![A-Za-z0-9])",re.I)
+        instrument=re.compile(r'(?P&lt;ttf&gt;TTF|荷兰天然气)|(?P&lt;foreign&gt;JKM|NBP|Henry\s+Hub|亨利港|英国天然气)',re.I)
+        cards={row.get('id'):row for row in prepared.get('window_news',[]) if isinstance(row,dict) and row.get('id')}
+        cards['N0']=context.get('current_news') or prepared.get('current_news') or {}
+        for alias,row in list(cards.items()):
+            if row.get('same_as_current_news_id') in cards:cards[alias]=cards[row['same_as_current_news_id']]
+        known=_current_source_rows(context,prepared)
+        quote_values=[reference.get('previous_price'),(reference.get('intraday') or {}).get('value')]
+        quote_values.extend((reference.get('market_baseline') or {}).get(k) for k in ('previous_price','latest_price','observed_delta'))
+        def source_rate_supported(source_topic,amount,identity,clause):
+            aliases=re.findall(r'(?&lt;![A-Za-z0-9_])N\d+(?![A-Za-z0-9_])',clause)
+            sources=[cards[a] for a in aliases if a in cards] if aliases else known
+            for source in sources:
+                if not _known_source(source,now):continue
+                for source_clause in _clauses(_source_text(source)):
+                    if not re.search(source_topic,source_clause,re.I):continue
+                    for supplied in amount_unit.finditer(source_clause):
+                        if (_price_unit_identity(supplied['unit'])==identity and abs(float(supplied['amount'])-amount)&lt;1e-9
+                                and not re.search(r'若|如果|假设|预计|预期|可能|未提供|缺少|无法确认|whether|\bif\b|expected|forecast',source_clause[:supplied.start()],re.I)):
+                            return True
+            return False
+        for path,text in _strings(result):
+            for clause in _clauses(text):
+                for match in amount_unit.finditer(clause):
+                    local=re.split(r'[，,；;]|→|-&gt;|但是|但',clause[:match.start()])[-1]
+                    instruments=list(instrument.finditer(local))
+                    scope=instruments[-1] if instruments else None
+                    observed=_price_unit_identity(match['unit'])
+                    if observed is None or observed==expected:continue
+                    cost_topic=r'transport(?:ation)?\s+(?:tariff|cost)|pipeline\s+tariff|tariff|输气(?:成本|费用|费率|资费)|运输(?:成本|费用|费率)|管道(?:成本|费用|费率|资费)'
+                    costs=list(re.finditer(cost_topic,local,re.I))
+                    price_nouns=list(re.finditer(r'气价|价格|报价|结算价|收盘价|price|quote',local,re.I))
+                    cost_object=bool(costs and (not price_nouns or costs[-1].start()&gt;price_nouns[-1].start()))
+                    if cost_object and source_rate_supported(cost_topic,float(match['amount']),observed,clause):
+                        continue  # A sourced transport cost is not a TTF quote.
+                    # A distinct quoted market retains its own unit, backed by
+                    # that cited/known instrument's observation, not the TTF unit.
+                    if scope is not None and scope['foreign']:
+                        if (source_rate_supported(re.escape(scope['foreign']),float(match['amount']),observed,clause)
+                                or re.search(r'若|如果|假设|一旦|\bif\b',local,re.I)):
+                            continue
+                        raise ValueError(f'{path}:不同市场{scope["foreign"]}报价{match.group()}须有该市场截至as_of已知的同单位来源，不能借TTF报价补其价格或单位；同句后续TTF价格仍须保留输入能源单位')
+                    exact_quote_amount=any(isinstance(value,(int,float)) and not isinstance(value,bool)
+                        and abs(float(match['amount'])-value)&lt;1e-9 for value in quote_values)
+                    price_scope=(bool(scope is not None and scope['ttf']) or exact_quote_amount
+                        or bool(re.search(r'(?:本|该|此)合约|参考价|市场基准|收盘(?:价)?|结算(?:价)?|价格(?:上升|上涨|下降|下跌)|TTF|气价',local,re.I)))
+                    if not price_scope:continue
+                    # A warning not to substitute units is not a price assertion.
+                    if re.search(r'(?:单位|计量口径)(?:并非|不是|不应为|不能为)\s*$|(?:不能|不得)(?:写成|当作|改成|换成)\s*$',local):continue
+&gt;                   raise ValueError(f'{path}:TTF报价/参考变动单位必须保留输入{expected[0].upper()}/{expected[1]}，不能写成{match["unit"]}；能源报价不是体积容量，未经已给换算依据不得替换货币或分母。不改变预测方向')
+E                   ValueError: close_forecast.basis:TTF报价/参考变动单位必须保留输入EUR/mwh，不能写成EUR/mcm；能源报价不是体积容量，未经已给换算依据不得替换货币或分母。不改变预测方向
+
+ttf_news/semantics.py:2097: ValueError</failure></testcase><testcase classname="tests.test_production_price_unit_scopes" name="test_unit_recovery_never_borrows_filtered_changed_or_future_quote[change2]" time="0.068"><failure message="ValueError: close_forecast.basis:TTF报价/参考变动单位必须保留输入EUR/mwh，不能写成EUR/mcm；能源报价不是体积容量，未经已给换算依据不得替换货币或分母。不改变预测方向">live = ({'as_of': '2026-10-21T01:45:08.003186+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:...限→价格上行'], 'negation_or_reversal': [], 'priced_in_comment': 'price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格', ...}, ...})
+change = {'fetched_at': '2026-10-21T02:00:00Z'}
+
+    @pytest.mark.parametrize('change',[
+     {'observed_at':'2026-10-21T02:00:00Z'},
+     {'available_at':'2026-10-21T02:00:00Z'},
+     {'fetched_at':'2026-10-21T02:00:00Z'},
+     {'contract':'another contract'},
+     {'value':999.0},
+    ])
+    def test_unit_recovery_never_borrows_filtered_changed_or_future_quote(live,change):
+     ctx,_=live;p,_=prepare_context(ctx)
+     changed=copy.deepcopy(ctx);changed['price_reference']['intraday'].update(change)
+     body={'close_forecast':{'basis':'参考价上涨1.733 EUR/mcm'}}
+     # The candidate has no authority to reintroduce a discarded unit/quote.
+&gt;    candidate._check_ttf_price_unit_identity(body,changed,p)
+
+tests/test_production_price_unit_scopes.py:153: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+result = {'close_forecast': {'basis': '参考价上涨1.733 EUR/mcm'}}
+context = {'as_of': '2026-10-21T01:45:08.003186+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1....3 mcm/d; available: 124.3; unavailable: 13.0. Reason: Yearly maintenance. Remarks: Extended maintenance.', ...}], ...}
+prepared = {'as_of': '2026-10-21T01:45:08.003186+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1... 'facts': 'Reason: Yearly maintenance. Remarks: Extended maintenance.', 'time': '2026-10-20T20:13:18+00:00', ...}, ...}
+
+    def _check_ttf_price_unit_identity(result: dict, context: dict, prepared: dict) -&gt; None:
+        """An observed TTF price/delta keeps its supplied monetary-energy unit."""
+        reference=_known_price_reference(context,prepared)
+        quote_rows=[reference,reference.get('intraday') or {},reference.get('market_baseline') or {}]
+        units={identity for row in quote_rows if isinstance(row,dict) and (identity:=_price_unit_identity(row.get('unit','')))}
+        # Compression may omit unit from a retained observation. Its immutable
+        # source unit is usable only when the exact same known quote survived,
+        # never by recovering a filtered/future quote from the original snapshot.
+        original=(context.get('price_reference') or {}).get('intraday') or {}
+        retained=reference.get('intraday') or {}
+        now=_moment(context.get('as_of') or prepared.get('as_of'))
+        same_quote=(isinstance(original,dict) and isinstance(retained,dict)
+            and original.get('contract') and all(original.get(key)==retained.get(key)
+                for key in ('contract','value','observed_at','available_at'))
+            and retained.get('value') is not None and retained.get('observed_at')
+            and _known_source(original,now)
+            and not any((stamp:=_moment(original.get(key))) is not None and now is not None and stamp&gt;now
+                        for key in ('fetched_at','known_at','price_known_at')))
+        if same_quote and (identity:=_price_unit_identity(original.get('unit',''))):units.add(identity)
+        # Only apply an identity contract when the supplied quote has an
+        # unambiguous unit. Missing/filtered quotes do not invent a default unit.
+        if len(units)!=1:return
+        expected=next(iter(units))
+        amount_unit=re.compile(r"(?P&lt;amount&gt;[+-]?\d+(?:\.\d+)?)\s*(?P&lt;unit&gt;(?:EUR|USD|GBP|€|£|\$|欧元|美元|英镑)\s*(?:/|per)\s*(?:MWh|kWh|MMBtu|therm|mcm|m3|m³|MW|百万立方米|立方米|兆瓦时|千瓦时))(?![A-Za-z0-9])",re.I)
+        instrument=re.compile(r'(?P&lt;ttf&gt;TTF|荷兰天然气)|(?P&lt;foreign&gt;JKM|NBP|Henry\s+Hub|亨利港|英国天然气)',re.I)
+        cards={row.get('id'):row for row in prepared.get('window_news',[]) if isinstance(row,dict) and row.get('id')}
+        cards['N0']=context.get('current_news') or prepared.get('current_news') or {}
+        for alias,row in list(cards.items()):
+            if row.get('same_as_current_news_id') in cards:cards[alias]=cards[row['same_as_current_news_id']]
+        known=_current_source_rows(context,prepared)
+        quote_values=[reference.get('previous_price'),(reference.get('intraday') or {}).get('value')]
+        quote_values.extend((reference.get('market_baseline') or {}).get(k) for k in ('previous_price','latest_price','observed_delta'))
+        def source_rate_supported(source_topic,amount,identity,clause):
+            aliases=re.findall(r'(?&lt;![A-Za-z0-9_])N\d+(?![A-Za-z0-9_])',clause)
+            sources=[cards[a] for a in aliases if a in cards] if aliases else known
+            for source in sources:
+                if not _known_source(source,now):continue
+                for source_clause in _clauses(_source_text(source)):
+                    if not re.search(source_topic,source_clause,re.I):continue
+                    for supplied in amount_unit.finditer(source_clause):
+                        if (_price_unit_identity(supplied['unit'])==identity and abs(float(supplied['amount'])-amount)&lt;1e-9
+                                and not re.search(r'若|如果|假设|预计|预期|可能|未提供|缺少|无法确认|whether|\bif\b|expected|forecast',source_clause[:supplied.start()],re.I)):
+                            return True
+            return False
+        for path,text in _strings(result):
+            for clause in _clauses(text):
+                for match in amount_unit.finditer(clause):
+                    local=re.split(r'[，,；;]|→|-&gt;|但是|但',clause[:match.start()])[-1]
+                    instruments=list(instrument.finditer(local))
+                    scope=instruments[-1] if instruments else None
+                    observed=_price_unit_identity(match['unit'])
+                    if observed is None or observed==expected:continue
+                    cost_topic=r'transport(?:ation)?\s+(?:tariff|cost)|pipeline\s+tariff|tariff|输气(?:成本|费用|费率|资费)|运输(?:成本|费用|费率)|管道(?:成本|费用|费率|资费)'
+                    costs=list(re.finditer(cost_topic,local,re.I))
+                    price_nouns=list(re.finditer(r'气价|价格|报价|结算价|收盘价|price|quote',local,re.I))
+                    cost_object=bool(costs and (not price_nouns or costs[-1].start()&gt;price_nouns[-1].start()))
+                    if cost_object and source_rate_supported(cost_topic,float(match['amount']),observed,clause):
+                        continue  # A sourced transport cost is not a TTF quote.
+                    # A distinct quoted market retains its own unit, backed by
+                    # that cited/known instrument's observation, not the TTF unit.
+                    if scope is not None and scope['foreign']:
+                        if (source_rate_supported(re.escape(scope['foreign']),float(match['amount']),observed,clause)
+                                or re.search(r'若|如果|假设|一旦|\bif\b',local,re.I)):
+                            continue
+                        raise ValueError(f'{path}:不同市场{scope["foreign"]}报价{match.group()}须有该市场截至as_of已知的同单位来源，不能借TTF报价补其价格或单位；同句后续TTF价格仍须保留输入能源单位')
+                    exact_quote_amount=any(isinstance(value,(int,float)) and not isinstance(value,bool)
+                        and abs(float(match['amount'])-value)&lt;1e-9 for value in quote_values)
+                    price_scope=(bool(scope is not None and scope['ttf']) or exact_quote_amount
+                        or bool(re.search(r'(?:本|该|此)合约|参考价|市场基准|收盘(?:价)?|结算(?:价)?|价格(?:上升|上涨|下降|下跌)|TTF|气价',local,re.I)))
+                    if not price_scope:continue
+                    # A warning not to substitute units is not a price assertion.
+                    if re.search(r'(?:单位|计量口径)(?:并非|不是|不应为|不能为)\s*$|(?:不能|不得)(?:写成|当作|改成|换成)\s*$',local):continue
+&gt;                   raise ValueError(f'{path}:TTF报价/参考变动单位必须保留输入{expected[0].upper()}/{expected[1]}，不能写成{match["unit"]}；能源报价不是体积容量，未经已给换算依据不得替换货币或分母。不改变预测方向')
+E                   ValueError: close_forecast.basis:TTF报价/参考变动单位必须保留输入EUR/mwh，不能写成EUR/mcm；能源报价不是体积容量，未经已给换算依据不得替换货币或分母。不改变预测方向
+
+ttf_news/semantics.py:2097: ValueError</failure></testcase><testcase classname="tests.test_production_price_unit_scopes" name="test_unit_recovery_never_borrows_filtered_changed_or_future_quote[change3]" time="0.069"><failure message="ValueError: close_forecast.basis:TTF报价/参考变动单位必须保留输入EUR/mwh，不能写成EUR/mcm；能源报价不是体积容量，未经已给换算依据不得替换货币或分母。不改变预测方向">live = ({'as_of': '2026-10-21T01:45:08.003186+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:...限→价格上行'], 'negation_or_reversal': [], 'priced_in_comment': 'price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格', ...}, ...})
+change = {'contract': 'another contract'}
+
+    @pytest.mark.parametrize('change',[
+     {'observed_at':'2026-10-21T02:00:00Z'},
+     {'available_at':'2026-10-21T02:00:00Z'},
+     {'fetched_at':'2026-10-21T02:00:00Z'},
+     {'contract':'another contract'},
+     {'value':999.0},
+    ])
+    def test_unit_recovery_never_borrows_filtered_changed_or_future_quote(live,change):
+     ctx,_=live;p,_=prepare_context(ctx)
+     changed=copy.deepcopy(ctx);changed['price_reference']['intraday'].update(change)
+     body={'close_forecast':{'basis':'参考价上涨1.733 EUR/mcm'}}
+     # The candidate has no authority to reintroduce a discarded unit/quote.
+&gt;    candidate._check_ttf_price_unit_identity(body,changed,p)
+
+tests/test_production_price_unit_scopes.py:153: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+result = {'close_forecast': {'basis': '参考价上涨1.733 EUR/mcm'}}
+context = {'as_of': '2026-10-21T01:45:08.003186+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1....3 mcm/d; available: 124.3; unavailable: 13.0. Reason: Yearly maintenance. Remarks: Extended maintenance.', ...}], ...}
+prepared = {'as_of': '2026-10-21T01:45:08.003186+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1... 'facts': 'Reason: Yearly maintenance. Remarks: Extended maintenance.', 'time': '2026-10-20T20:13:18+00:00', ...}, ...}
+
+    def _check_ttf_price_unit_identity(result: dict, context: dict, prepared: dict) -&gt; None:
+        """An observed TTF price/delta keeps its supplied monetary-energy unit."""
+        reference=_known_price_reference(context,prepared)
+        quote_rows=[reference,reference.get('intraday') or {},reference.get('market_baseline') or {}]
+        units={identity for row in quote_rows if isinstance(row,dict) and (identity:=_price_unit_identity(row.get('unit','')))}
+        # Compression may omit unit from a retained observation. Its immutable
+        # source unit is usable only when the exact same known quote survived,
+        # never by recovering a filtered/future quote from the original snapshot.
+        original=(context.get('price_reference') or {}).get('intraday') or {}
+        retained=reference.get('intraday') or {}
+        now=_moment(context.get('as_of') or prepared.get('as_of'))
+        same_quote=(isinstance(original,dict) and isinstance(retained,dict)
+            and original.get('contract') and all(original.get(key)==retained.get(key)
+                for key in ('contract','value','observed_at','available_at'))
+            and retained.get('value') is not None and retained.get('observed_at')
+            and _known_source(original,now)
+            and not any((stamp:=_moment(original.get(key))) is not None and now is not None and stamp&gt;now
+                        for key in ('fetched_at','known_at','price_known_at')))
+        if same_quote and (identity:=_price_unit_identity(original.get('unit',''))):units.add(identity)
+        # Only apply an identity contract when the supplied quote has an
+        # unambiguous unit. Missing/filtered quotes do not invent a default unit.
+        if len(units)!=1:return
+        expected=next(iter(units))
+        amount_unit=re.compile(r"(?P&lt;amount&gt;[+-]?\d+(?:\.\d+)?)\s*(?P&lt;unit&gt;(?:EUR|USD|GBP|€|£|\$|欧元|美元|英镑)\s*(?:/|per)\s*(?:MWh|kWh|MMBtu|therm|mcm|m3|m³|MW|百万立方米|立方米|兆瓦时|千瓦时))(?![A-Za-z0-9])",re.I)
+        instrument=re.compile(r'(?P&lt;ttf&gt;TTF|荷兰天然气)|(?P&lt;foreign&gt;JKM|NBP|Henry\s+Hub|亨利港|英国天然气)',re.I)
+        cards={row.get('id'):row for row in prepared.get('window_news',[]) if isinstance(row,dict) and row.get('id')}
+        cards['N0']=context.get('current_news') or prepared.get('current_news') or {}
+        for alias,row in list(cards.items()):
+            if row.get('same_as_current_news_id') in cards:cards[alias]=cards[row['same_as_current_news_id']]
+        known=_current_source_rows(context,prepared)
+        quote_values=[reference.get('previous_price'),(reference.get('intraday') or {}).get('value')]
+        quote_values.extend((reference.get('market_baseline') or {}).get(k) for k in ('previous_price','latest_price','observed_delta'))
+        def source_rate_supported(source_topic,amount,identity,clause):
+            aliases=re.findall(r'(?&lt;![A-Za-z0-9_])N\d+(?![A-Za-z0-9_])',clause)
+            sources=[cards[a] for a in aliases if a in cards] if aliases else known
+            for source in sources:
+                if not _known_source(source,now):continue
+                for source_clause in _clauses(_source_text(source)):
+                    if not re.search(source_topic,source_clause,re.I):continue
+                    for supplied in amount_unit.finditer(source_clause):
+                        if (_price_unit_identity(supplied['unit'])==identity and abs(float(supplied['amount'])-amount)&lt;1e-9
+                                and not re.search(r'若|如果|假设|预计|预期|可能|未提供|缺少|无法确认|whether|\bif\b|expected|forecast',source_clause[:supplied.start()],re.I)):
+                            return True
+            return False
+        for path,text in _strings(result):
+            for clause in _clauses(text):
+                for match in amount_unit.finditer(clause):
+                    local=re.split(r'[，,；;]|→|-&gt;|但是|但',clause[:match.start()])[-1]
+                    instruments=list(instrument.finditer(local))
+                    scope=instruments[-1] if instruments else None
+                    observed=_price_unit_identity(match['unit'])
+                    if observed is None or observed==expected:continue
+                    cost_topic=r'transport(?:ation)?\s+(?:tariff|cost)|pipeline\s+tariff|tariff|输气(?:成本|费用|费率|资费)|运输(?:成本|费用|费率)|管道(?:成本|费用|费率|资费)'
+                    costs=list(re.finditer(cost_topic,local,re.I))
+                    price_nouns=list(re.finditer(r'气价|价格|报价|结算价|收盘价|price|quote',local,re.I))
+                    cost_object=bool(costs and (not price_nouns or costs[-1].start()&gt;price_nouns[-1].start()))
+                    if cost_object and source_rate_supported(cost_topic,float(match['amount']),observed,clause):
+                        continue  # A sourced transport cost is not a TTF quote.
+                    # A distinct quoted market retains its own unit, backed by
+                    # that cited/known instrument's observation, not the TTF unit.
+                    if scope is not None and scope['foreign']:
+                        if (source_rate_supported(re.escape(scope['foreign']),float(match['amount']),observed,clause)
+                                or re.search(r'若|如果|假设|一旦|\bif\b',local,re.I)):
+                            continue
+                        raise ValueError(f'{path}:不同市场{scope["foreign"]}报价{match.group()}须有该市场截至as_of已知的同单位来源，不能借TTF报价补其价格或单位；同句后续TTF价格仍须保留输入能源单位')
+                    exact_quote_amount=any(isinstance(value,(int,float)) and not isinstance(value,bool)
+                        and abs(float(match['amount'])-value)&lt;1e-9 for value in quote_values)
+                    price_scope=(bool(scope is not None and scope['ttf']) or exact_quote_amount
+                        or bool(re.search(r'(?:本|该|此)合约|参考价|市场基准|收盘(?:价)?|结算(?:价)?|价格(?:上升|上涨|下降|下跌)|TTF|气价',local,re.I)))
+                    if not price_scope:continue
+                    # A warning not to substitute units is not a price assertion.
+                    if re.search(r'(?:单位|计量口径)(?:并非|不是|不应为|不能为)\s*$|(?:不能|不得)(?:写成|当作|改成|换成)\s*$',local):continue
+&gt;                   raise ValueError(f'{path}:TTF报价/参考变动单位必须保留输入{expected[0].upper()}/{expected[1]}，不能写成{match["unit"]}；能源报价不是体积容量，未经已给换算依据不得替换货币或分母。不改变预测方向')
+E                   ValueError: close_forecast.basis:TTF报价/参考变动单位必须保留输入EUR/mwh，不能写成EUR/mcm；能源报价不是体积容量，未经已给换算依据不得替换货币或分母。不改变预测方向
+
+ttf_news/semantics.py:2097: ValueError</failure></testcase><testcase classname="tests.test_production_price_unit_scopes" name="test_unit_recovery_never_borrows_filtered_changed_or_future_quote[change4]" time="0.067"><failure message="ValueError: close_forecast.basis:TTF报价/参考变动单位必须保留输入EUR/mwh，不能写成EUR/mcm；能源报价不是体积容量，未经已给换算依据不得替换货币或分母。不改变预测方向">live = ({'as_of': '2026-10-21T01:45:08.003186+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:...限→价格上行'], 'negation_or_reversal': [], 'priced_in_comment': 'price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格', ...}, ...})
+change = {'value': 999.0}
+
+    @pytest.mark.parametrize('change',[
+     {'observed_at':'2026-10-21T02:00:00Z'},
+     {'available_at':'2026-10-21T02:00:00Z'},
+     {'fetched_at':'2026-10-21T02:00:00Z'},
+     {'contract':'another contract'},
+     {'value':999.0},
+    ])
+    def test_unit_recovery_never_borrows_filtered_changed_or_future_quote(live,change):
+     ctx,_=live;p,_=prepare_context(ctx)
+     changed=copy.deepcopy(ctx);changed['price_reference']['intraday'].update(change)
+     body={'close_forecast':{'basis':'参考价上涨1.733 EUR/mcm'}}
+     # The candidate has no authority to reintroduce a discarded unit/quote.
+&gt;    candidate._check_ttf_price_unit_identity(body,changed,p)
+
+tests/test_production_price_unit_scopes.py:153: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+result = {'close_forecast': {'basis': '参考价上涨1.733 EUR/mcm'}}
+context = {'as_of': '2026-10-21T01:45:08.003186+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1....3 mcm/d; available: 124.3; unavailable: 13.0. Reason: Yearly maintenance. Remarks: Extended maintenance.', ...}], ...}
+prepared = {'as_of': '2026-10-21T01:45:08.003186+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1... 'facts': 'Reason: Yearly maintenance. Remarks: Extended maintenance.', 'time': '2026-10-20T20:13:18+00:00', ...}, ...}
+
+    def _check_ttf_price_unit_identity(result: dict, context: dict, prepared: dict) -&gt; None:
+        """An observed TTF price/delta keeps its supplied monetary-energy unit."""
+        reference=_known_price_reference(context,prepared)
+        quote_rows=[reference,reference.get('intraday') or {},reference.get('market_baseline') or {}]
+        units={identity for row in quote_rows if isinstance(row,dict) and (identity:=_price_unit_identity(row.get('unit','')))}
+        # Compression may omit unit from a retained observation. Its immutable
+        # source unit is usable only when the exact same known quote survived,
+        # never by recovering a filtered/future quote from the original snapshot.
+        original=(context.get('price_reference') or {}).get('intraday') or {}
+        retained=reference.get('intraday') or {}
+        now=_moment(context.get('as_of') or prepared.get('as_of'))
+        same_quote=(isinstance(original,dict) and isinstance(retained,dict)
+            and original.get('contract') and all(original.get(key)==retained.get(key)
+                for key in ('contract','value','observed_at','available_at'))
+            and retained.get('value') is not None and retained.get('observed_at')
+            and _known_source(original,now)
+            and not any((stamp:=_moment(original.get(key))) is not None and now is not None and stamp&gt;now
+                        for key in ('fetched_at','known_at','price_known_at')))
+        if same_quote and (identity:=_price_unit_identity(original.get('unit',''))):units.add(identity)
+        # Only apply an identity contract when the supplied quote has an
+        # unambiguous unit. Missing/filtered quotes do not invent a default unit.
+        if len(units)!=1:return
+        expected=next(iter(units))
+        amount_unit=re.compile(r"(?P&lt;amount&gt;[+-]?\d+(?:\.\d+)?)\s*(?P&lt;unit&gt;(?:EUR|USD|GBP|€|£|\$|欧元|美元|英镑)\s*(?:/|per)\s*(?:MWh|kWh|MMBtu|therm|mcm|m3|m³|MW|百万立方米|立方米|兆瓦时|千瓦时))(?![A-Za-z0-9])",re.I)
+        instrument=re.compile(r'(?P&lt;ttf&gt;TTF|荷兰天然气)|(?P&lt;foreign&gt;JKM|NBP|Henry\s+Hub|亨利港|英国天然气)',re.I)
+        cards={row.get('id'):row for row in prepared.get('window_news',[]) if isinstance(row,dict) and row.get('id')}
+        cards['N0']=context.get('current_news') or prepared.get('current_news') or {}
+        for alias,row in list(cards.items()):
+            if row.get('same_as_current_news_id') in cards:cards[alias]=cards[row['same_as_current_news_id']]
+        known=_current_source_rows(context,prepared)
+        quote_values=[reference.get('previous_price'),(reference.get('intraday') or {}).get('value')]
+        quote_values.extend((reference.get('market_baseline') or {}).get(k) for k in ('previous_price','latest_price','observed_delta'))
+        def source_rate_supported(source_topic,amount,identity,clause):
+            aliases=re.findall(r'(?&lt;![A-Za-z0-9_])N\d+(?![A-Za-z0-9_])',clause)
+            sources=[cards[a] for a in aliases if a in cards] if aliases else known
+            for source in sources:
+                if not _known_source(source,now):continue
+                for source_clause in _clauses(_source_text(source)):
+                    if not re.search(source_topic,source_clause,re.I):continue
+                    for supplied in amount_unit.finditer(source_clause):
+                        if (_price_unit_identity(supplied['unit'])==identity and abs(float(supplied['amount'])-amount)&lt;1e-9
+                                and not re.search(r'若|如果|假设|预计|预期|可能|未提供|缺少|无法确认|whether|\bif\b|expected|forecast',source_clause[:supplied.start()],re.I)):
+                            return True
+            return False
+        for path,text in _strings(result):
+            for clause in _clauses(text):
+                for match in amount_unit.finditer(clause):
+                    local=re.split(r'[，,；;]|→|-&gt;|但是|但',clause[:match.start()])[-1]
+                    instruments=list(instrument.finditer(local))
+                    scope=instruments[-1] if instruments else None
+                    observed=_price_unit_identity(match['unit'])
+                    if observed is None or observed==expected:continue
+                    cost_topic=r'transport(?:ation)?\s+(?:tariff|cost)|pipeline\s+tariff|tariff|输气(?:成本|费用|费率|资费)|运输(?:成本|费用|费率)|管道(?:成本|费用|费率|资费)'
+                    costs=list(re.finditer(cost_topic,local,re.I))
+                    price_nouns=list(re.finditer(r'气价|价格|报价|结算价|收盘价|price|quote',local,re.I))
+                    cost_object=bool(costs and (not price_nouns or costs[-1].start()&gt;price_nouns[-1].start()))
+                    if cost_object and source_rate_supported(cost_topic,float(match['amount']),observed,clause):
+                        continue  # A sourced transport cost is not a TTF quote.
+                    # A distinct quoted market retains its own unit, backed by
+                    # that cited/known instrument's observation, not the TTF unit.
+                    if scope is not None and scope['foreign']:
+                        if (source_rate_supported(re.escape(scope['foreign']),float(match['amount']),observed,clause)
+                                or re.search(r'若|如果|假设|一旦|\bif\b',local,re.I)):
+                            continue
+                        raise ValueError(f'{path}:不同市场{scope["foreign"]}报价{match.group()}须有该市场截至as_of已知的同单位来源，不能借TTF报价补其价格或单位；同句后续TTF价格仍须保留输入能源单位')
+                    exact_quote_amount=any(isinstance(value,(int,float)) and not isinstance(value,bool)
+                        and abs(float(match['amount'])-value)&lt;1e-9 for value in quote_values)
+                    price_scope=(bool(scope is not None and scope['ttf']) or exact_quote_amount
+                        or bool(re.search(r'(?:本|该|此)合约|参考价|市场基准|收盘(?:价)?|结算(?:价)?|价格(?:上升|上涨|下降|下跌)|TTF|气价',local,re.I)))
+                    if not price_scope:continue
+                    # A warning not to substitute units is not a price assertion.
+                    if re.search(r'(?:单位|计量口径)(?:并非|不是|不应为|不能为)\s*$|(?:不能|不得)(?:写成|当作|改成|换成)\s*$',local):continue
+&gt;                   raise ValueError(f'{path}:TTF报价/参考变动单位必须保留输入{expected[0].upper()}/{expected[1]}，不能写成{match["unit"]}；能源报价不是体积容量，未经已给换算依据不得替换货币或分母。不改变预测方向')
+E                   ValueError: close_forecast.basis:TTF报价/参考变动单位必须保留输入EUR/mwh，不能写成EUR/mcm；能源报价不是体积容量，未经已给换算依据不得替换货币或分母。不改变预测方向
+
+ttf_news/semantics.py:2097: ValueError</failure></testcase><testcase classname="tests.test_production_price_unit_scopes" name="test_source_supported_actual_no_loss_is_still_allowed" time="0.078" /><testcase classname="tests.test_production_price_unit_scopes" name="test_existing_condition_consequent_scope_across_comma_is_retained[\u82e5\u7ef4\u62a4\u6ca1\u6709\u63d0\u524d\u5f00\u59cb\uff0c\u5219\u5b9e\u9645\u6d41\u91cf\u6ca1\u6709\u635f\u5931\u3002]" time="0.074" /><testcase classname="tests.test_production_price_unit_scopes" name="test_existing_condition_consequent_scope_across_comma_is_retained[\u82e5\u8be5\u7ef4\u62a4\u5c1a\u672a\u5f00\u59cb\uff0c\u5b9e\u9645\u6d41\u91cf\u6ca1\u6709\u635f\u5931\u3002]" time="0.074" /><testcase classname="tests.test_production_price_unit_scopes" name="test_condition_or_epistemic_does_not_cross_contrast_to_new_observation[\u82e5\u9700\u6c42\u589e\u52a0\u53ef\u80fd\u63a8\u9ad8\u4ef7\u683c\uff0c\u4f46\u5b9e\u9645\u6d41\u91cf\u4fdd\u6301\u4e0d\u53d8\u3002]" time="0.074" /><testcase classname="tests.test_production_price_unit_scopes" name="test_condition_or_epistemic_does_not_cross_contrast_to_new_observation[\u672a\u6838\u5b9e\u5b9e\u9645\u6d41\u91cf\u635f\u5931\uff0c\u7136\u800c\u5b9e\u9645\u6d41\u91cf\u4fdd\u6301\u4e0d\u53d8\u3002]" time="0.074" /><testcase classname="tests.test_production_price_unit_scopes" name="test_future_cancelled_status_not_degree_exception_even_if_title_unchanged" time="0.076" /><testcase classname="tests.test_production_price_unit_scopes" name="test_known_different_market_unit_does_not_become_ttf[JKM-12-USD/MMBtu]" time="0.067" /><testcase classname="tests.test_production_price_unit_scopes" name="test_known_different_market_unit_does_not_become_ttf[NBP-90-GBP/therm]" time="0.067" /><testcase classname="tests.test_production_price_unit_scopes" name="test_known_different_market_unit_does_not_become_ttf[NBP-90-\u82f1\u9551/therm]" time="0.068" /><testcase classname="tests.test_production_price_unit_scopes" name="test_known_different_market_unit_does_not_become_ttf[JKM-1.733-USD/MMBtu]" time="0.068" /><testcase classname="tests.test_production_price_unit_scopes" name="test_foreign_source_cannot_be_borrowed_after_asof_or_for_wrong_instrument" time="0.065" /><testcase classname="tests.test_production_price_unit_scopes" name="test_english_comma_contrast_does_not_hide_measured_zero[Actual flows remain unconfirmed, but actual flows are unaffected.]" time="0.077" /><testcase classname="tests.test_production_price_unit_scopes" name="test_english_comma_contrast_does_not_hide_measured_zero[If maintenance is postponed, but actual flows are unchanged.]" time="0.074" /><testcase classname="tests.test_production_price_unit_scopes" name="test_english_condition_consequent_is_still_conditional" time="0.077" /><testcase classname="tests.test_production_price_unit_scopes" name="test_degree_exception_cannot_borrow_future_notices_for_other_source[N3\u65e0\u663e\u8457\u4f9b\u9700\u51b2\u51fb]" time="0.078" /><testcase classname="tests.test_production_price_unit_scopes" name="test_degree_exception_cannot_borrow_future_notices_for_other_source[[N3]\u65e0\u663e\u8457\u4f9b\u9700\u51b2\u51fb]" time="0.077" /><testcase classname="tests.test_production_price_unit_scopes" name="test_degree_exception_cannot_borrow_future_notices_for_other_source[Nyhamna\u65e0\u663e\u8457\u4f9b\u9700\u51b2\u51fb]" time="0.076" /><testcase classname="tests.test_production_price_unit_scopes" name="test_unit_input_preserved_only_if_supplied_and_quote_known" time="0.327" /><testcase classname="tests.test_production_price_unit_scopes" name="test_known_transport_tariff_is_not_ttf_price_even_with_same_numeric_delta[1.733]" time="0.069" /><testcase classname="tests.test_production_price_unit_scopes" name="test_known_transport_tariff_is_not_ttf_price_even_with_same_numeric_delta[2.0]" time="0.068" /><testcase classname="tests.test_production_price_unit_scopes" name="test_negating_price_direction_is_not_a_unit_warning[TTF\u4ef7\u683c\u4e0d\u662f\u4e0b\u8dcc\u800c\u662f\u4e0a\u6da81.733 EUR/mcm\u3002]" time="0.068" /><testcase classname="tests.test_production_price_unit_scopes" name="test_negating_price_direction_is_not_a_unit_warning[TTF\u4ef7\u683c\u5e76\u975e\u4e0b\u8dcc\u800c\u662f\u4e0a\u6da81.733 EUR/mcm\u3002]" time="0.068" /><testcase classname="tests.test_semantics.ExtractionTests" name="test_absence_of_supply_restoration_information_is_not_supply_restoration" time="0.001" /><testcase classname="tests.test_semantics.ExtractionTests" name="test_actual_relief_and_cut_have_opposite_mechanisms" time="0.000" /><testcase classname="tests.test_semantics.ExtractionTests" name="test_bounded_publisher_fact_excerpt_is_visible" time="0.000" /><testcase classname="tests.test_semantics.ExtractionTests" name="test_forecast_actual_flow_wording_is_not_observed_flow" time="0.000" /><testcase classname="tests.test_semantics.ExtractionTests" name="test_missing_independent_flow_measurement_is_not_recovery" time="0.000" /><testcase classname="tests.test_semantics.ExtractionTests" name="test_missing_other_data_does_not_erase_an_affirmed_change" time="0.000" /><testcase classname="tests.test_semantics.ExtractionTests" name="test_negated_change_is_not_an_opposite_observation" time="0.001" /><testcase classname="tests.test_semantics.ExtractionTests" name="test_no_flow_inference_for_zero_capacity_reduction" time="0.000" /><testcase classname="tests.test_semantics.ExtractionTests" name="test_notice_is_conditional_capacity_not_actual_flow" time="0.000" /><testcase classname="tests.test_semantics.ExtractionTests" name="test_past_tense_actual_flows_keep_direction" time="0.000" /><testcase classname="tests.test_semantics.ExtractionTests" name="test_resource_project_facts_are_prospective_without_delivery" time="0.001" /><testcase classname="tests.test_semantics.ExtractionTests" name="test_restart_after_outage_does_not_count_old_outage_twice" time="0.001" /><testcase classname="tests.test_semantics.ExtractionTests" name="test_reversal_removes_old_outage_and_no_mild_not_invented_cold" time="0.000" /><testcase classname="tests.test_semantics.ExtractionTests" name="test_verb_before_supply_keeps_direction_and_negation" time="0.001" /><testcase classname="tests.test_semantics.SemanticTests" name="test_absent_flow_data_does_not_prove_no_window_supply_shock" time="0.001" /><testcase classname="tests.test_semantics.SemanticTests" name="test_active_mixed_notice_fact_summary_deduplicates_ids_and_ignores_future_dismissed" time="0.000" /><testcase classname="tests.test_semantics.SemanticTests" name="test_actual_anchor_retry_risk_requires_check_not_priced_fact" time="0.059" /><testcase classname="tests.test_semantics.SemanticTests" name="test_actual_live_future_well_plan_cannot_become_completed_fact" time="0.013" /><testcase classname="tests.test_semantics.SemanticTests" name="test_actual_manual_troll_production_notice_is_not_pipeline_maintenance" time="0.127" /><testcase classname="tests.test_semantics.SemanticTests" name="test_after_the_fact_uncertainty_does_not_erase_priced_in_assertion" time="0.001" /><testcase classname="tests.test_semantics.SemanticTests" name="test_announcement_noun_does_not_excuse_separate_actual_loss" time="0.002" /><testcase classname="tests.test_semantics.SemanticTests" name="test_available_baseline_cannot_be_claimed_absent_even_when_abstaining" time="0.001" /><testcase classname="tests.test_semantics.SemanticTests" name="test_available_nonmaterial_baseline_still_allows_real_limits_and_insufficient_status" time="0.004" /><testcase classname="tests.test_semantics.SemanticTests" name="test_available_reference_cannot_be_listed_wholly_missing" time="0.000" /><testcase classname="tests.test_semantics.SemanticTests" name="test_binding_eni_announcement_noun_is_not_a_measured_outage" time="0.017" /><testcase classname="tests.test_semantics.SemanticTests" name="test_capacity_bucket_preserves_temporal_scopes_unchanged_flow_and_real_offsets" time="0.010" /><testcase classname="tests.test_semantics.SemanticTests" name="test_capacity_exclusion_guard_preserves_temporal_and_observed_scope" time="0.006" /><testcase classname="tests.test_semantics.SemanticTests" name="test_clear_reversal_of_same_price_sign_is_rejected" time="0.001" /><testcase classname="tests.test_semantics.SemanticTests" name="test_collector_and_validator_share_acceptance_set" time="0.007" /><testcase classname="tests.test_semantics.SemanticTests" name="test_collector_reports_unknown_flow_and_reversed_supply_together" time="0.002" /><testcase classname="tests.test_semantics.SemanticTests" name="test_collector_valid_result_is_empty_and_pure" time="0.002" /><testcase classname="tests.test_semantics.SemanticTests" name="test_conditional_current_capacity_risk_is_not_neutralizing_evidence" time="0.008" /><testcase classname="tests.test_semantics.SemanticTests" name="test_conditional_price_move_does_not_prove_priced_in_consequence" time="0.006" /><testcase classname="tests.test_semantics.SemanticTests" name="test_contract_discovery_physical_supply_arrow_cannot_be_bullish" time="0.004" /><testcase classname="tests.test_semantics.SemanticTests" name="test_correct_mixed_single_type_and_single_cited_notice_are_preserved" time="0.007" /><testcase classname="tests.test_semantics.SemanticTests" name="test_current_active_capacity_is_not_measured_actual_flow_loss" time="0.002" /><testcase classname="tests.test_semantics.SemanticTests" name="test_dismissed_announcement_risk_scope_conditions_and_independent_facts_remain_valid" time="0.014" /><testcase classname="tests.test_semantics.SemanticTests" name="test_dismissed_cancelled_or_end_does_not_prove_restoration" time="0.003" /><testcase classname="tests.test_semantics.SemanticTests" name="test_dismissed_fact_projection_limits_risk_removal_without_direction" time="0.000" /><testcase classname="tests.test_semantics.SemanticTests" name="test_dismissed_notice_cannot_eliminate_unqualified_supply_risk" time="0.008" /><testcase classname="tests.test_semantics.SemanticTests" name="test_duplicate_window_alias_resolves_to_same_current_fact" time="0.002" /><testcase classname="tests.test_semantics.SemanticTests" name="test_elapsed_cut_cannot_force_net_but_confirmed_current_restoration_can" time="0.002" /><testcase classname="tests.test_semantics.SemanticTests" name="test_elapsed_notice_requires_local_residual_condition_or_history" time="0.049" /><testcase classname="tests.test_semantics.SemanticTests" name="test_elapsed_notice_residual_flow_must_be_known_and_observed_after_end" time="0.033" /><testcase classname="tests.test_semantics.SemanticTests" name="test_empty_sanitized_price_never_falls_back_to_future_raw_baseline" time="0.002" /><testcase classname="tests.test_semantics.SemanticTests" name="test_expectation_qualifiers_leave_direction_open" time="0.006" /><testcase classname="tests.test_semantics.SemanticTests" name="test_expired_same_facility_sibling_does_not_taint_current_notice" time="0.002" /><testcase classname="tests.test_semantics.SemanticTests" name="test_explicit_future_nonstartup_source_remains_valid" time="0.003" /><testcase classname="tests.test_semantics.SemanticTests" name="test_facility_type_is_per_notice_not_borrowed_from_another_pipeline" time="0.011" /><testcase classname="tests.test_semantics.SemanticTests" name="test_fact_direction_cannot_be_invented_under_a_valid_alias" time="0.001" /><testcase classname="tests.test_semantics.SemanticTests" name="test_fieldfeedback_future_raw_cannot_assert_no_current_price_effect" time="0.004" /><testcase classname="tests.test_semantics.SemanticTests" name="test_filtered_future_reaction_cannot_disable_actual_flow_invariant" time="0.001" /><testcase classname="tests.test_semantics.SemanticTests" name="test_flat_news_cannot_erase_fresh_observed_upward_price_path" time="0.003" /><testcase classname="tests.test_semantics.SemanticTests" name="test_flat_quote_before_news_is_not_announcement_no_reaction_evidence" time="0.004" /><testcase classname="tests.test_semantics.SemanticTests" name="test_future_active_notice_is_not_current_actual_flow_loss" time="0.001" /><testcase classname="tests.test_semantics.SemanticTests" name="test_future_capacity_cannot_force_a_final_direction" time="0.001" /><testcase classname="tests.test_semantics.SemanticTests" name="test_future_notice_capacity_is_not_quantified_planned_loss" time="0.008" /><testcase classname="tests.test_semantics.SemanticTests" name="test_future_notice_is_not_proof_current_price_was_unaffected" time="0.008" /><testcase classname="tests.test_semantics.SemanticTests" name="test_future_revised_focus_cannot_force_today_net" time="0.001" /><testcase classname="tests.test_semantics.SemanticTests" name="test_future_revision_and_availability_clocks_cannot_supply_offset" time="0.012" /><testcase classname="tests.test_semantics.SemanticTests" name="test_future_unavailable_weather_cannot_offset_current_actual_flow" time="0.001" /><testcase classname="tests.test_semantics.SemanticTests" name="test_good_relief_and_disruption_pass" time="0.003" /><testcase classname="tests.test_semantics.SemanticTests" name="test_independent_current_flow_observation_can_confirm_restore_or_loss" time="0.003" /><testcase classname="tests.test_semantics.SemanticTests" name="test_insufficient_evidence_is_not_forced_flat" time="0.001" /><testcase classname="tests.test_semantics.SemanticTests" name="test_large_one_sided_flow_cannot_flatten_because_quotes_missing" time="0.002" /><testcase classname="tests.test_semantics.SemanticTests" name="test_local_date_publication_near_eu_midnight_remains_known" time="0.002" /><testcase classname="tests.test_semantics.SemanticTests" name="test_measured_priced_in_evidence_can_support_flat_even_for_flow_change" time="0.001" /><testcase classname="tests.test_semantics.SemanticTests" name="test_mild_weather_cannot_raise_heating_demand" time="0.001" /><testcase classname="tests.test_semantics.SemanticTests" name="test_missing_data_cannot_become_mild_weather_stable_storage_or_no_loss" time="0.002" /><testcase classname="tests.test_semantics.SemanticTests" name="test_missing_data_not_missing_world_events" time="0.002" /><testcase classname="tests.test_semantics.SemanticTests" name="test_missing_flow_cannot_itself_supply_neutral_mechanism" time="0.007" /><testcase classname="tests.test_semantics.SemanticTests" name="test_mixed_active_types_cannot_be_aggregated_as_one_type" time="0.007" /><testcase classname="tests.test_semantics.SemanticTests" name="test_mixed_ambiguous_and_pure_conditions_are_not_forced_to_one_sign" time="0.007" /><testcase classname="tests.test_semantics.SemanticTests" name="test_negative_offset_statement_does_not_assert_opposite_effect" time="0.002" /><testcase classname="tests.test_semantics.SemanticTests" name="test_newly_fetched_excerpt_cannot_be_read_as_old_available_evidence" time="0.001" /><testcase classname="tests.test_semantics.SemanticTests" name="test_news_pressure_can_differ_from_close_with_price_momentum" time="0.002" /><testcase classname="tests.test_semantics.SemanticTests" name="test_no_price_effect_requires_known_comparable_reaction_not_single_quote" time="0.009" /><testcase classname="tests.test_semantics.SemanticTests" name="test_no_price_effect_word_order_keeps_uncertainty_and_physical_scope" time="0.010" /><testcase classname="tests.test_semantics.SemanticTests" name="test_not_priced_in_is_also_a_price_observation_claim" time="0.010" /><testcase classname="tests.test_semantics.SemanticTests" name="test_notice_independent_unchanged_flow_allows_no_loss_assertion" time="0.002" /><testcase classname="tests.test_semantics.SemanticTests" name="test_notice_missing_recovery_cannot_become_no_shock_across_comma" time="0.009" /><testcase classname="tests.test_semantics.SemanticTests" name="test_notice_unknown_and_conditional_recovery_remain_valid" time="0.009" /><testcase classname="tests.test_semantics.SemanticTests" name="test_observed_path_is_not_a_hardcoded_close_forecast" time="0.001" /><testcase classname="tests.test_semantics.SemanticTests" name="test_old_window_flow_shock_is_background_not_forced_today" time="0.001" /><testcase classname="tests.test_semantics.SemanticTests" name="test_opposite_offset_conditions_and_correct_scenarios_remain_valid" time="0.002" /><testcase classname="tests.test_semantics.SemanticTests" name="test_physical_supply_gap_relief_is_not_a_price_pressure_offset_operator" time="0.005" /><testcase classname="tests.test_semantics.SemanticTests" name="test_priced_in_can_use_explicit_reaction_evidence" time="0.001" /><testcase classname="tests.test_semantics.SemanticTests" name="test_priced_in_negative_and_conditional_are_valid" time="0.009" /><testcase classname="tests.test_semantics.SemanticTests" name="test_pricing_diagnostics_deduplicate_paths_and_preserve_acceptance" time="0.007" /><testcase classname="tests.test_semantics.SemanticTests" name="test_pricing_hypotheses_evidential_conditions_and_supply_invalidation_remain_valid" time="0.011" /><testcase classname="tests.test_semantics.SemanticTests" name="test_pricing_status_verification_requests_are_symmetric_and_local" time="0.018" /><testcase classname="tests.test_semantics.SemanticTests" name="test_provenance_eni_analysis_exclusion_is_not_market_not_priced_in" time="0.004" /><testcase classname="tests.test_semantics.SemanticTests" name="test_quantity_arrows_keep_supply_and_price_scopes_distinct" time="0.006" /><testcase classname="tests.test_semantics.SemanticTests" name="test_reaction_unknown_baseline_description_conditions_and_actual_reaction_evidence_remain_valid" time="0.008" /><testcase classname="tests.test_semantics.SemanticTests" name="test_real_parser_detail_warm_demand_fall_cannot_be_bullish" time="0.001" /><testcase classname="tests.test_semantics.SemanticTests" name="test_real_sourced_conflict_allows_insufficient_close_with_valid_anchor" time="0.003" /><testcase classname="tests.test_semantics.SemanticTests" name="test_rejects_hollow_schema_fact_even_with_correct_direction" time="0.001" /><testcase classname="tests.test_semantics.SemanticTests" name="test_rejects_supply_cut_bearish_and_wrong_bucket" time="0.001" /><testcase classname="tests.test_semantics.SemanticTests" name="test_rejects_supply_relief_bullish_audit_failure" time="0.001" /><testcase classname="tests.test_semantics.SemanticTests" name="test_resource_conflicts_and_sourced_expectation_shortfall_remain_valid" time="0.009" /><testcase classname="tests.test_semantics.SemanticTests" name="test_resource_discovery_is_not_current_supply_offset" time="0.007" /><testcase classname="tests.test_semantics.SemanticTests" name="test_revision_eni_elapsed_notice_raw_is_not_current_unconditional_risk" time="0.018" /><testcase classname="tests.test_semantics.SemanticTests" name="test_revision_future_raw_reports_every_unpriced_field" time="0.004" /><testcase classname="tests.test_semantics.SemanticTests" name="test_same_direction_passive_offset_is_rejected" time="0.002" /><testcase classname="tests.test_semantics.SemanticTests" name="test_same_event_in_history_is_not_priced_in_evidence" time="0.001" /><testcase classname="tests.test_semantics.SemanticTests" name="test_same_parser_error_in_invalidation_condition_is_rejected" time="0.001" /><testcase classname="tests.test_semantics.SemanticTests" name="test_same_unknown_pricing_abstention_rule_applies_to_supply_cut" time="0.002" /><testcase classname="tests.test_semantics.SemanticTests" name="test_scopeguard_no_reaction_and_unable_to_judge_pricing_cannot_cancel_known_anchor" time="0.008" /><testcase classname="tests.test_semantics.SemanticTests" name="test_single_direction_scenarios_cannot_invert_mechanism_without_price_words" time="0.004" /><testcase classname="tests.test_semantics.SemanticTests" name="test_source_fact_checks_match_known_metadata_without_changing_forecast" time="0.001" /><testcase classname="tests.test_semantics.SemanticTests" name="test_sourced_relief_can_support_pullback_of_observed_upward_path" time="0.002" /><testcase classname="tests.test_semantics.SemanticTests" name="test_stale_background_cannot_offset_fresh_current_recovery" time="0.004" /><testcase classname="tests.test_semantics.SemanticTests" name="test_summary_direction_and_enum_must_agree" time="0.002" /><testcase classname="tests.test_semantics.SemanticTests" name="test_supplied_actual_flow_quantity_is_not_missing_quantification" time="0.008" /><testcase classname="tests.test_semantics.SemanticTests" name="test_supplied_cooling_mechanism_can_raise_demand" time="0.002" /><testcase classname="tests.test_semantics.SemanticTests" name="test_supplied_current_weather_supports_claim_but_historical_weather_does_not" time="0.002" /><testcase classname="tests.test_semantics.SemanticTests" name="test_supplied_mixed_supply_weather_can_net_flat" time="0.002" /><testcase classname="tests.test_semantics.SemanticTests" name="test_total_supply_share_requires_its_own_ratio_or_denominator" time="0.006" /><testcase classname="tests.test_semantics.SemanticTests" name="test_true_market_unpriced_claim_remains_distinct_from_analysis_exclusion" time="0.001" /><testcase classname="tests.test_semantics.SemanticTests" name="test_turning_on_taps_does_not_support_invented_not_started_fact" time="0.006" /><testcase classname="tests.test_semantics.SemanticTests" name="test_unaliased_summary_cannot_upgrade_cited_capacity_to_active_outage" time="0.005" /><testcase classname="tests.test_semantics.SemanticTests" name="test_uncertain_input_weather_is_not_support_for_actual_mild_claim" time="0.001" /><testcase classname="tests.test_semantics.SemanticTests" name="test_unknown_capacity_cannot_be_excluded_from_analyst_accounting" time="0.008" /><testcase classname="tests.test_semantics.SemanticTests" name="test_unknown_data_conditions_remain_conditions" time="0.002" /><testcase classname="tests.test_semantics.SemanticTests" name="test_unobserved_flow_is_epistemic_but_not_zero_supply_impact" time="0.002" /><testcase classname="tests.test_semantics.SemanticTests" name="test_unverified_or_other_facility_flow_cannot_confirm_notice_recovery" time="0.001" /><testcase classname="tests.test_semantics.SemanticTests" name="test_valid_anchor_directional_news_cannot_abstain_only_for_unknown_pricing" time="0.004" /><testcase classname="tests.test_semantics.SemanticTests" name="test_verb_first_supply_expansion_cannot_be_bullish_evidence" time="0.003" /><testcase classname="tests.test_semantics.SemanticTests" name="test_weak_non_notice_corporate_news_can_still_have_no_supply_impact" time="0.001" /><testcase classname="tests.test_semantics.SemanticTests" name="test_weaker_downward_pressure_is_bullish_and_not_a_bearish_bucket" time="0.002" /><testcase classname="tests.test_semantics.SemanticTests" name="test_weaker_upward_pressure_is_a_valid_bearish_recovery_mechanism" time="0.003" /><testcase classname="tests.test_semantics.SemanticTests" name="test_well_plugging_keeps_future_completed_and_conditional_scopes" time="0.011" /><testcase classname="tests.test_risk_polarity_anchor" name="test_actual_accepted_body_is_rejected_only_by_new_risk_polarity_gate" time="0.004" /><testcase classname="tests.test_risk_polarity_anchor" name="test_risk_relief_is_not_actual_supply_reduction" time="0.000" /><testcase classname="tests.test_risk_polarity_anchor" name="test_relief_bearish_valid_bullish_wrong_symmetric[\u964d\u4f4e]" time="0.001" /><testcase classname="tests.test_risk_polarity_anchor" name="test_relief_bearish_valid_bullish_wrong_symmetric[\u4e0b\u964d]" time="0.000" /><testcase classname="tests.test_risk_polarity_anchor" name="test_relief_bearish_valid_bullish_wrong_symmetric[\u51cf\u5c11]" time="0.001" /><testcase classname="tests.test_risk_polarity_anchor" name="test_relief_bearish_valid_bullish_wrong_symmetric[\u51cf\u5f31]" time="0.001" /><testcase classname="tests.test_risk_polarity_anchor" name="test_relief_bearish_valid_bullish_wrong_symmetric[\u7f13\u89e3]" time="0.001" /><testcase classname="tests.test_risk_polarity_anchor" name="test_relief_bearish_valid_bullish_wrong_symmetric[\u51cf\u8f7b]" time="0.000" /><testcase classname="tests.test_risk_polarity_anchor" name="test_relief_bearish_valid_bullish_wrong_symmetric[\u6d88\u9000]" time="0.000" /><testcase classname="tests.test_risk_polarity_anchor" name="test_relief_bearish_valid_bullish_wrong_symmetric[\u79fb\u9664]" time="0.000" /><testcase classname="tests.test_risk_polarity_anchor" name="test_relief_bearish_valid_bullish_wrong_symmetric[\u64a4\u9500]" time="0.000" /><testcase classname="tests.test_risk_polarity_anchor" name="test_relief_bearish_valid_bullish_wrong_symmetric[\u89e3\u9664]" time="0.000" /><testcase classname="tests.test_risk_polarity_anchor" name="test_relief_bearish_valid_bullish_wrong_symmetric[\u6d88\u9664]" time="0.001" /><testcase classname="tests.test_risk_polarity_anchor" name="test_risk_increase_bullish_valid_bearish_wrong_symmetric[\u4e0a\u5347]" time="0.001" /><testcase classname="tests.test_risk_polarity_anchor" name="test_risk_increase_bullish_valid_bearish_wrong_symmetric[\u589e\u52a0]" time="0.000" /><testcase classname="tests.test_risk_polarity_anchor" name="test_risk_increase_bullish_valid_bearish_wrong_symmetric[\u63d0\u9ad8]" time="0.000" /><testcase classname="tests.test_risk_polarity_anchor" name="test_risk_increase_bullish_valid_bearish_wrong_symmetric[\u52a0\u5267]" time="0.001" /><testcase classname="tests.test_risk_polarity_anchor" name="test_risk_increase_bullish_valid_bearish_wrong_symmetric[\u589e\u5927]" time="0.001" /><testcase classname="tests.test_risk_polarity_anchor" name="test_negation_and_missing_confirmation_do_not_assert_risk_relief[\u4f9b\u5e94\u98ce\u9669\u672a\u964d\u4f4e]" time="0.000" /><testcase classname="tests.test_risk_polarity_anchor" name="test_negation_and_missing_confirmation_do_not_assert_risk_relief[\u4f9b\u5e94\u98ce\u9669\u6ca1\u6709\u4e0b\u964d]" time="0.000" /><testcase classname="tests.test_risk_polarity_anchor" name="test_negation_and_missing_confirmation_do_not_assert_risk_relief[\u4f9b\u5e94\u98ce\u9669\u4e0d\u4f1a\u964d\u4f4e]" time="0.000" /><testcase classname="tests.test_risk_polarity_anchor" name="test_negation_and_missing_confirmation_do_not_assert_risk_relief[\u4f9b\u5e94\u98ce\u9669\u662f\u5426\u964d\u4f4e]" time="0.000" /><testcase classname="tests.test_risk_polarity_anchor" name="test_negation_and_missing_confirmation_do_not_assert_risk_relief[\u65e0\u6cd5\u786e\u8ba4\u4f9b\u5e94\u98ce\u9669\u964d\u4f4e]" time="0.000" /><testcase classname="tests.test_risk_polarity_anchor" name="test_negation_and_missing_confirmation_do_not_assert_risk_relief[\u4f9b\u5e94\u98ce\u9669\u964d\u4f4e\u4ecd\u5f85\u6838\u5b9e]" time="0.000" /><testcase classname="tests.test_risk_polarity_anchor" name="test_negation_and_missing_confirmation_do_not_assert_risk_relief[\u5e76\u975e\u4f9b\u5e94\u98ce\u9669\u964d\u4f4e]" time="0.000" /><testcase classname="tests.test_risk_polarity_anchor" name="test_actual_supply_demand_signs_not_relabelled[\u4f9b\u5e94\u5b9e\u9645\u589e\u52a040mcm/d-down]" time="0.000" /><testcase classname="tests.test_risk_polarity_anchor" name="test_actual_supply_demand_signs_not_relabelled[\u4f9b\u5e94\u5b9e\u9645\u51cf\u5c1140mcm/d-up]" time="0.000" /><testcase classname="tests.test_risk_polarity_anchor" name="test_actual_supply_demand_signs_not_relabelled[\u5b9e\u9645\u9700\u6c42\u589e\u52a015%-up]" time="0.000" /><testcase classname="tests.test_risk_polarity_anchor" name="test_actual_supply_demand_signs_not_relabelled[\u53d6\u6696\u9700\u6c42\u4e0b\u964d15%-down]" time="0.000" /><testcase classname="tests.test_risk_polarity_anchor" name="test_risk_relief_and_actual_cut_both_preserved_not_single_sign_cooccurrence" time="0.000" /><testcase classname="tests.test_risk_polarity_anchor" name="test_grounded_mixed_demand_increase_can_support_bullish_slot_without_changing_net_flat" time="0.001" /><testcase classname="tests.test_risk_polarity_anchor" name="test_historical_source_quote_is_not_forced_into_a_present_pressure_label" time="0.000" /><testcase classname="tests.test_risk_polarity_anchor" name="test_historical_quote_does_not_exempt_new_opposite_mechanism" time="0.000" /><testcase classname="tests.test_risk_polarity_anchor" name="test_surplus_risk_has_opposite_sign_to_shortage_risk" time="0.000" /><testcase classname="tests.test_risk_polarity_anchor" name="test_unknown_flow_not_converted_to_actual_recovery_and_no_default_direction" time="0.000" /><testcase classname="tests.test_risk_polarity_anchor" name="test_source_operator_risk_extraction_preserves_conditional_capacity_scope" time="0.000" /><testcase classname="tests.test_risk_polarity_anchor" name="test_same_actual_body_with_correct_risk_bucket_passes_every_semantic_gate" time="0.007" /><testcase classname="tests.test_risk_polarity_anchor" name="test_mixed_risk_exception_cannot_invent_an_opposing_source_fact[\u9700\u6c42\u5b9e\u9645\u589e\u52a0]" time="0.000" /><testcase classname="tests.test_risk_polarity_anchor" name="test_mixed_risk_exception_cannot_invent_an_opposing_source_fact[\u9700\u6c42\u53ef\u80fd\u589e\u52a0]" time="0.000" /><testcase classname="tests.test_risk_polarity_anchor" name="test_mixed_risk_exception_cannot_invent_an_opposing_source_fact[\u4f9b\u6c14\u5b9e\u9645\u51cf\u5c1140mcm/d]" time="0.000" /><testcase classname="tests.test_risk_polarity_anchor" name="test_distinct_cited_known_source_can_supply_opposing_countermechanism" time="0.001" /><testcase classname="tests.test_risk_polarity_anchor" name="test_uncited_other_source_and_pure_historical_quote_are_not_current_counterfact" time="0.001" /><testcase classname="tests.test_risk_polarity_anchor" name="test_conditional_sourced_demand_remains_conditional_countermechanism" time="0.000" /><testcase classname="tests.test_risk_polarity_anchor" name="test_sourced_future_demand_is_not_an_actual_observed_counterfact" time="0.001" /><testcase classname="tests.test_risk_polarity_anchor" name="test_actual_legal_material_anchor_no_reverse_proof_is_not_a_forecast_veto" time="0.001" /><testcase classname="tests.test_risk_polarity_anchor" name="test_material_baseline_null_requires_sourced_opposite_conflict_symmetrically[up-1.76]" time="0.001" /><testcase classname="tests.test_risk_polarity_anchor" name="test_material_baseline_null_requires_sourced_opposite_conflict_symmetrically[down--1.76]" time="0.001" /><testcase classname="tests.test_risk_polarity_anchor" name="test_missing_stale_nonmaterial_baselines_remain_no_outlook_eligible" time="0.001" /><testcase classname="tests.test_risk_polarity_anchor" name="test_real_cited_known_opposite_facts_preserve_legitimate_material_anchor_no_outlook" time="0.008" /><testcase classname="tests.test_risk_polarity_anchor" name="test_risk_object_never_becomes_physical_supply_in_model_input[\u5f53\u524d\u4f9b\u5e94\u98ce\u9669\u964d\u4f4e\uff0c\u5b9e\u9645\u6d41\u91cf\u672a\u77e5\u3002]" time="0.002" /><testcase classname="tests.test_risk_polarity_anchor" name="test_risk_object_never_becomes_physical_supply_in_model_input[\u5f53\u524d\u4f9b\u5e94\u98ce\u9669\u589e\u52a0\uff0c\u5b9e\u9645\u6d41\u91cf\u672a\u77e5\u3002]" time="0.002" /><testcase classname="tests.test_risk_polarity_anchor" name="test_risk_object_never_becomes_physical_supply_in_model_input[Current supply risk is lower; actual flow is unknown.]" time="0.002" /><testcase classname="tests.test_risk_polarity_anchor" name="test_risk_object_never_becomes_physical_supply_in_model_input[Current supply risks increase; actual flows are unknown.]" time="0.002" /><testcase classname="tests.test_risk_polarity_anchor" name="test_risk_mask_preserves_distinct_actual_flow_fact[\u98ce\u9669\u5bfc\u81f4\u5b9e\u9645\u4f9b\u6c14\u51cf\u5c1140mcm/d\u3002-up]" time="0.000" /><testcase classname="tests.test_risk_polarity_anchor" name="test_risk_mask_preserves_distinct_actual_flow_fact[\u4f9b\u5e94\u98ce\u9669\u964d\u4f4e\uff0c\u4f46\u6b27\u6d32\u5b9e\u9645\u4f9b\u6c14\u51cf\u5c1140mcm/d\u3002-up]" time="0.000" /><testcase classname="tests.test_risk_polarity_anchor" name="test_risk_mask_preserves_distinct_actual_flow_fact[\u4f9b\u5e94\u98ce\u9669\u4e0a\u5347\uff0c\u4f46\u6b27\u6d32\u5b9e\u9645\u4f9b\u6c14\u589e\u52a040mcm/d\u3002-down]" time="0.000" /><testcase classname="tests.test_risk_polarity_anchor" name="test_risk_mask_preserves_distinct_actual_flow_fact[Current supply risks decline, but confirmed actual flows fell by 40mcm/d.-up]" time="0.000" /><testcase classname="tests.test_risk_polarity_anchor" name="test_explicit_source_risk_and_correct_result_risk_do_not_reverse_physical_direction[\u964d\u4f4e-bearish_evidence]" time="0.003" /><testcase classname="tests.test_risk_polarity_anchor" name="test_explicit_source_risk_and_correct_result_risk_do_not_reverse_physical_direction[\u589e\u52a0-bullish_evidence]" time="0.003" /><testcase classname="tests.test_price_input_boundary" name="test_any_future_price_availability_rejects_whole_price_record[available_at]" time="0.000" /><testcase classname="tests.test_price_input_boundary" name="test_any_future_price_availability_rejects_whole_price_record[known_at]" time="0.000" /><testcase classname="tests.test_price_input_boundary" name="test_any_future_price_availability_rejects_whole_price_record[version_seen_at]" time="0.000" /><testcase classname="tests.test_price_input_boundary" name="test_any_future_price_availability_rejects_whole_price_record[first_seen_at]" time="0.000" /><testcase classname="tests.test_price_input_boundary" name="test_any_future_price_availability_rejects_whole_price_record[discovered_at]" time="0.000" /><testcase classname="tests.test_price_input_boundary" name="test_any_future_price_availability_rejects_whole_price_record[collected_at]" time="0.000" /><testcase classname="tests.test_price_input_boundary" name="test_any_future_price_availability_rejects_whole_price_record[fact_excerpt_created_at]" time="0.000" /><testcase classname="tests.test_price_input_boundary" name="test_any_future_price_availability_rejects_whole_price_record[price_known_at]" time="0.000" /><testcase classname="tests.test_price_input_boundary" name="test_any_future_price_availability_rejects_whole_price_record[fetched_at]" time="0.000" /><testcase classname="tests.test_price_input_boundary" name="test_any_future_price_availability_rejects_whole_price_record[revision_available_at]" time="0.000" /><testcase classname="tests.test_price_input_boundary" name="test_any_future_price_availability_rejects_whole_price_record[revised_at]" time="0.000" /><testcase classname="tests.test_price_input_boundary" name="test_any_future_price_availability_rejects_whole_price_record[updated_at]" time="0.000" /><testcase classname="tests.test_price_input_boundary" name="test_any_future_price_availability_rejects_whole_price_record[threshold_frozen_as_of]" time="0.000" /><testcase classname="tests.test_price_input_boundary" name="test_equal_asof_price_availability_remains_eligible[available_at]" time="0.000" /><testcase classname="tests.test_price_input_boundary" name="test_equal_asof_price_availability_remains_eligible[known_at]" time="0.000" /><testcase classname="tests.test_price_input_boundary" name="test_equal_asof_price_availability_remains_eligible[price_known_at]" time="0.000" /><testcase classname="tests.test_price_input_boundary" name="test_equal_asof_price_availability_remains_eligible[fetched_at]" time="0.000" /><testcase classname="tests.test_price_input_boundary" name="test_equal_asof_price_availability_remains_eligible[collected_at]" time="0.000" /><testcase classname="tests.test_price_input_boundary" name="test_equal_asof_price_availability_remains_eligible[threshold_frozen_as_of]" time="0.000" /><testcase classname="tests.test_price_input_boundary" name="test_timezone_equivalent_cutoff_is_allowed" time="0.000" /><testcase classname="tests.test_price_input_boundary" name="test_child_quote_enforces_own_future_availability_without_dropping_known_parent" time="0.000" /><testcase classname="tests.test_price_input_boundary" name="test_future_child_fetched_clock_is_not_borrowed_from_past_parent" time="0.000" /><testcase classname="tests.test_price_input_boundary" name="test_exactly_known_child_quote_is_preserved" time="0.000" /><testcase classname="tests.test_detail_bounded_timing_profile" name="test_native_risks_are_bounded_and_unique_without_limiting_directions[False]" time="0.160" /><testcase classname="tests.test_detail_bounded_timing_profile" name="test_native_risks_are_bounded_and_unique_without_limiting_directions[True]" time="0.157" /><testcase classname="tests.test_detail_bounded_timing_profile" name="test_detail_arrays_have_finite_native_and_raw_limits_with_all_fact_rows" time="0.082" /><testcase classname="tests.test_detail_bounded_timing_profile" name="test_actual_incomplete_risk_loop_is_preserved_and_rejected" time="0.076" /><testcase classname="tests.test_detail_bounded_timing_profile" name="test_actual_brief_has_the_same_repeated_risk_loop_and_is_not_recovered" time="0.000" /><testcase classname="tests.test_detail_bounded_timing_profile" name="test_profile_reserves_detail_generation_budget_without_dropping_sources" time="0.079" /><testcase classname="tests.test_detail_bounded_timing_profile" name="test_as_of_future_and_target_window_inside_are_independent" time="0.081" /><testcase classname="tests.test_detail_bounded_timing_profile" name="test_exact_time_boundaries_are_half_open[2026-10-20T15:15:00Z-2026-10-21T00:00:00Z-2026-10-20T15:15:00Z-starts_inside_target_window-False-True]" time="0.081" /><testcase classname="tests.test_detail_bounded_timing_profile" name="test_exact_time_boundaries_are_half_open[2026-10-21T15:15:00Z-2026-10-22T00:00:00Z-2026-10-20T23:00:00Z-at_or_after_target_window_end-True-False]" time="0.081" /><testcase classname="tests.test_detail_bounded_timing_profile" name="test_exact_time_boundaries_are_half_open[2026-10-20T12:00:00Z-2026-10-20T15:15:00Z-2026-10-20T23:00:00Z-starts_before_target_window-False-False]" time="0.078" /><testcase classname="tests.test_detail_bounded_timing_profile" name="test_exact_time_boundaries_are_half_open[2026-10-20T12:00:00Z-2026-10-21T00:00:00Z-2026-10-20T23:00:00Z-starts_before_target_window-False-True]" time="0.077" /><testcase classname="tests.test_detail_bounded_timing_profile" name="test_source_bound_correct_timing_and_hypotheses_are_allowed[[N1]\u5728\u672c\u7a97\u53e3\u4e4b\u540e\u751f\u6548\uff1b[N2]\u5728\u672c\u7ed3\u7b97\u7a97\u53e3\u5185\u5f00\u59cb\uff0c\u4f46\u622a\u81f3\u5206\u6790\u65f6\u70b9\u4e24\u9879\u5747\u5c1a\u672a\u5f00\u59cb\u3002]" time="0.080" /><testcase classname="tests.test_detail_bounded_timing_profile" name="test_source_bound_correct_timing_and_hypotheses_are_allowed[[N1]\u82e5\u7ef4\u62a4\u63d0\u524d\u5728\u672c\u7ed3\u7b97\u7a97\u53e3\u5185\u5f00\u59cb\uff0c\u5219\u987b\u91cd\u65b0\u5206\u6790\u3002]" time="0.079" /><testcase classname="tests.test_detail_bounded_timing_profile" name="test_source_bound_correct_timing_and_hypotheses_are_allowed[[N2]\u4e0d\u80fd\u8ba4\u5b9a\u8be5\u7ef4\u62a4\u5728\u672c\u7a97\u53e3\u4e4b\u540e\u751f\u6548\u3002]" time="0.077" /><testcase classname="tests.test_detail_bounded_timing_profile" name="test_source_bound_correct_timing_and_hypotheses_are_allowed[[N2]\u7ef4\u62a4\u5728\u672c\u7a97\u53e3\u4e4b\u540e\u7ed3\u675f\u3002]" time="0.077" /><testcase classname="tests.test_detail_bounded_timing_profile" name="test_source_bound_correct_timing_and_hypotheses_are_allowed[[N2]\u7ef4\u62a4\u7ed3\u675f\u65f6\u95f4\u5728\u672c\u7a97\u53e3\u4e4b\u540e\u3002]" time="0.075" /><testcase classname="tests.test_detail_bounded_timing_profile" name="test_source_bound_wrong_window_or_already_started_are_rejected[Troll\u4e24\u9879\u8ba1\u5212\u7ef4\u62a4\u5747\u5728\u672c\u7a97\u53e3\u4e4b\u540e\u751f\u6548\u3002-N2]" time="0.080" /><testcase classname="tests.test_detail_bounded_timing_profile" name="test_source_bound_wrong_window_or_already_started_are_rejected[[N1]\u4e0e[N2]\u5747\u5728\u672c\u7a97\u53e3\u4e4b\u540e\u751f\u6548\u3002-N2]" time="0.080" /><testcase classname="tests.test_detail_bounded_timing_profile" name="test_source_bound_wrong_window_or_already_started_are_rejected[N1\u3001N2\u5747\u5728\u672c\u7a97\u53e3\u4e4b\u540e\u751f\u6548\u3002-N2]" time="0.075" /><testcase classname="tests.test_detail_bounded_timing_profile" name="test_source_bound_wrong_window_or_already_started_are_rejected[N2\u6240\u8ff0\u7ef4\u62a4\u548cN1\u6240\u8ff0\u7ef4\u62a4\u5747\u5728\u672c\u7a97\u53e3\u4e4b\u540e\u751f\u6548\u3002-N2]" time="0.077" /><testcase classname="tests.test_detail_bounded_timing_profile" name="test_source_bound_wrong_window_or_already_started_are_rejected[[N1]\u5728\u672c\u7ed3\u7b97\u7a97\u53e3\u5185\u5f00\u59cb\u3002-N1]" time="0.077" /><testcase classname="tests.test_detail_bounded_timing_profile" name="test_source_bound_wrong_window_or_already_started_are_rejected[[N2]\u5df2\u7ecf\u5f00\u59cb\u7ef4\u62a4\u3002-N2]" time="0.075" /><testcase classname="tests.test_detail_bounded_timing_profile" name="test_future_event_denial_does_not_become_measured_global_no_loss" time="0.158" /><testcase classname="tests.test_detail_bounded_timing_profile" name="test_invalidation_conditions_do_not_assert_current_notice_timing" time="0.080" /><testcase classname="tests.test_detail_bounded_timing_profile" name="test_explicit_collective_facilities_bind_both_sources_and_ids_do_not_cross" time="0.157" /><testcase classname="tests.test_detail_bounded_timing_profile" name="test_brief_archive_changes_only_supplied_unit_and_native_risk_bounds" time="0.260"><failure message="AssertionError: real_nyhamna&#10;assert '{&quot;as_of&quot;:&quot;20...rl，系统恢复原来源&quot;}}' == '{&quot;as_of&quot;:&quot;20...rl，系统恢复原来源&quot;}}'&#10;  &#10;  Skipping 20878 identical leading characters in diff, use -v to show&#10;  Skipping 10843 identical trailing characters in diff, use -v to show&#10;  - &quot;:88.175,&quot;observed_at&quot;:&quot;2026-10-19T11:31:00+00:00&quot;,&quot;available_at&quot;:&quot;2026-10-19T11:41:10.509603+00:00&quot;,&quot;price_type&quot;:&quot;delayed_last_trade&quot;,&quot;minimum_delay_minutes&quot;:15,&quot;stale&quot;:false,&quot;unit&quot;:&quot;EUR/MWh&quot;},&quot;verifi&#10;  + &quot;:88.175,&quot;unit&quot;:&quot;EUR/MWh&quot;,&quot;observed_at&quot;:&quot;2026-10-19T11:31:00+00:00&quot;,&quot;available_at&quot;:&quot;2026-10-19T11:41:10.509603+00:00&quot;,&quot;price_type&quot;:&quot;delayed_last_trade&quot;,&quot;minimum_delay_minutes&quot;:15,&quot;stale&quot;:false},&quot;verifi">def test_brief_archive_changes_only_supplied_unit_and_native_risk_bounds():
+        archived=ROOT/'.runtime/source-archives/backend-43554/ttf_news/analysis.py'
+        if not archived.is_file():
+            pytest.skip('private historical runtime archive not in public source distribution')
+        spec=importlib.util.spec_from_file_location('ttf_news._analysis_backend43554',archived)
+        old=importlib.util.module_from_spec(spec);spec.loader.exec_module(old)
+        cases=json.loads((ROOT/'reports/repair_2026-10-20/semantic_regeneration_cases_v2_2.json').read_text())
+        assert len(cases)==20
+        for case in cases:
+            context=case.get('candidate_context') or case['context']
+            new_data,new_meta=prepare_context(context,reserve_tokens=32)
+            old_data,old_meta=old.prepare_context(context,reserve_tokens=32)
+            expected=copy.deepcopy(old_data)
+            quote=expected.get('price_reference',{}).get('intraday')
+            supplied=(context.get('price_reference') or {}).get('intraday') or {}
+            if quote and 'unit' in supplied:quote['unit']=supplied['unit']
+&gt;           assert _json(new_data)==_json(expected),case['id']
+E           AssertionError: real_nyhamna
+E           assert '{"as_of":"20...rl，系统恢复原来源"}}' == '{"as_of":"20...rl，系统恢复原来源"}}'
+E             
+E             Skipping 20878 identical leading characters in diff, use -v to show
+E             Skipping 10843 identical trailing characters in diff, use -v to show
+E             - ":88.175,"observed_at":"2026-10-19T11:31:00+00:00","available_at":"2026-10-19T11:41:10.509603+00:00","price_type":"delayed_last_trade","minimum_delay_minutes":15,"stale":false,"unit":"EUR/MWh"},"verifi
+E             + ":88.175,"unit":"EUR/MWh","observed_at":"2026-10-19T11:31:00+00:00","available_at":"2026-10-19T11:41:10.509603+00:00","price_type":"delayed_last_trade","minimum_delay_minutes":15,"stale":false},"verifi
+
+tests/test_detail_bounded_timing_profile.py:202: AssertionError</failure></testcase><testcase classname="tests.test_final_output_scope" name="test_actual_cold_duplicate_risks_do_not_discard_correct_full_analysis" time="0.016" /><testcase classname="tests.test_final_output_scope" name="test_risk_exception_keeps_max_two_and_other_raw_duplicates_hard" time="0.003" /><testcase classname="tests.test_final_output_scope" name="test_actual_accepted_price_zero_claims_are_rejected_without_changing_records[future_planned_notice-news_impact.summary]" time="0.003" /><testcase classname="tests.test_final_output_scope" name="test_actual_accepted_price_zero_claims_are_rejected_without_changing_records[supply_loss_40_with_flat_baseline-close_forecast.basis]" time="0.004" /><testcase classname="tests.test_final_output_scope" name="test_actual_accepted_price_zero_claims_are_rejected_without_changing_records[anchor_real_manual_missing_prevday-news_impact.summary]" time="0.015" /><testcase classname="tests.test_final_output_scope" name="test_explicit_price_absence_is_not_proved_by_future_flow_or_baseline[\u8be5\u672a\u6765\u516c\u544a\u672a\u5bfc\u81f4\u5f53\u524d\u4f9b\u6c14\u635f\u5931\u6216\u4ef7\u683c\u53cd\u5e94\u3002]" time="0.000" /><testcase classname="tests.test_final_output_scope" name="test_explicit_price_absence_is_not_proved_by_future_flow_or_baseline[\u8be5\u672a\u6765\u516c\u544a\u672a\u9020\u6210\u5b9e\u9645\u6d41\u91cf\u635f\u5931\u53ca\u5373\u65f6\u4ef7\u683c\u6ce2\u52a8\u3002]" time="0.000" /><testcase classname="tests.test_final_output_scope" name="test_explicit_price_absence_is_not_proved_by_future_flow_or_baseline[\u622a\u81f3\u76ee\u524d\u65e0\u4ef7\u683c\u53cd\u5e94\uff0c\u8ba1\u4ef7\u4e0d\u786e\u5b9a\u3002]" time="0.000" /><testcase classname="tests.test_final_output_scope" name="test_explicit_price_absence_is_not_proved_by_future_flow_or_baseline[\u4ef7\u683c\u6ca1\u6709\u5373\u65f6\u53cd\u5e94\u3002]" time="0.000" /><testcase classname="tests.test_final_output_scope" name="test_explicit_price_absence_is_not_proved_by_future_flow_or_baseline[\u82e5\u65e0\u5176\u4ed6\u9006\u5411\u6d88\u606f\uff0c\u4ef7\u683c\u53ef\u80fd\u4e0a\u884c\uff1b\u4f46\u622a\u81f3\u76ee\u524d\u65e0\u4ef7\u683c\u53cd\u5e94\u3002]" time="0.000" /><testcase classname="tests.test_final_output_scope" name="test_explicit_price_absence_is_not_proved_by_future_flow_or_baseline[\u8be5\u5efa\u8bbe\u6d88\u606f\u672a\u4ea7\u751f\u5373\u65f6\u4ef7\u683c\u51b2\u51fb\u3002]" time="0.000" /><testcase classname="tests.test_final_output_scope" name="test_missing_observations_conditions_and_reference_levels_remain_distinct[\u65e0\u4ef7\u683c\u53cd\u5e94\u7684\u6570\u636e\u3002]" time="0.000" /><testcase classname="tests.test_final_output_scope" name="test_missing_observations_conditions_and_reference_levels_remain_distinct[\u65e0\u4ef7\u683c\u53cd\u5e94\u8bc1\u636e\u3002]" time="0.000" /><testcase classname="tests.test_final_output_scope" name="test_missing_observations_conditions_and_reference_levels_remain_distinct[\u65e0\u4ef7\u683c\u53cd\u5e94\u89c2\u6d4b\u8d44\u6599\u3002]" time="0.000" /><testcase classname="tests.test_final_output_scope" name="test_missing_observations_conditions_and_reference_levels_remain_distinct[\u65e0\u6cd5\u786e\u8ba4\u662f\u5426\u65e0\u4ef7\u683c\u53cd\u5e94\u3002]" time="0.000" /><testcase classname="tests.test_final_output_scope" name="test_missing_observations_conditions_and_reference_levels_remain_distinct[\u672a\u89c1\u4ef7\u683c\u53cd\u5e94\u3002]" time="0.000" /><testcase classname="tests.test_final_output_scope" name="test_missing_observations_conditions_and_reference_levels_remain_distinct[\u82e5\u6ca1\u6709\u4ef7\u683c\u53cd\u5e94\uff0c\u5219\u987b\u68c0\u67e5\u5176\u4ed6\u56e0\u7d20\u3002]" time="0.000" /><testcase classname="tests.test_final_output_scope" name="test_missing_observations_conditions_and_reference_levels_remain_distinct[\u9884\u8ba1\u5373\u65f6\u4ef7\u683c\u5f71\u54cd\u6709\u9650\u3002]" time="0.000" /><testcase classname="tests.test_final_output_scope" name="test_missing_observations_conditions_and_reference_levels_remain_distinct[\u9884\u8ba1\u65e0\u5373\u65f6\u4ef7\u683c\u53cd\u5e94\u3002]" time="0.000" /><testcase classname="tests.test_final_output_scope" name="test_missing_observations_conditions_and_reference_levels_remain_distinct[\u5f53\u524d\u5df2\u89c2\u5bdf\u540c\u5408\u7ea6\u4ef7\u683c\u57fa\u51c6\u6301\u5e73\uff0c\u516c\u544a\u540e\u7684\u4ef7\u683c\u53cd\u5e94\u672a\u77e5\u3002]" time="0.000" /><testcase classname="tests.test_final_output_scope" name="test_missing_observations_conditions_and_reference_levels_remain_distinct[\u8be5\u672a\u6765\u7ef4\u62a4\u5c1a\u672a\u5bfc\u81f4\u5b9e\u9645\u6d41\u91cf\u635f\u5931\uff1b\u4ef7\u683c\u53cd\u5e94\u672a\u77e5\u3002]" time="0.000" /><testcase classname="tests.test_final_output_scope" name="test_known_reaction_and_cjk_adjacent_alias_are_scoped_to_source_and_time" time="0.011" /><testcase classname="tests.test_final_output_scope" name="test_first_requests_all_twenty_add_only_explicit_supplied_unit_to_backend51753" time="0.255"><failure message="AssertionError: real_nyhamna&#10;assert '{&quot;as_of&quot;:&quot;20...rl，系统恢复原来源&quot;}}' == '{&quot;as_of&quot;:&quot;20...rl，系统恢复原来源&quot;}}'&#10;  &#10;  Skipping 20878 identical leading characters in diff, use -v to show&#10;  Skipping 10843 identical trailing characters in diff, use -v to show&#10;  - &quot;:88.175,&quot;observed_at&quot;:&quot;2026-10-19T11:31:00+00:00&quot;,&quot;available_at&quot;:&quot;2026-10-19T11:41:10.509603+00:00&quot;,&quot;price_type&quot;:&quot;delayed_last_trade&quot;,&quot;minimum_delay_minutes&quot;:15,&quot;stale&quot;:false,&quot;unit&quot;:&quot;EUR/MWh&quot;},&quot;verifi&#10;  + &quot;:88.175,&quot;unit&quot;:&quot;EUR/MWh&quot;,&quot;observed_at&quot;:&quot;2026-10-19T11:31:00+00:00&quot;,&quot;available_at&quot;:&quot;2026-10-19T11:41:10.509603+00:00&quot;,&quot;price_type&quot;:&quot;delayed_last_trade&quot;,&quot;minimum_delay_minutes&quot;:15,&quot;stale&quot;:false},&quot;verifi">def test_first_requests_all_twenty_add_only_explicit_supplied_unit_to_backend51753():
+        old=archive_analysis()
+        cases=json.loads((ROOT/'reports/repair_2026-10-20/semantic_regeneration_cases_v2_2.json').read_text())
+        for case in cases:
+            data,meta=prepare_context(case['candidate_context'],reserve_tokens=32)
+            prior,previous=old.prepare_context(case['candidate_context'],reserve_tokens=32)
+            expected=copy.deepcopy(prior)
+            quote=expected.get('price_reference',{}).get('intraday')
+            supplied=(case['candidate_context'].get('price_reference') or {}).get('intraday') or {}
+            if quote and 'unit' in supplied:quote['unit']=supplied['unit']
+&gt;           assert _json(data)==_json(expected),case['id']
+E           AssertionError: real_nyhamna
+E           assert '{"as_of":"20...rl，系统恢复原来源"}}' == '{"as_of":"20...rl，系统恢复原来源"}}'
+E             
+E             Skipping 20878 identical leading characters in diff, use -v to show
+E             Skipping 10843 identical trailing characters in diff, use -v to show
+E             - ":88.175,"observed_at":"2026-10-19T11:31:00+00:00","available_at":"2026-10-19T11:41:10.509603+00:00","price_type":"delayed_last_trade","minimum_delay_minutes":15,"stale":false,"unit":"EUR/MWh"},"verifi
+E             + ":88.175,"unit":"EUR/MWh","observed_at":"2026-10-19T11:31:00+00:00","available_at":"2026-10-19T11:41:10.509603+00:00","price_type":"delayed_last_trade","minimum_delay_minutes":15,"stale":false},"verifi
+
+tests/test_final_output_scope.py:147: AssertionError</failure></testcase><testcase classname="tests.test_final_output_scope" name="test_fitting_second_request_preserves_original_request_bytes" time="0.032" /><testcase classname="tests.test_final_output_scope" name="test_actual_eni_source_only_second_request_preserves_all_sources_no_third_call" time="0.203" /><testcase classname="tests.test_final_output_scope" name="test_request_still_too_large_stops_explicitly_without_extra_model_call" time="0.008" /></testsuite></testsuites>

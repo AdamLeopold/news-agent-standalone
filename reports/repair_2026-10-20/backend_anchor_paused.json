@@ -1,0 +1,26 @@
+{
+  "mode": "pause",
+  "changed_at": "2026-10-20T20:23:13.535142+00:00",
+  "old_pid": 72355,
+  "new_pid": 79518,
+  "old_prompt_version": "ttf-news-standalone-2.0",
+  "new_prompt_version": "ttf-news-standalone-2.1",
+  "inference_enabled": false,
+  "collector_enabled": true,
+  "ollama_service_stopped": false,
+  "pending_jobs_preserved": 7,
+  "protected_analyses": 129,
+  "protected_snapshots": 5,
+  "preservation_manifest": "reports/repair_2026-10-20/pre_anchor_preservation_manifest.json",
+  "backup": "data/backups/before-anchor-pause-20261020T202301Z.sqlite3",
+  "backup_sha256": "5e37d78a8f8d61612e05976d40de3659b3f357cf8ad811aea0d7960a33a23f2f",
+  "source_hashes": {
+    "ttf_news/analysis.py": "d302ca1994621aef9ed47257b4d355a09f68905e2e3e549b5a698e05b738c449",
+    "ttf_news/context.py": "6ae94608797de98b1129f673af219bde7e88faba1f4cf73a7456058d7350b23f",
+    "ttf_news/semantics.py": "3eb4139958c7f7f1c73925f25775bb5aeacb6c309155cb5286391e6ebc2faedb",
+    "ttf_news/prompts.py": "530d03e685092c9992bee59b20ce7ce4a2e34a8bcbe6805eafa024fa590d3570",
+    "ttf_news/runtime.py": "07e252bba1f0d12b74d47d7ad02cab1b247a21666b0ac5d333d311b7b1f203d2",
+    "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+    "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75"
+  }
+}

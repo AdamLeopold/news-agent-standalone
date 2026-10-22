@@ -1,0 +1,106 @@
+{
+  "observed_at": "2026-10-21T04:38:53.518924+00:00",
+  "model_calls": 0,
+  "source_sha256": "07632831d7335b0138203b78f55e4bc221c92d761628a40f09a4330834049028",
+  "observations": [
+    {
+      "text": "实际流量未恢复，供应约束持续。",
+      "extracted": []
+    },
+    {
+      "text": "实际流量已经恢复，供应约束解除。",
+      "extracted": [
+        {
+          "mechanism": "supply_increase",
+          "pressure": "down",
+          "conditional": false,
+          "quoted_fact": "实际流量已经恢复，供应约束解除",
+          "evidence_kind": "actual_flow"
+        }
+      ]
+    },
+    {
+      "text": "若实际流量未恢复，供应约束持续，价格上升",
+      "extracted": [
+        {
+          "mechanism": "supply_increase",
+          "pressure": "down",
+          "conditional": true,
+          "quoted_fact": "若实际流量未恢复，供应约束持续，价格上升",
+          "evidence_kind": "reported_fact"
+        }
+      ]
+    },
+    {
+      "text": "需求疲弱，价格上升。",
+      "extracted": [
+        {
+          "mechanism": "demand_decrease",
+          "pressure": "down",
+          "conditional": false,
+          "quoted_fact": "需求疲弱，价格上升",
+          "evidence_kind": "reported_fact"
+        },
+        {
+          "mechanism": "demand_increase",
+          "pressure": "up",
+          "conditional": false,
+          "quoted_fact": "需求疲弱，价格上升",
+          "evidence_kind": "reported_fact"
+        }
+      ]
+    },
+    {
+      "text": "需求强劲，价格下降。",
+      "extracted": [
+        {
+          "mechanism": "demand_decrease",
+          "pressure": "down",
+          "conditional": false,
+          "quoted_fact": "需求强劲，价格下降",
+          "evidence_kind": "reported_fact"
+        }
+      ]
+    },
+    {
+      "text": "库存下降，价格上升。",
+      "extracted": [
+        {
+          "mechanism": "inventory_build",
+          "pressure": "down",
+          "conditional": false,
+          "quoted_fact": "库存下降，价格上升",
+          "evidence_kind": "reported_fact"
+        },
+        {
+          "mechanism": "inventory_draw",
+          "pressure": "up",
+          "conditional": false,
+          "quoted_fact": "库存下降，价格上升",
+          "evidence_kind": "reported_fact"
+        }
+      ]
+    },
+    {
+      "text": "库存充足，价格下降。",
+      "extracted": [
+        {
+          "mechanism": "inventory_build",
+          "pressure": "down",
+          "conditional": false,
+          "quoted_fact": "库存充足，价格下降",
+          "evidence_kind": "reported_fact"
+        },
+        {
+          "mechanism": "inventory_draw",
+          "pressure": "up",
+          "conditional": false,
+          "quoted_fact": "库存充足，价格下降",
+          "evidence_kind": "reported_fact"
+        }
+      ]
+    }
+  ],
+  "finding": "Physical-quantity regex matches can cross a comma into a price predicate. Price changes then appear as a supply, demand, or inventory change, creating a false opposite mechanism or conflicting mechanisms.",
+  "inference_limit": "This deterministic input defect is demonstrated; these examples do not measure what fraction of market flat outputs it caused. Frozen real/synthetic model cases remain separate and unchanged."
+}

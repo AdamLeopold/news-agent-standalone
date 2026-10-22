@@ -1,0 +1,14 @@
+{
+  "status": "applied",
+  "canonical_analyses_modified": false,
+  "reviews": [
+    {
+      "analysis_id": "b1e9c166-8851-4f7c-9803-b9c72329f6a9",
+      "affected_parts": [
+        "brief"
+      ],
+      "protected_hashes_match": true,
+      "review_id": "source-tense-b1e9c166-8851-4f7c-9803-b9c72329f6a9-brief-v1"
+    }
+  ]
+}

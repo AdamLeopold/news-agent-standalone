@@ -1,0 +1,251 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T06:32:04.039695+00:00",
+  "scope": "Finite test-premise repair for6 failures from the authorized manual-source input projection; no production source or expected raw outcomes changed.",
+  "proposal_proof": {
+    "file": ".runtime/source-binding-test-premise-proposal/test-premise-only-proof.json",
+    "sha256": "989a5a1121f783f889a4be77a960b49493497a8cfb27f1a9e919020bca64e333"
+  },
+  "patch": {
+    "file": ".runtime/source-binding-test-premise-proposal/test-premise-only.patch",
+    "sha256": "cf4c2efc8bec823ea2fa94e9fc6f9019cb63b47538859c3c21290961d3c807ab"
+  },
+  "independent_initial_diagnosis": {
+    "file": "reports/repair_2026-10-20/independent_input_projection_old_guard_isolation_diagnosis_v2_3.json",
+    "sha256": "0b639cc7d807fd810687c7d46f87992365fc901a7f8aaa1ebdaf264814d2b673"
+  },
+  "changed_tests": {
+    "test_future_capacity_pressure_scope.py": {
+      "original": {
+        "file": ".runtime/source-binding-test-premise-proposal/original-tests/test_future_capacity_pressure_scope.py",
+        "sha256": "57cfb8e07c15b43bc3f46ff2c001ce544178a8a954a3a281a19aba27e3102173"
+      },
+      "new": {
+        "file": ".runtime/source-binding-test-premise-proposal/tests/test_future_capacity_pressure_scope.py",
+        "sha256": "4f2f8546fc59506840621f179b34ca0112872f0e251b7153088a06a05b9f91a5"
+      },
+      "changed_functions": [
+        "captured_legacy_prepared",
+        "test_actual_manual_pilot_both_drafts_now_reject_the_specific_future_current_window_claim",
+        "test_borrowed_interval_uses_normalized_operational_utc_clocks_and_is_complete_unique",
+        "test_missing_or_nonidentical_original_source_cannot_borrow_the_future_clock"
+      ],
+      "all_other_test_functions_ast_equal": true
+    },
+    "test_eighth_output_scope.py": {
+      "original": {
+        "file": ".runtime/source-binding-test-premise-proposal/original-tests/test_eighth_output_scope.py",
+        "sha256": "883452ffb99481b6b70b49fe66861b8cb1f94fb0436d1567ee94f7fc28ecb1ce"
+      },
+      "new": {
+        "file": ".runtime/source-binding-test-premise-proposal/tests/test_eighth_output_scope.py",
+        "sha256": "99720398bae7ad544781cf83d286adad0f97a667bd0d01af63a3055e63e6c726"
+      },
+      "changed_functions": [
+        "test_actual_detail_first_allocated_sources_are_valid_and_second_field_error_stays"
+      ],
+      "all_other_test_functions_ast_equal": true
+    },
+    "test_seventh_source_scope.py": {
+      "original": {
+        "file": ".runtime/source-binding-test-premise-proposal/original-tests/test_seventh_source_scope.py",
+        "sha256": "3e48460ab9dcf75ee9f4c9b72494d330cd1e5b6de91f193200a8e2091ba1d69e"
+      },
+      "new": {
+        "file": ".runtime/source-binding-test-premise-proposal/tests/test_seventh_source_scope.py",
+        "sha256": "581932d20f38cf99edb101ca79d1b7382b90366d81f51261ddef8e4dfc68ac71"
+      },
+      "changed_functions": [
+        "test_duplicate_alias_of_exact_notice_not_a_new_date_candidate"
+      ],
+      "all_other_test_functions_ast_equal": true
+    }
+  },
+  "portable_fixture": {
+    "file": ".runtime/source-binding-test-premise-proposal/tests/fixtures/legacy_manual_prepared_1aeb_v2_3.json",
+    "sha256": "6160ae3f5dafc0d9ee5c0276b272fa16ebc56de6cd725e8329966d740a8dd3e4"
+  },
+  "independent_reconstruction": {
+    "old_analysis": {
+      "file": ".runtime/source-archives/backend-64920/ttf_news/analysis.py",
+      "sha256": "1aebeb8971f13f61fd8bd4f9ab961b6284e811aeb773014ef7cc71874c94375c"
+    },
+    "records_checked": 9,
+    "prepared_full_metadata_and_source_index_rebuilt_exactly": true,
+    "rows": [
+      {
+        "key": "future_base",
+        "detail": false,
+        "input_sha256": "46d1e2802acfaa102d01c1008318920093300596e53933a8b608e680bfdbb3fc",
+        "prepared_sha256": "b27d53f0335c511d58c6d3e214dd7e63a6e5e14670714078521825984e44286d",
+        "source_index_sha256": "6f5471ccfd2295e28edb7776cab36c16e62c189607499f8a6271011e4975ce87",
+        "metadata_sha256": "eebe3e3698d3751addc4bb08fe6d50cf7c56c242d1b9efeff678d872eca31cf7",
+        "origin": {
+          "file": "tests/fixtures/future_capacity_pressure_actual_v2_3.json",
+          "sha256": "1f0d667ce3b6d6be7c0d28f2dd10f1820cdedfe8ce084b6ce12417aa50f1e5ad",
+          "case": "ninth_manual_pilot_2",
+          "raw_sha256": "b179f6da281a7b2f183779137c2e80a6bc404fa392dc41d281b4d4a3eacbcd8f"
+        }
+      },
+      {
+        "key": "future_no_index",
+        "detail": false,
+        "input_sha256": "46d1e2802acfaa102d01c1008318920093300596e53933a8b608e680bfdbb3fc",
+        "prepared_sha256": "b27d53f0335c511d58c6d3e214dd7e63a6e5e14670714078521825984e44286d",
+        "source_index_sha256": "6f5471ccfd2295e28edb7776cab36c16e62c189607499f8a6271011e4975ce87",
+        "metadata_sha256": "eebe3e3698d3751addc4bb08fe6d50cf7c56c242d1b9efeff678d872eca31cf7",
+        "origin": {
+          "file": "tests/fixtures/future_capacity_pressure_actual_v2_3.json",
+          "sha256": "1f0d667ce3b6d6be7c0d28f2dd10f1820cdedfe8ce084b6ce12417aa50f1e5ad",
+          "case": "ninth_manual_pilot_2",
+          "raw_sha256": "b179f6da281a7b2f183779137c2e80a6bc404fa392dc41d281b4d4a3eacbcd8f"
+        }
+      },
+      {
+        "key": "future_missing_title",
+        "detail": false,
+        "input_sha256": "8abcd458abb5c7987b5d203dc7229a29c6897a938810444896453f554135b026",
+        "prepared_sha256": "9ed6bf740023826c09caf44e883ac4b26f839023489994647067dfa6c3661b80",
+        "source_index_sha256": "a4bb1d37dcc297a6f1489e16a153c6d616afe537c6b3fd81d7ec76dca006a899",
+        "metadata_sha256": "334243471db9dc6e636af7d776bb7d00e163eed848e9f83fb625f954cae0891a",
+        "origin": {
+          "file": "tests/fixtures/future_capacity_pressure_actual_v2_3.json",
+          "sha256": "1f0d667ce3b6d6be7c0d28f2dd10f1820cdedfe8ce084b6ce12417aa50f1e5ad",
+          "case": "ninth_manual_pilot_2",
+          "raw_sha256": "b179f6da281a7b2f183779137c2e80a6bc404fa392dc41d281b4d4a3eacbcd8f"
+        }
+      },
+      {
+        "key": "future_missing_summary",
+        "detail": false,
+        "input_sha256": "865c9a719ee228cc80777c5d4d37b00b5848589c922d54b2f49f795318db3f87",
+        "prepared_sha256": "3ec97de988d364c749f89dcad327b0e4edfa46b2426bbf7fddc80ed3d2b8e3cf",
+        "source_index_sha256": "6f5471ccfd2295e28edb7776cab36c16e62c189607499f8a6271011e4975ce87",
+        "metadata_sha256": "726dfd57dd6e3c645594c0147410b3cfd9e73a020505cfd0e696c360ab85f0ff",
+        "origin": {
+          "file": "tests/fixtures/future_capacity_pressure_actual_v2_3.json",
+          "sha256": "1f0d667ce3b6d6be7c0d28f2dd10f1820cdedfe8ce084b6ce12417aa50f1e5ad",
+          "case": "ninth_manual_pilot_2",
+          "raw_sha256": "b179f6da281a7b2f183779137c2e80a6bc404fa392dc41d281b4d4a3eacbcd8f"
+        }
+      },
+      {
+        "key": "future_reason_only",
+        "detail": false,
+        "input_sha256": "657c2360d0117fcf71bcae96faa48f31a7855acfadee1827ad74d1cfd25d71f1",
+        "prepared_sha256": "fb1e667810ad0ddf0e43b8620108dab9e054ac6cd54af889c161c993f7c41197",
+        "source_index_sha256": "6f5471ccfd2295e28edb7776cab36c16e62c189607499f8a6271011e4975ce87",
+        "metadata_sha256": "e81e0fb199e13f165583d1294d19f09119480ea27e12c3c4cc9f86046d480091",
+        "origin": {
+          "file": "tests/fixtures/future_capacity_pressure_actual_v2_3.json",
+          "sha256": "1f0d667ce3b6d6be7c0d28f2dd10f1820cdedfe8ce084b6ce12417aa50f1e5ad",
+          "case": "ninth_manual_pilot_2",
+          "raw_sha256": "b179f6da281a7b2f183779137c2e80a6bc404fa392dc41d281b4d4a3eacbcd8f"
+        }
+      },
+      {
+        "key": "future_different_notice",
+        "detail": false,
+        "input_sha256": "089c518fa39d21b893c21c0763e7995c5a82689daa8de9844548207f6a27d15f",
+        "prepared_sha256": "b27d53f0335c511d58c6d3e214dd7e63a6e5e14670714078521825984e44286d",
+        "source_index_sha256": "6f5471ccfd2295e28edb7776cab36c16e62c189607499f8a6271011e4975ce87",
+        "metadata_sha256": "87280ef11f3fcda0b9fc5212f07f5efd1e4bb7d8ec666fbc9d6424d96a2c8f52",
+        "origin": {
+          "file": "tests/fixtures/future_capacity_pressure_actual_v2_3.json",
+          "sha256": "1f0d667ce3b6d6be7c0d28f2dd10f1820cdedfe8ce084b6ce12417aa50f1e5ad",
+          "case": "ninth_manual_pilot_2",
+          "raw_sha256": "b179f6da281a7b2f183779137c2e80a6bc404fa392dc41d281b4d4a3eacbcd8f"
+        }
+      },
+      {
+        "key": "future_future_known",
+        "detail": false,
+        "input_sha256": "4fd2fff547b875732673d52d7fa32ef6c8023159102d476fcef1ee8e320066c2",
+        "prepared_sha256": "5849be3a1c8f885e76bbabfec9041c56d8cb0b14356caa4d6d0dda2fc8ec81de",
+        "source_index_sha256": "319022b4e641dd4b7202787a96e8f27fafd33d6364396e95877d5d92e394f112",
+        "metadata_sha256": "5fb2f1abcdb43c315be878a87f5a611c17f72fed2983daba412516b35fd46728",
+        "origin": {
+          "file": "tests/fixtures/future_capacity_pressure_actual_v2_3.json",
+          "sha256": "1f0d667ce3b6d6be7c0d28f2dd10f1820cdedfe8ce084b6ce12417aa50f1e5ad",
+          "case": "ninth_manual_pilot_2",
+          "raw_sha256": "b179f6da281a7b2f183779137c2e80a6bc404fa392dc41d281b4d4a3eacbcd8f"
+        }
+      },
+      {
+        "key": "future_ambiguous_interval",
+        "detail": false,
+        "input_sha256": "558748c326cd44a41af82689e3a817fa4de6e0411f0c52db3abb1f265d3f68b1",
+        "prepared_sha256": "a0f0b35b62be7f57262d6453ef75f287c7ea20f3ffd61f67fd73ec2241b54b95",
+        "source_index_sha256": "6c7d0ca705d8de7b78cdae71ebfb98b5111905c6e66b577b4a2a8e4ebedb3e02",
+        "metadata_sha256": "ece17917bd589a50db6cdc15451e720f2ceb1350cc8e7989d8f5bbaf81c09e7e",
+        "origin": {
+          "file": "tests/fixtures/future_capacity_pressure_actual_v2_3.json",
+          "sha256": "1f0d667ce3b6d6be7c0d28f2dd10f1820cdedfe8ce084b6ce12417aa50f1e5ad",
+          "case": "ninth_manual_pilot_2",
+          "raw_sha256": "b179f6da281a7b2f183779137c2e80a6bc404fa392dc41d281b4d4a3eacbcd8f"
+        }
+      },
+      {
+        "key": "eighth_detail",
+        "detail": true,
+        "input_sha256": "49a6d00532c700bcf21590f7b99e875f729aa615f68b999b904cb034c6f48b4d",
+        "prepared_sha256": "99db698d0d37e81c13e932d382254553427b724a7c1f767f1eab6fec1c54486f",
+        "source_index_sha256": "b2d1a826442c9c7a3f57a16f3036b7cb61f4f4fd2dda2baa3c8ebaf153110a5c",
+        "metadata_sha256": "ccf44a61f11f262358bbe2fb96dce410d101ada219f9b940983fdce12b5c0b0d",
+        "origin": {
+          "file": "tests/fixtures/eighth_output_scope_actual_v2_3.json",
+          "sha256": "4257821205395fe7dc66123e93b04db7a0c9ca9849f23130a0bda6bfc78f4987",
+          "case": "detail_actual",
+          "raw_sha256": [
+            "b07bf109d9071e6610b6f9cf5de45415a13c2ac91b9378ae6ad8379b63ccaa45",
+            "0b1c7a33657edaec269ddc30c9dbcfacdd7cd19d47b2938977d954b3cfcf26d9"
+          ]
+        }
+      }
+    ],
+    "old_source_is_reconstruction_source_not_claimed_fresh_generation_source": true
+  },
+  "case_expectations_preserved": {
+    "future_capacity": "No-index/missing-original/ambiguous-interval controls use their original no-own-clock premise. Existing future-current-window raw remains rejected; timezone assertion compares identical instants.",
+    "eighth_detail": "Old immutable raw is checked against its original3-notice fact contract. It remains unchanged/failed; additional negative verifies its old const table is rejected against new projected2-notice input.",
+    "seventh_duplicate": "Copy the complete current source into distinctN3; exact duplicate accepted,8.0 conflicting capacity still rejected. Do not replace canonicalN0 with an alias-only pointer.",
+    "new_input_projection_integration": "All17 unchanged new preparation/projection tests remain in the focused set."
+  },
+  "independent_tests": {
+    "tests": 181,
+    "failures": 0,
+    "errors": 0,
+    "seconds": 10.849,
+    "log": {
+      "file": "reports/repair_2026-10-20/independent_source_binding_test_premise_tests_v2_3.log",
+      "sha256": "ff84915d98f70e5979a77bf66991e3c8dd344cdf1d622cd932c0bbf4648bf1f1"
+    },
+    "xml": {
+      "file": "reports/repair_2026-10-20/independent_source_binding_test_premise_tests_v2_3.xml",
+      "sha256": "0b91d6b5a860f66a4a716a9b9cdf7e5947694cd86054e4d11af9c1c219def014"
+    }
+  },
+  "original_failed_full_run": {
+    "log": {
+      "file": "reports/repair_2026-10-20/source-binding-final-unit-tests.log",
+      "sha256": "0fae2a59fd2e3dc5cfc1cf4d8b4df369d6a8e8eab1c5cef7df1ef60b0e17df50"
+    },
+    "xml": {
+      "file": "reports/repair_2026-10-20/source-binding-final-unit-tests.xml",
+      "sha256": "229b9f35d918e0b6ac3b4b3299f1feeb3b72b57520c20268501efaf7babcabd5"
+    },
+    "result": "6failed1497passed375subtests; preserved, not renamed success."
+  },
+  "runtime_public_portability": "Consumers load only the portable fixture and existing public tests/modules; no runtime import of private source archives is required. Final public full run remains separate and pending coherent publication mapping.",
+  "core_analysis_sha256": "5fbbadb4a01a8a4390ddc27f5c9958e79f13da9cf974c86390c2271a1b22e1f6",
+  "no_core_helper_schema_prompt_labels_or_profile_changes": true,
+  "no_model_inference_database_or_network_access": true,
+  "root_test_edits_by_this_auditor": false,
+  "verdict": "finite_test_only_repair_approved_preserves_original_assertion_intent",
+  "requirements_after_apply": [
+    "Keep the original failed full log/XML and all immutable model/raw records.",
+    "Run root full suite with these exact3tests+fixture and record a new uniquely named result.",
+    "Do not treat this test-premise repair as any production generation success."
+  ]
+}

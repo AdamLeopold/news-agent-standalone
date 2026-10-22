@@ -4,7 +4,7 @@
 
 React 页面使用同一套组件、CSS、中英双语字典和实际分析记录。GitHub Pages
 只托管静态资源；FastAPI、持续采集、SQLite 和 gpt-oss:20b 仍在原 Mac 运行。
-仅改变网站路径和 API 地址，不替换模型或分析规则。
+网站连接本机同一版本的分析引擎及数据库；模型仍为 Ollama gpt-oss:20b，分析引擎与历史预测分别保存版本。
 
 实时 API 已于 2026-10-19 经用户明确授权启用：
 `https://macbook-pro--5.tail9a0a45.ts.net:10000`。GitHub 页面直接连接该受限

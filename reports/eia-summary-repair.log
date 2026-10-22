@@ -1,0 +1,15 @@
+{
+  "sources": [
+    {
+      "source": "eia_summary_repair",
+      "status": "ok",
+      "attempted": 120,
+      "started_at": "2026-10-14T03:49:39.741700+00:00",
+      "repaired": 120,
+      "failures": [],
+      "finished_at": "2026-10-14T03:57:44.876565+00:00"
+    }
+  ],
+  "repaired": 120
+}
+total 3959

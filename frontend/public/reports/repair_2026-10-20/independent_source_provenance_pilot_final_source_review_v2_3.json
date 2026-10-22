@@ -1,0 +1,116 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T05:13:46.377451+00:00",
+  "scope": "Private narrow feasibility candidate source review only. Remove a deterministic output copy table and long operator evidence prefixes; preserve history enums, full prepared sources and all free-prose validations. No production adoption or empirical improvement claim.",
+  "proposal_manifest": {
+    "file": ".runtime/source-provenance-pilot-final/proposal_manifest.json",
+    "sha256": "dc6875635339a6d462879ca62030956ce213e4efcbe2874f47aaa33dd8679c62"
+  },
+  "candidate_analysis": {
+    "file": ".runtime/source-provenance-pilot-final/candidate_analysis.py",
+    "sha256": "f5ae74f4c5aaab81c8c40e9db737aab2b9baaf6d716d51eae18510df8131792a"
+  },
+  "candidate_overrides": {
+    "file": ".runtime/source-provenance-pilot-final/candidate_overrides.py",
+    "sha256": "8e8b13a9817edf21811efbe8fdda9b449e8d3cc7d666bac2365956ecc000db87"
+  },
+  "reviewed_base_analysis": {
+    "file": ".runtime/source-provenance-pilot-final/base_analysis.py",
+    "sha256": "8ac01ca8120def7f963cdeab8f4eb0bd2dae4c71eb921a9ab5941f70bf1fe1a5"
+  },
+  "base_independent_review": {
+    "file": "reports/repair_2026-10-20/independent_ninth_price_role_marker_final_source_review_v2_3.json",
+    "sha256": "553dc1049e525c6ebbc93a952b6c97bfaa17afb47563b2b203b2aca5f4be21aa"
+  },
+  "prepare_script": {
+    "file": ".runtime/source-provenance-pilot-final/prepare_pilot.py",
+    "sha256": "51e2606a5354f8a04c87b94608fddffcde89e3d517abbfeb1fdc68531a05c91d"
+  },
+  "runner": {
+    "file": ".runtime/source-provenance-pilot-final/run_pilot.py",
+    "sha256": "99e60bca0739129ea18c9540ec416b810e33eebf8d966a29a4351194443c34c7"
+  },
+  "build_proof": {
+    "file": ".runtime/source-provenance-pilot-final/build_proof.json",
+    "sha256": "fc3389acb35d2901b768c1d55224c720122f0e4a98a69d7bc9d15af70584c5df"
+  },
+  "independent_finite_controls": {
+    "file": "reports/repair_2026-10-20/independent_source_provenance_pilot_finite_controls_v2_3.json",
+    "sha256": "3ca2753635ad0f36ca6eb6ff2d252fa25bf2248d4834c24e110742639ebfc06c"
+  },
+  "independently_run_tests": {
+    "log": {
+      "file": "reports/repair_2026-10-20/independent-source-provenance-pilot-finite-tests-v2_3.log",
+      "sha256": "2f48e606759699adc9dfd0d37ee68411b8dfe46ed092f88833361ae9b1ed8e12"
+    },
+    "tests": 7,
+    "failures": 0,
+    "seconds": 2.783
+  },
+  "finite_findings": [
+    {
+      "scope": "copy_contract_only",
+      "verdict": "pass",
+      "reason": "The candidate begins with the exact8ac base bytes. Its appended overrides remove source_fact_checks from native output properties/required and replace only operator evidence item patterns with short known source ID prefixes. All original history/pricing/risk enums, lengths, array limits, scenarios and direction/score choices remain."
+    },
+    {
+      "scope": "free_prose_fact_and_causal_guards",
+      "verdict": "pass",
+      "reason": "The original NewsAnalyst.analyze pipeline and its fact/negation/role/price-clock/unit/forecast/history/priced-in guards are preserved. Removing the copied table does not disable the guards because they use frozen prepared sources.21 original known bad bodies remain rejected after only removing that copied table. All4 original ninth bodies remain rejected in additional independent replay."
+    },
+    {
+      "scope": "parse_no_fact_injection",
+      "verdict": "pass",
+      "reason": "The parser rejects any fresh model source_fact_checks field and delegates unchanged parsing, language, type, reference and output-bound checks. It does not trim output, rewrite prose/directions, insert source tables into the model result or call a correct table evidence of model verification."
+    },
+    {
+      "scope": "deterministic_provenance",
+      "verdict": "pass",
+      "reason": "The separate backend projection is a deep-copied input artifact, labeled generated_by_model=false, model_checked_facts=false and not a verified causal/forecast result. It contains no backend-supplied direction or score and does not mutate the prepared input."
+    },
+    {
+      "scope": "frozen_source_request_and_execution_limits",
+      "verdict": "pass_for_bounded_private_pilot",
+      "reason": "Both exact ninth inputs retain the same prepared source data and medium20b/seed17/options as their original first requests. Only the copying contracts and their explanatory system sentence change. The runner requires an exact plan hash, paused owned backend identity/fresh health, unchanged root dependencies, fixed original per-attempt budgets, unique immutable artifacts and at most2 requests per fixed context. No broad-budget fallback or best-of sample selection is allowed."
+    }
+  ],
+  "fixed_contexts": [
+    {
+      "case": "ninth_manual",
+      "actual_record": {
+        "file": "reports/repair_2026-10-20/production_ninth_manual_brief_failed_actual_v2_3.json",
+        "sha256": "2ef79ddad979f6696a8e5153fde38a55c45b047af20dac551fd83b1dbe9db676"
+      },
+      "original_input_sha256": "46d1e2802acfaa102d01c1008318920093300596e53933a8b608e680bfdbb3fc",
+      "profile_identical": true,
+      "prepared_source_input_identical": true
+    },
+    {
+      "case": "ninth_current",
+      "actual_record": {
+        "file": "reports/repair_2026-10-20/production_ninth_current_live_actual_v2_3.json",
+        "sha256": "4b8231a5e400b83a2cd872e9294bfe58c2b6b0c7871d6952c56d986b65272ab0"
+      },
+      "original_input_sha256": "f5b8c3ff24a5c1e1b8baa9f8ce986b2676b4e5872cb0702dbbf74344097509c7",
+      "profile_identical": true,
+      "prepared_source_input_identical": true
+    }
+  ],
+  "material_known_logic_errors": [],
+  "verdict": "finite_private_source_audit_passed_actual_feasibility_pending",
+  "may_run_only_parent_authorized_exact_two_context_pilot": true,
+  "production_adoption_approved": false,
+  "overall_release_passed": false,
+  "qualifications": [
+    "Token copy counts are deterministic component estimates; they do not show what caused earlier failures or latency.",
+    "The old ninth actuals were generated on the earlier source; strengthening their price-role guard and changing generation copy contracts are a combined feasibility intervention, not an isolated causal estimate.",
+    "Every new actual result, including parser-accepted text, requires independent complete prose/source/clock/capacity/flow/price/causal review.",
+    "Retaining history enums is intentional in this narrow candidate. No conclusion about long-form detail or other contexts follows from two brief contexts.",
+    "Original nine whole production failures, failed predictions and invalid completed-record metadata remain intact."
+  ],
+  "new_model_calls_by_reviewer": 0,
+  "database_access": false,
+  "network_calls_by_reviewer": 0,
+  "source_modification": false
+}

@@ -1,0 +1,45 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T04:14:15.654371+00:00",
+  "scope": "Append correction of the exact cause of seventh-detail date binding false positive; prior review/raw remain unchanged.",
+  "previous_review": {
+    "file": "reports/repair_2026-10-20/independent_production_seventh_completed_records_review_v2_3.json",
+    "sha256": "c90e8ac5ead23deb37ee35296d448b00f62f4049b0ed574a8504ecad053cd523"
+  },
+  "actual_record": {
+    "file": "reports/repair_2026-10-20/production_seventh_manual_detail_failed_actual_v2_3.json",
+    "sha256": "04300a13120d592d761d6b920d0799604108262ec3d833a78496aebe21a766af"
+  },
+  "raw_sha256": "769d8f1738ceecc738d798e4e7469fdd6b98cdf23f70e5749d958c8f0c2db180",
+  "previous_causal_diagnosis_withdrawn": "The claim that this exact prepared snapshot date ambiguity arises from manualN0 and sourceN1 duplicate intervals was imprecise. N0 lacks parsed event start/end in this snapshot, so it does not participate in dated interval lookup.",
+  "independent_read_only_reproduction": {
+    "N0": {
+      "unavailable_capacity": 7.6,
+      "event_start": null,
+      "event_end": null
+    },
+    "N1": {
+      "unavailable_capacity": 7.6,
+      "event_start_utc": "2026-10-22T04:00:00+00:00",
+      "event_end_utc": "2026-10-23T04:00:00+00:00"
+    },
+    "N2": {
+      "unavailable_capacity": 13.0,
+      "event_start_utc": "2026-10-21T04:00:00+00:00",
+      "event_end_utc": "2026-10-22T04:00:00+00:00"
+    }
+  },
+  "corrected_root_cause": "The old dated_capacity_claim uses calendar-day overlap, so22Oct matches bothN1 beginning22Oct04Z andN2 ending22Oct04Z. The output expressly says开始, so its date denotes a start and should bind toN1, not all intervals touching the calendar day.",
+  "limited_candidate_boundary": "An explicit start/effect date may match source start-day. A generic date without start/effect role retains the stricter overlap ambiguity rule. True same-announcement aliases may be deduplicated only with identical announcement/interval/capacity facts; conflicting sources never merge.",
+  "unchanged_conclusions": [
+    "The date capacity error in this exact second draft is a local false positive.",
+    "The first detailed draft has genuine physical-quantity and prior-day temporal-role errors.",
+    "The original whole detail run remains failed/null and is never retrospectively passed.",
+    "The second detailed draft still has P3 marginal revision mechanism/completeness limitations."
+  ],
+  "source_modified": false,
+  "model_calls": 0,
+  "database_access": false,
+  "network_calls": 0
+}

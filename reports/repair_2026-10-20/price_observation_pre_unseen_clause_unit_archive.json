@@ -1,0 +1,15 @@
+{
+  "tests": 724,
+  "subtests": 375,
+  "source_semantics_sha256": "d75a7555974b84a19e23f264203504e95ed48f9f243dc12ab6651ccf9e9afe64",
+  "artifacts": [
+    {
+      "file": "reports/repair_2026-10-20/price-observation-pre-unseen-clause-unit-tests.xml",
+      "sha256": "6fa5454e31f8d1024d03f50f4988e445de74b80b936c2e91766afbf670cb4224"
+    },
+    {
+      "file": "reports/repair_2026-10-20/price-observation-pre-unseen-clause-unit-tests.log",
+      "sha256": "49b6332e04bec3bde88c494a8889c7e455981c4364e3406575ea2488b81cf55b"
+    }
+  ]
+}

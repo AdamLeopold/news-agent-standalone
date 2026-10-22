@@ -1,0 +1,130 @@
+{
+  "observed_at": "2026-10-21T04:11:00.781723+00:00",
+  "gateway_pid": 32222,
+  "gateway_source_sha256": "08990e223d5e7d1d348967c9625fd29fc2d1e7e58bb000c964b9cfea43b59952",
+  "connections": [
+    {
+      "sequence": 1,
+      "status": 200,
+      "event_sha256": "bfa833058e147ffd3a47eee1249ad83a812eedcd563f0dcbf1214a67f3652d9b",
+      "cors": "https://adamleopold.github.io"
+    },
+    {
+      "sequence": 2,
+      "status": 200,
+      "event_sha256": "bfa833058e147ffd3a47eee1249ad83a812eedcd563f0dcbf1214a67f3652d9b",
+      "cors": "https://adamleopold.github.io"
+    },
+    {
+      "sequence": 3,
+      "status": 200,
+      "event_sha256": "bfa833058e147ffd3a47eee1249ad83a812eedcd563f0dcbf1214a67f3652d9b",
+      "cors": "https://adamleopold.github.io"
+    },
+    {
+      "sequence": 4,
+      "status": 200,
+      "event_sha256": "bfa833058e147ffd3a47eee1249ad83a812eedcd563f0dcbf1214a67f3652d9b",
+      "cors": "https://adamleopold.github.io"
+    },
+    {
+      "sequence": 5,
+      "status": 200,
+      "event_sha256": "bfa833058e147ffd3a47eee1249ad83a812eedcd563f0dcbf1214a67f3652d9b",
+      "cors": "https://adamleopold.github.io"
+    },
+    {
+      "sequence": 6,
+      "status": 200,
+      "event_sha256": "bfa833058e147ffd3a47eee1249ad83a812eedcd563f0dcbf1214a67f3652d9b",
+      "cors": "https://adamleopold.github.io"
+    },
+    {
+      "sequence": 7,
+      "status": 200,
+      "event_sha256": "bfa833058e147ffd3a47eee1249ad83a812eedcd563f0dcbf1214a67f3652d9b",
+      "cors": "https://adamleopold.github.io"
+    },
+    {
+      "sequence": 8,
+      "status": 200,
+      "event_sha256": "bfa833058e147ffd3a47eee1249ad83a812eedcd563f0dcbf1214a67f3652d9b",
+      "cors": "https://adamleopold.github.io"
+    },
+    {
+      "sequence": 9,
+      "status": 200,
+      "event_sha256": "bfa833058e147ffd3a47eee1249ad83a812eedcd563f0dcbf1214a67f3652d9b",
+      "cors": "https://adamleopold.github.io"
+    },
+    {
+      "sequence": 10,
+      "status": 200,
+      "event_sha256": "bfa833058e147ffd3a47eee1249ad83a812eedcd563f0dcbf1214a67f3652d9b",
+      "cors": "https://adamleopold.github.io"
+    },
+    {
+      "sequence": 11,
+      "status": 200,
+      "event_sha256": "bfa833058e147ffd3a47eee1249ad83a812eedcd563f0dcbf1214a67f3652d9b",
+      "cors": "https://adamleopold.github.io"
+    },
+    {
+      "sequence": 12,
+      "status": 200,
+      "event_sha256": "bfa833058e147ffd3a47eee1249ad83a812eedcd563f0dcbf1214a67f3652d9b",
+      "cors": "https://adamleopold.github.io"
+    },
+    {
+      "sequence": 13,
+      "status": 200,
+      "event_sha256": "bfa833058e147ffd3a47eee1249ad83a812eedcd563f0dcbf1214a67f3652d9b",
+      "cors": "https://adamleopold.github.io"
+    },
+    {
+      "sequence": 14,
+      "status": 200,
+      "event_sha256": "bfa833058e147ffd3a47eee1249ad83a812eedcd563f0dcbf1214a67f3652d9b",
+      "cors": "https://adamleopold.github.io"
+    },
+    {
+      "sequence": 15,
+      "status": 200,
+      "event_sha256": "bfa833058e147ffd3a47eee1249ad83a812eedcd563f0dcbf1214a67f3652d9b",
+      "cors": "https://adamleopold.github.io"
+    },
+    {
+      "sequence": 16,
+      "status": 200,
+      "event_sha256": "bfa833058e147ffd3a47eee1249ad83a812eedcd563f0dcbf1214a67f3652d9b",
+      "cors": "https://adamleopold.github.io"
+    },
+    {
+      "sequence": 17,
+      "status": 200,
+      "event_sha256": "bfa833058e147ffd3a47eee1249ad83a812eedcd563f0dcbf1214a67f3652d9b",
+      "cors": "https://adamleopold.github.io"
+    },
+    {
+      "sequence": 18,
+      "status": 200,
+      "event_sha256": "bfa833058e147ffd3a47eee1249ad83a812eedcd563f0dcbf1214a67f3652d9b",
+      "cors": "https://adamleopold.github.io"
+    },
+    {
+      "sequence": 19,
+      "status": 200,
+      "event_sha256": "bfa833058e147ffd3a47eee1249ad83a812eedcd563f0dcbf1214a67f3652d9b",
+      "cors": "https://adamleopold.github.io"
+    },
+    {
+      "sequence": 20,
+      "status": 200,
+      "event_sha256": "bfa833058e147ffd3a47eee1249ad83a812eedcd563f0dcbf1214a67f3652d9b",
+      "cors": "https://adamleopold.github.io"
+    }
+  ],
+  "model_calls": 0,
+  "status": "passed",
+  "scope": "20 sequential actual public HTTPS SSE connects and client closes after first event; 16 active cap remains separately tested."
+}

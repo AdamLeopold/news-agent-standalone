@@ -1,0 +1,109 @@
+{
+  "id": 19553,
+  "created_at": "2026-10-20T23:07:55.060724+00:00",
+  "type": "model_failure",
+  "data": {
+    "analysis_id": "02d2386b-b13e-4d38-8fc5-6ff2a2ab6f11",
+    "kind": "short",
+    "seconds": 244.21,
+    "error": "模型JSON两次校验失败，未生成方向：news_impact.summary:缺少公告前后价格反应，不能宣称已计价/已消化；须区分计价未知；news_impact.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，；news_impact.summary:N0来源仅说该井将封堵/弃置，不能写已被永久封堵/井已弃置/已完成封井；请保留将/计划等未来时态，不从报道日期已过推断完成。原句will now be plug",
+    "model_metadata": {
+      "prompt_version": "ttf-news-standalone-2.3",
+      "reasoning": "medium",
+      "configured_reasoning": "medium",
+      "semantic_high_retry_enabled": false,
+      "semantic_high_scope": "operator_notice",
+      "semantic_high_scope_eligible": false,
+      "semantic_high_eligible": false,
+      "semantic_independent_regeneration": false,
+      "model_calls": [
+        {
+          "num_ctx": 16384,
+          "num_predict": 3072,
+          "input_token_ceiling": 12800,
+          "input_token_estimate": 9009,
+          "retry_policy": "disabled",
+          "semantic_independent_regeneration": false,
+          "semantic_high_scope": "operator_notice",
+          "semantic_high_scope_eligible": false,
+          "semantic_high_eligible": false,
+          "system_prompt_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+          "response_schema_sha256": "ff0252ed7f85ba96493064ba4af4c8edc889938641adf142d9d4fa80369054dc",
+          "context_sha256": "cfb13b1133658a4f1ef4e0a4aa8f5eb7c7842a7b220321b7d450a8ea8137fda5",
+          "prompt_eval_count": 8956,
+          "eval_count": 1435,
+          "done_reason": "stop",
+          "total_duration_ns": 67947377833,
+          "raw_content": "{\"source_fact_checks\":{\"fact_contract_version\":\"operator-facts-2.2\",\"operator_notices\":[{\"id\":\"N1\",\"facility\":\"Troll\",\"facility_type\":\"气田/生产设施\",\"notice_type\":\"计划\",\"unavailable_capacity\":\"7.6\",\"period_utc\":[\"2026-10-22T04:00Z\",\"2026-10-23T04:00Z\"],\"state_description\":\"未来公告\",\"cause_original\":\"Yearly maintenance\"},{\"id\":\"N2\",\"facility\":\"Troll\",\"facility_type\":\"类别未给\",\"notice_type\":\"计划\",\"unavailable_capacity\":\"13.0\",\"period_utc\":[\"2026-10-21T04:00Z\",\"2026-10-22T04:00Z\"],\"state_description\":\"未来公告\",\"cause_original\":\"Yearly maintenance\"}],\"capacity_scope\":\"公告不可用容量，非实际流量计量\",\"pricing_observation\":{\"observed_at\":\"2026-10-20T20:59:00+00:00\",\"available_at\":\"2026-10-20T21:09:54.498786+00:00\",\"clock_roles\":{\"observed_at\":\"报价发生时刻\",\"available_at\":\"本机获知时刻；不是报价发生时刻\"},\"current_news_timing\":{\"id\":\"N0\",\"publication_time\":\"2026-10-19T07:51:38+00:00\",\"quote_relation\":\"at_or_after_publication\",\"quote_role\":\"已观察市场基准；单个报价不证明公告反应\"},\"reaction_evidence_available\":false,\"pricing_status\":\"无法确认是否已计价；不是尚未计价或价格无反应\"},\"non_overlapping_notice_ids\":[[\"N1\",\"N2\"]]},\"news_impact\":{\"bullish_evidence\":[],\"bearish_evidence\":[],\"neutralizing_evidence\":[],\"summary\":\"2026‑10‑19公布的Lakris油气发现将被永久封堵，2026‑10‑20公布的Troll气田计划维护将于10月21‑23日开始，均为未来事件，未产生即时供给损失或价格反应。\",\"contextual_news_score\":0,\"direction\":\"flat\",\"confidence\":0.4,\"signal_strength\":\"weak\"},\"close_forecast\":{\"basis\":\"截至2026‑10‑20未观察到前一交易日同合约价格锚点，且无市场基准可用，故无法判断是否已计价。\",\"summary\":\"缺乏前一交易日参考价，且新闻未产生即时价格反应，故对收盘价的方向性预测缺乏依据。\",\"evidence_status\":\"insufficient_evidence\",\"direction\":null,\"confidence\":0.3,\"extreme_move_risk\":\"未来10月21‑23日的Troll维护可能导致后续供给受限，若未及时恢复，可能推高价格。\"},\"analysis\":{\"summary\":\"本窗口内无即时供给损失或价格反应。2026‑10‑19的油气发现已被弃井，2026‑10‑20公布的Troll气田计划维护为未来事件。\",\"evidence\":[\"[N0] 2026‑10‑19公布的Lakris油气发现将被永久封堵 → TTF供给不变\",\"[N1]Troll；计划；公告不可用容量7.6mcm/d；未来容量公告；实流未知；TTF机制：capacity_constraint\",\"[N2]Troll；计划；公告不可用容量13.0mcm/d；未来容量公告；实流未知；结束时间修订：2026-10-23T06:00:00+0200→2026-10-22T06:00:00+0200；TTF机制：capacity_constraint\"],\"negation_or_reversal\":[],\"priced_in_comment\":\"price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格\",\"matched_terms\":[\"capacity_constraint\"],\"historical_comparisons\":[]},\"risk_flags\":[\"coverage:来源gdelt：最近采集失败；错误后等待重试\",\"coverage:来源gdelt：最近采集失败；错误后等待重试\",\"coverage:来源gdelt：最近采集失败；错误后等待重试\",\"coverage:来源gdelt：最近采集失败；错误后等待重试\",\"coverage:来源gdelt：最近采集失败；错误后等待重试\"],\"references\":[{\"id\":\"N0\",\"url\":\"\"},{\"id\":\"N1\",\"url\":\"\"},{\"id\":\"N2\",\"url\":\"\"}],\"missing_fields\":[]}",
+          "reference_resolution": {
+            "raw_reference_ids": [
+              "N0",
+              "N1",
+              "N2"
+            ],
+            "added_by_backend": [],
+            "input_provenance": {}
+          },
+          "validation_stage": "fact_or_mechanism",
+          "validation_errors": [
+            "close_forecast.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应",
+            "close_forecast.summary:输入没有这条公告的价格反应观测，不能断言未影响当前价格或价格未受影响；可判断当前新闻压力较弱、未来公告不计作当前停供，并说明价格反应未知",
+            "analysis.summary:N0来源仅说该井将封堵/弃置，不能写已被永久封堵/井已弃置/已完成封井；请保留将/计划等未来时态，不从报道日期已过推断完成。原句will now be plugged and abandoned；实际has been/was plugged完成事实须有相应来源，不改新闻或收盘方向"
+          ],
+          "validation_error": "close_forecast.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应；close_forecast.summary:输入没有这条公告的价格反应观测，不能断言未影响当前价格或价格未受影响；可判断当前新闻压力较弱、未来公告不计作当前停供，并说明价格反应未知；analysis.summary:N0来源仅说该井将封堵/弃置，不能写已被永久封堵/井已弃置/已完成封井；请保留将/计划等未来时态，不从报道日期已过推断完成。原句will now be plugged",
+          "request_reasoning": "medium"
+        },
+        {
+          "num_ctx": 16384,
+          "num_predict": 3072,
+          "input_token_ceiling": 12800,
+          "input_token_estimate": 9562,
+          "retry_policy": "disabled",
+          "semantic_independent_regeneration": false,
+          "semantic_high_scope": "operator_notice",
+          "semantic_high_scope_eligible": false,
+          "semantic_high_eligible": false,
+          "system_prompt_sha256": "3745dc43ee4f6f5eb3a49238b35b24b8baa8b24d5edc9d1c1d22bd3e0235c225",
+          "response_schema_sha256": "ff0252ed7f85ba96493064ba4af4c8edc889938641adf142d9d4fa80369054dc",
+          "context_sha256": "f3c23821b2d3fd289f3bce816065286ee57329b29f5f1b1a1aff0e2d3f2f5757",
+          "repair_draft": {
+            "version": "ttf-untrusted-repair-draft-1",
+            "previous_raw_sha256": "5a7bf3f056318407d8419633496585cb920dc2fb23e2c7e47462d41f94d7e297",
+            "is_evidence": false,
+            "included": true,
+            "payload_sha256": "29ad90aaf32eef709af5c4b2aadf773fd54cad5727c5a113495fd15e708c43f2",
+            "payload_tokens": 244,
+            "input_token_estimate": 9562,
+            "input_token_ceiling": 12800,
+            "source_facts_sha256": "d8c6c13c9141c9bcc7cfb2473527499ed4dc7498977ba97aef28fa632c5c7c88",
+            "summary_character_limit": 280,
+            "evidence_limit": 6
+          },
+          "prompt_eval_count": 9509,
+          "eval_count": 1802,
+          "done_reason": "stop",
+          "total_duration_ns": 174089952042,
+          "raw_content": "{\"source_fact_checks\":{\"fact_contract_version\":\"operator-facts-2.2\",\"operator_notices\":[{\"id\":\"N1\",\"facility\":\"Troll\",\"facility_type\":\"气田/生产设施\",\"notice_type\":\"计划\",\"unavailable_capacity\":\"7.6\",\"period_utc\":[\"2026-10-22T04:00Z\",\"2026-10-23T04:00Z\"],\"state_description\":\"未来公告\",\"cause_original\":\"Yearly maintenance\"},{\"id\":\"N2\",\"facility\":\"Troll\",\"facility_type\":\"类别未给\",\"notice_type\":\"计划\",\"unavailable_capacity\":\"13.0\",\"period_utc\":[\"2026-10-21T04:00Z\",\"2026-10-22T04:00Z\"],\"state_description\":\"未来公告\",\"cause_original\":\"Yearly maintenance\"}],\"capacity_scope\":\"公告不可用容量，非实际流量计量\",\"pricing_observation\":{\"observed_at\":\"2026-10-20T20:59:00+00:00\",\"available_at\":\"2026-10-20T21:09:54.498786+00:00\",\"clock_roles\":{\"observed_at\":\"报价发生时刻\",\"available_at\":\"本机获知时刻；不是报价发生时刻\"},\"current_news_timing\":{\"id\":\"N0\",\"publication_time\":\"2026-10-19T07:51:38+00:00\",\"quote_relation\":\"at_or_after_publication\",\"quote_role\":\"已观察市场基准；单个报价不证明公告反应\"},\"reaction_evidence_available\":false,\"pricing_status\":\"无法确认是否已计价；不是尚未计价或价格无反应\"},\"non_overlapping_notice_ids\":[[\"N1\",\"N2\"]]},\"news_impact\":{\"bullish_evidence\":[],\"bearish_evidence\":[],\"neutralizing_evidence\":[],\"summary\":\"当前窗口内无已计价的供给或需求冲击，未来维护公告未导致即时供给损失，油气发现已弃井，未产生价格反应。\",\"contextual_news_score\":0,\"direction\":\"flat\",\"confidence\":0.6,\"signal_strength\":\"weak\"},\"close_forecast\":{\"basis\":\"基于当前无供给损失公告及缺乏价格反应，未能确认价格已计入。\",\"summary\":\"缺乏前一交易日同合约价格锚点及即时价格反应，无法判断是否已计价，故无法给出收盘预测。\",\"evidence_status\":\"insufficient_evidence\",\"direction\":null,\"confidence\":0.5,\"extreme_move_risk\":\"缺乏前一交易日价格锚点，无法评估极端波动风险。\"},\"analysis\":{\"summary\":\"N0为未来弃井，N1/N2为未来维护，均未导致即时供给损失，故对TTF无净影响。\",\"evidence\":[\"[N0] 发现将被永久封堵 → TTF供给不变\",\"[N1]Troll；计划；公告不可用容量7.6mcm/d；未来容量公告；实流未知；TTF机制：供给受限（未来）\",\"[N2]Troll；计划；公告不可用容量13.0mcm/d；未来容量公告；实流未知；结束时间修订：2026-10-23T06:00:00+0200→2026-10-22T06:00:00+0200；TTF机制：供给受限（未来）\"],\"negation_or_reversal\":[],\"priced_in_comment\":\"price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格\",\"matched_terms\":[],\"historical_comparisons\":[]},\"risk_flags\":[],\"references\":[{\"id\":\"N0\",\"url\":\"\"},{\"id\":\"N1\",\"url\":\"\"},{\"id\":\"N2\",\"url\":\"\"}],\"missing_fields\":[]}",
+          "reference_resolution": {
+            "raw_reference_ids": [
+              "N0",
+              "N1",
+              "N2"
+            ],
+            "added_by_backend": [],
+            "input_provenance": {}
+          },
+          "validation_stage": "fact_or_mechanism",
+          "validation_errors": [
+            "news_impact.summary:缺少公告前后价格反应，不能宣称已计价/已消化；须区分计价未知",
+            "news_impact.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应",
+            "news_impact.summary:N0来源仅说该井将封堵/弃置，不能写已被永久封堵/井已弃置/已完成封井；请保留将/计划等未来时态，不从报道日期已过推断完成。原句will now be plugged and abandoned；实际has been/was plugged完成事实须有相应来源，不改新闻或收盘方向"
+          ],
+          "validation_error": "news_impact.summary:缺少公告前后价格反应，不能宣称已计价/已消化；须区分计价未知；news_impact.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，；news_impact.summary:N0来源仅说该井将封堵/弃置，不能写已被永久封堵/井已弃置/已完成封井；请保留将/计划等未来时态，不从报道日期已过推断完成。原句will now be plug",
+          "request_reasoning": "medium"
+        }
+      ],
+      "context_sha256": "f3c23821b2d3fd289f3bce816065286ee57329b29f5f1b1a1aff0e2d3f2f5757"
+    }
+  }
+}

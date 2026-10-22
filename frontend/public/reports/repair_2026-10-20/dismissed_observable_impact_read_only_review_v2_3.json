@@ -1,0 +1,53 @@
+{
+  "schema_version": "ttf-implicit-price-observable-absence-review-v1",
+  "created_at": "2026-10-21T00:34:41.505843+00:00",
+  "reviewer_type": "codex_subagent",
+  "source_record": "reports/repair_2026-10-20/candidate-final-output-scope-validation/dismissed_notice_not_verified_recovery.json",
+  "record_sha256": "eac8fdca4d7d9ee56172c5ecbf9ed3043aabcfecc1e97c4ebc72a83bb608c2cd",
+  "raw_content_sha256": "ff0860953edcff8326137e7680741f231c60ac52ca4cc792b735ecd278bb613d",
+  "input_sha256": "dc8a50f0ed4b2e64a5a97b9b3d697e61aa88afa3e25f195a97a44e8b017f36a0",
+  "source_sha256": {
+    "ttf_news/analysis.py": "d1bd8f44d4611a6f2aaee82a0e1b5255fdabdc57e34ef134f6edf0fb8bfb0b4b",
+    "ttf_news/semantics.py": "f719c02ef7f2c4017d4cc9a2e428befd1f6e6dc104895e6a5776d475ea8f86d3",
+    "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d"
+  },
+  "read_only": {
+    "source_or_test_or_script_edits": false,
+    "DB_API_model_service_actions": false,
+    "original_record_strict_status_or_result_changed": false,
+    "implementation_performed": false
+  },
+  "actual": {
+    "contract_passed": true,
+    "attempt_count": 1,
+    "field": "close_forecast.basis",
+    "text": "无可用前一交易日参考价，缺乏独立流量确认，新闻未产生可观测冲击。",
+    "current_semantic_errors": [],
+    "announcement_reaction_evidence_supplied": false,
+    "actual_flow_confirmation_supplied": false
+  },
+  "independent_review": {
+    "verdict": "P2 unsupported observable-impact absence in price-forecast basis",
+    "grammar": "新闻未产生可观测冲击 is an unqualified completed-effect negative. It is not 新闻未见冲击证据 / 无法确认 / 预计传导弱. In close_forecast.basis the implied result concerns the price forecast. Missing reference and flow data cannot establish this observed zero.",
+    "separate_valid_parts": "Insufficient/null close follows genuinely missing comparison anchor; source-scoped cancellation and unknown recovery do not need a forced direction change.",
+    "root_cause": "Current observation patterns require explicit price/market noun, so a generic observable impact predicate in a price-specific field is not evaluated."
+  },
+  "proposed_narrow_family_only_after_permission": {
+    "scope": "Only close_forecast.basis and close_forecast.summary (price-specific fields) for an unqualified negated causal predicate with explicit 可观测/可测/可量化/可观察 modifier immediately qualifying generic 冲击/影响. Do not match arbitrary 影响小/传导弱/有限 or force any label.",
+    "source_support": "Use separately known independent comparable price-reaction evidence, or a cited source reporting an explicit price/market observation beforeasof. A bare physical flow note cannot support implicit price-zero; a source merely saying 缺反应资料 cannot support zero either.",
+    "preserve": [
+      "若/如果/预计/可能 clauses scoped locally",
+      "可观测冲击的证据/数据/资料不足 and 未见资料",
+      "清楚写供气/实际流量/物理/供给对象的特定future事件否定因果",
+      "预测即时影响有限、传导较弱、存在但无法量化",
+      "有真实前后反应资料支持的pricezero",
+      "observed baseline level unchanged without saying the announcement had no reaction"
+    ],
+    "reject_controls": [
+      "close basis: 新闻未产生可观测冲击 (no observations)",
+      "close summary: 该公告没有造成可量化影响 (no observations)",
+      "若维持其他条件，但新闻未产生可测冲击 (earlier if cannot crossbut)"
+    ],
+    "request_and_evidence_boundary": "No source/input/system/schema/retry/labels changes. Keep original actual strictTrue immutable, independentP2 separately. Finish frozen8actual first; only later authorize gate+focused tests, fullpath proof, and new actual affected cases."
+  }
+}

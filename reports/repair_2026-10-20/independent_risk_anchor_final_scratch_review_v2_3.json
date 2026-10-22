@@ -1,0 +1,97 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "audited_at": "2026-10-21T01:25:04.550600+00:00",
+  "status": "finite_scratch_audit_passed_ready_for_parent_apply",
+  "scratch_semantics_sha256": "019afbdb2e92f5f77ac9555d3c335aae8c20a73791129984bee50fb5d111a968",
+  "root_semantics_sha256_at_audit": "d739882a6d6c7e38432f5d4a46f292a6a7b4e63987a3d96095b4feb5ac9982e2",
+  "verdict": "no_material_issue_remaining_in_requested_risk_counter_and_anchor_scope",
+  "independent_controls": [
+    {
+      "claim": "[N0]TTF机制：供应风险降低，但需求实际增加，净上行压力",
+      "expected": "reject_unsourced_counter",
+      "passed": true,
+      "errors": [
+        "news_impact.bullish_evidence[0]:供应风险降低是TTF边际下行/中和机制，供应风险上升是边际上行机制；风险变化不等于实际流量恢复或损失，不能反放证据栏。须按引用事实重算/分栏，净方向仍可flat，不补实际流量。"
+      ]
+    },
+    {
+      "claim": "[N0]TTF机制：供应风险降低，但供气实际减少，净上行压力",
+      "expected": "reject_unsourced_counter",
+      "passed": true,
+      "errors": [
+        "news_impact.bullish_evidence[0]:供应风险降低是TTF边际下行/中和机制，供应风险上升是边际上行机制；风险变化不等于实际流量恢复或损失，不能反放证据栏。须按引用事实重算/分栏，净方向仍可flat，不补实际流量。"
+      ]
+    },
+    {
+      "claim": "[N0]TTF机制：供应风险降低，但需求可能增加，净上行压力",
+      "expected": "reject_unsourced_counter",
+      "passed": true,
+      "errors": [
+        "news_impact.bullish_evidence[0]:供应风险降低是TTF边际下行/中和机制，供应风险上升是边际上行机制；风险变化不等于实际流量恢复或损失，不能反放证据栏。须按引用事实重算/分栏，净方向仍可flat，不补实际流量。"
+      ]
+    },
+    {
+      "claim": "供应风险降低，但需求实际增加，净上行压力",
+      "source": "当前公告供应风险降低；未来寒潮可能增加取暖需求。",
+      "expected": "reject",
+      "observed": "reject",
+      "passed": true
+    },
+    {
+      "claim": "供应风险降低，但寒潮可能增加取暖需求，存在条件上行压力",
+      "source": "当前公告供应风险降低；未来寒潮可能增加取暖需求。",
+      "expected": "allow",
+      "observed": "allow",
+      "passed": true
+    },
+    {
+      "actual": "anchorlegal_valid_baseline_null_without_reversal",
+      "expected": "reject",
+      "passed": true,
+      "errors": [
+        "close_forecast:已有有效同合约盘中方向基准；新闻影响较弱或无法证明单新闻价格因果、未知是否计价，不能单独取消相对已给前价的条件性收盘预判。请权衡真实基准与有来源的冲突机制，保留五档选择，不得自动复制新闻方向或把参考变化当已实现收盘"
+      ]
+    }
+  ],
+  "shared_input_functions": [
+    {
+      "function": "_matching_mechanisms",
+      "AST_equal": true
+    },
+    {
+      "function": "extract_mechanisms",
+      "AST_equal": true
+    },
+    {
+      "function": "prospective_supply_only",
+      "AST_equal": true
+    },
+    {
+      "function": "source_fact_projection",
+      "AST_equal": true
+    },
+    {
+      "function": "notice_settlement_timing",
+      "AST_equal": true
+    }
+  ],
+  "focused_tests": {
+    "passed": 49,
+    "elapsed_seconds": 0.54,
+    "junit_path": "reports/repair_2026-10-20/independent_risk_anchor_scratch_tests_v2_3.xml",
+    "junit_sha256": "daec50c0cab33fcf8e9b8bc68b6e6428222b7646b2fdcffff8949a69e35462a3"
+  },
+  "findings": [
+    "Supply-shortage risk relief is price-downward/marginal-neutral pressure, shortage risk increase upward; surplus-risk polarity reversed. New result-only risk classifier does not assert measured flow or change net label.",
+    "Opposite evidence bucket cannot be rescued by generated counterfact; citation-known source must support matching opposing mechanism. Explicit actual counterclaim cannot borrow future/conditional source as observation; true conditional forecast counter retains source modality.",
+    "Known material same-contract baseline with newsflat and closeNone needs cited source-backed opposing mechanism conflict; absent reversal proof alone no longer disables forecast. Missing/stale/nonmaterial baseline controls and actual cited source conflict remain allowed.",
+    "Existing baseline reversal diagnostic no longer recommends unconditional insufficient_evidence escape. Direction/class never substituted by validation."
+  ],
+  "limits": [
+    "Pure tests and source review cannot establish actual model correction; affected actual requests must be determined by complete path proof and freshly generated.",
+    "Root28f/d739 actual records including both acceptedP2 remain unchanged; this report is scratch validation, not retroactive success.",
+    "Finite requested boundaries only; no new global source extraction or generic all-text mechanism validation."
+  ],
+  "no_model_api_database_or_core_edits_by_reviewer": true
+}

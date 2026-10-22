@@ -1,0 +1,55 @@
+{
+  "created_at": "2026-10-21T03:19:09.432352+00:00",
+  "status": "passed",
+  "scope": "Explicit requested price-zero full/public/focused/registration logs and current operational-anchor self-tests. No sync or publication performed.",
+  "script": "scripts/sync-public-evidence.py",
+  "previous_script_sha256": "f99aeefa43da5edabbcf686ae91a65d8129e2bd57ca4b867048803004ff57fb4",
+  "script_sha256": "4c1528dc30ec03b089ee8777edbfeb2b7d4fcbd2f2f31d115d5c8ed6483dfec8",
+  "added_logs": [
+    {
+      "file": "reports/repair_2026-10-20/price-zero-final-unit-tests.log",
+      "source_exists_at_check": true,
+      "sha256_at_check": "8e1ae12e064cf1f0b7fc5544373546da8d1dac27a4861ecb28027ba48a9240d1",
+      "explicit_log_allowlist_entry": true,
+      "success_not_inferred_from_presence": true
+    },
+    {
+      "file": "reports/repair_2026-10-20/publish-backend-price-zero-final-tests.log",
+      "source_exists_at_check": false,
+      "sha256_at_check": null,
+      "explicit_log_allowlist_entry": true,
+      "success_not_inferred_from_presence": true
+    },
+    {
+      "file": "reports/repair_2026-10-20/price-zero-consistency-report-self-tests.log",
+      "source_exists_at_check": true,
+      "sha256_at_check": "bfc16cc612ffccd3482cfa0bea390e7a305ad95522ba14e590881fd23f9014d1",
+      "explicit_log_allowlist_entry": true,
+      "success_not_inferred_from_presence": true
+    },
+    {
+      "file": "reports/repair_2026-10-20/price-zero-observation-focused-tests.log",
+      "source_exists_at_check": false,
+      "sha256_at_check": null,
+      "explicit_log_allowlist_entry": true,
+      "success_not_inferred_from_presence": true
+    },
+    {
+      "file": "reports/repair_2026-10-20/anchor-operational-report-self-tests.log",
+      "source_exists_at_check": true,
+      "sha256_at_check": "39eabb682f3ffc51ad543f97265baa2c5663b82786db8248da202b2470103ace",
+      "explicit_log_allowlist_entry": true,
+      "success_not_inferred_from_presence": true
+    }
+  ],
+  "self_tests": {
+    "passed": 23,
+    "failed": 0
+  },
+  "encoded_json_raw_preservation_logic_changed": false,
+  "report_helper_changed": false,
+  "sync_executed": false,
+  "model_calls": 0,
+  "database_access": false,
+  "network_calls": 0
+}

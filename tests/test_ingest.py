@@ -192,16 +192,16 @@ def test_offshore_broken_rss_redirect_uses_bounded_api_and_preserves_failure(tmp
                                                        'feed_url': 'https://offshore.example.org/feed',
                                                        'api_url': 'https://offshore.example.org/api/articles'}])
     store = Store(tmp_path / 'rss-fallback.db')
-    store.set_source_state('offshore_energy', {'last_success_at': previous_success.isoformat(), 'archive_cursor': 29,
+    store.set_source_state('offshore_energy', {'last_success_at': previous_success.isoformat(), 'last_complete_api_success_at': previous_success.isoformat(), 'archive_cursor': 29,
                                               'historical_pages': 28, 'historical_status': 'ok', 'backfill_completed_at': previous_success.isoformat()})
     result = asyncio.run(ingest.poll_sources(store))
     state = store.get_source_state('offshore_energy')
     assert result['total_created'] == 1 and result['sources'][0]['status'] == 'partial'
-    assert state['live_transport'] == 'api_fallback' and state['last_success_at']
+    assert state['live_transport'] == 'api_primary' and state['last_success_at']
     assert state['failures'] and 'www.offshore.example.org/feed' in state['failures'][-1]['error']
     api = next(url for url in requests if url.path == '/api/articles')
     expected_start = (previous_success - timedelta(days=1)).date().isoformat() + 'T00:00:00.000Z'
-    assert api.params['where[and][0][publishedAt][greater_than_equal]'] == expected_start
+    assert api.params['where[and][0][or][0][publishedAt][greater_than_equal]'] == expected_start
     assert api.params['page'] == '1'
     assert state['archive_cursor'] == 29 and state['historical_status'] == 'ok'
     fresh = store.news()[0]
@@ -226,5 +226,5 @@ def test_offshore_first_start_rss_failure_only_queries_two_recent_days(tmp_path,
     result = asyncio.run(ingest.poll_sources(store))
     assert result['sources'][0]['status'] == 'partial'
     assert len(api_calls) == 1
-    assert api_calls[0].params['where[and][0][publishedAt][greater_than_equal]'] == (now - timedelta(days=2)).date().isoformat() + 'T00:00:00.000Z'
-    assert store.get_source_state('offshore_energy')['live_transport'] == 'api_fallback'
+    assert api_calls[0].params['where[and][0][or][0][publishedAt][greater_than_equal]'] == (now - timedelta(days=2)).date().isoformat() + 'T00:00:00.000Z'
+    assert store.get_source_state('offshore_energy')['live_transport'] == 'api_primary'

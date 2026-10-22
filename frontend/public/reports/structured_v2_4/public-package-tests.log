@@ -1,0 +1,1945 @@
+........................................s...... [  3%]
+.....ss..................................................F............ [  7%]
+......................................s................................. [ 12%]
+..................................................................... [ 16%]
+........................................FFFFFFFF...FFF................ [ 21%]
+...................................................ss................... [ 25%]
+....................................................FF..FF.............. [ 30%]
+........................................................................ [ 35%]
+........................................................................ [ 39%]
+.....................................FFFFFFFFFFFFFFFFF.................. [ 44%]
+...................................................................... [ 48%]
+........................................................................ [ 53%]
+........................................................................ [ 58%]
+..........................................FFFFFFFF...FFF................ [ 62%]
+........................................................................................................................... [ 70%]
+.................................................... [ 73%]
+.......................... [ 75%]
+....................................................... [ 79%]
+............................. [ 81%]
+................................................. [ 84%]
+........................................................................ [ 88%]
+........................................................................FFF.FFFFFFF.....................FFFF............. [ 96%]
+.....................................................                    [100%]
+=================================== FAILURES ===================================
+___________ test_frozen_p12_keeps_full_n0_and_all_canonical_aliases ____________
+
+    def test_frozen_p12_keeps_full_n0_and_all_canonical_aliases():
+        for name in ("manual_brief", "current_live"):
+>           context = json.loads((ROOT / f"reports/repair_2026-10-20/production_twelfth_{name}_actual_v2_3.json").read_text())["input_snapshot"]
+
+tests/test_clause_evidence.py:56: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py:1132: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('.runtime/github-publish/reports/repair_2026-10-20/production_twelfth_manual_brief_actual_v2_3.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: '.runtime/github-publish/reports/repair_2026-10-20/production_twelfth_manual_brief_actual_v2_3.json'
+
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py:1117: FileNotFoundError
+_____________ test_fifteen_old_known_bad_bodies_remain_rejected[0] _____________
+
+index = 0
+
+    @pytest.mark.parametrize('index',range(15))
+    def test_fifteen_old_known_bad_bodies_remain_rejected(index):
+     if index==14:
+      frozen=json.loads((ROOT/'tests/fixtures/fifth_production_scopes_v2_3.json').read_text())['current'];ctx=frozen['input_snapshot'];res=json.loads(frozen['raw_content'])
+     else:
+      rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records'];location=rows[index].get('source_record') or rows[index].get('source_fixture');path=ROOT/location['file']
+>     d=json.loads(verified_historical_bytes(path,location['sha256']));ctx=dec(d['input_snapshot']);res=dec(d.get('raw_result') or d.get('raw_content') or d.get('result'))
+
+tests/test_evidence_slot_price_scope.py:113: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x126542200>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+_____________ test_fifteen_old_known_bad_bodies_remain_rejected[1] _____________
+
+index = 1
+
+    @pytest.mark.parametrize('index',range(15))
+    def test_fifteen_old_known_bad_bodies_remain_rejected(index):
+     if index==14:
+      frozen=json.loads((ROOT/'tests/fixtures/fifth_production_scopes_v2_3.json').read_text())['current'];ctx=frozen['input_snapshot'];res=json.loads(frozen['raw_content'])
+     else:
+      rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records'];location=rows[index].get('source_record') or rows[index].get('source_fixture');path=ROOT/location['file']
+>     d=json.loads(verified_historical_bytes(path,location['sha256']));ctx=dec(d['input_snapshot']);res=dec(d.get('raw_result') or d.get('raw_content') or d.get('result'))
+
+tests/test_evidence_slot_price_scope.py:113: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x126529cf0>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+_____________ test_fifteen_old_known_bad_bodies_remain_rejected[2] _____________
+
+index = 2
+
+    @pytest.mark.parametrize('index',range(15))
+    def test_fifteen_old_known_bad_bodies_remain_rejected(index):
+     if index==14:
+      frozen=json.loads((ROOT/'tests/fixtures/fifth_production_scopes_v2_3.json').read_text())['current'];ctx=frozen['input_snapshot'];res=json.loads(frozen['raw_content'])
+     else:
+      rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records'];location=rows[index].get('source_record') or rows[index].get('source_fixture');path=ROOT/location['file']
+>     d=json.loads(verified_historical_bytes(path,location['sha256']));ctx=dec(d['input_snapshot']);res=dec(d.get('raw_result') or d.get('raw_content') or d.get('result'))
+
+tests/test_evidence_slot_price_scope.py:113: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x1266e6b00>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+_____________ test_fifteen_old_known_bad_bodies_remain_rejected[3] _____________
+
+index = 3
+
+    @pytest.mark.parametrize('index',range(15))
+    def test_fifteen_old_known_bad_bodies_remain_rejected(index):
+     if index==14:
+      frozen=json.loads((ROOT/'tests/fixtures/fifth_production_scopes_v2_3.json').read_text())['current'];ctx=frozen['input_snapshot'];res=json.loads(frozen['raw_content'])
+     else:
+      rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records'];location=rows[index].get('source_record') or rows[index].get('source_fixture');path=ROOT/location['file']
+>     d=json.loads(verified_historical_bytes(path,location['sha256']));ctx=dec(d['input_snapshot']);res=dec(d.get('raw_result') or d.get('raw_content') or d.get('result'))
+
+tests/test_evidence_slot_price_scope.py:113: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x1260177c0>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+_____________ test_fifteen_old_known_bad_bodies_remain_rejected[4] _____________
+
+index = 4
+
+    @pytest.mark.parametrize('index',range(15))
+    def test_fifteen_old_known_bad_bodies_remain_rejected(index):
+     if index==14:
+      frozen=json.loads((ROOT/'tests/fixtures/fifth_production_scopes_v2_3.json').read_text())['current'];ctx=frozen['input_snapshot'];res=json.loads(frozen['raw_content'])
+     else:
+      rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records'];location=rows[index].get('source_record') or rows[index].get('source_fixture');path=ROOT/location['file']
+>     d=json.loads(verified_historical_bytes(path,location['sha256']));ctx=dec(d['input_snapshot']);res=dec(d.get('raw_result') or d.get('raw_content') or d.get('result'))
+
+tests/test_evidence_slot_price_scope.py:113: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x12626b190>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+_____________ test_fifteen_old_known_bad_bodies_remain_rejected[5] _____________
+
+index = 5
+
+    @pytest.mark.parametrize('index',range(15))
+    def test_fifteen_old_known_bad_bodies_remain_rejected(index):
+     if index==14:
+      frozen=json.loads((ROOT/'tests/fixtures/fifth_production_scopes_v2_3.json').read_text())['current'];ctx=frozen['input_snapshot'];res=json.loads(frozen['raw_content'])
+     else:
+      rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records'];location=rows[index].get('source_record') or rows[index].get('source_fixture');path=ROOT/location['file']
+>     d=json.loads(verified_historical_bytes(path,location['sha256']));ctx=dec(d['input_snapshot']);res=dec(d.get('raw_result') or d.get('raw_content') or d.get('result'))
+
+tests/test_evidence_slot_price_scope.py:113: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x1266e22c0>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+_____________ test_fifteen_old_known_bad_bodies_remain_rejected[6] _____________
+
+index = 6
+
+    @pytest.mark.parametrize('index',range(15))
+    def test_fifteen_old_known_bad_bodies_remain_rejected(index):
+     if index==14:
+      frozen=json.loads((ROOT/'tests/fixtures/fifth_production_scopes_v2_3.json').read_text())['current'];ctx=frozen['input_snapshot'];res=json.loads(frozen['raw_content'])
+     else:
+      rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records'];location=rows[index].get('source_record') or rows[index].get('source_fixture');path=ROOT/location['file']
+>     d=json.loads(verified_historical_bytes(path,location['sha256']));ctx=dec(d['input_snapshot']);res=dec(d.get('raw_result') or d.get('raw_content') or d.get('result'))
+
+tests/test_evidence_slot_price_scope.py:113: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x1266809a0>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+_____________ test_fifteen_old_known_bad_bodies_remain_rejected[7] _____________
+
+index = 7
+
+    @pytest.mark.parametrize('index',range(15))
+    def test_fifteen_old_known_bad_bodies_remain_rejected(index):
+     if index==14:
+      frozen=json.loads((ROOT/'tests/fixtures/fifth_production_scopes_v2_3.json').read_text())['current'];ctx=frozen['input_snapshot'];res=json.loads(frozen['raw_content'])
+     else:
+      rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records'];location=rows[index].get('source_record') or rows[index].get('source_fixture');path=ROOT/location['file']
+>     d=json.loads(verified_historical_bytes(path,location['sha256']));ctx=dec(d['input_snapshot']);res=dec(d.get('raw_result') or d.get('raw_content') or d.get('result'))
+
+tests/test_evidence_slot_price_scope.py:113: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x1266e44c0>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+____________ test_fifteen_old_known_bad_bodies_remain_rejected[11] _____________
+
+index = 11
+
+    @pytest.mark.parametrize('index',range(15))
+    def test_fifteen_old_known_bad_bodies_remain_rejected(index):
+     if index==14:
+      frozen=json.loads((ROOT/'tests/fixtures/fifth_production_scopes_v2_3.json').read_text())['current'];ctx=frozen['input_snapshot'];res=json.loads(frozen['raw_content'])
+     else:
+      rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records'];location=rows[index].get('source_record') or rows[index].get('source_fixture');path=ROOT/location['file']
+>     d=json.loads(verified_historical_bytes(path,location['sha256']));ctx=dec(d['input_snapshot']);res=dec(d.get('raw_result') or d.get('raw_content') or d.get('result'))
+
+tests/test_evidence_slot_price_scope.py:113: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x126250370>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+____________ test_fifteen_old_known_bad_bodies_remain_rejected[12] _____________
+
+index = 12
+
+    @pytest.mark.parametrize('index',range(15))
+    def test_fifteen_old_known_bad_bodies_remain_rejected(index):
+     if index==14:
+      frozen=json.loads((ROOT/'tests/fixtures/fifth_production_scopes_v2_3.json').read_text())['current'];ctx=frozen['input_snapshot'];res=json.loads(frozen['raw_content'])
+     else:
+      rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records'];location=rows[index].get('source_record') or rows[index].get('source_fixture');path=ROOT/location['file']
+>     d=json.loads(verified_historical_bytes(path,location['sha256']));ctx=dec(d['input_snapshot']);res=dec(d.get('raw_result') or d.get('raw_content') or d.get('result'))
+
+tests/test_evidence_slot_price_scope.py:113: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x126129e70>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+____________ test_fifteen_old_known_bad_bodies_remain_rejected[13] _____________
+
+index = 13
+
+    @pytest.mark.parametrize('index',range(15))
+    def test_fifteen_old_known_bad_bodies_remain_rejected(index):
+     if index==14:
+      frozen=json.loads((ROOT/'tests/fixtures/fifth_production_scopes_v2_3.json').read_text())['current'];ctx=frozen['input_snapshot'];res=json.loads(frozen['raw_content'])
+     else:
+      rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records'];location=rows[index].get('source_record') or rows[index].get('source_fixture');path=ROOT/location['file']
+>     d=json.loads(verified_historical_bytes(path,location['sha256']));ctx=dec(d['input_snapshot']);res=dec(d.get('raw_result') or d.get('raw_content') or d.get('result'))
+
+tests/test_evidence_slot_price_scope.py:113: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x121d21bd0>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+_ test_actual_originals_and_pilot_wrong_bodies_remain_rejected[ninth_manual_original_1] _
+
+row = {'case': 'ninth_manual_original_1', 'record': {'file': 'reports/repair_2026-10-20/production_ninth_manual_brief_failed...isk_flags":[],"references":[{"id":"N0","url":""},{"id":"N1","url":""},{"id":"N2","url":""}],"missing_fields":[]}', ...}
+
+    @pytest.mark.parametrize('row',FIX['records'],ids=lambda x:x['case'])
+    def test_actual_originals_and_pilot_wrong_bodies_remain_rejected(row):
+>    verified_historical_bytes(R/row['record']['file'],row['record']['sha256'],project_root=R)
+
+tests/test_future_capacity_pressure_scope.py:107: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x1358915a0>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+_ test_actual_originals_and_pilot_wrong_bodies_remain_rejected[ninth_manual_original_2] _
+
+row = {'case': 'ninth_manual_original_2', 'record': {'file': 'reports/repair_2026-10-20/production_ninth_manual_brief_failed...应，无法确认是否已计价"],"references":[{"id":"N0","url":""},{"id":"N1","url":""},{"id":"N2","url":""}],"missing_fields":[]}', ...}
+
+    @pytest.mark.parametrize('row',FIX['records'],ids=lambda x:x['case'])
+    def test_actual_originals_and_pilot_wrong_bodies_remain_rejected(row):
+>    verified_historical_bytes(R/row['record']['file'],row['record']['sha256'],project_root=R)
+
+tests/test_future_capacity_pressure_scope.py:107: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x1260164d0>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+_ test_actual_originals_and_pilot_wrong_bodies_remain_rejected[ninth_current_original_1] _
+
+row = {'case': 'ninth_current_original_1', 'record': {'file': 'reports/repair_2026-10-20/production_ninth_current_live_actua...l_comparisons":[]},"risk_flags":[],"references":[{"id":"N0","url":""},{"id":"N2","url":""}],"missing_fields":[]}', ...}
+
+    @pytest.mark.parametrize('row',FIX['records'],ids=lambda x:x['case'])
+    def test_actual_originals_and_pilot_wrong_bodies_remain_rejected(row):
+>    verified_historical_bytes(R/row['record']['file'],row['record']['sha256'],project_root=R)
+
+tests/test_future_capacity_pressure_scope.py:107: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x1262532b0>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+_ test_actual_originals_and_pilot_wrong_bodies_remain_rejected[ninth_current_original_2] _
+
+row = {'case': 'ninth_current_original_2', 'record': {'file': 'reports/repair_2026-10-20/production_ninth_current_live_actua...l_comparisons":[]},"risk_flags":[],"references":[{"id":"N0","url":""},{"id":"N2","url":""}],"missing_fields":[]}', ...}
+
+    @pytest.mark.parametrize('row',FIX['records'],ids=lambda x:x['case'])
+    def test_actual_originals_and_pilot_wrong_bodies_remain_rejected(row):
+>    verified_historical_bytes(R/row['record']['file'],row['record']['sha256'],project_root=R)
+
+tests/test_future_capacity_pressure_scope.py:107: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x1266e78e0>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+_ test_exact_complete_source_projects_known_clocks_and_deduplicates_only_its_alias _
+
+    def test_exact_complete_source_projects_known_clocks_and_deduplicates_only_its_alias():
+>       c=context();original=copy.deepcopy(c)
+
+tests/test_manual_source_identity_projection.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_manual_source_identity_projection.py:13: in context
+    verified_historical_bytes(R/row['source_record']['file'],row['source_record']['sha256'],project_root=R)
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x134110520>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+________ test_detail_timing_and_source_contract_are_consistently_future ________
+
+    def test_detail_timing_and_source_contract_are_consistently_future():
+>       c=context();p,m=a.prepare_context(c,True,reserve_tokens=32)
+
+tests/test_manual_source_identity_projection.py:53: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_manual_source_identity_projection.py:13: in context
+    verified_historical_bytes(R/row['source_record']['file'],row['source_record']['sha256'],project_root=R)
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x126250160>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+_ test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks[message_body] _
+
+change = 'message_body'
+
+    @pytest.mark.parametrize('change',['message_body','message_field','body','title','no_title','current_clock','donor_clock','donor_status','status','not_known','no_known_time','two_intervals','source_index'])
+    def test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks(change):
+>       c=context();row=target(c)
+
+tests/test_manual_source_identity_projection.py:63: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_manual_source_identity_projection.py:13: in context
+    verified_historical_bytes(R/row['source_record']['file'],row['source_record']['sha256'],project_root=R)
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x1266819c0>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+_ test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks[message_field] _
+
+change = 'message_field'
+
+    @pytest.mark.parametrize('change',['message_body','message_field','body','title','no_title','current_clock','donor_clock','donor_status','status','not_known','no_known_time','two_intervals','source_index'])
+    def test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks(change):
+>       c=context();row=target(c)
+
+tests/test_manual_source_identity_projection.py:63: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_manual_source_identity_projection.py:13: in context
+    verified_historical_bytes(R/row['source_record']['file'],row['source_record']['sha256'],project_root=R)
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x1265141f0>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+___ test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks[body] ____
+
+change = 'body'
+
+    @pytest.mark.parametrize('change',['message_body','message_field','body','title','no_title','current_clock','donor_clock','donor_status','status','not_known','no_known_time','two_intervals','source_index'])
+    def test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks(change):
+>       c=context();row=target(c)
+
+tests/test_manual_source_identity_projection.py:63: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_manual_source_identity_projection.py:13: in context
+    verified_historical_bytes(R/row['source_record']['file'],row['source_record']['sha256'],project_root=R)
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x1263e9360>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+___ test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks[title] ___
+
+change = 'title'
+
+    @pytest.mark.parametrize('change',['message_body','message_field','body','title','no_title','current_clock','donor_clock','donor_status','status','not_known','no_known_time','two_intervals','source_index'])
+    def test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks(change):
+>       c=context();row=target(c)
+
+tests/test_manual_source_identity_projection.py:63: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_manual_source_identity_projection.py:13: in context
+    verified_historical_bytes(R/row['source_record']['file'],row['source_record']['sha256'],project_root=R)
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x13587f760>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+_ test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks[no_title] __
+
+change = 'no_title'
+
+    @pytest.mark.parametrize('change',['message_body','message_field','body','title','no_title','current_clock','donor_clock','donor_status','status','not_known','no_known_time','two_intervals','source_index'])
+    def test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks(change):
+>       c=context();row=target(c)
+
+tests/test_manual_source_identity_projection.py:63: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_manual_source_identity_projection.py:13: in context
+    verified_historical_bytes(R/row['source_record']['file'],row['source_record']['sha256'],project_root=R)
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x13435dd80>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+_ test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks[current_clock] _
+
+change = 'current_clock'
+
+    @pytest.mark.parametrize('change',['message_body','message_field','body','title','no_title','current_clock','donor_clock','donor_status','status','not_known','no_known_time','two_intervals','source_index'])
+    def test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks(change):
+>       c=context();row=target(c)
+
+tests/test_manual_source_identity_projection.py:63: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_manual_source_identity_projection.py:13: in context
+    verified_historical_bytes(R/row['source_record']['file'],row['source_record']['sha256'],project_root=R)
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x134495ae0>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+_ test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks[donor_clock] _
+
+change = 'donor_clock'
+
+    @pytest.mark.parametrize('change',['message_body','message_field','body','title','no_title','current_clock','donor_clock','donor_status','status','not_known','no_known_time','two_intervals','source_index'])
+    def test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks(change):
+>       c=context();row=target(c)
+
+tests/test_manual_source_identity_projection.py:63: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_manual_source_identity_projection.py:13: in context
+    verified_historical_bytes(R/row['source_record']['file'],row['source_record']['sha256'],project_root=R)
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x1358cf3a0>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+_ test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks[donor_status] _
+
+change = 'donor_status'
+
+    @pytest.mark.parametrize('change',['message_body','message_field','body','title','no_title','current_clock','donor_clock','donor_status','status','not_known','no_known_time','two_intervals','source_index'])
+    def test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks(change):
+>       c=context();row=target(c)
+
+tests/test_manual_source_identity_projection.py:63: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_manual_source_identity_projection.py:13: in context
+    verified_historical_bytes(R/row['source_record']['file'],row['source_record']['sha256'],project_root=R)
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x1343b2fe0>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+__ test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks[status] ___
+
+change = 'status'
+
+    @pytest.mark.parametrize('change',['message_body','message_field','body','title','no_title','current_clock','donor_clock','donor_status','status','not_known','no_known_time','two_intervals','source_index'])
+    def test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks(change):
+>       c=context();row=target(c)
+
+tests/test_manual_source_identity_projection.py:63: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_manual_source_identity_projection.py:13: in context
+    verified_historical_bytes(R/row['source_record']['file'],row['source_record']['sha256'],project_root=R)
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x1358a90c0>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+_ test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks[not_known] _
+
+change = 'not_known'
+
+    @pytest.mark.parametrize('change',['message_body','message_field','body','title','no_title','current_clock','donor_clock','donor_status','status','not_known','no_known_time','two_intervals','source_index'])
+    def test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks(change):
+>       c=context();row=target(c)
+
+tests/test_manual_source_identity_projection.py:63: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_manual_source_identity_projection.py:13: in context
+    verified_historical_bytes(R/row['source_record']['file'],row['source_record']['sha256'],project_root=R)
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x126517490>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+_ test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks[no_known_time] _
+
+change = 'no_known_time'
+
+    @pytest.mark.parametrize('change',['message_body','message_field','body','title','no_title','current_clock','donor_clock','donor_status','status','not_known','no_known_time','two_intervals','source_index'])
+    def test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks(change):
+>       c=context();row=target(c)
+
+tests/test_manual_source_identity_projection.py:63: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_manual_source_identity_projection.py:13: in context
+    verified_historical_bytes(R/row['source_record']['file'],row['source_record']['sha256'],project_root=R)
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x126253040>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+_ test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks[two_intervals] _
+
+change = 'two_intervals'
+
+    @pytest.mark.parametrize('change',['message_body','message_field','body','title','no_title','current_clock','donor_clock','donor_status','status','not_known','no_known_time','two_intervals','source_index'])
+    def test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks(change):
+>       c=context();row=target(c)
+
+tests/test_manual_source_identity_projection.py:63: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_manual_source_identity_projection.py:13: in context
+    verified_historical_bytes(R/row['source_record']['file'],row['source_record']['sha256'],project_root=R)
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x1344cabc0>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+_ test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks[source_index] _
+
+change = 'source_index'
+
+    @pytest.mark.parametrize('change',['message_body','message_field','body','title','no_title','current_clock','donor_clock','donor_status','status','not_known','no_known_time','two_intervals','source_index'])
+    def test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks(change):
+>       c=context();row=target(c)
+
+tests/test_manual_source_identity_projection.py:63: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_manual_source_identity_projection.py:13: in context
+    verified_historical_bytes(R/row['source_record']['file'],row['source_record']['sha256'],project_root=R)
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x1343e42e0>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+___________ test_same_compressed_facts_do_not_prove_source_identity ____________
+
+    def test_same_compressed_facts_do_not_prove_source_identity():
+>       c=context();before=a._news_card(c['current_news'],'N0',300,a._datetime(c['as_of']))['facts']
+
+tests/test_manual_source_identity_projection.py:89: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_manual_source_identity_projection.py:13: in context
+    verified_historical_bytes(R/row['source_record']['file'],row['source_record']['sha256'],project_root=R)
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x1266e77f0>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+____ test_genuine_matching_dismissed_title_and_source_status_still_project _____
+
+    def test_genuine_matching_dismissed_title_and_source_status_still_project():
+>       c=context();c['current_news']['title']=c['current_news']['title'].replace('(Active)','(Dismissed)')
+
+tests/test_manual_source_identity_projection.py:97: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_manual_source_identity_projection.py:13: in context
+    verified_historical_bytes(R/row['source_record']['file'],row['source_record']['sha256'],project_root=R)
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x1358a97e0>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+________ test_all_fourteen_known_bad_original_bodies_still_rejected[0] _________
+
+index = 0
+
+    @pytest.mark.parametrize('index',range(14))
+    def test_all_fourteen_known_bad_original_bodies_still_rejected(index):
+     rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records']
+>    ctx,result=load_old(rows[index]);p,_=prepare_context(ctx)
+
+tests/test_production_price_unit_scopes.py:163: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:154: in load_old
+    raw=verified_historical_bytes(ROOT/location['file'],location['sha256'])
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x134416bf0>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+________ test_all_fourteen_known_bad_original_bodies_still_rejected[1] _________
+
+index = 1
+
+    @pytest.mark.parametrize('index',range(14))
+    def test_all_fourteen_known_bad_original_bodies_still_rejected(index):
+     rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records']
+>    ctx,result=load_old(rows[index]);p,_=prepare_context(ctx)
+
+tests/test_production_price_unit_scopes.py:163: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:154: in load_old
+    raw=verified_historical_bytes(ROOT/location['file'],location['sha256'])
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x126514910>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+________ test_all_fourteen_known_bad_original_bodies_still_rejected[2] _________
+
+index = 2
+
+    @pytest.mark.parametrize('index',range(14))
+    def test_all_fourteen_known_bad_original_bodies_still_rejected(index):
+     rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records']
+>    ctx,result=load_old(rows[index]);p,_=prepare_context(ctx)
+
+tests/test_production_price_unit_scopes.py:163: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:154: in load_old
+    raw=verified_historical_bytes(ROOT/location['file'],location['sha256'])
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x1266a6e00>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+________ test_all_fourteen_known_bad_original_bodies_still_rejected[3] _________
+
+index = 3
+
+    @pytest.mark.parametrize('index',range(14))
+    def test_all_fourteen_known_bad_original_bodies_still_rejected(index):
+     rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records']
+>    ctx,result=load_old(rows[index]);p,_=prepare_context(ctx)
+
+tests/test_production_price_unit_scopes.py:163: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:154: in load_old
+    raw=verified_historical_bytes(ROOT/location['file'],location['sha256'])
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x1358265f0>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+________ test_all_fourteen_known_bad_original_bodies_still_rejected[4] _________
+
+index = 4
+
+    @pytest.mark.parametrize('index',range(14))
+    def test_all_fourteen_known_bad_original_bodies_still_rejected(index):
+     rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records']
+>    ctx,result=load_old(rows[index]);p,_=prepare_context(ctx)
+
+tests/test_production_price_unit_scopes.py:163: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:154: in load_old
+    raw=verified_historical_bytes(ROOT/location['file'],location['sha256'])
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x134266650>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+________ test_all_fourteen_known_bad_original_bodies_still_rejected[5] _________
+
+index = 5
+
+    @pytest.mark.parametrize('index',range(14))
+    def test_all_fourteen_known_bad_original_bodies_still_rejected(index):
+     rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records']
+>    ctx,result=load_old(rows[index]);p,_=prepare_context(ctx)
+
+tests/test_production_price_unit_scopes.py:163: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:154: in load_old
+    raw=verified_historical_bytes(ROOT/location['file'],location['sha256'])
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x1344d9cc0>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+________ test_all_fourteen_known_bad_original_bodies_still_rejected[6] _________
+
+index = 6
+
+    @pytest.mark.parametrize('index',range(14))
+    def test_all_fourteen_known_bad_original_bodies_still_rejected(index):
+     rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records']
+>    ctx,result=load_old(rows[index]);p,_=prepare_context(ctx)
+
+tests/test_production_price_unit_scopes.py:163: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:154: in load_old
+    raw=verified_historical_bytes(ROOT/location['file'],location['sha256'])
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x134494970>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+________ test_all_fourteen_known_bad_original_bodies_still_rejected[7] _________
+
+index = 7
+
+    @pytest.mark.parametrize('index',range(14))
+    def test_all_fourteen_known_bad_original_bodies_still_rejected(index):
+     rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records']
+>    ctx,result=load_old(rows[index]);p,_=prepare_context(ctx)
+
+tests/test_production_price_unit_scopes.py:163: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:154: in load_old
+    raw=verified_historical_bytes(ROOT/location['file'],location['sha256'])
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x1358cc9a0>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+________ test_all_fourteen_known_bad_original_bodies_still_rejected[11] ________
+
+index = 11
+
+    @pytest.mark.parametrize('index',range(14))
+    def test_all_fourteen_known_bad_original_bodies_still_rejected(index):
+     rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records']
+>    ctx,result=load_old(rows[index]);p,_=prepare_context(ctx)
+
+tests/test_production_price_unit_scopes.py:163: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:154: in load_old
+    raw=verified_historical_bytes(ROOT/location['file'],location['sha256'])
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x135824e50>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+________ test_all_fourteen_known_bad_original_bodies_still_rejected[12] ________
+
+index = 12
+
+    @pytest.mark.parametrize('index',range(14))
+    def test_all_fourteen_known_bad_original_bodies_still_rejected(index):
+     rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records']
+>    ctx,result=load_old(rows[index]);p,_=prepare_context(ctx)
+
+tests/test_production_price_unit_scopes.py:163: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:154: in load_old
+    raw=verified_historical_bytes(ROOT/location['file'],location['sha256'])
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x135823490>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+________ test_all_fourteen_known_bad_original_bodies_still_rejected[13] ________
+
+index = 13
+
+    @pytest.mark.parametrize('index',range(14))
+    def test_all_fourteen_known_bad_original_bodies_still_rejected(index):
+     rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records']
+>    ctx,result=load_old(rows[index]);p,_=prepare_context(ctx)
+
+tests/test_production_price_unit_scopes.py:163: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:154: in load_old
+    raw=verified_historical_bytes(ROOT/location['file'],location['sha256'])
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x134282c50>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+_______ test_frozen_mixed_context_preserves_focus_and_all_canonical_news _______
+
+    def test_frozen_mixed_context_preserves_focus_and_all_canonical_news():
+        for role in ("manual", "current_live"):
+>           prepared = _prepared(role)
+
+tests/test_structured_generation.py:65: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_structured_generation.py:29: in _prepared
+    context = copy.deepcopy(_capture(role))
+tests/test_structured_generation.py:25: in _capture
+    return json.loads(path.read_text())["input_snapshot"]
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py:1132: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('.runtime/github-publish/reports/repair_2026-10-20/production_twelfth_manual_brief_actual_v2_3.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: '.runtime/github-publish/reports/repair_2026-10-20/production_twelfth_manual_brief_actual_v2_3.json'
+
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py:1117: FileNotFoundError
+__ test_exact_manual_source_projection_preserves_revision_and_original_input ___
+
+    def test_exact_manual_source_projection_preserves_revision_and_original_input():
+>       context = copy.deepcopy(_capture("manual"))
+
+tests/test_structured_generation.py:80: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_structured_generation.py:25: in _capture
+    return json.loads(path.read_text())["input_snapshot"]
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py:1132: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('.runtime/github-publish/reports/repair_2026-10-20/production_twelfth_manual_brief_actual_v2_3.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: '.runtime/github-publish/reports/repair_2026-10-20/production_twelfth_manual_brief_actual_v2_3.json'
+
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py:1117: FileNotFoundError
+_ test_manual_projection_does_not_borrow_from_other_source_body_or_future_version _
+
+    def test_manual_projection_does_not_borrow_from_other_source_body_or_future_version():
+        for mutation in ("source", "body", "future"):
+>           context = copy.deepcopy(_capture("manual"))
+
+tests/test_structured_generation.py:100: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_structured_generation.py:25: in _capture
+    return json.loads(path.read_text())["input_snapshot"]
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py:1132: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('.runtime/github-publish/reports/repair_2026-10-20/production_twelfth_manual_brief_actual_v2_3.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: '.runtime/github-publish/reports/repair_2026-10-20/production_twelfth_manual_brief_actual_v2_3.json'
+
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py:1117: FileNotFoundError
+__ test_related_announcements_use_max_and_active_tie_without_counting_notices __
+
+    def test_related_announcements_use_max_and_active_tie_without_counting_notices():
+>       catalog = _catalog()
+
+tests/test_structured_generation.py:142: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_structured_generation.py:35: in _catalog
+    prepared = _prepared() if prepared is None else prepared
+tests/test_structured_generation.py:29: in _prepared
+    context = copy.deepcopy(_capture(role))
+tests/test_structured_generation.py:25: in _capture
+    return json.loads(path.read_text())["input_snapshot"]
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py:1132: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('.runtime/github-publish/reports/repair_2026-10-20/production_twelfth_current_live_actual_v2_3.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: '.runtime/github-publish/reports/repair_2026-10-20/production_twelfth_current_live_actual_v2_3.json'
+
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py:1117: FileNotFoundError
+____________ test_balanced_news_cannot_reverse_an_observed_baseline ____________
+
+    def test_balanced_news_cannot_reverse_an_observed_baseline():
+>       catalog = _catalog()
+
+tests/test_structured_generation.py:153: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_structured_generation.py:35: in _catalog
+    prepared = _prepared() if prepared is None else prepared
+tests/test_structured_generation.py:29: in _prepared
+    context = copy.deepcopy(_capture(role))
+tests/test_structured_generation.py:25: in _capture
+    return json.loads(path.read_text())["input_snapshot"]
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py:1132: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('.runtime/github-publish/reports/repair_2026-10-20/production_twelfth_current_live_actual_v2_3.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: '.runtime/github-publish/reports/repair_2026-10-20/production_twelfth_current_live_actual_v2_3.json'
+
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py:1117: FileNotFoundError
+_________ test_missing_anchor_requires_null_even_with_directional_news _________
+
+    def test_missing_anchor_requires_null_even_with_directional_news():
+>       prepared = _prepared()
+
+tests/test_structured_generation.py:165: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_structured_generation.py:29: in _prepared
+    context = copy.deepcopy(_capture(role))
+tests/test_structured_generation.py:25: in _capture
+    return json.loads(path.read_text())["input_snapshot"]
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py:1132: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('.runtime/github-publish/reports/repair_2026-10-20/production_twelfth_current_live_actual_v2_3.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: '.runtime/github-publish/reports/repair_2026-10-20/production_twelfth_current_live_actual_v2_3.json'
+
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py:1117: FileNotFoundError
+_________ test_no_intraday_and_no_directional_signal_is_null_not_flat __________
+
+    def test_no_intraday_and_no_directional_signal_is_null_not_flat():
+>       prepared = _prepared()
+
+tests/test_structured_generation.py:178: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_structured_generation.py:29: in _prepared
+    context = copy.deepcopy(_capture(role))
+tests/test_structured_generation.py:25: in _capture
+    return json.loads(path.read_text())["input_snapshot"]
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py:1132: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('.runtime/github-publish/reports/repair_2026-10-20/production_twelfth_current_live_actual_v2_3.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: '.runtime/github-publish/reports/repair_2026-10-20/production_twelfth_current_live_actual_v2_3.json'
+
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py:1117: FileNotFoundError
+_ test_saved_plan_english_and_detail_preserve_decisions_numbers_and_references _
+
+    def test_saved_plan_english_and_detail_preserve_decisions_numbers_and_references():
+>       catalog = _catalog()
+
+tests/test_structured_generation.py:189: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_structured_generation.py:35: in _catalog
+    prepared = _prepared() if prepared is None else prepared
+tests/test_structured_generation.py:29: in _prepared
+    context = copy.deepcopy(_capture(role))
+tests/test_structured_generation.py:25: in _capture
+    return json.loads(path.read_text())["input_snapshot"]
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py:1132: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('.runtime/github-publish/reports/repair_2026-10-20/production_twelfth_current_live_actual_v2_3.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: '.runtime/github-publish/reports/repair_2026-10-20/production_twelfth_current_live_actual_v2_3.json'
+
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py:1117: FileNotFoundError
+_____ test_zero_weight_keeps_focus_and_opposing_source_mechanisms_visible ______
+
+    def test_zero_weight_keeps_focus_and_opposing_source_mechanisms_visible():
+>       catalog = _catalog()
+
+tests/test_structured_generation.py:216: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_structured_generation.py:35: in _catalog
+    prepared = _prepared() if prepared is None else prepared
+tests/test_structured_generation.py:29: in _prepared
+    context = copy.deepcopy(_capture(role))
+tests/test_structured_generation.py:25: in _capture
+    return json.loads(path.read_text())["input_snapshot"]
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py:1132: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('.runtime/github-publish/reports/repair_2026-10-20/production_twelfth_current_live_actual_v2_3.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: '.runtime/github-publish/reports/repair_2026-10-20/production_twelfth_current_live_actual_v2_3.json'
+
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py:1117: FileNotFoundError
+_____ test_weight_and_scenario_contract_requires_complete_grounded_choices _____
+
+    def test_weight_and_scenario_contract_requires_complete_grounded_choices():
+>       catalog = _catalog()
+
+tests/test_structured_generation.py:227: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_structured_generation.py:35: in _catalog
+    prepared = _prepared() if prepared is None else prepared
+tests/test_structured_generation.py:29: in _prepared
+    context = copy.deepcopy(_capture(role))
+tests/test_structured_generation.py:25: in _capture
+    return json.loads(path.read_text())["input_snapshot"]
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py:1132: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('.runtime/github-publish/reports/repair_2026-10-20/production_twelfth_current_live_actual_v2_3.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: '.runtime/github-publish/reports/repair_2026-10-20/production_twelfth_current_live_actual_v2_3.json'
+
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py:1117: FileNotFoundError
+_ test_actuals_exact_source_and_raw_and_old_captured_prepared[tenth_manual_1] __
+
+f = {'case': 'tenth_manual_1', 'record': {'file': 'reports/repair_2026-10-20/production_tenth_manual_brief_actual_v2_3.jso.../d; available: 124.3; unavailable: 13.0. Reason: Yearly maintenance. Remarks: Extended maintenance.', ...}], ...}, ...}
+
+    @pytest.mark.parametrize('f',FIX,ids=lambda x:x['case'])
+    def test_actuals_exact_source_and_raw_and_old_captured_prepared(f):
+>    verified_historical_bytes(R/f['record']['file'],f['record']['sha256'],project_root=R)
+
+tests/test_tenth_capacity_price_scopes.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x13642b7f0>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+_ test_actuals_exact_source_and_raw_and_old_captured_prepared[tenth_manual_2] __
+
+f = {'case': 'tenth_manual_2', 'record': {'file': 'reports/repair_2026-10-20/production_tenth_manual_brief_actual_v2_3.jso.../d; available: 124.3; unavailable: 13.0. Reason: Yearly maintenance. Remarks: Extended maintenance.', ...}], ...}, ...}
+
+    @pytest.mark.parametrize('f',FIX,ids=lambda x:x['case'])
+    def test_actuals_exact_source_and_raw_and_old_captured_prepared(f):
+>    verified_historical_bytes(R/f['record']['file'],f['record']['sha256'],project_root=R)
+
+tests/test_tenth_capacity_price_scopes.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x1344c9f90>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+_ test_actuals_exact_source_and_raw_and_old_captured_prepared[tenth_current_1] _
+
+f = {'case': 'tenth_current_1', 'record': {'file': 'reports/repair_2026-10-20/production_tenth_current_live_actual_v2_3.js.../d; available: 124.3; unavailable: 13.0. Reason: Yearly maintenance. Remarks: Extended maintenance.', ...}], ...}, ...}
+
+    @pytest.mark.parametrize('f',FIX,ids=lambda x:x['case'])
+    def test_actuals_exact_source_and_raw_and_old_captured_prepared(f):
+>    verified_historical_bytes(R/f['record']['file'],f['record']['sha256'],project_root=R)
+
+tests/test_tenth_capacity_price_scopes.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x135ae4fa0>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+_ test_actuals_exact_source_and_raw_and_old_captured_prepared[tenth_current_2] _
+
+f = {'case': 'tenth_current_2', 'record': {'file': 'reports/repair_2026-10-20/production_tenth_current_live_actual_v2_3.js.../d; available: 124.3; unavailable: 13.0. Reason: Yearly maintenance. Remarks: Extended maintenance.', ...}], ...}, ...}
+
+    @pytest.mark.parametrize('f',FIX,ids=lambda x:x['case'])
+    def test_actuals_exact_source_and_raw_and_old_captured_prepared(f):
+>    verified_historical_bytes(R/f['record']['file'],f['record']['sha256'],project_root=R)
+
+tests/test_tenth_capacity_price_scopes.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:134: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <ttf_historical_test_publication_map.PublicationManifest object at 0x1342273d0>
+path = PosixPath('.runtime/github-publish/README.md')
+
+    def identity(self,path: Path) -> str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+>       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:155: ValueError
+=============================== warnings summary ===============================
+../../.venv/lib/python3.10/site-packages/fastapi/testclient.py:1
+  .venv/lib/python3.10/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_clause_evidence.py::test_frozen_p12_keeps_full_n0_and_all_canonical_aliases
+FAILED tests/test_evidence_slot_price_scope.py::test_fifteen_old_known_bad_bodies_remain_rejected[0]
+FAILED tests/test_evidence_slot_price_scope.py::test_fifteen_old_known_bad_bodies_remain_rejected[1]
+FAILED tests/test_evidence_slot_price_scope.py::test_fifteen_old_known_bad_bodies_remain_rejected[2]
+FAILED tests/test_evidence_slot_price_scope.py::test_fifteen_old_known_bad_bodies_remain_rejected[3]
+FAILED tests/test_evidence_slot_price_scope.py::test_fifteen_old_known_bad_bodies_remain_rejected[4]
+FAILED tests/test_evidence_slot_price_scope.py::test_fifteen_old_known_bad_bodies_remain_rejected[5]
+FAILED tests/test_evidence_slot_price_scope.py::test_fifteen_old_known_bad_bodies_remain_rejected[6]
+FAILED tests/test_evidence_slot_price_scope.py::test_fifteen_old_known_bad_bodies_remain_rejected[7]
+FAILED tests/test_evidence_slot_price_scope.py::test_fifteen_old_known_bad_bodies_remain_rejected[11]
+FAILED tests/test_evidence_slot_price_scope.py::test_fifteen_old_known_bad_bodies_remain_rejected[12]
+FAILED tests/test_evidence_slot_price_scope.py::test_fifteen_old_known_bad_bodies_remain_rejected[13]
+FAILED tests/test_future_capacity_pressure_scope.py::test_actual_originals_and_pilot_wrong_bodies_remain_rejected[ninth_manual_original_1]
+FAILED tests/test_future_capacity_pressure_scope.py::test_actual_originals_and_pilot_wrong_bodies_remain_rejected[ninth_manual_original_2]
+FAILED tests/test_future_capacity_pressure_scope.py::test_actual_originals_and_pilot_wrong_bodies_remain_rejected[ninth_current_original_1]
+FAILED tests/test_future_capacity_pressure_scope.py::test_actual_originals_and_pilot_wrong_bodies_remain_rejected[ninth_current_original_2]
+FAILED tests/test_manual_source_identity_projection.py::test_exact_complete_source_projects_known_clocks_and_deduplicates_only_its_alias
+FAILED tests/test_manual_source_identity_projection.py::test_detail_timing_and_source_contract_are_consistently_future
+FAILED tests/test_manual_source_identity_projection.py::test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks[message_body]
+FAILED tests/test_manual_source_identity_projection.py::test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks[message_field]
+FAILED tests/test_manual_source_identity_projection.py::test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks[body]
+FAILED tests/test_manual_source_identity_projection.py::test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks[title]
+FAILED tests/test_manual_source_identity_projection.py::test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks[no_title]
+FAILED tests/test_manual_source_identity_projection.py::test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks[current_clock]
+FAILED tests/test_manual_source_identity_projection.py::test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks[donor_clock]
+FAILED tests/test_manual_source_identity_projection.py::test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks[donor_status]
+FAILED tests/test_manual_source_identity_projection.py::test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks[status]
+FAILED tests/test_manual_source_identity_projection.py::test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks[not_known]
+FAILED tests/test_manual_source_identity_projection.py::test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks[no_known_time]
+FAILED tests/test_manual_source_identity_projection.py::test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks[two_intervals]
+FAILED tests/test_manual_source_identity_projection.py::test_different_unknown_or_ambiguous_identity_cannot_borrow_clocks[source_index]
+FAILED tests/test_manual_source_identity_projection.py::test_same_compressed_facts_do_not_prove_source_identity
+FAILED tests/test_manual_source_identity_projection.py::test_genuine_matching_dismissed_title_and_source_status_still_project
+FAILED tests/test_production_price_unit_scopes.py::test_all_fourteen_known_bad_original_bodies_still_rejected[0]
+FAILED tests/test_production_price_unit_scopes.py::test_all_fourteen_known_bad_original_bodies_still_rejected[1]
+FAILED tests/test_production_price_unit_scopes.py::test_all_fourteen_known_bad_original_bodies_still_rejected[2]
+FAILED tests/test_production_price_unit_scopes.py::test_all_fourteen_known_bad_original_bodies_still_rejected[3]
+FAILED tests/test_production_price_unit_scopes.py::test_all_fourteen_known_bad_original_bodies_still_rejected[4]
+FAILED tests/test_production_price_unit_scopes.py::test_all_fourteen_known_bad_original_bodies_still_rejected[5]
+FAILED tests/test_production_price_unit_scopes.py::test_all_fourteen_known_bad_original_bodies_still_rejected[6]
+FAILED tests/test_production_price_unit_scopes.py::test_all_fourteen_known_bad_original_bodies_still_rejected[7]
+FAILED tests/test_production_price_unit_scopes.py::test_all_fourteen_known_bad_original_bodies_still_rejected[11]
+FAILED tests/test_production_price_unit_scopes.py::test_all_fourteen_known_bad_original_bodies_still_rejected[12]
+FAILED tests/test_production_price_unit_scopes.py::test_all_fourteen_known_bad_original_bodies_still_rejected[13]
+FAILED tests/test_structured_generation.py::test_frozen_mixed_context_preserves_focus_and_all_canonical_news
+FAILED tests/test_structured_generation.py::test_exact_manual_source_projection_preserves_revision_and_original_input
+FAILED tests/test_structured_generation.py::test_manual_projection_does_not_borrow_from_other_source_body_or_future_version
+FAILED tests/test_structured_generation.py::test_related_announcements_use_max_and_active_tie_without_counting_notices
+FAILED tests/test_structured_generation.py::test_balanced_news_cannot_reverse_an_observed_baseline
+FAILED tests/test_structured_generation.py::test_missing_anchor_requires_null_even_with_directional_news
+FAILED tests/test_structured_generation.py::test_no_intraday_and_no_directional_signal_is_null_not_flat
+FAILED tests/test_structured_generation.py::test_saved_plan_english_and_detail_preserve_decisions_numbers_and_references
+FAILED tests/test_structured_generation.py::test_zero_weight_keeps_focus_and_opposing_source_mechanisms_visible
+FAILED tests/test_structured_generation.py::test_weight_and_scenario_contract_requires_complete_grounded_choices
+FAILED tests/test_tenth_capacity_price_scopes.py::test_actuals_exact_source_and_raw_and_old_captured_prepared[tenth_manual_1]
+FAILED tests/test_tenth_capacity_price_scopes.py::test_actuals_exact_source_and_raw_and_old_captured_prepared[tenth_manual_2]
+FAILED tests/test_tenth_capacity_price_scopes.py::test_actuals_exact_source_and_raw_and_old_captured_prepared[tenth_current_1]
+FAILED tests/test_tenth_capacity_price_scopes.py::test_actuals_exact_source_and_raw_and_old_captured_prepared[tenth_current_2]
+58 failed, 1490 passed, 6 skipped, 1 warning, 371 subtests passed in 106.34s (0:01:46)

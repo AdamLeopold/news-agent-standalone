@@ -1,0 +1,505 @@
+{
+  "schema_version": "ttf-bounded-output-detail-grounding-review-v1",
+  "created_at": "2026-10-20T23:49:57.082709+00:00",
+  "scope": "Source and focused-test audit only; no model, DB, API or service actions.",
+  "source_sha256": {
+    "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+    "ttf_news/analysis.py": "1087340777d4a0b10883420d76f8ce142bc53dd7542c8ebc84893e317553a16f",
+    "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+    "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+    "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+    "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+    "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+    "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+    "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+    "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+    "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+    "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987",
+    "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+    "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+    "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+    "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+    "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+    "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+    "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+    "ttf_news/public_gateway.py": "fac8fe10429bc62a6be241817491d1f35eecdaa7f8a37357cb8dbcab7f43fae5",
+    "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+    "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+    "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+    "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+    "ttf_news/semantics.py": "3efbab0f772839b2249a544c6c39aa4beb9386c1de9850dfe37a989129139e90",
+    "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+    "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+    "ttf_news/translation.py": "d47b232a5f77ea68e2d5bc5d092021e9727e555c6b1dd702922325519982d7c5"
+  },
+  "archive": {
+    "path": ".runtime/source-archives/backend-43554/",
+    "manifest_sha256": "26831e3cf82a52c4a3203aa02aee6c8a579c064a296eb892da5270a755f031ec",
+    "all_28_original_files_verified": true
+  },
+  "focused_tests": {
+    "files": [
+      "test_detail_bounded_timing_profile.py",
+      "test_future_event_causal_scope.py",
+      "test_invalidation_event_scope.py",
+      "test_detail_source_scope.py",
+      "test_analysis.py",
+      "test_generation_boundaries.py"
+    ],
+    "passed": 147,
+    "subtests_passed": 31,
+    "seconds": 32.51
+  },
+  "brief_contract": {
+    "risk_flags": {
+      "maxItems": 2,
+      "uniqueItems": true
+    },
+    "raw_violation_action": "reject, preserve raw and retry within existing two-attempt policy; never trim/deduplicate or change labels",
+    "all_twenty_new_actual_required": true,
+    "comparison": "Prepared first-request reconstruction against private exact backend43554 source; not a complete execution-path equivalence proof.",
+    "fixture_file": "reports/repair_2026-10-20/semantic_regeneration_cases_v2_2.json",
+    "fixture_sha256": "567f8ebfef4d475e42acc697655b3d9339c716b9eceed9ba928d01258ec89296",
+    "records": [
+      {
+        "case_id": "supply_loss_40",
+        "context_sha256": "3c154270224da8811dc0d43b6c46d6f9c9d98c07d033039b53d6aacf2ba1d152",
+        "old_context_sha256": "3c154270224da8811dc0d43b6c46d6f9c9d98c07d033039b53d6aacf2ba1d152",
+        "system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "old_system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "schema_sha256": "6de2362446026ba8853523d592f5e71623ce66c28a3de70cc8c80dc43dadafce",
+        "old_schema_sha256": "217156a227ba1855406e84dbdf39d1a396822b2c53c70c79ae7aabda4a3b64ea",
+        "input_system_identical": true,
+        "only_schema_change_is_risk_flags_bounds": true,
+        "budgets_identical": true,
+        "generation_options": {
+          "input_token_estimate": 3446,
+          "input_token_ceiling": 4800,
+          "context_window": 8192,
+          "output_token_limit": 3072
+        },
+        "new_actual_required": true
+      },
+      {
+        "case_id": "supply_restore_40",
+        "context_sha256": "08c3c1165a56ddda45f11fdcce5ee803b9fb0b072d36484e3d593430c152bfc9",
+        "old_context_sha256": "08c3c1165a56ddda45f11fdcce5ee803b9fb0b072d36484e3d593430c152bfc9",
+        "system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "old_system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "schema_sha256": "6de2362446026ba8853523d592f5e71623ce66c28a3de70cc8c80dc43dadafce",
+        "old_schema_sha256": "217156a227ba1855406e84dbdf39d1a396822b2c53c70c79ae7aabda4a3b64ea",
+        "input_system_identical": true,
+        "only_schema_change_is_risk_flags_bounds": true,
+        "budgets_identical": true,
+        "generation_options": {
+          "input_token_estimate": 3447,
+          "input_token_ceiling": 4800,
+          "context_window": 8192,
+          "output_token_limit": 3072
+        },
+        "new_actual_required": true
+      },
+      {
+        "case_id": "weak_exploration_no_quote",
+        "context_sha256": "03b0c22fc3889e20d7460516da93aff8a62c95b8f7e869b3475c002cecb84c05",
+        "old_context_sha256": "03b0c22fc3889e20d7460516da93aff8a62c95b8f7e869b3475c002cecb84c05",
+        "system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "old_system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "schema_sha256": "6de2362446026ba8853523d592f5e71623ce66c28a3de70cc8c80dc43dadafce",
+        "old_schema_sha256": "217156a227ba1855406e84dbdf39d1a396822b2c53c70c79ae7aabda4a3b64ea",
+        "input_system_identical": true,
+        "only_schema_change_is_risk_flags_bounds": true,
+        "budgets_identical": true,
+        "generation_options": {
+          "input_token_estimate": 3367,
+          "input_token_ceiling": 4800,
+          "context_window": 8192,
+          "output_token_limit": 3072
+        },
+        "new_actual_required": true
+      },
+      {
+        "case_id": "warm_heating_demand",
+        "context_sha256": "5da6e47f32a176ba44915b8154245a088436235e736c22a5714d06f2ef6fd13b",
+        "old_context_sha256": "5da6e47f32a176ba44915b8154245a088436235e736c22a5714d06f2ef6fd13b",
+        "system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "old_system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "schema_sha256": "6de2362446026ba8853523d592f5e71623ce66c28a3de70cc8c80dc43dadafce",
+        "old_schema_sha256": "217156a227ba1855406e84dbdf39d1a396822b2c53c70c79ae7aabda4a3b64ea",
+        "input_system_identical": true,
+        "only_schema_change_is_risk_flags_bounds": true,
+        "budgets_identical": true,
+        "generation_options": {
+          "input_token_estimate": 3362,
+          "input_token_ceiling": 4800,
+          "context_window": 8192,
+          "output_token_limit": 3072
+        },
+        "new_actual_required": true
+      },
+      {
+        "case_id": "cold_heating_demand",
+        "context_sha256": "e18fb08113109bc554486bf4b03a25760dcc30acb28b2ce1d6db274e23759ce4",
+        "old_context_sha256": "e18fb08113109bc554486bf4b03a25760dcc30acb28b2ce1d6db274e23759ce4",
+        "system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "old_system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "schema_sha256": "6de2362446026ba8853523d592f5e71623ce66c28a3de70cc8c80dc43dadafce",
+        "old_schema_sha256": "217156a227ba1855406e84dbdf39d1a396822b2c53c70c79ae7aabda4a3b64ea",
+        "input_system_identical": true,
+        "only_schema_change_is_risk_flags_bounds": true,
+        "budgets_identical": true,
+        "generation_options": {
+          "input_token_estimate": 3363,
+          "input_token_ceiling": 4800,
+          "context_window": 8192,
+          "output_token_limit": 3072
+        },
+        "new_actual_required": true
+      },
+      {
+        "case_id": "negated_outage",
+        "context_sha256": "b0bc0e851ef8eb9c3ebdf064b3e8114ff583e49d29459e78b57e30c04fadb7c3",
+        "old_context_sha256": "b0bc0e851ef8eb9c3ebdf064b3e8114ff583e49d29459e78b57e30c04fadb7c3",
+        "system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "old_system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "schema_sha256": "6de2362446026ba8853523d592f5e71623ce66c28a3de70cc8c80dc43dadafce",
+        "old_schema_sha256": "217156a227ba1855406e84dbdf39d1a396822b2c53c70c79ae7aabda4a3b64ea",
+        "input_system_identical": true,
+        "only_schema_change_is_risk_flags_bounds": true,
+        "budgets_identical": true,
+        "generation_options": {
+          "input_token_estimate": 3303,
+          "input_token_ceiling": 4800,
+          "context_window": 8192,
+          "output_token_limit": 3072
+        },
+        "new_actual_required": true
+      },
+      {
+        "case_id": "cumulative_shock_then_weak",
+        "context_sha256": "e4ce5a2bfe94fcfc492e726828fb0a50c56ed66659c3c44d8338cfdb90039deb",
+        "old_context_sha256": "e4ce5a2bfe94fcfc492e726828fb0a50c56ed66659c3c44d8338cfdb90039deb",
+        "system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "old_system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "schema_sha256": "6de2362446026ba8853523d592f5e71623ce66c28a3de70cc8c80dc43dadafce",
+        "old_schema_sha256": "217156a227ba1855406e84dbdf39d1a396822b2c53c70c79ae7aabda4a3b64ea",
+        "input_system_identical": true,
+        "only_schema_change_is_risk_flags_bounds": true,
+        "budgets_identical": true,
+        "generation_options": {
+          "input_token_estimate": 3672,
+          "input_token_ceiling": 4800,
+          "context_window": 8192,
+          "output_token_limit": 3072
+        },
+        "new_actual_required": true
+      },
+      {
+        "case_id": "weak_news_observed_market_up",
+        "context_sha256": "32bb371fa20958ff881ecf2a4b53f7f5ba673244be16344583677a6683afc969",
+        "old_context_sha256": "32bb371fa20958ff881ecf2a4b53f7f5ba673244be16344583677a6683afc969",
+        "system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "old_system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "schema_sha256": "1d6780f8ea6815567ce6bfaba13ad07e99535df123c902d76c93869bfc4c5e21",
+        "old_schema_sha256": "0fb12067def26e768c05acbe40846ceb466a61bd065951fa8d0aca5e261a015a",
+        "input_system_identical": true,
+        "only_schema_change_is_risk_flags_bounds": true,
+        "budgets_identical": true,
+        "generation_options": {
+          "input_token_estimate": 3936,
+          "input_token_ceiling": 4800,
+          "context_window": 8192,
+          "output_token_limit": 3072
+        },
+        "new_actual_required": true
+      },
+      {
+        "case_id": "supplied_conflicting_mechanisms",
+        "context_sha256": "45a02c30ae3cc363b7ca5e89fd1a512d435d41785a7dd2d34231c8f7a29dd26f",
+        "old_context_sha256": "45a02c30ae3cc363b7ca5e89fd1a512d435d41785a7dd2d34231c8f7a29dd26f",
+        "system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "old_system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "schema_sha256": "6de2362446026ba8853523d592f5e71623ce66c28a3de70cc8c80dc43dadafce",
+        "old_schema_sha256": "217156a227ba1855406e84dbdf39d1a396822b2c53c70c79ae7aabda4a3b64ea",
+        "input_system_identical": true,
+        "only_schema_change_is_risk_flags_bounds": true,
+        "budgets_identical": true,
+        "generation_options": {
+          "input_token_estimate": 3313,
+          "input_token_ceiling": 4800,
+          "context_window": 8192,
+          "output_token_limit": 3072
+        },
+        "new_actual_required": true
+      },
+      {
+        "case_id": "future_planned_notice",
+        "context_sha256": "b32fc46383dc91aa35bf672101fc55d5fca54334c01571b181d86756ce70571f",
+        "old_context_sha256": "b32fc46383dc91aa35bf672101fc55d5fca54334c01571b181d86756ce70571f",
+        "system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "old_system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "schema_sha256": "a43655347111e33b608450fc3fde6d495049b99b17578275d2e281ae152df937",
+        "old_schema_sha256": "fd27e6b57c6c93cddf4e0882f1133a233876b2c364936936ca94f877c3f7febf",
+        "input_system_identical": true,
+        "only_schema_change_is_risk_flags_bounds": true,
+        "budgets_identical": true,
+        "generation_options": {
+          "input_token_estimate": 3622,
+          "input_token_ceiling": 4800,
+          "context_window": 8192,
+          "output_token_limit": 3072
+        },
+        "new_actual_required": true
+      },
+      {
+        "case_id": "dismissed_notice_not_verified_recovery",
+        "context_sha256": "1e2d3def72fadcd224b413adb6c1780f24d7453bce38a7d51ccc4c7355702db8",
+        "old_context_sha256": "1e2d3def72fadcd224b413adb6c1780f24d7453bce38a7d51ccc4c7355702db8",
+        "system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "old_system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "schema_sha256": "b661c192907e5e0716701030ed96edd15f72b71b615003968524eb1524d93e83",
+        "old_schema_sha256": "42b7d165dc4c29903afd80afd036212d3e4c531759f298df43ca91243f90777d",
+        "input_system_identical": true,
+        "only_schema_change_is_risk_flags_bounds": true,
+        "budgets_identical": true,
+        "generation_options": {
+          "input_token_estimate": 3665,
+          "input_token_ceiling": 4800,
+          "context_window": 8192,
+          "output_token_limit": 3072
+        },
+        "new_actual_required": true
+      },
+      {
+        "case_id": "real_nyhamna",
+        "context_sha256": "d12cb5d2016869ffc4766b4e286bfc23fad812cf3ed0ab8ab45d8cf4a186de2c",
+        "old_context_sha256": "d12cb5d2016869ffc4766b4e286bfc23fad812cf3ed0ab8ab45d8cf4a186de2c",
+        "system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "old_system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "schema_sha256": "4f7b6ecf850f9cdf76db14a7ac8e84fd463aaaaff00e2c36e765eb83321496eb",
+        "old_schema_sha256": "b124bfc0e44d33f66eec6a12e407a5ffa7865d63bd584757a86a58ae33fa1025",
+        "input_system_identical": true,
+        "only_schema_change_is_risk_flags_bounds": true,
+        "budgets_identical": true,
+        "generation_options": {
+          "input_token_estimate": 12256,
+          "input_token_ceiling": 12800,
+          "context_window": 16384,
+          "output_token_limit": 3072
+        },
+        "new_actual_required": true
+      },
+      {
+        "case_id": "real_eni",
+        "context_sha256": "0ddc4e3c598ea627af8a3df2fd341b92ac59cb25275011a137fff1c9fcfc8272",
+        "old_context_sha256": "0ddc4e3c598ea627af8a3df2fd341b92ac59cb25275011a137fff1c9fcfc8272",
+        "system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "old_system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "schema_sha256": "2e720c604dc8ed47841c34654316aa318567b01acb3ba0c5565ff068249d9e51",
+        "old_schema_sha256": "db281a3e186ab1b4b52097a186ff93ed1af92fa12ebb42f3846655bc5f54360d",
+        "input_system_identical": true,
+        "only_schema_change_is_risk_flags_bounds": true,
+        "budgets_identical": true,
+        "generation_options": {
+          "input_token_estimate": 12489,
+          "input_token_ceiling": 12800,
+          "context_window": 16384,
+          "output_token_limit": 3072
+        },
+        "new_actual_required": true
+      },
+      {
+        "case_id": "supply_loss_40_with_flat_baseline",
+        "context_sha256": "6a705c9f6cd44948dce4c0a1007975aa1a245da9137502beab65f0eaf0a2eda3",
+        "old_context_sha256": "6a705c9f6cd44948dce4c0a1007975aa1a245da9137502beab65f0eaf0a2eda3",
+        "system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "old_system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "schema_sha256": "1d6780f8ea6815567ce6bfaba13ad07e99535df123c902d76c93869bfc4c5e21",
+        "old_schema_sha256": "0fb12067def26e768c05acbe40846ceb466a61bd065951fa8d0aca5e261a015a",
+        "input_system_identical": true,
+        "only_schema_change_is_risk_flags_bounds": true,
+        "budgets_identical": true,
+        "generation_options": {
+          "input_token_estimate": 3981,
+          "input_token_ceiling": 4800,
+          "context_window": 8192,
+          "output_token_limit": 3072
+        },
+        "new_actual_required": true
+      },
+      {
+        "case_id": "supply_restore_40_with_flat_baseline",
+        "context_sha256": "b57072214a10426825c3ee96f47432dbf1c42c852f1ec97d2747989d24561950",
+        "old_context_sha256": "b57072214a10426825c3ee96f47432dbf1c42c852f1ec97d2747989d24561950",
+        "system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "old_system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "schema_sha256": "1d6780f8ea6815567ce6bfaba13ad07e99535df123c902d76c93869bfc4c5e21",
+        "old_schema_sha256": "0fb12067def26e768c05acbe40846ceb466a61bd065951fa8d0aca5e261a015a",
+        "input_system_identical": true,
+        "only_schema_change_is_risk_flags_bounds": true,
+        "budgets_identical": true,
+        "generation_options": {
+          "input_token_estimate": 3982,
+          "input_token_ceiling": 4800,
+          "context_window": 8192,
+          "output_token_limit": 3072
+        },
+        "new_actual_required": true
+      },
+      {
+        "case_id": "anchor_real_manual_missing_prevday",
+        "context_sha256": "53c631507cbcd337b867f2f6b9fd1974da0b05115067b40d7ea6340062e6237a",
+        "old_context_sha256": "53c631507cbcd337b867f2f6b9fd1974da0b05115067b40d7ea6340062e6237a",
+        "system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "old_system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "schema_sha256": "e5bb92178c030ef1c275d26339adb7994e2d4e64bf1d36b08f3de47c5370e8cc",
+        "old_schema_sha256": "47ab997a1d7f520d29a7ab6ac4f011b12684ea82f9e074395d98c18883284b91",
+        "input_system_identical": true,
+        "only_schema_change_is_risk_flags_bounds": true,
+        "budgets_identical": true,
+        "generation_options": {
+          "input_token_estimate": 6969,
+          "input_token_ceiling": 12800,
+          "context_window": 16384,
+          "output_token_limit": 3072
+        },
+        "new_actual_required": true
+      },
+      {
+        "case_id": "anchor_gap_supply_loss_40",
+        "context_sha256": "f0a8856b5acffcee6dceeeb692d6373963fe7635e87e054b5ae904125950b5ae",
+        "old_context_sha256": "f0a8856b5acffcee6dceeeb692d6373963fe7635e87e054b5ae904125950b5ae",
+        "system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "old_system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "schema_sha256": "58d2bf9c1ed661c80aec76d3af507b330eaf8f15fac530d248a23c288906e827",
+        "old_schema_sha256": "92a3ec6e8a4370df5489a2321a02b29179bee3a0830c4602487b7a23c2123ec8",
+        "input_system_identical": true,
+        "only_schema_change_is_risk_flags_bounds": true,
+        "budgets_identical": true,
+        "generation_options": {
+          "input_token_estimate": 4230,
+          "input_token_ceiling": 4800,
+          "context_window": 8192,
+          "output_token_limit": 3072
+        },
+        "new_actual_required": true
+      },
+      {
+        "case_id": "anchor_gap_supply_restore_40",
+        "context_sha256": "0c48e0d6a55a6003d80f098e58a5a24a5d00629a846ae7538a1654a0e64ade0a",
+        "old_context_sha256": "0c48e0d6a55a6003d80f098e58a5a24a5d00629a846ae7538a1654a0e64ade0a",
+        "system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "old_system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "schema_sha256": "58d2bf9c1ed661c80aec76d3af507b330eaf8f15fac530d248a23c288906e827",
+        "old_schema_sha256": "92a3ec6e8a4370df5489a2321a02b29179bee3a0830c4602487b7a23c2123ec8",
+        "input_system_identical": true,
+        "only_schema_change_is_risk_flags_bounds": true,
+        "budgets_identical": true,
+        "generation_options": {
+          "input_token_estimate": 4255,
+          "input_token_ceiling": 4800,
+          "context_window": 8192,
+          "output_token_limit": 3072
+        },
+        "new_actual_required": true
+      },
+      {
+        "case_id": "anchor_legal_prevday_weak_market_up",
+        "context_sha256": "2b86b4baa918445b61b1dec3a33e3119ae657c931e7ac0fad1b894e9fb957e6f",
+        "old_context_sha256": "2b86b4baa918445b61b1dec3a33e3119ae657c931e7ac0fad1b894e9fb957e6f",
+        "system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "old_system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "schema_sha256": "1d6780f8ea6815567ce6bfaba13ad07e99535df123c902d76c93869bfc4c5e21",
+        "old_schema_sha256": "0fb12067def26e768c05acbe40846ceb466a61bd065951fa8d0aca5e261a015a",
+        "input_system_identical": true,
+        "only_schema_change_is_risk_flags_bounds": true,
+        "budgets_identical": true,
+        "generation_options": {
+          "input_token_estimate": 3937,
+          "input_token_ceiling": 4800,
+          "context_window": 8192,
+          "output_token_limit": 3072
+        },
+        "new_actual_required": true
+      },
+      {
+        "case_id": "real_future_well_b1",
+        "context_sha256": "d1a55cf85f1861b5fb43f1a3b7e69bff65850aac97d5e183c0784184eb671ed4",
+        "old_context_sha256": "d1a55cf85f1861b5fb43f1a3b7e69bff65850aac97d5e183c0784184eb671ed4",
+        "system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "old_system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "schema_sha256": "5fa238774f283800ff75357c102e07ac67ce6a4a7b44b55c880ec8ebfc7a867a",
+        "old_schema_sha256": "943c2dd0e75238db914e429ae9b6eee71102be8c01f816a039fa5c7d0cd1dfb9",
+        "input_system_identical": true,
+        "only_schema_change_is_risk_flags_bounds": true,
+        "budgets_identical": true,
+        "generation_options": {
+          "input_token_estimate": 8225,
+          "input_token_ceiling": 12800,
+          "context_window": 16384,
+          "output_token_limit": 3072
+        },
+        "new_actual_required": true
+      }
+    ]
+  },
+  "detail_contract": {
+    "risk_flags_maxItems": 2,
+    "body_array_maxItems": 2,
+    "body_maxLength": 280,
+    "references_maxItems": 16,
+    "missing_fields_maxItems": 8,
+    "analysis_matched_terms_maxItems": 8,
+    "output_budget": 4096,
+    "input_profiles": [
+      [
+        8192,
+        3584
+      ],
+      [
+        16384,
+        11776
+      ]
+    ],
+    "minimum_context_margin": 512,
+    "fact_checks_all_rows_retained": true,
+    "all_five_labels_retained": true
+  },
+  "actual_fourth_failed_detail": {
+    "record_file": "reports/repair_2026-10-20/production_manual_detail_conditional_failed_v2_3.json",
+    "record_sha256": "4022904c09136ba9060b046384e44d97d6ad723364c6fa54bb61163e4f0d18aa",
+    "metric_file": "reports/repair_2026-10-20/production_manual_detail_conditional_failed_metric_v2_3.json",
+    "metric_sha256": "2295258f3b2ad213daa0a7a163b39e1907f086d45f642e92c8ed455ca9e1b865",
+    "first_raw_risk_repetition_incomplete_json_preserved": true,
+    "second_raw_future_event_negated_causation_is_not_measured_global_zero": true,
+    "second_raw_both_notices_after_target_window_is_false": true,
+    "original_failed_record_not_changed": true,
+    "prepared_token_estimate": 11248,
+    "input_ceiling": 11776,
+    "output_budget": 4096,
+    "source_timing": {
+      "N1": {
+        "as_of_relation": "not_started",
+        "start_vs_target_window": "at_or_after_target_window_end",
+        "description": "截至分析时点尚未开始；目标结算窗口结束时或之后开始；开始时刻不证明实际流量损失",
+        "notice_interval_overlaps_target_window": false
+      },
+      "N2": {
+        "as_of_relation": "not_started",
+        "start_vs_target_window": "starts_inside_target_window",
+        "description": "截至分析时点尚未开始；目标结算窗口内开始；开始时刻不证明实际流量损失",
+        "notice_interval_overlaps_target_window": true
+      }
+    }
+  },
+  "known_context_limit": "Real Nyhamna/Eni large comparison snapshots cannot prepare a full detail within11776 input tokens at existing compression levels. They fail explicitly; no source card is silently dropped. The selected actual detail test is supply_restore_40_with_flat_baseline.",
+  "changes_do_not": [
+    "rewrite accepted or failed model results",
+    "assign directions",
+    "change expected labels",
+    "alter global prompt2.3",
+    "increase retry count",
+    "treat capacity as physical flow",
+    "treat future event as after target settlement by default"
+  ]
+}

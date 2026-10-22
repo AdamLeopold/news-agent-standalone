@@ -1,0 +1,376 @@
+{
+  "status": "failed",
+  "started_at": "2026-10-21T03:26:13.440592+00:00",
+  "expected_prompt_version": "ttf-news-standalone-2.3",
+  "scope": "real_local_manual_detail_english_exports_sse_and_preservation",
+  "synthetic_live_input": false,
+  "raw_thinking_included": false,
+  "stages": [
+    {
+      "name": "preservation_before",
+      "status": "passed",
+      "started_at": "2026-10-21T03:26:13.454823+00:00",
+      "checks": {
+        "passed": true,
+        "protected_analysis_count": 147,
+        "protected_nonnull_field_count": 275,
+        "current_analysis_count": 148,
+        "new_analysis_count": 1,
+        "protected_snapshot_count": 5,
+        "new_snapshot_count": 0,
+        "original_validation_record_count": 1,
+        "latest_baseline_unchanged": true,
+        "original_baseline": {
+          "id": 210,
+          "created_at": "2026-10-14T05:51:48.181167+00:00",
+          "type": "validation_started"
+        },
+        "failures": []
+      },
+      "finished_at": "2026-10-21T03:26:13.489213+00:00",
+      "elapsed_seconds": 0.034
+    },
+    {
+      "name": "live_api_v2_and_managed_identity",
+      "status": "passed",
+      "started_at": "2026-10-21T03:26:13.489840+00:00",
+      "checks": {
+        "prompt_version": "ttf-news-standalone-2.3",
+        "model": "gpt-oss:20b",
+        "server_pid": 17646,
+        "managed_pid_identity_verified": true,
+        "collector": {
+          "enabled": true,
+          "poll_seconds": 60
+        },
+        "counts": {
+          "news": 3996,
+          "events": 1575,
+          "legacy_daily": 3456,
+          "prices": 65882,
+          "analyses": 148
+        },
+        "monitoring_reachable": true
+      },
+      "finished_at": "2026-10-21T03:26:14.453104+00:00",
+      "elapsed_seconds": 0.963
+    },
+    {
+      "name": "select_real_existing_news",
+      "status": "passed",
+      "started_at": "2026-10-21T03:26:14.453869+00:00",
+      "checks": {
+        "news_id": "c0e1e289e3aa12907e840c18",
+        "title": "LNG Canada entrusts Técnicas Reunidas with €200M+ EPCM deal",
+        "source": "offshore_energy",
+        "url": "https://offshore-energy.biz/2026/10/20/lng-canada-entrusts-tecnicas-reunidas-with-euro200m-epcm-deal",
+        "published_at": "2026-10-20T13:11:12+00:00",
+        "source_version": 2,
+        "body_characters": 1417,
+        "body_sha256": "d8093c3429f67dd3f819bb28669363f0caf4bc9f9db138302d968de689c80948",
+        "fact_excerpt_used": true
+      },
+      "finished_at": "2026-10-21T03:26:14.463124+00:00",
+      "elapsed_seconds": 0.009
+    },
+    {
+      "name": "ensure_current_v2_live_forecast",
+      "status": "passed",
+      "started_at": "2026-10-21T03:26:14.463760+00:00",
+      "checks": {
+        "analysis_id": "c5e8b981-885a-42b5-94c7-529fa93fd550",
+        "status": "queued",
+        "created": true,
+        "trade_date": "2026-10-21",
+        "source_news_id": "90bfbf6adb1183517cbc00ca",
+        "reason": "explicit_new_source_profile_live_analysis_via_normal_news_api",
+        "old_forecasts_overwritten": false,
+        "validation_baseline_reset": false
+      },
+      "finished_at": "2026-10-21T03:26:20.646754+00:00",
+      "elapsed_seconds": 6.183
+    },
+    {
+      "name": "sse_initial_connection",
+      "status": "passed",
+      "started_at": "2026-10-21T03:26:20.647406+00:00",
+      "checks": {
+        "id": 215011,
+        "type": "stream_ready",
+        "kind": null,
+        "matched_analysis_id": null,
+        "replayed_event_count": 1,
+        "cursor_mode": "initial_ready"
+      },
+      "finished_at": "2026-10-21T03:26:20.651557+00:00",
+      "elapsed_seconds": 0.004
+    },
+    {
+      "name": "manual_submit_real_news",
+      "status": "passed",
+      "started_at": "2026-10-21T03:26:20.652920+00:00",
+      "checks": {
+        "analysis_id": "e348df19-fd5a-4eb6-a30f-dcd0c4065f24",
+        "status": "queued",
+        "real_source_news_id": "c0e1e289e3aa12907e840c18"
+      },
+      "finished_at": "2026-10-21T03:26:22.276337+00:00",
+      "elapsed_seconds": 1.623
+    },
+    {
+      "name": "sse_last_event_id_reconnect",
+      "status": "passed",
+      "started_at": "2026-10-21T03:26:22.277043+00:00",
+      "checks": {
+        "id": 215012,
+        "type": "analysis_queued",
+        "kind": null,
+        "matched_analysis_id": "e348df19-fd5a-4eb6-a30f-dcd0c4065f24",
+        "replayed_event_count": 1,
+        "cursor_mode": "Last-Event-ID"
+      },
+      "finished_at": "2026-10-21T03:26:22.280605+00:00",
+      "elapsed_seconds": 0.004
+    },
+    {
+      "name": "sse_after_query_reconnect",
+      "status": "passed",
+      "started_at": "2026-10-21T03:26:22.281454+00:00",
+      "checks": {
+        "id": 215012,
+        "type": "analysis_queued",
+        "kind": null,
+        "matched_analysis_id": "e348df19-fd5a-4eb6-a30f-dcd0c4065f24",
+        "replayed_event_count": 1,
+        "cursor_mode": "after_query"
+      },
+      "finished_at": "2026-10-21T03:26:22.286680+00:00",
+      "elapsed_seconds": 0.005
+    },
+    {
+      "name": "manual_real_brief",
+      "status": "passed",
+      "started_at": "2026-10-21T03:26:22.287369+00:00",
+      "checks": {
+        "prompt_version": "ttf-news-standalone-2.3",
+        "news_direction": "flat",
+        "close_direction": "up",
+        "close_evidence_status": "forecast",
+        "english_close_label": "Up",
+        "summary_sha256": "a210c53de52388567a904c14a73aceb295f7f0b09029dc98ed46463c4ca40254",
+        "summary_characters": 34,
+        "model_seconds": 91.501,
+        "as_of": "2026-10-21T03:26:20.657582+00:00",
+        "raw_evidence_validated": true,
+        "analysis_id": "e348df19-fd5a-4eb6-a30f-dcd0c4065f24",
+        "poll_count": 38,
+        "completed_at": "2026-10-21T03:28:56.641094+00:00",
+        "source_body_unchanged": true
+      },
+      "finished_at": "2026-10-21T03:28:58.689181+00:00",
+      "elapsed_seconds": 156.402
+    },
+    {
+      "name": "sse_completed_event_replay",
+      "status": "passed",
+      "started_at": "2026-10-21T03:28:58.690041+00:00",
+      "checks": {
+        "id": 215058,
+        "type": "analysis_completed",
+        "kind": "short",
+        "matched_analysis_id": "e348df19-fd5a-4eb6-a30f-dcd0c4065f24",
+        "replayed_event_count": 47,
+        "cursor_mode": "Last-Event-ID"
+      },
+      "finished_at": "2026-10-21T03:28:59.014215+00:00",
+      "elapsed_seconds": 0.324
+    },
+    {
+      "name": "manual_detail_request",
+      "status": "passed",
+      "started_at": "2026-10-21T03:28:59.015053+00:00",
+      "checks": {
+        "id": "e348df19-fd5a-4eb6-a30f-dcd0c4065f24",
+        "status": "queued"
+      },
+      "finished_at": "2026-10-21T03:28:59.019947+00:00",
+      "elapsed_seconds": 0.005
+    },
+    {
+      "name": "english_brief_request",
+      "status": "passed",
+      "started_at": "2026-10-21T03:28:59.020761+00:00",
+      "checks": {
+        "translation_id": "a165a3fd-b02b-4a08-84dd-6a70fec8e68b",
+        "part": "brief",
+        "status": "queued"
+      },
+      "finished_at": "2026-10-21T03:28:59.035316+00:00",
+      "elapsed_seconds": 0.015
+    },
+    {
+      "name": "manual_real_detail",
+      "status": "failed",
+      "started_at": "2026-10-21T03:28:59.036097+00:00",
+      "error_type": "RuntimeError",
+      "error": "Detail failed: 模型JSON两次校验失败，未生成方向：news_impact.summary:Gassco公告撤销/结束或实际流量未确认，不能证明未形成供需冲击、供应不受影响或实际流量无变化；须有独立无变化计量事实。可写输入未显示冲击证据或恢复待核实，不；news_impact.summary:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景；detail.limitations:不得重复相同条目，请只保留不同的事实或风险",
+      "finished_at": "2026-10-21T03:31:45.499508+00:00",
+      "elapsed_seconds": 166.463
+    },
+    {
+      "name": "english_brief_actual_text_labels_numbers",
+      "status": "passed",
+      "started_at": "2026-10-21T03:31:45.502135+00:00",
+      "checks": {
+        "translated_fields_checked": 16,
+        "protected_labels_numbers_citations_unchanged": true,
+        "untranslated_chinese_fields": 0,
+        "source_sha256": "08814ea9e8fc51293e38eff9c7da4b1e8bfb63244a9af99a6455d7f1d9f00c6f",
+        "news_direction": "flat",
+        "close_direction": "up",
+        "close_evidence_status": "forecast",
+        "english_close_label": "Up",
+        "english_summary_sha256": "1509e1448f7cab3ae221b704497895374753c7e88b1527e3781289d7a6683f2e",
+        "english_summary_characters": 154,
+        "translation_model_seconds": 38.413,
+        "translation_id": "a165a3fd-b02b-4a08-84dd-6a70fec8e68b",
+        "part": "brief",
+        "poll_count": 9,
+        "cache_endpoint_verified": true
+      },
+      "finished_at": "2026-10-21T03:32:22.255732+00:00",
+      "elapsed_seconds": 36.754
+    },
+    {
+      "name": "csv_jsonl_exports",
+      "status": "passed",
+      "started_at": "2026-10-21T03:32:22.257219+00:00",
+      "checks": {
+        "news": {
+          "csv": {
+            "rows": 3996,
+            "bytes": 5003954,
+            "sha256": "b496625bc4ee7ede5feb52e9f861d8056cb74f615fa3bee41163854ff016e57b",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 3996,
+            "bytes": 6693114,
+            "sha256": "5a704b12d7a5d06c069e4ee190e00b457032f04b2e7f02a78faeb78a5684a5e4",
+            "parsed": true
+          },
+          "row_counts_match": true,
+          "independent_snapshot_requests": true
+        },
+        "daily": {
+          "csv": {
+            "rows": 628,
+            "bytes": 3916578,
+            "sha256": "88536d2c357c6bdc92d01c2236d48f69971c072d4892d7823d415c99ac9cc339",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 628,
+            "bytes": 3808065,
+            "sha256": "8abd151fc28871df650bbd8bc6dcf3330e0d6a4f6ca9f9956a013fdb92ad9435",
+            "parsed": true
+          },
+          "row_counts_match": true,
+          "independent_snapshot_requests": true
+        },
+        "events": {
+          "csv": {
+            "rows": 1575,
+            "bytes": 5979384,
+            "sha256": "0e6556480966e6612fa92799d9b5334a9bba19dcd93482a64aba109a62b2fdd4",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 1575,
+            "bytes": 6391647,
+            "sha256": "1900b32e66e96cb531c615b627ed238ca4922477b609d3fe8a7d1e3bfdf0496b",
+            "parsed": true
+          },
+          "row_counts_match": true,
+          "independent_snapshot_requests": true
+        },
+        "prices": {
+          "csv": {
+            "rows": 65882,
+            "bytes": 26615025,
+            "sha256": "00ac45a6997fcfaf578bca83e14053bc0a340294d4b9f3d5a0552d14e706a95c",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 65882,
+            "bytes": 43744696,
+            "sha256": "481773ca2e293e96ae5cf18b7a5bce085fe568d1afdca984db2b587c46d6fb94",
+            "parsed": true
+          },
+          "row_counts_match": true,
+          "independent_snapshot_requests": true
+        }
+      },
+      "finished_at": "2026-10-21T03:32:26.997856+00:00",
+      "elapsed_seconds": 4.741
+    },
+    {
+      "name": "current_live_forecast_v2",
+      "status": "passed",
+      "started_at": "2026-10-21T03:32:26.998922+00:00",
+      "checks": {
+        "prompt_version": "ttf-news-standalone-2.3",
+        "news_direction": "flat",
+        "close_direction": "up",
+        "close_evidence_status": "forecast",
+        "english_close_label": "Up",
+        "summary_sha256": "a228d531d5d9f17cdebeb6bf1969526f041ad226dbbbb807cebe0c0bba0f8899",
+        "summary_characters": 13,
+        "model_seconds": 38.343,
+        "as_of": "2026-10-21T03:26:18.824670+00:00",
+        "raw_evidence_validated": true,
+        "analysis_id": "c5e8b981-885a-42b5-94c7-529fa93fd550",
+        "trade_date": "2026-10-21",
+        "dashboard_current_window_verified": true
+      },
+      "finished_at": "2026-10-21T03:32:29.257456+00:00",
+      "elapsed_seconds": 2.259
+    },
+    {
+      "name": "preservation_after",
+      "status": "passed",
+      "started_at": "2026-10-21T03:32:29.258762+00:00",
+      "checks": {
+        "passed": true,
+        "protected_analysis_count": 147,
+        "protected_nonnull_field_count": 275,
+        "current_analysis_count": 150,
+        "new_analysis_count": 3,
+        "protected_snapshot_count": 5,
+        "new_snapshot_count": 0,
+        "original_validation_record_count": 1,
+        "latest_baseline_unchanged": true,
+        "original_baseline": {
+          "id": 210,
+          "created_at": "2026-10-14T05:51:48.181167+00:00",
+          "type": "validation_started"
+        },
+        "failures": []
+      },
+      "finished_at": "2026-10-21T03:32:29.300983+00:00",
+      "elapsed_seconds": 0.042
+    }
+  ],
+  "new_live_analysis_id": "c5e8b981-885a-42b5-94c7-529fa93fd550",
+  "new_analysis_id": "e348df19-fd5a-4eb6-a30f-dcd0c4065f24",
+  "finished_at": "2026-10-21T03:32:29.302167+00:00",
+  "failed_stages": [
+    "manual_real_detail"
+  ],
+  "missing_required_stages": [
+    "chinese_originals_unchanged_after_translation",
+    "english_detail_actual_text_labels_numbers",
+    "manual_real_detail"
+  ],
+  "elapsed_seconds": 375.861
+}

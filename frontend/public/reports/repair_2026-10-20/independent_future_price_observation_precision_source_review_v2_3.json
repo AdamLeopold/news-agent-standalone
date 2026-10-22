@@ -1,0 +1,41 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T03:18:06.848875+00:00",
+  "scope": "Append-only finite precision correction to the same two-validator proposal. No model/API/DB/core changes.",
+  "candidate_source": {
+    "analysis": "6d46d6dcee4899ea7426222014ee84dc6d9b56f8144789561ba11a02adace72d",
+    "semantics": "e0cac7cdab33b6562ee88db528ad32114540734b2b96275d7f32e67302856623"
+  },
+  "verdict": "ready_for_authorized_application_after_finite_precision_correction",
+  "finite_review_passed": true,
+  "known_logic_errors": [],
+  "new_model_calls": 0,
+  "prior_review": {
+    "file": "reports/repair_2026-10-20/independent_future_price_observation_role_source_review_v2_3.json",
+    "sha256": "01f45f5e3af9530bd37c95be2e8c2ef3e30a13d0e97d67f58667b55b2c336804"
+  },
+  "correction": "The old3a47 amount-equality rounding could accept observed0.178 claimed as rise0 or level87.725 claimed as88. Its numerical-precision approval is superseded by this append; the original report and files remain intact. Candidate6d46 now caps absolute error at min(.011, half stated decimal unit+1e-9), retaining correct0.18 and87.73 while rejecting0/88 and0.17. The other prior source-role and pricezero conclusions remain unchanged.",
+  "precision_controls": {
+    "file": "reports/repair_2026-10-20/independent_future_price_observation_precision_controls_v2_3.json",
+    "sha256": "32935d4310b5208c03c65fff5125f92b2dd59c287da91772762c4ca694e3a8f9",
+    "passed": 5
+  },
+  "focused_tests": {
+    "log": "reports/repair_2026-10-20/independent_future_price_observation_role_precision_tests_v2_3.log",
+    "log_sha256": "b2871562351e9af1f5abae1cee5270a1d56ee8f0a20e69a668f688f8af68b0bb",
+    "junit": "reports/repair_2026-10-20/independent_future_price_observation_role_precision_tests_v2_3.xml",
+    "junit_sha256": "796b1cddca398dd34b5a7baa7600d2840e046c83c1e771e0b4013a996d571ce4",
+    "passed": 316,
+    "passed_subtests": 324,
+    "failed": 0
+  },
+  "known_original_bad_bodies": "Eighteen original bad bodies remain rejected under the owner final proof and focused regression; no original raw/status rewritten.",
+  "owner_final_proof": {
+    "file": ".runtime/future-price-observation-role-proposal/proposal_proof_rounding_final.json",
+    "sha256": "caa9d872722ae70dc4eec40c13dbcd6926a6ac727fb93429426047c60dbf924e"
+  },
+  "source_and_label_boundary": "Only the same two validator functions change; no sources/request preparation/labels/prompt/schema/budget changes. Matching observed numbers never authorizes numeric future targets or wrong historical time roles.",
+  "production_ready": false,
+  "next_action": "Apply authorized exact6d46/e0ca candidate, freeze, full unit suite, official complete path replay and only required new actuals. Preserve failed model attempts and independent production-success requirements."
+}

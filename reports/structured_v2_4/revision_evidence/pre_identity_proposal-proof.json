@@ -1,0 +1,42 @@
+{
+  "created_at": "2026-10-22T16:47:37.446153+00:00",
+  "status": "private_proposal_cpu_passed_not_real_revision_model_accepted",
+  "model_calls": 0,
+  "production_db_writes": 0,
+  "production_source_edits": 0,
+  "files": {
+    "ttf_news/context.py": "5b8d90bb5c95871740a579c67a7670c809850eb3305797ed7f03367d432d2170",
+    "ttf_news/structured_core.py": "58b5a10d0da9935f0cef7f8c0769069c5d492064709fbd339ea43075e9398123",
+    "tests/test_revision_evidence.py": "38239a6ce848a4aa62d82c3338aed830ab93a3b134b8fc8e73d62b78820b76cb",
+    "context.diff": "b8cba12efc255e24a45c496102a4b9acb638512117ba46aaac0f18f3ebaa915c",
+    "structured_core.diff": "5c29868bf8b98e7b73b8a1dbfbf90cdcb3308f42bd55cc0d207dc8bbb69e1b36",
+    "mixed-zero-call-replay.json": "35231f13b9f61fd84c7a33c9587e3a0647c28089fdbc060472148f27b25d65e9",
+    "focused.log": "05f719ef099e58af8fafe59d888eb1b75c86aaeb988db05d45df4dbd1af3b1cb"
+  },
+  "base_source_sha256": {
+    "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+    "ttf_news/structured_core.py": "027bc8d862b3cc3f8eff7ea54b881a51030372009c9087dbdac2815c0582e4cc"
+  },
+  "focused_test_returncode": 0,
+  "focused_test_summary": "9 passed in 0.10s",
+  "implemented_contract": [
+    "Only compared substantive same-authority source versions can become a current publisher-revision comparison; original published_at stays unchanged.",
+    "Publisher updated_at must strictly advance from the previous version, lie in the current window and be locally known by as_of. First_seen never becomes a publication/revision time.",
+    "Before/after source fields reconstruct full previous source_body and immutable prior paragraph evidence with full hashes/identity/version.",
+    "Only an eligible source request adds novelty=unchanged/added/revised and prior_evidence_ids. Ordinary fresh/noneligible source request/schema is unchanged.",
+    "Each fact selects current evidence and per-claim novelty; two facts in one changed paragraph can have different timing. Exact unchanged paragraphs cannot be labeled new; revised claims require prior evidence from this source.",
+    "Unchanged claims and explicit historical_as_reported remain background. Added/revised claims from a verified current revision can use existing typed economic mechanisms/scopes; no sign/weight is repaired.",
+    "Details retain original publication, publisher revision, local knowledge time and full selected prior quote; old nonrevision renders are byte-identical."
+  ],
+  "test_evidence_boundary": [
+    "CPU fixtures use exact stored Cheniere paragraph content combined into explicitly constructed before/after versions and diagnostic clocks. They are not observed publisher revision pairs or model novelty accuracy results.",
+    "Metadata-only, same/missing publisher clock, unknown-future local version, authority migration and first-seen-only changes cannot become new source publication.",
+    "The already-saved real2.4.5 mixed classes, weights, closing plan and four renders were replayed with zero model calls. Their classification, weight and closing request tuples are exactly unchanged.",
+    "A genuine ordinary old-article authoritative before/after revision pair has not yet been run through20b. It requires final frozen-source real testing before claiming full revision semantic acceptance."
+  ],
+  "limitations": [
+    "Semantic novelty inside changed paragraphs is a model judgement over both immutable versions, not programmatically verified entailment.",
+    "A completely removed claim with no new current evidence paragraph is not directly normalized as a standalone retraction in this minimal proposal. A source-provided current correction/reversal paragraph can be compared; deletion-only semantic retraction remains a limitation.",
+    "No legacy data, old formal predictions, analysis reviews or frozen validation baseline changed."
+  ]
+}

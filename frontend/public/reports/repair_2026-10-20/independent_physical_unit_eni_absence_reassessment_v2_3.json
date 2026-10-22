@@ -1,0 +1,38 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T02:35:31.904548+00:00",
+  "review_kind": "append_only_same_eni_active_supply_absence_review",
+  "actual_record": {
+    "file": "reports/repair_2026-10-20/candidate-physical-unit-validation/real_eni.json",
+    "sha256": "9e85944a044ac9bb195d41e0faa1756bbb2cae3991356a32644854c192a39d2d",
+    "input_sha256": "0dd52f2daf32aeaf1edc94d3394b0df67eba21b6f8d1b3b6ca0652c0faf8f075",
+    "original_contract_passed": true
+  },
+  "prior_full_review": {
+    "file": "reports/repair_2026-10-20/independent_actual_physical_unit_review_v2_3_all_6_briefs.json",
+    "sha256": "f7de6a40d0a43603ef20b711250fc9498139075d6fc50a2f765a2ceb46fabfcb"
+  },
+  "prior_state_reassessment": {
+    "file": "reports/repair_2026-10-20/independent_physical_unit_eni_state_reassessment_v2_3.json",
+    "sha256": "87025fada46bc66c69b77a54b7d1be1c9911668fc0726240efee619cc724971e"
+  },
+  "finding": {
+    "severity": "P2",
+    "field": "close_forecast.basis",
+    "quote": "市场基准已观察到+0.178欧元/兆瓦时的微幅上涨，且无显著供应中断，未来供应增量尚未实现，故维持平稳。",
+    "unsupported_span": "且无显著供应中断",
+    "source_boundary": "Active Åsgard notice5.2 and Nyhamna notice19.8mcm/d are unavailable capacities with unknown actual flows, not measured absence of an actual supply interruption. Their absolute capacity numbers lack a supplied Europe-wide denominator or an actual-flow sizing threshold.",
+    "explanation": "The object 供应中断 is a physical state. The unqualified no-significant-interruption assertion upgrades unknown physical measurements into reassuring absence. A small reference price move+0.178 EUR/MWh does not establish physical supply stability or no major interruption. This is different from a conditional/degree judgment that the supplied news pressure on TTF is limited.",
+    "allowed_examples": [
+      "输入未确认实际供气中断，已知不可用容量需结合实流核实",
+      "现有公告对TTF的新闻压力预计有限",
+      "若缺口规模较小且被有来源的供应改善抵消，TTF净压力可能接近平衡"
+    ],
+    "forecast_boundary": "Netflat is not rejected merely because it is flat; the unsupported physical-state premise must be corrected while retaining a free justified net direction."
+  },
+  "independent_case_passed": false,
+  "new_model_calls": 0,
+  "original_artifacts_modified": false,
+  "scope": "Only this already-known actual Eniraw, its active Gassco sources and the confirmed capacity-versus-actual-state family; no new sample or general degree-language ban."
+}

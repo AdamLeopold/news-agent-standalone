@@ -1,0 +1,35 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "operation": "append sixth production evidence to existing price-observation/baseline family; original ledger archived byte-for-byte",
+  "previous_ledger": {
+    "file": "reports/repair_2026-10-20/release_known_accepted_errors.6225413f7a81cf76.json",
+    "sha256": "6225413f7a81cf76b2baacbcf895df13d7014bb6dc00786e6b1df6bad6b92c94"
+  },
+  "updated_ledger": {
+    "file": "reports/repair_2026-10-20/release_known_accepted_errors.json",
+    "sha256": "d10d14b144de1130fac9b8f8f157e1bdb9c48b42e334d9f13fc26799ab5ff355"
+  },
+  "existing_family_id": "v2_3_isolated_price_observation_or_baseline_errors",
+  "family_count_before": 8,
+  "family_count_after": 8,
+  "all_statuses_open": true,
+  "resolution_evidence_added": false,
+  "affected_fixture_cases_unchanged": true,
+  "affected_analysis_ids_added": [
+    "e348df19-fd5a-4eb6-a30f-dcd0c4065f24",
+    "c5e8b981-885a-42b5-94c7-529fa93fd550"
+  ],
+  "independent_review": {
+    "file": "reports/repair_2026-10-20/independent_production_sixth_cn_english_full_review_v2_3.json",
+    "sha256": "7f07d19bcedd5c9293c1ec5e4eb817943f86f993f95ac4148a620634757dc11d"
+  },
+  "review_application_manifest": {
+    "file": "reports/repair_2026-10-20/production_sixth_price_reasoning_analysis_reviews_v2_3.json",
+    "sha256": "59ee92b2a74f9a3dbb039354a05db6a7b3cb90f710ff81e5099f9cecc4d0ae5b"
+  },
+  "canonical_predictions_modified": false,
+  "model_calls": 0,
+  "database_access": false,
+  "network_calls": 0
+}

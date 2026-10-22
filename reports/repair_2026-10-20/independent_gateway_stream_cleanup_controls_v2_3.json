@@ -1,0 +1,19 @@
+{
+  "candidate_sha256": "08990e223d5e7d1d348967c9625fd29fc2d1e7e58bb000c964b9cfea43b59952",
+  "controls": [
+    {
+      "case": "16 setup httpx errors release capacity; next succeeds",
+      "passed": true
+    },
+    {
+      "case": "16 ASGI send runtime errors release slots and finish exactly-once close",
+      "passed": true
+    }
+  ],
+  "existing_test_functions_ast_unchanged": true,
+  "top_level_constants_ast_unchanged": true,
+  "model_calls": 0,
+  "network_sockets": 0,
+  "database_access": false,
+  "source_modification": false
+}

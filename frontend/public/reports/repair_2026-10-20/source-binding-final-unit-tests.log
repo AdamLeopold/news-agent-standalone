@@ -1,0 +1,577 @@
+............................................. [  2%]
+.................................................................... [  7%]
+..............................................................F......... [ 12%]
+................................................................... [ 16%]
+........................................................................ [ 21%]
+........................................................................ [ 26%]
+........F............................................................F.. [ 31%]
+.......FF............................................................... [ 35%]
+........................................................................ [ 40%]
+........................................................................ [ 45%]
+...................................................................... [ 50%]
+........................................................................ [ 54%]
+........................................................................ [ 59%]
+...................................................................... [ 64%]
+..................................................... [ 67%]
+........................................................................ [ 72%]
+................................... [ 75%]
+.................... [ 76%]
+........................ [ 77%]
+................ [ 79%]
+.................................................................................F.................................. [ 86%]
+........................................................................ [ 91%]
+................................................. [ 94%]
+........................................................................ [ 99%]
+......                                                                   [100%]
+=================================== FAILURES ===================================
+_ test_actual_detail_first_allocated_sources_are_valid_and_second_field_error_stays _
+
+actual = {'schema_version': 'eighth-window-knowledge-actual-v1', 'source_record': {'file': 'reports/repair_2026-10-20/productio...e2b20ec0c026ce7b34b57b99'}, 'analysis_id': '30db9f1c-7595-4f29-af5e-85e5d1df0a2e', 'original_status': 'completed', ...}
+
+    def test_actual_detail_first_allocated_sources_are_valid_and_second_field_error_stays(actual):
+     row,ctx,p=detail_setup(actual);body=json.loads(row['raw_content'][0]);before=copy.deepcopy(body)
+     a._validate_notice_source_facts(body,ctx,p)
+>    assert s.collect_analysis_semantic_errors(body,ctx,p)==[]
+E    AssertionError: assert ['source_fact...或把行情变化当公告已计价'] == []
+E      
+E      Left contains one more item: 'source_fact_checks与本次已知输入的公告/行情事实表不一致；须逐项复制输入原值，不能修改类型、时态或把行情变化当公告已计价'
+E      Use -v to get more diff
+
+tests/test_eighth_output_scope.py:71: AssertionError
+_ test_actual_manual_pilot_both_drafts_now_reject_the_specific_future_current_window_claim _
+
+    def test_actual_manual_pilot_both_drafts_now_reject_the_specific_future_current_window_claim():
+     for name in ['ninth_manual_pilot_1','ninth_manual_pilot_2']:
+      row=BY[name];assert hashlib.sha256(row['raw_content'].encode()).hexdigest()==row['raw_sha256']
+      ctx=copy.deepcopy(row['input_snapshot']);p,m=a.prepare_context(ctx);out=json.loads(row['raw_content']);before=copy.deepcopy(out)
+      with pytest.raises(ValueError,match='未来公告的容量下降') as error:s._check_notice_settlement_timing(out,ctx,p,source_index=m["source_index"])
+>     assert '2026-10-22T06:00:00+0200' in str(error.value)
+E     AssertionError: assert '2026-10-22T06:00:00+0200' in 'analysis.summary:N0公告开始2026-10-22T04:00:00+00:00，截至分析时点尚未开始；目标结算窗口结束时或之后开始；开始时刻不证明实际流量损失；不能把该未来公告的容量下降写成本窗口内已发生的物理容量变化。窗口内公布计划不等于计划已生效；可分别陈述该N起止与容量安排，并讨论未来价格预期，不证明实际流量损失或指定净方向'
+E      +  where 'analysis.summary:N0公告开始2026-10-22T04:00:00+00:00，截至分析时点尚未开始；目标结算窗口结束时或之后开始；开始时刻不证明实际流量损失；不能把该未来公告的容量下降写成本窗口内已发生的物理容量变化。窗口内公布计划不等于计划已生效；可分别陈述该N起止与容量安排，并讨论未来价格预期，不证明实际流量损失或指定净方向' = str(ValueError('analysis.summary:N0公告开始2026-10-22T04:00:00+00:00，截至分析时点尚未开始；目标结算窗口结束时或之后开始；开始时刻不证明实际流量损失；不能把该未来公告的容量下降写成本窗口内已发生的物理容量变化。窗口内公布计划不等于计划已生效；可分别陈述该N起止与容量安排，并讨论未来价格预期，不证明实际流量损失或指定净方向'))
+E      +    where ValueError('analysis.summary:N0公告开始2026-10-22T04:00:00+00:00，截至分析时点尚未开始；目标结算窗口结束时或之后开始；开始时刻不证明实际流量损失；不能把该未来公告的容量下降写成本窗口内已发生的物理容量变化。窗口内公布计划不等于计划已生效；可分别陈述该N起止与容量安排，并讨论未来价格预期，不证明实际流量损失或指定净方向') = <ExceptionInfo ValueError('analysis.summary:N0公告开始2026-10-22T04:00:00+00:00，截至分析时点尚未开始；目标结算窗口结束时或之后开始；开始时刻不证明实际流量损失；不能把该未来公告的容量下降写成本窗口内已发生的物理容量变化。窗口内公布计划不等于计划已生效；可分别陈述该N起止与容量安排，并讨论未来价格预期，不证明实际流量损失或指定净方向') tblen=2>.value
+
+tests/test_future_capacity_pressure_scope.py:18: AssertionError
+_ test_missing_or_nonidentical_original_source_cannot_borrow_the_future_clock[no_index] _
+
+change = 'no_index'
+
+    @pytest.mark.parametrize('change',['no_index','missing_title','missing_summary','reason_only','different_notice','future_known','ambiguous_interval'])
+    def test_missing_or_nonidentical_original_source_cannot_borrow_the_future_clock(change):
+     ctx=c()
+     if change=='missing_title':ctx['current_news']['title']=ctx['window_news'][0]['title']=None
+     if change=='missing_summary':ctx['current_news']['summary']=None
+     if change=='reason_only':ctx['current_news']['summary']=ctx['window_news'][0]['summary']='Reason: Yearly maintenance. Remarks: Extended maintenance.'
+     if change=='different_notice':ctx['current_news']['summary']=ctx['current_news']['summary'].replace('2026-252-A','different-current-notice').replace('2026-10-22T06:00:00+0200 to 2026-10-23T06:00:00+0200','2026-10-21T06:00:00+0200 to 2026-10-22T06:00:00+0200')
+     if change=='future_known':ctx['window_news'][0]['known_at']='2030-01-01T00:00:00Z'
+     if change=='ambiguous_interval':
+      extra=copy.deepcopy(ctx['window_news'][0]);extra['id']='conflicting-original';extra['event_start']='2026-10-23T04:00:00Z';extra['event_end']='2026-10-24T04:00:00Z';ctx['window_news'].append(extra)
+     prepared,meta=a.prepare_context(ctx)
+     index=None if change=='no_index' else meta['source_index']
+>    s._check_notice_settlement_timing({'analysis':{'summary':'[N0]本窗口内公告可用产能下降7.6mcm/d，实际流量未知。'}},ctx,prepared,source_index=index)
+
+tests/test_future_capacity_pressure_scope.py:119: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+result = {'analysis': {'summary': '[N0]本窗口内公告可用产能下降7.6mcm/d，实际流量未知。'}}
+context = {'as_of': '2026-10-21T04:47:05.064706+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1....3 mcm/d; available: 124.3; unavailable: 13.0. Reason: Yearly maintenance. Remarks: Extended maintenance.', ...}], ...}
+prepared = {'as_of': '2026-10-21T04:47:05.064706+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1... 'facts': 'Reason: Yearly maintenance. Remarks: Extended maintenance.', 'time': '2026-10-20T20:13:18+00:00', ...}, ...}
+source_index = None
+
+    def _check_notice_settlement_timing(result: dict, context: dict, prepared: dict, source_index: list[dict] | None = None) -> None:
+        cards={row.get('id'):row for row in prepared.get('window_news',[]) if isinstance(row,dict) and row.get('id')}
+        cards['N0']=prepared.get('current_news') or context.get('current_news') or {}
+        for alias,row in list(cards.items()):
+            if row.get('same_as_current_news_id') in cards:cards[alias]=cards[row['same_as_current_news_id']]
+        session=prepared.get('session') or context.get('session') or {}
+        now=prepared.get('as_of') or context.get('as_of')
+        known_at=_moment(now);window_end=_moment(session.get('window_end') or session.get('cutoff_utc'))
+        future_knowledge=re.compile(r'截至(?:(?:本|当前|目标)(?:次|交易|结算)?)?窗口(?:结束|截止)(?:时|之时)?[^，,。；;]{0,8}?(?:(?:尚未|仍未|未|无法)(?:能)?(?:确认|核实|验证)|(?:状态|情况)?(?:仍|尚)?未知)|截至(?:(?:本|当前|目标|当日)(?:日)?)?(?:收盘|结算)(?:时点|时间|时)?[^，,。；;]{0,8}?(?:(?:尚未|仍未|未|无法)(?:能)?(?:确认|核实|验证)|(?:状态|情况)?(?:仍|尚)?未知)')
+        current_window=re.compile(r'(?:本|当前)(?:次|交易|结算)?窗口(?:内|中)?')
+        capacity_change=re.compile(r'(?:可用(?:容量|产能)|容量|产能)(?:分别)?(?:已经|已|现已)?(?:下降|减少|降低|损失|受限)')
+        evidence_aliases={alias for path,text in _strings(result) if 'evidence' in path
+            for alias in re.findall(r'(?<![A-Za-z0-9_])N\d+(?![A-Za-z0-9_])',text)}
+        patterns=[('after',re.compile(r'(?:本|目标|当前)(?:次|交易|结算)?窗口(?:之后|结束后)|(?:本|当日|目标)(?:日)?(?:收盘|结算)(?:时点)?之后')),
+                  ('inside',re.compile(r'(?:在|于)(?:本|目标|当前)(?:次|交易|结算)?窗口(?:内|中)(?:开始|生效)')),
+                  ('started',re.compile(r'(?:已经|现已|已)(?:正式)?(?:开始|生效|启动)(?:维护|检修)?'))]
+        connective=re.compile(r'(?:[\s\[\]、，,与和及或&/]|and|or)*',re.I)
+        def sources_before(clause,claim):
+            groups=[];previous=None
+            for alias in re.finditer(r'(?<![A-Za-z0-9_])N\d+(?![A-Za-z0-9_])',clause[:claim.start()]):
+                if previous and connective.fullmatch(clause[previous.end():alias.start()]):groups[-1][1].append(alias.group())
+                else:groups.append((alias.start(),[alias.group()]))
+                previous=alias
+            prefix=clause[:claim.start()];named=[]
+            local_start=max(prefix.rfind('，'),prefix.rfind(','),prefix.rfind('；'),prefix.rfind(';'))+1
+            collective=re.search(r'两项|两条|两处|两份|均|都|全部|所有',prefix[local_start:])
+            if groups:
+                selected_groups=[group for position,group in groups if position>=local_start] if collective else [groups[-1][1]]
+                aliases=[alias for group in selected_groups for alias in group]
+                return [(alias,cards[alias]) for alias in aliases if alias in cards and _notice_item(cards[alias])]
+            for alias,source in cards.items():
+                entity=re.search(r'\bGassco\s+([^:：]{1,45})[:：]',str(source.get('title','')),re.I)
+                if not entity:continue
+                name=entity[1].strip();position=prefix.casefold().rfind(name.casefold())
+                if position>=0:named.append((position,name,alias,source))
+            if named:
+                latest=max(position for position,_,_,_ in named)
+                rows=[(alias,source) for position,_,alias,source in named
+                      if position==latest or collective and position>=local_start]
+                # A same-facility single notice without an ID is ambiguous. An
+                # explicit two/all-notices claim does bind the known pair.
+                if len(rows)>1 and not re.search(r'两项|两条|两处|两份|均|都|全部|所有',prefix[latest:]):return []
+                return rows
+            return [('N0',cards['N0'])] if _notice_item(cards['N0']) else []
+        def original_source(alias):
+            # Alias order and same-facility names are not source identities.
+            indexed=[row for row in (source_index or []) if row.get('alias')==alias and row.get('id')]
+            if len(indexed)!=1:return None
+            entry=indexed[0]
+            originals=[row for row in [context.get('current_news') or {},*(context.get('window_news') or [])]
+                if isinstance(row,dict) and row.get('id')==entry['id']
+                and (entry.get('version') is None or row.get('version')==entry['version'])
+                and _known_source(row,known_at)]
+            return originals[0] if len(originals)==1 else None
+        def complete_notice_identity(row):
+            if not isinstance(row,dict) or not str(row.get('title') or '').strip():return None
+            text=next((row.get(k) for k in ('summary','body','fact_excerpt','content','facts')
+                       if isinstance(row.get(k),str) and row[k].strip()),None)
+            # A shared reason/remark digest is not a complete notice identity.
+            if not text or not re.search(r'\bMessage ID:\s*\S+',text,re.I) or not re.search(r'\bEvent:\s*\d{4}-\d{2}-\d{2}T',text,re.I):
+                return None
+            return row['title'],text
+        for path,text in _strings(result):
+            if '.scenarios.' in path:continue
+            for clause in _clauses(text):
+                if known_at is not None and window_end is not None and known_at<window_end:
+                    for claim in future_knowledge.finditer(clause):
+                        before=re.split(r'[，,]|→|->|但是|但|因此',clause[:claim.start()])[-1]
+                        if (_invalidation_event_condition(path,clause,claim) is True
+                                or re.search(r'若|如果|假设|假如|一旦|预计|预期|可能|是否|不能(?:说|认定|断言|声称)|不应(?:说|认定|断言|声称)|无法(?:得知|确认|判断)|不能证明|不代表|不等于',before)):
+                            continue
+                        raise ValueError(f'{path}:目标结算窗口结束{window_end.isoformat()}仍晚于as_of{known_at.isoformat()}，不能把截至未来窗末的确认/核实状态写成已知事实；只能陈述截至分析时点尚未确认，或明确若截至收盘仍未确认的条件，不改变预测方向')
+                for claim in capacity_change.finditer(clause):
+                    prefix=clause[:claim.start()]
+                    windows=list(current_window.finditer(prefix))
+                    if not windows or _invalidation_event_condition(path,clause,claim) is True:
+                        continue
+                    local=re.split(r'[，,]|→|->|但是|但|然而',prefix)[-1]
+                    if re.search(r'若|如果|假设|假如|一旦|是否|无法确认|不能确认|不能(?:说|认定|断言)|不代表|不等于',re.split(r'但是|但|然而',prefix)[-1]):
+                        continue
+                    window_scope=prefix[windows[-1].end():]
+                    # The window can date publication of a future plan rather
+                    # than the capacity becoming unavailable in that window.
+                    if (re.search(r'届时',local) and re.search(r'预计|预测|公布|发布|披露|收到|更新|修订',window_scope)):
+                        continue  # The window dates forecasting/publication; 届时 dates the capacity.
+                    if (re.search(r'(?:公布|发布|披露|收到|更新|修订)[^。；;]*(?:未来|将于|计划于|预定)',window_scope)
+                            and not re.search(r'但是|但|然而|目前|当前|现已|已经|实际',window_scope)):
+                        continue
+                    sources=sources_before(clause,claim)
+                    if not re.search(r'(?<![A-Za-z0-9_])N\d+(?![A-Za-z0-9_])',prefix) and re.search(r'及其他|与其他|两项|两条|两处|分别|均|都',prefix):
+                        cited=[(alias,cards[alias]) for alias in sorted(evidence_aliases)
+                               if alias in cards and _notice_item(cards[alias])]
+                        if cited:sources=cited
+                    for alias,source in sources:
+                        if not _known_source(source,known_at):continue
+                        timing_source=source
+                        timing=notice_settlement_timing(source,session,now)
+                        if not timing:
+                            # Exact original source ID/version lookup precedes
+                            # comparing the uncompressed notice, never its digest.
+                            identity=complete_notice_identity(original_source(alias))
+                            matches=[]
+                            if identity:
+                                for other_alias in cards:
+                                    original=original_source(other_alias)
+                                    if (complete_notice_identity(original)==identity
+                                            and notice_settlement_timing(original,session,now)):
+                                        matches.append(original)
+                            intervals={(_moment(row.get('event_start') or (row.get('operational') or {}).get('event_start_utc')),
+                                        _moment(row.get('event_end') or (row.get('operational') or {}).get('event_end_utc'))) for row in matches}
+                            if matches and len(intervals)==1 and all(start and end and end>start for start,end in intervals):
+                                timing_source=matches[0]
+                                timing=notice_settlement_timing(timing_source,session,now)
+                        if timing.get('as_of_relation')!='not_started':continue
+                        prospective=bool(re.search(r'将|预计|预期|可能|届时',re.split(r'但是|但|然而',prefix)[-1])
+                            and not re.search(r'已经|现已|已',claim.group()))
+                        if timing.get('start_vs_target_window')=='starts_inside_target_window' and prospective:
+                            continue
+                        op=timing_source.get('operational') or {}
+                        stamp=timing_source.get('event_start') or op.get('event_start_utc')
+>                       raise ValueError(f'{path}:{alias}公告开始{stamp}，{timing["description"]}；不能把该未来公告的容量下降写成本窗口内已发生的物理容量变化。窗口内公布计划不等于计划已生效；可分别陈述该N起止与容量安排，并讨论未来价格预期，不证明实际流量损失或指定净方向')
+E                       ValueError: analysis.summary:N0公告开始2026-10-22T04:00:00+00:00，截至分析时点尚未开始；目标结算窗口结束时或之后开始；开始时刻不证明实际流量损失；不能把该未来公告的容量下降写成本窗口内已发生的物理容量变化。窗口内公布计划不等于计划已生效；可分别陈述该N起止与容量安排，并讨论未来价格预期，不证明实际流量损失或指定净方向
+
+ttf_news/semantics.py:2061: ValueError
+_ test_borrowed_interval_uses_normalized_operational_utc_clocks_and_is_complete_unique[conflicting_known] _
+
+mode = 'conflicting_known'
+
+    @pytest.mark.parametrize('mode',['single_known','conflicting_known','missing_end'])
+    def test_borrowed_interval_uses_normalized_operational_utc_clocks_and_is_complete_unique(mode):
+     ctx,p,m=prepare();original=ctx['window_news'][0]
+     original['operational']={'event_start_utc':original.pop('event_start'),'event_end_utc':original.pop('event_end')}
+     if mode=='missing_end':original['operational'].pop('event_end_utc')
+     if mode=='conflicting_known':
+      extra=copy.deepcopy(original);extra['id']='different-operational-interval';extra['operational'].update(event_start_utc='2026-10-23T04:00:00Z',event_end_utc='2026-10-24T04:00:00Z');ctx['window_news'].append(extra)
+      card=copy.deepcopy(p['window_news'][0]);card['id']='N3';p['window_news'].append(card)
+      m['source_index'].append({'alias':'N3','id':extra['id'],'version':extra['version']})
+     out={'analysis':{'summary':'[N0]本窗口内可用产能下降7.6mcm/d。'}}
+     if mode=='single_known':
+      with pytest.raises(ValueError,match='未来公告的容量下降'):s._check_notice_settlement_timing(out,ctx,p,source_index=m['source_index'])
+>    else:s._check_notice_settlement_timing(out,ctx,p,source_index=m['source_index'])
+
+tests/test_future_capacity_pressure_scope.py:161: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+result = {'analysis': {'summary': '[N0]本窗口内可用产能下降7.6mcm/d。'}}
+context = {'as_of': '2026-10-21T04:47:05.064706+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1...7.4 mcm/d; available: 129.8; unavailable: 7.6. Reason: Yearly maintenance. Remarks: Extended maintenance.', ...}], ...}
+prepared = {'as_of': '2026-10-21T04:47:05.064706+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1... 'facts': 'Reason: Yearly maintenance. Remarks: Extended maintenance.', 'time': '2026-10-20T20:13:18+00:00', ...}, ...}
+source_index = [{'alias': 'N0', 'id': 'manual-2f2f3340-5263-4276-bba4-3a8b14337d76', 'url': '', 'title': 'Gassco Troll: Planned Gas p...9c-4ca3-bc2c-36f18cc3eca6', 'title': 'Gassco Troll: Unplanned Gas production field unavailability (Active)', ...}, ...]
+
+    def _check_notice_settlement_timing(result: dict, context: dict, prepared: dict, source_index: list[dict] | None = None) -> None:
+        cards={row.get('id'):row for row in prepared.get('window_news',[]) if isinstance(row,dict) and row.get('id')}
+        cards['N0']=prepared.get('current_news') or context.get('current_news') or {}
+        for alias,row in list(cards.items()):
+            if row.get('same_as_current_news_id') in cards:cards[alias]=cards[row['same_as_current_news_id']]
+        session=prepared.get('session') or context.get('session') or {}
+        now=prepared.get('as_of') or context.get('as_of')
+        known_at=_moment(now);window_end=_moment(session.get('window_end') or session.get('cutoff_utc'))
+        future_knowledge=re.compile(r'截至(?:(?:本|当前|目标)(?:次|交易|结算)?)?窗口(?:结束|截止)(?:时|之时)?[^，,。；;]{0,8}?(?:(?:尚未|仍未|未|无法)(?:能)?(?:确认|核实|验证)|(?:状态|情况)?(?:仍|尚)?未知)|截至(?:(?:本|当前|目标|当日)(?:日)?)?(?:收盘|结算)(?:时点|时间|时)?[^，,。；;]{0,8}?(?:(?:尚未|仍未|未|无法)(?:能)?(?:确认|核实|验证)|(?:状态|情况)?(?:仍|尚)?未知)')
+        current_window=re.compile(r'(?:本|当前)(?:次|交易|结算)?窗口(?:内|中)?')
+        capacity_change=re.compile(r'(?:可用(?:容量|产能)|容量|产能)(?:分别)?(?:已经|已|现已)?(?:下降|减少|降低|损失|受限)')
+        evidence_aliases={alias for path,text in _strings(result) if 'evidence' in path
+            for alias in re.findall(r'(?<![A-Za-z0-9_])N\d+(?![A-Za-z0-9_])',text)}
+        patterns=[('after',re.compile(r'(?:本|目标|当前)(?:次|交易|结算)?窗口(?:之后|结束后)|(?:本|当日|目标)(?:日)?(?:收盘|结算)(?:时点)?之后')),
+                  ('inside',re.compile(r'(?:在|于)(?:本|目标|当前)(?:次|交易|结算)?窗口(?:内|中)(?:开始|生效)')),
+                  ('started',re.compile(r'(?:已经|现已|已)(?:正式)?(?:开始|生效|启动)(?:维护|检修)?'))]
+        connective=re.compile(r'(?:[\s\[\]、，,与和及或&/]|and|or)*',re.I)
+        def sources_before(clause,claim):
+            groups=[];previous=None
+            for alias in re.finditer(r'(?<![A-Za-z0-9_])N\d+(?![A-Za-z0-9_])',clause[:claim.start()]):
+                if previous and connective.fullmatch(clause[previous.end():alias.start()]):groups[-1][1].append(alias.group())
+                else:groups.append((alias.start(),[alias.group()]))
+                previous=alias
+            prefix=clause[:claim.start()];named=[]
+            local_start=max(prefix.rfind('，'),prefix.rfind(','),prefix.rfind('；'),prefix.rfind(';'))+1
+            collective=re.search(r'两项|两条|两处|两份|均|都|全部|所有',prefix[local_start:])
+            if groups:
+                selected_groups=[group for position,group in groups if position>=local_start] if collective else [groups[-1][1]]
+                aliases=[alias for group in selected_groups for alias in group]
+                return [(alias,cards[alias]) for alias in aliases if alias in cards and _notice_item(cards[alias])]
+            for alias,source in cards.items():
+                entity=re.search(r'\bGassco\s+([^:：]{1,45})[:：]',str(source.get('title','')),re.I)
+                if not entity:continue
+                name=entity[1].strip();position=prefix.casefold().rfind(name.casefold())
+                if position>=0:named.append((position,name,alias,source))
+            if named:
+                latest=max(position for position,_,_,_ in named)
+                rows=[(alias,source) for position,_,alias,source in named
+                      if position==latest or collective and position>=local_start]
+                # A same-facility single notice without an ID is ambiguous. An
+                # explicit two/all-notices claim does bind the known pair.
+                if len(rows)>1 and not re.search(r'两项|两条|两处|两份|均|都|全部|所有',prefix[latest:]):return []
+                return rows
+            return [('N0',cards['N0'])] if _notice_item(cards['N0']) else []
+        def original_source(alias):
+            # Alias order and same-facility names are not source identities.
+            indexed=[row for row in (source_index or []) if row.get('alias')==alias and row.get('id')]
+            if len(indexed)!=1:return None
+            entry=indexed[0]
+            originals=[row for row in [context.get('current_news') or {},*(context.get('window_news') or [])]
+                if isinstance(row,dict) and row.get('id')==entry['id']
+                and (entry.get('version') is None or row.get('version')==entry['version'])
+                and _known_source(row,known_at)]
+            return originals[0] if len(originals)==1 else None
+        def complete_notice_identity(row):
+            if not isinstance(row,dict) or not str(row.get('title') or '').strip():return None
+            text=next((row.get(k) for k in ('summary','body','fact_excerpt','content','facts')
+                       if isinstance(row.get(k),str) and row[k].strip()),None)
+            # A shared reason/remark digest is not a complete notice identity.
+            if not text or not re.search(r'\bMessage ID:\s*\S+',text,re.I) or not re.search(r'\bEvent:\s*\d{4}-\d{2}-\d{2}T',text,re.I):
+                return None
+            return row['title'],text
+        for path,text in _strings(result):
+            if '.scenarios.' in path:continue
+            for clause in _clauses(text):
+                if known_at is not None and window_end is not None and known_at<window_end:
+                    for claim in future_knowledge.finditer(clause):
+                        before=re.split(r'[，,]|→|->|但是|但|因此',clause[:claim.start()])[-1]
+                        if (_invalidation_event_condition(path,clause,claim) is True
+                                or re.search(r'若|如果|假设|假如|一旦|预计|预期|可能|是否|不能(?:说|认定|断言|声称)|不应(?:说|认定|断言|声称)|无法(?:得知|确认|判断)|不能证明|不代表|不等于',before)):
+                            continue
+                        raise ValueError(f'{path}:目标结算窗口结束{window_end.isoformat()}仍晚于as_of{known_at.isoformat()}，不能把截至未来窗末的确认/核实状态写成已知事实；只能陈述截至分析时点尚未确认，或明确若截至收盘仍未确认的条件，不改变预测方向')
+                for claim in capacity_change.finditer(clause):
+                    prefix=clause[:claim.start()]
+                    windows=list(current_window.finditer(prefix))
+                    if not windows or _invalidation_event_condition(path,clause,claim) is True:
+                        continue
+                    local=re.split(r'[，,]|→|->|但是|但|然而',prefix)[-1]
+                    if re.search(r'若|如果|假设|假如|一旦|是否|无法确认|不能确认|不能(?:说|认定|断言)|不代表|不等于',re.split(r'但是|但|然而',prefix)[-1]):
+                        continue
+                    window_scope=prefix[windows[-1].end():]
+                    # The window can date publication of a future plan rather
+                    # than the capacity becoming unavailable in that window.
+                    if (re.search(r'届时',local) and re.search(r'预计|预测|公布|发布|披露|收到|更新|修订',window_scope)):
+                        continue  # The window dates forecasting/publication; 届时 dates the capacity.
+                    if (re.search(r'(?:公布|发布|披露|收到|更新|修订)[^。；;]*(?:未来|将于|计划于|预定)',window_scope)
+                            and not re.search(r'但是|但|然而|目前|当前|现已|已经|实际',window_scope)):
+                        continue
+                    sources=sources_before(clause,claim)
+                    if not re.search(r'(?<![A-Za-z0-9_])N\d+(?![A-Za-z0-9_])',prefix) and re.search(r'及其他|与其他|两项|两条|两处|分别|均|都',prefix):
+                        cited=[(alias,cards[alias]) for alias in sorted(evidence_aliases)
+                               if alias in cards and _notice_item(cards[alias])]
+                        if cited:sources=cited
+                    for alias,source in sources:
+                        if not _known_source(source,known_at):continue
+                        timing_source=source
+                        timing=notice_settlement_timing(source,session,now)
+                        if not timing:
+                            # Exact original source ID/version lookup precedes
+                            # comparing the uncompressed notice, never its digest.
+                            identity=complete_notice_identity(original_source(alias))
+                            matches=[]
+                            if identity:
+                                for other_alias in cards:
+                                    original=original_source(other_alias)
+                                    if (complete_notice_identity(original)==identity
+                                            and notice_settlement_timing(original,session,now)):
+                                        matches.append(original)
+                            intervals={(_moment(row.get('event_start') or (row.get('operational') or {}).get('event_start_utc')),
+                                        _moment(row.get('event_end') or (row.get('operational') or {}).get('event_end_utc'))) for row in matches}
+                            if matches and len(intervals)==1 and all(start and end and end>start for start,end in intervals):
+                                timing_source=matches[0]
+                                timing=notice_settlement_timing(timing_source,session,now)
+                        if timing.get('as_of_relation')!='not_started':continue
+                        prospective=bool(re.search(r'将|预计|预期|可能|届时',re.split(r'但是|但|然而',prefix)[-1])
+                            and not re.search(r'已经|现已|已',claim.group()))
+                        if timing.get('start_vs_target_window')=='starts_inside_target_window' and prospective:
+                            continue
+                        op=timing_source.get('operational') or {}
+                        stamp=timing_source.get('event_start') or op.get('event_start_utc')
+>                       raise ValueError(f'{path}:{alias}公告开始{stamp}，{timing["description"]}；不能把该未来公告的容量下降写成本窗口内已发生的物理容量变化。窗口内公布计划不等于计划已生效；可分别陈述该N起止与容量安排，并讨论未来价格预期，不证明实际流量损失或指定净方向')
+E                       ValueError: analysis.summary:N0公告开始2026-10-22T04:00:00+00:00，截至分析时点尚未开始；目标结算窗口结束时或之后开始；开始时刻不证明实际流量损失；不能把该未来公告的容量下降写成本窗口内已发生的物理容量变化。窗口内公布计划不等于计划已生效；可分别陈述该N起止与容量安排，并讨论未来价格预期，不证明实际流量损失或指定净方向
+
+ttf_news/semantics.py:2061: ValueError
+_ test_borrowed_interval_uses_normalized_operational_utc_clocks_and_is_complete_unique[missing_end] _
+
+mode = 'missing_end'
+
+    @pytest.mark.parametrize('mode',['single_known','conflicting_known','missing_end'])
+    def test_borrowed_interval_uses_normalized_operational_utc_clocks_and_is_complete_unique(mode):
+     ctx,p,m=prepare();original=ctx['window_news'][0]
+     original['operational']={'event_start_utc':original.pop('event_start'),'event_end_utc':original.pop('event_end')}
+     if mode=='missing_end':original['operational'].pop('event_end_utc')
+     if mode=='conflicting_known':
+      extra=copy.deepcopy(original);extra['id']='different-operational-interval';extra['operational'].update(event_start_utc='2026-10-23T04:00:00Z',event_end_utc='2026-10-24T04:00:00Z');ctx['window_news'].append(extra)
+      card=copy.deepcopy(p['window_news'][0]);card['id']='N3';p['window_news'].append(card)
+      m['source_index'].append({'alias':'N3','id':extra['id'],'version':extra['version']})
+     out={'analysis':{'summary':'[N0]本窗口内可用产能下降7.6mcm/d。'}}
+     if mode=='single_known':
+      with pytest.raises(ValueError,match='未来公告的容量下降'):s._check_notice_settlement_timing(out,ctx,p,source_index=m['source_index'])
+>    else:s._check_notice_settlement_timing(out,ctx,p,source_index=m['source_index'])
+
+tests/test_future_capacity_pressure_scope.py:161: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+result = {'analysis': {'summary': '[N0]本窗口内可用产能下降7.6mcm/d。'}}
+context = {'as_of': '2026-10-21T04:47:05.064706+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1....3 mcm/d; available: 124.3; unavailable: 13.0. Reason: Yearly maintenance. Remarks: Extended maintenance.', ...}], ...}
+prepared = {'as_of': '2026-10-21T04:47:05.064706+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1... 'facts': 'Reason: Yearly maintenance. Remarks: Extended maintenance.', 'time': '2026-10-20T20:13:18+00:00', ...}, ...}
+source_index = [{'alias': 'N0', 'id': 'manual-2f2f3340-5263-4276-bba4-3a8b14337d76', 'url': '', 'title': 'Gassco Troll: Planned Gas p...9c-4ca3-bc2c-36f18cc3eca6', 'title': 'Gassco Troll: Unplanned Gas production field unavailability (Active)', ...}, ...]
+
+    def _check_notice_settlement_timing(result: dict, context: dict, prepared: dict, source_index: list[dict] | None = None) -> None:
+        cards={row.get('id'):row for row in prepared.get('window_news',[]) if isinstance(row,dict) and row.get('id')}
+        cards['N0']=prepared.get('current_news') or context.get('current_news') or {}
+        for alias,row in list(cards.items()):
+            if row.get('same_as_current_news_id') in cards:cards[alias]=cards[row['same_as_current_news_id']]
+        session=prepared.get('session') or context.get('session') or {}
+        now=prepared.get('as_of') or context.get('as_of')
+        known_at=_moment(now);window_end=_moment(session.get('window_end') or session.get('cutoff_utc'))
+        future_knowledge=re.compile(r'截至(?:(?:本|当前|目标)(?:次|交易|结算)?)?窗口(?:结束|截止)(?:时|之时)?[^，,。；;]{0,8}?(?:(?:尚未|仍未|未|无法)(?:能)?(?:确认|核实|验证)|(?:状态|情况)?(?:仍|尚)?未知)|截至(?:(?:本|当前|目标|当日)(?:日)?)?(?:收盘|结算)(?:时点|时间|时)?[^，,。；;]{0,8}?(?:(?:尚未|仍未|未|无法)(?:能)?(?:确认|核实|验证)|(?:状态|情况)?(?:仍|尚)?未知)')
+        current_window=re.compile(r'(?:本|当前)(?:次|交易|结算)?窗口(?:内|中)?')
+        capacity_change=re.compile(r'(?:可用(?:容量|产能)|容量|产能)(?:分别)?(?:已经|已|现已)?(?:下降|减少|降低|损失|受限)')
+        evidence_aliases={alias for path,text in _strings(result) if 'evidence' in path
+            for alias in re.findall(r'(?<![A-Za-z0-9_])N\d+(?![A-Za-z0-9_])',text)}
+        patterns=[('after',re.compile(r'(?:本|目标|当前)(?:次|交易|结算)?窗口(?:之后|结束后)|(?:本|当日|目标)(?:日)?(?:收盘|结算)(?:时点)?之后')),
+                  ('inside',re.compile(r'(?:在|于)(?:本|目标|当前)(?:次|交易|结算)?窗口(?:内|中)(?:开始|生效)')),
+                  ('started',re.compile(r'(?:已经|现已|已)(?:正式)?(?:开始|生效|启动)(?:维护|检修)?'))]
+        connective=re.compile(r'(?:[\s\[\]、，,与和及或&/]|and|or)*',re.I)
+        def sources_before(clause,claim):
+            groups=[];previous=None
+            for alias in re.finditer(r'(?<![A-Za-z0-9_])N\d+(?![A-Za-z0-9_])',clause[:claim.start()]):
+                if previous and connective.fullmatch(clause[previous.end():alias.start()]):groups[-1][1].append(alias.group())
+                else:groups.append((alias.start(),[alias.group()]))
+                previous=alias
+            prefix=clause[:claim.start()];named=[]
+            local_start=max(prefix.rfind('，'),prefix.rfind(','),prefix.rfind('；'),prefix.rfind(';'))+1
+            collective=re.search(r'两项|两条|两处|两份|均|都|全部|所有',prefix[local_start:])
+            if groups:
+                selected_groups=[group for position,group in groups if position>=local_start] if collective else [groups[-1][1]]
+                aliases=[alias for group in selected_groups for alias in group]
+                return [(alias,cards[alias]) for alias in aliases if alias in cards and _notice_item(cards[alias])]
+            for alias,source in cards.items():
+                entity=re.search(r'\bGassco\s+([^:：]{1,45})[:：]',str(source.get('title','')),re.I)
+                if not entity:continue
+                name=entity[1].strip();position=prefix.casefold().rfind(name.casefold())
+                if position>=0:named.append((position,name,alias,source))
+            if named:
+                latest=max(position for position,_,_,_ in named)
+                rows=[(alias,source) for position,_,alias,source in named
+                      if position==latest or collective and position>=local_start]
+                # A same-facility single notice without an ID is ambiguous. An
+                # explicit two/all-notices claim does bind the known pair.
+                if len(rows)>1 and not re.search(r'两项|两条|两处|两份|均|都|全部|所有',prefix[latest:]):return []
+                return rows
+            return [('N0',cards['N0'])] if _notice_item(cards['N0']) else []
+        def original_source(alias):
+            # Alias order and same-facility names are not source identities.
+            indexed=[row for row in (source_index or []) if row.get('alias')==alias and row.get('id')]
+            if len(indexed)!=1:return None
+            entry=indexed[0]
+            originals=[row for row in [context.get('current_news') or {},*(context.get('window_news') or [])]
+                if isinstance(row,dict) and row.get('id')==entry['id']
+                and (entry.get('version') is None or row.get('version')==entry['version'])
+                and _known_source(row,known_at)]
+            return originals[0] if len(originals)==1 else None
+        def complete_notice_identity(row):
+            if not isinstance(row,dict) or not str(row.get('title') or '').strip():return None
+            text=next((row.get(k) for k in ('summary','body','fact_excerpt','content','facts')
+                       if isinstance(row.get(k),str) and row[k].strip()),None)
+            # A shared reason/remark digest is not a complete notice identity.
+            if not text or not re.search(r'\bMessage ID:\s*\S+',text,re.I) or not re.search(r'\bEvent:\s*\d{4}-\d{2}-\d{2}T',text,re.I):
+                return None
+            return row['title'],text
+        for path,text in _strings(result):
+            if '.scenarios.' in path:continue
+            for clause in _clauses(text):
+                if known_at is not None and window_end is not None and known_at<window_end:
+                    for claim in future_knowledge.finditer(clause):
+                        before=re.split(r'[，,]|→|->|但是|但|因此',clause[:claim.start()])[-1]
+                        if (_invalidation_event_condition(path,clause,claim) is True
+                                or re.search(r'若|如果|假设|假如|一旦|预计|预期|可能|是否|不能(?:说|认定|断言|声称)|不应(?:说|认定|断言|声称)|无法(?:得知|确认|判断)|不能证明|不代表|不等于',before)):
+                            continue
+                        raise ValueError(f'{path}:目标结算窗口结束{window_end.isoformat()}仍晚于as_of{known_at.isoformat()}，不能把截至未来窗末的确认/核实状态写成已知事实；只能陈述截至分析时点尚未确认，或明确若截至收盘仍未确认的条件，不改变预测方向')
+                for claim in capacity_change.finditer(clause):
+                    prefix=clause[:claim.start()]
+                    windows=list(current_window.finditer(prefix))
+                    if not windows or _invalidation_event_condition(path,clause,claim) is True:
+                        continue
+                    local=re.split(r'[，,]|→|->|但是|但|然而',prefix)[-1]
+                    if re.search(r'若|如果|假设|假如|一旦|是否|无法确认|不能确认|不能(?:说|认定|断言)|不代表|不等于',re.split(r'但是|但|然而',prefix)[-1]):
+                        continue
+                    window_scope=prefix[windows[-1].end():]
+                    # The window can date publication of a future plan rather
+                    # than the capacity becoming unavailable in that window.
+                    if (re.search(r'届时',local) and re.search(r'预计|预测|公布|发布|披露|收到|更新|修订',window_scope)):
+                        continue  # The window dates forecasting/publication; 届时 dates the capacity.
+                    if (re.search(r'(?:公布|发布|披露|收到|更新|修订)[^。；;]*(?:未来|将于|计划于|预定)',window_scope)
+                            and not re.search(r'但是|但|然而|目前|当前|现已|已经|实际',window_scope)):
+                        continue
+                    sources=sources_before(clause,claim)
+                    if not re.search(r'(?<![A-Za-z0-9_])N\d+(?![A-Za-z0-9_])',prefix) and re.search(r'及其他|与其他|两项|两条|两处|分别|均|都',prefix):
+                        cited=[(alias,cards[alias]) for alias in sorted(evidence_aliases)
+                               if alias in cards and _notice_item(cards[alias])]
+                        if cited:sources=cited
+                    for alias,source in sources:
+                        if not _known_source(source,known_at):continue
+                        timing_source=source
+                        timing=notice_settlement_timing(source,session,now)
+                        if not timing:
+                            # Exact original source ID/version lookup precedes
+                            # comparing the uncompressed notice, never its digest.
+                            identity=complete_notice_identity(original_source(alias))
+                            matches=[]
+                            if identity:
+                                for other_alias in cards:
+                                    original=original_source(other_alias)
+                                    if (complete_notice_identity(original)==identity
+                                            and notice_settlement_timing(original,session,now)):
+                                        matches.append(original)
+                            intervals={(_moment(row.get('event_start') or (row.get('operational') or {}).get('event_start_utc')),
+                                        _moment(row.get('event_end') or (row.get('operational') or {}).get('event_end_utc'))) for row in matches}
+                            if matches and len(intervals)==1 and all(start and end and end>start for start,end in intervals):
+                                timing_source=matches[0]
+                                timing=notice_settlement_timing(timing_source,session,now)
+                        if timing.get('as_of_relation')!='not_started':continue
+                        prospective=bool(re.search(r'将|预计|预期|可能|届时',re.split(r'但是|但|然而',prefix)[-1])
+                            and not re.search(r'已经|现已|已',claim.group()))
+                        if timing.get('start_vs_target_window')=='starts_inside_target_window' and prospective:
+                            continue
+                        op=timing_source.get('operational') or {}
+                        stamp=timing_source.get('event_start') or op.get('event_start_utc')
+>                       raise ValueError(f'{path}:{alias}公告开始{stamp}，{timing["description"]}；不能把该未来公告的容量下降写成本窗口内已发生的物理容量变化。窗口内公布计划不等于计划已生效；可分别陈述该N起止与容量安排，并讨论未来价格预期，不证明实际流量损失或指定净方向')
+E                       ValueError: analysis.summary:N0公告开始2026-10-22T04:00:00+00:00，截至分析时点尚未开始；目标结算窗口结束时或之后开始；开始时刻不证明实际流量损失；不能把该未来公告的容量下降写成本窗口内已发生的物理容量变化。窗口内公布计划不等于计划已生效；可分别陈述该N起止与容量安排，并讨论未来价格预期，不证明实际流量损失或指定净方向
+
+ttf_news/semantics.py:2061: ValueError
+________ test_duplicate_alias_of_exact_notice_not_a_new_date_candidate _________
+
+actual = {'schema_version': 'seventh-source-scope-actual-v1', 'source_record': {'file': 'reports/repair_2026-10-20/production_s...da34a61b26f67aeda1a860854e2'}, 'analysis_id': 'd7628bcf-d68a-4d14-8ce0-20bc21beaa42', 'original_status': 'failed', ...}
+
+    def test_duplicate_alias_of_exact_notice_not_a_new_date_candidate(actual):
+     _,ctx,p,_=setup(actual,True);p['current_news']=copy.deepcopy(p['window_news'][0]);p['current_news']['id']='N0'
+>    a._validate_notice_source_facts({'analysis':{'summary':'Troll于10月22日开始，公告不可用容量7.6mcm/d。'}},ctx,p)
+
+tests/test_seventh_source_scope.py:69: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+ttf_news/analysis.py:1651: in _validate_notice_source_facts
+    if not _date_checked and dated_capacity_claim(clause,scoped_sources):
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+clause = 'Troll于10月22日开始，公告不可用容量7.6mcm/d'
+sources = [('N2', {'id': 'N2', 'title': 'Gassco Troll: Planned Other unavailability (Active)', 'facts': 'Reason: Yearly maintenance. Remarks: Extended maintenance.', 'time': '2026-10-20T20:10:15+00:00', ...})]
+
+    def dated_capacity_claim(clause,sources):
+        # Bind dated rates to the operator interval they describe. Calendar
+        # dates are source identities here, never grounds for guessing flow.
+        if not sources or '分别' in clause:
+            return False
+        ranges=list(interval.finditer(clause))
+        day_pattern=re.compile(r'(?<![\d-])(?P<y>20\d{2})-(?P<m>\d{1,2})-(?P<d>\d{1,2})(?![\dT])|(?:(?P<cy>20\d{2})年)?(?P<cm>\d{1,2})月(?P<cd>\d{1,2})日')
+        dates=ranges or list(day_pattern.finditer(clause))
+        if not dates:
+            return False
+        lead=re.sub(r'\[?[NE]\d+\]?','',clause[:dates[0].start()])
+        bound=[]
+        for index,date_match in enumerate(dates):
+            end=dates[index+1].start() if index+1<len(dates) else len(clause)
+            segment=clause[date_match.start():end]
+            if not number_unit.search(segment):
+                continue
+            matches=[]
+            for alias,source in sources:
+                start,finish=interval_dates(source)
+                if not start or not finish:
+                    continue
+                if ranges:
+                    wanted=(int(date_match['m']),int(date_match['d']),int(date_match['em'] or date_match['m']),int(date_match['ed']))
+                    supported=(start.month,start.day,finish.month,finish.day)==wanted and (not date_match['y'] or start.year==int(date_match['y']))
+                else:
+                    groups=date_match.groupdict();year=groups.get('y') or groups.get('cy')
+                    month=int(groups.get('m') or groups['cm']);day=int(groups.get('d') or groups['cd'])
+                    try:
+                        day_start=datetime(int(year) if year else start.year,month,day,tzinfo=start.tzinfo)
+                    except ValueError:
+                        continue
+                    day_end=day_start+timedelta(days=1)
+                    starts_on_day=bool(re.match(r'(?:的)?(?:开始|生效|启动|起)',clause[date_match.end():]))
+                    supported=(day_start<=start<day_end) if starts_on_day else (start<day_end and finish>day_start)
+                if supported:
+                    matches.append((alias,source))
+            matches=unique_notice_facts(matches)
+            if len(matches)!=1:
+>               raise ValueError('逐日期列出的容量时段没有唯一N来源；须保留日期/年份及对应容量，不得借另一公告原值')
+E               ValueError: 逐日期列出的容量时段没有唯一N来源；须保留日期/年份及对应容量，不得借另一公告原值
+
+ttf_news/analysis.py:1500: ValueError
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/fastapi/testclient.py:1
+  .venv/lib/python3.10/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_eighth_output_scope.py::test_actual_detail_first_allocated_sources_are_valid_and_second_field_error_stays
+FAILED tests/test_future_capacity_pressure_scope.py::test_actual_manual_pilot_both_drafts_now_reject_the_specific_future_current_window_claim
+FAILED tests/test_future_capacity_pressure_scope.py::test_missing_or_nonidentical_original_source_cannot_borrow_the_future_clock[no_index]
+FAILED tests/test_future_capacity_pressure_scope.py::test_borrowed_interval_uses_normalized_operational_utc_clocks_and_is_complete_unique[conflicting_known]
+FAILED tests/test_future_capacity_pressure_scope.py::test_borrowed_interval_uses_normalized_operational_utc_clocks_and_is_complete_unique[missing_end]
+FAILED tests/test_seventh_source_scope.py::test_duplicate_alias_of_exact_notice_not_a_new_date_candidate
+6 failed, 1497 passed, 1 warning, 375 subtests passed in 63.40s (0:01:03)

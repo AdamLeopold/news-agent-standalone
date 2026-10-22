@@ -1,0 +1,86 @@
+{
+  "applied_at": "2026-10-21T05:45:36.032963+00:00",
+  "applied_files": [
+    {
+      "private_source": ".runtime/future-capacity-pressure-scope-proposal/revision-explicit-source-index/ttf_news/analysis.py",
+      "root_target": "ttf_news/analysis.py",
+      "candidate_sha256": "1aebeb8971f13f61fd8bd4f9ab961b6284e811aeb773014ef7cc71874c94375c",
+      "current_root_sha256": "8ac01ca8120def7f963cdeab8f4eb0bd2dae4c71eb921a9ab5941f70bf1fe1a5"
+    },
+    {
+      "private_source": ".runtime/future-capacity-pressure-scope-proposal/revision-explicit-source-index/ttf_news/semantics.py",
+      "root_target": "ttf_news/semantics.py",
+      "candidate_sha256": "d054bc812a80e0d28bfc95a098731b6b556ad0304a9775db0ec4d00d660d2d9a",
+      "current_root_sha256": "3fcdf8708e49be0bc7060e0e97f45fbfcf5262dabdfc431d70aca0a748791ff7"
+    },
+    {
+      "private_source": ".runtime/future-capacity-pressure-scope-proposal/revision-explicit-source-index/tests/test_future_capacity_pressure_scope.py",
+      "root_target": "tests/test_future_capacity_pressure_scope.py",
+      "candidate_sha256": "fe844c0d2283b3c0294e5f6c2893fd532a51b03dc87bba72239bd211acee68f9",
+      "current_root_sha256": null
+    },
+    {
+      "private_source": ".runtime/future-capacity-pressure-scope-proposal/revision-explicit-source-index/tests/fixtures/future_capacity_pressure_actual_v2_3.json",
+      "root_target": "tests/fixtures/future_capacity_pressure_actual_v2_3.json",
+      "candidate_sha256": "1f0d667ce3b6d6be7c0d28f2dd10f1820cdedfe8ce084b6ce12417aa50f1e5ad",
+      "current_root_sha256": null
+    },
+    {
+      "private_source": ".runtime/future-capacity-pressure-scope-proposal/revision-explicit-source-index/tests/fixtures/future_capacity_pressure_old_bad_v2_3.json",
+      "root_target": "tests/fixtures/future_capacity_pressure_old_bad_v2_3.json",
+      "candidate_sha256": "a9fcc207d8ca4583d68cf23e23bb8acadc96a5efd4f5c5c29cf8dcda3bb64c2e",
+      "current_root_sha256": null
+    },
+    {
+      "private_source": ".runtime/explicit-source-index-helper-proposal/repair-validation-report.py",
+      "root_target": "scripts/repair-validation-report.py",
+      "candidate_sha256": "7d051013abf0cd24d47645503410680f28f02bffc16b02a6a8b20985670689eb",
+      "current_root_sha256": "07e49fbc82c5acc6987a9a6890e2cce34869895c67f5f2c210c2580a5260747c"
+    }
+  ],
+  "independent_core_review": {
+    "file": "reports/repair_2026-10-20/independent_explicit_source_index_capacity_final_source_review_v2_3.json",
+    "sha256": "8618beda6f7c3d4867d263dc732d81900608976c760e38825fa8e36a575310f1"
+  },
+  "helper_selftest_proof_sha256": "7e26816e948661eeff1f00752fb1ef368e4b7a8d6ee7aaf21cbfa86ddd8e389c",
+  "helper_primary_diff_review_passed": true,
+  "helper_independent_review_requested": true,
+  "preservation_before": {
+    "passed": true,
+    "protected_analysis_count": 157,
+    "protected_nonnull_field_count": 291,
+    "current_analysis_count": 157,
+    "new_analysis_count": 0,
+    "protected_snapshot_count": 5,
+    "new_snapshot_count": 0,
+    "original_validation_record_count": 1,
+    "latest_baseline_unchanged": true,
+    "original_baseline": {
+      "id": 210,
+      "created_at": "2026-10-14T05:51:48.181167+00:00",
+      "type": "validation_started"
+    },
+    "failures": []
+  },
+  "preservation_after": {
+    "passed": true,
+    "protected_analysis_count": 157,
+    "protected_nonnull_field_count": 291,
+    "current_analysis_count": 157,
+    "new_analysis_count": 0,
+    "protected_snapshot_count": 5,
+    "new_snapshot_count": 0,
+    "original_validation_record_count": 1,
+    "latest_baseline_unchanged": true,
+    "original_baseline": {
+      "id": 210,
+      "created_at": "2026-10-14T05:51:48.181167+00:00",
+      "type": "validation_started"
+    },
+    "failures": []
+  },
+  "backend_still_paused_old_runtime_pid": 49015,
+  "provenance_output_experiment_adopted": false,
+  "model_first_request_equivalence_only": "20/20 first requests unchanged; complete path replay still required",
+  "model_or_database_calls": 0
+}

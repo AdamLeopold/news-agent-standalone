@@ -1,0 +1,20 @@
+{
+  "policy_id": "ttf-explicit-error-release-v1",
+  "created_at": "2026-10-20T20:06:55.626417+00:00",
+  "basis": "Original product plan explicitly requires an error after two model-validation failures, with no default rise or flat. It sets no diagnostic-scenario availability percentage.",
+  "strict_all_outputs_requirement_unchanged": true,
+  "availability_threshold": null,
+  "rejected_counted_as_correct_predictions": false,
+  "market_accuracy_claim": null,
+  "criteria": [
+    "All diagnostic scenarios have terminal outcomes; latest failure is never replaced by older success.",
+    "All accepted outputs pass current gates and independent causal/evidence review.",
+    "Wrong model outputs are rejected with no default direction.",
+    "Real v2 manual, detail, English, current forecast, SSE replay and export smoke succeeds.",
+    "API/UI error state is evidenced; either same-record real-v2 failure or explicitly separated legacy-UI plus isolated-v2 evidence.",
+    "Old predictions, frozen close snapshots and validation baseline remain preserved.",
+    "Unit/frontend/build and final public JSON/JSONL/CSV/SQLite scan pass."
+  ],
+  "notice": "未全通过；带已知模型可用性限制发布。13/15有效输出、2/15错误被拒为可用性记录，拒绝不算正确预测。",
+  "supersedes_unadopted_proposal": "The earlier suggested 14/15 or Eni-only rejection threshold was not in the original product plan and was never adopted as a passed acceptance result. Operational release is separate from unchanged strict all-output success."
+}

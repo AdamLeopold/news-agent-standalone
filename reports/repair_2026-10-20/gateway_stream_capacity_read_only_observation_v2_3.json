@@ -1,0 +1,34 @@
+{
+  "schema_version": "ttf-gateway-read-only-stream-capacity-observation-v1",
+  "observed_at": "2026-10-21T04:03:05.619548+00:00",
+  "listener_port": 8766,
+  "listener_pids": [
+    36367
+  ],
+  "verified_process_identity": "36367     1 /Library/Frameworks/Python.framework/Versions/3.10/Resources/Python.app/Contents/MacOS/Python -m uvicorn ttf_news.public_gateway:app --host 127.0.0.1 --port 8766 --timeout-graceful-shutdown 5",
+  "tcp_state_counts": {
+    "LISTEN": 1,
+    "ESTABLISHED": 6
+  },
+  "connection_rows": 7,
+  "upstream_8765_connection_count": 3,
+  "root_gateway_file_sha256": "fac8fe10429bc62a6be241817491d1f35eecdaa7f8a37357cb8dbcab7f43fae5",
+  "runtime_loaded_source_bytes_independently_verified": false,
+  "failed_stream_probe": {
+    "method": "GET",
+    "url": "http://127.0.0.1:8766/api/stream",
+    "status_code": 429,
+    "response_headers": {
+      "content-type": "application/json",
+      "access-control-allow-origin": "https://adamleopold.github.io"
+    },
+    "response_body": "{\"detail\":\"Stream capacity reached; polling remains available\"}",
+    "observed_at": "2026-10-21T04:03:05.619377+00:00"
+  },
+  "database_writes": false,
+  "api_jobs_submitted": false,
+  "model_calls": 0,
+  "processes_stopped_or_restarted": false,
+  "other_backend_or_ollama_touched": false,
+  "scope": "Only current8766 managed gateway identity, aggregate TCP states and one read-only stream-header/error-body probe. Internal stream counter was not inspected; branch429 and aggregate sockets are observations, while leakage is demonstrated separately with bounded in-memory reproduction."
+}

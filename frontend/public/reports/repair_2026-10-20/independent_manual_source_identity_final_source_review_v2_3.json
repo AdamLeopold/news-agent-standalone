@@ -1,0 +1,106 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T06:20:15.992659+00:00",
+  "scope": "Exact known official source identity projection for a copied manual Gassco input; finite donor-status/time contamination and test portability review.",
+  "base_analysis": {
+    "file": ".runtime/source-archives/backend-64920/ttf_news/analysis.py",
+    "sha256": "1aebeb8971f13f61fd8bd4f9ab961b6284e811aeb773014ef7cc71874c94375c"
+  },
+  "candidate_analysis": {
+    "file": ".runtime/manual-source-identity-input-proposal/revision-status-scope/ttf_news/analysis.py",
+    "sha256": "f5c341c9cd1bfe6d107f5735c96d87c76ba5ab165e402658b641f7c34adc3f37"
+  },
+  "initial_candidate_analysis": {
+    "file": ".runtime/manual-source-identity-input-proposal/ttf_news/analysis.py",
+    "sha256": "a2f4ff204962167ba44414187efa8288c323fbfe3c70b0bca65a3ad14c2d7533"
+  },
+  "initial_proof": {
+    "file": ".runtime/manual-source-identity-input-proposal/proposal-proof.json",
+    "sha256": "464de6efd509f7421dc980be7fcec93fbeb4e3c53fa569484c6609175467a10c"
+  },
+  "final_proof": {
+    "file": ".runtime/manual-source-identity-input-proposal/revision-status-scope/proposal-proof.json",
+    "sha256": "1d08ad2e25e7e99b3440235865beba3439f0d9087b8b99438955a6d130192838"
+  },
+  "final_status_diff": {
+    "file": ".runtime/manual-source-identity-input-proposal/revision-status-scope/status-revision.diff",
+    "sha256": "b987fe515396a959c0ebc78c478bbee16994dc5df43935fc086ce064697da432"
+  },
+  "source_ast_boundary": {
+    "existing_function_changed": [
+      "prepare_context"
+    ],
+    "new_function": "_project_exact_manual_source_identity",
+    "all_other_toplevel_ast_equal": true,
+    "all_output_parsers_validators_prompt_schema_profiles_unchanged": true
+  },
+  "independent_tests": {
+    "tests": 17,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 1.381,
+    "xml": {
+      "file": "reports/repair_2026-10-20/independent_manual_source_identity_fixed_tests_v2_3.xml",
+      "sha256": "570cb6d0cad011970742d22e72d8301c354f07f2b4e5d6549fb6cfecf3dbccc1"
+    }
+  },
+  "log": {
+    "file": "reports/repair_2026-10-20/independent_manual_source_identity_fixed_tests_v2_3.log",
+    "sha256": "e59f4ab0d75a66853b1ba0fb97921ff76ced24cb55b3e4b9dab628e0e332d4b7"
+  },
+  "test_source_hash_before_and_after_equal": true,
+  "initial_reproduced_blocker": {
+    "candidate_sha256": "a2f4ff204962167ba44414187efa8288c323fbfe3c70b0bca65a3ad14c2d7533",
+    "mutation": "Keep full Active title/body/MessageID/known interval identical; change donor structured event_status toDismissed.",
+    "before": "Manual N0 was projected asdismissed_notice despite its copied original title explicitly Active.",
+    "after": "Final projection rejects this conflict and does not deduplicate/borrow that donor. A genuinely matching Dismissed title/status source is still allowed.",
+    "closed_by_final_three_line_guard": true
+  },
+  "identity_and_time_requirements": [
+    "Gassco-only, manual/current ID distinct from existing source ID, nonempty exact original title and full source_body, exactly one matching MessageID and explicit source_message_id agreement.",
+    "Exactly one eligible donor; explicit source_index N0/donor actual IDs; no alias-order-only selection.",
+    "Source publication and recorded availability known by as_of; no future revision or absent availability clock.",
+    "Both ordered UTC event endpoints present, and explicit full body Event interval equals them. Existing current endpoints/status/URL must not conflict.",
+    "Explicit title status Active/Dismissed must agree with donor structured status.",
+    "Project only missing event_start/end/status/message_id to a deep copy; original current/window items, identities and source body remain unchanged."
+  ],
+  "projection_not_model_verification": true,
+  "backend_provenance": "Metadata records actual manual/donor IDs, aliases, MessageID, full title/body hashes, copied fields and source clocks, marked generated_by_model=false.",
+  "actual_input_comparison_artifacts": {
+    "before": {
+      "file": ".runtime/manual-source-identity-input-proposal/revision-status-scope/root-actual-inputs.json",
+      "sha256": "63daccae943001b0afe3fdf85f34033d80790841deb7be5112e643ae0fcca20f"
+    },
+    "after": {
+      "file": ".runtime/manual-source-identity-input-proposal/revision-status-scope/candidate-actual-inputs.json",
+      "sha256": "857ec330d63830a7ccdab572bcf2d3c9e97121a228abb5e5ec0f1049264be484"
+    }
+  },
+  "actual_input_effect": "Manual current becomes known future notice and original N1 becomes a duplicate pointer; source ledger3→2. Current-live9806 brief/detail prepared,meta,schema andsystem remain identical in the candidate comparison. Manual prepared/schema changes require new actual inference before any availability claim.",
+  "portable_test_review": {
+    "portable_test": {
+      "file": ".runtime/manual-source-identity-input-proposal/revision-status-scope/portable/tests/test_manual_source_identity_projection.py",
+      "sha256": "e855f9ddbb1987bb4ea3cf50ad67b959e142ef803302f06545ee370556ffe4a1"
+    },
+    "portable_fixture": {
+      "file": ".runtime/manual-source-identity-input-proposal/revision-status-scope/portable/tests/fixtures/manual_source_identity_actual_v2_3.json",
+      "sha256": "6309d022630fc86dcbcb8c76c200dea20fc80c6215eeb5f5d4e66b6046c4d3ba"
+    },
+    "no_runtime_private_path_dependency_in_portable_test": true,
+    "original_capture_identity_checked_via_existing_verified_historical_bytes": true,
+    "public_full_execution_not_claimed": true,
+    "requirement": "Publish only after coherent PublicationManifest source/public/path mapping and byte-exact fixture copy. No skip or raw-SHA relaxation."
+  },
+  "verdict": "finite_source_review_passed_after_status_contamination_correction",
+  "can_apply_with_conditions": [
+    "Use finalf5c341c9 source, not the initiala2f4 source.",
+    "Merge exact helper+prepare changes with separately reviewed output validator fix; run combined full/path controls.",
+    "Preserve original failed records and original manual input; no direction/price forecast assigned by canonicalization."
+  ],
+  "new_model_calls": 0,
+  "database_access": false,
+  "network_calls": false,
+  "source_modified_by_this_auditor": false
+}

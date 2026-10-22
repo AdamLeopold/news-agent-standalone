@@ -1,0 +1,14 @@
+{
+  "status": "applied",
+  "canonical_analyses_modified": false,
+  "reviews": [
+    {
+      "analysis_id": "30db9f1c-7595-4f29-af5e-85e5d1df0a2e",
+      "affected_parts": [
+        "brief"
+      ],
+      "protected_hashes_match": true,
+      "review_id": "future-window-knowledge-30db9f1c-7595-4f29-af5e-85e5d1df0a2e-brief-v1"
+    }
+  ]
+}

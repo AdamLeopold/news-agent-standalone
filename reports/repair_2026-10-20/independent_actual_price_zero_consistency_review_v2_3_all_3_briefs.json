@@ -1,0 +1,261 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T03:26:38.335866+00:00",
+  "scope": "All three new6d46/e0ca actual brief records, complete raw/result/source/time roles reviewed locally. No model/API/DB/core mutation.",
+  "stage": "reports/repair_2026-10-20/candidate-price-zero-consistency-validation",
+  "actual_records": 3,
+  "actual_model_calls": 6,
+  "safe_returned_results": 2,
+  "failed_without_result": 1,
+  "accepted_material_errors": [],
+  "all_valid_outputs_reviewed": true,
+  "overall_all_outputs_success": false,
+  "production_ready": false,
+  "reviews": [
+    {
+      "case": "future_planned_notice",
+      "actual_record_path": "reports/repair_2026-10-20/candidate-price-zero-consistency-validation/future_planned_notice.json",
+      "actual_record_sha256": "99de909feabef75e395f0bb9080a4ef00a441a10dc2b0adee5ba24f7d4a9a404",
+      "input_sha256": "99aa1883186e4c7746647f781489670cf07addc2c015b7bbd5f4d28310eef1e8",
+      "generation_source_sha256": {
+        "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+        "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+        "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+        "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+        "ttf_news/public_gateway.py": "fac8fe10429bc62a6be241817491d1f35eecdaa7f8a37357cb8dbcab7f43fae5",
+        "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+        "ttf_news/analysis.py": "6d46d6dcee4899ea7426222014ee84dc6d9b56f8144789561ba11a02adace72d",
+        "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+        "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+        "ttf_news/semantics.py": "e0cac7cdab33b6562ee88db528ad32114540734b2b96275d7f32e67302856623",
+        "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+        "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+        "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+        "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+        "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+        "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+        "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+        "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+        "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+        "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+        "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+        "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+        "ttf_news/translation.py": "d47b232a5f77ea68e2d5bc5d092021e9727e555c6b1dd702922325519982d7c5",
+        "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+        "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+        "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+        "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+        "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987"
+      },
+      "prompt_version": "ttf-news-standalone-2.3",
+      "synthetic": true,
+      "original_contract_passed": true,
+      "actual_result_returned": true,
+      "result_compact_canonical_sha256": "08c94553509575321500884b18e9296eff7408a0b14de3c0ae20441e15063bbf",
+      "original_error": null,
+      "actual_model_calls": 2,
+      "actual_calls": [
+        {
+          "attempt": 1,
+          "raw_content_sha256": "bbff4e9280b02e22641542c24941d03738d933c8093123125bc3aa0a18d4e405",
+          "request_input_sha256": "dd7f267bcbb9d5bde915d8721a8790158170cc1df17bce05d267289846aaffbe",
+          "done_reason": "stop",
+          "repair_feedback": null,
+          "has_invalid_candidate_fields": false
+        },
+        {
+          "attempt": 2,
+          "raw_content_sha256": "91951b729e50698e5aaea7d7a61d75c9d8f3ded6868b9e02d132bbff26942d83",
+          "request_input_sha256": "d890ed23f1550eddbdd76b179901fdf423194d70ebaee7ececc64895ac9b5ca9",
+          "done_reason": "stop",
+          "repair_feedback": {
+            "version": "ttf-source-validator-feedback-1",
+            "is_evidence": false,
+            "origin": "local_validator",
+            "errors": [
+              "news_impact.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应"
+            ]
+          },
+          "has_invalid_candidate_fields": false
+        }
+      ],
+      "verdict": "returned_no_identified_material_error_with_qualifications",
+      "independent_semantic_passed": true,
+      "source_and_full_prose_review": "Known planned gas-field capacity fixture100/80/20mcm/d with future22–25May2027 start/end, actual flow/reaction unknown. Final keeps20 as announcement unavailable capacity and calls supply constraint a possible future channel, not actual current flow loss. Summary explicitly says 未确认…可能有限或无即时价格反应, a conditional/uncertain proposition, not an asserted zero reaction. Flat weak news remains an analytical judgment; no source direction is forced. Missing actual prior price/baseline makes closeNone legitimate. Pricedunknown, citations, no invented history and all risk/missing fields were reviewed.",
+      "raw_review": [
+        "First actual raw is identical to old future categorical 当前不影响TTF价格 and is correctly rejected.",
+        "Second actual raw removes that categorical price claim; all original source facts and the non-evidence local feedback remain distinct."
+      ],
+      "qualifications": [
+        "Far-future/current price expectation transmission is explained briefly; future start alone cannot guarantee no current futures effect.",
+        "Synthetic fixture, not observed market accuracy or a real production outage.",
+        "References use the supplied synthetic source and emptyURL; no fabricated provider links."
+      ]
+    },
+    {
+      "case": "real_eni",
+      "actual_record_path": "reports/repair_2026-10-20/candidate-price-zero-consistency-validation/real_eni.json",
+      "actual_record_sha256": "d2b22530afecbc5b4ff7e91e4de698a3d942ec3e991f9817cd8109e9938a453e",
+      "input_sha256": "0dd52f2daf32aeaf1edc94d3394b0df67eba21b6f8d1b3b6ca0652c0faf8f075",
+      "generation_source_sha256": {
+        "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+        "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+        "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+        "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+        "ttf_news/public_gateway.py": "fac8fe10429bc62a6be241817491d1f35eecdaa7f8a37357cb8dbcab7f43fae5",
+        "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+        "ttf_news/analysis.py": "6d46d6dcee4899ea7426222014ee84dc6d9b56f8144789561ba11a02adace72d",
+        "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+        "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+        "ttf_news/semantics.py": "e0cac7cdab33b6562ee88db528ad32114540734b2b96275d7f32e67302856623",
+        "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+        "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+        "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+        "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+        "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+        "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+        "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+        "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+        "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+        "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+        "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+        "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+        "ttf_news/translation.py": "d47b232a5f77ea68e2d5bc5d092021e9727e555c6b1dd702922325519982d7c5",
+        "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+        "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+        "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+        "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+        "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987"
+      },
+      "prompt_version": "ttf-news-standalone-2.3",
+      "synthetic": false,
+      "original_contract_passed": false,
+      "actual_result_returned": false,
+      "result_compact_canonical_sha256": null,
+      "original_error": "模型JSON两次校验失败，未生成方向：价格时间角色不符：输入给的是当前同合约报价相对前一交易日参考价的差值，不是前一交易日自身的涨跌；请明确当前报价/前日比较基准，不把该观察差当未来目标幅度",
+      "actual_model_calls": 2,
+      "actual_calls": [
+        {
+          "attempt": 1,
+          "raw_content_sha256": "17fcc5caae952ca8feb2ad05892d96d6bf6c10c35c96886bfe6d2fda015fa3cf",
+          "request_input_sha256": "8560336a8c030458075c46edc09f880c3b90d0e3e6070f8d27022fda94fc18fe",
+          "done_reason": "stop",
+          "repair_feedback": null,
+          "has_invalid_candidate_fields": false
+        },
+        {
+          "attempt": 2,
+          "raw_content_sha256": "378b3c5f3279a8ae07f836a0cdcf08441e9fdf8d8dfa58352dcfd84f4eb032b1",
+          "request_input_sha256": "62da289b63822de6cc04f76835144d2177041dfe47fefdf3bd585b0cc2819ab0",
+          "done_reason": "stop",
+          "repair_feedback": {
+            "version": "ttf-source-validator-feedback-1",
+            "is_evidence": false,
+            "origin": "local_validator",
+            "errors": [
+              "close_forecast.basis:Gassco公告撤销/结束或实际流量未确认，不能证明未形成供需冲击、供应不受影响或实际流量无变化；须有独立无变化计量事实。可写输入未显示冲击证据或恢复待核实，不能把缺测写成无冲击",
+              "news_impact.summary:Åsgard输入仅有该设施不可用容量公告且实流未知，不能裸称设施停产/停供已发生；可写停产公告/公告容量风险、若/未来条件，实际停产须该实体截至as_of已知的独立生产/流量确认，不改变净方向",
+              "news_impact.bullish_evidence[0]:项目开启或公司合同事实不能只接TTF涨跌模板；须说明该N有来源的供需/容量风险/预期差传导，不能把公司利好直接当气价利好；净方向仍可flat；news_impact.bearish_evidence[0]:明写的TTF价格方向与证据栏相反，价格上行属看涨栏、价格下行属看跌栏；须按该N来源分栏/解释，不改变净方向"
+            ]
+          },
+          "has_invalid_candidate_fields": false
+        }
+      ],
+      "verdict": "failed_no_result_genuine_first_defects_and_second_price_time_role_error",
+      "independent_semantic_passed": false,
+      "source_and_full_prose_review": "Both full raw bodies/input are byte-identical to the prior final2db actual, but genuinely executed under new6d46/e0ca sources. First retains reversed evidence slots, announcement-to-actual production stop and unsupported active supply absence, correctly rejected. Second correctly turns future supply increase into a bearish mechanism and limited price impact, then says 前一交易日价格上涨0.178EUR/MWh. Source0.178 is current19Oct quote87.725 minus16Oct reference87.547; it is not a supplied previous-day-own rise. The new temporal-role diagnostic rejects the misleading subject, rather than calling a known number an invented future target. No result is delivered and no old output replaces it.",
+      "raw_review": [
+        "First genuine rawstop: all prior four defects remain and are not excused by netflat.",
+        "Second genuine rawstop: signs/roles/units improved, but both close.summary andbasis misstate the period of the observed change. Failed state remains true."
+      ],
+      "qualifications": [
+        "Source future domestic-gas project impact on Europe remains weak/indirect; corporate good news is not gas-price bullishness.",
+        "Saying 当前报价较前一交易日上涨0.178 would be legal, but the stored raw does not say that.",
+        "The unchanged raw byte hashes are explicit reuse of prior prose review, not a claim that older calls were generated by the new source."
+      ]
+    },
+    {
+      "case": "anchor_legal_prevday_weak_market_up",
+      "actual_record_path": "reports/repair_2026-10-20/candidate-price-zero-consistency-validation/anchor_legal_prevday_weak_market_up.json",
+      "actual_record_sha256": "6b357a43c61cd2761f99b44c65a93beeca53814a5c7a85e9537c79abf4c382fc",
+      "input_sha256": "8db90c0d7727b0382e85862dabec773b99115480a5815b962e4d7ee470f99fa7",
+      "generation_source_sha256": {
+        "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+        "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+        "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+        "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+        "ttf_news/public_gateway.py": "fac8fe10429bc62a6be241817491d1f35eecdaa7f8a37357cb8dbcab7f43fae5",
+        "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+        "ttf_news/analysis.py": "6d46d6dcee4899ea7426222014ee84dc6d9b56f8144789561ba11a02adace72d",
+        "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+        "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+        "ttf_news/semantics.py": "e0cac7cdab33b6562ee88db528ad32114540734b2b96275d7f32e67302856623",
+        "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+        "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+        "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+        "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+        "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+        "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+        "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+        "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+        "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+        "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+        "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+        "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+        "ttf_news/translation.py": "d47b232a5f77ea68e2d5bc5d092021e9727e555c6b1dd702922325519982d7c5",
+        "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+        "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+        "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+        "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+        "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987"
+      },
+      "prompt_version": "ttf-news-standalone-2.3",
+      "synthetic": true,
+      "original_contract_passed": true,
+      "actual_result_returned": true,
+      "result_compact_canonical_sha256": "a2d7dc11ae3d6f3aabeceae822611612871353eb659ed4e522183ed2e002ea7b",
+      "original_error": null,
+      "actual_model_calls": 2,
+      "actual_calls": [
+        {
+          "attempt": 1,
+          "raw_content_sha256": "41f400c49a4ad1fdf9b96921e8c00efe156816dfca23bdb73ba35fef14b93ab0",
+          "request_input_sha256": "1b8c5f0a481cf1eb064bca6de636e56b33392ea27e5b0e43a2e8ac6e2f090948",
+          "done_reason": "stop",
+          "repair_feedback": null,
+          "has_invalid_candidate_fields": false
+        },
+        {
+          "attempt": 2,
+          "raw_content_sha256": "1f6a9d4683277b66802cb2838fbd7561ea408517de98ca1db5bf16afe4cc8f02",
+          "request_input_sha256": "468cb2062212b1e59d1fd0c923a34ed7c32e493c81272d733aa9ec31ce09565a",
+          "done_reason": "stop",
+          "repair_feedback": {
+            "version": "ttf-source-validator-feedback-1",
+            "is_evidence": false,
+            "origin": "local_validator",
+            "errors": [
+              "close_forecast:已观察同合约价格显著偏离上一日，预测flat/反向须引用输入中相反供需事实并解释回吐/反转；新闻弱或资料缺失不能把已观察变化归零。若不能形成预判，须引用真实供需冲突或价格比较不适用依据，不能仅因弱新闻、缺资料或缺少逆转证据取消有效基准；不得替填方向",
+              "没有校准价格预测输入，禁止编造上涨/下跌幅度或目标价；仅可引用输入已观察的同合约参考变化"
+            ]
+          },
+          "has_invalid_candidate_fields": false
+        }
+      ],
+      "verdict": "returned_no_identified_material_error_with_qualifications",
+      "independent_semantic_passed": true,
+      "source_and_full_prose_review": "Stipulated license has no drilling/proven gas output/European arrangements. Final newsflat is its scoped absent direct supply channel/net weak pressure, not a measured absence of all TTF price reaction. Legal previous19Oct same-contract88.04 and current20Oct12:00 quote89.8 known12:10:48 beforeasof12:10:58 provide+1.76; quote is also before the current news publication, so it is baseline rather than news reaction. Final closeup cites those existing values and a possible continuation absent opposing input facts, not a numeric future target or prior-day-own change. Unknown priced status and original synthetic citations are retained; no invented historical analogy.",
+      "raw_review": [
+        "First raw closeflat despite materially higher observed baseline and no opposite source facts is correctly rejected; a weak license is not a reason to erase the observed price difference.",
+        "Second raw separates newsflat from conditional closeup, cites the same-contract known comparison and avoids the earlier unsupported flatclose/price-unit statements."
+      ],
+      "qualifications": [
+        "Fixture quote omits a unit; final free prose does not fabricate one. Raw1 supplied an explicit Euro/MWh amount despite that missing source unit, so only the final bare observed numbers are accepted.",
+        "The phrase 净冲击为中性 is a news pressure judgment linked to absent direct current delivery, not a general direct-word exemption from price reaction requirements.",
+        "Continuation/alternative scenarios and future indirect channel remain brief; confidence is not verified accuracy."
+      ]
+    }
+  ],
+  "boundary": "Explicit validator rejection is unavailable output, not a correct forecast. Preserve all original raw/strict/error states and previous P2 records; safe current actuals do not rewrite prior predictions. No class quota or official-settlement market accuracy is claimed."
+}

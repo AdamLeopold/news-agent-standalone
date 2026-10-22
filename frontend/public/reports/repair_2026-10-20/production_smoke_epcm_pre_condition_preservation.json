@@ -1,0 +1,23 @@
+{
+  "reason": "Third actual submission (different EPCM article): brief and real English completed; detail failed with true errors plus conditional-field false positives, English smoke guard falsely rejected unchanged N identifiers. Preserve the complete original failed end-to-end attempt before specific code repairs.",
+  "manual_analysis_id": "8d1b57ef-422e-48e7-90af-745694e3a298",
+  "no_old_records_rewritten": true,
+  "files": {
+    "pre-condition-scope-final-unit-tests.xml": {
+      "sha256": "0f1ac617dea98553bcbf4b0884851436f592bf86a725d7bd7ad5e6b862418285",
+      "bytes": 119517
+    },
+    "pre-condition-scope-final-unit-tests.log": {
+      "sha256": "9960610a353625856285c36cbf93dc28ab88d218c1e48b512812bc8f4dbc33a5",
+      "bytes": 1429
+    },
+    "attempted_v2_3_epcm_pre_condition_scope_smoke.json": {
+      "sha256": "48b6001667cf05caeb72f7a0695cd556677985b10076a992b0252dd225e4b864",
+      "bytes": 12585
+    },
+    "attempted_v2_3_epcm_pre_condition_scope_smoke.log": {
+      "sha256": "20c256397099cd2fadd899a27874314b5ac6bff0771fc1a6506917deac0249fa",
+      "bytes": 2097
+    }
+  }
+}

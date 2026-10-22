@@ -1,0 +1,227 @@
+{
+  "audit": "fourth_production_epcm_manual_brief_after_conditional_scope_fix_full_review_v2_3",
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "audited_at": "2026-10-20T23:30:26.781587+00:00",
+  "role": "manual_brief",
+  "verdict": "no_P2_identified_with_P3_expectations_revision_explanation_limit",
+  "actual_record_path": "reports/repair_2026-10-20/production_manual_brief_conditional_actual_v2_3.json",
+  "actual_record_sha256": "c6daf0b663d9ba15abb9cf2f901ade0a4e5f05616394573ad4175be420de856b",
+  "analysis_id": "7d35d08d-759a-486c-9aed-fe8baceb96a5",
+  "result_canonical_sha256": "85631ec7fa24da8295f35e7d97d82dbbc651cc263b92d37084be871a83f7646d",
+  "input_snapshot_canonical_sha256": "63bd4aeab432dac075a67ce0bf41389ab9054170fe3373b6973a21d728ab270c",
+  "generation_deployment": {
+    "file": "reports/repair_2026-10-20/backend_conditional_scope_deployment_v2_3.json",
+    "sha256": "63e4c2a89b18a1489973cbe9f8ea581401d32639424de24926253689ed945eab",
+    "pid": 43554,
+    "source_hashes": {
+      "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+      "ttf_news/analysis.py": "79061b8e132a456fc80fa6f067dc057bdcb681261d68bb1e93769a16069d0d03",
+      "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+      "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+      "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+      "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+      "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+      "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+      "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+      "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+      "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+      "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987",
+      "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+      "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+      "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+      "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+      "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+      "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+      "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+      "ttf_news/public_gateway.py": "fac8fe10429bc62a6be241817491d1f35eecdaa7f8a37357cb8dbcab7f43fae5",
+      "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+      "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+      "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+      "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+      "ttf_news/semantics.py": "77153976fa90b30f36b37d84ac0d5a11dfc52d5364440fe3257e3da232cb4dcb",
+      "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+      "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+      "ttf_news/translation.py": "d47b232a5f77ea68e2d5bc5d092021e9727e555c6b1dd702922325519982d7c5"
+    },
+    "current_files_match_recorded_deployment": true
+  },
+  "actual_call_count": 1,
+  "actual_call_done_reason": "stop",
+  "actual_raw_content_sha256": "ff97891e90bc8f9c82dcb5ae47342153fa3f2d7e76acfeb6e08bce48d6cdde99",
+  "production_manual_submission_number": 4,
+  "source_article": "LNG Canada entrusts Técnicas Reunidas with €200M+ EPCM deal",
+  "source_article_differs_from_failed_well": true,
+  "well_generation_success_claimed": false,
+  "material_known_logic_errors": [],
+  "all_final_body_fields": {
+    "news_impact": {
+      "direction": "flat",
+      "contextual_news_score": 0.0,
+      "confidence": 0.6,
+      "signal_strength": "weak",
+      "summary": "LNG Canada授予Técnicas Reunidas €200M+ EPCM合同，属于未来建设项目，未即时影响TTF供给。Troll设施的两项计划维护公告均为未来时间段，亦不构成当前供给缺口。综合来看，当前窗口内无明显供需冲击，净影响为平稳。",
+      "bullish_evidence": [],
+      "bearish_evidence": [],
+      "neutralizing_evidence": []
+    },
+    "close_forecast": {
+      "confidence": 0.4,
+      "summary": "缺乏前一结算锚点及即时价格反应，无法判断收盘价相对前一交易日的涨跌。",
+      "basis": "截至2026‑10‑20的TTF基准价为86.325，缺乏前一交易日的结算锚点，且未见即时价格反应。",
+      "extreme_move_risk": "缺乏前一结算锚点导致无法判断价格走势。",
+      "evidence_status": "insufficient_evidence",
+      "direction": null
+    },
+    "analysis": {
+      "summary": "N0为未来建设合同，N1、N2为未来维护公告，均不构成当前供给缺口，净影响平稳。",
+      "evidence": [
+        "[N0] LNG Canada授予Técnicas Reunidas €200M+ EPCM合同 → TTF供给不受影响",
+        "[N1]Troll；计划；公告不可用容量7.6mcm/d；未来容量公告；实流未知；TTF机制：无即时供给缺口",
+        "[N2]Troll；计划；公告不可用容量13.0mcm/d；未来容量公告；实流未知；结束时间修订：2026-10-23T06:00:00+0200→2026-10-22T06:00:00+0200；TTF机制：无即时供给缺口"
+      ],
+      "negation_or_reversal": [],
+      "priced_in_comment": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格",
+      "matched_terms": [],
+      "historical_comparisons": []
+    },
+    "risk_flags": [
+      "coverage:来源gassco：最近采集失败",
+      "手动输入仅作条件情景分析，事实尚未由本系统独立核实",
+      "缺少前一交易日可用行情；收盘预判仅由新闻证据驱动",
+      "行情尚未验证为ICE官方日结算，不参与官方结算准确率评分",
+      "价格类型尚未验证为ICE官方日结算，不用于官方结算评分",
+      "最近价格并非上一完整交易日，存在行情缺口",
+      "当前触发新闻在较早结算窗口发布，本次作为截至分析时点已知背景；不能把原报道重复当作本窗口新增冲击，须核对修订内容与已计价情况。",
+      "模型把握程度未经统计校准，不代表已验证准确率",
+      "来源gassco：最近采集失败",
+      "来源gdelt：最近采集失败"
+    ],
+    "references": [
+      {
+        "id": "manual-b0ac3397-4cbc-4f7d-8745-7ede6c3b1a45",
+        "url": "",
+        "title": "LNG Canada entrusts Técnicas Reunidas with €200M+ EPCM deal"
+      },
+      {
+        "id": "90bfbf6adb1183517cbc00ca",
+        "url": "https://umm.gassco.no/details?id=f1f667ff-1ee3-45f2-bedf-7eed367ea614",
+        "title": "Gassco Troll: Planned Gas production field unavailability (Active)"
+      },
+      {
+        "id": "a21b1cffbd1454613a5d0793",
+        "url": "https://umm.gassco.no/details?id=345ca395-a74a-4c9d-9c6c-abf24a16aaf8",
+        "title": "Gassco Troll: Planned Other unavailability (Active)"
+      }
+    ],
+    "missing_fields": [
+      "independent_news_verification",
+      "current_news.source_url",
+      "previous_contract_price",
+      "settlement_verification",
+      "confidence_calibration",
+      "source_coverage:gassco",
+      "source_coverage:gdelt"
+    ],
+    "source_fact_checks": {
+      "fact_contract_version": "operator-facts-2.2",
+      "operator_notices": [
+        {
+          "id": "N1",
+          "facility": "Troll",
+          "facility_type": "气田/生产设施",
+          "notice_type": "计划",
+          "unavailable_capacity": "7.6",
+          "period_utc": [
+            "2026-10-22T04:00Z",
+            "2026-10-23T04:00Z"
+          ],
+          "state_description": "未来公告",
+          "cause_original": "Yearly maintenance"
+        },
+        {
+          "id": "N2",
+          "facility": "Troll",
+          "facility_type": "类别未给",
+          "notice_type": "计划",
+          "unavailable_capacity": "13.0",
+          "period_utc": [
+            "2026-10-21T04:00Z",
+            "2026-10-22T04:00Z"
+          ],
+          "state_description": "未来公告",
+          "cause_original": "Yearly maintenance"
+        }
+      ],
+      "capacity_scope": "公告不可用容量，非实际流量计量",
+      "pricing_observation": {
+        "observed_at": "2026-10-20T20:59:00+00:00",
+        "available_at": "2026-10-20T21:09:54.498786+00:00",
+        "clock_roles": {
+          "observed_at": "报价发生时刻",
+          "available_at": "本机获知时刻；不是报价发生时刻"
+        },
+        "current_news_timing": {
+          "id": "N0",
+          "publication_time": "2026-10-20T13:11:12+00:00",
+          "quote_relation": "at_or_after_publication",
+          "quote_role": "已观察市场基准；单个报价不证明公告反应"
+        },
+        "reaction_evidence_available": false,
+        "pricing_status": "无法确认是否已计价；不是尚未计价或价格无反应"
+      },
+      "non_overlapping_notice_ids": [
+        [
+          "N1",
+          "N2"
+        ]
+      ]
+    }
+  },
+  "checks": {
+    "contract_role_and_source_facts": "LNGCanada awards TR€200M+EPCM contract, correct awarder/recipient/amount. No operatingconstruction or delivery invented. Futureconstruction is not current gasoutput.",
+    "physical_vs_pricing_scope": "TTF供给不受影响 in evidence is scoped by summary未来建设/current supplytiming, not forever supplyeffect or no currentpriceeffect. Future Trollnotices have no yetphysicaleffect attributable to them; no wholemarketmeteredzero asserted. Final contains no categorical无法计价 or均不影响当日价格 denial.",
+    "reaction_wording": "未见即时价格反应 is an epistemic missing observation in full explicit observations-not-provided/pricingunknown context. It is not the rejected新闻未产生即时价格反应.",
+    "capacity_and_revision": "N1planned7.6 Oct22→23 and N2planned13 Oct21→22 are separately cited; no crossN/20.6rate sum/currentactualflow. N2end23→22 literalrevision preserved. Directional marginalrelief is not articulated, recorded asP3.",
+    "anchor": "TargetOct21 needs Oct20 priorreference, absent. OldOct19 price and staleOct20 absolute86.325 are not used to fabricate targetday change; noofficialsettlement claim. Nullclose is justified independent of unknown reaction.",
+    "window_and_history": "EPCM published13:11 beforewindowstart15:15, deterministicrisk marksbackground. It is not claimed as a new physicaldelivery. No historicalprice causality or fabricated measuredoffset used.",
+    "coverage": "Input-derived Gassco/GDELT failure warnings present; unknowncoverage does not establish flowstability or no priceeffect."
+  },
+  "qualifications": [
+    {
+      "severity": "P3",
+      "id": "expectations_and_revision_netting_underexplained",
+      "quotes": [
+        "均不构成当前供给缺口，净影响平稳。",
+        "TTF供给不受影响"
+      ],
+      "assessment": "Physicaltiming scope is defensible, but brief does not explain long-term expected supplyexpansion, short-term futuremaintenance risk, N2earlierend marginalrelief and N1lowerlaterconstraint netting. Flat is allowed judgement with abbreviated rationale, not empirically verifieddirection or proof expectationreasoning fully fixed."
+    }
+  ],
+  "prior_terminal_outcomes_preserved": [
+    {
+      "file": "reports/repair_2026-10-20/independent_production_manual_failed_c1de_review_v2_3.json",
+      "sha256": "a46528218fac77a50e32b6ff3e96363a61925e454e8d7de53975505511b5f26a"
+    },
+    {
+      "file": "reports/repair_2026-10-20/independent_production_manual_failed_02d_review_v2_3.json",
+      "sha256": "82f1e339248d6eceefa47cd426458a06bfe2eabef4b70329f5968d295410c5d0"
+    },
+    {
+      "file": "reports/repair_2026-10-20/independent_production_epcm_detail_failed_review_v2_3.json",
+      "sha256": "c451186cc82310b78d291905298c96c278f5006a6716198499bf2cf956710fda"
+    }
+  ],
+  "detail_assessed_here": false,
+  "english_assessed_here": false,
+  "no_model_calls_by_reviewer": true,
+  "no_network_calls": true,
+  "no_database_access": true,
+  "no_tests_run": true,
+  "no_core_edits": true,
+  "limits": [
+    "Fourthsubmission after twofailedwellrecords and differentarticle mixedfailure; this is not100percentreliability or wellsuccess.",
+    "Onlybrief acceptedhere; freshdetail and English need separate actualreviews.",
+    "A bounded noP2 review is not forecastaccuracy or seven-day acceptance."
+  ]
+}

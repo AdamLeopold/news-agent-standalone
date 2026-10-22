@@ -1,0 +1,67 @@
+Source equinor failed: unconverted data remains: 08
+{
+  "sources": [
+    {
+      "source": "eia",
+      "status": "ok",
+      "seen": 121,
+      "created": 0,
+      "revised": 38,
+      "errors": [],
+      "last_error": null
+    },
+    {
+      "source": "eu_energy",
+      "status": "ok",
+      "seen": 41,
+      "created": 0,
+      "revised": 0,
+      "errors": [],
+      "last_error": null
+    },
+    {
+      "source": "equinor",
+      "status": "failed",
+      "seen": 0,
+      "created": 0,
+      "revised": 0,
+      "errors": [],
+      "last_error": "unconverted data remains: 08"
+    },
+    {
+      "source": "cheniere",
+      "status": "ok",
+      "seen": 10,
+      "created": 10,
+      "revised": 0,
+      "errors": [],
+      "last_error": null
+    },
+    {
+      "source": "gassco",
+      "status": "ok",
+      "seen": 100,
+      "created": 100,
+      "revised": 0,
+      "errors": [],
+      "last_error": null
+    }
+  ],
+  "total_created": 110,
+  "historical": true,
+  "finished_at": "2026-10-14T03:49:38.857868+00:00"
+}
+{
+  "source": "dbnomics_ice",
+  "name": "ICE monthly contract references via DBnomics",
+  "status": "ok",
+  "last_attempt_at": "2026-10-14T03:49:38.858943+00:00",
+  "id": "dbnomics_ice",
+  "last_success_at": "2026-10-14T03:50:36.310453+00:00",
+  "observations_imported": 65628,
+  "series_scanned": 221,
+  "price_type": "reference",
+  "settlement_verified": false,
+  "last_error": null
+}
+Coverage saved; 2980 total public-source news records.

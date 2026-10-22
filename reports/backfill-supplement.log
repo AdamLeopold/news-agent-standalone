@@ -1,0 +1,52 @@
+Source gdelt failed: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20260716000000&enddatetime=20260723000000'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+{
+  "sources": [
+    {
+      "source": "offshore_energy",
+      "status": "ok",
+      "seen": 9,
+      "created": 9,
+      "revised": 0,
+      "errors": [],
+      "last_error": null
+    },
+    {
+      "source": "equinor",
+      "status": "ok",
+      "seen": 19,
+      "created": 0,
+      "revised": 0,
+      "errors": [],
+      "last_error": null
+    },
+    {
+      "source": "cheniere",
+      "status": "ok",
+      "seen": 26,
+      "created": 0,
+      "revised": 0,
+      "errors": [],
+      "last_error": null
+    },
+    {
+      "source": "gdelt",
+      "status": "failed",
+      "seen": 0,
+      "created": 0,
+      "revised": 0,
+      "errors": [
+        {
+          "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+          "at": "2026-10-14T03:19:33.029010+00:00",
+          "error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20260716000000&enddatetime=20260723000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+        }
+      ],
+      "last_error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20260716000000&enddatetime=20260723000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+    }
+  ],
+  "total_created": 9,
+  "historical": true,
+  "finished_at": "2026-10-14T03:19:53.654829+00:00"
+}
+Coverage saved; 208 total public-source news records.

@@ -1,0 +1,57 @@
+{
+  "created_at": "2026-10-20T20:06:55.625595+00:00",
+  "all_valid_outputs_reviewed": true,
+  "known_accepted_logic_errors": [],
+  "reviewed_accepted_cases": [
+    "cold_heating_demand",
+    "cumulative_shock_then_weak",
+    "dismissed_notice_not_verified_recovery",
+    "negated_outage",
+    "real_nyhamna",
+    "supplied_conflicting_mechanisms",
+    "supply_loss_40",
+    "supply_loss_40_with_flat_baseline",
+    "supply_restore_40",
+    "supply_restore_40_with_flat_baseline",
+    "warm_heating_demand",
+    "weak_exploration_no_quote",
+    "weak_news_observed_market_up"
+  ],
+  "rejected_cases": [
+    "future_planned_notice",
+    "real_eni"
+  ],
+  "selected_record_sha256": {
+    "cold_heating_demand": "18b1d8f926c9a737f1c7586c45ee48755999f97893d97bd962ccf8181bd11180",
+    "cumulative_shock_then_weak": "c52aea14465011166b0aa7b6d0e1020923eef5874d90d03ebc81bc5bc238cf25",
+    "dismissed_notice_not_verified_recovery": "4aefabe50ea4cde0d3f6b74bc67b92932ff6db935e0dead45f9a0c2f15bccf6b",
+    "negated_outage": "e0869eaf2ac442d6a92a5b60e82c9a89a9c3faa27b893988632e41e18e6106d8",
+    "real_nyhamna": "aea850f53c16043fd7b65fb01d1712ab9bc32e7ce9e9521a95ea0f75f02ac46d",
+    "supplied_conflicting_mechanisms": "d8a75ccbcb121b79a71660b0d257afdb5993d1a462907479a06e6c888500eab8",
+    "supply_loss_40": "b98e8729352dea3641479ac9be1cc92b12f64050dc1a539eb84e5abefc25f7fd",
+    "supply_restore_40": "804b8c86f82a73cbc420d492d6223d004ab74c3bbf9507cb4d694f713a0006c1",
+    "warm_heating_demand": "9ef336c549af09adb54396811ee20f433f066f188261e55ee9954c7f120066f1",
+    "weak_exploration_no_quote": "250f8e8932eae89462d1bda85a784dfd5e8604caff03a6bc6612d739c1eb08a0",
+    "weak_news_observed_market_up": "043e2b241432c05cdf84e38c8697935fe0781a44fce05fabe3d9aca1e79f5805",
+    "supply_loss_40_with_flat_baseline": "bd5d6bae13901efe7db318008fa10a40d398c7773d7dc253c002c8d94dfce03d",
+    "supply_restore_40_with_flat_baseline": "1d39b9c57e942415a6a05265eac28623a095d4210103e4e67b931c35b8369dad"
+  },
+  "source_sha256": {
+    "ttf_news/analysis.py": "598e991481b10dac6faaab11769a638f9ad6517b2bd02b4bde0553513e8ff6b9",
+    "ttf_news/semantics.py": "a52d8ae264fd517004054b5e4f4ed5616c22190d7295230ed291acce1dfcde88",
+    "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56"
+  },
+  "accepted_detail_reviewed": true,
+  "accepted_detail_record_sha256": {
+    "supply_restore_40": "f1213c856a8d3125c9f0523b532f35af34f563626ded877f27e8d45aa2d3e89b"
+  },
+  "independent_review_evidence": [
+    "reports/repair_2026-10-20/offline_retained_final_reaction.json",
+    "reports/repair_2026-10-20/independent_prose_review_revision.json",
+    "reports/repair_2026-10-20/independent_prose_review_fieldfeedback.json",
+    "reports/repair_2026-10-20/independent_prose_review_reaction.json"
+  ],
+  "scope": "Independent full-prose reviews are anchored by unchanged complete record SHA; current final gates and actual repair feedback paths independently rechecked. Rejected raw is not a correct or accepted prediction.",
+  "no_model_calls": true,
+  "no_database_access": true
+}

@@ -32,6 +32,9 @@ def evaluate_frozen(store):
             else:
                 status = "insufficient_volatility_history"
         data = {"price_source":ref.get("reference_source"),"reason":"仅已验证的同合约日结算参与正式评分", "evaluation_updated_at":iso()}
+        if analysis['result']['close_forecast'].get('direction') is None:
+            status='insufficient_forecast_evidence'
+            correct=None
         with store.connection() as c:
             c.execute("INSERT OR REPLACE INTO evaluations VALUES (?,?,?,?,?,?,?,?,?,?)", (snapshot["trade_date"],analysis["id"],contract,delta,t,direction,analysis["result"]["close_forecast"]["direction"],correct,status,dumps(data)))
 
@@ -52,11 +55,18 @@ def enrich_outcomes(store):
         # Select the nearest eligible monthly contract at the event date; far-dated contracts
         # must not become the default historical reaction merely because they were inserted first.
         event_session=session_at(day+'T00:00:00+00:00')
-        reference=price_context(store,event_session['window_start'])
+        # Backfilled prices may be useful for a retrospective outcome now,
+        # without pretending the local system knew them on the event date.
+        reference=price_context(store,now,reference_trade_date=event_session['trade_date'])
         if not reference.get('contract'):
             continue
         with store.connection() as c:
-            rows = [json.loads(r[0]) for r in c.execute("SELECT data FROM prices WHERE contract=? AND price_type=? AND day>=? AND day<=? ORDER BY day LIMIT 11", (reference['contract'],reference['price_type'],day,last_completed_day))]
+            rows = [json.loads(r[0]) for r in c.execute('''SELECT v.data FROM price_versions v JOIN
+              (SELECT day,MAX(known_at) latest FROM price_versions
+               WHERE contract=? AND price_type=? AND day>=? AND day<=? AND known_at<=? GROUP BY day) k
+              ON v.day=k.day AND v.known_at=k.latest
+              WHERE v.contract=? AND v.price_type=? ORDER BY v.day LIMIT 11''',
+              (reference['contract'],reference['price_type'],day,last_completed_day,now,reference['contract'],reference['price_type']))]
         if len(rows)<2:
             continue
         outcomes = dict(event.get("outcomes",{}))
@@ -65,10 +75,10 @@ def enrich_outcomes(store):
             key = f"{horizon}d"
             if key in outcomes or len(rows)<=horizon:
                 continue
-            outcomes[key] = {"change":rows[horizon]["value"]-rows[0]["value"],"contract":reference['contract'],"price_type":reference['price_type'],"base_date":rows[0]["day"],"end_date":rows[horizon]["day"],"available_at":iso(),"interpretation":"同期价格变化，非因果效应"}
+            outcomes[key] = {"change":rows[horizon]["value"]-rows[0]["value"],"contract":reference['contract'],"price_type":reference['price_type'],"base_date":rows[0]["day"],"end_date":rows[horizon]["day"],"available_at":now,"interpretation":"同期价格变化，非因果效应"}
             changed = True
         if changed:
-            event.update(outcomes=outcomes,outcome_available_at=iso())
+            event.update(outcomes=outcomes,outcome_available_at=now)
             store.upsert_event(event)
 
 
@@ -101,6 +111,17 @@ def monitoring_report(store) -> dict:
             return {"count":0,"median":None,"p95":None}
         import statistics, math
         return {"count":len(values),"median":round(statistics.median(values),3),"p95":values[max(0,math.ceil(len(values)*.95)-1)]}
+    revisions={}
+    for entry in successes+failures:
+        version=entry['data'].get('model_metadata',{}).get('prompt_version') or 'unversioned'
+        group=revisions.setdefault(version,{'successes':0,'failures':0,'first_at':entry['created_at'],'last_at':entry['created_at']})
+        group['successes' if entry['type']=='model_success' else 'failures']+=1
+        group['first_at']=min(group['first_at'],entry['created_at'])
+        group['last_at']=max(group['last_at'],entry['created_at'])
+    for version,group in revisions.items():
+        selected=[s for s in successes if (s['data'].get('model_metadata',{}).get('prompt_version') or 'unversioned')==version]
+        group['brief_latency']=latency_summary([s for s in selected if s['data'].get('kind')!='detail'])
+        group['detail_latency']=latency_summary([s for s in selected if s['data'].get('kind')=='detail'])
     from .score_report import classification_report
     return {"started_at":started,"elapsed_days":round(elapsed,4),"required_days":7,"seven_day_validation_complete":elapsed>=7 and bool(beats) and not gaps,
         "heartbeat_gap_seconds":gaps,"model_successes":len(successes),"model_failures":len(failures),
@@ -112,5 +133,5 @@ def monitoring_report(store) -> dict:
         "collection_failures":sum(m['type']=='collection_failure' for m in metrics),
         "evaluation_report":classification_report(evaluations),
         "latency_seconds":[s["data"]["seconds"] for s in successes],"evaluations":evaluations,
-        "official_evaluation_count":sum(e["status"]=="evaluated" for e in evaluations),
+        "official_evaluation_count":sum(e["status"]=="evaluated" for e in evaluations),"model_revisions":revisions,
         "notes":["七天持续运行验收需要真实经过七天并核查心跳缺口。","无已验证日结算时不报告正式预测准确率。"]}

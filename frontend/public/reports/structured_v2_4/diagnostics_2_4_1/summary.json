@@ -1,0 +1,42 @@
+[
+  {
+    "case": "current_mixed_live",
+    "status": "failed",
+    "error": "AnalysisError: Structured model response failed after two attempts: Import transmission requires the LNG import role",
+    "calls": 2,
+    "news": null,
+    "close": null
+  },
+  {
+    "case": "p12_manual",
+    "status": "completed",
+    "error": null,
+    "calls": 3,
+    "news": "flat",
+    "close": "up"
+  },
+  {
+    "case": "epcm",
+    "status": "completed",
+    "error": null,
+    "calls": 3,
+    "news": "up",
+    "close": "up"
+  },
+  {
+    "case": "chevron_historical",
+    "status": "completed",
+    "error": null,
+    "calls": 3,
+    "news": "flat",
+    "close": "up"
+  },
+  {
+    "case": "eia_historical",
+    "status": "completed",
+    "error": null,
+    "calls": 3,
+    "news": "flat",
+    "close": "up"
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "created_at": "2026-10-20T20:02:42.114082+00:00",
+  "review_method": "Independent full input/prose review; recorded machine pass/failure and manual causal verdict are kept separate. Rejected output is not a correct prediction.",
+  "no_model_calls": true,
+  "no_network_calls": true,
+  "no_database_access": true,
+  "original_files_unchanged": true,
+  "records": [
+    {
+      "case": "future_planned_notice",
+      "file": "reports/repair_2026-10-20/candidate-reaction-validation/future_planned_notice.json",
+      "file_sha256": "c42359e901f332add193af87a1a4841dc670666a49f9a3dfe7cb66bc147b0318",
+      "input_sha256": "99aa1883186e4c7746647f781489670cf07addc2c015b7bbd5f4d28310eef1e8",
+      "recorded_contract_passed": false,
+      "has_final_result": false,
+      "recorded_error": "模型JSON两次校验失败，未生成方向：analysis.evidence[0]:Gassco公告撤销/结束或实际流量未确认，不能证明未形成供需冲击、供应不受影响或实际流量无变化；须有独立无变化计量事实。可写输入未显示冲击证据或恢复待核实，",
+      "generation_source_sha256": {
+        "ttf_news/analysis.py": "598e991481b10dac6faaab11769a638f9ad6517b2bd02b4bde0553513e8ff6b9",
+        "ttf_news/semantics.py": "a52d8ae264fd517004054b5e4f4ed5616c22190d7295230ed291acce1dfcde88",
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56"
+      },
+      "raw_sha256": [
+        "a7240230b5d64d98b02521d426b376846eb7bb20f6e47157332fd414972e33c2",
+        "d2d8d05bf461d6f39da11ae8a39e1a148812367309fb4f2cb3d05f5129f50795"
+      ],
+      "verdict": "failed_correct_rejection_unsupported_no_current_price_effect",
+      "notes": [
+        "首轮与fieldfeedback相同的‘未来，未对当前价格产生影响’被补齐词序的原价格观测门正确拒绝；没有把原machine pass回写。",
+        "第二轮news/analysis从维护尚未发生的物理状态推‘故对TTF价格无净影响’，机制写‘无供需冲击’，仍把未来/缺测当零价格影响，来源不足。当前门已正确拒绝无供需冲击，不生成方向。",
+        "close null缺价格比较锚点本可成立，flat/news分数0本身不作为错误理由；错在无源零冲击/零价格影响断言。",
+        "两次medium已实际执行；原raw、失败和输入不变，不把拒绝算正确预测，不再同策略重跑挑成功。"
+      ]
+    }
+  ]
+}

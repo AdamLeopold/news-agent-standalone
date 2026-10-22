@@ -1,0 +1,92 @@
+{
+  "schema_version": "ninth-history-ledger-fact-maintenance-v1",
+  "generated_at": "2026-10-21T05:07:52.506595+00:00",
+  "new_model_calls": 0,
+  "database_network_service_git_actions": 0,
+  "production_source_tests_helpers_changed": false,
+  "readiness_not_rerendered": true,
+  "old_aliases_preserved": [
+    {
+      "file": "reports/repair_2026-10-20/production_e2e_attempt_history_v2_3.cbd18cdcb4be32a3.json",
+      "sha256": "cbd18cdcb4be32a3212cd31eff40fb164551138ec7152912865442bb2ae81c6e"
+    },
+    {
+      "file": "reports/repair_2026-10-20/release_known_accepted_errors.d10d14b144de1130.json",
+      "sha256": "d10d14b144de1130fac9b8f8f157e1bdb9c48b42e334d9f13fc26799ab5ff355"
+    }
+  ],
+  "updated_aliases": [
+    {
+      "file": "reports/repair_2026-10-20/production_e2e_attempt_history_v2_3.json",
+      "sha256": "15ba0c3beebc9b57fe2dcac8d9b76798f948bb7b85a64e449fe6fe93bdc7e0d9"
+    },
+    {
+      "file": "reports/repair_2026-10-20/release_known_accepted_errors.json",
+      "sha256": "89fcc67ae1e96849bed796c7288928bbec699f7e220189d129d7fe00cabe1fd8"
+    }
+  ],
+  "exact_diff": {
+    "file": ".runtime/ninth-history-ledger-maintenance.diff",
+    "sha256": "5dc1ab38f3bef4f13adb9156e52b1f93ecf69fe8a9ce6600c08d952fc41cd095"
+  },
+  "first_eight_attempts_deep_equal": true,
+  "attempt_count": 9,
+  "whole_failed_attempts": 9,
+  "whole_passed_attempts": 0,
+  "successful_complete_attempt_count": 0,
+  "family_count_before": 8,
+  "family_count_after": 8,
+  "family_ids_unchanged": true,
+  "all_family_statuses_still_open": true,
+  "only_ledger_family_modified": "v2_0_missing_previous_trading_day_anchor",
+  "other_seven_families_deep_equal": true,
+  "new_references_full_file_hashes_verified": [
+    {
+      "file": "reports/repair_2026-10-20/production_ninth_full_workflow_v2_3.json",
+      "sha256": "026deaf6272de76b6e90e78742d0da6d20893ba61f26b71e0b7a06d472ff3bbd"
+    },
+    {
+      "file": "reports/repair_2026-10-20/production_ninth_manual_brief_failed_actual_v2_3.json",
+      "sha256": "2ef79ddad979f6696a8e5153fde38a55c45b047af20dac551fd83b1dbe9db676"
+    },
+    {
+      "file": "reports/repair_2026-10-20/production_ninth_current_live_actual_v2_3.json",
+      "sha256": "4b8231a5e400b83a2cd872e9294bfe58c2b6b0c7871d6952c56d986b65272ab0"
+    },
+    {
+      "file": "reports/repair_2026-10-20/production_ninth_current_price_role_applied_review_v2_3.json",
+      "sha256": "eef917cc5b2f81756c34a72cc130b2d87e09e0c1dc6b3787c26e3fe858193ffc"
+    },
+    {
+      "file": "reports/repair_2026-10-20/independent_production_ninth_terminal_review_v2_3.json",
+      "sha256": "f508f25d751dee03f31a0bbb283cfab2328748fd9adddf74b6a09cd8d0921dac"
+    },
+    {
+      "file": "reports/repair_2026-10-20/independent_production_ninth_manual_failed_terminal_review_v2_3.json",
+      "sha256": "71c07e82601aeed39c0ea1c3259f266ced8cfa031de215b2d86756583fc46a2c"
+    },
+    {
+      "file": "reports/repair_2026-10-20/independent_production_ninth_current_live_initial_review_v2_3.json",
+      "sha256": "6e87e04322f3c9b363025f57d84cc1c815256e1f82e577d02cf7fa28752a3562"
+    },
+    {
+      "file": "reports/repair_2026-10-20/production_ninth_current_price_role_pending_review_v2_3.json",
+      "sha256": "42cccefb999be4c08a6a066fe44183441959625ab8d4fe8987e51e2b4d26ba85"
+    }
+  ],
+  "manual_raw_sha256_verified": [
+    "f06a20f96d14b0a9526753b691c0635195146aff9221105f952e54940b17001b",
+    "8c7d220ba66d7ddaed0d84c89c35bce563092066420b222e6a0e5db046810592"
+  ],
+  "manual_canonical_result_is_null": true,
+  "current_canonical_result_hash_verified": {
+    "sha256": "c87df6cee5b36ff4c2682dec504827432de30435e026c4b85ca1ec04e2618134",
+    "algorithm": "sha256(json.dumps(result, ensure_ascii=False, sort_keys=True)); includes original _meta"
+  },
+  "current_original_db_serialization_hash_verified": {
+    "sha256": "db15a405c83c724c170064d65d6f54473ee75f5fdd207b72f367fcaaa6a9183c",
+    "algorithm": "sha256(json.dumps(result, ensure_ascii=False)); original key order and default separators"
+  },
+  "current_append_review_input_and_result_before_after_equal": true,
+  "original_actuals_or_prediction_direction_modified": false
+}

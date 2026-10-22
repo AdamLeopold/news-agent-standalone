@@ -1,0 +1,73 @@
+{
+  "generated_at": "2026-10-20T20:41:27.033449+00:00",
+  "method": "Independent human source-and-causality review; read-only database; no model calls.",
+  "records": [
+    {
+      "analysis_id": "b1e9c166-8851-4f7c-9803-b9c72329f6a9",
+      "kind": "live",
+      "prompt_version": "ttf-news-standalone-2.1",
+      "as_of": "2026-10-20T20:03:06.675853+00:00",
+      "completed_at": "2026-10-20T20:34:57.669972+00:00",
+      "input_snapshot_sha256": "9295e8ca8ca58c9183493097e3d407a1a63d97589312df41208377f5dc233dc5",
+      "result_sha256": "fa0a68927d7bff6c7de8f55a70ad9035de9e7f2a6bfd1faf68a19a41d117dcc4",
+      "raw_model_content_sha256": "2be1a16116bf38be121aaeb0147abf35f97b6f71155de52979308245d1a87a91",
+      "verdict": "material_source_tense_error",
+      "known_logic_errors": [
+        {
+          "code": "prospective_well_action_as_completed",
+          "source_quote": "The well, which was not formation-tested, but data and samples were collected, will now be permanently plugged and abandoned.",
+          "source_quote_sha256": "c4a3610511783b9c6fc047b86a635ee217a0da1eac6e913cecbb71fdd0a5555e",
+          "generated_quote": "Vår Energi 与 Equinor 在挪威海发现气体与凝析油，但该井未进行成品测试，且已被永久封堵，未产生即时产量，因而对 TTF 供给无直接影响。",
+          "generated_quote_sha256": "9983effb1cb3174696062d595647b6d5965e36614ee8ff6d19fb1f60375465d0",
+          "reason_zh": "来源说该井将永久封堵弃置；输出却写已被永久封堵，错误把计划当作已完成事实。资源发现未给即时产量及缺锚点时Nooutlook的方向逻辑本身不因此被否定。",
+          "reason_en": "The source says the well will be permanently plugged and abandoned; the output claims it has already been permanently plugged. This is a source-time error, while the news-pressure and no-outlook conclusions are reviewed separately."
+        }
+      ],
+      "additional_language_issue": "formation-tested 应为地层测试，成品测试术语不准确。",
+      "close_summary": "由于缺少可比价格基准，无法对 2026‑10‑21 结算价相对前一交易日作出判断。",
+      "close_summary_sha256": "1c0e1ca4502362820f0732171f25a22b54af0d149f531527ea53bc2badf058f7",
+      "separate_checks": {
+        "resource_discovery_not_current_delivery": "pass",
+        "previous_day_anchor_no_outlook": "pass",
+        "unsupported_priced_in": "not_found",
+        "direction_rewritten": false
+      }
+    },
+    {
+      "analysis_id": "d2ef1250-6ed3-4a68-9396-e6ed4addbfb3",
+      "kind": "manual",
+      "prompt_version": "ttf-news-standalone-2.1",
+      "as_of": "2026-10-20T20:34:39.381852+00:00",
+      "completed_at": "2026-10-20T20:35:40.299571+00:00",
+      "input_snapshot_sha256": "00742222c3d42beed286a1a8716ac5cda0edb7c2e0983be6420c92d4b1b72005",
+      "result_sha256": "66347a76e7d9e0744aa626df9229dec527cc62a2696924585b85223523d545e4",
+      "verdict": "material_source_entity_type_error",
+      "known_logic_errors": [
+        {
+          "code": "v2_1_field_misidentified_as_pipeline",
+          "source_quote": "Gassco Troll: Planned Gas production field unavailability (Active)",
+          "source_quote_sha256": "b37b06e4b967935574b3ba7a082cca30b11448cf4291bcf89b881019ab21ff5a",
+          "generated_quote": "截至2026-10-20，已知新闻仅涉及未来Troll管道维护计划和LNG Canada的长期工程合同，未产生即时供给损失或需求变化，故对TTF价格的净影响为中性。",
+          "generated_quote_sha256": "3bcd76229b05bfc954ff69c5d097e94b35ab257a3c0e0d771a7fc1eeb636f8d0",
+          "reason_zh": "Gas production field不是管道，Other不证明管道类型；LNG Canada的pipeline不能跨N证明Troll类别。",
+          "reason_en": "A gas production field is not a pipeline; Other does not prove a pipeline type. The LNG Canada pipeline cannot establish the type of the separate Troll notice."
+        }
+      ],
+      "close_summary": "缺乏前一结算日的基准价和新闻对价格的即时反应证据，无法判断收盘价相对前一交易日的涨跌。",
+      "close_summary_sha256": "a5c7decbd47c0549de025bdc49b75b71445d49002cb563f765a5b02c07855701",
+      "separate_checks": {
+        "no_invalid_stale_daily_price_difference": true,
+        "close_no_outlook_due_missing_previous_day": true,
+        "no_unsupported_priced_in_claim": true
+      }
+    }
+  ],
+  "live_v2_1_outputs": [],
+  "review_source_hashes": {
+    "ttf_news/semantics.py": "946a72603eb705d496cc7f81d4da71d6783d7a2cd037601f93cdceabc92cb7ed",
+    "ttf_news/analysis.py": "d302ca1994621aef9ed47257b4d355a09f68905e2e3e549b5a698e05b738c449",
+    "ttf_news/context.py": "6ae94608797de98b1129f673af219bde7e88faba1f4cf73a7456058d7350b23f",
+    "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+    "ttf_news/prompts.py": "530d03e685092c9992bee59b20ce7ce4a2e34a8bcbe6805eafa024fa590d3570"
+  }
+}

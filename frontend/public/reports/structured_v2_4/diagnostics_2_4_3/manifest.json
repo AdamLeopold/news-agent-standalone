@@ -1,0 +1,20 @@
+{
+  "scope": "Finite predeployment real-source diagnostics; original bodies and failures preserved, not an accuracy evaluation.",
+  "files": [
+    {
+      "source": ".runtime/structured-reasoning-v4/clause-id-v3/real_batch_01/current_mixed_live.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_3/current_mixed_live.json",
+      "sha256": "1666044923acb667d3032c7e729d4f3afc601f288bbd8fabfb33e05c9a128517"
+    },
+    {
+      "source": ".runtime/structured-reasoning-v4/clause-id-v3/real_batch_01/independent_review.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_3/independent_review.json",
+      "sha256": "5ded5a225df55cd2e669ad40e10713569594063fe29cb2f504fdf2574c424e05"
+    },
+    {
+      "source": ".runtime/structured-reasoning-v4/clause-id-v3/real_batch_01/summary.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_3/summary.json",
+      "sha256": "b9605632d14e376e5d55b60944214b9cd5a9762df34ed37a5bca962486a2826b"
+    }
+  ]
+}

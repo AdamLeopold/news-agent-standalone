@@ -1,0 +1,22 @@
+{
+  "response": {
+    "model": "gpt-oss:20b",
+    "created_at": "2026-10-21T05:12:39.100336Z",
+    "message": {
+      "role": "assistant",
+      "content": "{\"news_impact\":{\"bullish_evidence\":[\"[N0]Gassco Troll: Planned Gas production field unavailability (Active) → TTF供给受限，价格上行\",\"[N1]Gassco Troll: Planned Gas production field unavailability (Active) → 未来7.6 mcm/d容量受限，预期价格上行\",\"[N2]Gassco Troll: Planned Other unavailability (Active) → 13.0 mcm/d容量受限，预期价格上行\"],\"bearish_evidence\":[],\"neutralizing_evidence\":[],\"summary\":\"Troll油气田及其他设施因年度维护计划，分别减少7.6 mcm/d和13.0 mcm/d可用产能，形成明显的供给约束，预期对TTF价格形成上行压力。\",\"contextual_news_score\":2,\"direction\":\"up\",\"confidence\":0.6,\"signal_strength\":\"moderate\"},\"close_forecast\":{\"basis\":\"已观察到TTF参考价从85.062 EUR/MWh上升至87.73 EUR/MWh，且两条新闻均为供给受限，符合价格上行逻辑。\",\"summary\":\"在已观察的价格上升与供应约束的双重作用下，预计收盘价相对前一交易日继续上涨。\",\"evidence_status\":\"forecast\",\"direction\":\"up\",\"confidence\":0.7,\"extreme_move_risk\":\"\"},\"analysis\":{\"summary\":\"在本窗口内，Troll油气田及其他设施因年度维护计划导致可用产能分别下降7.6 mcm/d和13.0 mcm/d，形成供给约束，预期对TTF价格产生上行压力。\",\"evidence\":[\"[N0]Gassco Troll: Planned Gas production field unavailability (Active) → TTF供给受限\",\"[N1]Gassco Troll: Planned Gas production field unavailability (Active) → 未来7.6 mcm/d容量受限\",\"[N2]Gassco Troll: Planned Other unavailability (Active) → 13.0 mcm/d容量受限\"],\"negation_or_reversal\":[],\"priced_in_comment\":\"price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格\",\"matched_terms\":[],\"historical_comparisons\":[]},\"risk_flags\":[],\"references\":[{\"id\":\"N0\",\"url\":\"\"},{\"id\":\"N1\",\"url\":\"\"},{\"id\":\"N2\",\"url\":\"\"}],\"missing_fields\":[]}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 32942602375,
+    "load_duration": 6866176583,
+    "prompt_eval_count": 9070,
+    "prompt_eval_cached_count": 0,
+    "prompt_eval_duration": 9170279000,
+    "eval_count": 941,
+    "eval_duration": 16782146000
+  },
+  "raw_content": "{\"news_impact\":{\"bullish_evidence\":[\"[N0]Gassco Troll: Planned Gas production field unavailability (Active) → TTF供给受限，价格上行\",\"[N1]Gassco Troll: Planned Gas production field unavailability (Active) → 未来7.6 mcm/d容量受限，预期价格上行\",\"[N2]Gassco Troll: Planned Other unavailability (Active) → 13.0 mcm/d容量受限，预期价格上行\"],\"bearish_evidence\":[],\"neutralizing_evidence\":[],\"summary\":\"Troll油气田及其他设施因年度维护计划，分别减少7.6 mcm/d和13.0 mcm/d可用产能，形成明显的供给约束，预期对TTF价格形成上行压力。\",\"contextual_news_score\":2,\"direction\":\"up\",\"confidence\":0.6,\"signal_strength\":\"moderate\"},\"close_forecast\":{\"basis\":\"已观察到TTF参考价从85.062 EUR/MWh上升至87.73 EUR/MWh，且两条新闻均为供给受限，符合价格上行逻辑。\",\"summary\":\"在已观察的价格上升与供应约束的双重作用下，预计收盘价相对前一交易日继续上涨。\",\"evidence_status\":\"forecast\",\"direction\":\"up\",\"confidence\":0.7,\"extreme_move_risk\":\"\"},\"analysis\":{\"summary\":\"在本窗口内，Troll油气田及其他设施因年度维护计划导致可用产能分别下降7.6 mcm/d和13.0 mcm/d，形成供给约束，预期对TTF价格产生上行压力。\",\"evidence\":[\"[N0]Gassco Troll: Planned Gas production field unavailability (Active) → TTF供给受限\",\"[N1]Gassco Troll: Planned Gas production field unavailability (Active) → 未来7.6 mcm/d容量受限\",\"[N2]Gassco Troll: Planned Other unavailability (Active) → 13.0 mcm/d容量受限\"],\"negation_or_reversal\":[],\"priced_in_comment\":\"price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格\",\"matched_terms\":[],\"historical_comparisons\":[]},\"risk_flags\":[],\"references\":[{\"id\":\"N0\",\"url\":\"\"},{\"id\":\"N1\",\"url\":\"\"},{\"id\":\"N2\",\"url\":\"\"}],\"missing_fields\":[]}",
+  "raw_content_sha256": "0fabe9b7cb87cbc9262a257754cec71c8823e7a87a2ab6458b8514bc923d82a1",
+  "elapsed_seconds": 32.96208129217848
+}

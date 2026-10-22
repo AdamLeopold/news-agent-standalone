@@ -1,0 +1,188 @@
+{
+  "audit": "fresh_production_manual_epcm_english_full_review_v2_3",
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "audited_at": "2026-10-20T23:22:09.280660+00:00",
+  "verdict": "completed_translation_no_P2_identified_smoke_identifier_boundary_false_positive",
+  "role": "manual_brief_english",
+  "actual_record_path": "reports/repair_2026-10-20/production_manual_english_failed_epcm_v2_3.json",
+  "actual_record_sha256": "e4e55343709b455161103198a1b163f23adad83c2a675a459b8eb09493b851a2",
+  "translation_id": "0e669749-bc43-4161-a4e7-6c096316a904",
+  "analysis_id": "8d1b57ef-422e-48e7-90af-745694e3a298",
+  "actual_api_status": "completed",
+  "source_chinese_record": {
+    "file": "reports/repair_2026-10-20/production_manual_brief_actual_v2_3.json",
+    "sha256": "b4e126c63aa200cce3ac197bb6e513b3244b97713d58b0b0ea9855e6496553a4"
+  },
+  "source_result_hash_independently_recomputed": "f2ecc1a0c0269d9b472041dee5874736562062ecd323ddf14dd3661f7dd8ad5d",
+  "translation_source_hash_matches": true,
+  "english_result_canonical_sha256": "ccdb52fb3e4cec592fbd88493309297a5d82e94bffdec64410587519b6787fe2",
+  "material_known_logic_errors": [],
+  "all_english_body_fields": {
+    "news_impact": {
+      "direction": "flat",
+      "contextual_news_score": 0.0,
+      "confidence": 0.6,
+      "signal_strength": "weak",
+      "summary": "There is no direct supply-demand shock within the current window; the engineering contract signed by LNG Canada is a future construction project and has not caused an immediate supply change; Gassco Troll's planned shutdown announcement is also for a future period and has not affected current supply.",
+      "bullish_evidence": [],
+      "bearish_evidence": [],
+      "neutralizing_evidence": []
+    },
+    "close_forecast": {
+      "confidence": 0.5,
+      "summary": "Lack of a reference price from the previous trading day makes it impossible to determine whether the price has risen or fallen relative to the prior price.",
+      "basis": "Lack of a reference price from the previous trading day makes it impossible to determine whether the price has risen or fallen relative to the prior price.",
+      "extreme_move_risk": "Lack of a benchmark from the previous trading day makes it impossible to assess the risk of extreme price movements.",
+      "evidence_status": "insufficient_evidence",
+      "direction": null
+    },
+    "analysis": {
+      "summary": "New facts: N0 is a future construction contract, N1 and N2 are future shutdown announcements, none of which affect current supply. Net impact: none.",
+      "evidence": [
+        "[N0] LNG Canada signed an EPCM contract → future supply increase (long-term)",
+        "[N1] Troll; plan; announcement of unavailable capacity 7.6mcm/d; future capacity announcement; actual flow unknown; TTF mechanism: future supply constraint",
+        "[N2] Troll; plan; announcement of unavailable capacity 13.0mcm/d; future capacity announcement; actual flow unknown; revised end time: 2026-10-23T06:00:00+0200→2026-10-22T06:00:00+0200; TTF mechanism: future supply constraint"
+      ],
+      "negation_or_reversal": [],
+      "priced_in_comment": "price_reference: No comparable price reaction before and after the announcement was provided, so it cannot be confirmed whether the news has been priced in.",
+      "matched_terms": [],
+      "historical_comparisons": []
+    },
+    "risk_flags": [
+      "Manual input is only for conditional scenario analysis; the facts have not yet been independently verified by this system.",
+      "Missing available market data from the previous trading day; the closing forecast is driven solely by news evidence.",
+      "The market has not yet been verified as ICE official daily settlement, so it does not participate in official settlement accuracy scoring.",
+      "The price type has not yet been verified as ICE official daily settlement and is not used for official settlement scoring.",
+      "The most recent price is not from the last complete trading day, creating a market gap.",
+      "The news triggering the current window was released in an earlier settlement window; this is known background as of the analysis point; the original report should not be repeated as a new shock for this window and the revised content must be checked against what has already been priced in.",
+      "The model's grasp has not been statistically calibrated and does not represent verified accuracy.",
+      "Source gdelt: recent collection failed; error pending retry"
+    ],
+    "references": [
+      {
+        "id": "manual-802adfed-e58b-4862-821f-21196c4cf4d8",
+        "url": "",
+        "title": "LNG Canada entrusts Técnicas Reunidas with €200M+ EPCM deal"
+      },
+      {
+        "id": "90bfbf6adb1183517cbc00ca",
+        "url": "https://umm.gassco.no/details?id=f1f667ff-1ee3-45f2-bedf-7eed367ea614",
+        "title": "Gassco Troll: Planned Gas production field unavailability (Active)"
+      },
+      {
+        "id": "a21b1cffbd1454613a5d0793",
+        "url": "https://umm.gassco.no/details?id=345ca395-a74a-4c9d-9c6c-abf24a16aaf8",
+        "title": "Gassco Troll: Planned Other unavailability (Active)"
+      }
+    ],
+    "missing_fields": [
+      "independent_news_verification",
+      "current_news.source_url",
+      "previous_contract_price",
+      "settlement_verification",
+      "confidence_calibration",
+      "source_coverage:gdelt"
+    ],
+    "source_fact_checks": {
+      "fact_contract_version": "operator-facts-2.2",
+      "operator_notices": [
+        {
+          "id": "N1",
+          "facility": "Troll",
+          "facility_type": "气田/生产设施",
+          "notice_type": "计划",
+          "unavailable_capacity": "7.6",
+          "period_utc": [
+            "2026-10-22T04:00Z",
+            "2026-10-23T04:00Z"
+          ],
+          "state_description": "未来公告",
+          "cause_original": "Yearly maintenance"
+        },
+        {
+          "id": "N2",
+          "facility": "Troll",
+          "facility_type": "类别未给",
+          "notice_type": "计划",
+          "unavailable_capacity": "13.0",
+          "period_utc": [
+            "2026-10-21T04:00Z",
+            "2026-10-22T04:00Z"
+          ],
+          "state_description": "未来公告",
+          "cause_original": "Yearly maintenance"
+        }
+      ],
+      "capacity_scope": "公告不可用容量，非实际流量计量",
+      "pricing_observation": {
+        "observed_at": "2026-10-20T20:59:00+00:00",
+        "available_at": "2026-10-20T21:09:54.498786+00:00",
+        "clock_roles": {
+          "observed_at": "报价发生时刻",
+          "available_at": "本机获知时刻；不是报价发生时刻"
+        },
+        "current_news_timing": {
+          "id": "N0",
+          "publication_time": "2026-10-20T13:11:12+00:00",
+          "quote_relation": "at_or_after_publication",
+          "quote_role": "已观察市场基准；单个报价不证明公告反应"
+        },
+        "reaction_evidence_available": false,
+        "pricing_status": "无法确认是否已计价；不是尚未计价或价格无反应"
+      },
+      "non_overlapping_notice_ids": [
+        [
+          "N1",
+          "N2"
+        ]
+      ]
+    }
+  },
+  "checks": {
+    "identity": "Completed API translation is bound to the exact completed Chinese EPCMbrief. Filenamefailed refers to smoke result, not API translationstate.",
+    "contract_roles": "Engineeringcontract signed by LNGCanada retains correct contractingrole without reversing the serviceaward recipient.",
+    "directions_facts_references": "newsflat0/confidence.6 and closeNone/insufficient_evidence preserved; N0/N1/N2, capacity7.6/13.0, endtimeOct23→Oct22, source references/dates unchanged. No20.6sum/currentactualflow claim introduced.",
+    "english_prose": "All narrative outside preservedmetadata/sourcefacts/originalreferences is English; modelgrasp phrasing is awkward but does not turnconfidence intoaccuracy.",
+    "price_anchor": "Previous tradingday reference remains missing; no older comparison or flatclose imputed. Pricingunknown/missingreaction preserved.",
+    "scope": "No immediate physical change remains source-scoped. Netimpactnone inherits the Chinese explanation limit about expectations, rather than proving no futurepricingeffect."
+  },
+  "smoke_false_positive": {
+    "field": "analysis.summary",
+    "source": "新增事实：N0为未来建设合同，N1、N2为未来停产公告，均不影响当前供给。净影响：无。",
+    "english": "New facts: N0 is a future construction contract, N1 and N2 are future shutdown announcements, none of which affect current supply. Net impact: none.",
+    "source_old_PROTECTED_tokens": [
+      "0",
+      "N1",
+      "2"
+    ],
+    "english_old_PROTECTED_tokens": [
+      "N0",
+      "N1",
+      "N2"
+    ],
+    "reason": "Unicodeword-boundary treats Chinese为 as wordcharacter, soN0为 andN2为 do not match standaloneN-identifiers; numericbranches match0 and2 instead. N1 beforeChinese punctuation、 alreadymatchesN1. Legal EnglishN0is/N1andN2are matches wholeN0/N1/N2. Actual identifiers are unchanged; tokenCounter differs because comparatorboundary handling.",
+    "fix_scope": "Consistent ASCIIidentifier boundaries on both sides; keep number/date/citation evidence preservation strict. A smokecomparator fix must not relabel old faileddetail as success."
+  },
+  "inherited_qualifications": [
+    {
+      "severity": "P3",
+      "id": "expectations_and_revision_explanation_limit",
+      "assessment": "Chinese EPCMbrief no-currentphysicalchange judgement is scoped, but futureexpectations/N2marginalrelief/N1laterconstraint netting are not fullyexplained. Faithful translation does not empirically validateflat."
+    }
+  ],
+  "source_chinese_full_review": {
+    "file": "reports/repair_2026-10-20/independent_production_manual_brief_review_v2_3.json",
+    "sha256": "ff7da581565250bbcde4934ae227988c9b96c19a863c114e416c34503c727526"
+  },
+  "no_model_calls_by_reviewer": true,
+  "no_network_calls": true,
+  "no_database_access": true,
+  "no_tests_run": true,
+  "no_core_edits": true,
+  "limits": [
+    "OnlymanualbriefEnglish; faileddetailEnglish absent.",
+    "Differentarticle success does not convert either wellfailure tosuccess.",
+    "Originalsmoke outcome remainsfailed; correctedcheck/newsmoke is separateevidence."
+  ]
+}

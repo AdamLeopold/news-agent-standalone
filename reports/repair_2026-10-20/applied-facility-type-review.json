@@ -1,0 +1,14 @@
+{
+  "status": "applied",
+  "canonical_analyses_modified": false,
+  "reviews": [
+    {
+      "analysis_id": "d2ef1250-6ed3-4a68-9396-e6ed4addbfb3",
+      "affected_parts": [
+        "brief"
+      ],
+      "protected_hashes_match": true,
+      "review_id": "facility-type-d2ef1250-6ed3-4a68-9396-e6ed4addbfb3-brief-v1"
+    }
+  ]
+}

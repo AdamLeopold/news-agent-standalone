@@ -1,0 +1,184 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "audited_at": "2026-10-21T01:31:48.473793+00:00",
+  "status": "finite_final_source_audit_passed",
+  "source_hashes": {
+    "analysis.py": "28f186ea7f11453ec42737fd82a71b47b3f29d094121911a4e12813c93d3b1b9",
+    "semantics.py": "932f7dd1fb44f8625685cfa0978c9294bf2c9d8817fbf71362a9813449d7edb5",
+    "prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d"
+  },
+  "comparison_semantics_sha256": "d739882a6d6c7e38432f5d4a46f292a6a7b4e63987a3d96095b4feb5ac9982e2",
+  "independent_controls": [
+    {
+      "kind": "paired_ordinary_source_risk_input",
+      "text": "当前供应风险降低，实际流量未知。",
+      "old_mechanism_candidates": [
+        {
+          "mechanism": "supply_decrease",
+          "pressure": "up",
+          "conditional": false,
+          "quoted_fact": "当前供应风险降低，实际流量未知",
+          "evidence_kind": "actual_flow"
+        }
+      ],
+      "new_mechanism_candidates": null,
+      "raw_facts_retained": true,
+      "source_context_unchanged": true,
+      "passed": true
+    },
+    {
+      "kind": "paired_ordinary_source_risk_input",
+      "text": "当前供应风险增加，实际流量未知。",
+      "old_mechanism_candidates": [
+        {
+          "mechanism": "supply_increase",
+          "pressure": "down",
+          "conditional": false,
+          "quoted_fact": "当前供应风险增加，实际流量未知",
+          "evidence_kind": "actual_flow"
+        }
+      ],
+      "new_mechanism_candidates": null,
+      "raw_facts_retained": true,
+      "source_context_unchanged": true,
+      "passed": true
+    },
+    {
+      "kind": "paired_ordinary_source_risk_input",
+      "text": "Current supply risk is lower; actual flow is unknown.",
+      "old_mechanism_candidates": [
+        {
+          "mechanism": "supply_increase",
+          "pressure": "down",
+          "conditional": false,
+          "quoted_fact": "Current supply risk is lower",
+          "evidence_kind": "reported_fact"
+        },
+        {
+          "mechanism": "supply_decrease",
+          "pressure": "up",
+          "conditional": false,
+          "quoted_fact": "Current supply risk is lower",
+          "evidence_kind": "reported_fact"
+        }
+      ],
+      "new_mechanism_candidates": null,
+      "raw_facts_retained": true,
+      "source_context_unchanged": true,
+      "passed": true
+    },
+    {
+      "kind": "paired_ordinary_source_risk_input",
+      "text": "Current supply risks increase; actual flows are unknown.",
+      "old_mechanism_candidates": [
+        {
+          "mechanism": "supply_increase",
+          "pressure": "down",
+          "conditional": false,
+          "quoted_fact": "Current supply risks increase",
+          "evidence_kind": "reported_fact"
+        }
+      ],
+      "new_mechanism_candidates": null,
+      "raw_facts_retained": true,
+      "source_context_unchanged": true,
+      "passed": true
+    },
+    {
+      "kind": "actual_flow_preserved",
+      "text": "风险导致实际供气减少40mcm/d。",
+      "signals": [
+        {
+          "mechanism": "supply_decrease",
+          "pressure": "up",
+          "conditional": false,
+          "quoted_fact": "风险导致实际供气减少40mcm/d",
+          "evidence_kind": "actual_flow",
+          "magnitude_mcm_d": 40.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "kind": "actual_flow_preserved",
+      "text": "供应风险降低，但欧洲实际供气减少40mcm/d。",
+      "signals": [
+        {
+          "mechanism": "supply_decrease",
+          "pressure": "up",
+          "conditional": false,
+          "quoted_fact": "供应风险降低，但欧洲实际供气减少40mcm/d",
+          "evidence_kind": "actual_flow",
+          "magnitude_mcm_d": 40.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "kind": "actual_flow_preserved",
+      "text": "供应风险上升，但欧洲实际供气增加40mcm/d。",
+      "signals": [
+        {
+          "mechanism": "supply_increase",
+          "pressure": "down",
+          "conditional": false,
+          "quoted_fact": "供应风险上升，但欧洲实际供气增加40mcm/d",
+          "evidence_kind": "actual_flow",
+          "magnitude_mcm_d": 40.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "kind": "actual_flow_preserved",
+      "text": "Current supply risks decline, but confirmed actual flows fell by 40mcm/d.",
+      "signals": [
+        {
+          "mechanism": "supply_decrease",
+          "pressure": "up",
+          "conditional": false,
+          "quoted_fact": "Current supply risks decline, but confirmed actual flows fell by 40mcm/d.",
+          "evidence_kind": "actual_flow",
+          "magnitude_mcm_d": 40.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "kind": "explicit_source_correct_risk_bucket_full_collector",
+      "source": "当前供应风险降低，实际流量未知。",
+      "field": "bearish_evidence",
+      "errors": [],
+      "passed": true
+    },
+    {
+      "kind": "explicit_source_correct_risk_bucket_full_collector",
+      "source": "当前供应风险上升，实际流量未知。",
+      "field": "bullish_evidence",
+      "errors": [],
+      "passed": true
+    }
+  ],
+  "focused_tests": {
+    "passed": 59,
+    "elapsed_seconds": 0.95,
+    "junit_path": "reports/repair_2026-10-20/independent_final_risk_anchor_source_tests_v2_3.xml",
+    "junit_sha256": "4435bce25b96ad0eaab07a750cda6a94ddfc3a7513126085983a138b46e4840c"
+  },
+  "verdict": "no_material_issue_identified_in_requested_source_risk_polarity_modal_and_anchor_boundaries",
+  "supersedes_clearance_limits_of": {
+    "source_positive_false_positive_review": "reports/repair_2026-10-20/independent_risk_source_positive_scratch_correction_v2_3.json",
+    "risk_countermechanism_review": "reports/repair_2026-10-20/independent_risk_polarity_scratch_countermechanism_review_v2_3.json"
+  },
+  "findings": [
+    "Shared risk object mask removes false physical supply increase/decrease candidates from ordinary-news prepared model inputs, preserves exact raw source facts and distinct actual±40 flow signals. It does not insert new net-direction source labels.",
+    "Source explicit risk reduction/bearish and increase/bullish now pass full collector. No risk-as-flow source reversal remains in reviewed positives.",
+    "59 focused controls include known false risk buckets, source-backed mixed counterfacts, future forecast not upgraded to actual demand, oldanchorlegal wrongnull rejection, missing/stale/nonmaterial/realcitedconflict positives."
+  ],
+  "limits": [
+    "This shared input correction supersedes older claims that all source function ASTs remain equal. Official full20 request-path replay must determine actual affected cases; no blanket old-result equivalence.",
+    "No model/API/DB calls by reviewer; actual failures remain failed and previous acceptedP2 are not retroactively upgraded.",
+    "Fresh affected briefs/detail and real production completeE2E still required before release."
+  ]
+}

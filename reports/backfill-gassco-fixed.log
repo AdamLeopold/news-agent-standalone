@@ -1,0 +1,17 @@
+{
+  "sources": [
+    {
+      "source": "gassco",
+      "status": "partial",
+      "seen": 1079,
+      "created": 979,
+      "revised": 0,
+      "errors": [],
+      "last_error": null
+    }
+  ],
+  "total_created": 979,
+  "historical": true,
+  "finished_at": "2026-10-14T03:56:44.996868+00:00"
+}
+Coverage saved; 3959 total public-source news records.

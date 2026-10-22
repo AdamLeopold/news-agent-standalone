@@ -892,3 +892,6 @@ button:not(:disabled):active, .button:not(:disabled):active {transform: scale(.9
   .local-chip {display: none;}
 }
 @media (prefers-reduced-motion: reduce) {*, *::before, *::after {animation: none !important; transition: none !important; scroll-behavior: auto !important;}}
+.analysis-version{margin-left:auto;border:1px solid var(--border);border-radius:999px;padding:2px 8px;font-size:10px;letter-spacing:.08em;white-space:nowrap;color:var(--muted)}
+.forecast-lane[data-direction="insufficient"] .forecast-direction{font-size:16px;line-height:1.5;letter-spacing:0}
+.forecast-no-outlook{font-size:40px;opacity:.35;font-weight:300}

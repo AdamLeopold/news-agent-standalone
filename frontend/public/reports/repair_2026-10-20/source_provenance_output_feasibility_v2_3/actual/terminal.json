@@ -1,0 +1,20 @@
+{
+  "contexts": [
+    {
+      "case": "ninth_manual",
+      "status": "completed_pending_independent_prose_review",
+      "actual_requests": 2,
+      "result_file": ".runtime/source-provenance-pilot-final/actual-frozen-two-contexts-1/ninth_manual/result.json"
+    },
+    {
+      "case": "ninth_current",
+      "status": "failed",
+      "actual_requests": 2,
+      "result_file": ".runtime/source-provenance-pilot-final/actual-frozen-two-contexts-1/ninth_current/result.json"
+    }
+  ],
+  "actual_model_request_count": 4,
+  "independent_review_pending": true,
+  "no_production_adoption": true,
+  "no_database_or_job_writes": true
+}

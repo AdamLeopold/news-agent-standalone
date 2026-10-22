@@ -1,0 +1,79 @@
+{
+  "reviewed_at": "2026-10-22T17:04:42.998230+00:00",
+  "reviewer": "structured_review agent, read-only actual output auditor",
+  "scope": "Final2.4.5 real manual API terminal source/input, Chinese brief/detail and English brief/detail; no new model/service/DB/source action.",
+  "harness_report": "reports/structured_v2_4/api_manual_segment_2_4_5.json",
+  "harness_sha256": "e168665a9cac9fed3915403df06d90b12aa8aec501620cdbb88d23bb21332954",
+  "analysis_id": "145397f8-d82c-4547-8e83-6c9dcbcc895e",
+  "core_sha256": "28f75f146687b311ab4c2ae464c86512ca3ff61f14de34f7954cf1a321f465fc",
+  "overall": "Manual segment passed with no confirmed P1/P2 source, economic-sign, temporal or bilingual decision inconsistency; retain an actual P3 fine-role classification error. This is not whole fresh-news workflow acceptance.",
+  "segment_completed": true,
+  "harness_overall_status": "partial",
+  "binding_errors": [],
+  "catalog_sha256": "f2dbc2c7e3002b5d083cbcf557d711db18006e5ff01ec8fc709af8a961fbe9ba",
+  "typed_plan_sha256": "d494600aeb0c9f949d9e365f799f19cf669d7d0578f9fbb0abaf73d055ae0ac7",
+  "terminal_artifacts": [
+    {
+      "artifact": "reports/structured_v2_4/api_manual_segment_2_4_5_artifacts/manual_brief_actual.json",
+      "sha256": "aad3068d42fb1f53c000df5211beaade7530a86855558511a528fd6b73a616b8",
+      "status": "completed",
+      "detail_status": "not_requested",
+      "same_catalog_and_plan": true,
+      "same_directions": true,
+      "model_calls": 3,
+      "english_cjk_fields": []
+    },
+    {
+      "artifact": "reports/structured_v2_4/api_manual_segment_2_4_5_artifacts/manual_detail_actual.json",
+      "sha256": "20fd8ad92c623db4b9e1cf4e939b7525aa527a52d582309865d738cc150df1a4",
+      "status": "completed",
+      "detail_status": "completed",
+      "same_catalog_and_plan": true,
+      "same_directions": true,
+      "model_calls": 0,
+      "english_cjk_fields": []
+    },
+    {
+      "artifact": "reports/structured_v2_4/api_manual_segment_2_4_5_artifacts/manual_english_brief_actual.json",
+      "sha256": "32a0ba528f303079051d1045f2e93bfce979b9efd0b186822571f24be1f9b102",
+      "status": "completed",
+      "detail_status": null,
+      "same_catalog_and_plan": true,
+      "same_directions": true,
+      "model_calls": 0,
+      "english_cjk_fields": []
+    },
+    {
+      "artifact": "reports/structured_v2_4/api_manual_segment_2_4_5_artifacts/manual_english_detail_actual.json",
+      "sha256": "816fc8e076ecf5420ff22cf1caa3c64aa11a611d4625fa5cf689a43c3acae98f",
+      "status": "completed",
+      "detail_status": null,
+      "same_catalog_and_plan": true,
+      "same_directions": true,
+      "model_calls": 0,
+      "english_cjk_fields": []
+    }
+  ],
+  "semantic_findings": [
+    "The SPA is a commercial contract, not extra current gas output or proof of final-use consumption growth.",
+    "The full selected Sabine Pass paragraph supports future LNG liquefaction expansion. Expected20mtpa total/over6mtpa phase1 are not asserted as realized current production. The fixed economic sign is downside for future supply.",
+    "The real source publication13:00Z precedes the current October23 window starting15:15Z. This manual submission includes no verified new publisher revision lineage, so old facts remain background rather than a fresh current-window shock.",
+    "The missing legal October22 previous-day anchor leaves close=null; the existing October21 price is not silently used as yesterday close.",
+    "Brief/detail and English share the original plan, labels, quantities and evidence references. The actual English analytical fields contain no Chinese, and derived records add zero model inference calls."
+  ],
+  "p3_findings": [
+    {
+      "fact_id": "F1",
+      "issue": "Sabine Pass liquefaction expansion is tagged upstream; the precise role is lng_export. region_scope=unspecified is coarser than its explicit LNG chain.",
+      "severity_basis": "The actual prior-window fact correctly remains background by publication timing. Separately, the final2.4.5 conditional future-supply contract opens expectation/longer_term for a nonhistorical future_supply with this same role/region combination; thus the known role residual no longer hard-vetoes a source-supported prospective mechanism. The renderer does not claim European local gas extraction, and economic future-supply sign remains correct.",
+      "retention": "Original model metadata/output remain unchanged; no role substitution, repeated generation to obtain a desired tag or new nonzero requirement."
+    }
+  ],
+  "evidence_boundary": [
+    "The reused real Cheniere source is not synthetic. Its manual analysis is new, but its publication is not a fresh discovery in the current window.",
+    "The separate positive source-revision fixture uses constructed version history and has its own explicit acceptance boundary; it does not replace this real manual result.",
+    "Harness17stages report SSE/reconnection, exports, source-byte stability and old-record preservation. This reviewer read saved evidence rather than independently reopening endpoints.",
+    "A source-triggered live/automatic English segment, final public deployment and UI verification remain separate.",
+    "Price remains reference; no official settlement accuracy or verified model-performance score is claimed."
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": "ttf-physical-unit-public-fixture-review-v1",
+  "created_at": "2026-10-21T02:24:28.646483+00:00",
+  "scope": "Pure read-only fixture privacy check and sync dry-run; no file publication, Git, database, API, model or service actions.",
+  "fixture": {
+    "file": "tests/fixtures/fifth_production_scopes_v2_3.json",
+    "sha256": "e14fb38d9391aa777971c0f01f75265905c143b84e5347f92577e857d36d57bb"
+  },
+  "fixture_json_keys_recursively_checked": 2621,
+  "blocked_credential_thinking_local_path_keys": 0,
+  "raw_string_payloads_are_json_only": true,
+  "dry_run": {
+    "file": ".runtime/fifth-production-scope-proposal/public-evidence-dry-run.stdout.log",
+    "sha256": "19461d86b9f30676efcf76c520efea185f714fe9f5b3b9f56d8d744114d269d6"
+  },
+  "dry_run_summary": {
+    "status": "validated_dry_run",
+    "source_files": 136,
+    "sanitized_evidence_files": 683,
+    "total_file_writes": 2188,
+    "blocked_keys_remaining": 0,
+    "local_paths_or_credentials_remaining": 0,
+    "originals_modified": false
+  },
+  "dry_run_total_file_writes_is_plan_only": true,
+  "initial_dry_run_failure_retained": [
+    {
+      "file": ".runtime/fifth-production-scope-proposal/public-dry-run-empty-stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": ".runtime/fifth-production-scope-proposal/public-dry-run-initial.stderr.log",
+      "sha256": "9e90cc922bbd2266e7dbf99a8117a1f5bfe1e7e728963789b855d14c98df042e"
+    }
+  ],
+  "initial_failure_reason": "Initial stdout .json was caught by the selected report glob before content existed. Its original empty bytes and error log are retained privately in .runtime; no empty report JSON remains. Dry-run rerun stdout/stderr are private non-selected logs; no sync writes occurred.",
+  "source_control_proof": {
+    "file": "reports/repair_2026-10-20/physical_unit_scoped_source_controls_v2_3.json",
+    "sha256": "769afbd5d1d06c291bff8b127c8816a1d9074090f2ae7158f2e3381e95df280b"
+  }
+}

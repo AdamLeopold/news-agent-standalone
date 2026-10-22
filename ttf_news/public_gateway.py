@@ -5,6 +5,7 @@ proxy. Cross-origin submissions and bounded model queues are handled here so
 the seven-day local service does not need a restart for Pages deployment.
 """
 import asyncio
+import anyio
 from collections import deque
 from contextlib import asynccontextmanager
 import json
@@ -109,27 +110,54 @@ def create_gateway(*, transport=None, queue_check=queue_available, allowed_origi
             headers['last-event-id'] = request.headers['last-event-id'][:32]
         if is_stream:
             streams += 1
+        response = None
+        released = False
+
+        async def close_stream():
+            nonlocal streams, released
+            if not is_stream or released:
+                return
+            released = True
+            # A disconnected request must still finish closing its upstream.
+            with anyio.CancelScope(shield=True):
+                try:
+                    if response is not None:
+                        await response.aclose()
+                finally:
+                    streams -= 1
+
         try:
             client = app.state.client
             req = client.build_request(request.method, route, params=request.query_params,
                                        content=bytes(body), headers=headers)
             response = await client.send(req, stream=True)
-        except httpx.HTTPError:
-            if is_stream:
-                streams -= 1
-            return JSONResponse({'detail': 'Local TTF backend is temporarily unavailable'}, status_code=503)
+        except BaseException as exc:
+            await close_stream()
+            if isinstance(exc, httpx.HTTPError):
+                return JSONResponse({'detail': 'Local TTF backend is temporarily unavailable'}, status_code=503)
+            raise
         response_headers = {k: v for k, v in response.headers.items()
                             if k.lower() in ('content-type', 'content-disposition', 'cache-control', 'x-accel-buffering')}
         response_headers['X-Content-Type-Options'] = 'nosniff'
         if is_stream:
-            async def close_stream():
-                nonlocal streams
+            async def stream_body():
                 try:
-                    await response.aclose()
+                    async for part in response.aiter_bytes():
+                        yield part
                 finally:
-                    streams -= 1
-            return StreamingResponse(response.aiter_bytes(), status_code=response.status_code,
-                                     headers=response_headers, background=BackgroundTask(close_stream))
+                    await close_stream()
+
+            class ClosingStreamingResponse(StreamingResponse):
+                async def __call__(self, scope, receive, send):
+                    # Cancellation may happen in ASGI send(), while the body
+                    # iterator is suspended at yield rather than awaiting I/O.
+                    try:
+                        await super().__call__(scope, receive, send)
+                    finally:
+                        await close_stream()
+
+            return ClosingStreamingResponse(stream_body(), status_code=response.status_code,
+                                            headers=response_headers, background=BackgroundTask(close_stream))
         try:
             content = await response.aread()
         finally:

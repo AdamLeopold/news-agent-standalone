@@ -1,0 +1,29 @@
+{
+  "created_at": "2026-10-21T02:30:53.517504+00:00",
+  "status": "passed",
+  "scope": "Authorized evidence-slot registration self-tests and physical-unit publication identity focused logs only; no copy/sync. Log inclusion is not inference success.",
+  "script": "scripts/sync-public-evidence.py",
+  "previous_script_sha256": "fe3e7b09510eba77d85f66c16bc7eb93f57132230c740e47b8904f4fcb82f7b6",
+  "script_sha256": "8d302a471e19a1b09b9164efdfd5ab985ce4629b73cd4312a492b103c6618e30",
+  "added_logs": [
+    {
+      "file": "reports/repair_2026-10-20/evidence-slot-report-self-tests.log",
+      "sha256_at_check": "3a7ec5bd0c4b94358edd2730d105173c3bda9eee9a615b88e5dcab0903ac4207",
+      "explicit_log_allowlist_entry": true
+    },
+    {
+      "file": "reports/repair_2026-10-20/physical-unit-publication-identity-focused-tests.log",
+      "sha256_at_check": "9e35fa6af54498cd9521c0853e0a9b6ff34895e99a28f82efd73801aabef24cc",
+      "explicit_log_allowlist_entry": true
+    }
+  ],
+  "self_tests": {
+    "passed": 23,
+    "failed": 0
+  },
+  "encoded_raw_preservation_logic_changed": false,
+  "sync_executed": false,
+  "model_calls": 0,
+  "database_access": false,
+  "network_calls": 0
+}

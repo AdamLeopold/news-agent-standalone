@@ -1,0 +1,609 @@
+{
+  "scope": "All successful candidate real-article final raw prose present at generation-boundary repair; fixed source facts and internal audit metadata omitted. Historical raw remains untouched.",
+  "record_count": 8,
+  "field_count": 91,
+  "records": [
+    {
+      "record": "candidate-decoder-validation/real_eni.json",
+      "record_sha256": "c592bf4fb10cf8c5f59104a9f0873f85b3b7398254e823710ea9ad207019ea63",
+      "raw_content_sha256": "a897e22330a05d2155b14b97ae3775307b42b1e3c50c9b83841836fa7238f943",
+      "fields": [
+        {
+          "definition": "NewsImpact",
+          "field": "summary",
+          "array_item": false,
+          "text": "本窗口内，Åsgard 与 Nyhamna 的短期停产导致约25 mcm/d 的供应约束，虽占总供给约12 %但足以产生轻微上行压力；与此同时，非洲新项目的潜在供应尚未进入欧洲市场，因而对现价影响有限，整体净效应为轻度看涨。"
+        },
+        {
+          "definition": "NewsImpact",
+          "field": "bullish_evidence",
+          "array_item": true,
+          "text": "[N3] Åsgard unavailability 5.2 mcm/d → TTF供应约束导致价格上行"
+        },
+        {
+          "definition": "NewsImpact",
+          "field": "bullish_evidence",
+          "array_item": true,
+          "text": "[N7] Nyhamna unavailability 19.8 mcm/d → TTF进口容量受限，价格上行"
+        },
+        {
+          "definition": "NewsImpact",
+          "field": "neutralizing_evidence",
+          "array_item": true,
+          "text": "[N0] African gas project → 未来供应增加，可能抵消短期供需紧张"
+        },
+        {
+          "definition": "CloseForecast",
+          "field": "summary",
+          "array_item": false,
+          "text": "基准价格略升，结合本窗口轻度供给约束，目标日结算相对上一交易日略升。"
+        },
+        {
+          "definition": "CloseForecast",
+          "field": "basis",
+          "array_item": false,
+          "text": "市场基准显示截至 2026‑10‑19 价格仅略升 0.178 €，方向为 flat；但本窗口新增的 Åsgard 与 Nyhamna 供给约束可能推升价格，故预测略向上。"
+        },
+        {
+          "definition": "CloseForecast",
+          "field": "extreme_move_risk",
+          "array_item": false,
+          "text": "若实际流量恢复或新项目供应提前，涨幅可能被压制。"
+        },
+        {
+          "definition": "Analysis",
+          "field": "summary",
+          "array_item": false,
+          "text": "本窗口新增的非洲项目尚未对欧洲供给产生直接影响；Åsgard 与 Nyhamna 的短期停产导致约25 mcm/d 的供应约束，轻微推升 TTF 价格。"
+        },
+        {
+          "definition": "Analysis",
+          "field": "evidence",
+          "array_item": true,
+          "text": "[N3] Åsgard unavailability 5.2 mcm/d → TTF供应约束导致价格上行"
+        },
+        {
+          "definition": "Analysis",
+          "field": "evidence",
+          "array_item": true,
+          "text": "[N7] Nyhamna unavailability 19.8 mcm/d → TTF进口容量受限，价格上行"
+        },
+        {
+          "definition": "Analysis",
+          "field": "evidence",
+          "array_item": true,
+          "text": "[N0] African gas project → 未来供应增加，可能抵消短期供需紧张"
+        },
+        {
+          "definition": "Analysis",
+          "field": "priced_in_comment",
+          "array_item": false,
+          "text": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格"
+        }
+      ]
+    },
+    {
+      "record": "candidate-factchecks-validation/real_eni.json",
+      "record_sha256": "b19b1989e5f4a1d60c069c7d0e1dadd6e748b2c978cb482cd5e4a12a29ebbce0",
+      "raw_content_sha256": "efbbdc01208d35553db0c77cf1e4aca590c21e7fdbf7d5e4f3764ec57e3ed7bc",
+      "fields": [
+        {
+          "definition": "NewsImpact",
+          "field": "summary",
+          "array_item": false,
+          "text": "目前无确认的供需冲击，新增项目尚未进入欧洲市场，整体影响中性。"
+        },
+        {
+          "definition": "CloseForecast",
+          "field": "summary",
+          "array_item": false,
+          "text": "基准价格自前一结算以来仅上涨0.178欧元，未出现显著波动，且无确认的供需冲击，预计今日结算相对前一日仍保持平稳。"
+        },
+        {
+          "definition": "CloseForecast",
+          "field": "basis",
+          "array_item": false,
+          "text": "观察到的基准变动 +0.178，未见确认的供需冲击。"
+        },
+        {
+          "definition": "CloseForecast",
+          "field": "extreme_move_risk",
+          "array_item": false,
+          "text": "无显著风险"
+        },
+        {
+          "definition": "Analysis",
+          "field": "summary",
+          "array_item": false,
+          "text": "新增事实为非计划停产公告已撤销，未确认流量损失；新项目尚未进入欧洲市场；整体净影响中性。"
+        },
+        {
+          "definition": "Analysis",
+          "field": "evidence",
+          "array_item": true,
+          "text": "[N3] Åsgard 5.2 mcm/d 未确认流量 → TTF 供应约束（潜在）"
+        },
+        {
+          "definition": "Analysis",
+          "field": "evidence",
+          "array_item": true,
+          "text": "[N7] Nyhamna 19.8 mcm/d 未确认流量 → TTF 供应约束（潜在）"
+        },
+        {
+          "definition": "Analysis",
+          "field": "evidence",
+          "array_item": true,
+          "text": "[N4] 新发现 5.5 mmbbl → TTF 供应增加（未来）"
+        },
+        {
+          "definition": "Analysis",
+          "field": "priced_in_comment",
+          "array_item": false,
+          "text": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格"
+        }
+      ]
+    },
+    {
+      "record": "candidate-final-validation/real_nyhamna.json",
+      "record_sha256": "17f4d2ac6a753b204252e20cbe6c5508b092225fa22a6a8579349a40d14d11a3",
+      "raw_content_sha256": "2bcfb5bca886d50665f2ab61ded09a4ee8e29013a403e9def0a6ce15dd5447f0",
+      "fields": [
+        {
+          "definition": "NewsImpact",
+          "field": "summary",
+          "array_item": false,
+          "text": "多条活跃的容量约束导致供应受限，推高TTF价格。"
+        },
+        {
+          "definition": "NewsImpact",
+          "field": "bullish_evidence",
+          "array_item": true,
+          "text": "[N0] Gassco Nyhamna: 19.8 mcm/d unavailable → 供应受限，推高TTF"
+        },
+        {
+          "definition": "NewsImpact",
+          "field": "bullish_evidence",
+          "array_item": true,
+          "text": "[N2] Gassco Troll: 6.6 mcm/d unavailable → 供应受限，推高TTF"
+        },
+        {
+          "definition": "NewsImpact",
+          "field": "bullish_evidence",
+          "array_item": true,
+          "text": "[N3] Gassco Åsgard: 5.2 mcm/d unavailable → 供应受限，推高TTF"
+        },
+        {
+          "definition": "CloseForecast",
+          "field": "summary",
+          "array_item": false,
+          "text": "基于持续的容量约束和近期价格上行，预计结算价相对前一日继续上涨。"
+        },
+        {
+          "definition": "CloseForecast",
+          "field": "basis",
+          "array_item": false,
+          "text": "近期价格已上行（+0.628 EUR）且多条活跃容量约束持续供应受限，未见明显反转或抵消因素，预计结算价相对前一日继续上涨。"
+        },
+        {
+          "definition": "CloseForecast",
+          "field": "extreme_move_risk",
+          "array_item": false,
+          "text": ""
+        },
+        {
+          "definition": "Analysis",
+          "field": "summary",
+          "array_item": false,
+          "text": "新增活跃容量约束导致供应受限，净涨压。"
+        },
+        {
+          "definition": "Analysis",
+          "field": "evidence",
+          "array_item": true,
+          "text": "[N0] Gassco Nyhamna: 19.8 mcm/d unavailable → 供应受限"
+        },
+        {
+          "definition": "Analysis",
+          "field": "evidence",
+          "array_item": true,
+          "text": "[N2] Gassco Troll: 6.6 mcm/d unavailable → 供应受限"
+        },
+        {
+          "definition": "Analysis",
+          "field": "evidence",
+          "array_item": true,
+          "text": "[N3] Gassco Åsgard: 5.2 mcm/d unavailable → 供应受限"
+        },
+        {
+          "definition": "Analysis",
+          "field": "priced_in_comment",
+          "array_item": false,
+          "text": "无法确认是否已计入市场，缺乏独立流量数据。"
+        }
+      ]
+    },
+    {
+      "record": "candidate-integrity-validation/real_eni.json",
+      "record_sha256": "1ca17f4186bd961211dfd5a6aeb9bbedb5a0bfb3809faa3dc1fcebf601fa13f0",
+      "raw_content_sha256": "2c8af8f4cf1940da137949bee56fd617916804554fff61aedc174818c19d81b8",
+      "fields": [
+        {
+          "definition": "NewsImpact",
+          "field": "summary",
+          "array_item": false,
+          "text": "新非洲气田项目开启及新发现与合作均为潜在供应增加，但目前无确认供给中断，欧洲传导有限，整体影响偏平。"
+        },
+        {
+          "definition": "NewsImpact",
+          "field": "bullish_evidence",
+          "array_item": true,
+          "text": "[N0] 该项目开启将增加供应 → TTF看涨机制"
+        },
+        {
+          "definition": "NewsImpact",
+          "field": "bullish_evidence",
+          "array_item": true,
+          "text": "[N4] 新发现将提升供应 → TTF看涨机制"
+        },
+        {
+          "definition": "NewsImpact",
+          "field": "bullish_evidence",
+          "array_item": true,
+          "text": "[N11] 合作扩大供应 → TTF看涨机制"
+        },
+        {
+          "definition": "NewsImpact",
+          "field": "neutralizing_evidence",
+          "array_item": true,
+          "text": "[N3] 供给约束未确认流量损失 → TTF中性机制"
+        },
+        {
+          "definition": "NewsImpact",
+          "field": "neutralizing_evidence",
+          "array_item": true,
+          "text": "[N7] 供给约束未确认流量损失 → TTF中性机制"
+        },
+        {
+          "definition": "CloseForecast",
+          "field": "summary",
+          "array_item": false,
+          "text": "基准平稳，弱供应增加预期，目标日结算相对上一交易日保持平稳。"
+        },
+        {
+          "definition": "CloseForecast",
+          "field": "basis",
+          "array_item": false,
+          "text": "市场基准显示同合约参考价格从87.547升至87.725，观察到的涨幅0.178，未出现显著波动；无强烈供给冲击或需求激增，预测目标日结算相对上一交易日略微上涨或持平。"
+        },
+        {
+          "definition": "CloseForecast",
+          "field": "extreme_move_risk",
+          "array_item": false,
+          "text": ""
+        },
+        {
+          "definition": "Analysis",
+          "field": "summary",
+          "array_item": false,
+          "text": "新增事实显示非洲气田项目开启、北海新发现及合作扩张为潜在供应增加，但缺乏即时供给冲击，欧洲传导有限，整体净影响偏平。"
+        },
+        {
+          "definition": "Analysis",
+          "field": "evidence",
+          "array_item": true,
+          "text": "[N0] 该项目开启将增加供应 → TTF看涨机制"
+        },
+        {
+          "definition": "Analysis",
+          "field": "evidence",
+          "array_item": true,
+          "text": "[N4] 新发现将提升供应 → TTF看涨机制"
+        },
+        {
+          "definition": "Analysis",
+          "field": "evidence",
+          "array_item": true,
+          "text": "[N11] 合作扩大供应 → TTF看涨机制"
+        },
+        {
+          "definition": "Analysis",
+          "field": "priced_in_comment",
+          "array_item": false,
+          "text": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格"
+        }
+      ]
+    },
+    {
+      "record": "candidate-parser-validation/real_nyhamna.json",
+      "record_sha256": "717af98e9d41ac84440cf48ca6abcc213207b94934c221de8c512a349ef056a8",
+      "raw_content_sha256": "6a13ebc2675f97586040678cee53b888cca2eb599f381bcce31498d7ce4c945a",
+      "fields": [
+        {
+          "definition": "NewsImpact",
+          "field": "summary",
+          "array_item": false,
+          "text": "Nyhamna与Åsgard的年检导致约25 mcm/d的可用容量下降，形成供应约束，推升TTF价格。"
+        },
+        {
+          "definition": "NewsImpact",
+          "field": "bullish_evidence",
+          "array_item": true,
+          "text": "[N0] Nyhamna年检导致19.8 mcm/d容量缺口 → TTF供给受限"
+        },
+        {
+          "definition": "NewsImpact",
+          "field": "bullish_evidence",
+          "array_item": true,
+          "text": "[N3] Åsgard年检导致5.2 mcm/d容量缺口 → TTF供给受限"
+        },
+        {
+          "definition": "CloseForecast",
+          "field": "summary",
+          "array_item": false,
+          "text": "基于已观察的价格上行与持续的供应约束，目标日结算相对上一交易日同合约价格预计继续上涨。"
+        },
+        {
+          "definition": "CloseForecast",
+          "field": "basis",
+          "array_item": false,
+          "text": "市场基准显示TTF价格已从前一结算上涨0.628点，且无新的看跌事件，现有供应约束持续，预期价格继续上行。"
+        },
+        {
+          "definition": "CloseForecast",
+          "field": "extreme_move_risk",
+          "array_item": false,
+          "text": "无明显反转或强烈抵消证据"
+        },
+        {
+          "definition": "Analysis",
+          "field": "summary",
+          "array_item": false,
+          "text": "新增事实：Nyhamna年检导致19.8 mcm/d容量缺口；Åsgard年检导致5.2 mcm/d缺口；两者合计约25 mcm/d，形成供应约束。净影响为看涨。"
+        },
+        {
+          "definition": "Analysis",
+          "field": "evidence",
+          "array_item": true,
+          "text": "[N0] Nyhamna年检导致19.8 mcm/d容量缺口 → TTF供给受限"
+        },
+        {
+          "definition": "Analysis",
+          "field": "evidence",
+          "array_item": true,
+          "text": "[N3] Åsgard年检导致5.2 mcm/d容量缺口 → TTF供给受限"
+        },
+        {
+          "definition": "Analysis",
+          "field": "priced_in_comment",
+          "array_item": false,
+          "text": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格"
+        },
+        {
+          "definition": "Analysis",
+          "field": "historical_comparisons",
+          "array_item": true,
+          "text": "[E2]历史记录日期2026-10-08，类别为供应中断/复产；公告容量限制不等于已核实流量损失；1d同合约参考价差+2.58欧元/MWh（截止2026-10-09）；3d同合约参考价差+8.37欧元/MWh（截止2026-10-13）；同期价差不能归因于事件；输入未提供可验证的天气及LNG差异，需核对具体供需情景"
+        }
+      ]
+    },
+    {
+      "record": "candidate-release-validation/real_eni.json",
+      "record_sha256": "92b3d939abfcc2777fe7f06d195be404facc331fd2d685f0d0deb9e499f2493e",
+      "raw_content_sha256": "a60988f3846088f16a7f2d4981eba834b74f701fcec79099f198d848477fc82f",
+      "fields": [
+        {
+          "definition": "NewsImpact",
+          "field": "summary",
+          "array_item": false,
+          "text": "两条活跃的供应中断导致TTF供给受限，推高价格。"
+        },
+        {
+          "definition": "NewsImpact",
+          "field": "bullish_evidence",
+          "array_item": true,
+          "text": "[N3] Åsgard unplanned field unavailability → TTF供给受限"
+        },
+        {
+          "definition": "NewsImpact",
+          "field": "bullish_evidence",
+          "array_item": true,
+          "text": "[N7] Nyhamna planned other unavailability → TTF供给受限"
+        },
+        {
+          "definition": "CloseForecast",
+          "field": "summary",
+          "array_item": false,
+          "text": "基于当前供给受限，TTF相对前一结算可能出现轻微上涨。"
+        },
+        {
+          "definition": "CloseForecast",
+          "field": "basis",
+          "array_item": false,
+          "text": "两条活跃供应中断推高供给受限，可能导致价格上行。"
+        },
+        {
+          "definition": "CloseForecast",
+          "field": "extreme_move_risk",
+          "array_item": false,
+          "text": ""
+        },
+        {
+          "definition": "Analysis",
+          "field": "summary",
+          "array_item": false,
+          "text": "新增事实：两条活跃供应中断，净影响偏涨。"
+        },
+        {
+          "definition": "Analysis",
+          "field": "evidence",
+          "array_item": true,
+          "text": "[N3] Åsgard unplanned field unavailability → TTF供给受限"
+        },
+        {
+          "definition": "Analysis",
+          "field": "evidence",
+          "array_item": true,
+          "text": "[N7] Nyhamna planned other unavailability → TTF供给受限"
+        },
+        {
+          "definition": "Analysis",
+          "field": "priced_in_comment",
+          "array_item": false,
+          "text": "未确认已定价"
+        }
+      ]
+    },
+    {
+      "record": "candidate-release-validation/real_nyhamna.json",
+      "record_sha256": "c429a9d65e752820404c33aeff4f3dff50456f049536d0be78f3fe652fccb22e",
+      "raw_content_sha256": "2cf11021504997ac2cf845fa7311f2963a663f9b337543b182a10d5005730b58",
+      "fields": [
+        {
+          "definition": "NewsImpact",
+          "field": "summary",
+          "array_item": false,
+          "text": "Nyhamna 与 Åsgard 的产能受限提升供给压力，Troll 停产被撤销及新发现的油气储量降低供给压力，净影响平衡。"
+        },
+        {
+          "definition": "NewsImpact",
+          "field": "bullish_evidence",
+          "array_item": true,
+          "text": "[N0] Nyhamna 19.8 mcm/d 产能受限 → TTF 供给受压 ↑"
+        },
+        {
+          "definition": "NewsImpact",
+          "field": "bullish_evidence",
+          "array_item": true,
+          "text": "[N3] Åsgard 5.2 mcm/d 产能受限 → TTF 供给受压 ↑"
+        },
+        {
+          "definition": "NewsImpact",
+          "field": "bearish_evidence",
+          "array_item": true,
+          "text": "[N1] Troll 未计划停产被撤销 → 供给风险消除 ↓"
+        },
+        {
+          "definition": "NewsImpact",
+          "field": "bearish_evidence",
+          "array_item": true,
+          "text": "[N4] Vår Energi 与 Equinor 在挪威海发现 5.5 百万桶 → 供给增加 ↓"
+        },
+        {
+          "definition": "CloseForecast",
+          "field": "summary",
+          "array_item": false,
+          "text": "基准价上行，新闻无明显逆转，目标价相对前一日略升。"
+        },
+        {
+          "definition": "CloseForecast",
+          "field": "basis",
+          "array_item": false,
+          "text": "截至 2026‑10‑19 观察到 TTF 参考价从 87.547 €/MWh 上升至 88.175 €/MWh，涨幅 0.628 €。新闻净影响为平衡，未出现强烈逆转信号，预计结算价相对前一日继续小幅上行。"
+        },
+        {
+          "definition": "CloseForecast",
+          "field": "extreme_move_risk",
+          "array_item": false,
+          "text": ""
+        },
+        {
+          "definition": "Analysis",
+          "field": "summary",
+          "array_item": false,
+          "text": "在本窗口内，Nyhamna 与 Åsgard 的产能受限为主要看涨因素；Troll 停产被撤销与新油气发现为看跌因素，二者相互抵消，净影响平衡。"
+        },
+        {
+          "definition": "Analysis",
+          "field": "evidence",
+          "array_item": true,
+          "text": "[N0] Nyhamna 19.8 mcm/d 产能受限 → TTF 供给受压 ↑"
+        },
+        {
+          "definition": "Analysis",
+          "field": "evidence",
+          "array_item": true,
+          "text": "[N3] Åsgard 5.2 mcm/d 产能受限 → TTF 供给受压 ↑"
+        },
+        {
+          "definition": "Analysis",
+          "field": "evidence",
+          "array_item": true,
+          "text": "[N1] Troll 停产被撤销 → 供给风险消除 ↓"
+        },
+        {
+          "definition": "Analysis",
+          "field": "priced_in_comment",
+          "array_item": false,
+          "text": "缺乏独立流量数据，无法确认是否已定价。"
+        }
+      ]
+    },
+    {
+      "record": "candidate-symmetric-validation/real_eni.json",
+      "record_sha256": "498153370fa048e282a21d65ca4321e6306effd8927c73906cec50fd1ae1dd3c",
+      "raw_content_sha256": "5894a1392b1d53965e3006c51d073b693935741b210e9fb3e87c1b82f35e0439",
+      "fields": [
+        {
+          "definition": "NewsImpact",
+          "field": "summary",
+          "array_item": false,
+          "text": "当前窗口内无已确认的供气损失，新增项目未对欧洲市场产生即时影响，整体影响偏中性。"
+        },
+        {
+          "definition": "NewsImpact",
+          "field": "neutralizing_evidence",
+          "array_item": true,
+          "text": "[N3] Åsgard公告5.2 mcm/d容量缺口 → 可能的供应约束（未确认流量损失）"
+        },
+        {
+          "definition": "NewsImpact",
+          "field": "neutralizing_evidence",
+          "array_item": true,
+          "text": "[N7] Nyhamna公告19.8 mcm/d容量缺口 → 可能的供应约束（未确认流量损失）"
+        },
+        {
+          "definition": "CloseForecast",
+          "field": "summary",
+          "array_item": false,
+          "text": "基准价格轻微上升，缺乏强烈供需冲击，目标日结算相对上一交易日预计保持平稳。"
+        },
+        {
+          "definition": "CloseForecast",
+          "field": "basis",
+          "array_item": false,
+          "text": "基准价格从87.547 €→87.725 €，观察到0.178 €的轻微上升，未见强烈新闻驱动，预计与前一结算相对保持平稳。"
+        },
+        {
+          "definition": "CloseForecast",
+          "field": "extreme_move_risk",
+          "array_item": false,
+          "text": ""
+        },
+        {
+          "definition": "Analysis",
+          "field": "summary",
+          "array_item": false,
+          "text": "新增事实：N0宣布非洲气田启动，未对欧洲供给产生即时影响；N3、N7公告容量缺口但未确认流量损失；其他新闻无直接影响。净影响中性。"
+        },
+        {
+          "definition": "Analysis",
+          "field": "evidence",
+          "array_item": true,
+          "text": "[N3] Åsgard公告5.2 mcm/d容量缺口 → 可能的供应约束（未确认流量损失）"
+        },
+        {
+          "definition": "Analysis",
+          "field": "evidence",
+          "array_item": true,
+          "text": "[N7] Nyhamna公告19.8 mcm/d容量缺口 → 可能的供应约束（未确认流量损失）"
+        },
+        {
+          "definition": "Analysis",
+          "field": "priced_in_comment",
+          "array_item": false,
+          "text": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格"
+        }
+      ]
+    }
+  ]
+}

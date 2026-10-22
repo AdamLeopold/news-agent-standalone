@@ -1,0 +1,10 @@
+{
+  "approved_plan_sha256": "dc6875635339a6d462879ca62030956ce213e4efcbe2874f47aaa33dd8679c62",
+  "expected_paused_backend_pid": 49015,
+  "model_calls": 0,
+  "contexts": [
+    "ninth_manual",
+    "ninth_current"
+  ],
+  "production_adoption": false
+}

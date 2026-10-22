@@ -1,0 +1,109 @@
+{
+  "status": "failed",
+  "error_type": "AnalysisError",
+  "error": "模型JSON两次校验失败，未生成方向：[{\"type\":\"value_error\",\"loc\":[\"news_impact\"],\"msg\":\"Value error, 看涨结论必须有具体看涨证据；不能只填方向\",\"ctx\":{\"error\":\"看涨结论必须有具体看涨证据；不能只填方向\"}}]",
+  "audit": {
+    "prompt_version": "ttf-news-standalone-2.3",
+    "configured_reasoning": "medium",
+    "reasoning": "medium",
+    "semantic_high_retry_enabled": false,
+    "semantic_high_scope": "operator_notice",
+    "semantic_high_scope_eligible": true,
+    "semantic_high_eligible": false,
+    "semantic_independent_regeneration": false,
+    "model_calls": [
+      {
+        "num_ctx": 16384,
+        "num_predict": 3072,
+        "input_token_ceiling": 12800,
+        "input_token_estimate": 8937,
+        "retry_policy": "disabled",
+        "semantic_independent_regeneration": false,
+        "semantic_high_scope": "operator_notice",
+        "semantic_high_scope_eligible": true,
+        "semantic_high_eligible": false,
+        "system_prompt_sha256": "7d790987cb54ec5e109c2ee8f0c2803596c73bf51d7866e87c91bd3122436cba",
+        "response_schema_sha256": "76c560a46041512dfbae68d4fc5b241b7b8402a69bddf5441d30d4e1091fb472",
+        "context_sha256": "09a204652ca8d63fa664a4b697205b0128c5ef787cdbb0a8d669decba38f31e4",
+        "prompt_eval_count": 8884,
+        "eval_count": 1136,
+        "done_reason": "stop",
+        "total_duration_ns": 29800426583,
+        "raw_content": "{\"news_impact\":{\"bullish_evidence\":[\"[N0] 7.6 mcm/d 计划容量损失 → TTF 供给约束压力上升\",\"[N2] 13.0 mcm/d 计划容量损失 → TTF 供给约束压力上升\"],\"bearish_evidence\":[],\"neutralizing_evidence\":[],\"summary\":\"2026‑10‑20公布的两条计划维护公告分别导致Troll气田和其他设施的可用容量分别减少7.6 mcm/d和13.0 mcm/d，属于未来或当前公告的容量约束，尚未产生实际流量损失。市场基准价已从85.062 EUR/MWh升至87.73 EUR/MWh，但缺乏直接的价格反应证据，故对TTF价格的净影响被视为平稳。\",\"contextual_news_score\":0,\"direction\":\"flat\",\"confidence\":0.5,\"signal_strength\":\"weak\"},\"close_forecast\":{\"basis\":\"市场基准价已上涨2.668 EUR/MWh，且无明显新闻冲击导致价格下跌，预计收盘价相对前一交易日继续上涨。\",\"summary\":\"基于已观察到的基准上升且缺乏强烈的供给中断或需求激增新闻，收盘价相对前一交易日上涨的可能性较高。\",\"evidence_status\":\"forecast\",\"direction\":\"up\",\"confidence\":0.6,\"extreme_move_risk\":\"无已知极端风险因素\"},\"analysis\":{\"summary\":\"两条计划维护公告导致Troll设施可用容量下降，但未产生实际流量损失，市场基准已上涨，整体对TTF价格的净影响为平稳。\",\"evidence\":[\"[N0] 7.6 mcm/d 计划容量损失 → TTF 供给约束压力上升\",\"[N2] 13.0 mcm/d 计划容量损失 → TTF 供给约束压力上升\"],\"negation_or_reversal\":[],\"priced_in_comment\":\"price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格\",\"matched_terms\":[],\"historical_comparisons\":[]},\"risk_flags\":[],\"references\":[{\"id\":\"N0\",\"url\":\"\"},{\"id\":\"N2\",\"url\":\"\"}],\"missing_fields\":[]}",
+        "reference_resolution": {
+          "raw_reference_ids": [
+            "N0",
+            "N2"
+          ],
+          "added_by_backend": [],
+          "input_provenance": {}
+        },
+        "validation_stage": "fact_or_mechanism",
+        "full_validation_error": "news_impact.summary:Gassco未来维护公告不能写成当前实际停供或流量损失；应写未来容量风险并保留起止时间",
+        "validation_errors": [
+          "news_impact.summary:Gassco未来维护公告不能写成当前实际停供或流量损失；应写未来容量风险并保留起止时间",
+          "news_impact.summary:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景",
+          "news_impact.bullish_evidence[0]:证据栏与供需机制相反；请移动/重算证据，不能把供应增加放作看涨或供应减少放作看跌"
+        ],
+        "validation_error": "news_impact.summary:Gassco未来维护公告不能写成当前实际停供或流量损失；应写未来容量风险并保留起止时间；news_impact.summary:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景；news_impact.bullish_evidence[0]:证据栏与供需机制相反；请移动/重算证据，不能把供应增加放作看涨或供应减少放作看跌",
+        "request_reasoning": "medium"
+      },
+      {
+        "num_ctx": 16384,
+        "num_predict": 3072,
+        "input_token_ceiling": 12800,
+        "input_token_estimate": 9172,
+        "retry_policy": "disabled",
+        "semantic_independent_regeneration": false,
+        "semantic_high_scope": "operator_notice",
+        "semantic_high_scope_eligible": true,
+        "semantic_high_eligible": false,
+        "system_prompt_sha256": "f487c98609d66a96d9a49858e90fe3a8915c5d6b41fe153512c3c2d023c9903d",
+        "response_schema_sha256": "76c560a46041512dfbae68d4fc5b241b7b8402a69bddf5441d30d4e1091fb472",
+        "context_sha256": "85b0b4625bf99a5536f30ec5ea0425f49c980b04d55507d31471edf492f3199f",
+        "semantic_source_only_feedback": true,
+        "repair_draft": {
+          "version": "ttf-untrusted-repair-draft-1",
+          "is_evidence": false,
+          "included": false,
+          "reason": "fact_or_mechanism_source_only_feedback",
+          "previous_raw_sha256": "048370bdb74c3c23146b2f8268398dbaa1d7137cf5b9eb9bfa71dfe9146d9527"
+        },
+        "repair_feedback": {
+          "version": "ttf-source-validator-feedback-1",
+          "is_evidence": false,
+          "origin": "local_validator",
+          "error_count": 3,
+          "full_diagnostics": true,
+          "errors_sha256": "aa28fe89b2f30f71035d94b7693a350e1edf062c98b7606d082b220f0270c08e",
+          "payload_sha256": "688c3cf8a535eed7a28c9240dc16068c9b71e631838e30c9c3f9d1a3c2db8c16",
+          "payload_tokens": 154,
+          "previous_raw_sha256": "048370bdb74c3c23146b2f8268398dbaa1d7137cf5b9eb9bfa71dfe9146d9527",
+          "source_facts_sha256": "19360ac4592756517e45667d45ad80d9a9e439397eecb96069c95036edac64b2"
+        },
+        "prompt_eval_count": 9119,
+        "eval_count": 1348,
+        "done_reason": "stop",
+        "total_duration_ns": 33763969166,
+        "raw_content": "{\"news_impact\":{\"bullish_evidence\":[],\"bearish_evidence\":[\"[N0] Gassco Troll计划维护导致可用产能下降7.6 mcm/d → TTF价格上行机制\",\"[N2] Gassco Troll计划维护导致可用产能下降13.0 mcm/d → TTF价格上行机制\"],\"neutralizing_evidence\":[],\"summary\":\"Gassco Troll计划维护导致未来两天内可用产能分别下降7.6 mcm/d（10/22‑10/23）和13.0 mcm/d（10/21‑10/22），未确认实际流量损失，可能对TTF价格产生上行压力。\",\"contextual_news_score\":1,\"direction\":\"up\",\"confidence\":0.6,\"signal_strength\":\"moderate\"},\"close_forecast\":{\"basis\":\"市场基准已上行（+2.668 EUR/MWh）且未见逆转迹象，且两条计划维护公告均为容量约束，预期收盘价相对前一交易日继续上涨。\",\"summary\":\"基于市场基准已上行且未见逆转迹象，预计收盘价相对前一交易日继续上涨。\",\"evidence_status\":\"forecast\",\"direction\":\"up\",\"confidence\":0.7,\"extreme_move_risk\":\"\"},\"analysis\":{\"summary\":\"两条Gassco Troll计划维护公告导致未来两天内可用产能下降20.6 mcm/d，未确认实际流量损失，预期对TTF价格产生上行压力。\",\"evidence\":[\"[N0] Gassco Troll计划维护导致可用产能下降7.6 mcm/d → TTF价格上行机制\",\"[N2] Gassco Troll计划维护导致可用产能下降13.0 mcm/d → TTF价格上行机制\"],\"negation_or_reversal\":[],\"priced_in_comment\":\"price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格\",\"matched_terms\":[\"capacity_constraint\"],\"historical_comparisons\":[\"[E1]历史记录日期2026-10-19，类别为供应中断/复产；公告容量限制不等于已核实流量损失；1d同合约参考价差-2.98欧元/MWh（截止2026-10-20）；同期价差不能归因于事件；输入未提供可验证的天气及LNG差异，需核对具体供需情景\"]},\"risk_flags\":[],\"references\":[{\"id\":\"N0\",\"url\":\"\"},{\"id\":\"N2\",\"url\":\"\"}],\"missing_fields\":[]}",
+        "validation_stage": "parse",
+        "validation_error": "[{\"type\":\"value_error\",\"loc\":[\"news_impact\"],\"msg\":\"Value error, 看涨结论必须有具体看涨证据；不能只填方向\",\"ctx\":{\"error\":\"看涨结论必须有具体看涨证据；不能只填方向\"}}]",
+        "request_reasoning": "medium"
+      }
+    ],
+    "context_sha256": "85b0b4625bf99a5536f30ec5ea0425f49c980b04d55507d31471edf492f3199f",
+    "semantic_source_only_feedback": true
+  },
+  "model_result": null,
+  "private_candidate_version": "ttf-backend-source-provenance-pilot-2-narrow",
+  "root_or_production_modified": false,
+  "original_actual_record": {
+    "file": "reports/repair_2026-10-20/production_ninth_current_live_actual_v2_3.json",
+    "sha256": "4b8231a5e400b83a2cd872e9294bfe58c2b6b0c7871d6952c56d986b65272ab0"
+  },
+  "frozen_context_sha256": "f5b8c3ff24a5c1e1b8baa9f8ce986b2676b4e5872cb0702dbbf74344097509c7",
+  "actual_model_request_count": 2,
+  "elapsed_seconds": 64.42518679099157,
+  "independent_semantic_review_passed": null,
+  "does_not_prove_production_success": true
+}

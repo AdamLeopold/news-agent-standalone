@@ -1,0 +1,59 @@
+{
+  "policy_id": "ttf-explicit-error-release-v1",
+  "expected_prompt_version": "ttf-news-standalone-2.3",
+  "status": "not_ready_fifth_production_failed_physical_unit_and_scope_fix_pending",
+  "main_report_sha256": "c0fde7c7dd55a4cb75c6f49ed9978b19dfa9a0f13a42739d1f7ff6ad2fd51d14",
+  "evidence": {
+    "independent_review": {
+      "file": "reports/repair_2026-10-20/independent_release_review_v2_3.json",
+      "sha256": "26c453e68feae55d3344c3194a34b7d79ce4450add2300d3c4b94a47fb1c681c"
+    },
+    "live_smoke": {
+      "file": "reports/repair_2026-10-20/production_fifth_full_workflow_v2_3.json",
+      "sha256": "a84ae778df82c79e18e7dfdd861b7e10cae2c0bcf0ab4ef77b431d8d5da21dc2",
+      "status": "failed_not_reclassified"
+    },
+    "error_ui": {
+      "file": "reports/repair_2026-10-20/error_ui_composite_final_binding_v2_3.json",
+      "sha256": "dfc1b388da5790e73e3b2da5560572b18b7576bd11c8860de33428ddd24664d8"
+    },
+    "public_scan": {
+      "file": "reports/repair_2026-10-20/public_scan_final.json",
+      "sha256": null
+    },
+    "frontend_build": {
+      "file": "reports/repair_2026-10-20/frontend-build.log",
+      "sha256": "1c6aa95059246f62a7e464ad1ee3e45fcf65c2fe6b9815506a8b1119470a6bef"
+    },
+    "backend_deployment": {
+      "file": "reports/repair_2026-10-20/backend_detail_grounding_resumed.json",
+      "sha256": "510d9322622c5cdc6d16941c10d9cd8a0f61997810f393618c55fea9824d2384"
+    }
+  },
+  "note": "Isolated20+1 are reviewed at932f/28f with16 strict returned briefs,4 failures and1 delivered detail. Fifth complete production run is failed, including a completed-but-invalid current-live/English EUR/mcm claim; no current live role is accepted. Eight known-error families remain open. Planned physical-unit phase has no actual output yet, and final production, snapshot scan and public follow-up remain pending.",
+  "production_attempt_history": {
+    "file": "reports/repair_2026-10-20/production_e2e_attempt_history_v2_3.json",
+    "sha256": "ee013f1ecaf28016e366c80ffb54f2a083af0fcfdd870404628758fc53eef94b"
+  },
+  "updated_at": "2026-10-21T02:10:50.135867+00:00",
+  "current_maintenance_deployment": {
+    "file": "reports/repair_2026-10-20/backend_detail_grounding_paused.json",
+    "sha256": "d5a316cfa5577a7d9a67306ee3786b60368738658e149dc36de2bbc8909c95f2"
+  },
+  "previous_readiness": {
+    "file": "reports/repair_2026-10-20/release_readiness_checks_v2_3.f0de268d4d7183b1.json",
+    "sha256": "f0de268d4d7183b1178c16f0fd2ff976ba214262316d13a3d5b41be4e72d7b01"
+  },
+  "current_unit_binding": {
+    "file": "reports/repair_2026-10-20/risk_anchor_full_unit_binding_v2_3.json",
+    "sha256": "5a74da1264334f1a1368fdd6d6527984399ee5274a60910720a74df680aea60b"
+  },
+  "current_selected_cohort": {
+    "file": "reports/repair_2026-10-20/selected_bounded_risk_twenty_plus_detail_manifest_v2_3.json",
+    "sha256": "447be8ebf84c97223bc664cae2f0ffde4664cec22e17b515abc4b33acadf448a"
+  },
+  "known_accepted_error_ledger": {
+    "file": "reports/repair_2026-10-20/release_known_accepted_errors.json",
+    "sha256": "e8678ecc833d43029d6da6d3157f941f34e78fde24378710e983ff67ba858c48"
+  }
+}

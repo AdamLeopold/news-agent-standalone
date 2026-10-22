@@ -1,0 +1,101 @@
+{
+  "status": "preflight_passed_not_deployed",
+  "reviewed_at_utc": "2026-10-20T18:18:27.144240+00:00",
+  "database_observation_started_at_utc": "2026-10-20T18:18:26.839603+00:00",
+  "database_access": "mode=ro and PRAGMA query_only=ON; metadata and preservation hashes only",
+  "observed_counts": {
+    "analyses": 117,
+    "frozen_snapshots": 5,
+    "queued_or_running_jobs": 0,
+    "completed_v2_live_analyses": 0
+  },
+  "original_manifest": {
+    "path": "reports/repair_2026-10-20/preservation_manifest.json",
+    "sha256": "afdb6fc9c87261371eb880837d54b82f6277fb7be1aadb0e8ef563cc3b164e7e",
+    "verification": {
+      "passed": true,
+      "protected_analysis_count": 116,
+      "protected_nonnull_field_count": 229,
+      "current_analysis_count": 117,
+      "new_analysis_count": 1,
+      "protected_snapshot_count": 4,
+      "new_snapshot_count": 1,
+      "original_validation_record_count": 1,
+      "latest_baseline_unchanged": true,
+      "original_baseline": {
+        "id": 210,
+        "created_at": "2026-10-14T05:51:48.181167+00:00",
+        "type": "validation_started"
+      },
+      "failures": []
+    }
+  },
+  "reviewed_scripts_sha256": {
+    ".runtime/deploy-repaired-backend.py": "31d2fcb2be65eb0f15c41a0c2139c2cdab6548cdd3547003897661baf3a3f625",
+    "scripts/validate-deployment.py": "e492f09d87a1e81e8fd534339ac249c010fcd3e89ac0ebd885afcd3db1c4e4d2",
+    "scripts/ttf-news": "30254b3a66918ac031fd19c29e034120dc818560711b545daaf443d0ba8e6162",
+    "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+    "scripts/repair-validation-report.py": "86b29f87d04a965100d957842066220509d1b910b7626175c18a797f65e8ff98"
+  },
+  "review_findings": [
+    {
+      "id": "original_manifest_bridge",
+      "status": "fixed_in_prepared_script_and_reviewed",
+      "initial_issue": "Capturing supplemental current hashes without checking the original manifest could make a pre-existing change a new accepted baseline.",
+      "verified_repair": "Prepared deploy script calls verify_preservation on the original manifest in the same read-only connection and asserts passed before replacing in-memory supplemental hashes. The original file remains unchanged; original_manifest_sha256 and original_preservation_check are retained."
+    }
+  ],
+  "verified_prepared_boundaries": [
+    {
+      "area": "process identity",
+      "result": "Prepared deploy script requires health PID=managed app.pid, ps command ttf_news.api:app with port8765, project cwd from lsof, and no queued/running jobs before backup/restart."
+    },
+    {
+      "area": "backup and supplementary preservation",
+      "result": "Prepared script creates a dated SQLite backup and SHA; writes a new predeployment manifest for all current analysis non-null fields, snapshots and validation records; refuses to overwrite an existing deployment manifest."
+    },
+    {
+      "area": "application-only restart",
+      "result": "Prepared stop command has no --with-model. CLI stop defaults to app only, verifies command identity before TERM/KILL. CLI start reuses a healthy Ollama service; no Ollama stop occurs."
+    },
+    {
+      "area": "smoke manifest option",
+      "result": "--manifest accepts the supplementary preservation manifest. Preservation verification before/after reads SQLite in mode=ro rather than initializing Store."
+    },
+    {
+      "area": "real source and complete product flow",
+      "result": "Smoke selects an existing nonpremium collected HTTP(S) article, preserves summary/fact_excerpt in manual input, and checks brief, detail, English cache and protected labels/numbers/citations without rewriting original Chinese results."
+    },
+    {
+      "area": "SSE and exports",
+      "result": "Smoke verifies initial stream_ready, Last-Event-ID and after-query reconnect, completed-event replay, and parsed nonempty news/daily/events/prices CSV+JSONL exports."
+    },
+    {
+      "area": "new current live outlook",
+      "result": "Smoke appends a known-source current-window v2 live record if none exists, never overwrites earlier predictions or resets the validation baseline. At this observation there were no completed v2 live records."
+    },
+    {
+      "area": "failure reporting",
+      "result": "Failed/timeout stages remain failed and required missing stages prevent a passed smoke report; no synthetic prediction is substituted."
+    }
+  ],
+  "self_test": {
+    "command": ".venv/bin/python scripts/validate-deployment.py --self-test",
+    "exit_code": 0,
+    "tests_passed": 7,
+    "output": "test_english_chinese_prose_is_rejected (__main__.SelfTests) ... ok\ntest_english_numbers_and_enums_are_protected (__main__.SelfTests) ... ok\ntest_null_has_no_flat_label (__main__.SelfTests) ... ok\ntest_real_source_payload_keeps_exact_article_facts (__main__.SelfTests) ... ok\ntest_sse_parser_retains_replay_id_and_payload (__main__.SelfTests) ... ok\ntest_synthetic_article_rejected (__main__.SelfTests) ... ok\ntest_version_update_never_opens_store_under_old_backend (__main__.SelfTests) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.001s\n\nOK\n"
+  },
+  "actions_performed": {
+    "deployment_executed": false,
+    "processes_started_or_stopped": false,
+    "real_model_calls": 0,
+    "production_database_writes": false,
+    "core_edits": false
+  },
+  "remaining_blockers": [],
+  "limitations": [
+    "This is a read-only preflight review, not a completed deployment or live API/model smoke result.",
+    "PID, cwd, queue, source files and model/backend health may change. Final deployment must perform its own fresh checks and record the exact code hashes used then.",
+    "The final live smoke result must be produced after the managed backend restart; these seven self-tests do not replace real brief/detail/English/SSE/export execution."
+  ]
+}

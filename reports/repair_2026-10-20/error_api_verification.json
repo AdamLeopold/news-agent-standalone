@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-10-20T20:05:31.091429+00:00",
+  "evidence_kind": "real_v2_failed_analysis_public_api",
+  "analysis_id": "ec3f2c31-6f49-48bb-acbd-48474ce670e2",
+  "http_status": 200,
+  "prompt_version": "ttf-news-standalone-2.0",
+  "status": "failed",
+  "result_is_null": true,
+  "detail_result_is_null": true,
+  "error_visible_via_api": true,
+  "error": "模型JSON两次校验失败，未生成方向：risk_flags[2]:缺少公告前后价格反应，不能宣称已计价/已消化；须区分计价未知",
+  "response_sha256": "a77a66921a03ba5fd19deff19b2922c91a5993f8b0d55aa968c5c1add6bb3412",
+  "no_generated_direction": true,
+  "ui_verification_pending": true
+}

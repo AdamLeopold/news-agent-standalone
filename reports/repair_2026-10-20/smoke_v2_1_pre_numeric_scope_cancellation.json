@@ -1,0 +1,15 @@
+{
+  "cancelled_at": "2026-10-20T21:02:20.634867+00:00",
+  "runner_pid": 87571,
+  "reason": "Preserve completed real brief/English/export stages and failed detail/live outputs. Independent review identified genuine unsupported claims plus numeric-delta and conditional-scope false positives; final source gates require a clean new regression run.",
+  "cancelled_runner_only": true,
+  "backend_stopped": false,
+  "ollama_stopped": false,
+  "persisted_analysis_jobs_deleted": false,
+  "captures": {
+    "attempted_v2_1_pre_numeric_scope_smoke.json": "704775949285a37fdc22044afd675636b6fe39b58acf98003d35122e55b7dc18",
+    "attempted-v2-1-pre-numeric-scope-smoke.log": "456e09a19ab338a8a6150a20b6a5c3a1488e0da749490d7aaa54a420313f8dfa"
+  },
+  "manual_analysis_id": "7866a10d-fd69-4ab4-b1e4-20297a9dbc28",
+  "live_analysis_id": "1508ce10-8dd8-4ab7-adb6-3e4da345b095"
+}

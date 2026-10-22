@@ -1,0 +1,28 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T02:30:45.780554+00:00",
+  "scope": "Focused public-clone test rerun after exact authorized test-only publication identity adapter sync. No source/model/API/DB/Git/publication changes.",
+  "test_source_sha256": "eab0916aa4931edd751ce4e2fbc96ead28cfad6ab449a0d15c57eae02aea69b0",
+  "clone_test_sha256": "eab0916aa4931edd751ce4e2fbc96ead28cfad6ab449a0d15c57eae02aea69b0",
+  "exit_code": 1,
+  "passed": 75,
+  "failed": 11,
+  "seconds": 8.32,
+  "log": {
+    "file": "reports/repair_2026-10-20/publish-price-unit-publication-identity-focused.log",
+    "sha256": "c397502b081dec1cbb1e9fdeebb7e4558deac14a4a1c4cd6aed2dbac60b4bc53"
+  },
+  "junit": {
+    "file": "reports/repair_2026-10-20/publish-price-unit-publication-identity-focused.xml",
+    "sha256": "1d8ad01c833338ef94683312cbb849acbd874c0c0936d4dc9c51f03b99c82447"
+  },
+  "verdict": "strict_publication_identity_check_correctly_rejects_stale_map_after_authorized_code_sync",
+  "reason": "PublicationManifest validates the full mapped artifact set and finds scripts/repair-validation-report.py bytes changed from the preexisting public_bytes_sha256. The newly synchronized code/test and old publication map are not a coherent published snapshot. This is not a model semantic result or a reason to weaken SHA verification.",
+  "next_action": "Stop clone reruns until the parent authorized sync-public-evidence process regenerates the complete final code/report mapping; then run one full public suite. Preserve both failed public runs unchanged.",
+  "prior_public_failure_review": {
+    "file": "reports/repair_2026-10-20/independent_publish_backend_physical_unit_test_failure_review_v2_3.json",
+    "sha256": "40c72983adfe8ddddb91828d59b3f838ad5905a035ae7da548c74ea5ae342d5d"
+  },
+  "publication_manifest_not_modified_by_reviewer": true
+}

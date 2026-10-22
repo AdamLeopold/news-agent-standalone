@@ -1,0 +1,16 @@
+{
+  "archived_at": "2026-10-20T23:40:55.378515+00:00",
+  "reason": "Preserve 774 tests and 375 subchecks before detail output/time-scope repairs",
+  "records": [
+    {
+      "original_file": "reports/repair_2026-10-20/final-release-unit-tests.xml",
+      "archive_file": "reports/repair_2026-10-20/pre-detail-grounding-final-unit-tests.xml",
+      "sha256": "c71590c8acdfaeeb71ddecf4aff7a0af94d9535fda7464a9dbc794424550302d"
+    },
+    {
+      "original_file": "reports/repair_2026-10-20/final-release-unit-tests.log",
+      "archive_file": "reports/repair_2026-10-20/pre-detail-grounding-final-unit-tests.log",
+      "sha256": "e9c2e682404d7f5099c0c8b64ee6cbbf6b6e6937940f367460f324ce9a5e350f"
+    }
+  ]
+}

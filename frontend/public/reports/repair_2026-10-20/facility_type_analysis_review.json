@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-10-20T20:41:27.032532+00:00",
+  "status": "confirmed_invalid_pending_application",
+  "production_reviews_applied": false,
+  "inspection_scope": "Named source facility type; brief only; canonical direction/result preserved.",
+  "pending_reviews": [
+    {
+      "analysis_id": "d2ef1250-6ed3-4a68-9396-e6ed4addbfb3",
+      "protected_hashes": {
+        "input_snapshot": "00742222c3d42beed286a1a8716ac5cda0edb7c2e0983be6420c92d4b1b72005",
+        "result": "66347a76e7d9e0744aa626df9229dec527cc62a2696924585b85223523d545e4",
+        "detail_result": null
+      },
+      "confirmed_invalid": true,
+      "review": {
+        "review_id": "facility-type-d2ef1250-6ed3-4a68-9396-e6ed4addbfb3-brief-v1",
+        "status": "invalid",
+        "reason_code": "v2_1_field_misidentified_as_pipeline",
+        "affected_parts": [
+          "brief"
+        ],
+        "reviewer": "independent_source_entity_review",
+        "message_zh": "Gassco对应Troll来源明确为Gas production field（气田/生产设施），分析却称Troll管道维护；另一条Other公告也没有管道类型证据。该简报把LNG Canada管道项目类别串给Troll，事实类别复核未通过；原结果及方向完整保留。",
+        "message_en": "The cited Gassco Troll notice is a gas production field, while the brief calls it pipeline maintenance. The other notice is Other and supplies no pipeline classification. The brief transfers a pipeline class from the LNG Canada project to Troll and fails source-entity review; its original result and direction are preserved."
+      }
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-10-20T20:31:12.755686+00:00",
+  "scope": "Non-assertive request to verify pricing status; no change to pricing evidence standard.",
+  "original_record": {
+    "source_record": "reports/repair_2026-10-20/candidate-anchor-validation/anchor_real_manual_missing_prevday.json",
+    "source_record_sha256": "25262435bd0432eff869b66ffb56672f8e6a586b6364600d017af354e3957fb4",
+    "source_contract_passed": false,
+    "finding": "A requirement to check whether news was already priced is not an assertion that it was priced."
+  },
+  "original_failed_record_unchanged": true,
+  "risk_literal": "当前触发新闻在较早结算窗口发布，本次作为截至分析时点已知背景；不能把原报道重复当作本窗口新增冲击，须核对修订内容与已计价情况。",
+  "offline_only": true,
+  "no_new_model_calls": true,
+  "original_run_remains_failed": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "news_direction": "flat",
+      "close_direction": null,
+      "offline_validation_errors": []
+    },
+    {
+      "attempt": 2,
+      "news_direction": "flat",
+      "close_direction": null,
+      "offline_validation_errors": []
+    }
+  ],
+  "nonassertive_scope": "须/需/待核对或核实已计价或未计价的情况、状态、与否是核查对象，不是已知结果。",
+  "preserved_rejections": [
+    "核对后确认已计价或尚未计价",
+    "核查要求后逗号分句里的已确认计价结论",
+    "单向价格变化证明已计价/未计价（原有条件后果门）"
+  ],
+  "fixture": {
+    "path": "tests/fixtures/anchor_verification_request_not_priced_claim.json",
+    "sha256": "a119e5b8e97284566e575b406099a8ed03b6a165ca254c41b805f54288eb5bd1"
+  },
+  "verification": {
+    "tests": 162,
+    "subtests": 292,
+    "elapsed_seconds": 1.67,
+    "passed": true,
+    "command": ".venv/bin/python -m pytest -q tests/test_semantics.py tests/test_reviewed_prose.py tests/test_generation_boundaries.py tests/test_settlement_anchor.py --tb=short"
+  },
+  "semantics_sha256": "946a72603eb705d496cc7f81d4da71d6783d7a2cd037601f93cdceabc92cb7ed"
+}

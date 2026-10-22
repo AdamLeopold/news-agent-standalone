@@ -1,0 +1,360 @@
+{
+  "candidates": {
+    "analysis": {
+      "file": ".runtime/eighth-output-scope-proposal/revision-all-physical-scope/revision-explicit-alias/ttf_news/analysis.py",
+      "sha256": "bcd240a893a87e842fc8caff8f4efa156f80cac7d8807b2c8c4c3a8599bfcdfa"
+    },
+    "semantics": {
+      "file": ".runtime/eighth-output-scope-proposal/revision-all-physical-scope/revision-explicit-alias/ttf_news/semantics.py",
+      "sha256": "3fcdf8708e49be0bc7060e0e97f45fbfcf5262dabdfc431d70aca0a748791ff7"
+    }
+  },
+  "paired_controls": [
+    {
+      "scope": "six_physical_subject_vs_price_predicate",
+      "text": "供应增加40mcm/d，TTF价格下跌。",
+      "expected_retained": "supply_increase",
+      "forbidden_absent": "supply_decrease",
+      "mechanisms": [
+        {
+          "mechanism": "supply_increase",
+          "pressure": "down",
+          "conditional": false,
+          "quoted_fact": "供应增加40mcm/d，TTF价格下跌",
+          "evidence_kind": "reported_fact"
+        }
+      ]
+    },
+    {
+      "scope": "six_physical_subject_vs_price_predicate",
+      "text": "供应减少40mcm/d，TTF价格上涨。",
+      "expected_retained": "supply_decrease",
+      "forbidden_absent": "supply_increase",
+      "mechanisms": [
+        {
+          "mechanism": "supply_decrease",
+          "pressure": "up",
+          "conditional": false,
+          "quoted_fact": "供应减少40mcm/d，TTF价格上涨",
+          "evidence_kind": "reported_fact"
+        }
+      ]
+    },
+    {
+      "scope": "six_physical_subject_vs_price_predicate",
+      "text": "需求增加40mcm/d，TTF价格下跌。",
+      "expected_retained": "demand_increase",
+      "forbidden_absent": "demand_decrease",
+      "mechanisms": [
+        {
+          "mechanism": "demand_increase",
+          "pressure": "up",
+          "conditional": false,
+          "quoted_fact": "需求增加40mcm/d，TTF价格下跌",
+          "evidence_kind": "reported_fact"
+        }
+      ]
+    },
+    {
+      "scope": "six_physical_subject_vs_price_predicate",
+      "text": "需求下降40mcm/d，TTF价格上涨。",
+      "expected_retained": "demand_decrease",
+      "forbidden_absent": "demand_increase",
+      "mechanisms": [
+        {
+          "mechanism": "demand_decrease",
+          "pressure": "down",
+          "conditional": false,
+          "quoted_fact": "需求下降40mcm/d，TTF价格上涨",
+          "evidence_kind": "reported_fact"
+        }
+      ]
+    },
+    {
+      "scope": "six_physical_subject_vs_price_predicate",
+      "text": "库存上升，TTF价格下跌。",
+      "expected_retained": "inventory_build",
+      "forbidden_absent": "inventory_draw",
+      "mechanisms": [
+        {
+          "mechanism": "inventory_build",
+          "pressure": "down",
+          "conditional": false,
+          "quoted_fact": "库存上升，TTF价格下跌",
+          "evidence_kind": "reported_fact"
+        }
+      ]
+    },
+    {
+      "scope": "six_physical_subject_vs_price_predicate",
+      "text": "库存下降，TTF价格上涨。",
+      "expected_retained": "inventory_draw",
+      "forbidden_absent": "inventory_build",
+      "mechanisms": [
+        {
+          "mechanism": "inventory_draw",
+          "pressure": "up",
+          "conditional": false,
+          "quoted_fact": "库存下降，TTF价格上涨",
+          "evidence_kind": "reported_fact"
+        }
+      ]
+    },
+    {
+      "scope": "conditional_recovery",
+      "text": "若实际流量未恢复，供应约束持续，价格上升",
+      "signs": [
+        "up"
+      ]
+    },
+    {
+      "scope": "conditional_recovery",
+      "text": "若实际流量已恢复，供应约束缓解，价格下降",
+      "signs": [
+        "down"
+      ]
+    },
+    {
+      "scope": "conditional_recovery",
+      "text": "若未出现实际流量损失，供应约束未发生，价格下降",
+      "signs": []
+    },
+    {
+      "scope": "future_window_knowledge",
+      "text": "截至窗口结束时尚未确认实际流量损失。",
+      "expected_reject": true,
+      "error": "analysis.summary:目标结算窗口结束2026-10-21T15:15:00+00:00仍晚于as_of2026-10-21T04:11:36.571652+00:00，不能把截至未来窗末的确认/核实状态写成已知事实；只能陈述截至分析时点尚未确认，或明确若截至收盘仍未确认的条件，不改变预测方向"
+    },
+    {
+      "scope": "future_window_knowledge",
+      "text": "若需求下降，但截至窗口结束时尚未确认实际流量损失。",
+      "expected_reject": true,
+      "error": "analysis.summary:目标结算窗口结束2026-10-21T15:15:00+00:00仍晚于as_of2026-10-21T04:11:36.571652+00:00，不能把截至未来窗末的确认/核实状态写成已知事实；只能陈述截至分析时点尚未确认，或明确若截至收盘仍未确认的条件，不改变预测方向"
+    },
+    {
+      "scope": "future_window_knowledge",
+      "text": "截至分析时点尚未确认实际流量损失。",
+      "expected_reject": false,
+      "error": null
+    },
+    {
+      "scope": "future_window_knowledge",
+      "text": "若截至收盘仍未确认实际流量损失，则重新评估。",
+      "expected_reject": false,
+      "error": null
+    },
+    {
+      "scope": "future_window_knowledge",
+      "text": "截至上一结算窗口结束时尚未确认实际流量损失。",
+      "expected_reject": false,
+      "error": null
+    }
+  ],
+  "original_twenty_bad_raw_replays": [
+    {
+      "case": "weak_exploration_no_quote",
+      "raw_sha256": "6ac8df5561c98897f3663043065321959121cfc5606a32833336b8ef529eff0b",
+      "errors": [
+        "close_forecast.basis、analysis.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "weak_news_observed_market_up",
+      "raw_sha256": "ed947244f6672f8ecf2ee878e7106d28a7830ddee4d02f75bc99d0adee7df251",
+      "errors": [
+        "close_forecast:已有有效同合约盘中方向基准；新闻影响较弱或无法证明单新闻价格因果、未知是否计价，不能单独取消相对已给前价的条件性收盘预判。请权衡真实基准与有来源的冲突机制，保留五档选择，不得自动复制新闻方向或把参考变化当已实现收盘"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "supply_restore_40_with_flat_baseline",
+      "raw_sha256": "e70b1eeced61a0ca82702ee329ca6bee674dac90bc2e65abf54822c95deeffb9",
+      "errors": [
+        "close_forecast.basis:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "anchor_legal_prevday_weak_market_up",
+      "raw_sha256": "978e0af10124b6ac118527bced66cb752c93310dd08bb7e5ac45f875cb8d1968",
+      "errors": [
+        "news_impact.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应",
+        "没有校准价格预测输入，禁止编造上涨/下跌幅度或目标价；仅可引用输入已观察的同合约参考变化"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "anchor_real_manual_missing_prevday",
+      "raw_sha256": "bdc3f17c8ff05ac997aeba24d96f987478fa8968823d0426ee030321003253cb",
+      "errors": [
+        "news_impact.bearish_evidence[0]:N0原来源合同授予/委托方为LNG Canada、获授/承接方为Técnicas Reunidas，不能把授予方写成获授方或反转双方角色；请保留该N具体交易，不套用其他N的合同，不要求复述角色或改变价格方向"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "future_planned_notice",
+      "raw_sha256": "09d26b8dcbf07c35d44803abf0d0aee8ce3c8cc4a1e4af0a5032d30259a2b63c",
+      "errors": [
+        "news_impact.summary、analysis.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "supply_loss_40_with_flat_baseline",
+      "raw_sha256": "dd1f44e9ef94887f17bd051dbac3e4c282131e5bfe637ec2957c5b114f645ef5",
+      "errors": [
+        "close_forecast.basis:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "anchor_real_manual_missing_prevday",
+      "raw_sha256": "11e4dd39600e3cac0308bf3ad4100900431e4314173de83e25cfd1b034e815b9",
+      "errors": [
+        "news_impact.summary、analysis.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "v2_0_missing_previous_trading_day_anchor",
+      "raw_sha256": "42094e73a35ea27e1306bf4b94f757072fa0329d4ee4515375dcb00313613770",
+      "errors": [
+        "close_forecast:目标2026-10-21缺少前交易日2026-10-20同合约锚点；当前绝对报价或其他日期参考差不能当昨收涨跌。新闻也无方向依据时须insufficient_evidence且direction=null；有方向新闻仍可给有据条件预测，不补flat或强制复制新闻方向"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "v2_1_future_abandonment_asserted_completed",
+      "raw_sha256": "2be1a16116bf38be121aaeb0147abf35f97b6f71155de52979308245d1a87a91",
+      "errors": [
+        "news_impact.summary:N0来源仅说该井将封堵/弃置，不能写已被永久封堵/井已弃置/已完成封井；请保留将/计划等未来时态，不从报道日期已过推断完成。原句will now be plugged and abandoned；实际has been/was plugged完成事实须有相应来源，不改新闻或收盘方向"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "v2_1_field_misidentified_as_pipeline",
+      "raw_sha256": "979e22270e7d00c609a22825a40cfd0d258e67feb7af0292bb1f14aac05d9964",
+      "errors": [
+        "news_impact.summary:N1来源设施类型为Gas production field（气田/生产设施），不得称Troll等该实体为pipeline/管道维护；须保留对应N的原设施类别或泛称设施公告，不能借另一N的管道合同套类型，不改方向"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "dismissed_notice_not_verified_recovery",
+      "raw_sha256": "ff0860953edcff8326137e7680741f231c60ac52ca4cc792b735ecd278bb613d",
+      "errors": [
+        "close_forecast.basis:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "dismissed_notice_not_verified_recovery",
+      "raw_sha256": "5a173dcdbcc64f841702d81853e17bc28d7f122bb27ff3e3ae3a8a154cf6c2d5",
+      "errors": [
+        "news_impact.bullish_evidence[0]:供应风险降低是TTF边际下行/中和机制，供应风险上升是边际上行机制；风险变化不等于实际流量恢复或损失，不能反放证据栏。须按引用事实重算/分栏，净方向仍可flat，不补实际流量。",
+        "news_impact.bullish_evidence[0]:证据栏与供需机制相反；请移动/重算证据，不能把供应增加放作看涨或供应减少放作看跌"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "anchor_legal_prevday_weak_market_up",
+      "raw_sha256": "b1ac4f872330d717ddf0748cfa4f65f536d9ac2a7d389d2d3786ac2d69985d6f",
+      "errors": [
+        "close_forecast:已有有效同合约盘中方向基准；新闻影响较弱或无法证明单新闻价格因果、未知是否计价，不能单独取消相对已给前价的条件性收盘预判。请权衡真实基准与有来源的冲突机制，保留五档选择，不得自动复制新闻方向或把参考变化当已实现收盘"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "fifth_current_wrong_price_unit",
+      "raw_sha256": "11b38edc3c6117ce32e855dd47806552f4950cbb02c7e2a146a1ac508f995124",
+      "errors": [
+        "close_forecast.basis:TTF报价/参考变动单位必须保留输入EUR/mwh，不能写成EUR/mcm；能源报价不是体积容量，未经已给换算依据不得替换货币或分母。不改变预测方向"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "real_eni",
+      "raw_sha256": "17fcc5caae952ca8feb2ad05892d96d6bf6c10c35c96886bfe6d2fda015fa3cf",
+      "errors": [
+        "close_forecast.basis:Gassco公告撤销/结束或实际流量未确认，不能证明未形成供需冲击、供应不受影响或实际流量无变化；须有独立无变化计量事实。可写输入未显示冲击证据或恢复待核实，不能把缺测写成无冲击",
+        "news_impact.summary:Åsgard输入仅有该设施不可用容量公告且实流未知，不能裸称设施停产/停供已发生；可写停产公告/公告容量风险、若/未来条件，实际停产须该实体截至as_of已知的独立生产/流量确认，不改变净方向",
+        "news_impact.bullish_evidence[0]:项目开启或公司合同事实不能只接TTF涨跌模板；须说明该N有来源的供需/容量风险/预期差传导，不能把公司利好直接当气价利好；净方向仍可flat；news_impact.bearish_evidence[0]:明写的TTF价格方向与证据栏相反，价格上行属看涨栏、价格下行属看跌栏；须按该N来源分栏/解释，不改变净方向"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "anchor_real_manual_missing_prevday",
+      "raw_sha256": "217e26d7eec7c19e54b2c9eaed8071d1496512be83f3b2d60a49d00ed7c932e9",
+      "errors": [
+        "news_impact.summary、analysis.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "retained_future_price_zero",
+      "raw_sha256": "bbff4e9280b02e22641542c24941d03738d933c8093123125bc3aa0a18d4e405",
+      "errors": [
+        "news_impact.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "manual_reaction_degree",
+      "raw_sha256": "d72b3686938aa585d99f2359ee1b3813dd13e63716169c9842f0590063038e80",
+      "errors": [
+        "news_impact.summary、analysis.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "current_pricing_unknown",
+      "raw_sha256": "f2ba2e925a1e4ed3b601d5b0238dfe7b81a1ef8634e42443e2a2f54101ad06ae",
+      "errors": [
+        "close_forecast.basis:计价未知或缺少计价证据不能作为额外看涨、看跌或持平依据；请将未知单列，方向只依据已给行情基准和来源供需机制。可保留有据的条件预测，不得由未知推未计价，不改变任何方向枚举"
+      ],
+      "rejected": true
+    }
+  ],
+  "original_three_actual_raw_replays": [
+    {
+      "raw_sha256": "2f1405df32a4f7c3931d3b15106f7b732aab66223116642ed918eba1e1f6ccc9",
+      "detail": false,
+      "local_validation_pass": false,
+      "errors": [
+        "news_impact.summary:目标结算窗口结束2026-10-21T15:15:00+00:00仍晚于as_of2026-10-21T04:11:36.571652+00:00，不能把截至未来窗末的确认/核实状态写成已知事实；只能陈述截至分析时点尚未确认，或明确若截至收盘仍未确认的条件，不改变预测方向"
+      ],
+      "original_terminal_unchanged": true
+    },
+    {
+      "raw_sha256": "b07bf109d9071e6610b6f9cf5de45415a13c2ac91b9378ae6ad8379b63ccaa45",
+      "detail": true,
+      "local_validation_pass": true,
+      "errors": [],
+      "original_terminal_unchanged": true
+    },
+    {
+      "raw_sha256": "0b1c7a33657edaec269ddc30c9dbcfacdd7cd19d47b2938977d954b3cfcf26d9",
+      "detail": true,
+      "local_validation_pass": false,
+      "errors": [
+        "分别列出的容量字段available含无来源数值7.6mcm/d；下降额与绝对可用容量须分开并逐公告匹配"
+      ],
+      "original_terminal_unchanged": true
+    }
+  ],
+  "changed_ast_nodes": {
+    "analysis": [
+      "_validate_notice_source_facts"
+    ],
+    "semantics": [
+      "_matching_mechanisms",
+      "_condition_mechanism_signs",
+      "_check_notice_settlement_timing"
+    ]
+  },
+  "shared_matching_change_requires_official_per_request_replay": true,
+  "new_model_calls": 0,
+  "database_access": false,
+  "source_modified": false
+}

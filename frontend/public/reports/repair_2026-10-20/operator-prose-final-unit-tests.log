@@ -1,0 +1,258 @@
+............................................. [  2%]
+.................................................................... [  7%]
+........................................................................ [ 12%]
+................................................................... [ 16%]
+........................................................................ [ 21%]
+........................................................................ [ 26%]
+........................................................................ [ 30%]
+.....F.................................................................. [ 35%]
+........................................................................ [ 40%]
+........................................................................ [ 44%]
+...................................................................... [ 49%]
+........................................................................ [ 54%]
+........................................................................ [ 58%]
+........................................................................ [ 63%]
+........................................................................................................................... [ 71%]
+..................................................................... [ 76%]
+......................................... [ 78%]
+............... [ 79%]
+.............................. [ 81%]
+............................FFF....F.................... [ 85%]
+.................F...................................................... [ 90%]
+......................................................................................................................... [ 98%]
+..........................                                               [100%]
+=================================== FAILURES ===================================
+_ test_fresh_analyze_and_diagnostic_collector_explicitly_receive_the_same_metadata_index _
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x118e28e80>
+
+    def test_fresh_analyze_and_diagnostic_collector_explicitly_receive_the_same_metadata_index(monkeypatch):
+     ctx=c();raw=BY['ninth_manual_pilot_2']['raw_content'];received=[]
+     for name in ['validate_analysis_semantics','collect_analysis_semantic_errors']:
+      original=getattr(s,name)
+      def wrapped(*args,_name=name,_original=original,**kwargs):
+       assert 'source_index' in kwargs and kwargs['source_index']
+       received.append((_name,copy.deepcopy(kwargs['source_index'])))
+       return _original(*args,**kwargs)
+      monkeypatch.setattr(s,name,wrapped)
+     class Replay(a.NewsAnalyst):
+      def __init__(self):super().__init__();self.requests=[]
+      async def _request(self,system,data,detail):
+       self.requests.append(copy.deepcopy(data));return {'message':{'content':raw},'done_reason':'stop','prompt_eval_count':100,'eval_count':100}
+     model=Replay()
+     with pytest.raises(a.AnalysisError) as error:asyncio.run(model.analyze(ctx))
+     assert len(model.requests)==2
+>    assert {name for name,_ in received}=={'validate_analysis_semantics','collect_analysis_semantic_errors'}
+E    AssertionError: assert {'collect_ana...antic_errors'} == {'collect_ana...is_semantics'}
+E      
+E      Extra items in the right set:
+E      'validate_analysis_semantics'
+E      Use -v to get more diff
+
+tests/test_future_capacity_pressure_scope.py:154: AssertionError
+_ test_actual_first_pair_is_valid_capacity_but_wrong_price_clock_stays_failed __
+
+actual = {'schema_version': 'seventh-source-scope-actual-v1', 'source_record': {'file': 'reports/repair_2026-10-20/production_s...da34a61b26f67aeda1a860854e2'}, 'analysis_id': 'd7628bcf-d68a-4d14-8ce0-20bc21beaa42', 'original_status': 'failed', ...}
+
+    def test_actual_first_pair_is_valid_capacity_but_wrong_price_clock_stays_failed(actual):
+     row,ctx,p,_=setup(actual);body=json.loads(row['raw_content'][0]);before=copy.deepcopy(body)
+>    a._validate_notice_source_facts(body,ctx,p)
+
+tests/test_seventh_source_scope.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+result = {'source_fact_checks': {'fact_contract_version': 'operator-facts-2.2', 'operator_notices': [{'id': 'N0', 'facility': '...容量约束→看涨'], 'negation_or_reversal': [], 'priced_in_comment': 'price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格', ...}, ...}
+context = {'as_of': '2026-10-21T03:55:01.110265+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1....3 mcm/d; available: 124.3; unavailable: 13.0. Reason: Yearly maintenance. Remarks: Extended maintenance.', ...}], ...}
+prepared = {'as_of': '2026-10-21T03:55:01.110265+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1... 'facts': 'Reason: Yearly maintenance. Remarks: Extended maintenance.', 'time': '2026-10-20T20:13:18+00:00', ...}, ...}
+_date_checked = False
+
+    def _validate_notice_source_facts(result: dict, context: dict, prepared: dict, *, _date_checked: bool = False) -> None:
+        """Validate each cited notice against its own type and capacity fields.
+    
+        This replaces the old N0 correction probe in the inference path. It never
+        rewrites outputs or compares another N alias / an aggregate with N0.
+        """
+        from .evidence import exact_capacity_fields
+        if not _date_checked and 'close_forecast' in result:
+            branches=response_schema(bool(result.get('detail')),prepared)['$defs']['CloseForecast'].get('oneOf',[])
+            close=result.get('close_forecast') or {}
+            if branches and not any(
+                    close.get('direction')==branch['properties']['direction']['const']
+                    and close.get('evidence_status')==branch['properties']['evidence_status']['const']
+                    and all(close.get(field) in branch['properties'][field]['enum'] for field in ('summary','basis'))
+                    for branch in branches):
+>               raise ValueError('close_forecast主方向与主summary/basis来源条件分支不一致；反向失效情景不能充当另一方向的唯一主解释')
+E               ValueError: close_forecast主方向与主summary/basis来源条件分支不一致；反向失效情景不能充当另一方向的唯一主解释
+
+ttf_news/analysis.py:1363: ValueError
+_ test_unnamed_explicit_pair_binds_evidenced_notices[\u4e24\u6761\u672a\u6765\u7ef4\u62a4\u516c\u544a\uff0c\u5206\u522b\u5bfc\u81f47.6\u548c13mcm/d\u7684\u5bb9\u91cf\u635f\u5931\u3002] _
+
+actual = {'schema_version': 'seventh-source-scope-actual-v1', 'source_record': {'file': 'reports/repair_2026-10-20/production_s...da34a61b26f67aeda1a860854e2'}, 'analysis_id': 'd7628bcf-d68a-4d14-8ce0-20bc21beaa42', 'original_status': 'failed', ...}
+summary = '两条未来维护公告，分别导致7.6和13mcm/d的容量损失。'
+
+    @pytest.mark.parametrize('summary',[
+     '两条未来维护公告，分别导致7.6和13mcm/d的容量损失。',
+     '两项未来公告分别有7.6mcm/d和13mcm/d不可用容量。',
+    ])
+    def test_unnamed_explicit_pair_binds_evidenced_notices(actual,summary):
+     row,ctx,p,_=setup(actual);b=json.loads(row['raw_content'][0]);b['news_impact']['summary']=summary;b['analysis']['summary']=summary
+>    a._validate_notice_source_facts(b,ctx,p)
+
+tests/test_seventh_source_scope.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+result = {'source_fact_checks': {'fact_contract_version': 'operator-facts-2.2', 'operator_notices': [{'id': 'N0', 'facility': '...容量约束→看涨'], 'negation_or_reversal': [], 'priced_in_comment': 'price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格', ...}, ...}
+context = {'as_of': '2026-10-21T03:55:01.110265+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1....3 mcm/d; available: 124.3; unavailable: 13.0. Reason: Yearly maintenance. Remarks: Extended maintenance.', ...}], ...}
+prepared = {'as_of': '2026-10-21T03:55:01.110265+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1... 'facts': 'Reason: Yearly maintenance. Remarks: Extended maintenance.', 'time': '2026-10-20T20:13:18+00:00', ...}, ...}
+_date_checked = False
+
+    def _validate_notice_source_facts(result: dict, context: dict, prepared: dict, *, _date_checked: bool = False) -> None:
+        """Validate each cited notice against its own type and capacity fields.
+    
+        This replaces the old N0 correction probe in the inference path. It never
+        rewrites outputs or compares another N alias / an aggregate with N0.
+        """
+        from .evidence import exact_capacity_fields
+        if not _date_checked and 'close_forecast' in result:
+            branches=response_schema(bool(result.get('detail')),prepared)['$defs']['CloseForecast'].get('oneOf',[])
+            close=result.get('close_forecast') or {}
+            if branches and not any(
+                    close.get('direction')==branch['properties']['direction']['const']
+                    and close.get('evidence_status')==branch['properties']['evidence_status']['const']
+                    and all(close.get(field) in branch['properties'][field]['enum'] for field in ('summary','basis'))
+                    for branch in branches):
+>               raise ValueError('close_forecast主方向与主summary/basis来源条件分支不一致；反向失效情景不能充当另一方向的唯一主解释')
+E               ValueError: close_forecast主方向与主summary/basis来源条件分支不一致；反向失效情景不能充当另一方向的唯一主解释
+
+ttf_news/analysis.py:1363: ValueError
+_ test_unnamed_explicit_pair_binds_evidenced_notices[\u4e24\u9879\u672a\u6765\u516c\u544a\u5206\u522b\u67097.6mcm/d\u548c13mcm/d\u4e0d\u53ef\u7528\u5bb9\u91cf\u3002] _
+
+actual = {'schema_version': 'seventh-source-scope-actual-v1', 'source_record': {'file': 'reports/repair_2026-10-20/production_s...da34a61b26f67aeda1a860854e2'}, 'analysis_id': 'd7628bcf-d68a-4d14-8ce0-20bc21beaa42', 'original_status': 'failed', ...}
+summary = '两项未来公告分别有7.6mcm/d和13mcm/d不可用容量。'
+
+    @pytest.mark.parametrize('summary',[
+     '两条未来维护公告，分别导致7.6和13mcm/d的容量损失。',
+     '两项未来公告分别有7.6mcm/d和13mcm/d不可用容量。',
+    ])
+    def test_unnamed_explicit_pair_binds_evidenced_notices(actual,summary):
+     row,ctx,p,_=setup(actual);b=json.loads(row['raw_content'][0]);b['news_impact']['summary']=summary;b['analysis']['summary']=summary
+>    a._validate_notice_source_facts(b,ctx,p)
+
+tests/test_seventh_source_scope.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+result = {'source_fact_checks': {'fact_contract_version': 'operator-facts-2.2', 'operator_notices': [{'id': 'N0', 'facility': '...容量约束→看涨'], 'negation_or_reversal': [], 'priced_in_comment': 'price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格', ...}, ...}
+context = {'as_of': '2026-10-21T03:55:01.110265+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1....3 mcm/d; available: 124.3; unavailable: 13.0. Reason: Yearly maintenance. Remarks: Extended maintenance.', ...}], ...}
+prepared = {'as_of': '2026-10-21T03:55:01.110265+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1... 'facts': 'Reason: Yearly maintenance. Remarks: Extended maintenance.', 'time': '2026-10-20T20:13:18+00:00', ...}, ...}
+_date_checked = False
+
+    def _validate_notice_source_facts(result: dict, context: dict, prepared: dict, *, _date_checked: bool = False) -> None:
+        """Validate each cited notice against its own type and capacity fields.
+    
+        This replaces the old N0 correction probe in the inference path. It never
+        rewrites outputs or compares another N alias / an aggregate with N0.
+        """
+        from .evidence import exact_capacity_fields
+        if not _date_checked and 'close_forecast' in result:
+            branches=response_schema(bool(result.get('detail')),prepared)['$defs']['CloseForecast'].get('oneOf',[])
+            close=result.get('close_forecast') or {}
+            if branches and not any(
+                    close.get('direction')==branch['properties']['direction']['const']
+                    and close.get('evidence_status')==branch['properties']['evidence_status']['const']
+                    and all(close.get(field) in branch['properties'][field]['enum'] for field in ('summary','basis'))
+                    for branch in branches):
+>               raise ValueError('close_forecast主方向与主summary/basis来源条件分支不一致；反向失效情景不能充当另一方向的唯一主解释')
+E               ValueError: close_forecast主方向与主summary/basis来源条件分支不一致；反向失效情景不能充当另一方向的唯一主解释
+
+ttf_news/analysis.py:1363: ValueError
+____________ test_actual_detail_start_days_resolve_correct_notices _____________
+
+actual = {'schema_version': 'seventh-source-scope-actual-v1', 'source_record': {'file': 'reports/repair_2026-10-20/production_s...da34a61b26f67aeda1a860854e2'}, 'analysis_id': 'd7628bcf-d68a-4d14-8ce0-20bc21beaa42', 'original_status': 'failed', ...}
+
+    def test_actual_detail_start_days_resolve_correct_notices(actual):
+     row,ctx,p,_=setup(actual,True);body=json.loads(row['raw_content'][1]);before=copy.deepcopy(body)
+>    a._validate_notice_source_facts(body,ctx,p)
+
+tests/test_seventh_source_scope.py:50: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+result = {'source_fact_checks': {'fact_contract_version': 'operator-facts-2.2', 'operator_notices': [{'id': 'N0', 'facility': '...量约束但未实现'], 'negation_or_reversal': [], 'priced_in_comment': 'price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格', ...}, ...}
+context = {'as_of': '2026-10-21T03:55:02.635301+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1....3 mcm/d; available: 124.3; unavailable: 13.0. Reason: Yearly maintenance. Remarks: Extended maintenance.', ...}], ...}
+prepared = {'as_of': '2026-10-21T03:55:02.635301+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1... 'facts': 'Reason: Yearly maintenance. Remarks: Extended maintenance.', 'time': '2026-10-20T20:13:18+00:00', ...}, ...}
+_date_checked = False
+
+    def _validate_notice_source_facts(result: dict, context: dict, prepared: dict, *, _date_checked: bool = False) -> None:
+        """Validate each cited notice against its own type and capacity fields.
+    
+        This replaces the old N0 correction probe in the inference path. It never
+        rewrites outputs or compares another N alias / an aggregate with N0.
+        """
+        from .evidence import exact_capacity_fields
+        if not _date_checked and 'close_forecast' in result:
+            branches=response_schema(bool(result.get('detail')),prepared)['$defs']['CloseForecast'].get('oneOf',[])
+            close=result.get('close_forecast') or {}
+            if branches and not any(
+                    close.get('direction')==branch['properties']['direction']['const']
+                    and close.get('evidence_status')==branch['properties']['evidence_status']['const']
+                    and all(close.get(field) in branch['properties'][field]['enum'] for field in ('summary','basis'))
+                    for branch in branches):
+>               raise ValueError('close_forecast主方向与主summary/basis来源条件分支不一致；反向失效情景不能充当另一方向的唯一主解释')
+E               ValueError: close_forecast主方向与主summary/basis来源条件分支不一致；反向失效情景不能充当另一方向的唯一主解释
+
+ttf_news/analysis.py:1363: ValueError
+_ test_plural_pair_warning_does_not_assert_a_sum_and_later_condition_cannot_erase_it[\u4e0d\u80fd\u5408\u8ba120.6mcm/d\u3002-True] _
+
+actual = {'schema_version': 'seventh-source-scope-actual-v1', 'source_record': {'file': 'reports/repair_2026-10-20/production_s...da34a61b26f67aeda1a860854e2'}, 'analysis_id': 'd7628bcf-d68a-4d14-8ce0-20bc21beaa42', 'original_status': 'failed', ...}
+tail = '不能合计20.6mcm/d。', allowed = True
+
+    @pytest.mark.parametrize('tail,allowed',[
+     ('不能合计20.6mcm/d。',True),
+     ('合计20.6mcm/d，若需求上升价格可能上涨。',False),
+    ])
+    def test_plural_pair_warning_does_not_assert_a_sum_and_later_condition_cannot_erase_it(actual,tail,allowed):
+     row,ctx,p,_=setup(actual);body=json.loads(row['raw_content'][0])
+     claim='两条未来维护公告分别有7.6和13mcm/d容量损失，'+tail
+     for section in ['news_impact','analysis']:body[section]['summary']=claim
+>    if allowed:a._validate_notice_source_facts(body,ctx,p)
+
+tests/test_seventh_source_scope.py:187: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+result = {'source_fact_checks': {'fact_contract_version': 'operator-facts-2.2', 'operator_notices': [{'id': 'N0', 'facility': '...容量约束→看涨'], 'negation_or_reversal': [], 'priced_in_comment': 'price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格', ...}, ...}
+context = {'as_of': '2026-10-21T03:55:01.110265+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1....3 mcm/d; available: 124.3; unavailable: 13.0. Reason: Yearly maintenance. Remarks: Extended maintenance.', ...}], ...}
+prepared = {'as_of': '2026-10-21T03:55:01.110265+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1... 'facts': 'Reason: Yearly maintenance. Remarks: Extended maintenance.', 'time': '2026-10-20T20:13:18+00:00', ...}, ...}
+_date_checked = False
+
+    def _validate_notice_source_facts(result: dict, context: dict, prepared: dict, *, _date_checked: bool = False) -> None:
+        """Validate each cited notice against its own type and capacity fields.
+    
+        This replaces the old N0 correction probe in the inference path. It never
+        rewrites outputs or compares another N alias / an aggregate with N0.
+        """
+        from .evidence import exact_capacity_fields
+        if not _date_checked and 'close_forecast' in result:
+            branches=response_schema(bool(result.get('detail')),prepared)['$defs']['CloseForecast'].get('oneOf',[])
+            close=result.get('close_forecast') or {}
+            if branches and not any(
+                    close.get('direction')==branch['properties']['direction']['const']
+                    and close.get('evidence_status')==branch['properties']['evidence_status']['const']
+                    and all(close.get(field) in branch['properties'][field]['enum'] for field in ('summary','basis'))
+                    for branch in branches):
+>               raise ValueError('close_forecast主方向与主summary/basis来源条件分支不一致；反向失效情景不能充当另一方向的唯一主解释')
+E               ValueError: close_forecast主方向与主summary/basis来源条件分支不一致；反向失效情景不能充当另一方向的唯一主解释
+
+ttf_news/analysis.py:1363: ValueError
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/fastapi/testclient.py:1
+  .venv/lib/python3.10/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_future_capacity_pressure_scope.py::test_fresh_analyze_and_diagnostic_collector_explicitly_receive_the_same_metadata_index
+FAILED tests/test_seventh_source_scope.py::test_actual_first_pair_is_valid_capacity_but_wrong_price_clock_stays_failed
+FAILED tests/test_seventh_source_scope.py::test_unnamed_explicit_pair_binds_evidenced_notices[\u4e24\u6761\u672a\u6765\u7ef4\u62a4\u516c\u544a\uff0c\u5206\u522b\u5bfc\u81f47.6\u548c13mcm/d\u7684\u5bb9\u91cf\u635f\u5931\u3002]
+FAILED tests/test_seventh_source_scope.py::test_unnamed_explicit_pair_binds_evidenced_notices[\u4e24\u9879\u672a\u6765\u516c\u544a\u5206\u522b\u67097.6mcm/d\u548c13mcm/d\u4e0d\u53ef\u7528\u5bb9\u91cf\u3002]
+FAILED tests/test_seventh_source_scope.py::test_actual_detail_start_days_resolve_correct_notices
+FAILED tests/test_seventh_source_scope.py::test_plural_pair_warning_does_not_assert_a_sum_and_later_condition_cannot_erase_it[\u4e0d\u80fd\u5408\u8ba120.6mcm/d\u3002-True]
+6 failed, 1517 passed, 1 warning, 375 subtests passed in 63.97s (0:01:03)

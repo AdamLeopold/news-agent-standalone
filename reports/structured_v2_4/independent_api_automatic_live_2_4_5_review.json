@@ -1,0 +1,66 @@
+{
+  "reviewed_at": "2026-10-22T17:06:13.282377+00:00",
+  "reviewer": "structured_review agent, read-only actual output auditor",
+  "scope": "Final2.4.5 naturally dispatched source live brief and automatically generated English, complete saved source/context. No model/API/service/DB/source action.",
+  "harness_report": {
+    "file": "reports/structured_v2_4/api_automatic_live_2_4_5.json",
+    "sha256": "baba4e72792fc2bf1ac87065899a74f55a3ea12067d77d59a2f5c4172681919b",
+    "status": "passed",
+    "stage_count": 9
+  },
+  "actual": {
+    "file": "reports/structured_v2_4/api_automatic_live_2_4_5_artifacts/current_live_actual.json",
+    "sha256": "c41efcfbc3e37c00941702b8de7d2c7642ff316745f21e6421ffdfcf286b42d9",
+    "analysis_id": "eb7daf2d-98eb-4f31-9cfc-fd12bfa14a34",
+    "status": "completed"
+  },
+  "english_actual": {
+    "file": "reports/structured_v2_4/api_automatic_live_2_4_5_artifacts/current_live_english_actual.json",
+    "sha256": "f4a6c4cad1ba90cd923a439cc736263d4176bdd44a2fcf8fe11b7b56b9de5639",
+    "analysis_id": "eb7daf2d-98eb-4f31-9cfc-fd12bfa14a34",
+    "translation_id": "9eed1a49-f9aa-434c-afcd-09af75b32487",
+    "status": "completed"
+  },
+  "overall": "Naturally dispatched live plus automatic English segment passed with no confirmed P1/P2 fact/sign/timing or bilingual decision inconsistency. Preserve the coarse tender-vs-contract P3; this is not a fresh-publication sample.",
+  "model_calls": 3,
+  "automatic_english_calls": 0,
+  "binding_errors": [],
+  "english_cjk_fields": [],
+  "catalog_sha256": "6cf047609c11fcd4f8eba8a0883addf914e4f4396faed4d28c2801f302d7634b",
+  "typed_plan_sha256": "ab8ac06c94964eb716ae5437ad528d80c7a84a2a8c07da9f4e0b7a51a0bb43db",
+  "semantic_findings": [
+    "The real source is Gasunie launching a wind-power PPA tender, published July24. It is not a current natural-gas production, LNG cargo or final gas-demand increase.",
+    "API metadata now refers to publisher_article_id420503 while prior local data used420279; previous body authority had no excerpt. This migration is not accepted as an immutable publisher-record source revision.",
+    "The publisher updatedAtOctober21T22:05Z is also before the current window startingOctober22T15:15Z. Current observation/known time does not become new original publication or a current fact-revision clock.",
+    "Background0 is appropriate for this old wind procurement source. No40MW electricity procurement is converted into current gas output or gas demand.",
+    "No valid October22 prior-day same-contract anchor is available, so close=null remains null. Earlier price dates are not substituted.",
+    "Automatic English is completed English prose with the exact same original source evidence and typed plan, adding zero model inference calls."
+  ],
+  "p3_findings": [
+    {
+      "fact_id": "F0",
+      "issue": "corporate_contract is a coarse category for a launched procurement tender. The precise stage is seeking a PPA, not an executed PPA award.",
+      "severity_basis": "The source title/quote explicitly retains launches tender. Generic commercial-contract rendering does not assert an executed gas transaction or change supply-demand pressure, and no award volume is invented. The original model metadata/output is preserved rather than silently corrected."
+    }
+  ],
+  "real_workflow_boundary": {
+    "naturally_collector_dispatched": true,
+    "new_engine_task_created": false,
+    "fresh_news_workflow_satisfied": false,
+    "meaning": "Actual publisher discovery/enrichment/version update, task dispatch, local20b brief and automatic English ran. This sample is an old-publication authority migration, so no fresh-current-window news latency or semantic accuracy is claimed."
+  },
+  "linked_final_manual_review": {
+    "file": "reports/structured_v2_4/independent_api_manual_2_4_5_review.json",
+    "sha256": "27b5cc0ecf4dbf908a9f120ee5ee3d048a589ca5fc1d1368f3a29e95daba46a7"
+  },
+  "supporting_preservation_evidence": {
+    "file": "reports/structured_v2_4/post_resume_preservation_2_4_5.json",
+    "sha256": "f92881906dba63426e87f3ed958635fb54d16ff0d244fc2b502b6689f8e693ef",
+    "reviewer_action": "Read saved preservation evidence; did not modify or independently rerun Store operations."
+  },
+  "remaining_boundary": [
+    "This output review does not itself verify final GitHub deployment, public API reachability or UI language switching.",
+    "No verified genuine same-publisher ordinary revision pair exists in the audited724-pair local set; the separate positive revision model check explicitly uses constructed version history.",
+    "No official settlement accuracy or independently evaluated trading performance is established."
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-10-21T07:57:45.194507+00:00",
+  "status": "confirmed_invalid_pending_root_preflight_and_application",
+  "scope": "Append-only review for automatic7e6485d3; do not rewrite raw/result or count as whole workflow.",
+  "evidence": {
+    "file": "reports/repair_2026-10-20/independent_post_resume_7e6485d3_full_review_v2_3.json",
+    "sha256": "f8a0bdddefc6137f3895519e0e4f43420c569a7dc18ea73dac0d524e5dd55d7a"
+  },
+  "actual_record": {
+    "file": "reports/repair_2026-10-20/production_post_resume_7e6485d3_actual_v2_3.json",
+    "sha256": "2337d3552d01148700b5939cf4500723983925fe641fcc6eb9ca4222eb693391"
+  },
+  "pending_reviews": [
+    {
+      "analysis_id": "7e6485d3-0d43-4dc4-b7e1-1fb42c6d1640",
+      "protected_hashes": {
+        "input_snapshot": "71a0b95cdae5a71ae8c586d6eec955f742b345c973d9c70cb7cba0e6c6baeb11",
+        "result": "6d7ff3be8cd73de09bea518ca3a160b2d07ca7f673c6730bf71fc94e4bc3f8fd",
+        "detail_result": null
+      },
+      "confirmed_invalid": true,
+      "review": {
+        "review_id": "capacity-supply-scope-7e6485d3-0d43-4dc4-b7e1-1fb42c6d1640-brief-v1",
+        "status": "invalid",
+        "reason_code": "v2_3_announced_capacity_not_measured_current_supply",
+        "affected_parts": [
+          "brief"
+        ],
+        "reviewer": "independent_post_resume_7e6485d3_full_review",
+        "message_zh": "简报把公告不可用容量13 mcm/d写成当前维护导致的13 mcm/d供给受限，并将类别未给的N3设施称为油田；输入未提供相应实际供给量观测。原预测保留，本简报未通过容量与实际供给范围复核。",
+        "message_en": "The brief describes13 mcm/d of announced unavailable capacity as13 mcm/d of currently constrained supply and calls the unspecified N3 facility an oil field. The input provides no measured actual supply restriction of that magnitude. The original prediction is preserved; the brief fails the capacity-versus-actual-supply scope review."
+      }
+    }
+  ],
+  "preflight_required": "Root must perform exact stored-field hash preflight before normal append-only application. Auditor used captured objects only and did not access or modify DB."
+}

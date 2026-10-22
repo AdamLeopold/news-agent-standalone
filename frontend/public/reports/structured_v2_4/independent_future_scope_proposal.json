@@ -1,0 +1,76 @@
+{
+  "created_at": "2026-10-22T16:27:44.476727+00:00",
+  "scope": "Read-only minimal generic proposal; no core/source/database edits and no model requests.",
+  "root_cause_report": "independent_role_scope_diagnostic.json",
+  "scope_diff": "@@ _ordinary_transmission, after exact LNG-export channel and before regional background\n if role=='lng_export' and region in {'unspecified','region_only'}:\n     return ['expectation','longer_term'],'global_lng_export_expectations'\n+if kind=='future_supply' and region in {'region_only','unspecified'}:\n+    return ['expectation','longer_term'],'conditional_regional_future_supply_expectations'\n if region=='region_only':return ['background'],'regional_background'",
+  "rendering_contract": {
+    "zh": "区域未来供给的条件预期；欧洲/全球LNG市场联系仍待评估",
+    "en": "conditional regional future-supply expectations; European/global-LNG market linkage remains to be assessed"
+  },
+  "condition_contract": "For this new conditional channel, use the existing regional_link_required scenario condition rather than implying that an already established market transmission merely becomes stronger.",
+  "weight_prompt_one_general_sentence": "For conditional_regional_future_supply_expectations, evaluate market linkage from the supplied source evidence; scope eligibility does not establish European/global-LNG physical supply, and weight=0 remains valid when the connection or present-window materiality is unsupported.",
+  "unchanged": [
+    "Fact type, source quote, selected evidence IDs, metadata role and model classification output are never repaired or silently replaced.",
+    "No company-specific patterns, role string replacements, direction overrides, mandatory nonzero importance or label-distribution targets.",
+    "Exact lng_export receives the more precise global_lng_export_expectations channel.",
+    "Historical, corporate/technology, generic import-facility and region-only observed end-use/supply remain background."
+  ],
+  "expected_contrasts": [
+    {
+      "facts": "future supply project / upstream / region_only / nonhistorical",
+      "scopes": [
+        "expectation",
+        "longer_term"
+      ],
+      "channel": "conditional_regional_future_supply_expectations",
+      "prohibitions": [
+        "current_physical",
+        "direct_european_channel",
+        "claim established global-LNG linkage"
+      ],
+      "weight": "model-selected, including zero"
+    },
+    {
+      "facts": "future supply project / lng_export / region_only or unspecified / nonhistorical",
+      "scopes": [
+        "expectation",
+        "longer_term"
+      ],
+      "channel": "global_lng_export_expectations",
+      "weight": "model-selected, including zero"
+    },
+    {
+      "facts": "observed US raw-gas supply increase / upstream / region_only / nonhistorical",
+      "scopes": [
+        "background"
+      ]
+    },
+    {
+      "facts": "US regional end-use demand increase / end_use / region_only / nonhistorical",
+      "scopes": [
+        "background"
+      ]
+    },
+    {
+      "facts": "historical project, any role/region",
+      "scopes": [
+        "background"
+      ]
+    },
+    {
+      "facts": "corporate contract, technology or generic import facility, any role/region",
+      "scopes": [
+        "background"
+      ]
+    },
+    {
+      "facts": "future upstream supply project / europe / nonhistorical",
+      "scopes": [
+        "expectation",
+        "longer_term"
+      ],
+      "channel": "european_source_channel"
+    }
+  ],
+  "acceptance_not_required": "The next real model run need not have any particular nonzero importance or up/down/flat label; semantic source facts, available conditional channel, model-chosen importance and final derived label must agree."
+}

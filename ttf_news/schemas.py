@@ -1,12 +1,13 @@
 """Validated, display-ready output contract for the standalone news analyst."""
 
-from typing import Literal
+from typing import Literal, Annotated
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 
 Direction = Literal["extreme_up", "up", "flat", "down", "extreme_down"]
 SignalStrength = Literal["weak", "moderate", "strong"]
+EvidenceText = Annotated[str, Field(min_length=3,max_length=450)]
 
 
 class StrictModel(BaseModel):
@@ -24,10 +25,10 @@ class NewsImpact(StrictModel):
     contextual_news_score: float = Field(ge=-3, le=3)
     confidence: float = Field(ge=0, le=1)
     signal_strength: SignalStrength
-    summary: str = Field(min_length=1)
-    bullish_evidence: list[str]
-    bearish_evidence: list[str]
-    neutralizing_evidence: list[str]
+    summary: str = Field(min_length=1,max_length=350)
+    bullish_evidence: list[EvidenceText] = Field(max_length=3)
+    bearish_evidence: list[EvidenceText] = Field(max_length=3)
+    neutralizing_evidence: list[EvidenceText] = Field(max_length=3)
 
     @model_validator(mode="after")
     def validate_score_direction(self):
@@ -35,30 +36,43 @@ class NewsImpact(StrictModel):
             raise ValueError("看涨新闻方向必须对应正的 contextual_news_score")
         if self.direction in {"down", "extreme_down"} and self.contextual_news_score >= 0:
             raise ValueError("看跌新闻方向必须对应负的 contextual_news_score")
+        if self.direction in {"up", "extreme_up"} and not self.bullish_evidence:
+            raise ValueError("看涨结论必须有具体看涨证据；不能只填方向")
+        if self.direction in {"down", "extreme_down"} and not self.bearish_evidence:
+            raise ValueError("看跌结论必须有具体看跌证据；不能只填方向")
         return self
 
 
 class CloseForecast(StrictModel):
-    direction: Direction
+    direction: Direction | None
     confidence: float = Field(ge=0, le=1)
-    summary: str = Field(min_length=1)
-    basis: str = Field(min_length=1)
-    extreme_move_risk: str | None = None
+    summary: str = Field(min_length=1,max_length=350)
+    basis: str = Field(min_length=1,max_length=600)
+    extreme_move_risk: str | None = Field(default=None,max_length=300)
+    evidence_status: Literal["forecast", "insufficient_evidence"] = "forecast"
+
+    @model_validator(mode="after")
+    def validate_evidence_status(self):
+        if self.evidence_status == "insufficient_evidence" and self.direction is not None:
+            raise ValueError("收盘信息不足时direction必须为null，不得填flat")
+        if self.evidence_status == "forecast" and self.direction is None:
+            raise ValueError("有效收盘预判必须提供五档方向之一")
+        return self
 
 
 class Analysis(StrictModel):
-    summary: str = Field(min_length=1)
-    evidence: list[str]
-    negation_or_reversal: list[str]
-    priced_in_comment: str = Field(min_length=1)
+    summary: str = Field(min_length=1,max_length=450)
+    evidence: list[EvidenceText] = Field(min_length=1,max_length=3)
+    negation_or_reversal: list[EvidenceText] = Field(max_length=3)
+    priced_in_comment: str = Field(min_length=1,max_length=350)
     matched_terms: list[str]
-    historical_comparisons: list[str]
+    historical_comparisons: list[EvidenceText] = Field(max_length=3)
 
 
 class Scenarios(StrictModel):
-    bullish: str = Field(min_length=1)
-    base: str = Field(min_length=1)
-    bearish: str = Field(min_length=1)
+    bullish: str = Field(min_length=12,max_length=600)
+    base: str = Field(min_length=12,max_length=600)
+    bearish: str = Field(min_length=12,max_length=600)
 
 
 class DetailAnalysis(StrictModel):
@@ -81,6 +95,9 @@ class AnalysisResult(StrictModel):
     references: list[Reference]
     missing_fields: list[str]
     detail: DetailAnalysis | None = None
+    # New generations may copy a source-normalization table; legacy records
+    # have no such table. It is metadata, not model-generated price evidence.
+    source_fact_checks: dict | None = None
 
 
 LABELS: dict[str, str] = {

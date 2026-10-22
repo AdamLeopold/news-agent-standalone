@@ -1,0 +1,73 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T07:41:47.985645+00:00",
+  "scope": "Final generated-contract placement and minimal append-only21identity source binding.",
+  "final_analysis": {
+    "file": ".runtime/operator-factual-grammar-proposal-v3-final-integration/ttf_news/analysis.py",
+    "sha256": "781127633591c780709be6cc43d1a18c0c44a61a6ef873160778c82671bbe2cb"
+  },
+  "placement_diff": {
+    "file": ".runtime/operator-factual-grammar-proposal-v3-final-integration/final-integration.diff",
+    "sha256": "97e5b7759abb6e7b31947b4d5ceeb1f9108da00b7227a9f53b55eb0ef0946513"
+  },
+  "zero_call_actual_equivalence": {
+    "file": ".runtime/operator-factual-grammar-proposal-v3-final-integration/v3-integration-zero-call-equivalence.json",
+    "sha256": "47721e60588da3c3a5d072a3731e38201b5e87ebab0e1c1810d986c0d40adb9e"
+  },
+  "actual_v3_body_review": {
+    "file": "reports/repair_2026-10-20/independent_operator_factual_prose_v3_actual_review_v2_3.json",
+    "sha256": "8f4bd88d402bcd93b6d2c909272339f012f66a57bffc3a9fb7e1b7ce38d8f1eb"
+  },
+  "placement_review": {
+    "economic_notice_validator_AST_exactly_restored_to5fbb": true,
+    "source_prose_helper_AST_unchanged_froma8_actual_source": true,
+    "all_other_existing_functions_except_response_schema_and_NewsAnalyst_AST_unchanged": true,
+    "NewsAnalyst_AST_exact_original_after_removing_only_two_generated_contract_calls": true,
+    "strict_generated_contract_runs_after_all_original_semantic_checks_and_last_in_diagnostics": true,
+    "no_original_gate_bypass_no_output_or_direction_rewrite": true,
+    "partial_capacity_calls_preserve_original_contract": true
+  },
+  "final_manifest": {
+    "file": "reports/repair_2026-10-20/current_operator_prose_placement_final_twenty_plus_detail_manifest_v2_3.json",
+    "sha256": "be24fc4d538fcb3ce7b1acda88b16753d909a67e0864f0240d43bc25086da28c"
+  },
+  "prior_d56_manifest": {
+    "file": "reports/repair_2026-10-20/current_operator_prose_twenty_plus_detail_manifest_v2_3.json",
+    "sha256": "014e50a823d67ad5d0653a52258f48c533b330477be4aff5c2295d5bff65285d"
+  },
+  "official83_path_proof": {
+    "file": "reports/repair_2026-10-20/full_path_equivalence_v2_3.b5b1ec7e667795db.json",
+    "sha256": "b5b1ec7e667795db985bc8d92d40bb332c6d8cdd7a06abf3e290bf7e586be15c"
+  },
+  "prior_identity_append": {
+    "file": "reports/repair_2026-10-20/independent_current_operator_prose_identity_binding_append_v2_3.json",
+    "sha256": "a364f9abfcaa8f9e7858c85f53f93301a6d78c8c7ee6b1d424bac91dc29005f3"
+  },
+  "all21_actual_files_inputs_original_generation_results_directions_strict_states_unchanged": true,
+  "all21_complete_final_paths_equal": true,
+  "all_final_source_bytes_match_manifest": true,
+  "new_model_calls_for_binding": 0,
+  "counts_unchanged": {
+    "safe_returned_briefs": 15,
+    "failed_no_result_briefs": 5,
+    "historical_actual_brief_calls": 31,
+    "safe_isolated_detail_with_P3": 1,
+    "historical_actual_detail_calls": 2
+  },
+  "original_actual_v3_generation_source": "a8e8e0125f3174bc1298b0a58b4aa5690dd3fab2c06c56162529c998cd1a5803",
+  "final_integration_source": "781127633591c780709be6cc43d1a18c0c44a61a6ef873160778c82671bbe2cb",
+  "generation_source_not_relabelled": true,
+  "rejected_anchors_independently_checked": true,
+  "rejected_anchor_cases": [
+    "anchor_real_manual_missing_prevday"
+  ],
+  "rejected_anchor_record_sha256": "bfdd05a106d4376c5096dddcbb9eb84521fe2075853cc3f2e7c928990cbf982f",
+  "source_adoption_verdict": "finite_placement_approved_no_new_reproduced_P2",
+  "whole_product_release_ready": false,
+  "production12_and_complete_CN_EN_reviews": "pending",
+  "all8_known_error_families_remain_open": true,
+  "prior11_complete_production_failures_unchanged": true,
+  "market_accuracy_or_forecast_availability_not_claimed": true,
+  "no_model_network_database_or_root_source_writes_by_auditor": true
+}

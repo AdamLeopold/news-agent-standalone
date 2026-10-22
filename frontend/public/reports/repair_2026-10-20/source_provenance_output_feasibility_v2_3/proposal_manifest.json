@@ -1,0 +1,213 @@
+{
+  "schema_version": "ttf-source-provenance-private-proposal-2-narrow",
+  "status": "prepared_not_model_tested_not_production_ready",
+  "new_model_calls": 0,
+  "network_calls": 0,
+  "database_access": false,
+  "root_modified": false,
+  "root_source_sha256": {
+    "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+    "ttf_news/analysis.py": "8ac01ca8120def7f963cdeab8f4eb0bd2dae4c71eb921a9ab5941f70bf1fe1a5",
+    "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+    "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+    "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+    "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+    "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+    "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+    "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+    "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+    "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+    "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987",
+    "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+    "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+    "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+    "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+    "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+    "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+    "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+    "ttf_news/public_gateway.py": "08990e223d5e7d1d348967c9625fd29fc2d1e7e58bb000c964b9cfea43b59952",
+    "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+    "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+    "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+    "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+    "ttf_news/semantics.py": "3fcdf8708e49be0bc7060e0e97f45fbfcf5262dabdfc431d70aca0a748791ff7",
+    "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+    "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+    "ttf_news/translation.py": "d47b232a5f77ea68e2d5bc5d092021e9727e555c6b1dd702922325519982d7c5"
+  },
+  "private_validation_base_analysis_sha256": "8ac01ca8120def7f963cdeab8f4eb0bd2dae4c71eb921a9ab5941f70bf1fe1a5",
+  "private_candidate_sha256": "f5ae74f4c5aaab81c8c40e9db737aab2b9baaf6d716d51eae18510df8131792a",
+  "private_override_sha256": "8e8b13a9817edf21811efbe8fdda9b449e8d3cc7d666bac2365956ecc000db87",
+  "frozen_contexts": [
+    {
+      "case": "ninth_manual",
+      "actual_record": {
+        "file": "reports/repair_2026-10-20/production_ninth_manual_brief_failed_actual_v2_3.json",
+        "sha256": "2ef79ddad979f6696a8e5153fde38a55c45b047af20dac551fd83b1dbe9db676"
+      },
+      "analysis_id": "c4fd5ed5-ae2c-4e43-8ae5-c75faa314810",
+      "frozen_input_sha256": "46d1e2802acfaa102d01c1008318920093300596e53933a8b608e680bfdbb3fc",
+      "baseline_actual_attempts": 2,
+      "original_first_request_signature": {
+        "system_prompt_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "context_sha256": "e741597a9cf7c035da2e43dcac4dc2f929a72c9ee8e912baeeb8b74a00b89e1a",
+        "response_schema_sha256": "a0f97c3e3393246bf6c5a7f13949e71df1fe21e992070e08330b33729af859f8",
+        "num_ctx": 16384,
+        "num_predict": 3072,
+        "request_reasoning": "medium"
+      },
+      "baseline_request": {
+        "system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "context_sha256": "e741597a9cf7c035da2e43dcac4dc2f929a72c9ee8e912baeeb8b74a00b89e1a",
+        "schema_sha256": "a0f97c3e3393246bf6c5a7f13949e71df1fe21e992070e08330b33729af859f8",
+        "input_token_estimate": 9101,
+        "request_options": {
+          "model": "gpt-oss:20b",
+          "temperature": 0,
+          "seed": 17,
+          "num_ctx": 16384,
+          "num_predict": 3072,
+          "request_reasoning": "medium"
+        }
+      },
+      "candidate_request": {
+        "system_sha256": "7d790987cb54ec5e109c2ee8f0c2803596c73bf51d7866e87c91bd3122436cba",
+        "context_sha256": "e741597a9cf7c035da2e43dcac4dc2f929a72c9ee8e912baeeb8b74a00b89e1a",
+        "schema_sha256": "76c560a46041512dfbae68d4fc5b241b7b8402a69bddf5441d30d4e1091fb472",
+        "input_token_estimate": 9123,
+        "request_options": {
+          "model": "gpt-oss:20b",
+          "temperature": 0,
+          "seed": 17,
+          "num_ctx": 16384,
+          "num_predict": 3072,
+          "request_reasoning": "medium"
+        }
+      },
+      "prepared_source_input_identical": true,
+      "profile_identical": true,
+      "old_raw_copy_burdens": [
+        {
+          "valid_json": true,
+          "raw_output_tokens": 972,
+          "source_table_serialized_tokens": 420,
+          "long_operator_prefix_occurrences": 4,
+          "long_operator_prefix_tokens_sum": 200,
+          "fixed_history_option_occurrences": 0,
+          "fixed_history_option_tokens_sum": 0,
+          "count_boundary": "Token counts are deterministic serialized component estimates, not an attributed causal share of failure or latency."
+        },
+        {
+          "valid_json": true,
+          "raw_output_tokens": 1158,
+          "source_table_serialized_tokens": 420,
+          "long_operator_prefix_occurrences": 6,
+          "long_operator_prefix_tokens_sum": 262,
+          "fixed_history_option_occurrences": 1,
+          "fixed_history_option_tokens_sum": 91,
+          "count_boundary": "Token counts are deterministic serialized component estimates, not an attributed causal share of failure or latency."
+        }
+      ]
+    },
+    {
+      "case": "ninth_current",
+      "actual_record": {
+        "file": "reports/repair_2026-10-20/production_ninth_current_live_actual_v2_3.json",
+        "sha256": "4b8231a5e400b83a2cd872e9294bfe58c2b6b0c7871d6952c56d986b65272ab0"
+      },
+      "analysis_id": "ff3fdde7-4f67-487b-92ea-b612da62941a",
+      "frozen_input_sha256": "f5b8c3ff24a5c1e1b8baa9f8ce986b2676b4e5872cb0702dbbf74344097509c7",
+      "baseline_actual_attempts": 2,
+      "original_first_request_signature": {
+        "system_prompt_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "context_sha256": "09a204652ca8d63fa664a4b697205b0128c5ef787cdbb0a8d669decba38f31e4",
+        "response_schema_sha256": "f7cac24bdd5eb4938b06c42eed3707179e7171cc238b26ff69c0bd087d5e9eb6",
+        "num_ctx": 16384,
+        "num_predict": 3072,
+        "request_reasoning": "medium"
+      },
+      "baseline_request": {
+        "system_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+        "context_sha256": "09a204652ca8d63fa664a4b697205b0128c5ef787cdbb0a8d669decba38f31e4",
+        "schema_sha256": "f7cac24bdd5eb4938b06c42eed3707179e7171cc238b26ff69c0bd087d5e9eb6",
+        "input_token_estimate": 8915,
+        "request_options": {
+          "model": "gpt-oss:20b",
+          "temperature": 0,
+          "seed": 17,
+          "num_ctx": 16384,
+          "num_predict": 3072,
+          "request_reasoning": "medium"
+        }
+      },
+      "candidate_request": {
+        "system_sha256": "7d790987cb54ec5e109c2ee8f0c2803596c73bf51d7866e87c91bd3122436cba",
+        "context_sha256": "09a204652ca8d63fa664a4b697205b0128c5ef787cdbb0a8d669decba38f31e4",
+        "schema_sha256": "76c560a46041512dfbae68d4fc5b241b7b8402a69bddf5441d30d4e1091fb472",
+        "input_token_estimate": 8937,
+        "request_options": {
+          "model": "gpt-oss:20b",
+          "temperature": 0,
+          "seed": 17,
+          "num_ctx": 16384,
+          "num_predict": 3072,
+          "request_reasoning": "medium"
+        }
+      },
+      "prepared_source_input_identical": true,
+      "profile_identical": true,
+      "old_raw_copy_burdens": [
+        {
+          "valid_json": true,
+          "raw_output_tokens": 910,
+          "source_table_serialized_tokens": 370,
+          "long_operator_prefix_occurrences": 2,
+          "long_operator_prefix_tokens_sum": 99,
+          "fixed_history_option_occurrences": 0,
+          "fixed_history_option_tokens_sum": 0,
+          "count_boundary": "Token counts are deterministic serialized component estimates, not an attributed causal share of failure or latency."
+        },
+        {
+          "valid_json": true,
+          "raw_output_tokens": 826,
+          "source_table_serialized_tokens": 370,
+          "long_operator_prefix_occurrences": 2,
+          "long_operator_prefix_tokens_sum": 136,
+          "fixed_history_option_occurrences": 0,
+          "fixed_history_option_tokens_sum": 0,
+          "count_boundary": "Token counts are deterministic serialized component estimates, not an attributed causal share of failure or latency."
+        }
+      ]
+    }
+  ],
+  "planned_intervention": "Remove deterministic source_fact_checks output const, replace full operator evidence prefixes with short source IDs, retain original history enums. Retain complete source input, core system rules, native bounds/labels and all free-prose validators. Display source facts only as separate backend provenance, not model verification.",
+  "model_execution_allowed": false,
+  "actual_context_limit": 2,
+  "candidate_call_limit_per_context": 2,
+  "same_model": "gpt-oss:20b",
+  "same_reasoning": "medium",
+  "same_seed": 17,
+  "quality_gate": "No acceptance based on schema/parser alone. Final prose needs independent source/clock/flow/price/units/causal review; existing ninth-current time-role defect is known despite prior parser acceptance. No label quotas and no best-of selection.",
+  "does_not_claim": "No improvement in availability, correctness or flat distribution is established by zero-call preparation.",
+  "approved_base_source_review": {
+    "file": "reports/repair_2026-10-20/independent_ninth_price_role_marker_final_source_review_v2_3.json",
+    "sha256": "553dc1049e525c6ebbc93a952b6c97bfaa17afb47563b2b203b2aca5f4be21aa"
+  },
+  "runner_sha256": "99e60bca0739129ea18c9540ec416b810e33eebf8d966a29a4351194443c34c7",
+  "prepare_script_sha256": "51e2606a5354f8a04c87b94608fddffcde89e3d517abbfeb1fdc68531a05c91d",
+  "execution_contract": {
+    "contexts": [
+      "ninth_manual",
+      "ninth_current"
+    ],
+    "max_attempts_each": 2,
+    "sequential": true,
+    "no_changed_labels_or_best_of": true,
+    "full_prepared_source_data_must_equal_original_first_request": true,
+    "fixed_budget_policy": "Each actual request must match the corresponding original9request num_ctx/num_predict/input_token_ceiling; otherwise terminate before HTTP. No broader-budget fallback.",
+    "fresh_health_before_every_model_request": true,
+    "require_inference_disabled": true,
+    "actual_execution_needs_explicit_exact_plan_sha": true
+  },
+  "baseline_validation_boundary": "Original9models ran the earlier bcd tree; private43ba only strengthens a price-role guard. Before/after first-request generation changes only the two deterministic copying contracts and one explanatory sentence; second-call feedback may also change through the corrected guard. This is a bounded combined feasibility observation, not a single-factor causal estimate."
+}

@@ -1,0 +1,236 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T05:16:00.767412+00:00",
+  "scope": "Complete independent factual/temporal/supply-demand/price/causal/reference review of this exact private feasibility result and both complete original raw responses. No production adoption, model call, DB or output rewriting.",
+  "case": "ninth_current",
+  "actual_result": {
+    "file": ".runtime/source-provenance-pilot-final/actual-frozen-two-contexts-1/ninth_current/result.json",
+    "sha256": "2583ba2fc37bc57f50e22397e4e2686e598bb0501159bc104221d71015946b9a"
+  },
+  "original_actual_record": {
+    "file": "reports/repair_2026-10-20/production_ninth_current_live_actual_v2_3.json",
+    "sha256": "4b8231a5e400b83a2cd872e9294bfe58c2b6b0c7871d6952c56d986b65272ab0"
+  },
+  "approved_plan": {
+    "file": ".runtime/source-provenance-pilot-final/proposal_manifest.json",
+    "sha256": "dc6875635339a6d462879ca62030956ce213e4efcbe2874f47aaa33dd8679c62"
+  },
+  "candidate_source_review": {
+    "file": "reports/repair_2026-10-20/independent_source_provenance_pilot_final_source_review_v2_3.json",
+    "sha256": "0db12ae9cb186d7121c2e3977bc537f025a67a84781e43813837ff4757f3aba3"
+  },
+  "candidate_analysis_sha256": "f5ae74f4c5aaab81c8c40e9db737aab2b9baaf6d716d51eae18510df8131792a",
+  "base_source_sha256": "8ac01ca8120def7f963cdeab8f4eb0bd2dae4c71eb921a9ab5941f70bf1fe1a5",
+  "frozen_context_sha256": "f5b8c3ff24a5c1e1b8baa9f8ce986b2676b4e5872cb0702dbbf74344097509c7",
+  "original_package_status": "failed",
+  "model_result_present": false,
+  "actual_model_request_count": 2,
+  "elapsed_seconds": 64.42518679099157,
+  "as_of": "2026-10-21T04:47:03.624559+00:00",
+  "target_window": {
+    "trade_date": "2026-10-21",
+    "window_start": "2026-10-20T15:15:00+00:00",
+    "window_end": "2026-10-21T15:15:00+00:00",
+    "cutoff_utc": "2026-10-21T15:15:00+00:00",
+    "cutoff_local": "2026-10-21T17:15:00+02:00",
+    "cutoff_singapore": "2026-10-21T23:15:00+08:00",
+    "display_timezone": "Europe/Amsterdam",
+    "seconds_to_close": 37676,
+    "calendar_source": "https://www.ice.com/publicdocs/ICE_Endex_Trading_Schedule.pdf",
+    "calendar_quality": "official_2026_2027",
+    "boundary": "[previous_settlement, current_settlement)"
+  },
+  "source_notice_intervals": {
+    "N0_manual_or_current_copy_and_N1_original_7_6": {
+      "same_underlying_notice": true,
+      "start": "2026-10-22T04:00:00+00:00",
+      "end": "2026-10-23T04:00:00+00:00",
+      "unavailable_capacity_mcm_d": 7.6,
+      "available_capacity_mcm_d": 129.8,
+      "role": "future_as_of_and_outside21Oct_close_window"
+    },
+    "N2_13": {
+      "start": "2026-10-21T04:00:00+00:00",
+      "end": "2026-10-22T04:00:00+00:00",
+      "unavailable_capacity_mcm_d": 13.0,
+      "available_capacity_mcm_d": 124.3,
+      "facility_type": "Other; specific category not supplied",
+      "role": "already_started_notice_with_unknown_actual_flow",
+      "revision": "end shortened23Oct04Z to22Oct04Z"
+    }
+  },
+  "price_reference": {
+    "available": true,
+    "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+    "contract_name": "Nov26",
+    "price_type": "reference",
+    "intraday": {
+      "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+      "contract_id": "6277389",
+      "contract_name": "Nov26",
+      "value": 87.73,
+      "observed_at": "2026-10-21T04:36:00+00:00",
+      "available_at": "2026-10-21T04:46:42.899486+00:00",
+      "unit": "EUR/MWh",
+      "source": "ICE public delayed market data",
+      "source_url": "https://www.ice.com/products/27996665/Dutch-TTF-Gas-Futures/data",
+      "price_type": "delayed_last_trade",
+      "verified_settlement": false,
+      "minimum_delay_minutes": 15,
+      "volume": 175975,
+      "age_seconds": 663,
+      "stale": false
+    },
+    "verified": false,
+    "previous_price": 85.062,
+    "price_date": "2026-10-20",
+    "price_known_at": "2026-10-20T23:27:31.613875+00:00",
+    "reference_source": "ICE public chart",
+    "source_url": "https://www.ice.com/marketdata/api/productguide/charting/data/historical?marketId=6277389&historicalSpan=3",
+    "extreme_threshold": 4.546830435110782,
+    "sigma60": 2.273415217555391,
+    "threshold_frozen_as_of": "2026-10-21T04:47:03.624559+00:00",
+    "flat_delta": 0.3,
+    "observation_count": 702,
+    "risk_flags": [
+      "价格类型尚未验证为ICE官方日结算，不用于官方结算评分"
+    ],
+    "market_baseline": {
+      "available": true,
+      "kind": "observed_reference_move",
+      "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+      "as_of": "2026-10-21T04:47:03.624559+00:00",
+      "verified_settlement": false,
+      "flat_band": 0.3,
+      "interpretation": "已观察同合约参考变化；延续或反转均为待验证情景，不是目标日已实现结算",
+      "previous_price": 85.062,
+      "previous_date": "2026-10-20",
+      "latest_price": 87.73,
+      "observed_delta": 2.668,
+      "observed_direction": "up",
+      "observed_at": "2026-10-21T04:36:00+00:00",
+      "available_at": "2026-10-21T04:46:42.899486+00:00",
+      "price_type": "delayed_last_trade",
+      "source_url": "https://www.ice.com/products/27996665/Dutch-TTF-Gas-Futures/data",
+      "reference_source_url": "https://www.ice.com/marketdata/api/productguide/charting/data/historical?marketId=6277389&historicalSpan=3",
+      "minimum_delay_minutes": 15,
+      "extreme_threshold": 4.546830435110782
+    },
+    "settlement_anchor": {
+      "available": true,
+      "target_trade_date": "2026-10-21",
+      "expected_previous_trade_date": "2026-10-20",
+      "reference_date": "2026-10-20",
+      "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+      "known_time_precision": "exact",
+      "scope": "仅目标日前一交易日同合约参考价可作前结算比较；其他日价不是昨收",
+      "reason": "exact_previous_trading_day_same_contract"
+    }
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "request": {
+        "file": ".runtime/source-provenance-pilot-final/actual-frozen-two-contexts-1/ninth_current/attempt-1-request.json",
+        "sha256": "9ca78826d0972cc276ea91eb39d902b4b4a75df85d9bffd6f6a0ccc2decf4bd9"
+      },
+      "response": {
+        "file": ".runtime/source-provenance-pilot-final/actual-frozen-two-contexts-1/ninth_current/attempt-1-response.json",
+        "sha256": "d05b3d5328c91ba0e0c44f338a728a6b68948203aa9a46e323058bf1cdc3bf49"
+      },
+      "raw_content_sha256": "048370bdb74c3c23146b2f8268398dbaa1d7137cf5b9eb9bfa71dfe9146d9527",
+      "validation_stage": "fact_or_mechanism",
+      "validation_error": "news_impact.summary:Gassco未来维护公告不能写成当前实际停供或流量损失；应写未来容量风险并保留起止时间；news_impact.summary:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景；news_impact.bullish_evidence[0]:证据栏与供需机制相反；请移动/重算证据，不能把供应增加放作看涨或供应减少放作看跌",
+      "validation_errors": [
+        "news_impact.summary:Gassco未来维护公告不能写成当前实际停供或流量损失；应写未来容量风险并保留起止时间",
+        "news_impact.summary:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景",
+        "news_impact.bullish_evidence[0]:证据栏与供需机制相反；请移动/重算证据，不能把供应增加放作看涨或供应减少放作看跌"
+      ],
+      "source_input_frozen_sha256": "f5b8c3ff24a5c1e1b8baa9f8ce986b2676b4e5872cb0702dbbf74344097509c7",
+      "prepared_source_facts_sha256": "19360ac4592756517e45667d45ad80d9a9e439397eecb96069c95036edac64b2"
+    },
+    {
+      "attempt": 2,
+      "request": {
+        "file": ".runtime/source-provenance-pilot-final/actual-frozen-two-contexts-1/ninth_current/attempt-2-request.json",
+        "sha256": "7f5ccde25ea7b63928c763f35a04bbab6b03ac0bd3aaab31f2fda7cc4f8cf1dc"
+      },
+      "response": {
+        "file": ".runtime/source-provenance-pilot-final/actual-frozen-two-contexts-1/ninth_current/attempt-2-response.json",
+        "sha256": "fba86e56080b015153d93d9d5fc1cc4f95cafa87530a8a057a99a6fec8a8f49b"
+      },
+      "raw_content_sha256": "ebff8390994e266ae05f6c8f69831915609b675df1f21f73facf3e4dcd49d3bf",
+      "validation_stage": "parse",
+      "validation_error": "[{\"type\":\"value_error\",\"loc\":[\"news_impact\"],\"msg\":\"Value error, 看涨结论必须有具体看涨证据；不能只填方向\",\"ctx\":{\"error\":\"看涨结论必须有具体看涨证据；不能只填方向\"}}]",
+      "validation_errors": null,
+      "source_input_frozen_sha256": "f5b8c3ff24a5c1e1b8baa9f8ce986b2676b4e5872cb0702dbbf74344097509c7",
+      "prepared_source_facts_sha256": "19360ac4592756517e45667d45ad80d9a9e439397eecb96069c95036edac64b2"
+    }
+  ],
+  "full_body_read": true,
+  "root_or_production_modified": false,
+  "material_known_logic_errors": [
+    {
+      "priority": "P2",
+      "family": "unknown_actual_flow_promoted_to_zero_loss",
+      "attempt": 1,
+      "paths": [
+        "news_impact.summary",
+        "analysis.summary"
+      ],
+      "quotes": [
+        "2026‑10‑20公布的两条计划维护公告分别导致Troll气田和其他设施的可用容量分别减少7.6 mcm/d和13.0 mcm/d，属于未来或当前公告的容量约束，尚未产生实际流量损失。市场基准价已从85.062 EUR/MWh升至87.73 EUR/MWh，但缺乏直接的价格反应证据，故对TTF价格的净影响被视为平稳。",
+        "两条计划维护公告导致Troll设施可用容量下降，但未产生实际流量损失，市场基准已上涨，整体对TTF价格的净影响为平稳。"
+      ],
+      "reason": "Categorical尚未产生/未产生实际流量损失 covers both the future7.6notice and the current13notice. N2 already began04:00 before as_of, and no measured flow series establishes no loss. This cannot be excused as a specific future event not yet acting; the source explicitly says future or current and the final analysis generalizes both."
+    },
+    {
+      "priority": "P2",
+      "family": "wrong_evidence_bucket_for_explicit_TTF_up",
+      "attempt": 2,
+      "path": "news_impact.bearish_evidence",
+      "quotes": [
+        "[N0] Gassco Troll计划维护导致可用产能下降7.6 mcm/d → TTF价格上行机制",
+        "[N2] Gassco Troll计划维护导致可用产能下降13.0 mcm/d → TTF价格上行机制"
+      ],
+      "reason": "Both evidence strings explicitly state a TTF price-up mechanism but are placed in the bearish bucket; theup conclusion has no bullish evidence. This is an actual bucket/structured consistency error, not a requirement to change the net label."
+    },
+    {
+      "priority": "P2",
+      "family": "nonoverlapping_capacity_rate_aggregation",
+      "attempt": 2,
+      "path": "analysis.summary",
+      "quote": "两条Gassco Troll计划维护公告导致未来两天内可用产能下降20.6 mcm/d，未确认实际流量损失，预期对TTF价格产生上行压力。",
+      "reason": "20.6mcm/d adds7.6 and13.0 rates over sequential, non-overlapping intervals as one capacity decline. It is not a valid same-time capacity loss; an explicitly integrated volume would have different units and would still not establish actual flows."
+    }
+  ],
+  "secondary_diagnostic_qualifications": [
+    {
+      "attempt": 1,
+      "original_diagnostic": "news_impact.bullish_evidence[0]供应增加放看涨",
+      "quote": "[N0] 7.6 mcm/d 计划容量损失 → TTF 供给约束压力上升",
+      "classification": "secondary_polarity_diagnostic_not_supported_by_this_text",
+      "reason": "A planned capacity-loss risk increasing supply constraints is a legitimate bullish mechanism. This specific evidence sentence does not assert physical supply increase. The first raw is nevertheless genuinely rejected for its global unknown-to-zero-flow claim."
+    },
+    {
+      "attempt": 2,
+      "original_terminal": "parse/structured evidence consistency",
+      "reason": "The parser stopped before every factual gate could run; the20.6rate claim is identified by independent full-prose review and is not counted as a delivered result."
+    }
+  ],
+  "positive_and_limited_findings": [
+    "The second summary separately lists the correct21→22 and22→23 notice intervals before contradicting them with a20.6rate aggregate inanalysis.summary.",
+    "Both drafts retain same-contract observed baseline evidence and pricingunknown; these do not resolve actual-flow or evidence-bucket errors.",
+    "The second historicalE1 comparison is explicitly a known past reference change and noncausal.",
+    "No detail or English workflow was executed in this two-brief feasibility pilot."
+  ],
+  "independently_safe_delivered_output": false,
+  "pilot_correctness_go": false,
+  "overall_release_passed": false,
+  "new_model_calls_by_reviewer": 0,
+  "database_access": false,
+  "network_calls_by_reviewer": 0,
+  "source_modification": false,
+  "verdict": "genuine_two_attempt_failure_null_result_with_factual_and_slot_errors"
+}

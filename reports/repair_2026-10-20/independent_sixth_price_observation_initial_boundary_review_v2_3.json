@@ -1,0 +1,42 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T03:48:20.341529+00:00",
+  "scope": "Finite paired unknown-pricing causal scope check, private candidate only, no model/API/DB/source mutation.",
+  "candidate_semantics_sha256": "81358df9cb32a39da57e66f6da5bc0ab112caeadd761a3b28fdee1d7b3014dec",
+  "candidate_proof_sha256": "baad7f2ddf3aabcfe2a88680bbd7c871febb242040c3b6ed72facb2b1a4cd81b",
+  "approval": "needs_same_scope_false_positive_fix",
+  "controls": [
+    {
+      "text": "是否已计价未知，且已知同合约基准上涨，因此条件预计收盘上涨。",
+      "expected": "allow: separate unknown note followed by independent known baseline premise",
+      "observed": "rejected",
+      "false_positive": true
+    },
+    {
+      "text": "计价状态未知，且来源确认需求下降，因此预计TTF价格下跌。",
+      "expected": "allow this local unknown guard: independent demand premise; other source validators still apply",
+      "observed": "rejected",
+      "false_positive": true
+    },
+    {
+      "text": "计价状态未知；已知同合约基准上涨，据此作条件上涨预测。",
+      "expected": "allow",
+      "observed": "allowed",
+      "false_positive": false
+    },
+    {
+      "text": "基于市场基准观察到的价格上涨，且无证据表明上述公告已被计价，故预测收盘价上涨。",
+      "expected": "reject unknown explicitly used as extra premise",
+      "observed": "rejected",
+      "false_positive": false
+    }
+  ],
+  "cause": "premise_tail containing arbitrary 且/并且/加之 marks the earlier unknown as an evidential premise even when the later clause introduces an independent known directional fact.",
+  "minimal_requested_change": "Do not borrow arbitrary conjunctions across the later independent premise; retain explicit causal/additional prefix before the unknown or an unknown immediately followed by the directional conclusion. Do not require a concession word for a valid unknown note.",
+  "root_source_unchanged": true,
+  "raw_actuals_and_old_candidate_results_preserved": true,
+  "model_calls": 0,
+  "network_calls": 0,
+  "database_access": false
+}

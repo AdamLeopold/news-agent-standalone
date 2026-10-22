@@ -1,0 +1,62 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T04:07:03.266247+00:00",
+  "scope": "Private SSE slot cleanup candidate only; no network performance/cap/API scope changes. Pure in-memory MockTransport/ASGI review and tests; no service/API/model/DB/Git actions.",
+  "candidate": {
+    "file": ".runtime/gateway-stream-cleanup-proposal/ttf_news/public_gateway.py",
+    "sha256": "08990e223d5e7d1d348967c9625fd29fc2d1e7e58bb000c964b9cfea43b59952"
+  },
+  "patch": {
+    "file": ".runtime/gateway-stream-cleanup-proposal/candidate.patch",
+    "sha256": "344c3ec986d1fdf2e63e76342267956fb28b97d7e981070b40d6f475d0727ab8"
+  },
+  "proposal_manifest": {
+    "file": ".runtime/gateway-stream-cleanup-proposal/proposal_manifest.json",
+    "sha256": "97c27c324d2fa704e45372fcf29d49defb5eeb3c539a6bda9290b9288737e3f2"
+  },
+  "root_source_before_review": {
+    "file": "ttf_news/public_gateway.py",
+    "sha256": "fac8fe10429bc62a6be241817491d1f35eecdaa7f8a37357cb8dbcab7f43fae5"
+  },
+  "verdict": "finite_scope_source_review_passed",
+  "action_boundary": "Root may apply the exact candidate and independently identity-check/restart only the8766 gateway, then verify public SSE behavior. This audit performed no deployment.",
+  "known_actionable_source_issues": [],
+  "properties_reviewed": [
+    "Slot increment occurs before setup and BaseException cleanup catches setup cancellation as well as HTTPX errors, then rethrows non-HTTP exceptions.",
+    "An idempotent released flag is set before awaiting aclose, preventing duplicate decrements across iterator finally, response ASGI finally and background callback.",
+    "AnyIO shield allows upstream close to complete under cancellation; streams decrement is in a finally, including aclose exceptions.",
+    "Iterator finally covers body failure/cancel; response __call__ finally covers downstream send failure when iterator is suspended at yield.",
+    "True16 active streams still cause429 for the17th; releasing one permits exactly one replacement.",
+    "Allowed routes, CORS/origin policy, request body limits, queue guard and normal responses are untouched."
+  ],
+  "independent_controls": {
+    "file": "reports/repair_2026-10-20/independent_gateway_stream_cleanup_controls_v2_3.json",
+    "sha256": "e152f3d9945adca5262ab2e93f767eb76af75d84d0a20eff8e0998ae1118ec60"
+  },
+  "additional_pure_mock_controls_passed": 2,
+  "existing_test_functions_ast_unchanged": true,
+  "top_level_constants_ast_unchanged": true,
+  "tests": {
+    "passed": 18,
+    "failed": 0,
+    "seconds": 0.2,
+    "junit": {
+      "file": "reports/repair_2026-10-20/independent-gateway-stream-cleanup-tests-v2_3.xml",
+      "sha256": "babfd44ef019fadb8c62cc7f9864b3d823cdfd9129c74f0b893f212871f1945a"
+    },
+    "warnings": [
+      "Already imported anyio pytest assertion rewrite warning",
+      "Existing Starlette TestClient/httpx deprecation warning"
+    ]
+  },
+  "limitations": [
+    "The observed production429/counter diagnosis is supplied by separate read-only observation; this audit does not directly measure the running process memory counter.",
+    "No live SSE recovery is claimed before root deploys and observes it.",
+    "This gateway fix does not validate model analysis, resolve the failed seventh current-live generation, or close production acceptance."
+  ],
+  "source_modified_by_audit": false,
+  "network_sockets": 0,
+  "model_calls": 0,
+  "database_access": false
+}

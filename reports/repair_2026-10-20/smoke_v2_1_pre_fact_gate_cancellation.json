@@ -1,0 +1,15 @@
+{
+  "cancelled_at": "2026-10-20T20:39:50.335925+00:00",
+  "runner_pid": 83595,
+  "reason": "Independent prose review found an accepted source-facility error in the manual brief (Troll production field described as pipeline), and an earlier accepted future well-abandonment action described as completed. Preserve this attempt; do not count structural stages as accepted prose validation.",
+  "cancelled_runner_only": true,
+  "backend_stopped": false,
+  "ollama_stopped": false,
+  "persisted_analysis_jobs_deleted": false,
+  "captures": {
+    "attempted_v2_1_pre_fact_gate_smoke.json": "3b1e3e6b27dea8d2304df9d01ac195fd539ef01702de9cb3ceaadd3ebb1a3293",
+    "attempted-v2-1-pre-fact-gate-smoke.log": "d9bd9012ab7a9015a310c7bf1e25644d79614ef40d4e51a304ca83ea8dd6da32"
+  },
+  "manual_analysis_id": "d2ef1250-6ed3-4a68-9396-e6ed4addbfb3",
+  "live_analysis_id": "4783a016-ef55-4cf5-accc-799e4584f2aa"
+}

@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-10-21T03:37:11.782833+00:00",
+  "status": "confirmed_invalid_pending_application",
+  "scope": "Source-bound reaction strength and causal role of unknown pricing; original predictions and labels remain unchanged.",
+  "evidence": {
+    "file": "reports/repair_2026-10-20/independent_production_sixth_cn_english_full_review_v2_3.json",
+    "sha256": "7f07d19bcedd5c9293c1ec5e4eb817943f86f993f95ac4148a620634757dc11d"
+  },
+  "pending_reviews": [
+    {
+      "analysis_id": "e348df19-fd5a-4eb6-a30f-dcd0c4065f24",
+      "protected_hashes": {
+        "input_snapshot": "3f5ac5837b0f9d4e3ff69686154b48f50533b43a8691b4decc21dccf038fc673",
+        "result": "432ef3d1a6932c980f6721fdd5658483ddcd811449e0363f606c935f390cd20f",
+        "detail_result": null
+      },
+      "confirmed_invalid": true,
+      "review": {
+        "review_id": "price-reasoning-e348df19-fd5a-4eb6-a30f-dcd0c4065f24-brief-v1",
+        "status": "invalid",
+        "reason_code": "v2_3_reaction_strength_without_observation",
+        "affected_parts": [
+          "brief"
+        ],
+        "reviewer": "independent_production_sixth_cn_english_full_review",
+        "message_zh": "摘要将没有独立反应观测的消息写成“市场反应不明显”。原预测全文保留，这条简报未通过价格反应依据复核。",
+        "message_en": "The summary asserts an indistinct market reaction without an independent reaction observation. The original prediction is preserved; this brief fails price-reaction evidence review."
+      }
+    },
+    {
+      "analysis_id": "c5e8b981-885a-42b5-94c7-529fa93fd550",
+      "protected_hashes": {
+        "input_snapshot": "e48626f2689f618d7dfa0da58eae67d36e3af97a82ebe9e1da803624dc18462f",
+        "result": "06cf9fdb9b394c8efd7fdaabf311b753ce0f0152eb94c9854e191660205e5812",
+        "detail_result": null
+      },
+      "confirmed_invalid": true,
+      "review": {
+        "review_id": "price-reasoning-c5e8b981-885a-42b5-94c7-529fa93fd550-brief-v1",
+        "status": "invalid",
+        "reason_code": "v2_3_unknown_pricing_used_as_directional_support",
+        "affected_parts": [
+          "brief"
+        ],
+        "reviewer": "independent_production_sixth_cn_english_full_review",
+        "message_zh": "收盘依据把“没有证据证明已计价”接入上涨理由；未知计价本身不能增加看涨依据。已知行情基准及原预测保留，这条简报未通过推理复核。",
+        "message_en": "The closing basis uses a lack of proof of pricing-in as additional bullish support. Unknown pricing is not a directional factor. The observed market baseline and original prediction are preserved; this brief fails reasoning review."
+      }
+    }
+  ]
+}

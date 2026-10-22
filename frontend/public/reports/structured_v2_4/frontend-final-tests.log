@@ -1,0 +1,170 @@
+
+> ttf-news-terminal@1.0.0 test
+> node --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: Pages keeps the real API result and does not substitute snapshot predictions
+ok 1 - Pages keeps the real API result and does not substitute snapshot predictions
+  ---
+  duration_ms: 54.33325
+  type: 'test'
+  ...
+# Subtest: An offline API preserves published news, pagination and a dated snapshot notice
+ok 2 - An offline API preserves published news, pagination and a dated snapshot notice
+  ---
+  duration_ms: 11.640416
+  type: 'test'
+  ...
+# Subtest: Offline manual analysis reports unavailable instead of inventing an analysis
+ok 3 - Offline manual analysis reports unavailable instead of inventing an analysis
+  ---
+  duration_ms: 8.073334
+  type: 'test'
+  ...
+# Subtest: offline English versions and market data use dated cached files
+ok 4 - offline English versions and market data use dated cached files
+  ---
+  duration_ms: 7.308667
+  type: 'test'
+  ...
+# Subtest: invalid brief and independently reviewed detail stay separate without rewriting forecasts
+ok 5 - invalid brief and independently reviewed detail stay separate without rewriting forecasts
+  ---
+  duration_ms: 0.928208
+  type: 'test'
+  ...
+# Subtest: daily reference identity follows the verified target-session anchor without changing source facts
+ok 6 - daily reference identity follows the verified target-session anchor without changing source facts
+  ---
+  duration_ms: 0.148541
+  type: 'test'
+  ...
+# Subtest: missing or malformed direction never becomes a prediction
+ok 7 - missing or malformed direction never becomes a prediction
+  ---
+  duration_ms: 0.057542
+  type: 'test'
+  ...
+# Subtest: detail direction changes are explicit for both signals without modifying the brief
+ok 8 - detail direction changes are explicit for both signals without modifying the brief
+  ---
+  duration_ms: 0.461625
+  type: 'test'
+  ...
+# Subtest: source failure is distinct from an empty successful poll
+ok 9 - source failure is distinct from an empty successful poll
+  ---
+  duration_ms: 0.13325
+  type: 'test'
+  ...
+# Subtest: detail can acquire or lose a closing basis without rewriting an unavailable brief as flat
+ok 10 - detail can acquire or lose a closing basis without rewriting an unavailable brief as flat
+  ---
+  duration_ms: 0.163916
+  type: 'test'
+  ...
+# Subtest: confidence supports model fractions and qualitative levels without claiming calibration
+ok 11 - confidence supports model fractions and qualitative levels without claiming calibration
+  ---
+  duration_ms: 0.093625
+  type: 'test'
+  ...
+# Subtest: deadline handles missing and elapsed time without fabricating a timer
+ok 12 - deadline handles missing and elapsed time without fabricating a timer
+  ---
+  duration_ms: 0.073125
+  type: 'test'
+  ...
+# Subtest: only source HTTP(S) links can be opened
+ok 13 - only source HTTP(S) links can be opened
+  ---
+  duration_ms: 0.253708
+  type: 'test'
+  ...
+# Subtest: failed analysis preserves a visible failure state
+ok 14 - failed analysis preserves a visible failure state
+  ---
+  duration_ms: 0.279875
+  type: 'test'
+  ...
+# Subtest: publication delay never treats backfill or date-only records as real-time latency
+ok 15 - publication delay never treats backfill or date-only records as real-time latency
+  ---
+  duration_ms: 0.127583
+  type: 'test'
+  ...
+# Subtest: model duration uses observed values and rejects absent or invalid times
+ok 16 - model duration uses observed values and rejects absent or invalid times
+  ---
+  duration_ms: 0.042208
+  type: 'test'
+  ...
+# Subtest: Chinese remains the default and saved language is validated
+ok 17 - Chinese remains the default and saved language is validated
+  ---
+  duration_ms: 0.326167
+  type: 'test'
+  ...
+# Subtest: the complete analysis workflow has translated UI labels
+ok 18 - the complete analysis workflow has translated UI labels
+  ---
+  duration_ms: 0.229208
+  type: 'test'
+  ...
+# Subtest: dynamic timestamps, measured delays and counts retain their values
+ok 19 - dynamic timestamps, measured delays and counts retain their values
+  ---
+  duration_ms: 0.313959
+  type: 'test'
+  ...
+# Subtest: brief and detail disagreement explains the review and frozen forecast in both languages
+ok 20 - brief and detail disagreement explains the review and frozen forecast in both languages
+  ---
+  duration_ms: 0.0585
+  type: 'test'
+  ...
+# Subtest: original news, model text, URLs and user input are excluded from UI translation
+ok 21 - original news, model text, URLs and user input are excluded from UI translation
+  ---
+  duration_ms: 1.876416
+  type: 'test'
+  ...
+# Subtest: translation is idempotent and preserves unrecognized source material
+ok 22 - translation is idempotent and preserves unrecognized source material
+  ---
+  duration_ms: 0.285334
+  type: 'test'
+  ...
+# Subtest: monthly CFD chart matches the explicitly identified delivery month
+ok 23 - monthly CFD chart matches the explicitly identified delivery month
+  ---
+  duration_ms: 0.71125
+  type: 'test'
+  ...
+# Subtest: line chart uses real irregular timestamps and rejects invalid observations
+ok 24 - line chart uses real irregular timestamps and rejects invalid observations
+  ---
+  duration_ms: 0.261459
+  type: 'test'
+  ...
+# Subtest: quote comparison cannot silently cross a contract roll
+ok 25 - quote comparison cannot silently cross a contract roll
+  ---
+  duration_ms: 0.9845
+  type: 'test'
+  ...
+# Subtest: candles use observed OHLC instead of inventing ranges from closing prices
+ok 26 - candles use observed OHLC instead of inventing ranges from closing prices
+  ---
+  duration_ms: 0.642125
+  type: 'test'
+  ...
+1..26
+# tests 26
+# suites 0
+# pass 26
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 315.638333

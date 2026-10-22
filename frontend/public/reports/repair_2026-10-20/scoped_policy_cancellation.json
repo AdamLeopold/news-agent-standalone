@@ -1,0 +1,16 @@
+{
+  "canceled_at": "2026-10-20T17:43:19.175452+00:00",
+  "pid": 39284,
+  "verified_args": "/Library/Frameworks/Python.framework/Versions/3.10/Resources/Python.app/Contents/MacOS/Python scripts/validate-news-logic.py --engine candidate --semantic-high-scope operator_notice --run-id scoped-validation",
+  "reason": "Weak exploration failed twice: unsupported unpriced assertion. A source-independent symmetric pricing-evidence prompt clarification requires a complete new prompt-SHA run; retain all completed records.",
+  "completed_records": {
+    "reports/repair_2026-10-20/candidate-scoped-validation/weak_exploration_no_quote.json": "5081cc786a25610058e24b09bf40d049b541da2aa5042a143ba7f410eb356b4f",
+    "reports/repair_2026-10-20/candidate-scoped-validation/warm_heating_demand.json": "8592dbb8652646eb045693477b38caea36f6505c8c7a655e36509bfdf0210fee",
+    "reports/repair_2026-10-20/candidate-scoped-validation/supply_loss_40.json": "78786af9e2762f3ce0fbf227051b202eb3057fb99c2ba590a5d4f65244468926",
+    "reports/repair_2026-10-20/candidate-scoped-validation/supply_restore_40.json": "5614599b74cee314a7f0a0c325b2b3e1580fe75107ec8f657cc791585eaa9be2"
+  },
+  "incomplete_current_case": "cold_heating_demand",
+  "backend_or_model_stopped": false,
+  "completed_case_count": 4,
+  "inflight_identified_from": "scoped-validation.log last START without a terminal record"
+}

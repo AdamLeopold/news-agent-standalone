@@ -42,6 +42,16 @@ def test_english_translation_preserves_judgments_scores_numbers_and_citations():
     assert output['_meta']['output_language']=='en'
 
 
+def test_internal_source_fact_checks_are_not_translated_or_rewritten():
+    original=result()
+    original['source_fact_checks']={'operator_notices':[{'id':'N3','notice_type':'非计划','state_description':'公告时段已结束，实际流量未知'}],
+                                    'pricing_observation':{'announcement_reaction_evidence_available':False,'observed_delta':.628}}
+    texts,keep=prepare_translation(original)
+    assert not any('source_fact_checks' in name for name in texts)
+    output=restore_translation(original,translated_values(texts),texts,keep)
+    assert output['source_fact_checks']==original['source_fact_checks']
+
+
 @pytest.mark.parametrize('defect', ['missing', 'chinese', 'placeholder', 'invented_number'])
 def test_invalid_translation_is_an_error_instead_of_a_forecast(defect):
     original=result(); texts,keep=prepare_translation(original)

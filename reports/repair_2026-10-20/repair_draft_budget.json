@@ -1,0 +1,93 @@
+{
+  "model_calls": 0,
+  "measurements": [
+    {
+      "case": "real_nyhamna",
+      "mode": "semantic",
+      "record": "reports/repair_2026-10-20/candidate-contract-validation/real_nyhamna.json",
+      "input_tokens": 11879,
+      "input_ceiling": 12800,
+      "window_count": 9,
+      "source_facts_unchanged": true,
+      "draft": {
+        "version": "ttf-untrusted-repair-draft-1",
+        "previous_raw_sha256": "ff651f56c64e2f84e095a381a01b3dd4b3945601c2090d3bda26b94b316c94f1",
+        "is_evidence": false,
+        "included": true,
+        "payload_sha256": "15a5ebde8535d303d438738d11563fa3c72e9e5841108455f433ab296a08da58",
+        "payload_tokens": 238,
+        "input_token_estimate": 11879,
+        "input_token_ceiling": 12800,
+        "source_facts_sha256": "bc3501782acd7f82bca892620e5f84fd1386762aa71f498e550b6434e41b95a2",
+        "summary_character_limit": 280,
+        "evidence_limit": 6
+      }
+    },
+    {
+      "case": "real_nyhamna",
+      "mode": "length",
+      "record": "reports/repair_2026-10-20/candidate-contract-validation/real_nyhamna.json",
+      "input_tokens": 11879,
+      "input_ceiling": 12200,
+      "window_count": 9,
+      "source_facts_unchanged": true,
+      "draft": {
+        "version": "ttf-untrusted-repair-draft-1",
+        "previous_raw_sha256": "ff651f56c64e2f84e095a381a01b3dd4b3945601c2090d3bda26b94b316c94f1",
+        "is_evidence": false,
+        "included": true,
+        "payload_sha256": "15a5ebde8535d303d438738d11563fa3c72e9e5841108455f433ab296a08da58",
+        "payload_tokens": 238,
+        "input_token_estimate": 11879,
+        "input_token_ceiling": 12200,
+        "source_facts_sha256": "bc3501782acd7f82bca892620e5f84fd1386762aa71f498e550b6434e41b95a2",
+        "summary_character_limit": 280,
+        "evidence_limit": 6
+      }
+    },
+    {
+      "case": "real_eni",
+      "mode": "semantic",
+      "record": "reports/repair_2026-10-20/candidate-provenance-validation/real_eni.json",
+      "input_tokens": 12120,
+      "input_ceiling": 12800,
+      "window_count": 11,
+      "source_facts_unchanged": true,
+      "draft": {
+        "version": "ttf-untrusted-repair-draft-1",
+        "previous_raw_sha256": "94e6a1433a9de34904eb23fdaf83f2ec269040ecc6db38efaaf84c424521bcce",
+        "is_evidence": false,
+        "included": true,
+        "payload_sha256": "0489f5bc9cd019299f34a3a9262feb13b0c3e6523eda3599bdba8829d85485e9",
+        "payload_tokens": 221,
+        "input_token_estimate": 12120,
+        "input_token_ceiling": 12800,
+        "source_facts_sha256": "a70c94fb18e644fcdf7a9d16777a6c6b51a6e5d3360a7509d75b47452b67c847",
+        "summary_character_limit": 280,
+        "evidence_limit": 6
+      }
+    },
+    {
+      "case": "real_eni",
+      "mode": "length",
+      "record": "reports/repair_2026-10-20/candidate-provenance-validation/real_eni.json",
+      "input_tokens": 12120,
+      "input_ceiling": 12200,
+      "window_count": 11,
+      "source_facts_unchanged": true,
+      "draft": {
+        "version": "ttf-untrusted-repair-draft-1",
+        "previous_raw_sha256": "94e6a1433a9de34904eb23fdaf83f2ec269040ecc6db38efaaf84c424521bcce",
+        "is_evidence": false,
+        "included": true,
+        "payload_sha256": "0489f5bc9cd019299f34a3a9262feb13b0c3e6523eda3599bdba8829d85485e9",
+        "payload_tokens": 221,
+        "input_token_estimate": 12120,
+        "input_token_ceiling": 12200,
+        "source_facts_sha256": "a70c94fb18e644fcdf7a9d16777a6c6b51a6e5d3360a7509d75b47452b67c847",
+        "summary_character_limit": 280,
+        "evidence_limit": 6
+      }
+    }
+  ]
+}

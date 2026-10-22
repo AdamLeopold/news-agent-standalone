@@ -1,0 +1,55 @@
+{
+  "observed_at": "2026-10-20T20:51:26.200794+00:00",
+  "scope": "Read-only before-final publication dependency audit; no CLI writing action, models, services, database, git or publishing. Current public readiness checklist remains intentionally unanchored/pending, so its not_ready is not a final deployment verdict.",
+  "publication_state": "before_final_unanchored_evidence",
+  "no_source_mutations": true,
+  "no_model_calls": true,
+  "no_database_access": true,
+  "source_hashes_preserved": true,
+  "findings": [
+    {
+      "owner": "reports/repair_2026-10-20/evaluation_contract_revision_v1.json",
+      "dependency": "reports/repair_2026-10-20/comparison_cases.json",
+      "expected_source_sha256": "8d6f9202d21a3d27ac0f6714802d8da2eda76d321e4c820c0d4f73aae41eacd5",
+      "root_source_sha256": "8d6f9202d21a3d27ac0f6714802d8da2eda76d321e4c820c0d4f73aae41eacd5",
+      "actual_public_sha256": "1fc3694595e5ae8018eab817ee7d393e48c842f5a12fff66649a9faed420e3eb"
+    },
+    {
+      "owner": "reports/repair_2026-10-20/independent_prose_review_reviewwording_v2_1.json",
+      "dependency": "reports/repair_2026-10-20/candidate-reviewwording-validation/anchor_real_manual_missing_prevday.json",
+      "expected_source_sha256": "7cedc9b9a752ce0b53c2ac26330b7d524b0a4ea38cc1b837850e862d822821a5",
+      "root_source_sha256": "7cedc9b9a752ce0b53c2ac26330b7d524b0a4ea38cc1b837850e862d822821a5",
+      "actual_public_sha256": "f5c3150c1749015f3a5eb76280ccc81c597e01a06c341cddc29da6b84070d60c"
+    },
+    {
+      "owner": "reports/repair_2026-10-20/independent_prose_review_reviewwording_v2_1.json",
+      "dependency": "reports/repair_2026-10-20/candidate-anchor-validation/anchor_gap_supply_loss_40.json",
+      "expected_source_sha256": "c9ea67e89d0bd8ab2278e4f7fc1499b0e832a387349d427fe4e10d7d45976b03",
+      "root_source_sha256": "c9ea67e89d0bd8ab2278e4f7fc1499b0e832a387349d427fe4e10d7d45976b03",
+      "actual_public_sha256": "86b6b0c6050109c4d67549e2d9c3bfb84fb00dc1c06971701b3d912f5f7523ad"
+    },
+    {
+      "owner": "reports/repair_2026-10-20/independent_prose_review_reviewwording_v2_1.json",
+      "dependency": "reports/repair_2026-10-20/candidate-anchor-validation/anchor_gap_supply_restore_40.json",
+      "expected_source_sha256": "f6e86c0f81c4f4a529fef803fa9eec762c4219797ea0298841a74ca99c2711e9",
+      "root_source_sha256": "f6e86c0f81c4f4a529fef803fa9eec762c4219797ea0298841a74ca99c2711e9",
+      "actual_public_sha256": "24c525ccb8e02122722699397cb2695b38e1bfe51b3ccbcad887416e895108e2"
+    },
+    {
+      "owner": "reports/repair_2026-10-20/independent_prose_review_reviewwording_v2_1.json",
+      "dependency": "reports/repair_2026-10-20/candidate-anchor-validation/anchor_legal_prevday_weak_market_up.json",
+      "expected_source_sha256": "e736424e2b48f71c4f33ae431ef7ebcdb0a645a78472453e039f3846714cbaf2",
+      "root_source_sha256": "e736424e2b48f71c4f33ae431ef7ebcdb0a645a78472453e039f3846714cbaf2",
+      "actual_public_sha256": "94d1a507f48fe41beae800638d47426cbcb56fa6716e9e0a54ff32857b9846d7"
+    },
+    {
+      "owner": "reports/repair_2026-10-20/error_ui_composite_v2_1.json",
+      "dependency": "reports/repair_2026-10-20/final-unit-tests.xml",
+      "expected_source_sha256": "7dc80ffb5d230970a38be4f5741eeeaf5d0da20d58eef8b2c2920953fac40058",
+      "root_source_sha256": "7dc80ffb5d230970a38be4f5741eeeaf5d0da20d58eef8b2c2920953fac40058",
+      "actual_public_sha256": "65ae42ae30a5332b900a7b83e93c6c4d3840f99ecc476ffb401ca4156522af86"
+    }
+  ],
+  "finding_count": 6,
+  "recommendation": "Keep source byte provenance unchanged. Publish an explicit source/public byte SHA map and use a separate public-copy verification mode for redacted artifacts; never silently replace source hashes or weaken private release checks."
+}

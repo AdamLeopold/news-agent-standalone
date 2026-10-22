@@ -1,0 +1,223 @@
+{
+  "schema_version": "ttf-source-provenance-output-feasibility-conclusion-v1",
+  "created_at": "2026-10-21T05:19:29.536348+00:00",
+  "decision": "NO_GO_DO_NOT_ADOPT",
+  "production_adoption": false,
+  "adopted_new_stage": false,
+  "original_twenty_fixture_and_stages_unchanged": true,
+  "raw_not_rewritten_or_backfilled": true,
+  "new_model_calls": 4,
+  "fixed_context_count": 2,
+  "safe_delivered_context_results": 0,
+  "experiment_kind": "private_two_frozen_contexts_sequential_candidate_attempts_not_a_production_workflow",
+  "production_attempt_count_increment": 0,
+  "diagnostic_case_count_increment": 0,
+  "known_error_family_count_increment": 0,
+  "approved_plan": {
+    "file": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/proposal_manifest.json",
+    "sha256": "dc6875635339a6d462879ca62030956ce213e4efcbe2874f47aaa33dd8679c62"
+  },
+  "approved_plan_source_sha256": "dc6875635339a6d462879ca62030956ce213e4efcbe2874f47aaa33dd8679c62",
+  "private_candidate_source_sha256": "f5ae74f4c5aaab81c8c40e9db737aab2b9baaf6d716d51eae18510df8131792a",
+  "validation_base_analysis_sha256": "8ac01ca8120def7f963cdeab8f4eb0bd2dae4c71eb921a9ab5941f70bf1fe1a5",
+  "root_semantics_sha256": "3fcdf8708e49be0bc7060e0e97f45fbfcf5262dabdfc431d70aca0a748791ff7",
+  "immutable_terminal": {
+    "file": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/actual/terminal.json",
+    "sha256": "0b01dcb4e58e97b3890dbc07a68eff51fa1a254f6734dc0e96cc416737850923"
+  },
+  "origin_copy_manifest": {
+    "file": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/origin_copy_manifest.json",
+    "sha256": "4fa327ea5ee9899796f5d499510df1215462afbb031a9a02f75357ff5474b5f4"
+  },
+  "source_and_instruction_archive": {
+    "file": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/source_utf8_archive.json",
+    "sha256": "6a53fced2bae27126f586e22d5cdc8e55918692a6437702150cc01a22da698c4"
+  },
+  "model_results": [
+    {
+      "case": "ninth_manual",
+      "immutable_result": {
+        "file": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/actual/ninth_manual/result.json",
+        "sha256": "2e01dae4f73d76d37ab00f526b351b565b580c95190de6a021583749953fa30e"
+      },
+      "recorded_machine_status": "completed_pending_independent_prose_review",
+      "result_returned": true,
+      "actual_model_requests": 2,
+      "independently_safe_delivered": false,
+      "raw_calls": [
+        {
+          "case": "ninth_manual",
+          "attempt": 1,
+          "exact_request": {
+            "file": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/actual/ninth_manual/attempt-1-request.json",
+            "sha256": "c3464afd0304ba949ac4b5797a030f645f11f5e4859c2248c5be0b741595f384"
+          },
+          "exact_response": {
+            "file": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/actual/ninth_manual/attempt-1-response.json",
+            "sha256": "d2d027547c827bbdcd7f9d54f520cd62e5e892ceac2dde9082fdd3eb2fe4a889"
+          },
+          "raw_content_sha256": "0fabe9b7cb87cbc9262a257754cec71c8823e7a87a2ab6458b8514bc923d82a1",
+          "raw_bytes_unmodified": true,
+          "request_reasoning": "medium",
+          "request_options": {
+            "temperature": 0,
+            "seed": 17,
+            "num_ctx": 16384,
+            "num_predict": 3072
+          },
+          "fresh_paused_backend_pid": 49015,
+          "prompt_eval_count": 9070,
+          "eval_count": 941,
+          "done_reason": "stop",
+          "elapsed_seconds": 32.96208129217848,
+          "system_sha256": "7d790987cb54ec5e109c2ee8f0c2803596c73bf51d7866e87c91bd3122436cba",
+          "prepared_input_sha256": "e741597a9cf7c035da2e43dcac4dc2f929a72c9ee8e912baeeb8b74a00b89e1a",
+          "response_schema_sha256": "76c560a46041512dfbae68d4fc5b241b7b8402a69bddf5441d30d4e1091fb472",
+          "frozen_original_context_sha256": "46d1e2802acfaa102d01c1008318920093300596e53933a8b608e680bfdbb3fc"
+        },
+        {
+          "case": "ninth_manual",
+          "attempt": 2,
+          "exact_request": {
+            "file": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/actual/ninth_manual/attempt-2-request.json",
+            "sha256": "f035f0c66f3c3d5ee0746a293317ac1c6fb22c26a2a4dcfe702e77e91034962f"
+          },
+          "exact_response": {
+            "file": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/actual/ninth_manual/attempt-2-response.json",
+            "sha256": "2cc9dad33f7586c8fc8a933a0ff92f89130b2554392e201973bf323c8650919b"
+          },
+          "raw_content_sha256": "b179f6da281a7b2f183779137c2e80a6bc404fa392dc41d281b4d4a3eacbcd8f",
+          "raw_bytes_unmodified": true,
+          "request_reasoning": "medium",
+          "request_options": {
+            "temperature": 0,
+            "seed": 17,
+            "num_ctx": 16384,
+            "num_predict": 3072
+          },
+          "fresh_paused_backend_pid": 49015,
+          "prompt_eval_count": 9611,
+          "eval_count": 1277,
+          "done_reason": "stop",
+          "elapsed_seconds": 32.64882650016807,
+          "system_sha256": "575ed08520bf8d9b39d0bb21c0a75c1c6da7c260f54c980d136a0266ec3e434d",
+          "prepared_input_sha256": "d64c250e96c0facdb03f06c6e25c119ed12692cf075030efbf0a5355913fc02f",
+          "response_schema_sha256": "76c560a46041512dfbae68d4fc5b241b7b8402a69bddf5441d30d4e1091fb472",
+          "frozen_original_context_sha256": "46d1e2802acfaa102d01c1008318920093300596e53933a8b608e680bfdbb3fc"
+        }
+      ]
+    },
+    {
+      "case": "ninth_current",
+      "immutable_result": {
+        "file": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/actual/ninth_current/result.json",
+        "sha256": "2583ba2fc37bc57f50e22397e4e2686e598bb0501159bc104221d71015946b9a"
+      },
+      "recorded_machine_status": "failed",
+      "result_returned": false,
+      "actual_model_requests": 2,
+      "independently_safe_delivered": false,
+      "raw_calls": [
+        {
+          "case": "ninth_current",
+          "attempt": 1,
+          "exact_request": {
+            "file": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/actual/ninth_current/attempt-1-request.json",
+            "sha256": "9ca78826d0972cc276ea91eb39d902b4b4a75df85d9bffd6f6a0ccc2decf4bd9"
+          },
+          "exact_response": {
+            "file": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/actual/ninth_current/attempt-1-response.json",
+            "sha256": "d05b3d5328c91ba0e0c44f338a728a6b68948203aa9a46e323058bf1cdc3bf49"
+          },
+          "raw_content_sha256": "048370bdb74c3c23146b2f8268398dbaa1d7137cf5b9eb9bfa71dfe9146d9527",
+          "raw_bytes_unmodified": true,
+          "request_reasoning": "medium",
+          "request_options": {
+            "temperature": 0,
+            "seed": 17,
+            "num_ctx": 16384,
+            "num_predict": 3072
+          },
+          "fresh_paused_backend_pid": 49015,
+          "prompt_eval_count": 8884,
+          "eval_count": 1136,
+          "done_reason": "stop",
+          "elapsed_seconds": 29.81197795807384,
+          "system_sha256": "7d790987cb54ec5e109c2ee8f0c2803596c73bf51d7866e87c91bd3122436cba",
+          "prepared_input_sha256": "09a204652ca8d63fa664a4b697205b0128c5ef787cdbb0a8d669decba38f31e4",
+          "response_schema_sha256": "76c560a46041512dfbae68d4fc5b241b7b8402a69bddf5441d30d4e1091fb472",
+          "frozen_original_context_sha256": "f5b8c3ff24a5c1e1b8baa9f8ce986b2676b4e5872cb0702dbbf74344097509c7"
+        },
+        {
+          "case": "ninth_current",
+          "attempt": 2,
+          "exact_request": {
+            "file": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/actual/ninth_current/attempt-2-request.json",
+            "sha256": "7f5ccde25ea7b63928c763f35a04bbab6b03ac0bd3aaab31f2fda7cc4f8cf1dc"
+          },
+          "exact_response": {
+            "file": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/actual/ninth_current/attempt-2-response.json",
+            "sha256": "fba86e56080b015153d93d9d5fc1cc4f95cafa87530a8a057a99a6fec8a8f49b"
+          },
+          "raw_content_sha256": "ebff8390994e266ae05f6c8f69831915609b675df1f21f73facf3e4dcd49d3bf",
+          "raw_bytes_unmodified": true,
+          "request_reasoning": "medium",
+          "request_options": {
+            "temperature": 0,
+            "seed": 17,
+            "num_ctx": 16384,
+            "num_predict": 3072
+          },
+          "fresh_paused_backend_pid": 49015,
+          "prompt_eval_count": 9119,
+          "eval_count": 1348,
+          "done_reason": "stop",
+          "elapsed_seconds": 33.77960741589777,
+          "system_sha256": "f487c98609d66a96d9a49858e90fe3a8915c5d6b41fe153512c3c2d023c9903d",
+          "prepared_input_sha256": "85b0b4625bf99a5536f30ec5ea0425f49c980b04d55507d31471edf492f3199f",
+          "response_schema_sha256": "76c560a46041512dfbae68d4fc5b241b7b8402a69bddf5441d30d4e1091fb472",
+          "frozen_original_context_sha256": "f5b8c3ff24a5c1e1b8baa9f8ce986b2676b4e5872cb0702dbbf74344097509c7"
+        }
+      ]
+    }
+  ],
+  "independent_full_reviews": [
+    {
+      "file": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/independent_reviews/independent_source_provenance_pilot_ninth_manual_actual_review_v2_3.json",
+      "sha256": "89b26cceab90fd62913e487a1e841a69822b6f9f5919e748e42e66f24d2ee139"
+    },
+    {
+      "file": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/independent_reviews/independent_source_provenance_pilot_ninth_current_actual_review_v2_3.json",
+      "sha256": "4d4561a19fa0a69449488d0d2b128bd0ff99c97e75a7a6701ae017b2113035f6"
+    }
+  ],
+  "independent_no_go_decision": {
+    "file": "reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/independent_reviews/independent_source_provenance_pilot_no_go_decision_v2_3.json",
+    "sha256": "430ab9581209834cd52d8e880f6293dc3bbad6b31e14c62d8d62155ff97b9222"
+  },
+  "findings": {
+    "manual": "Final JSON was accepted by the candidate parser but independent full review found a material future-notice/current-window capacity timing error. Backend fact table consistency does not cure free-prose claims.",
+    "current": "Both candidate attempts failed with genuine source/price/evidence-slot defects; result remainsnull. A secondary physical supply-constraint-pressure phrase was incorrectly diagnosed as supply increase; this falsepositive is recorded separately and is not credited as correct model rejection.",
+    "availability_or_causal_improvement_established": false,
+    "lower_output_copy_burden_is_not_correctness": true,
+    "same_input_options_do_not_turn_two_contexts_into_an_accuracy_estimate": true
+  },
+  "intervention": "Only move deterministic source_fact_checks output const to explicitly non-model-verified backend provenance and shorten operator prefixes. Original history enums retained. Private output change was not adopted; approved price-role guard remains an independent root correction.",
+  "existing_family_supplement_only": {
+    "ledger_snapshot": {
+      "file": "reports/repair_2026-10-20/release_known_accepted_errors.json",
+      "sha256": "89fcc67ae1e96849bed796c7288928bbec699f7e220189d129d7fe00cabe1fd8"
+    },
+    "existing_family_id": "v2_3_isolated_price_observation_or_baseline_errors",
+    "status": "open",
+    "observation": "Private manual candidate maps a future announcement into the current settlement window; supplemental temporal/future-scope evidence under the existing timing/baseline family.",
+    "no_production_analysis_row_modified_or_newly_tagged": true,
+    "original_context_ids_are_not_private_output_analysis_ids": true,
+    "new_family_created": false,
+    "resolution_evidence": null,
+    "family_closed": false
+  },
+  "private_report_helper_proposal": "Retained privately and not applied. No source-provenance stage was registered in the root helper.",
+  "no_models_or_http_or_database_during_compilation": true,
+  "does_not_claim": "No production success, resolution, improvement from shorter output, changed label accuracy, changed original2.3diagnostic denominator, or changed priorfailed runs."
+}

@@ -1,0 +1,17 @@
+{
+  "recorded_at": "2026-10-20T20:11:51.910398+00:00",
+  "records": [
+    {
+      "id": "v2_0_missing_previous_trading_day_anchor",
+      "analysis_id": "6601a466-eecc-48f0-82e5-68785d8ac5be",
+      "status": "open",
+      "review_evidence": {
+        "file": "reports/repair_2026-10-20/independent_live_anchor_review_v2_0.json",
+        "sha256": "72d12a2fd1d297505e9dec8dd8f13b8b35502fa69fadb66ae83f4b241c798efd"
+      },
+      "reason": "Target21/required20, reference19 used for relative-yesterday decline; accepted v2.0 wrong anchor. Structural smoke progress cannot validate it.",
+      "resolution_evidence": null
+    }
+  ],
+  "resolution_rule": "Only a source fix plus current-version real model validation of this known error can resolve publication blocker; preserve original canonical input/result and append review."
+}

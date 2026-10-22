@@ -1,0 +1,35 @@
+{
+  "sources": [
+    {
+      "source": "offshore_energy",
+      "status": "ok",
+      "seen": 2670,
+      "created": 0,
+      "revised": 16,
+      "errors": [],
+      "last_error": null
+    },
+    {
+      "source": "equinor",
+      "status": "ok",
+      "seen": 6,
+      "created": 0,
+      "revised": 0,
+      "errors": [],
+      "last_error": null
+    },
+    {
+      "source": "gassco",
+      "status": "ok",
+      "seen": 100,
+      "created": 0,
+      "revised": 100,
+      "errors": [],
+      "last_error": null
+    }
+  ],
+  "total_created": 0,
+  "historical": true,
+  "finished_at": "2026-10-14T03:31:45.367079+00:00"
+}
+Coverage saved; 2914 total public-source news records.

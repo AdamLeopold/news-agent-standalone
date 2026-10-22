@@ -1,0 +1,15 @@
+{
+  "helper_sha256": "07e49fbc82c5acc6987a9a6890e2cce34869895c67f5f2c210c2580a5260747c",
+  "test_names": [
+    "test_operational_anchor_rejection_keeps_original_strict_failure_and_unavailable_status",
+    "test_operational_anchor_rejection_requires_actual_raw_audit_final_path_and_exact_independent_review",
+    "test_operational_anchor_terminal_has_no_subset_availability_quota",
+    "test_operational_anchor_budget_terminal_needs_verified_actual_full_fact_budget_proof",
+    "test_operational_anchor_error_does_not_waive_fresh_production_or_known_error_guard"
+  ],
+  "tests_run": 5,
+  "errors": 0,
+  "failures": 0,
+  "passed": true,
+  "scope": "Only five newly added report-only methods; pure dictionary/fixture proofs. No model, API, service or database operation."
+}

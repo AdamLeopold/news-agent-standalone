@@ -1,0 +1,29 @@
+{
+  "schema_version": "ninth-price-role-alias-apply-plan-v2",
+  "applied": true,
+  "requires_parent_application_after_independent_review": true,
+  "files": [
+    {
+      "source": ".runtime/ninth-price-role-alias-proposal/revision-marker-scope/ttf_news/analysis.py",
+      "target": "ttf_news/analysis.py",
+      "sha256": "8ac01ca8120def7f963cdeab8f4eb0bd2dae4c71eb921a9ab5941f70bf1fe1a5"
+    },
+    {
+      "source": ".runtime/ninth-price-role-alias-proposal/revision-marker-scope/test_price_role_subject_aliases.py",
+      "target": "tests/test_price_role_subject_aliases.py",
+      "sha256": "b2d7f1cc7364ff2816e94307090e9617f898cf728d25fd5de3407fef25e76be2"
+    },
+    {
+      "source": ".runtime/ninth-price-role-alias-proposal/revision-marker-scope/actual_fixture.json",
+      "target": "tests/fixtures/ninth_price_role_alias_actual_v2_3.json",
+      "sha256": "4ab95152d331515ef6a2c3b6b84f5bb9ed92ee7ed403c81fc67ee044c80cfbb6"
+    }
+  ],
+  "root_analysis_before_sha256": "bcd240a893a87e842fc8caff8f4efa156f80cac7d8807b2c8c4c3a8599bfcdfa",
+  "root_semantics_unchanged_sha256": "3fcdf8708e49be0bc7060e0e97f45fbfcf5262dabdfc431d70aca0a748791ff7",
+  "applied_at": "2026-10-21T05:10:05.607193+00:00",
+  "independent_reviewer": "final_semantic_audit",
+  "review_verdict_received": "159tests+14independent pairs+21bad+actual9; bounded price-role-only change approved",
+  "runtime_still_paused_old_source": 49015,
+  "canonical_prediction_or_baseline_edits": false
+}

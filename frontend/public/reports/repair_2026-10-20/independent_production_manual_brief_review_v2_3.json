@@ -1,0 +1,216 @@
+{
+  "audit": "fresh_production_manual_epcm_brief_full_review_v2_3",
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "audited_at": "2026-10-20T23:15:11.798359+00:00",
+  "verdict": "no_P2_identified_with_explicit_P3_expectations_and_revision_explanation_limit",
+  "role": "manual_brief",
+  "actual_record_path": "reports/repair_2026-10-20/production_manual_brief_actual_v2_3.json",
+  "actual_record_sha256": "b4e126c63aa200cce3ac197bb6e513b3244b97713d58b0b0ea9855e6496553a4",
+  "analysis_id": "8d1b57ef-422e-48e7-90af-745694e3a298",
+  "input_snapshot_canonical_sha256": "ecc75c61f2a8c5885bca566ebb62a849e2c6b01330c1fcc0a8900b4cdb6dca85",
+  "result_canonical_sha256": "58eff4c6d1ac191e52940234941cbf0346978cc8da2d25a066ed3b445274f602",
+  "generation_deployment_dependency": {
+    "file": "reports/repair_2026-10-20/backend_regeneration_resumed.json",
+    "sha256": "1d67fec7b915f1e5535ba9336e96bada40d6a155ad30716b3f700f6bd626d58e"
+  },
+  "prompt_version": "ttf-news-standalone-2.3",
+  "model": "gpt-oss:20b",
+  "production_submission_number": 3,
+  "distinct_article_from_first_two_failed_well_submissions": true,
+  "source_article": "LNG Canada entrusts Técnicas Reunidas with €200M+ EPCM deal",
+  "well_article_success": false,
+  "material_known_logic_errors": [],
+  "all_final_body_fields": {
+    "news_impact": {
+      "direction": "flat",
+      "contextual_news_score": 0.0,
+      "confidence": 0.6,
+      "signal_strength": "weak",
+      "summary": "当前窗口内无直接供需冲击，LNG Canada签订的工程合同属于未来建设项目，未导致即时供给变化；Gassco Troll的计划停产公告亦为未来时段，未影响现行供给。",
+      "bullish_evidence": [],
+      "bearish_evidence": [],
+      "neutralizing_evidence": []
+    },
+    "close_forecast": {
+      "confidence": 0.5,
+      "summary": "缺乏前一交易日参考价，无法判断相对前价的涨跌。",
+      "basis": "缺乏前一交易日参考价，无法判断相对前价的涨跌。",
+      "extreme_move_risk": "缺乏前一交易日基准，无法评估极端变动风险。",
+      "evidence_status": "insufficient_evidence",
+      "direction": null
+    },
+    "analysis": {
+      "summary": "新增事实：N0为未来建设合同，N1、N2为未来停产公告，均不影响当前供给。净影响：无。",
+      "evidence": [
+        "[N0] LNG Canada签订EPCM合同 → 未来供给增加（长期）",
+        "[N1]Troll；计划；公告不可用容量7.6mcm/d；未来容量公告；实流未知；TTF机制：未来供给约束",
+        "[N2]Troll；计划；公告不可用容量13.0mcm/d；未来容量公告；实流未知；结束时间修订：2026-10-23T06:00:00+0200→2026-10-22T06:00:00+0200；TTF机制：未来供给约束"
+      ],
+      "negation_or_reversal": [],
+      "priced_in_comment": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格",
+      "matched_terms": [],
+      "historical_comparisons": []
+    },
+    "risk_flags": [
+      "手动输入仅作条件情景分析，事实尚未由本系统独立核实",
+      "缺少前一交易日可用行情；收盘预判仅由新闻证据驱动",
+      "行情尚未验证为ICE官方日结算，不参与官方结算准确率评分",
+      "价格类型尚未验证为ICE官方日结算，不用于官方结算评分",
+      "最近价格并非上一完整交易日，存在行情缺口",
+      "当前触发新闻在较早结算窗口发布，本次作为截至分析时点已知背景；不能把原报道重复当作本窗口新增冲击，须核对修订内容与已计价情况。",
+      "模型把握程度未经统计校准，不代表已验证准确率",
+      "来源gdelt：最近采集失败；错误后等待重试"
+    ],
+    "references": [
+      {
+        "id": "manual-802adfed-e58b-4862-821f-21196c4cf4d8",
+        "url": "",
+        "title": "LNG Canada entrusts Técnicas Reunidas with €200M+ EPCM deal"
+      },
+      {
+        "id": "90bfbf6adb1183517cbc00ca",
+        "url": "https://umm.gassco.no/details?id=f1f667ff-1ee3-45f2-bedf-7eed367ea614",
+        "title": "Gassco Troll: Planned Gas production field unavailability (Active)"
+      },
+      {
+        "id": "a21b1cffbd1454613a5d0793",
+        "url": "https://umm.gassco.no/details?id=345ca395-a74a-4c9d-9c6c-abf24a16aaf8",
+        "title": "Gassco Troll: Planned Other unavailability (Active)"
+      }
+    ],
+    "missing_fields": [
+      "independent_news_verification",
+      "current_news.source_url",
+      "previous_contract_price",
+      "settlement_verification",
+      "confidence_calibration",
+      "source_coverage:gdelt"
+    ],
+    "source_fact_checks": {
+      "fact_contract_version": "operator-facts-2.2",
+      "operator_notices": [
+        {
+          "id": "N1",
+          "facility": "Troll",
+          "facility_type": "气田/生产设施",
+          "notice_type": "计划",
+          "unavailable_capacity": "7.6",
+          "period_utc": [
+            "2026-10-22T04:00Z",
+            "2026-10-23T04:00Z"
+          ],
+          "state_description": "未来公告",
+          "cause_original": "Yearly maintenance"
+        },
+        {
+          "id": "N2",
+          "facility": "Troll",
+          "facility_type": "类别未给",
+          "notice_type": "计划",
+          "unavailable_capacity": "13.0",
+          "period_utc": [
+            "2026-10-21T04:00Z",
+            "2026-10-22T04:00Z"
+          ],
+          "state_description": "未来公告",
+          "cause_original": "Yearly maintenance"
+        }
+      ],
+      "capacity_scope": "公告不可用容量，非实际流量计量",
+      "pricing_observation": {
+        "observed_at": "2026-10-20T20:59:00+00:00",
+        "available_at": "2026-10-20T21:09:54.498786+00:00",
+        "clock_roles": {
+          "observed_at": "报价发生时刻",
+          "available_at": "本机获知时刻；不是报价发生时刻"
+        },
+        "current_news_timing": {
+          "id": "N0",
+          "publication_time": "2026-10-20T13:11:12+00:00",
+          "quote_relation": "at_or_after_publication",
+          "quote_role": "已观察市场基准；单个报价不证明公告反应"
+        },
+        "reaction_evidence_available": false,
+        "pricing_status": "无法确认是否已计价；不是尚未计价或价格无反应"
+      },
+      "non_overlapping_notice_ids": [
+        [
+          "N1",
+          "N2"
+        ]
+      ]
+    }
+  },
+  "checks": {
+    "contract_roles": "N0 says LNG Canada awards Técnicas Reunidas/TRCanadaE&C engineering services and LNGCanada leads construction; final LNGCanada签订工程/EPCM合同 is a valid contracting role and does not reverse recipient. No completed construction/operational flow is invented.",
+    "future_and_pricing": "Final body confines no immediate changes to physical supply from future engineering/maintenance. It does not retain first-raw均不影响当日价格 and priced_in_comment explicitly leaves announcement response unknown. Flat is an analytical weak-pressure judgement, not a measured zero market reaction.",
+    "price_anchor": "TargetOct21 requires Oct20 same-contract prior reference, unavailable. OlderOct19 reference and stale86.325 absolute quote are not used to manufacture targetday change. closeNone is correct on this evidence; no officialsettlement or targetprice claimed.",
+    "capacity_dates_and_aliases": "N1 future planned7.6 Oct22→23 and N2 future planned13 Oct21→22 are cited individually with unavailablecapacity scope; no20.6sum, crossN substitution or meteredphysical total. N2end23→22 is included literally. Generic计划停产 is shorthand for future unavailability here, not a claim that unavailablecapacity equals observedloss.",
+    "window_and_background": "EPCM publication13:11UTC precedes currentwindowstart15:15UTC, and explicit deterministic risk marks it known background. 新增事实 in an analysis section is not treated as proof of a new current-window supply shock.",
+    "expectations_and_direction": "Long-term supply expansion and future capacityconstraints are in evidence with proper physical signs, but final flat rationale focuses on no immediate supply changes. This does not explicitly deny expectation effects, yet it does not articulate how their timing/strength/netting justifies zero net pressure. The reviewer does not convert it todown/up or call direction verified.",
+    "history": "No historical comparison or measured offset is asserted. Existing ongoing/background events are not used to fabricate a reaction or current supply recovery."
+  },
+  "qualifications": [
+    {
+      "severity": "P3",
+      "id": "expectations_and_marginal_revision_underexplained",
+      "field_paths": [
+        "news_impact.summary",
+        "analysis.summary",
+        "news_impact.bullish_evidence",
+        "news_impact.bearish_evidence",
+        "analysis.negation_or_reversal"
+      ],
+      "quotes": [
+        "当前窗口内无直接供需冲击",
+        "均不影响当前供给。净影响：无。"
+      ],
+      "assessment": "Source-scoped no current physical-production change is defensible, but future news can alter current expectations. The final analysis does not explicitly explain future supply expansion versus short-term announced constraints, N2earlierend marginal easing, or N1laterlower unavailable capacity. Do not call this fully repaired expectations reasoning or empirically validatedflat."
+    }
+  ],
+  "attempt_accounting": [
+    {
+      "attempt": 1,
+      "raw_content_sha256": "00c984ca28a6ecb6434080cbc36b02731fd1a083e18159ce98287bdb91f83771",
+      "done_reason": "length",
+      "validation_errors": [],
+      "total_duration_ns": 116103896833,
+      "delivered": false,
+      "comment": "First raw repeats coverage enum to tokenlimit and contains no-current-price-effect wording; it remains a failed incomplete generation, not a successful forecast."
+    },
+    {
+      "attempt": 2,
+      "raw_content_sha256": "b30ec853ef6ec7e8cd48492c17768ea2706794908012296cded0508f50750b99",
+      "done_reason": "stop",
+      "validation_errors": [],
+      "total_duration_ns": 67335766666,
+      "delivered": true,
+      "comment": "Second finalJSON delivered; full returned body independently reviewed above."
+    }
+  ],
+  "first_truncated_actual_preserved": true,
+  "prior_two_failed_production_well_reviews": [
+    {
+      "file": "reports/repair_2026-10-20/independent_production_manual_failed_c1de_review_v2_3.json",
+      "sha256": "a46528218fac77a50e32b6ff3e96363a61925e454e8d7de53975505511b5f26a"
+    },
+    {
+      "file": "reports/repair_2026-10-20/independent_production_manual_failed_02d_review_v2_3.json",
+      "sha256": "82f1e339248d6eceefa47cd426458a06bfe2eabef4b70329f5968d295410c5d0"
+    }
+  ],
+  "actual_brief_model_call_count": 2,
+  "detail_role_not_assessed_here": true,
+  "english_role_not_assessed_here": true,
+  "no_model_calls_by_reviewer": true,
+  "no_network_calls": true,
+  "no_database_access": true,
+  "no_tests_run": true,
+  "no_core_edits": true,
+  "limits": [
+    "This is one different-article normal API success on the third manual submission, after two failed well submissions; not100percentmanual reliability.",
+    "A passed validity gate and noP2 in bounded prose review do not establish actual forecasting correctness.",
+    "Fresh detail and English artifacts require separate review."
+  ]
+}

@@ -1,0 +1,229 @@
+{
+  "candidate_analysis_sha256": "1aebeb8971f13f61fd8bd4f9ab961b6284e811aeb773014ef7cc71874c94375c",
+  "candidate_semantics_sha256": "d054bc812a80e0d28bfc95a098731b6b556ad0304a9775db0ec4d00d660d2d9a",
+  "timing_identity_controls": [
+    {
+      "case": "exact_original_identity_future_event",
+      "claim": "[N0]本窗口内公告可用产能下降7.6mcm/d，实际流量未知。",
+      "expected_reject": true,
+      "error": "analysis.summary:N0公告开始2026-10-22T06:00:00+0200，截至分析时点尚未开始；目标结算窗口结束时或之后开始；开始时刻不证明实际流量损失；不能把该未来公告的容量下降写成本窗口内已发生的物理容量变化。窗口内公布计划不等于计划已生效；可分别陈述该N起止与容量安排，并讨论未来价格预期，不证明实际流量损失或指定净方向"
+    },
+    {
+      "case": "same_sources_no_index_cannot_guess",
+      "claim": "[N0]本窗口内公告可用产能下降7.6mcm/d，实际流量未知。",
+      "expected_reject": false,
+      "error": null
+    },
+    {
+      "case": "missing_titles_no_clock_borrow",
+      "claim": "[N0]本窗口内公告可用产能下降7.6mcm/d，实际流量未知。",
+      "expected_reject": false,
+      "error": null
+    },
+    {
+      "case": "reason_digest_is_not_original_identity",
+      "claim": "[N0]本窗口内公告可用产能下降7.6mcm/d，实际流量未知。",
+      "expected_reject": false,
+      "error": null
+    },
+    {
+      "case": "ad89_different_message_current_manual_notice",
+      "claim": "[N0]本窗口内公告可用产能下降7.6mcm/d，实际流量未知。",
+      "expected_reject": false,
+      "error": null
+    },
+    {
+      "case": "future_known_source_cannot_lend_clock",
+      "claim": "[N0]本窗口内公告可用产能下降7.6mcm/d，实际流量未知。",
+      "expected_reject": false,
+      "error": null
+    },
+    {
+      "case": "same_complete_body_conflicting_intervals_no_borrow",
+      "claim": "[N0]本窗口内公告可用产能下降7.6mcm/d，实际流量未知。",
+      "expected_reject": false,
+      "error": null
+    },
+    {
+      "case": "context_row_order_does_not_change_indexed_id",
+      "claim": "[N0]本窗口内公告可用产能下降7.6mcm/d，实际流量未知。",
+      "expected_reject": true,
+      "error": "analysis.summary:N0公告开始2026-10-22T06:00:00+0200，截至分析时点尚未开始；目标结算窗口结束时或之后开始；开始时刻不证明实际流量损失；不能把该未来公告的容量下降写成本窗口内已发生的物理容量变化。窗口内公布计划不等于计划已生效；可分别陈述该N起止与容量安排，并讨论未来价格预期，不证明实际流量损失或指定净方向"
+    },
+    {
+      "case": "publication_time_is_separate_from_future_effect",
+      "claim": "本窗口内发布[N0]未来维护计划，届时可用容量减少7.6mcm/d。",
+      "expected_reject": false,
+      "error": null
+    },
+    {
+      "case": "future_risk_can_affect_current_futures_price",
+      "claim": "[N0]预计未来容量约束可能抬升本窗口TTF风险溢价。",
+      "expected_reject": false,
+      "error": null
+    },
+    {
+      "case": "future_outside_window_cannot_be_plan_inside_window",
+      "claim": "[N0]将在本窗口内导致可用产能下降。",
+      "expected_reject": true,
+      "error": "analysis.summary:N0公告开始2026-10-22T06:00:00+0200，截至分析时点尚未开始；目标结算窗口结束时或之后开始；开始时刻不证明实际流量损失；不能把该未来公告的容量下降写成本窗口内已发生的物理容量变化。窗口内公布计划不等于计划已生效；可分别陈述该N起止与容量安排，并讨论未来价格预期，不证明实际流量损失或指定净方向"
+    },
+    {
+      "case": "already_started_N2_current_capacity_notice",
+      "claim": "[N2]本窗口内可用产能下降13mcm/d，实际流量仍未知。",
+      "expected_reject": false,
+      "error": null
+    }
+  ],
+  "physical_pressure_controls": [
+    {
+      "text": "供给约束压力上升，但实际供应减少40mcm/d。",
+      "expected": "supply_decrease",
+      "forbidden": "supply_increase",
+      "mechanisms": [
+        {
+          "mechanism": "supply_decrease",
+          "pressure": "up",
+          "span": [
+            12,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "text": "供应压力导致欧洲实际供气增加40mcm/d。",
+      "expected": "supply_increase",
+      "forbidden": "supply_decrease",
+      "mechanisms": [
+        {
+          "mechanism": "supply_increase",
+          "pressure": "down",
+          "span": [
+            10,
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "text": "需求下降15%，TTF价格上涨。",
+      "expected": "demand_decrease",
+      "forbidden": "demand_increase",
+      "mechanisms": [
+        {
+          "mechanism": "demand_decrease",
+          "pressure": "down",
+          "span": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "text": "库存下降，TTF价格上涨。",
+      "expected": "inventory_draw",
+      "forbidden": "inventory_build",
+      "mechanisms": [
+        {
+          "mechanism": "inventory_draw",
+          "pressure": "up",
+          "span": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "text": "TTF供给约束压力上升",
+      "no_physical_supply_increase": true,
+      "mechanisms": []
+    },
+    {
+      "text": "Gas supply pressure increases.",
+      "no_physical_supply_increase": true,
+      "mechanisms": []
+    }
+  ],
+  "all_eight_actual_raw_replays": [
+    {
+      "case": "ninth_manual_pilot_1",
+      "raw_sha256": "0fabe9b7cb87cbc9262a257754cec71c8823e7a87a2ab6458b8514bc923d82a1",
+      "still_rejected": true,
+      "errors": [
+        "analysis.summary:N0公告开始2026-10-22T06:00:00+0200，截至分析时点尚未开始；目标结算窗口结束时或之后开始；开始时刻不证明实际流量损失；不能把该未来公告的容量下降写成本窗口内已发生的物理容量变化。窗口内公布计划不等于计划已生效；可分别陈述该N起止与容量安排，并讨论未来价格预期，不证明实际流量损失或指定净方向"
+      ]
+    },
+    {
+      "case": "ninth_manual_pilot_2",
+      "raw_sha256": "b179f6da281a7b2f183779137c2e80a6bc404fa392dc41d281b4d4a3eacbcd8f",
+      "still_rejected": true,
+      "errors": [
+        "analysis.summary:N0公告开始2026-10-22T06:00:00+0200，截至分析时点尚未开始；目标结算窗口结束时或之后开始；开始时刻不证明实际流量损失；不能把该未来公告的容量下降写成本窗口内已发生的物理容量变化。窗口内公布计划不等于计划已生效；可分别陈述该N起止与容量安排，并讨论未来价格预期，不证明实际流量损失或指定净方向"
+      ]
+    },
+    {
+      "case": "ninth_manual_original_1",
+      "raw_sha256": "f06a20f96d14b0a9526753b691c0635195146aff9221105f952e54940b17001b",
+      "still_rejected": true,
+      "errors": [
+        "N0容量字段未指明原值为137.4/129.8/7.6mcm/d，不是13.0；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算"
+      ]
+    },
+    {
+      "case": "ninth_manual_original_2",
+      "raw_sha256": "8c7d220ba66d7ddaed0d84c89c35bce563092066420b222e6a0e5db046810592",
+      "still_rejected": true,
+      "errors": [
+        "news_impact.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应",
+        "analysis.summary:N1公告开始2026-10-22T04:00:00+00:00，截至分析时点尚未开始；目标结算窗口结束时或之后开始；开始时刻不证明实际流量损失；未来于as_of不等于目标窗口之后，须按该N起止和目标窗口分别判断，不改变价格方向"
+      ]
+    },
+    {
+      "case": "ninth_current_pilot_1",
+      "raw_sha256": "048370bdb74c3c23146b2f8268398dbaa1d7137cf5b9eb9bfa71dfe9146d9527",
+      "still_rejected": true,
+      "errors": [
+        "news_impact.summary:Gassco未来维护公告不能写成当前实际停供或流量损失；应写未来容量风险并保留起止时间",
+        "news_impact.summary:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景"
+      ]
+    },
+    {
+      "case": "ninth_current_pilot_2",
+      "raw_sha256": "ebff8390994e266ae05f6c8f69831915609b675df1f21f73facf3e4dcd49d3bf",
+      "still_rejected": true,
+      "errors": [
+        "news_impact.bearish_evidence[0]:明写的TTF价格方向与证据栏相反，价格上行属看涨栏、价格下行属看跌栏；须按该N来源分栏/解释，不改变净方向；news_impact.bearish_evidence[1]:明写的TTF价格方向与证据栏相反，价格上行属看涨栏、价格下行属看跌栏；须按该N来源分栏/解释，不改变净方向",
+        "N0容量字段available原值为129.8mcm/d，不是13.0；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算"
+      ]
+    },
+    {
+      "case": "ninth_current_original_1",
+      "raw_sha256": "863eb2979c2da33aa490255db341b8292dfd60e4a37cf5b52bb9bc6f22c6053a",
+      "still_rejected": true,
+      "errors": [
+        "N0容量字段available原值为129.8mcm/d，不是7.6；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算",
+        "没有校准价格预测输入，禁止编造上涨/下跌幅度或目标价；仅可引用输入已观察的同合约参考变化"
+      ]
+    },
+    {
+      "case": "ninth_current_original_2",
+      "raw_sha256": "2e07462be8969fa70485663d8aad0efe22dbe241a7ca618f93f298ce473edc78",
+      "still_rejected": true,
+      "errors": [
+        "价格时间角色不符：前日参考(2026-10-20)为85.062 EUR/MWh；当前报价(2026-10-21T04:36:00+00:00)为87.73 EUR/MWh；已观察当前对前日差为2.668。这不是前一交易日自身的涨跌；请明确前日参考/当前观察各自时钟，不把观察差当未来目标幅度或指定预测方向"
+      ]
+    }
+  ],
+  "old21_original_sha_controls_in_focused_tests": true,
+  "earlier_borrowing_false_positive_controls_now_fixed": [
+    "2989eb4e5dcddab889fe2f26eef38132fee128899c5adeea145d2c24e6998d9c",
+    "ad89ff3da42c3715b0ae14d6a5c229b0443252dbe61ad0149b84bdbcac3d54a0"
+  ],
+  "new_model_calls": 0,
+  "database_access": false,
+  "network_calls": false,
+  "source_modification": false
+}

@@ -1,0 +1,22 @@
+{
+  "response": {
+    "model": "gpt-oss:20b",
+    "created_at": "2026-10-21T05:13:42.096395Z",
+    "message": {
+      "role": "assistant",
+      "content": "{\"news_impact\":{\"bullish_evidence\":[\"[N0] 7.6 mcm/d 计划容量损失 → TTF 供给约束压力上升\",\"[N2] 13.0 mcm/d 计划容量损失 → TTF 供给约束压力上升\"],\"bearish_evidence\":[],\"neutralizing_evidence\":[],\"summary\":\"2026‑10‑20公布的两条计划维护公告分别导致Troll气田和其他设施的可用容量分别减少7.6 mcm/d和13.0 mcm/d，属于未来或当前公告的容量约束，尚未产生实际流量损失。市场基准价已从85.062 EUR/MWh升至87.73 EUR/MWh，但缺乏直接的价格反应证据，故对TTF价格的净影响被视为平稳。\",\"contextual_news_score\":0,\"direction\":\"flat\",\"confidence\":0.5,\"signal_strength\":\"weak\"},\"close_forecast\":{\"basis\":\"市场基准价已上涨2.668 EUR/MWh，且无明显新闻冲击导致价格下跌，预计收盘价相对前一交易日继续上涨。\",\"summary\":\"基于已观察到的基准上升且缺乏强烈的供给中断或需求激增新闻，收盘价相对前一交易日上涨的可能性较高。\",\"evidence_status\":\"forecast\",\"direction\":\"up\",\"confidence\":0.6,\"extreme_move_risk\":\"无已知极端风险因素\"},\"analysis\":{\"summary\":\"两条计划维护公告导致Troll设施可用容量下降，但未产生实际流量损失，市场基准已上涨，整体对TTF价格的净影响为平稳。\",\"evidence\":[\"[N0] 7.6 mcm/d 计划容量损失 → TTF 供给约束压力上升\",\"[N2] 13.0 mcm/d 计划容量损失 → TTF 供给约束压力上升\"],\"negation_or_reversal\":[],\"priced_in_comment\":\"price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格\",\"matched_terms\":[],\"historical_comparisons\":[]},\"risk_flags\":[],\"references\":[{\"id\":\"N0\",\"url\":\"\"},{\"id\":\"N2\",\"url\":\"\"}],\"missing_fields\":[]}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 29800426583,
+    "load_duration": 4936083,
+    "prompt_eval_count": 8884,
+    "prompt_eval_cached_count": 0,
+    "prompt_eval_duration": 9320381000,
+    "eval_count": 1136,
+    "eval_duration": 20272425000
+  },
+  "raw_content": "{\"news_impact\":{\"bullish_evidence\":[\"[N0] 7.6 mcm/d 计划容量损失 → TTF 供给约束压力上升\",\"[N2] 13.0 mcm/d 计划容量损失 → TTF 供给约束压力上升\"],\"bearish_evidence\":[],\"neutralizing_evidence\":[],\"summary\":\"2026‑10‑20公布的两条计划维护公告分别导致Troll气田和其他设施的可用容量分别减少7.6 mcm/d和13.0 mcm/d，属于未来或当前公告的容量约束，尚未产生实际流量损失。市场基准价已从85.062 EUR/MWh升至87.73 EUR/MWh，但缺乏直接的价格反应证据，故对TTF价格的净影响被视为平稳。\",\"contextual_news_score\":0,\"direction\":\"flat\",\"confidence\":0.5,\"signal_strength\":\"weak\"},\"close_forecast\":{\"basis\":\"市场基准价已上涨2.668 EUR/MWh，且无明显新闻冲击导致价格下跌，预计收盘价相对前一交易日继续上涨。\",\"summary\":\"基于已观察到的基准上升且缺乏强烈的供给中断或需求激增新闻，收盘价相对前一交易日上涨的可能性较高。\",\"evidence_status\":\"forecast\",\"direction\":\"up\",\"confidence\":0.6,\"extreme_move_risk\":\"无已知极端风险因素\"},\"analysis\":{\"summary\":\"两条计划维护公告导致Troll设施可用容量下降，但未产生实际流量损失，市场基准已上涨，整体对TTF价格的净影响为平稳。\",\"evidence\":[\"[N0] 7.6 mcm/d 计划容量损失 → TTF 供给约束压力上升\",\"[N2] 13.0 mcm/d 计划容量损失 → TTF 供给约束压力上升\"],\"negation_or_reversal\":[],\"priced_in_comment\":\"price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格\",\"matched_terms\":[],\"historical_comparisons\":[]},\"risk_flags\":[],\"references\":[{\"id\":\"N0\",\"url\":\"\"},{\"id\":\"N2\",\"url\":\"\"}],\"missing_fields\":[]}",
+  "raw_content_sha256": "048370bdb74c3c23146b2f8268398dbaa1d7137cf5b9eb9bfa71dfe9146d9527",
+  "elapsed_seconds": 29.81197795807384
+}

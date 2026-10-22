@@ -1,0 +1,197 @@
+............................................. [  4%]
+.................................................................... [ 12%]
+........................................................................................................................................... [ 27%]
+..............FF........................................................ [ 35%]
+........................................................................ [ 42%]
+...................................................................... [ 50%]
+........................................................................ [ 58%]
+................................................... [ 63%]
+........................................................................ [ 71%]
+.............................................. [ 76%]
+............................................................................... [ 85%]
+................................................................................... [ 94%]
+.................................................... [ 99%]
+...                                                                      [100%]
+=================================== FAILURES ===================================
+_ test_material_reference_trend_is_not_cancelled_by_no_news_causality[up-1.76] _
+
+direction = 'up', delta = 1.76
+
+    @pytest.mark.parametrize('direction,delta',[('up',1.76),('down',-1.76)])
+    def test_material_reference_trend_is_not_cancelled_by_no_news_causality(direction,delta):
+        row=records()['weak_news_observed_market_up'];context=copy.deepcopy(row['input_snapshot'])
+        price=context['price_reference'];price['market_baseline'].update(observed_direction=direction,observed_delta=delta,latest_price=88.04+delta)
+        price['intraday']['value']=88.04+delta
+        prepared,_=prepare_context(context);result=copy.deepcopy(row['result'])
+        result['close_forecast']['basis']='已有方向基准，但缺乏新闻对价格的直接影响，无法确认是否已计价。'
+        with pytest.raises(ValueError,match='盘中方向基准'):_check_known_price_not_claimed_missing(result,context,prepared)
+        for forecast in ('up','flat','down','extreme_up','extreme_down'):
+            result['close_forecast'].update(direction=forecast,evidence_status='forecast')
+            _check_known_price_not_claimed_missing(result,context,prepared)
+        result['close_forecast'].update(direction=None,evidence_status='insufficient_evidence')
+        result['close_forecast']['basis']='有价格基准，但来源明确需求增加与供应增加相互冲突，难以权衡。'
+        context['window_news'].append({'title':'反向供需事实','summary':'实际天然气需求增加，同时实际天然气供应增加。','source':'test','published_at':context['as_of']})
+        prepared,_=prepare_context(context)
+>       _check_known_price_not_claimed_missing(result,context,prepared)
+
+tests/test_final_price_observation_v2_3.py:79: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+result = {'news_impact': {'direction': 'flat', 'contextual_news_score': 0.0, 'confidence': 0.3, 'signal_strength': 'weak', ...}...入仅作条件情景分析，事实尚未由本系统独立核实', '行情尚未验证为ICE官方日结算，不参与官方结算准确率评分', '价格类型尚未验证为ICE官方日结算，不用于官方结算评分', '模型把握程度未经统计校准，不代表已验证准确率'], ...}
+context = {'as_of': '2026-10-20T12:10:58.642680+00:00', 'session': {'trade_date': '2026-10-20', 'window_start': '2026-10-19T15:1...按成立处理，不是真实报道：一家石油公司取得牙买加海域长期勘探许可证，尚未钻探，没有已探明天然气产量、投产日期或对欧洲供气的安排。公告本窗口首次公布。', 'source': 'diagnostic_fixture', ...}, ...}
+prepared = {'as_of': '2026-10-20T12:10:58.642680+00:00', 'session': {'trade_date': '2026-10-20', 'window_start': '2026-10-19T15:1...立处理，不是真实报道：一家石油公司取得牙买加海域长期勘探许可证，尚未钻探，没有已探明天然气产量、投产日期或对欧洲供气的安排。', 'time': '2026-10-20T12:10:58.642680+00:00', ...}, ...}
+
+    def _check_known_price_not_claimed_missing(result: dict, context: dict, prepared: dict) -> None:
+        reference = _known_price_reference(context, prepared)
+        baseline = reference.get("market_baseline") or {}
+        if not baseline.get("available"):
+            return
+        news=result.get('news_impact') or {}
+        close=result.get('close_forecast') or {}
+        if close.get('evidence_status')=='insufficient_evidence' and news.get('direction') in {'up','extreme_up','down','extreme_down'}:
+            explanation=str(close.get('summary') or '')+'。'+str(close.get('basis') or '')
+            missing_reaction = re.search(r'(?:缺少|缺乏|没有|未提供|尚无|无)[^。；;]{0,25}(?:价格反应|市场反应|公告前后|事件前后)|(?:无法确定|无法确认|无法判断|不能确认|不能判断|未知|不知|不确定)[^。；;]{0,25}(?:是否已(?:计入|计价|定价|消化)|已计价|已定价)|(?:lack|missing|no)[^.;]{0,20}(?:price reaction|announcement reaction)|uncertain[^.;]{0,20}priced',explanation,re.I)
+            if missing_reaction:
+                opposite='up' if news['direction'] in {'down','extreme_down'} else 'down'
+                explained={s['mechanism'] for s in _validation_mechanisms(explanation) if s['pressure']==opposite}
+                supplied={s['mechanism'] for row in _current_source_rows(context,prepared)
+                          if row.get('temporal_state') not in {'scheduled_notice','dismissed_notice','announced_end_elapsed_unverified_flow'}
+                          for s in extract_mechanisms(row) if s['pressure']==opposite}
+                conflict=bool(re.search(r'冲突|抵消|拉锯|反向|相反|分歧|难以权衡|conflict|offset|opposing',explanation,re.I))
+                if not conflict or not (explained & supplied):
+                    raise ValueError('close_forecast:合法同合约比较锚点已给；报价若早于消息仅是基准，未知后续反应不等于零反应或未计价。请据源供需与锚点给条件收盘预判，五档自由、不自动复制新闻方向；缺少公告前后反应不能单独作为拒绝收盘预判的理由，真实冲突须引用具体反向事实')
+        missing_before = re.compile(r"(?:缺乏|缺少|没有|未提供|尚无|缺失|无法获取|不可获取)[^。；;，,]{0,20}(?:市场基准|市场价格基准|当日价格基准|当日行情|盘中(?:报价|价格|基准)|同合约(?:报价|行情)|market baseline|intraday (?:quote|price|baseline))", re.I)
+        missing_after = re.compile(r"(?:市场基准|市场价格基准|当日价格基准|当日行情|盘中(?:报价|价格|基准)|同合约(?:报价|行情)|market baseline|intraday (?:quote|price|baseline))\s*(?:(?:数据|记录|当前|目前|仍|尚|为|是|均|都)\s*){0,3}(?:不可用|缺失|未提供|缺乏|无法获取|unavailable|missing)", re.I)
+        qualified = re.compile(r"公告前后|事件前后|消息前后|连续|逐笔|高频|实时|即时|无延迟|完整(?:的)?(?:历史|序列|时间序列)|官方|已验证|校准|历史|before.and.after|tick.by.tick|continuous|real.time|undelayed|official|calibrat", re.I)
+        for path, statement in _strings(result):
+            for clause in _clauses(statement):
+                for match in list(missing_before.finditer(clause)) + list(missing_after.finditer(clause)):
+                    if qualified.search(match.group()):
+                        continue
+                    if re.search(r"不能(?:说|声称)|并非|不是|不代表|不等于", clause[max(0, match.start()-12):match.start()]):
+                        continue
+                    raise ValueError(f"{path}:输入已提供截至as_of可用的同合约市场基准，不能以缺乏市场基准/盘中报价为信息不足理由；可基于真实冲突或无法判断延续性明确insufficient_evidence，不得补默认方向")
+        missing = result.get("missing_fields") or []
+        unavailable_paths = {"price_reference", "price_reference.market_baseline", "price_reference.intraday", "price_reference.previous_price", "market_baseline", "intraday_quote"}
+        if any(str(field).strip() in unavailable_paths for field in missing):
+            raise ValueError("missing_fields:市场基准已提供，不能把整个行情、盘中报价或前日参考价列作缺失；请列具体未提供的连续反应/官方结算等资料")
+    
+        if (close.get('evidence_status')=='insufficient_evidence' and news.get('direction')=='flat'
+                and baseline.get('observed_direction') in {'up','down','extreme_up','extreme_down'}
+                and isinstance(baseline.get('observed_delta'),(int,float)) and not isinstance(baseline.get('observed_delta'),bool)
+                and abs(baseline['observed_delta'])>float(baseline.get('flat_band',.3))
+                and not baseline.get('stale') and not (reference.get('intraday') or {}).get('stale')):
+            explanation=str(close.get('summary') or '')+'。'+str(close.get('basis') or '')
+            opposite='down' if baseline.get('observed_direction') in {'up','extreme_up'} else 'up'
+            explained={signal['mechanism'] for signal in _validation_mechanisms(explanation) if signal['pressure']==opposite}
+            cards={row.get('id'):row for row in prepared.get('window_news',[]) if isinstance(row,dict) and row.get('id')}
+            cards['N0']=prepared.get('current_news') or context.get('current_news') or {}
+            for alias,row in list(cards.items()):
+                if row.get('same_as_current_news_id') in cards:cards[alias]=cards[row['same_as_current_news_id']]
+            cited=re.findall(r'(?<![A-Za-z0-9_])N\d+(?![A-Za-z0-9_])',explanation)
+            supplied={signal['mechanism'] for alias in cited if alias in cards
+                      for row in (cards[alias],) if _known_source(row,_moment(context.get('as_of') or prepared.get('as_of')))
+                      and row.get('temporal_state') not in {'scheduled_notice','dismissed_notice','announced_end_elapsed_unverified_flow'}
+                      for signal in extract_mechanisms(row) if signal['pressure']==opposite}
+            conflict=bool(re.search(r'冲突|抵消|拉锯|反向|相反|分歧|难以权衡|conflict|offset|opposing',explanation,re.I))
+            if not conflict or not (explained & supplied):
+>               raise ValueError('close_forecast:已有有效同合约盘中方向基准；新闻影响较弱或无法证明单新闻价格因果、未知是否计价，不能单独取消相对已给前价的条件性收盘预判。请权衡真实基准与有来源的冲突机制，保留五档选择，不得自动复制新闻方向或把参考变化当已实现收盘')
+E               ValueError: close_forecast:已有有效同合约盘中方向基准；新闻影响较弱或无法证明单新闻价格因果、未知是否计价，不能单独取消相对已给前价的条件性收盘预判。请权衡真实基准与有来源的冲突机制，保留五档选择，不得自动复制新闻方向或把参考变化当已实现收盘
+
+ttf_news/semantics.py:1492: ValueError
+_ test_material_reference_trend_is_not_cancelled_by_no_news_causality[down--1.76] _
+
+direction = 'down', delta = -1.76
+
+    @pytest.mark.parametrize('direction,delta',[('up',1.76),('down',-1.76)])
+    def test_material_reference_trend_is_not_cancelled_by_no_news_causality(direction,delta):
+        row=records()['weak_news_observed_market_up'];context=copy.deepcopy(row['input_snapshot'])
+        price=context['price_reference'];price['market_baseline'].update(observed_direction=direction,observed_delta=delta,latest_price=88.04+delta)
+        price['intraday']['value']=88.04+delta
+        prepared,_=prepare_context(context);result=copy.deepcopy(row['result'])
+        result['close_forecast']['basis']='已有方向基准，但缺乏新闻对价格的直接影响，无法确认是否已计价。'
+        with pytest.raises(ValueError,match='盘中方向基准'):_check_known_price_not_claimed_missing(result,context,prepared)
+        for forecast in ('up','flat','down','extreme_up','extreme_down'):
+            result['close_forecast'].update(direction=forecast,evidence_status='forecast')
+            _check_known_price_not_claimed_missing(result,context,prepared)
+        result['close_forecast'].update(direction=None,evidence_status='insufficient_evidence')
+        result['close_forecast']['basis']='有价格基准，但来源明确需求增加与供应增加相互冲突，难以权衡。'
+        context['window_news'].append({'title':'反向供需事实','summary':'实际天然气需求增加，同时实际天然气供应增加。','source':'test','published_at':context['as_of']})
+        prepared,_=prepare_context(context)
+>       _check_known_price_not_claimed_missing(result,context,prepared)
+
+tests/test_final_price_observation_v2_3.py:79: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+result = {'news_impact': {'direction': 'flat', 'contextual_news_score': 0.0, 'confidence': 0.3, 'signal_strength': 'weak', ...}...入仅作条件情景分析，事实尚未由本系统独立核实', '行情尚未验证为ICE官方日结算，不参与官方结算准确率评分', '价格类型尚未验证为ICE官方日结算，不用于官方结算评分', '模型把握程度未经统计校准，不代表已验证准确率'], ...}
+context = {'as_of': '2026-10-20T12:10:58.642680+00:00', 'session': {'trade_date': '2026-10-20', 'window_start': '2026-10-19T15:1...按成立处理，不是真实报道：一家石油公司取得牙买加海域长期勘探许可证，尚未钻探，没有已探明天然气产量、投产日期或对欧洲供气的安排。公告本窗口首次公布。', 'source': 'diagnostic_fixture', ...}, ...}
+prepared = {'as_of': '2026-10-20T12:10:58.642680+00:00', 'session': {'trade_date': '2026-10-20', 'window_start': '2026-10-19T15:1...立处理，不是真实报道：一家石油公司取得牙买加海域长期勘探许可证，尚未钻探，没有已探明天然气产量、投产日期或对欧洲供气的安排。', 'time': '2026-10-20T12:10:58.642680+00:00', ...}, ...}
+
+    def _check_known_price_not_claimed_missing(result: dict, context: dict, prepared: dict) -> None:
+        reference = _known_price_reference(context, prepared)
+        baseline = reference.get("market_baseline") or {}
+        if not baseline.get("available"):
+            return
+        news=result.get('news_impact') or {}
+        close=result.get('close_forecast') or {}
+        if close.get('evidence_status')=='insufficient_evidence' and news.get('direction') in {'up','extreme_up','down','extreme_down'}:
+            explanation=str(close.get('summary') or '')+'。'+str(close.get('basis') or '')
+            missing_reaction = re.search(r'(?:缺少|缺乏|没有|未提供|尚无|无)[^。；;]{0,25}(?:价格反应|市场反应|公告前后|事件前后)|(?:无法确定|无法确认|无法判断|不能确认|不能判断|未知|不知|不确定)[^。；;]{0,25}(?:是否已(?:计入|计价|定价|消化)|已计价|已定价)|(?:lack|missing|no)[^.;]{0,20}(?:price reaction|announcement reaction)|uncertain[^.;]{0,20}priced',explanation,re.I)
+            if missing_reaction:
+                opposite='up' if news['direction'] in {'down','extreme_down'} else 'down'
+                explained={s['mechanism'] for s in _validation_mechanisms(explanation) if s['pressure']==opposite}
+                supplied={s['mechanism'] for row in _current_source_rows(context,prepared)
+                          if row.get('temporal_state') not in {'scheduled_notice','dismissed_notice','announced_end_elapsed_unverified_flow'}
+                          for s in extract_mechanisms(row) if s['pressure']==opposite}
+                conflict=bool(re.search(r'冲突|抵消|拉锯|反向|相反|分歧|难以权衡|conflict|offset|opposing',explanation,re.I))
+                if not conflict or not (explained & supplied):
+                    raise ValueError('close_forecast:合法同合约比较锚点已给；报价若早于消息仅是基准，未知后续反应不等于零反应或未计价。请据源供需与锚点给条件收盘预判，五档自由、不自动复制新闻方向；缺少公告前后反应不能单独作为拒绝收盘预判的理由，真实冲突须引用具体反向事实')
+        missing_before = re.compile(r"(?:缺乏|缺少|没有|未提供|尚无|缺失|无法获取|不可获取)[^。；;，,]{0,20}(?:市场基准|市场价格基准|当日价格基准|当日行情|盘中(?:报价|价格|基准)|同合约(?:报价|行情)|market baseline|intraday (?:quote|price|baseline))", re.I)
+        missing_after = re.compile(r"(?:市场基准|市场价格基准|当日价格基准|当日行情|盘中(?:报价|价格|基准)|同合约(?:报价|行情)|market baseline|intraday (?:quote|price|baseline))\s*(?:(?:数据|记录|当前|目前|仍|尚|为|是|均|都)\s*){0,3}(?:不可用|缺失|未提供|缺乏|无法获取|unavailable|missing)", re.I)
+        qualified = re.compile(r"公告前后|事件前后|消息前后|连续|逐笔|高频|实时|即时|无延迟|完整(?:的)?(?:历史|序列|时间序列)|官方|已验证|校准|历史|before.and.after|tick.by.tick|continuous|real.time|undelayed|official|calibrat", re.I)
+        for path, statement in _strings(result):
+            for clause in _clauses(statement):
+                for match in list(missing_before.finditer(clause)) + list(missing_after.finditer(clause)):
+                    if qualified.search(match.group()):
+                        continue
+                    if re.search(r"不能(?:说|声称)|并非|不是|不代表|不等于", clause[max(0, match.start()-12):match.start()]):
+                        continue
+                    raise ValueError(f"{path}:输入已提供截至as_of可用的同合约市场基准，不能以缺乏市场基准/盘中报价为信息不足理由；可基于真实冲突或无法判断延续性明确insufficient_evidence，不得补默认方向")
+        missing = result.get("missing_fields") or []
+        unavailable_paths = {"price_reference", "price_reference.market_baseline", "price_reference.intraday", "price_reference.previous_price", "market_baseline", "intraday_quote"}
+        if any(str(field).strip() in unavailable_paths for field in missing):
+            raise ValueError("missing_fields:市场基准已提供，不能把整个行情、盘中报价或前日参考价列作缺失；请列具体未提供的连续反应/官方结算等资料")
+    
+        if (close.get('evidence_status')=='insufficient_evidence' and news.get('direction')=='flat'
+                and baseline.get('observed_direction') in {'up','down','extreme_up','extreme_down'}
+                and isinstance(baseline.get('observed_delta'),(int,float)) and not isinstance(baseline.get('observed_delta'),bool)
+                and abs(baseline['observed_delta'])>float(baseline.get('flat_band',.3))
+                and not baseline.get('stale') and not (reference.get('intraday') or {}).get('stale')):
+            explanation=str(close.get('summary') or '')+'。'+str(close.get('basis') or '')
+            opposite='down' if baseline.get('observed_direction') in {'up','extreme_up'} else 'up'
+            explained={signal['mechanism'] for signal in _validation_mechanisms(explanation) if signal['pressure']==opposite}
+            cards={row.get('id'):row for row in prepared.get('window_news',[]) if isinstance(row,dict) and row.get('id')}
+            cards['N0']=prepared.get('current_news') or context.get('current_news') or {}
+            for alias,row in list(cards.items()):
+                if row.get('same_as_current_news_id') in cards:cards[alias]=cards[row['same_as_current_news_id']]
+            cited=re.findall(r'(?<![A-Za-z0-9_])N\d+(?![A-Za-z0-9_])',explanation)
+            supplied={signal['mechanism'] for alias in cited if alias in cards
+                      for row in (cards[alias],) if _known_source(row,_moment(context.get('as_of') or prepared.get('as_of')))
+                      and row.get('temporal_state') not in {'scheduled_notice','dismissed_notice','announced_end_elapsed_unverified_flow'}
+                      for signal in extract_mechanisms(row) if signal['pressure']==opposite}
+            conflict=bool(re.search(r'冲突|抵消|拉锯|反向|相反|分歧|难以权衡|conflict|offset|opposing',explanation,re.I))
+            if not conflict or not (explained & supplied):
+>               raise ValueError('close_forecast:已有有效同合约盘中方向基准；新闻影响较弱或无法证明单新闻价格因果、未知是否计价，不能单独取消相对已给前价的条件性收盘预判。请权衡真实基准与有来源的冲突机制，保留五档选择，不得自动复制新闻方向或把参考变化当已实现收盘')
+E               ValueError: close_forecast:已有有效同合约盘中方向基准；新闻影响较弱或无法证明单新闻价格因果、未知是否计价，不能单独取消相对已给前价的条件性收盘预判。请权衡真实基准与有来源的冲突机制，保留五档选择，不得自动复制新闻方向或把参考变化当已实现收盘
+
+ttf_news/semantics.py:1492: ValueError
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/fastapi/testclient.py:1
+  .venv/lib/python3.10/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_final_price_observation_v2_3.py::test_material_reference_trend_is_not_cancelled_by_no_news_causality[up-1.76]
+FAILED tests/test_final_price_observation_v2_3.py::test_material_reference_trend_is_not_cancelled_by_no_news_causality[down--1.76]
+2 failed, 922 passed, 1 warning, 375 subtests passed in 71.30s (0:01:11)

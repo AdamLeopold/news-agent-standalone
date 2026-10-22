@@ -1,0 +1,101 @@
+{
+  "reviewer": "/root/final_semantic_audit",
+  "candidate_sha256": "2db667a7aa52d51956cc4c27b4b32ad97ec5ca9d98f8fc4195a330bedcba094d",
+  "scope": "Finite new hollow guard flow/physical-arrow channel false-positive correction. No model/API/DB/core changes.",
+  "new_model_calls": 0,
+  "actual_false_positive_record": {
+    "file": "reports/repair_2026-10-20/candidate-bounded-output-validation/supplied_conflicting_mechanisms.json",
+    "sha256": "98b8c7e46c8963a97fd9e736d6734ed902200ef94e330c1471f2fce17c7de18a"
+  },
+  "controls": [
+    {
+      "name": "real_supplied_mixed_whole_body",
+      "expected_allowed": true,
+      "actual_allowed": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "bullish_evidence[N0]管道输气减少20mcm/d → TTF看涨机制",
+      "expected_allowed": true,
+      "actual_allowed": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "bearish_evidence[N0]管道输气减少20mcm/d → TTF看涨机制",
+      "expected_allowed": false,
+      "actual_allowed": false,
+      "passed": true,
+      "error": "news_impact.bearish_evidence[0]:明写的TTF价格方向与证据栏相反，价格上行属看涨栏、价格下行属看跌栏；须按该N来源分栏/解释，不改变净方向"
+    },
+    {
+      "name": "bearish_evidence[N0]管道输气减少20mcm/d → TTF看跌机制",
+      "expected_allowed": false,
+      "actual_allowed": false,
+      "passed": true,
+      "error": "news_impact.bearish_evidence[0]:输气/再气化量变的供给传导与证据栏相反；减量是上行压力、增量是下行压力。须按来源机制分栏，净方向仍可flat"
+    },
+    {
+      "name": "bearish_evidence[N0]LNG再气化增加30mcm/d → TTF看跌机制",
+      "expected_allowed": true,
+      "actual_allowed": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "bullish_evidence[N0]LNG再气化增加30mcm/d → TTF看涨机制",
+      "expected_allowed": false,
+      "actual_allowed": false,
+      "passed": true,
+      "error": "news_impact.bullish_evidence[0]:输气/再气化量变的供给传导与证据栏相反；减量是上行压力、增量是下行压力。须按来源机制分栏，净方向仍可flat"
+    },
+    {
+      "name": "true_mixed_mechanisms_can_keep_net_flat",
+      "expected_allowed": true,
+      "actual_allowed": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "known_expectation_gap_can_reverse_marginal_flow_pressure",
+      "expected_allowed": true,
+      "actual_allowed": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "bare_project_template_still_hollow",
+      "expected_allowed": false,
+      "actual_allowed": false,
+      "passed": true,
+      "error": "news_impact.bullish_evidence[0]:项目开启或公司合同事实不能只接TTF涨跌模板；须说明该N有来源的供需/容量风险/预期差传导，不能把公司利好直接当气价利好；净方向仍可flat"
+    },
+    {
+      "name": "no_fabricated_channel_from_未确认管道输气减少20mcm/d",
+      "passed": true
+    },
+    {
+      "name": "no_fabricated_channel_from_没有发生管道输气减少20mcm/d",
+      "passed": true
+    },
+    {
+      "name": "no_fabricated_channel_from_未提供LNG再气化增加30mcm/d的证据",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "shared_source_ast_unchanged": {
+    "_matching_mechanisms": true,
+    "extract_mechanisms": true,
+    "_source_text": true,
+    "prospective_supply_only": true,
+    "source_fact_projection": true
+  },
+  "changed_existing_functions": [
+    "_check_source_bound_evidence_slot_prices"
+  ],
+  "added_functions": [
+    "_evidence_flow_change_mechanisms"
+  ]
+}

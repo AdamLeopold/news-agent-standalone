@@ -1,0 +1,97 @@
+{
+  "method": "Independent read-only full prose and source audit of actual new2.2 production records; no model calls, no DB writes; canonical outputs untouched.",
+  "records": [
+    {
+      "analysis_id": "9fa53da2-74ec-4fab-9443-bd501f3ba59e",
+      "kind": "live",
+      "prompt_version": "ttf-news-standalone-2.2",
+      "as_of": "2026-10-20T21:33:54.395855+00:00",
+      "completed_at": "2026-10-20T21:37:49.135733+00:00",
+      "input_snapshot_sha256": "1cf1963d5439aeee48129373f5f83a29044c308315c9f2ec3d22b445c0b6d41a",
+      "result_sha256": "8f53b7760662809ad7bde4ca78b5dd481e82f21371b8d18b6cb26d1c1df5023e",
+      "verdict": "qualified_pass_brief",
+      "known_logic_errors": [],
+      "checks": {
+        "source_and_window": "N0/N2 were published at 20:13/20:10 UTC on 20 October and known before the 21:33 UTC analysis. N0 covers 22 October 04:00 to 23 October 04:00 UTC; N2 covers 21 October 04:00 to 22 October 04:00 UTC. Both specific events had not begun. N1 is a duplicate alias for N0 and is not counted twice.",
+        "capacity_entity": "The 7.6 and 13.0 mcm/d values remain separate future notice capacities. No same-time 20.6 mcm/d sum, percentage or volume was invented. N0 retains the source gas-production-field type; N2 retains its unspecified Other type. Neither is upgraded to a pipeline or measured flow loss.",
+        "pressure": "Potential upward capacity risk remains in bullish_evidence; missing flow is not neutralizing evidence. The weak 0.5/flat net assessment is a model judgement about strength, rather than a verified price reaction or a direction imposed by code.",
+        "price_anchor": "The target 21 October requires a 20 October same-contract reference. That anchor is unavailable, so close_forecast is insufficient_evidence/null. The 19 October 88.04 value is not used as yesterday's close. The delayed 86.325 last trade remains an absolute observation; one quote is not announcement-reaction evidence.",
+        "pricing": "The priced-in field explicitly states that pricing status cannot be confirmed; no risk flag asserts unpriced. The summary's limited-expectations/limited-impact language is a model pressure judgement, not measured expectations or evidence of no price reaction.",
+        "history": "E2 has a same-contract reference change of +0.493 over 16–19 October, available by 19 October 23:42 UTC, before analysis. The bounded paragraph rounds it to +0.49 and labels it contemporaneous and noncausal; no future outcome or causal price effect is invented."
+      },
+      "qualified_pass_limits": [
+        "The summary's 未造成即时供气损失 is valid only as a causal statement about these specific maintenance events, whose source start times are still future at analysis. It does not establish that total European measured flow is unchanged. The wording could state this scope more clearly.",
+        "市场对未来供给约束的预期有限，价格影响不大 is an uncalibrated model judgement about pressure strength, not verified market expectations or a measured absence of reaction.",
+        "N2 correctly copies the shortened end date from 23 October to 22 October, but does not discuss the implication of the shorter constraint. This is a completeness limitation."
+      ],
+      "final_gate_recheck": {
+        "source_notice_validator": "pass",
+        "semantic_errors": [],
+        "new_model_calls": 0
+      },
+      "actual_generation_request_hashes": [
+        {
+          "system_prompt_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+          "response_schema_sha256": "06f4d5b5bfaebe798891070017e66addc9edb7d74b76fc40f4ba320e933248c9",
+          "context_sha256": "01aacca6ae83d5b4971c4cfa63bf898a5adae4adb17c898937f749ae610d9854",
+          "validation_errors": [
+            "analysis.summary:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景"
+          ]
+        },
+        {
+          "system_prompt_sha256": "23a2540d799f4d087018e5fada0e35d8b9430219791fcd39f2585436d8f2dd1b",
+          "response_schema_sha256": "06f4d5b5bfaebe798891070017e66addc9edb7d74b76fc40f4ba320e933248c9",
+          "context_sha256": "68a87384c86ffcb66b4a0c08a5ecfa4a82a4441057982ec3fad216c51bf4edc5",
+          "validation_errors": null
+        }
+      ]
+    },
+    {
+      "analysis_id": "f96117fa-6591-40aa-8b1c-37a0ce541a46",
+      "kind": "manual",
+      "prompt_version": "ttf-news-standalone-2.2",
+      "status": "failed",
+      "verdict": "retained_failed_not_pass",
+      "error": "模型JSON两次校验失败，未生成方向：news_impact.summary:Gassco未来维护公告不能写成当前实际停供或流量损失；应写未来容量风险并保留起止时间；news_impact.summary:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景",
+      "input_snapshot_sha256": "ec8ad0e4d968d25bfae95ea121a0d55faf9566500afd2c7ac2f9bfdb74172609",
+      "failure_metric_data_sha256": "52b71b657f4c254a8a6bc854304b6fc22faf8b1c95315f0fb17c6cdc39d31e01",
+      "raw_assessment_artifact": "reports/repair_2026-10-20/live_v2_2_manual_f961_failure.json",
+      "attempts": [
+        {
+          "attempt": 1,
+          "raw_sha256": "207e29730ed1ec210ecce22a4eaf6b25ba5213df2d9b158191fd19a438bec4c8",
+          "verdict": "true_price_reaction_error_plus_source_binding_false_positive",
+          "reason": "Lakris discovery未对价格产生影响 is a definite observed-no-price-effect assertion without announcement reaction evidence. A separate N1=7.6 capacity error incorrectly binds single-date21Oct13.0 to N1 instead of N2 when free summary omits explicitN."
+        },
+        {
+          "attempt": 2,
+          "raw_sha256": "2888ad1ff0db909fb599724390d05798f805f36a2c590604050685c8f2338af1",
+          "verdict": "needs_event_scope_review",
+          "reason": "Troll气田计划维护公告未导致实际供气损失 is grammatically a negated causal claim about the specific not-yet-started maintenance announcements, not a verified unchanged-European-flow observation. Later future公告不计入当前停供 and price反应未知 support that reading. The current validator reports futureactual-loss/missing-flow gates; no code change or accepted status conversion performed."
+        }
+      ],
+      "actual_new_model_calls": 2,
+      "canonical_result_is_null": true,
+      "detail_status": "not_requested"
+    }
+  ],
+  "live_current_version_outputs": [
+    {
+      "role": "current_live",
+      "analysis_id": "9fa53da2-74ec-4fab-9443-bd501f3ba59e",
+      "prompt_version": "ttf-news-standalone-2.2",
+      "summary_sha256": "b296cd582cfc8c195d3766ddebe06c7d8c825496fa4ddd0a852c8f2bd626a8c3",
+      "stored_result_sha256": "8f53b7760662809ad7bde4ca78b5dd481e82f21371b8d18b6cb26d1c1df5023e",
+      "verdict": "pass",
+      "known_logic_errors": [],
+      "qualification": "Qualified human causal/source pass; wording/completeness limitations retained in full record. No official settlement evaluation."
+    }
+  ],
+  "generated_at": "2026-10-20T21:42:36.247024+00:00",
+  "final_gate_source_hashes": {
+    "ttf_news/analysis.py": "2268eeb7d20679149a1dd6cddf21e5fb8d048e19b0c4ef3f49ac68d154e116a0",
+    "ttf_news/semantics.py": "6338c3173559eaf377fd0366cee40415e9d250489530d3c2d7e071e5c321a1e8",
+    "ttf_news/prompts.py": "67589b80e657767d540050f664addfab399c41dccccaf50a8314001af991ab4d",
+    "ttf_news/context.py": "6ae94608797de98b1129f673af219bde7e88faba1f4cf73a7456058d7350b23f"
+  }
+}

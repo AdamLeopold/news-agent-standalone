@@ -1,0 +1,27 @@
+{
+  "generated_at": "2026-10-21T05:10:42.771293+00:00",
+  "independent_review": {
+    "file": "reports/repair_2026-10-20/independent_ninth_price_role_marker_final_source_review_v2_3.json",
+    "sha256": "553dc1049e525c6ebbc93a952b6c97bfaa17afb47563b2b203b2aca5f4be21aa"
+  },
+  "applied_analysis_sha256": "8ac01ca8120def7f963cdeab8f4eb0bd2dae4c71eb921a9ab5941f70bf1fe1a5",
+  "preservation_manifest_sha256": "9f25d7c5b5117b6344d8d83c88e3c85bf7cdf8c2b36de09ea2baf87b96403a3a",
+  "preservation": {
+    "passed": true,
+    "protected_analysis_count": 157,
+    "protected_nonnull_field_count": 291,
+    "current_analysis_count": 157,
+    "new_analysis_count": 0,
+    "protected_snapshot_count": 5,
+    "new_snapshot_count": 0,
+    "original_validation_record_count": 1,
+    "latest_baseline_unchanged": true,
+    "original_baseline": {
+      "id": 210,
+      "created_at": "2026-10-14T05:51:48.181167+00:00",
+      "type": "validation_started"
+    },
+    "failures": []
+  },
+  "model_calls": 0
+}

@@ -1,0 +1,260 @@
+{
+  "recorded_at": "2026-10-20T20:11:51.910398+00:00",
+  "records": [
+    {
+      "id": "v2_0_missing_previous_trading_day_anchor",
+      "analysis_id": "6601a466-eecc-48f0-82e5-68785d8ac5be",
+      "status": "open",
+      "review_evidence": {
+        "file": "reports/repair_2026-10-20/independent_live_anchor_review_v2_0.json",
+        "sha256": "72d12a2fd1d297505e9dec8dd8f13b8b35502fa69fadb66ae83f4b241c798efd"
+      },
+      "reason": "Target21/required20, reference19 used for relative-yesterday decline; accepted v2.0 wrong anchor. Structural smoke progress cannot validate it.",
+      "resolution_evidence": null,
+      "affected_analysis_ids": [
+        "6601a466-eecc-48f0-82e5-68785d8ac5be",
+        "d71df0df-25eb-4d87-9b82-adf04d90fe28",
+        "91e13e0e-ee1c-458e-ade4-26f2f2930be3"
+      ],
+      "supplemental_review_evidence": [
+        {
+          "file": "reports/repair_2026-10-20/post_restart_analysis_review.json",
+          "sha256": "b64dfa38bace01079e618959ab9f0f4b65b38eb9714f845d1dab823beb7b00c1"
+        },
+        {
+          "file": "reports/repair_2026-10-20/legacy_fallback_analysis_review_supplement.json",
+          "sha256": "f437e8ffda521fe03bc94d95bea777b789c0f7f4e3ff19a8f1e297a493ee872d"
+        }
+      ]
+    },
+    {
+      "id": "v2_1_future_abandonment_asserted_completed",
+      "analysis_id": "b1e9c166-8851-4f7c-9803-b9c72329f6a9",
+      "status": "open",
+      "review_evidence": {
+        "file": "reports/repair_2026-10-20/independent_live_prose_review_v2_1_initial.json",
+        "sha256": "b06ce161273accb2c0c38fbb767400e215c540785e7f84c80a5bd2b7cbe2e810"
+      },
+      "reported_by": "root independent production audit",
+      "reason": "Source future will now be plugged and abandoned was accepted as completed 已永久封堵. Price anchor and flat/null direction do not validate this operational timing claim.",
+      "resolution_evidence": null,
+      "canonical_result_sha256": "fa0a68927d7bff6c7de8f55a70ad9035de9e7f2a6bfd1faf68a19a41d117dcc4",
+      "affected_analysis_ids": [
+        "b1e9c166-8851-4f7c-9803-b9c72329f6a9"
+      ]
+    },
+    {
+      "id": "v2_1_field_misidentified_as_pipeline",
+      "analysis_id": "d2ef1250-6ed3-4a68-9396-e6ed4addbfb3",
+      "status": "open",
+      "review_evidence": {
+        "file": "reports/repair_2026-10-20/independent_live_prose_review_v2_1_pre_fact_gate.json",
+        "sha256": "cd14af3e44885397e583664dbf8b540a22828c5f28cf46b8cd145870085c660b"
+      },
+      "reported_by": "root independent production audit",
+      "reason": "Source facility type does not support the claimed pipeline: d2 identifies Gas production field, while 751b lists Other without a pipeline fact. Correct direction or structural-stage status does not validate that entity classification.",
+      "resolution_evidence": null,
+      "canonical_result_sha256": "66347a76e7d9e0744aa626df9229dec527cc62a2696924585b85223523d545e4",
+      "affected_analysis_ids": [
+        "d2ef1250-6ed3-4a68-9396-e6ed4addbfb3",
+        "751b4cbd-7da1-4d1a-8e3a-f7f9de49031a"
+      ],
+      "supplemental_review_evidence": [
+        {
+          "file": "reports/repair_2026-10-20/facility_type_analysis_review_supplement.json",
+          "sha256": "e236d479290d75de409fccf4bcb9d88a775198332fb8b60b05407b6bc7b2f89a"
+        }
+      ]
+    },
+    {
+      "id": "v2_2_deterministic_source_coverage_false_warning",
+      "analysis_id": "9fa53da2-74ec-4fab-9443-bd501f3ba59e",
+      "affected_analysis_ids": [
+        "9fa53da2-74ec-4fab-9443-bd501f3ba59e"
+      ],
+      "status": "open",
+      "review_scope": "deterministic_source_coverage_warnings_only",
+      "review_evidence": {
+        "file": "reports/repair_2026-10-20/live_9fa_coverage_false_warning_review.json",
+        "sha256": "1a0b92c81a097897bfd8b8edcf8735f7831c9e88fa2e1b0674d6cac27ec85e8b"
+      },
+      "canonical_input_sha256": "1cf1963d5439aeee48129373f5f83a29044c308315c9f2ec3d22b445c0b6d41a",
+      "canonical_result_sha256": "8f53b7760662809ad7bde4ca78b5dd481e82f21371b8d18b6cb26d1c1df5023e",
+      "reported_by": "root production coverage audit and read-only original-call review",
+      "reason": "The backend appended all stored risk flags after two model responses whose risk_flags were empty. A recently successful running news source was labelled failed/incomplete, and a non-news price source was included in news-coverage warnings. Real Gassco/GDELT gaps remain separate. This is an accepted deterministic coverage/display error, not evidence that collection warnings caused flat.",
+      "original_news_impact_direction": "flat",
+      "original_close_forecast_direction": null,
+      "news_direction_invalidated": false,
+      "close_direction_invalidated": false,
+      "canonical_record_modified": false,
+      "model_raw_risk_flags_empty": true,
+      "resolution_evidence": null,
+      "resolution_required": "Final 2.3 source/test evidence plus a new actual current-live record with accurate news-source health warnings and independent source review. Preserve 9fa canonical inputs/results and its qualified causal review; do not rewrite its risk field or mark its news direction wrong."
+    },
+    {
+      "id": "v2_3_isolated_price_observation_or_baseline_errors",
+      "status": "open",
+      "analysis_id": null,
+      "affected_cases": [
+        "weak_exploration_no_quote",
+        "weak_news_observed_market_up",
+        "supply_restore_40_with_flat_baseline",
+        "anchor_legal_prevday_weak_market_up",
+        "future_planned_notice",
+        "supply_loss_40_with_flat_baseline",
+        "anchor_real_manual_missing_prevday",
+        "dismissed_notice_not_verified_recovery"
+      ],
+      "review_scope": "isolated_actual_2_3_cohort_not_production_analysis_rows",
+      "review_evidence": {
+        "file": "reports/repair_2026-10-20/initial_cohort_semantic_defects_v2_3.json",
+        "sha256": "5e61620f89d34ebdcff5240968f74568168a152609a9ef94110eb837da09151a"
+      },
+      "affected_record_evidence": [
+        {
+          "file": "reports/repair_2026-10-20/candidate-semantic-regeneration-validation/weak_exploration_no_quote.json",
+          "sha256": "20278b8467e5d3fc20e0c1bda14f987f67dca77e6a32df985709204fa59c3503"
+        },
+        {
+          "file": "reports/repair_2026-10-20/candidate-semantic-regeneration-validation/weak_news_observed_market_up.json",
+          "sha256": "1ad04f04f26dac92ef224664aed156f8fd84cc3d28a2ee6192b34c6acb9f6060"
+        },
+        {
+          "file": "reports/repair_2026-10-20/candidate-semantic-regeneration-validation/supply_restore_40_with_flat_baseline.json",
+          "sha256": "db0d75eee0f83a73b1d6b25eb2706f6ccc77ccd444489149c1e6b79164f9beb2"
+        },
+        {
+          "file": "reports/repair_2026-10-20/candidate-semantic-regeneration-validation/anchor_legal_prevday_weak_market_up.json",
+          "sha256": "9de0440215cdf3d36b3b522cc2c2d3457de8ffb55b02bd62ad1073470329a00c"
+        },
+        {
+          "file": "reports/repair_2026-10-20/candidate-bounded-output-validation/future_planned_notice.json",
+          "sha256": "ed1939b87c3ef14220eb5c824df3cd3eeb87553a6f39df78a3c625bf442c5c79"
+        },
+        {
+          "file": "reports/repair_2026-10-20/candidate-bounded-output-validation/supply_loss_40_with_flat_baseline.json",
+          "sha256": "df8fe61f7a3335f8b5705424dbbc6b1b397f57def2e197cf467380d15298986f"
+        },
+        {
+          "file": "reports/repair_2026-10-20/candidate-bounded-output-validation/anchor_real_manual_missing_prevday.json",
+          "sha256": "548048cbbb16a292c29684b46393af5c7ffb6a2a193f1e3b136d3a90c0e02327"
+        },
+        {
+          "file": "reports/repair_2026-10-20/candidate-final-output-scope-validation/dismissed_notice_not_verified_recovery.json",
+          "sha256": "eac8fdca4d7d9ee56172c5ecbf9ed3043aabcfecc1e97c4ebc72a83bb608c2cd"
+        }
+      ],
+      "reason": "Original accepted explanations invent absence of price reaction from missing or pre-news quotes, infer unpriced/incomplete pricing, or erase a valid observed baseline because causal pricing is unknown. Correct flat/null or up labels do not validate those explanations.",
+      "resolution_evidence": null,
+      "original_records_modified": false,
+      "resolution_required": "Original wrong bodies must be rejected by final source. Each latest selected affected bounded/final-output-scope case needs current-source actual execution or a strictly complete unchanged-path proof, an actual terminal result/error and exact independent source-bound review. Known accepted P2 bodies cannot be retained by equivalence or label qualification. Failed outputs stay unavailable, never correct predictions.",
+      "supplemental_review_evidence": [
+        {
+          "file": "reports/repair_2026-10-20/bounded_output_accepted_price_defects_v2_3.json",
+          "sha256": "e93c8784ec6c03379a4fb6fcee7722a8d520c15073b291a672688a50e5482392"
+        },
+        {
+          "file": "reports/repair_2026-10-20/final_output_scope_dismissed_accepted_price_defect_v2_3.json",
+          "sha256": "2c40dea4944abd7a19c33707f96e4bc59129d922a33f9d5ae4adc3c27f89e5f0"
+        },
+        {
+          "file": "reports/repair_2026-10-20/source_feedback_accepted_output_defects_v2_3.json",
+          "sha256": "7f4557d5b496b8e1285dc2f5b098c47bb6f635be05a408ecd610ca5ce7613e56"
+        }
+      ],
+      "new_bounded_output_accepted_P2_count": 3,
+      "bounded_epcm_label_qualification_withdrawn": true,
+      "previous_resolution_required_preserved": "Final source rejects the original wrong raw; every affected selected case has a new actual terminal record in candidate-price-observation-validation and independent review. A known wrong accepted body cannot be retained by path equivalence. Explicit rejected/error output remains unavailable, not a correct prediction.",
+      "new_final_output_scope_accepted_P2_count": 1,
+      "new_source_feedback_accepted_baseline_defect": {
+        "case": "anchor_legal_prevday_weak_market_up",
+        "source_record": {
+          "file": "reports/repair_2026-10-20/candidate-source-feedback-validation/anchor_legal_prevday_weak_market_up.json",
+          "sha256": "466fb0f5b6c2fe978e4d2059e4889d427ece27f0b26f1d76e013854ec22e8dff"
+        },
+        "recorded_contract_passed": false,
+        "result_was_returned": true,
+        "safe_label_disagreement": false,
+        "resolution_status": "open_pending_new_risk_stage_actual_and_review"
+      }
+    },
+    {
+      "id": "v2_3_isolated_epcm_award_roles_reversed",
+      "status": "open",
+      "analysis_id": null,
+      "affected_cases": [
+        "anchor_real_manual_missing_prevday"
+      ],
+      "review_scope": "isolated_actual_2_3_cohort_not_production_analysis_rows",
+      "review_evidence": {
+        "file": "reports/repair_2026-10-20/initial_cohort_semantic_defects_v2_3.json",
+        "sha256": "5e61620f89d34ebdcff5240968f74568168a152609a9ef94110eb837da09151a"
+      },
+      "affected_record_evidence": [
+        {
+          "file": "reports/repair_2026-10-20/candidate-semantic-regeneration-validation/anchor_real_manual_missing_prevday.json",
+          "sha256": "b2e29adefd2195156fc9d0d616150529e17dbbf1fe50243dc54e6c717206639b"
+        }
+      ],
+      "reason": "Original accepted news summary reverses the source-bound EPCM awarding party and recipient. Correct flat/null labels do not validate the role claim.",
+      "resolution_evidence": null,
+      "original_records_modified": false,
+      "resolution_required": "Final source rejects the original wrong raw; every affected selected case has a new actual terminal record in candidate-price-observation-validation and independent review. A known wrong accepted body cannot be retained by path equivalence. Explicit rejected/error output remains unavailable, not a correct prediction."
+    },
+    {
+      "id": "v2_3_supply_risk_object_scope_and_evidence_polarity",
+      "status": "open",
+      "analysis_id": null,
+      "affected_cases": [
+        "dismissed_notice_not_verified_recovery"
+      ],
+      "review_scope": "Two precisely distinguished defects: model-visible generic source risk-object extraction, and an accepted isolated source-feedback result with reversed risk evidence slot. They share risk-vs-flow/polarity scope but no claim that the generic input bug caused the Gassco result.",
+      "review_evidence": {
+        "file": "reports/repair_2026-10-20/independent_source_feedback_dismissed_supply_polarity_observation_v2_3.json",
+        "sha256": "73b54082eb70aa3f8c6201f36e3ee0a9646f23ee9a0711fe99398554b8708475"
+      },
+      "reason": "Generic input controls classified supply risk lower/higher as physical supply decrease/increase with reverse pressure and actual_flow although flows unknown. Separately, latest actual dismissed result placed supply-risk reduction in bullish evidence. Recorded strictTrue is preserved and does not validate the mechanism.",
+      "source_input_audit": {
+        "file": "reports/repair_2026-10-20/model_input_risk_scope_read_only_audit_v2_3.json",
+        "sha256": "4748321fc9de66a937de37b96b49392786dfb1bff0cdb7ac4a22c612e2409a46"
+      },
+      "source_input_fix_recheck": {
+        "file": "reports/repair_2026-10-20/model_input_risk_scope_fix_read_only_recheck_v2_3.json",
+        "sha256": "2656331c5eae329348a2a70edc99b31b3779cb628967376236ba0c5833e7913b"
+      },
+      "source_input_controls_synthetic": true,
+      "synthetic_controls_inserted_into_dataset": false,
+      "affected_record_evidence": [
+        {
+          "file": "reports/repair_2026-10-20/candidate-source-feedback-validation/dismissed_notice_not_verified_recovery.json",
+          "sha256": "6a52a56aef8b57e98cc4ac39908ab3a9dacc47a019d888c8661c3ff18f33cafb"
+        }
+      ],
+      "supplemental_review_evidence": [
+        {
+          "file": "reports/repair_2026-10-20/independent_actual_source_feedback_review_v2_3_all_8_briefs.json",
+          "sha256": "5558299e6b3737c91cf4ee8a16a858059e32ccdc457eebb6e55a07a59d911123"
+        },
+        {
+          "file": "reports/repair_2026-10-20/source_feedback_accepted_output_defects_v2_3.json",
+          "sha256": "7f4557d5b496b8e1285dc2f5b098c47bb6f635be05a408ecd610ca5ce7613e56"
+        }
+      ],
+      "resolution_evidence": null,
+      "original_records_modified": false,
+      "resolution_required": [
+        "Current-source deterministic paired input recheck and genuine supply±40 controls must pass without source rewriting or invented actual flow.",
+        "Final complete-path proof identifies affected cases; latest risk-polarity actual dismissed terminal and independent full-prose review required. No accepted wrong-sign evidence may remain.",
+        "New final production workflow and review bind running source, source cards and evidence signs; old canonical predictions and the validation baseline remain preserved."
+      ],
+      "generation_issue_resolved": false
+    }
+  ],
+  "resolution_rule": "Only a source fix plus current-version real model validation of this known error can resolve publication blocker; preserve original canonical input/result and append review.",
+  "updated_at": "2026-10-21T01:33:33.913835+00:00",
+  "previous_ledger_preserved": {
+    "file": "reports/repair_2026-10-20/release_known_accepted_errors.19f691b39add7007.json",
+    "sha256": "19f691b39add7007c94542c86811b62a9dbed0dd10cc5fcd65c0326cec476193"
+  },
+  "new_risk_scope_family_is_pending": true
+}

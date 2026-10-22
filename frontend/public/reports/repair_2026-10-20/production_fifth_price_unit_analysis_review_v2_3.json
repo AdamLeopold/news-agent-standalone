@@ -1,0 +1,27 @@
+{
+  "generated_at": "2026-10-21T02:00:36.191954+00:00",
+  "status": "confirmed_invalid_pending_application",
+  "scope": "TTF price energy denomination; original body preserved.",
+  "pending_reviews": [
+    {
+      "analysis_id": "341746e5-d870-42ad-8034-97eba9f389d2",
+      "protected_hashes": {
+        "input_snapshot": "c2587bd69f22f64822e931ee57be11b5f32f80c38a521c4164743390b3f007e5",
+        "result": "ea84b58d20617e5da12f3da5a299545ff4ddc939f7ce8893b50eae57e0fddb7b",
+        "detail_result": null
+      },
+      "confirmed_invalid": true,
+      "review": {
+        "review_id": "price-denomination-341746e5-d870-42ad-8034-97eba9f389d2-brief-v1",
+        "status": "invalid",
+        "reason_code": "v2_3_ttf_price_energy_unit_changed_to_gas_volume",
+        "affected_parts": [
+          "brief"
+        ],
+        "reviewer": "independent_actual_price_unit_review",
+        "message_zh": "收盘预判依据将价格差1.733的单位从来源EUR/MWh写成EUR/mcm，量纲不符。原始分析和方向完整保留，当前展示标记为未通过来源复核。",
+        "message_en": "The closing basis changes the 1.733 price difference from the source unit EUR/MWh to EUR/mcm. The original analysis and direction remain preserved; this output fails source-unit review."
+      }
+    }
+  ]
+}

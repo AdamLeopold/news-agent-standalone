@@ -1,0 +1,26 @@
+{
+  "restarted_at": "2026-10-20T20:01:51.088004+00:00",
+  "old_pid": 36350,
+  "verified_old_process": "/Library/Frameworks/Python.framework/Versions/3.10/Resources/Python.app/Contents/MacOS/Python -m uvicorn ttf_news.api:app --host 127.0.0.1 --port 8765 --timeout-graceful-shutdown 5",
+  "new_pid": 72355,
+  "old_prompt_version": "ttf-news-v6-standalone-1.8",
+  "new_prompt_version": "ttf-news-standalone-2.0",
+  "ollama_service_stopped": false,
+  "preservation_manifest": "reports/repair_2026-10-20/predeployment_preservation_manifest.json",
+  "protected_analyses": 117,
+  "protected_snapshots": 5,
+  "validation_records": [
+    {
+      "id": 210,
+      "created_at": "2026-10-14T05:51:48.181167+00:00",
+      "type": "validation_started",
+      "data": "{\"prompt_version\": \"ttf-news-v6-standalone-1.8\", \"required_days\": 7, \"real_api_smoke\": \"passed\", \"development_metrics_retained\": true}"
+    }
+  ],
+  "source_hashes": {
+    "ttf_news/analysis.py": "598e991481b10dac6faaab11769a638f9ad6517b2bd02b4bde0553513e8ff6b9",
+    "ttf_news/semantics.py": "a52d8ae264fd517004054b5e4f4ed5616c22190d7295230ed291acce1dfcde88",
+    "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56",
+    "ttf_news/runtime.py": "3a134db7b62270e6c28ca92598cd5ba2a81aaadbabc2eb93dad8b6bf53ac32d0"
+  }
+}

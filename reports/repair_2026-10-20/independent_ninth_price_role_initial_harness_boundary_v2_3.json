@@ -1,0 +1,22 @@
+{
+  "test_claim": "当前同合约报价较前一交易日结算价上涨2.67 EUR/MWh。",
+  "expected_legal_observed_comparison": true,
+  "results": [
+    {
+      "source": "root_before",
+      "source_sha256": "bcd240a893a87e842fc8caff8f4efa156f80cac7d8807b2c8c4c3a8599bfcdfa",
+      "error": "没有校准价格预测输入，禁止编造上涨/下跌幅度或目标价；仅可引用输入已观察的同合约参考变化"
+    },
+    {
+      "source": "private_candidate",
+      "source_sha256": "43ba0dc1d9fe85c74f3f8f78a0c939794caf341d510432d4d1ce919724958249",
+      "error": "没有校准价格预测输入，禁止编造上涨/下跌幅度或目标价；仅可引用输入已观察的同合约参考变化"
+    }
+  ],
+  "both_reject": true,
+  "classification": "existing_marker_scope_limitation_not_introduced_by_candidate",
+  "audit_action": "Keep this initial assertion failure as evidence; finite changed-scope controls use existing supported explicit 当前报价 comparison form. Do not silently add a broader new grammar fix.",
+  "new_model_calls": 0,
+  "database_access": false,
+  "source_modification": false
+}

@@ -1,0 +1,279 @@
+{
+  "generated_at": "2026-10-20T20:21:46.945657+00:00",
+  "scope": "Target previous-trading-day anchor identity and model price-operand isolation; no direction assignment or stored-result rewrite.",
+  "original_manual": {
+    "id": "6601a466-eecc-48f0-82e5-68785d8ac5be",
+    "kind": "manual",
+    "status": "completed",
+    "created_at": "2026-10-20T20:02:06.022759+00:00",
+    "trade_date": "2026-10-21",
+    "input_sha256": "f02a72a0d74cdf4cdd48dd389265eb002e8af73d14c8e8b2af4759df0686d50e",
+    "stored_result_sha256": "d09faad330a95d4d12970222f5a158572d365fadf0828a8ccf1940dd0dd09b57"
+  },
+  "database_record_preserved": {
+    "input_snapshot": true,
+    "stored_result": true
+  },
+  "finding": {
+    "target_trade_date": "2026-10-21",
+    "required_previous_trade_date": "2026-10-20",
+    "historical_reference_date": "2026-10-19",
+    "historical_reference_value": 88.04,
+    "observed_quote_value": 86.585,
+    "incorrectly_used_multi_day_difference": -1.455,
+    "raw_direction": "down",
+    "raw_news_direction": "flat",
+    "source_intraday_change_field_present": false
+  },
+  "corrected_model_price_reference": {
+    "available": true,
+    "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+    "contract_name": "Nov26",
+    "price_type": "reference",
+    "intraday": {
+      "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+      "value": 86.585,
+      "observed_at": "2026-10-20T19:49:00+00:00",
+      "available_at": "2026-10-20T19:59:49.921375+00:00",
+      "price_type": "delayed_last_trade",
+      "minimum_delay_minutes": 15,
+      "stale": false
+    },
+    "verified": false,
+    "reference_source": "ICE public chart",
+    "source_url": "https://www.ice.com/marketdata/api/productguide/charting/data/historical?marketId=6277389&historicalSpan=3",
+    "extreme_threshold": 4.466853677887938,
+    "sigma60": 2.233426838943969,
+    "threshold_frozen_as_of": "2026-10-20T20:02:05.460066+00:00",
+    "flat_delta": 0.3,
+    "observation_count": 701,
+    "risk_flags": [
+      "价格类型尚未验证为ICE官方日结算，不用于官方结算评分",
+      "最近价格并非上一完整交易日，存在行情缺口"
+    ],
+    "market_baseline": {
+      "kind": "observed_reference_move",
+      "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+      "as_of": "2026-10-20T20:02:05.460066+00:00",
+      "verified_settlement": false,
+      "available": false,
+      "reason": "previous_trading_day_reference_missing",
+      "interpretation": "仅观察价位与时钟；不构成相对目标日前一交易日的价格变化"
+    },
+    "historical_reference_scope": {
+      "reference_date": "2026-10-19",
+      "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+      "reason": "previous_trading_day_reference_missing",
+      "numeric_value_location": "原始input_snapshot及公共日价记录；不作为本次前结算锚点"
+    },
+    "settlement_anchor": {
+      "available": false,
+      "target_trade_date": "2026-10-21",
+      "expected_previous_trade_date": "2026-10-20",
+      "reference_date": "2026-10-19",
+      "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+      "known_time_precision": "exact",
+      "scope": "仅目标日前一交易日同合约参考价可作前结算比较；其他日价不是昨收",
+      "reason": "previous_trading_day_reference_missing"
+    }
+  },
+  "corrected_pricing_scope": {
+    "same_contract_anchor_available": false,
+    "same_contract_market_baseline_available": false,
+    "reaction_scope_is_not_forecast_veto": true,
+    "interpretation": "有效锚点与有方向供需可支持条件性收盘预判；计价未知降低把握，不自动判平或不预测"
+  },
+  "raw_validation_errors": [
+    "close_forecast:目标2026-10-21缺少前交易日2026-10-20同合约锚点；当前绝对报价或其他日期参考差不能当昨收涨跌。新闻也无方向依据时须insufficient_evidence且direction=null；有方向新闻仍可给有据条件预测，不补flat或强制复制新闻方向"
+  ],
+  "input_preservation": "Historical numerical reference remains in immutable input snapshot and public daily data; omitted only from model arithmetic operands when it is not the target previous-day anchor. Absolute observed quote and independently comparable event reactions remain visible.",
+  "retry_preservation": "Previous failed model prose is still explicitly UNTRUSTED_DRAFT/is_evidence=false; new source price objects cannot recover the stale operand. Both actual request shapes verified with a local mock; no Ollama.",
+  "original_15_fixture": {
+    "path": "reports/repair_2026-10-20/comparison_cases.json",
+    "sha256": "8d6f9202d21a3d27ac0f6714802d8da2eda76d321e4c820c0d4f73aae41eacd5",
+    "unchanged": true,
+    "controls": [
+      {
+        "case": "supply_loss_40",
+        "target": "2026-10-20",
+        "expected_previous": "2026-10-19",
+        "reference_date": null,
+        "anchor_available": false,
+        "known_time_precision": "not_provided",
+        "original_baseline_available": false,
+        "model_baseline_available": false
+      },
+      {
+        "case": "supply_restore_40",
+        "target": "2026-10-20",
+        "expected_previous": "2026-10-19",
+        "reference_date": null,
+        "anchor_available": false,
+        "known_time_precision": "not_provided",
+        "original_baseline_available": false,
+        "model_baseline_available": false
+      },
+      {
+        "case": "weak_exploration_no_quote",
+        "target": "2026-10-20",
+        "expected_previous": "2026-10-19",
+        "reference_date": null,
+        "anchor_available": false,
+        "known_time_precision": "not_provided",
+        "original_baseline_available": false,
+        "model_baseline_available": false
+      },
+      {
+        "case": "warm_heating_demand",
+        "target": "2026-10-20",
+        "expected_previous": "2026-10-19",
+        "reference_date": null,
+        "anchor_available": false,
+        "known_time_precision": "not_provided",
+        "original_baseline_available": false,
+        "model_baseline_available": false
+      },
+      {
+        "case": "cold_heating_demand",
+        "target": "2026-10-20",
+        "expected_previous": "2026-10-19",
+        "reference_date": null,
+        "anchor_available": false,
+        "known_time_precision": "not_provided",
+        "original_baseline_available": false,
+        "model_baseline_available": false
+      },
+      {
+        "case": "negated_outage",
+        "target": "2026-10-20",
+        "expected_previous": "2026-10-19",
+        "reference_date": null,
+        "anchor_available": false,
+        "known_time_precision": "not_provided",
+        "original_baseline_available": false,
+        "model_baseline_available": false
+      },
+      {
+        "case": "cumulative_shock_then_weak",
+        "target": "2026-10-20",
+        "expected_previous": "2026-10-19",
+        "reference_date": null,
+        "anchor_available": false,
+        "known_time_precision": "not_provided",
+        "original_baseline_available": false,
+        "model_baseline_available": false
+      },
+      {
+        "case": "weak_news_observed_market_up",
+        "target": "2026-10-20",
+        "expected_previous": "2026-10-19",
+        "reference_date": "2026-10-19",
+        "anchor_available": true,
+        "known_time_precision": "not_provided",
+        "original_baseline_available": true,
+        "model_baseline_available": true
+      },
+      {
+        "case": "supplied_conflicting_mechanisms",
+        "target": "2026-10-20",
+        "expected_previous": "2026-10-19",
+        "reference_date": null,
+        "anchor_available": false,
+        "known_time_precision": "not_provided",
+        "original_baseline_available": false,
+        "model_baseline_available": false
+      },
+      {
+        "case": "future_planned_notice",
+        "target": "2026-10-20",
+        "expected_previous": "2026-10-19",
+        "reference_date": null,
+        "anchor_available": false,
+        "known_time_precision": "not_provided",
+        "original_baseline_available": false,
+        "model_baseline_available": false
+      },
+      {
+        "case": "dismissed_notice_not_verified_recovery",
+        "target": "2026-10-20",
+        "expected_previous": "2026-10-19",
+        "reference_date": null,
+        "anchor_available": false,
+        "known_time_precision": "not_provided",
+        "original_baseline_available": false,
+        "model_baseline_available": false
+      },
+      {
+        "case": "real_nyhamna",
+        "target": "2026-10-19",
+        "expected_previous": "2026-10-16",
+        "reference_date": "2026-10-16",
+        "anchor_available": true,
+        "known_time_precision": "not_provided",
+        "original_baseline_available": true,
+        "model_baseline_available": true
+      },
+      {
+        "case": "real_eni",
+        "target": "2026-10-19",
+        "expected_previous": "2026-10-16",
+        "reference_date": "2026-10-16",
+        "anchor_available": true,
+        "known_time_precision": "not_provided",
+        "original_baseline_available": true,
+        "model_baseline_available": true
+      },
+      {
+        "case": "supply_loss_40_with_flat_baseline",
+        "target": "2026-10-20",
+        "expected_previous": "2026-10-19",
+        "reference_date": "2026-10-19",
+        "anchor_available": true,
+        "known_time_precision": "not_provided",
+        "original_baseline_available": true,
+        "model_baseline_available": true
+      },
+      {
+        "case": "supply_restore_40_with_flat_baseline",
+        "target": "2026-10-20",
+        "expected_previous": "2026-10-19",
+        "reference_date": "2026-10-19",
+        "anchor_available": true,
+        "known_time_precision": "not_provided",
+        "original_baseline_available": true,
+        "model_baseline_available": true
+      }
+    ],
+    "all_originally_valid_baselines_remain_valid": true
+  },
+  "fixture": {
+    "path": "tests/fixtures/manual_stale_previous_settlement_6601.json",
+    "sha256": "bd6cb7a52aa0307f8ec124bf5ab6574d2e492434ec58a26b0c556e372b272011"
+  },
+  "no_model_calls": true,
+  "no_database_writes_or_process_changes": true,
+  "verification": {
+    "tests": 239,
+    "subtests": 276,
+    "elapsed_seconds": 6.05,
+    "passed": true,
+    "new_anchor_tests": 15,
+    "price_clock_semantics_and_original_controls_included": true
+  },
+  "source_sha256": {
+    "ttf_news/context.py": "6ae94608797de98b1129f673af219bde7e88faba1f4cf73a7456058d7350b23f",
+    "ttf_news/analysis.py": "d302ca1994621aef9ed47257b4d355a09f68905e2e3e549b5a698e05b738c449",
+    "ttf_news/semantics.py": "3eb4139958c7f7f1c73925f25775bb5aeacb6c309155cb5286391e6ebc2faedb",
+    "tests/test_settlement_anchor.py": "120a8e9fc1d46f206aac220fbc310831291355970ad09df9454792f5426314fd"
+  },
+  "invalid_baseline_whitelist_followup": {
+    "finding": "Full testing exposed reference_move on unavailable baseline; known observed_delta removal alone was insufficient.",
+    "change": "Unavailable baseline rebuilt solely from canonical identity/observed absolute level/clocks and explicit reason; arbitrary nested derived-comparison payload omitted. A valid canonical baseline is copied unchanged.",
+    "tests": 89,
+    "subtests": 5,
+    "elapsed_seconds": 6.58,
+    "passed": true,
+    "command": ".venv/bin/python -m pytest -q tests/test_settlement_anchor.py tests/test_forecast_baseline.py tests/test_generation_boundaries.py tests/test_operator_evidence_binding.py tests/test_price_versions.py tests/test_evidence_inputs.py --tb=short",
+    "new_parameter_cases": 2
+  }
+}

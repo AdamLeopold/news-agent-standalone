@@ -1,0 +1,289 @@
+........................................s...... [  4%]
+.....ss............................................................... [ 11%]
+........................s............................................ [ 18%]
+...........................................................ss......... [ 25%]
+........................................................................ [ 32%]
+........................................................................ [ 39%]
+...................................................................... [ 46%]
+........................................................................ [ 54%]
+.......................................FFFFFFFF...FFF................... [ 61%]
+........................................................................................................................... [ 73%]
+..................................................................... [ 80%]
+......................................... [ 84%]
+............... [ 86%]
+.............................. [ 89%]
+......................................................................................................... [ 99%]
+.....                                                                    [100%]
+=================================== FAILURES ===================================
+________ test_all_fourteen_known_bad_original_bodies_still_rejected[0] _________
+
+index = 0
+
+    @pytest.mark.parametrize('index',range(14))
+    def test_all_fourteen_known_bad_original_bodies_still_rejected(index):
+     rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records']
+>    ctx,result=load_old(rows[index]);p,_=prepare_context(ctx)
+
+tests/test_production_price_unit_scopes.py:138: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+row = {'case': 'weak_exploration_no_quote', 'known_error_id': None, 'source_record': {'file': 'reports/repair_2026-10-20/can...09204fa59c3503'}, 'original_wrong_raw_sha256': '6ac8df5561c98897f3663043065321959121cfc5606a32833336b8ef529eff0b', ...}
+
+    def load_old(row):
+     location=row.get('source_record') or row.get('source_fixture');d=json.loads((ROOT/location['file']).read_text())
+>    assert hashlib.sha256((ROOT/location['file']).read_bytes()).hexdigest()==location['sha256']
+E    AssertionError: assert '4e0e731c5ec8...07ad3237f9077' == '20278b8467e5...9204fa59c3503'
+E      
+E      - 20278b8467e5d3fc20e0c1bda14f987f67dca77e6a32df985709204fa59c3503
+E      + 4e0e731c5ec832036c8ad5eb595e48041108b7262710d78380407ad3237f9077
+
+tests/test_production_price_unit_scopes.py:130: AssertionError
+________ test_all_fourteen_known_bad_original_bodies_still_rejected[1] _________
+
+index = 1
+
+    @pytest.mark.parametrize('index',range(14))
+    def test_all_fourteen_known_bad_original_bodies_still_rejected(index):
+     rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records']
+>    ctx,result=load_old(rows[index]);p,_=prepare_context(ctx)
+
+tests/test_production_price_unit_scopes.py:138: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+row = {'case': 'weak_news_observed_market_up', 'known_error_id': None, 'source_record': {'file': 'reports/repair_2026-10-20/...b34c6acb9f6060'}, 'original_wrong_raw_sha256': 'ed947244f6672f8ecf2ee878e7106d28a7830ddee4d02f75bc99d0adee7df251', ...}
+
+    def load_old(row):
+     location=row.get('source_record') or row.get('source_fixture');d=json.loads((ROOT/location['file']).read_text())
+>    assert hashlib.sha256((ROOT/location['file']).read_bytes()).hexdigest()==location['sha256']
+E    AssertionError: assert '1deacbef75ef...e73fb3fbc70fe' == '1ad04f04f26d...34c6acb9f6060'
+E      
+E      - 1ad04f04f26dac92ef224664aed156f8fd84cc3d28a2ee6192b34c6acb9f6060
+E      + 1deacbef75effefe130d31149e958bdd46708e36cdeea51880ae73fb3fbc70fe
+
+tests/test_production_price_unit_scopes.py:130: AssertionError
+________ test_all_fourteen_known_bad_original_bodies_still_rejected[2] _________
+
+index = 2
+
+    @pytest.mark.parametrize('index',range(14))
+    def test_all_fourteen_known_bad_original_bodies_still_rejected(index):
+     rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records']
+>    ctx,result=load_old(rows[index]);p,_=prepare_context(ctx)
+
+tests/test_production_price_unit_scopes.py:138: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+row = {'case': 'supply_restore_40_with_flat_baseline', 'known_error_id': None, 'source_record': {'file': 'reports/repair_202...e6b79164f9beb2'}, 'original_wrong_raw_sha256': 'e70b1eeced61a0ca82702ee329ca6bee674dac90bc2e65abf54822c95deeffb9', ...}
+
+    def load_old(row):
+     location=row.get('source_record') or row.get('source_fixture');d=json.loads((ROOT/location['file']).read_text())
+>    assert hashlib.sha256((ROOT/location['file']).read_bytes()).hexdigest()==location['sha256']
+E    AssertionError: assert 'a4610ea852e1...baa57bdd54ea7' == 'db0d75eee0f8...6b79164f9beb2'
+E      
+E      - db0d75eee0f83a73b1d6b25eb2706f6ccc77ccd444489149c1e6b79164f9beb2
+E      + a4610ea852e1ec8fe50cbe44b44847134e4d6e36d283aeddd45baa57bdd54ea7
+
+tests/test_production_price_unit_scopes.py:130: AssertionError
+________ test_all_fourteen_known_bad_original_bodies_still_rejected[3] _________
+
+index = 3
+
+    @pytest.mark.parametrize('index',range(14))
+    def test_all_fourteen_known_bad_original_bodies_still_rejected(index):
+     rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records']
+>    ctx,result=load_old(rows[index]);p,_=prepare_context(ctx)
+
+tests/test_production_price_unit_scopes.py:138: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+row = {'case': 'anchor_legal_prevday_weak_market_up', 'known_error_id': None, 'source_record': {'file': 'reports/repair_2026...1073470329a00c'}, 'original_wrong_raw_sha256': '978e0af10124b6ac118527bced66cb752c93310dd08bb7e5ac45f875cb8d1968', ...}
+
+    def load_old(row):
+     location=row.get('source_record') or row.get('source_fixture');d=json.loads((ROOT/location['file']).read_text())
+>    assert hashlib.sha256((ROOT/location['file']).read_bytes()).hexdigest()==location['sha256']
+E    AssertionError: assert 'e9c3485a3d9d...5864051919a22' == '9de0440215cd...073470329a00c'
+E      
+E      - 9de0440215cdf3d36b3b522cc2c2d3457de8ffb55b02bd62ad1073470329a00c
+E      + e9c3485a3d9d843ac714dd42e1199bbf7aa2abd817344dcf3685864051919a22
+
+tests/test_production_price_unit_scopes.py:130: AssertionError
+________ test_all_fourteen_known_bad_original_bodies_still_rejected[4] _________
+
+index = 4
+
+    @pytest.mark.parametrize('index',range(14))
+    def test_all_fourteen_known_bad_original_bodies_still_rejected(index):
+     rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records']
+>    ctx,result=load_old(rows[index]);p,_=prepare_context(ctx)
+
+tests/test_production_price_unit_scopes.py:138: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+row = {'case': 'anchor_real_manual_missing_prevday', 'known_error_id': None, 'source_record': {'file': 'reports/repair_2026-...4e6c717206639b'}, 'original_wrong_raw_sha256': 'bdc3f17c8ff05ac997aeba24d96f987478fa8968823d0426ee030321003253cb', ...}
+
+    def load_old(row):
+     location=row.get('source_record') or row.get('source_fixture');d=json.loads((ROOT/location['file']).read_text())
+>    assert hashlib.sha256((ROOT/location['file']).read_bytes()).hexdigest()==location['sha256']
+E    AssertionError: assert '09f26c334adf...32392c01a4dfb' == 'b2e29adefd21...e6c717206639b'
+E      
+E      - b2e29adefd2195156fc9d0d616150529e17dbbf1fe50243dc54e6c717206639b
+E      + 09f26c334adf062466ae189081c49ca3e4d8526cc80501d07dd32392c01a4dfb
+
+tests/test_production_price_unit_scopes.py:130: AssertionError
+________ test_all_fourteen_known_bad_original_bodies_still_rejected[5] _________
+
+index = 5
+
+    @pytest.mark.parametrize('index',range(14))
+    def test_all_fourteen_known_bad_original_bodies_still_rejected(index):
+     rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records']
+>    ctx,result=load_old(rows[index]);p,_=prepare_context(ctx)
+
+tests/test_production_price_unit_scopes.py:138: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+row = {'case': 'future_planned_notice', 'known_error_id': None, 'source_record': {'file': 'reports/repair_2026-10-20/candida...c625bf442c5c79'}, 'original_wrong_raw_sha256': '09d26b8dcbf07c35d44803abf0d0aee8ce3c8cc4a1e4af0a5032d30259a2b63c', ...}
+
+    def load_old(row):
+     location=row.get('source_record') or row.get('source_fixture');d=json.loads((ROOT/location['file']).read_text())
+>    assert hashlib.sha256((ROOT/location['file']).read_bytes()).hexdigest()==location['sha256']
+E    AssertionError: assert 'a85bcf913e3b...0b5d6f444de2a' == 'ed1939b87c3e...625bf442c5c79'
+E      
+E      - ed1939b87c3ef14220eb5c824df3cd3eeb87553a6f39df78a3c625bf442c5c79
+E      + a85bcf913e3b6c4cf34710a87c4427095fe028cdcd170ea40a70b5d6f444de2a
+
+tests/test_production_price_unit_scopes.py:130: AssertionError
+________ test_all_fourteen_known_bad_original_bodies_still_rejected[6] _________
+
+index = 6
+
+    @pytest.mark.parametrize('index',range(14))
+    def test_all_fourteen_known_bad_original_bodies_still_rejected(index):
+     rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records']
+>    ctx,result=load_old(rows[index]);p,_=prepare_context(ctx)
+
+tests/test_production_price_unit_scopes.py:138: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+row = {'case': 'supply_loss_40_with_flat_baseline', 'known_error_id': None, 'source_record': {'file': 'reports/repair_2026-1...7380d15298986f'}, 'original_wrong_raw_sha256': 'dd1f44e9ef94887f17bd051dbac3e4c282131e5bfe637ec2957c5b114f645ef5', ...}
+
+    def load_old(row):
+     location=row.get('source_record') or row.get('source_fixture');d=json.loads((ROOT/location['file']).read_text())
+>    assert hashlib.sha256((ROOT/location['file']).read_bytes()).hexdigest()==location['sha256']
+E    AssertionError: assert '9400cdcfe9c0...17c105865ab8f' == 'df8fe61f7a33...380d15298986f'
+E      
+E      - df8fe61f7a3335f8b5705424dbbc6b1b397f57def2e197cf467380d15298986f
+E      + 9400cdcfe9c0a7bbbb61ee63ff2f366d7210402c2ef6aefc9d617c105865ab8f
+
+tests/test_production_price_unit_scopes.py:130: AssertionError
+________ test_all_fourteen_known_bad_original_bodies_still_rejected[7] _________
+
+index = 7
+
+    @pytest.mark.parametrize('index',range(14))
+    def test_all_fourteen_known_bad_original_bodies_still_rejected(index):
+     rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records']
+>    ctx,result=load_old(rows[index]);p,_=prepare_context(ctx)
+
+tests/test_production_price_unit_scopes.py:138: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+row = {'case': 'anchor_real_manual_missing_prevday', 'known_error_id': None, 'source_record': {'file': 'reports/repair_2026-...6d3a90c0e02327'}, 'original_wrong_raw_sha256': '11e4dd39600e3cac0308bf3ad4100900431e4314173de83e25cfd1b034e815b9', ...}
+
+    def load_old(row):
+     location=row.get('source_record') or row.get('source_fixture');d=json.loads((ROOT/location['file']).read_text())
+>    assert hashlib.sha256((ROOT/location['file']).read_bytes()).hexdigest()==location['sha256']
+E    AssertionError: assert '1ea42c72b346...3798138c6d080' == '548048cbbb16...d3a90c0e02327'
+E      
+E      - 548048cbbb16a292c29684b46393af5c7ffb6a2a193f1e3b136d3a90c0e02327
+E      + 1ea42c72b34686f0725bc65d02f28d49df7eec5a090941755803798138c6d080
+
+tests/test_production_price_unit_scopes.py:130: AssertionError
+________ test_all_fourteen_known_bad_original_bodies_still_rejected[11] ________
+
+index = 11
+
+    @pytest.mark.parametrize('index',range(14))
+    def test_all_fourteen_known_bad_original_bodies_still_rejected(index):
+     rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records']
+>    ctx,result=load_old(rows[index]);p,_=prepare_context(ctx)
+
+tests/test_production_price_unit_scopes.py:138: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+row = {'case': 'dismissed_notice_not_verified_recovery', 'known_error_id': None, 'source_record': {'file': 'reports/repair_2...72a83bb608c2cd'}, 'original_wrong_raw_sha256': 'ff0860953edcff8326137e7680741f231c60ac52ca4cc792b735ecd278bb613d', ...}
+
+    def load_old(row):
+     location=row.get('source_record') or row.get('source_fixture');d=json.loads((ROOT/location['file']).read_text())
+>    assert hashlib.sha256((ROOT/location['file']).read_bytes()).hexdigest()==location['sha256']
+E    AssertionError: assert '235daad658fb...3654c17f69385' == 'eac8fdca4d7d...2a83bb608c2cd'
+E      
+E      - eac8fdca4d7d9ee56172c5ecbf9ed3043aabcfecc1e97c4ebc72a83bb608c2cd
+E      + 235daad658fb34dad70a843f07d5cd63927b38b5f2f34156a6a3654c17f69385
+
+tests/test_production_price_unit_scopes.py:130: AssertionError
+________ test_all_fourteen_known_bad_original_bodies_still_rejected[12] ________
+
+index = 12
+
+    @pytest.mark.parametrize('index',range(14))
+    def test_all_fourteen_known_bad_original_bodies_still_rejected(index):
+     rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records']
+>    ctx,result=load_old(rows[index]);p,_=prepare_context(ctx)
+
+tests/test_production_price_unit_scopes.py:138: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+row = {'case': 'dismissed_notice_not_verified_recovery', 'known_error_id': None, 'source_record': {'file': 'reports/repair_2...1c3ff18f33cafb'}, 'original_wrong_raw_sha256': '5a173dcdbcc64f841702d81853e17bc28d7f122bb27ff3e3ae3a8a154cf6c2d5', ...}
+
+    def load_old(row):
+     location=row.get('source_record') or row.get('source_fixture');d=json.loads((ROOT/location['file']).read_text())
+>    assert hashlib.sha256((ROOT/location['file']).read_bytes()).hexdigest()==location['sha256']
+E    AssertionError: assert '6444a80c6562...ac45acfe6bd35' == '6a52a56aef8b...c3ff18f33cafb'
+E      
+E      - 6a52a56aef8b57e98cc4ac39908ab3a9dacc47a019d888c8661c3ff18f33cafb
+E      + 6444a80c6562a7e1a5215c93af9880b662d9e9fa6f796a40229ac45acfe6bd35
+
+tests/test_production_price_unit_scopes.py:130: AssertionError
+________ test_all_fourteen_known_bad_original_bodies_still_rejected[13] ________
+
+index = 13
+
+    @pytest.mark.parametrize('index',range(14))
+    def test_all_fourteen_known_bad_original_bodies_still_rejected(index):
+     rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records']
+>    ctx,result=load_old(rows[index]);p,_=prepare_context(ctx)
+
+tests/test_production_price_unit_scopes.py:138: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+row = {'case': 'anchor_legal_prevday_weak_market_up', 'known_error_id': None, 'source_record': {'file': 'reports/repair_2026...13854ec22e8dff'}, 'original_wrong_raw_sha256': 'b1ac4f872330d717ddf0748cfa4f65f536d9ac2a7d389d2d3786ac2d69985d6f', ...}
+
+    def load_old(row):
+     location=row.get('source_record') or row.get('source_fixture');d=json.loads((ROOT/location['file']).read_text())
+>    assert hashlib.sha256((ROOT/location['file']).read_bytes()).hexdigest()==location['sha256']
+E    AssertionError: assert '386cf0195dc3...0f8263741afac' == '466fb0f5b6c2...3854ec22e8dff'
+E      
+E      - 466fb0f5b6c2fe978e4d2059e4889d427ece27f0b26f1d76e013854ec22e8dff
+E      + 386cf0195dc3b8a8198f4f3207edd7f5e438616130579a2e8920f8263741afac
+
+tests/test_production_price_unit_scopes.py:130: AssertionError
+=============================== warnings summary ===============================
+../../.venv/lib/python3.10/site-packages/fastapi/testclient.py:1
+  .venv/lib/python3.10/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_production_price_unit_scopes.py::test_all_fourteen_known_bad_original_bodies_still_rejected[0]
+FAILED tests/test_production_price_unit_scopes.py::test_all_fourteen_known_bad_original_bodies_still_rejected[1]
+FAILED tests/test_production_price_unit_scopes.py::test_all_fourteen_known_bad_original_bodies_still_rejected[2]
+FAILED tests/test_production_price_unit_scopes.py::test_all_fourteen_known_bad_original_bodies_still_rejected[3]
+FAILED tests/test_production_price_unit_scopes.py::test_all_fourteen_known_bad_original_bodies_still_rejected[4]
+FAILED tests/test_production_price_unit_scopes.py::test_all_fourteen_known_bad_original_bodies_still_rejected[5]
+FAILED tests/test_production_price_unit_scopes.py::test_all_fourteen_known_bad_original_bodies_still_rejected[6]
+FAILED tests/test_production_price_unit_scopes.py::test_all_fourteen_known_bad_original_bodies_still_rejected[7]
+FAILED tests/test_production_price_unit_scopes.py::test_all_fourteen_known_bad_original_bodies_still_rejected[11]
+FAILED tests/test_production_price_unit_scopes.py::test_all_fourteen_known_bad_original_bodies_still_rejected[12]
+FAILED tests/test_production_price_unit_scopes.py::test_all_fourteen_known_bad_original_bodies_still_rejected[13]
+11 failed, 985 passed, 6 skipped, 1 warning, 371 subtests passed in 40.77s

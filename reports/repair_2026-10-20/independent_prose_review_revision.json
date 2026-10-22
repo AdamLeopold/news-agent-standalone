@@ -1,0 +1,115 @@
+{
+  "created_at": "2026-10-20T19:56:36.871805+00:00",
+  "review_method": "Independent source-and-full-prose review of all four actual bounded-draft repair runs. Machine contract checks, causal review and current production verification are separate.",
+  "no_model_calls": true,
+  "no_network_calls": true,
+  "no_database_access": true,
+  "original_files_unchanged": true,
+  "verdict_counts": {
+    "failed_real_future_no_loss_and_unpriced_assertions": 1,
+    "needs_attention_elapsed_notice_used_as_current_bullish": 1,
+    "pass": 2
+  },
+  "records": [
+    {
+      "case": "future_planned_notice",
+      "file": "reports/repair_2026-10-20/candidate-revision-validation/future_planned_notice.json",
+      "file_sha256": "ec2bf8c6f61bafed14039a3fd6690048c92e370f478e15583d2aaf9062abba42",
+      "input_sha256": "99aa1883186e4c7746647f781489670cf07addc2c015b7bbd5f4d28310eef1e8",
+      "recorded_contract_passed": false,
+      "has_final_result": false,
+      "recorded_error": "模型JSON两次校验失败，未生成方向：close_forecast.basis:缺少公告前后价格反应，不能宣称未计入价格/尚未计价；价格反应未知与未计价不同，未来容量公告也可经预期影响当前价格；news_impact.summary:Gassco未来维护公告不能写成当前实际停供或流量损失；应写未来容量风险并保留起止时间；news_impact.summary:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景",
+      "generation_source_sha256": {
+        "ttf_news/analysis.py": "598e991481b10dac6faaab11769a638f9ad6517b2bd02b4bde0553513e8ff6b9",
+        "ttf_news/semantics.py": "43837a2fb1fed9b91d48def0ae51975f1e9dc7cec179eb1911cc4ec027de9f75",
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56"
+      },
+      "raw_sha256": [
+        "4ff8463617c6134db272f52162418234439e6e22e245cb1357190bda9be08d3b",
+        "f615341e962c8e804dce7fa006bddb09c5950dfd2d0d262a847f6ad95c517a76"
+      ],
+      "verdict": "failed_real_future_no_loss_and_unpriced_assertions",
+      "notes": [
+        "两次medium真实执行当前有界低信任草稿策略；第二次草稿186token，来源事实未裁。策略已实测不表示语义有效。",
+        "首轮与第二轮close.basis仍以未来事件推‘未计入价格’，没有公告前后价格反应支持，当前priced_in_comment虽写未知，但不同字段存在矛盾。",
+        "第二轮news/analysis以‘截至10月20日未产生实际供气损失，未形成当前供需冲击’归为中性。若仅指该尚未开始维护本身，可以有窄物理读法；这仍不能证明全部当前供需或价格不受预期渠道影响。本次确定失败点是无证据‘未计入价格’，不依赖将窄物理句扩大成全市场断言。",
+        "未来容量20与5月22日至25日窗口有来源；close null缺价格比较锚点可成立，不能因此豁免未计价/无冲击错句。原失败保存，不为减少flat改变方向门。"
+      ]
+    },
+    {
+      "case": "real_eni",
+      "file": "reports/repair_2026-10-20/candidate-revision-validation/real_eni.json",
+      "file_sha256": "c19e831df2010ac10f113d4cc85cad903015c63e59acf584f83e254f4198d41c",
+      "input_sha256": "0dd52f2daf32aeaf1edc94d3394b0df67eba21b6f8d1b3b6ca0652c0faf8f075",
+      "recorded_contract_passed": true,
+      "has_final_result": true,
+      "recorded_error": null,
+      "generation_source_sha256": {
+        "ttf_news/analysis.py": "598e991481b10dac6faaab11769a638f9ad6517b2bd02b4bde0553513e8ff6b9",
+        "ttf_news/semantics.py": "43837a2fb1fed9b91d48def0ae51975f1e9dc7cec179eb1911cc4ec027de9f75",
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56"
+      },
+      "raw_sha256": [
+        "897a0521d5f17b82da94733d629a8e5632f5df1815d76a85ede218d15f6e5a21",
+        "ccbca12a7896ebfa4baaa0484fbdc123e42942e9dc65439982838113cda8dba6"
+      ],
+      "verdict": "needs_attention_elapsed_notice_used_as_current_bullish",
+      "notes": [
+        "第二轮不再无源声称N0未投产，未错译1.5million单位，未把未来非欧洲扩供列看涨，也未声称市场已/未计价；引用恢复从输入索引解析，raw与后台元数据区分。",
+        "N3 Åsgard非计划5.2与N7 Nyhamna计划19.8的当前容量风险→上行，N1仅该Troll公告撤销→下行风险缓解，方向与冲突处理正确；基准+.178条件上行不反号。",
+        "新增bullish N2 Troll前缀已明说时段已过/当前容量未知，但机制仍是‘供应约束’，summary把Troll与两项当前公告合成潜在看涨且用于close。N2时段10/16 11Z–10/17 04Z，asof10/19 14Z，输入scope禁止作仍活跃约束或当前合计；没有说明残余库存/延迟传导。",
+        "未声称已计量实物流量损失，不扩判为物理流量造假；但把已过时段容量以裸‘供应约束’列入当前看涨、没有条件残余或独立当前证据，属于真实时效依据不足。Root独立复核同意；machine contract_passed=True与人工needs_attention并列保留，不能当最终通过。"
+      ]
+    },
+    {
+      "case": "supply_loss_40_with_flat_baseline",
+      "file": "reports/repair_2026-10-20/candidate-revision-validation/supply_loss_40_with_flat_baseline.json",
+      "file_sha256": "bd5d6bae13901efe7db318008fa10a40d398c7773d7dc253c002c8d94dfce03d",
+      "input_sha256": "42c8e106e6a41ed1aac5d22ac7d754fd5b8a62ed28c539d0fcdf99bd07e5bf29",
+      "recorded_contract_passed": true,
+      "has_final_result": true,
+      "recorded_error": null,
+      "generation_source_sha256": {
+        "ttf_news/analysis.py": "598e991481b10dac6faaab11769a638f9ad6517b2bd02b4bde0553513e8ff6b9",
+        "ttf_news/semantics.py": "43837a2fb1fed9b91d48def0ae51975f1e9dc7cec179eb1911cc4ec027de9f75",
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56"
+      },
+      "raw_sha256": [
+        "dddbef2fabf8e66cbdc8e49b9611370b0a48c06a8d21c89dbf3f018eb7c488ba",
+        "e33c09ce1d17e5df7f14d3d22b64f779c6c3abb5a8d49b206a206925bfe7cf69"
+      ],
+      "verdict": "pass",
+      "notes": [
+        "假设事实明确欧洲实际流量减少40mcm/d/持续7天→供应约束→TTF上行，方向与量纲正确，无无源天气库存抵消。",
+        "同合约88.04持平基准时间在公告前，只作为观察基准；正文未将其冒充消息后反应或已计价证据。",
+        "close以‘若未计价/若无显著反向回吐’作条件上行，同时明确计价无法确认；没有断言市场实际未计价，没有编造目标价或把40mcm/d换算成价格幅度。",
+        "两次medium，首轮缺消息前后反应而拒绝有效基准预判，重试有当前draft策略且改为有据条件forecast；不机械保留旧方向/拒答。"
+      ]
+    },
+    {
+      "case": "supply_restore_40_with_flat_baseline",
+      "file": "reports/repair_2026-10-20/candidate-revision-validation/supply_restore_40_with_flat_baseline.json",
+      "file_sha256": "1d39b9c57e942415a6a05265eac28623a095d4210103e4e67b931c35b8369dad",
+      "input_sha256": "464d1b4829706e3760d34f544c7b1028ab149fdf9aae15c7c9f40febbcb66e9c",
+      "recorded_contract_passed": true,
+      "has_final_result": true,
+      "recorded_error": null,
+      "generation_source_sha256": {
+        "ttf_news/analysis.py": "598e991481b10dac6faaab11769a638f9ad6517b2bd02b4bde0553513e8ff6b9",
+        "ttf_news/semantics.py": "43837a2fb1fed9b91d48def0ae51975f1e9dc7cec179eb1911cc4ec027de9f75",
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56"
+      },
+      "raw_sha256": [
+        "f637a72af8ec5799998bac143f709b1ca9a48e65047e71202adf3bd2c1341fc0",
+        "5a9037e7705e5171d692b9a7a5cf3442d88b309eab570ab763114e1f234ca697"
+      ],
+      "verdict": "pass",
+      "notes": [
+        "假设事实确认实流恢复增加40mcm/d→供应增加→TTF下行，量纲与因果方向正确；没有凭资源潜力抵消当前实流冲击。",
+        "同合约持平基准与条件down相容，未从40mcm/d编造目标价或弹性；‘若未计价’是假设并另明确无法确认计价。",
+        "basis‘未观察到价格对供应增加的反应’结合priced_in_comment缺可比反应读作缺观测，不读作已知市场不反应；未把公告前flat报价作为公告后无反应事实。",
+        "两次medium，首轮仅缺反应而拒绝有效基准预判，当前draft重试改为条件forecast，供给方向不反转。"
+      ]
+    }
+  ]
+}

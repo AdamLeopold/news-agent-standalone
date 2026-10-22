@@ -1,0 +1,66 @@
+{
+  "reviewed_at": "2026-10-20T20:11:08.081001+00:00",
+  "analysis_id": "6601a466-eecc-48f0-82e5-68785d8ac5be",
+  "source": "Read-only SQLite canonical input/result; source record was not modified",
+  "prompt_version": "ttf-news-standalone-2.0",
+  "stored_status_at_read": "completed",
+  "created_at": "2026-10-20T20:02:06.022759+00:00",
+  "completed_at": "2026-10-20T20:06:36.192652+00:00",
+  "canonical_input_sha256": "f02a72a0d74cdf4cdd48dd389265eb002e8af73d14c8e8b2af4759df0686d50e",
+  "canonical_result_sha256": "d09faad330a95d4d12970222f5a158572d365fadf0828a8ccf1940dd0dd09b57",
+  "canonical_detail_sha256": null,
+  "verdict": "known_accepted_error_invalid_previous_trading_day_anchor",
+  "release_blocking": true,
+  "as_of": "2026-10-20T20:02:05.460066+00:00",
+  "target_trade_date": "2026-10-21",
+  "required_previous_trading_day": "2026-10-20",
+  "provided_price_date": "2026-10-19",
+  "provided_previous_price": 88.04,
+  "price_contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+  "intraday": {
+    "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+    "value": 86.585,
+    "observed_at": "2026-10-20T19:49:00+00:00",
+    "available_at": "2026-10-20T19:59:49.921375+00:00"
+  },
+  "market_baseline": {
+    "available": false,
+    "kind": "observed_reference_move",
+    "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+    "as_of": "2026-10-20T20:02:05.460066+00:00",
+    "verified_settlement": false,
+    "flat_band": 0.3,
+    "interpretation": "已观察同合约参考变化；延续或反转均为待验证情景，不是目标日已实现结算",
+    "reason": "previous_trading_day_reference_missing"
+  },
+  "current_news_title": "LNG Canada entrusts Técnicas Reunidas with €200M+ EPCM deal",
+  "accepted_news_direction": "flat",
+  "accepted_close_forecast": {
+    "direction": "down",
+    "confidence": 0.6,
+    "summary": "基于当前价格已下跌且无明显新闻冲击，预计收盘价相对前一结算仍为下跌，但幅度不大。",
+    "basis": "参考价格已下跌1.45点，且新闻未显示即时供需变化，缺乏显著逆转或加速因素。",
+    "extreme_move_risk": "",
+    "evidence_status": "forecast"
+  },
+  "quoted_calculation": {
+    "intraday_minus_19th_reference": -1.455,
+    "model_basis": "参考价格已下跌1.45点，且新闻未显示即时供需变化，缺乏显著逆转或加速因素。"
+  },
+  "findings": [
+    "Target close is 2026-10-21; the previous trading day is 2026-10-20. Same-contract historical 2026-10-19 price cannot serve as the missing 20th reference.",
+    "The input market_baseline explicitly reports unavailable/previous_trading_day_reference_missing, yet the model used 86.585−88.04≈−1.45 to assert a close decline relative to the previous settlement.",
+    "All supplied clocks precede as_of and the contract matches; this is a consecutive-session anchor error, not evidence of a future-price leak or a contract mismatch.",
+    "The current weak project news does not independently establish a relative-close decline. A conditional news analysis or explicit insufficient-evidence result is needed; no replacement flat/default direction is justified.",
+    "Earlier thirteen valid v2.0 comparison outputs and the detail retain their own valid source times; they do not validate a new v2.1 missing-day mechanism.",
+    "Passed structural SSE/API stages do not make this attempted smoke a complete logical pass. New production validation is required after the source fix."
+  ],
+  "no_database_writes": true,
+  "no_model_calls": true,
+  "no_network_calls": true,
+  "primary_attempt_evidence": [
+    "reports/repair_2026-10-20/attempted_v2_0_live_smoke_test.json",
+    "reports/repair_2026-10-20/attempted_v2_0_live-smoke.log",
+    "reports/repair_2026-10-20/smoke_v2_0_cancellation.json"
+  ]
+}

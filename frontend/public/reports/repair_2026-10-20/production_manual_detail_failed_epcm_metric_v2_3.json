@@ -1,0 +1,108 @@
+{
+  "id": 19573,
+  "created_at": "2026-10-20T23:17:02.988354+00:00",
+  "type": "model_failure",
+  "data": {
+    "analysis_id": "8d1b57ef-422e-48e7-90af-745694e3a298",
+    "kind": "detail",
+    "seconds": 215.672,
+    "error": "模型JSON两次校验失败，未生成方向：detail.invalidation_conditions[0]:Gassco未来维护公告不能写成当前实际停供或流量损失；应写未来容量风险并保留起止时间；analysis.summary:新闻覆盖不足不能证明市场没有供需变化；只能说明输入新闻未显示相应冲击；detail.invalidation_conditions[1]:N0输入仅有资源发现/勘探/许可/合作前瞻，未给已投产或实际交付事实；不能写成当前实物增供并抵消当日容量约束。可分析长期供给预期、未",
+    "model_metadata": {
+      "prompt_version": "ttf-news-standalone-2.3",
+      "reasoning": "medium",
+      "configured_reasoning": "medium",
+      "semantic_high_retry_enabled": false,
+      "semantic_high_scope": "operator_notice",
+      "semantic_high_scope_eligible": false,
+      "semantic_high_eligible": false,
+      "semantic_independent_regeneration": false,
+      "model_calls": [
+        {
+          "num_ctx": 16384,
+          "num_predict": 3072,
+          "input_token_ceiling": 12800,
+          "input_token_estimate": 10999,
+          "retry_policy": "disabled",
+          "semantic_independent_regeneration": false,
+          "semantic_high_scope": "operator_notice",
+          "semantic_high_scope_eligible": false,
+          "semantic_high_eligible": false,
+          "system_prompt_sha256": "71205499dc98dc43d04b5fc45016549723c525f6a1d9199f0161bbf77975cc2d",
+          "response_schema_sha256": "e44da7969075ffddd6efeaad0069a03a6abde0688263f8c368da7ebfd234eb85",
+          "context_sha256": "6a11a35f3343e339b86e467ee4d147f52f8806441835508de837ef72ddf41b91",
+          "prompt_eval_count": 10946,
+          "eval_count": 1976,
+          "done_reason": "stop",
+          "total_duration_ns": 102060499250,
+          "raw_content": "{\"source_fact_checks\":{\"fact_contract_version\":\"operator-facts-2.2\",\"operator_notices\":[{\"id\":\"N1\",\"facility\":\"Troll\",\"facility_type\":\"气田/生产设施\",\"notice_type\":\"计划\",\"unavailable_capacity\":\"7.6\",\"period_utc\":[\"2026-10-22T04:00Z\",\"2026-10-23T04:00Z\"],\"state_description\":\"未来公告\",\"cause_original\":\"Yearly maintenance\"},{\"id\":\"N2\",\"facility\":\"Troll\",\"facility_type\":\"类别未给\",\"notice_type\":\"计划\",\"unavailable_capacity\":\"13.0\",\"period_utc\":[\"2026-10-21T04:00Z\",\"2026-10-22T04:00Z\"],\"state_description\":\"未来公告\",\"cause_original\":\"Yearly maintenance\"}],\"capacity_scope\":\"公告不可用容量，非实际流量计量\",\"pricing_observation\":{\"observed_at\":\"2026-10-20T20:59:00+00:00\",\"available_at\":\"2026-10-20T21:09:54.498786+00:00\",\"clock_roles\":{\"observed_at\":\"报价发生时刻\",\"available_at\":\"本机获知时刻；不是报价发生时刻\"},\"current_news_timing\":{\"id\":\"N0\",\"publication_time\":\"2026-10-20T13:11:12+00:00\",\"quote_relation\":\"at_or_after_publication\",\"quote_role\":\"已观察市场基准；单个报价不证明公告反应\"},\"reaction_evidence_available\":false,\"pricing_status\":\"无法确认是否已计价；不是尚未计价或价格无反应\"},\"non_overlapping_notice_ids\":[[\"N1\",\"N2\"]]},\"news_impact\":{\"bullish_evidence\":[],\"bearish_evidence\":[],\"neutralizing_evidence\":[],\"summary\":\"截至2026‑10‑20，LNG Canada签署的EPCM合同并未立即影响天然气供应；Troll场站的两项计划维护公告属于未来事件，当前并未导致供气损失。整体来看，未出现可计价的供需冲击，净影响为平稳。\",\"contextual_news_score\":0,\"direction\":\"flat\",\"confidence\":0.6,\"signal_strength\":\"weak\"},\"close_forecast\":{\"basis\":\"截至2026‑10‑20，TTF参考价为86.325欧元/MWh，但缺乏前一交易日的官方结算基准，无法确定价格相对前一日的涨跌。\",\"summary\":\"由于缺少上一交易日的官方结算价格，且未来维护公告尚未生效，无法判断本日收盘价相对前一日的走势。\",\"evidence_status\":\"insufficient_evidence\",\"direction\":null,\"confidence\":0.4,\"extreme_move_risk\":\"缺乏前一交易日基准导致无法评估极端价格变动风险\"},\"analysis\":{\"summary\":\"本窗口内无可计价的供需冲击。LNG Canada的EPCM合同属于长期项目，未对即时供应产生影响；Troll场站的两项计划维护公告属于未来事件，当前不构成供气损失。\",\"evidence\":[\"[N0] LNG Canada签署EPCM合同 → 未来项目，未即时影响TTF供需\",\"[N1]Troll；计划；公告不可用容量7.6mcm/d；未来容量公告；实流未知；TTF机制：未来供需约束\",\"[N2]Troll；计划；公告不可用容量13.0mcm/d；未来容量公告；实流未知；结束时间修订：2026-10-23T06:00:00+0200→2026-10-22T06:00:00+0200；TTF机制：未来供需约束\"],\"negation_or_reversal\":[],\"priced_in_comment\":\"price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格\",\"matched_terms\":[],\"historical_comparisons\":[]},\"risk_flags\":[\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\"],\"references\":[{\"id\":\"N0\",\"url\":\"\"},{\"id\":\"N1\",\"url\":\"\"},{\"id\":\"N2\",\"url\":\"\"}],\"missing_fields\":[],\"detail\":{\"new_facts\":[\"[N0] LNG Canada签署EPCM合同，价值>€200M，涉及Coastal GasLink Phase 2；未立即影响天然气供应\",\"[N1] Troll场站计划维护，未来不可用容量7.6mcm/d，起始2026-10-22\",\"[N2] Troll场站计划维护，未来不可用容量13.0mcm/d，起始2026-10-21\"],\"transmission\":[\"[N0] 该合同为未来项目，未对欧洲天然气供需产生即时传导；[N1] 与[N2] 未来公告不构成当前供气损失，未对TTF产生即时传导\"],\"daily_balance\":[\"window_news:本结算窗口内无可计价的供需冲击，净影响为平稳\"],\"historical_comparisons\":[\"[E1]历史记录日期2026-10-19，类别为供应中断/复产；公告容量限制不等于已核实流量损失；该时点价格反应资料未提供，无法量化；输入未提供可验证的天气及LNG差异，需核对具体供需情景\"],\"priced_in_assessment\":\"price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格\",\"scenarios\":{\"bullish\":\"若Troll维护提前至本窗口，导致实际供气损失，可能推升TTF\",\"base\":\"若维护按公告时间执行，未对本窗口价格产生影响\",\"bearish\":\"若维护期间出现其他供给改善或库存补充，可能压低TTF\"},\"invalidation_conditions\":[\"[N1]或[N2] 维护提前至本窗口并导致实际供气损失\",\"[N0] 若合同涉及即时产能扩张并已投产\"],\"limitations\":[\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\",\"price_reference:输入未提供可用的前一同合约价格锚点\"],\"references\":[{\"id\":\"N0\",\"url\":\"\"},{\"id\":\"N1\",\"url\":\"\"},{\"id\":\"N2\",\"url\":\"\"}]}}",
+          "reference_resolution": {
+            "raw_reference_ids": [
+              "N0",
+              "N1",
+              "N2"
+            ],
+            "added_by_backend": [],
+            "input_provenance": {}
+          },
+          "validation_stage": "fact_or_mechanism",
+          "validation_errors": [
+            "detail.invalidation_conditions[0]:Gassco未来维护公告不能写成当前实际停供或流量损失；应写未来容量风险并保留起止时间",
+            "analysis.summary:新闻覆盖不足不能证明市场没有供需变化；只能说明输入新闻未显示相应冲击"
+          ],
+          "validation_error": "detail.invalidation_conditions[0]:Gassco未来维护公告不能写成当前实际停供或流量损失；应写未来容量风险并保留起止时间；analysis.summary:新闻覆盖不足不能证明市场没有供需变化；只能说明输入新闻未显示相应冲击",
+          "request_reasoning": "medium"
+        },
+        {
+          "num_ctx": 16384,
+          "num_predict": 3072,
+          "input_token_ceiling": 12800,
+          "input_token_estimate": 11468,
+          "retry_policy": "disabled",
+          "semantic_independent_regeneration": false,
+          "semantic_high_scope": "operator_notice",
+          "semantic_high_scope_eligible": false,
+          "semantic_high_eligible": false,
+          "system_prompt_sha256": "79939bfb9a238c3074ef4e70f5f13d9d6e2b934d7825ec5ea40c91826555cb83",
+          "response_schema_sha256": "e44da7969075ffddd6efeaad0069a03a6abde0688263f8c368da7ebfd234eb85",
+          "context_sha256": "37d7d005bb52bf3e2903a2ed6b6fa48ad9ab124c53ff67b29e5e6ce1bd71282c",
+          "repair_draft": {
+            "version": "ttf-untrusted-repair-draft-1",
+            "previous_raw_sha256": "f6b617332f535ec61009f65ffd5c874ecb29163783dd8d93132729c4a96d6b27",
+            "is_evidence": false,
+            "included": true,
+            "payload_sha256": "1c272eba9796b9e1040fc4b61b6d62a54472194c404f896ecf843144afc6ee4d",
+            "payload_tokens": 278,
+            "input_token_estimate": 11468,
+            "input_token_ceiling": 12800,
+            "source_facts_sha256": "28d86b48641d80045fbde3a8a3de6719bd312581f8dfef271ac3905e772fb893",
+            "summary_character_limit": 280,
+            "evidence_limit": 6
+          },
+          "prompt_eval_count": 11415,
+          "eval_count": 1874,
+          "done_reason": "stop",
+          "total_duration_ns": 111874100167,
+          "raw_content": "{\"source_fact_checks\":{\"fact_contract_version\":\"operator-facts-2.2\",\"operator_notices\":[{\"id\":\"N1\",\"facility\":\"Troll\",\"facility_type\":\"气田/生产设施\",\"notice_type\":\"计划\",\"unavailable_capacity\":\"7.6\",\"period_utc\":[\"2026-10-22T04:00Z\",\"2026-10-23T04:00Z\"],\"state_description\":\"未来公告\",\"cause_original\":\"Yearly maintenance\"},{\"id\":\"N2\",\"facility\":\"Troll\",\"facility_type\":\"类别未给\",\"notice_type\":\"计划\",\"unavailable_capacity\":\"13.0\",\"period_utc\":[\"2026-10-21T04:00Z\",\"2026-10-22T04:00Z\"],\"state_description\":\"未来公告\",\"cause_original\":\"Yearly maintenance\"}],\"capacity_scope\":\"公告不可用容量，非实际流量计量\",\"pricing_observation\":{\"observed_at\":\"2026-10-20T20:59:00+00:00\",\"available_at\":\"2026-10-20T21:09:54.498786+00:00\",\"clock_roles\":{\"observed_at\":\"报价发生时刻\",\"available_at\":\"本机获知时刻；不是报价发生时刻\"},\"current_news_timing\":{\"id\":\"N0\",\"publication_time\":\"2026-10-20T13:11:12+00:00\",\"quote_relation\":\"at_or_after_publication\",\"quote_role\":\"已观察市场基准；单个报价不证明公告反应\"},\"reaction_evidence_available\":false,\"pricing_status\":\"无法确认是否已计价；不是尚未计价或价格无反应\"},\"non_overlapping_notice_ids\":[[\"N1\",\"N2\"]]},\"news_impact\":{\"bullish_evidence\":[],\"bearish_evidence\":[],\"neutralizing_evidence\":[],\"summary\":\"LNG Canada EPCM合同及Troll场站两项计划维护公告均为未来事件，未导致当前供气损失，故对TTF价格无可计价的供需冲击。\",\"contextual_news_score\":0,\"direction\":\"flat\",\"confidence\":0.5,\"signal_strength\":\"weak\"},\"close_forecast\":{\"basis\":\"截至2026‑10‑20，TTF参考价为86.325欧元/MWh，但缺乏前一交易日的官方结算基准，无法确定价格相对前一日的涨跌。\",\"summary\":\"缺少前一交易日结算基准，无法判断价格相对前一日的涨跌。\",\"evidence_status\":\"insufficient_evidence\",\"direction\":null,\"confidence\":0.3,\"extreme_move_risk\":\"缺乏前一交易日结算基准，无法评估极端价格变动风险。\"},\"analysis\":{\"summary\":\"本窗口内无可计价的供需冲击。LNG Canada EPCM合同属于长期项目，未对即时供应产生影响；Troll场站的两项计划维护公告属于未来事件，当前不构成供气损失。\",\"evidence\":[\"[N0] LNG Canada EPCM合同 → 未来项目，未即时影响TTF供需\",\"[N1]Troll；计划；公告不可用容量7.6mcm/d；未来容量公告；实流未知；TTF机制：无当前供需冲击\",\"[N2]Troll；计划；公告不可用容量13.0mcm/d；未来容量公告；实流未知；结束时间修订：2026-10-23T06:00:00+0200→2026-10-22T06:00:00+0200；TTF机制：无当前供需冲击\"],\"negation_or_reversal\":[],\"priced_in_comment\":\"price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格\",\"matched_terms\":[],\"historical_comparisons\":[]},\"risk_flags\":[],\"references\":[{\"id\":\"N0\",\"url\":\"\"},{\"id\":\"N1\",\"url\":\"\"},{\"id\":\"N2\",\"url\":\"\"}],\"missing_fields\":[],\"detail\":{\"new_facts\":[\"[N0] LNG Canada EPCM合同，价值>€200M，计划Phase 2，未对即时供气产生影响\",\"[N1] Troll场站计划维护，开始2026-10-22，容量7.6mcm/d，未来公告\",\"[N2] Troll场站计划维护，开始2026-10-21，容量13.0mcm/d，未来公告\"],\"transmission\":[\"[N0]未显示对欧洲天然气供需的即时传导\",\"[N1]未产生当前供气损失，未影响欧洲天然气供需\",\"[N2]未产生当前供气损失，未影响欧洲天然气供需\"],\"daily_balance\":[\"window_news:本结算窗口暂无其他新闻导致净涨跌\"],\"historical_comparisons\":[\"[E4]历史记录日期2026-10-08，类别为供应中断/复产；公告容量限制不等于已核实流量损失；1d同合约参考价差+2.58欧元/MWh（截止2026-10-09）；3d同合约参考价差+8.37欧元/MWh（截止2026-10-13）；同期价差不能归因于事件；输入未提供可验证的天气及LNG差异，需核对具体供需情景\"],\"priced_in_assessment\":\"price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格\",\"scenarios\":{\"bullish\":\"若未来维护导致实际流量损失，可能推升价格\",\"base\":\"若无实际流量损失，价格维持现状\",\"bearish\":\"若实际流量恢复或其他供应增加，价格维持或略降\"},\"invalidation_conditions\":[\"[N1]或[N2]实际流量损失被确认\",\"[N0]合同导致的项目进度提前导致即时供气增加\"],\"limitations\":[\"price_reference:输入未提供该公告前后的独立可比价格反应，无法确认是否已计价\",\"coverage:来源gdelt：最近采集失败；错误后等待重试\"],\"references\":[{\"id\":\"N0\",\"url\":\"\"},{\"id\":\"N1\",\"url\":\"\"},{\"id\":\"N2\",\"url\":\"\"}]}}",
+          "reference_resolution": {
+            "raw_reference_ids": [
+              "N0",
+              "N1",
+              "N2"
+            ],
+            "added_by_backend": [],
+            "input_provenance": {}
+          },
+          "validation_stage": "fact_or_mechanism",
+          "validation_errors": [
+            "detail.invalidation_conditions[0]:Gassco未来维护公告不能写成当前实际停供或流量损失；应写未来容量风险并保留起止时间",
+            "analysis.summary:新闻覆盖不足不能证明市场没有供需变化；只能说明输入新闻未显示相应冲击",
+            "detail.invalidation_conditions[1]:N0输入仅有资源发现/勘探/许可/合作前瞻，未给已投产或实际交付事实；不能写成当前实物增供并抵消当日容量约束。可分析长期供给预期、未来投产条件及其与当前供给的时间差，不得据此补默认方向"
+          ],
+          "validation_error": "detail.invalidation_conditions[0]:Gassco未来维护公告不能写成当前实际停供或流量损失；应写未来容量风险并保留起止时间；analysis.summary:新闻覆盖不足不能证明市场没有供需变化；只能说明输入新闻未显示相应冲击；detail.invalidation_conditions[1]:N0输入仅有资源发现/勘探/许可/合作前瞻，未给已投产或实际交付事实；不能写成当前实物增供并抵消当日容量约束。可分析长期供给预期、未",
+          "request_reasoning": "medium"
+        }
+      ],
+      "context_sha256": "37d7d005bb52bf3e2903a2ed6b6fa48ad9ab124c53ff67b29e5e6ce1bd71282c"
+    }
+  }
+}

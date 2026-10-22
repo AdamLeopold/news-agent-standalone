@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "old_gateway_pid": 36367,
+  "new_gateway_pid": 32222,
+  "managed_process_identity_verified": true,
+  "process_command": "uvicorn ttf_news.public_gateway:app --host 127.0.0.1 --port 8766",
+  "project_cwd_verified": true,
+  "unrelated_ollama_stopped": false,
+  "root_source_sha256": "08990e223d5e7d1d348967c9625fd29fc2d1e7e58bb000c964b9cfea43b59952",
+  "test_count": 18,
+  "independent_review": {
+    "file": "reports/repair_2026-10-20/independent_gateway_stream_cleanup_source_review_v2_3.json",
+    "sha256": "3643cad7513dc7fb99831ee3e5d7109d5eff21b94340926240291a6d6825ef57"
+  },
+  "public_twenty_connections": {
+    "file": "reports/repair_2026-10-20/public_gateway_stream_cleanup_live_verification_v2_3.json",
+    "sha256": "dddc26cb5f77dff4e3bd4b3da2645eb8e8a9612dad591e81983d94ee4fd4a720"
+  },
+  "model_quality_pass_claimed": false,
+  "scope": "Applied only the reviewed gateway cleanup; analysis source finalization and production model verification remain separate."
+}

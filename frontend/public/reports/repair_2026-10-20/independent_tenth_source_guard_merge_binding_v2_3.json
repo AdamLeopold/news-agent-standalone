@@ -1,0 +1,55 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T06:20:15.992659+00:00",
+  "scope": "Read-only AST and exact byte binding of root-authorized merge of the two independently reviewed finite changes.",
+  "base_analysis": {
+    "file": ".runtime/source-archives/backend-64920/ttf_news/analysis.py",
+    "sha256": "1aebeb8971f13f61fd8bd4f9ab961b6284e811aeb773014ef7cc71874c94375c"
+  },
+  "final_analysis": {
+    "file": "ttf_news/analysis.py",
+    "sha256": "5fbbadb4a01a8a4390ddc27f5c9958e79f13da9cf974c86390c2271a1b22e1f6"
+  },
+  "root_application_binding": {
+    "file": "reports/repair_2026-10-20/applied_source_binding_capacity_price_guards_v2_3.json",
+    "sha256": "51a2c2d735bc60ae4cf29e23d795d3f0e943a79705e019f03d359ec5d7c82540"
+  },
+  "guards_review": {
+    "file": "reports/repair_2026-10-20/independent_tenth_local_guards_final_source_review_v2_3.json",
+    "sha256": "144a4e5dac92df6421867041fec841679f9e47e46105ff1fb9d5bd856bd8f515"
+  },
+  "input_identity_review": {
+    "file": "reports/repair_2026-10-20/independent_manual_source_identity_final_source_review_v2_3.json",
+    "sha256": "006e11440839376a798542dcb96c949f7264f66e002769f533bdf950f76122f6"
+  },
+  "exact_function_union_verified": true,
+  "all_other_toplevel_ast_equal_to_base": true,
+  "copied_test_and_fixture_bytes_verified": [
+    {
+      "file": "tests/fixtures/tenth_actual_v2_3.json",
+      "sha256": "c78f934d15f058904e25ab345922a06d980054828b6f089a3000d0b543a2721c"
+    },
+    {
+      "file": "tests/fixtures/tenth_old_twenty_one_bad_v2_3.json",
+      "sha256": "a9fcc207d8ca4583d68cf23e23bb8acadc96a5efd4f5c5c29cf8dcda3bb64c2e"
+    },
+    {
+      "file": "tests/test_tenth_capacity_price_scopes.py",
+      "sha256": "ae90b04a88742346b6e59fc10c05d3600d55fef3849380f077b3d2d32f03ceba"
+    },
+    {
+      "file": "tests/fixtures/manual_source_identity_actual_v2_3.json",
+      "sha256": "6309d022630fc86dcbcb8c76c200dea20fc80c6215eeb5f5d4e66b6046c4d3ba"
+    },
+    {
+      "file": "tests/test_manual_source_identity_projection.py",
+      "sha256": "e855f9ddbb1987bb4ea3cf50ad67b959e142ef803302f06545ee370556ffe4a1"
+    }
+  ],
+  "combined_full_tests_and_official_path_replay": "Root owns and is running these; this binding does not substitute for their final evidence.",
+  "original_tenth_failed_not_upgraded": true,
+  "model_available_or_prediction_accuracy_not_established": true,
+  "no_auditor_source_or_database_or_model_writes": true,
+  "verdict": "final_merge_matches_reviewed_function_union"
+}

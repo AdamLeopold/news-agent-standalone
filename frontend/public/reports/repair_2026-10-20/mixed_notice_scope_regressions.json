@@ -1,0 +1,107 @@
+{
+  "reviewed_at_utc": "2026-10-20T18:38:19.456977+00:00",
+  "records": [
+    {
+      "case": "real_nyhamna",
+      "raw_record": "reports/repair_2026-10-20/candidate-scopeguard-validation/real_nyhamna.json",
+      "raw_sha256": "7ab0ad69d2173e0f3250333427a6e58b6bf536df0e8aefc206fe4f2e0524921f",
+      "raw_unchanged": true,
+      "original_terminal_error": "模型JSON两次校验失败，未生成方向：全部正文用中文；N3公告类型为Unplanned（非计划），不能写计划停机/计划检修；年检可作为原文原因，须区分类型并重新分析",
+      "attempts": [
+        {
+          "attempt": 1,
+          "new_diagnostics": [
+            "news_impact.summary:当前两项容量公告类型混合（N0=计划、N3=非计划），不能统称两项均计划或非计划停产/停机；年检原因不改变Unplanned类型。请分别保留1项计划+1项非计划及容量/实际流量边界，不改写净方向"
+          ],
+          "active_notice_summary": {
+            "ids": [
+              "N0",
+              "N3"
+            ],
+            "planned_count": 1,
+            "unplanned_count": 1,
+            "description": "1项计划+1项非计划容量公告，实际流量未核实"
+          },
+          "source_const_contract_changed": true
+        },
+        {
+          "attempt": 2,
+          "new_diagnostics": [],
+          "active_notice_summary": {
+            "ids": [
+              "N0",
+              "N3"
+            ],
+            "planned_count": 1,
+            "unplanned_count": 1,
+            "description": "1项计划+1项非计划容量公告，实际流量未核实"
+          },
+          "source_const_contract_changed": true
+        }
+      ]
+    },
+    {
+      "case": "real_eni",
+      "raw_record": "reports/repair_2026-10-20/candidate-scopeguard-validation/real_eni.json",
+      "raw_sha256": "d11361901006ea411089acf948c6631fb046c01ebe98b0f0411b5668c20aec22",
+      "raw_unchanged": true,
+      "original_terminal_error": null,
+      "attempts": [
+        {
+          "attempt": 1,
+          "new_diagnostics": [
+            "news_impact.summary:当前两项容量公告类型混合（N3=非计划、N7=计划），不能统称两项均计划或非计划停产/停机；年检原因不改变Unplanned类型。请分别保留1项计划+1项非计划及容量/实际流量边界，不改写净方向"
+          ],
+          "active_notice_summary": {
+            "ids": [
+              "N3",
+              "N7"
+            ],
+            "planned_count": 1,
+            "unplanned_count": 1,
+            "description": "1项计划+1项非计划容量公告，实际流量未核实"
+          },
+          "source_const_contract_changed": true
+        }
+      ]
+    },
+    {
+      "case": "supply_restore_40_with_flat_baseline",
+      "raw_record": "reports/repair_2026-10-20/candidate-scopeguard-validation/supply_restore_40_with_flat_baseline.json",
+      "raw_sha256": "919732977fa71a7d75ca0eeea6419e3fe281bdba71d6b99fa711ad0defc4d014",
+      "raw_unchanged": true,
+      "original_terminal_error": null,
+      "attempts": [
+        {
+          "attempt": 1,
+          "new_diagnostics": [
+            "close_forecast:已有可用同合约价格基准及方向性新闻；缺少公告前后反应或未知是否已计价，不能单独作为拒绝收盘预判的理由。请相对已给前价和当前基准，依据有来源机制给条件性forecast；可选择任一有依据的方向，不得自动复制新闻方向。若确有冲突须明确引用具体反向事实"
+          ],
+          "active_notice_summary": null,
+          "source_const_contract_changed": false
+        }
+      ]
+    }
+  ],
+  "changes": [
+    "Reject two active mixed-type notices being called uniformly planned/unplanned without appropriate source scope.",
+    "Add direction-free active_notice_summary only for mixed current notice types, deduplicating IDs and excluding future/dismissed/ended states.",
+    "Recognize 无价格反应证据 and 无法判断是否已计价 in the existing valid-anchor directional-news abstention gate."
+  ],
+  "not_changed": [
+    "prompts",
+    "analysis.py",
+    "retry policy",
+    "model output directions",
+    "original raw model records"
+  ],
+  "tests": {
+    "command": ".venv/bin/python -m pytest -q tests/test_semantics.py tests/test_reviewed_prose.py tests/test_generation_boundaries.py",
+    "passed": 121,
+    "subtests_passed": 202,
+    "seconds": 1.54
+  },
+  "semantics_sha256": "59babcd94d9369ce37f1677ba1fb38c43a7830a2adfca95cd19cf5783d79e88f",
+  "model_calls": 0,
+  "full_suite": "Root owns the final coordinated JUnit run."
+}

@@ -1,0 +1,6 @@
+{
+  "phase": "v2.1 before final-generation repair",
+  "file": "reports/repair_2026-10-20/v2_1_final_release_unit_tests.xml",
+  "sha256": "f7870d2f5bec7377f64b67b4eb644869f0f3209611e685a536ef1df8e2eb969f",
+  "note": "Original JUnit bytes preserved. The next final-release test invocation is for changed v2.2 source and must not be attributed to this earlier phase."
+}

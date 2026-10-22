@@ -1,0 +1,59 @@
+{
+  "created_at": "2026-10-20T20:02:42.112207+00:00",
+  "review_method": "Independent full input/prose review; recorded machine pass/failure and manual causal verdict are kept separate. Rejected output is not a correct prediction.",
+  "no_model_calls": true,
+  "no_network_calls": true,
+  "no_database_access": true,
+  "original_files_unchanged": true,
+  "records": [
+    {
+      "case": "future_planned_notice",
+      "file": "reports/repair_2026-10-20/candidate-fieldfeedback-validation/future_planned_notice.json",
+      "file_sha256": "66ae9044f34b801e41a7b3fac96efee6ca6cc21f871f59dccc66fec59c546694",
+      "input_sha256": "99aa1883186e4c7746647f781489670cf07addc2c015b7bbd5f4d28310eef1e8",
+      "recorded_contract_passed": true,
+      "has_final_result": true,
+      "recorded_error": null,
+      "generation_source_sha256": {
+        "ttf_news/analysis.py": "598e991481b10dac6faaab11769a638f9ad6517b2bd02b4bde0553513e8ff6b9",
+        "ttf_news/semantics.py": "4c690dfa006fde35793ad10c0c2642576b339cd686b6cff623963b39cba7747e",
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56"
+      },
+      "raw_sha256": [
+        "a7240230b5d64d98b02521d426b376846eb7bb20f6e47157332fd414972e33c2"
+      ],
+      "verdict": "needs_attention_unsupported_current_price_no_effect",
+      "notes": [
+        "单次medium、machine contract_passed=True，但人工逐句发现证据机制尾句‘供应约束但未来，未对当前价格产生影响’，缺少该公告的价格反应观测，不能由未来生效推出当前价格确定无影响。",
+        "news/analysis‘未对当前供给产生影响’可窄读为该维护尚未生效的物理状态，不扩大解释为全市场实流或供需零冲击；已确认问题是明确当前价格无影响句。",
+        "未来计划容量20与实流未知在事实表/前缀保留，close null因缺前价基准可成立，flat/null本身不是被判错理由。",
+        "定位原unaffected_price表达式覆盖‘未影响当前价格/当前价格未受影响/对当前价格无影响’，未覆盖‘未对当前价格产生影响’词序。当前N0是Gassco可按引用作用域核验；保持原machine pass和raw，人工needs_attention独立存档。"
+      ]
+    },
+    {
+      "case": "real_eni",
+      "file": "reports/repair_2026-10-20/candidate-fieldfeedback-validation/real_eni.json",
+      "file_sha256": "9c87606b846a2c5f138150148da5b3a0fbacbeb00d114928e0597418ce529d3c",
+      "input_sha256": "0dd52f2daf32aeaf1edc94d3394b0df67eba21b6f8d1b3b6ca0652c0faf8f075",
+      "recorded_contract_passed": false,
+      "has_final_result": false,
+      "recorded_error": "模型JSON两次校验失败，未生成方向：news_impact.summary:N0来源标题使用turning on the taps的启动措辞，摘要仅说明本国电网供能/减排，未提供可断言项目尚未投产的依据；缺少投产时刻或输欧数量不等于尚未；分析照抄占位句/字段说明，必须填写本次实际事实、条件或缺失说明",
+      "generation_source_sha256": {
+        "ttf_news/analysis.py": "598e991481b10dac6faaab11769a638f9ad6517b2bd02b4bde0553513e8ff6b9",
+        "ttf_news/semantics.py": "4c690dfa006fde35793ad10c0c2642576b339cd686b6cff623963b39cba7747e",
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56"
+      },
+      "raw_sha256": [
+        "897a0521d5f17b82da94733d629a8e5632f5df1815d76a85ede218d15f6e5a21",
+        "ba6a3d197e471237ab4bac8785be4ca9d237dc22e8ce282bfcaaf5de5be05552"
+      ],
+      "verdict": "failed_correct_rejection_unattributed_startup_and_placeholder",
+      "notes": [
+        "首轮和第二轮仍无来源写‘新项目尚未投产’，标题启动措辞/本国电网摘要不能支持该状态断言；来源门正确拒绝，非公告范围假阳性。",
+        "第二轮analysis.summary为占位句‘新增事实及净影响’，未给真实分析，通用正文校验正确拒绝。",
+        "第二轮已移除过期N2当前看涨；N3/N7当前容量风险和N1仅公告撤销的反向缓解机制本身没有已发现反号，不因为flat或分数0把整条判错。",
+        "两次medium当前有界草稿策略确已执行；最终无result/error状态如实保存，不以旧阶段成功回退，不为了过测试再同策略重跑。"
+      ]
+    }
+  ]
+}

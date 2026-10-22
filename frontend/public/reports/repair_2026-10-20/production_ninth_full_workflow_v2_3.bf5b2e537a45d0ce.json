@@ -1,0 +1,158 @@
+{
+  "status": "running",
+  "started_at": "2026-10-21T04:47:00.352587+00:00",
+  "expected_prompt_version": "ttf-news-standalone-2.3",
+  "scope": "real_local_manual_detail_english_exports_sse_and_preservation",
+  "synthetic_live_input": false,
+  "raw_thinking_included": false,
+  "stages": [
+    {
+      "name": "preservation_before",
+      "status": "passed",
+      "started_at": "2026-10-21T04:47:00.365442+00:00",
+      "checks": {
+        "passed": true,
+        "protected_analysis_count": 155,
+        "protected_nonnull_field_count": 288,
+        "current_analysis_count": 155,
+        "new_analysis_count": 0,
+        "protected_snapshot_count": 5,
+        "new_snapshot_count": 0,
+        "original_validation_record_count": 1,
+        "latest_baseline_unchanged": true,
+        "original_baseline": {
+          "id": 210,
+          "created_at": "2026-10-14T05:51:48.181167+00:00",
+          "type": "validation_started"
+        },
+        "failures": []
+      },
+      "finished_at": "2026-10-21T04:47:00.398184+00:00",
+      "elapsed_seconds": 0.033
+    },
+    {
+      "name": "live_api_v2_and_managed_identity",
+      "status": "passed",
+      "started_at": "2026-10-21T04:47:00.398575+00:00",
+      "checks": {
+        "prompt_version": "ttf-news-standalone-2.3",
+        "model": "gpt-oss:20b",
+        "server_pid": 43774,
+        "managed_pid_identity_verified": true,
+        "collector": {
+          "enabled": true,
+          "poll_seconds": 60
+        },
+        "counts": {
+          "news": 3996,
+          "events": 1575,
+          "legacy_daily": 3456,
+          "prices": 65882,
+          "analyses": 155
+        },
+        "monitoring_reachable": true
+      },
+      "finished_at": "2026-10-21T04:47:00.543572+00:00",
+      "elapsed_seconds": 0.145
+    },
+    {
+      "name": "select_real_existing_news",
+      "status": "passed",
+      "started_at": "2026-10-21T04:47:00.544190+00:00",
+      "checks": {
+        "news_id": "90bfbf6adb1183517cbc00ca",
+        "title": "Gassco Troll: Planned Gas production field unavailability (Active)",
+        "source": "gassco",
+        "url": "https://umm.gassco.no/details?id=f1f667ff-1ee3-45f2-bedf-7eed367ea614",
+        "published_at": "2026-10-20T20:13:18+00:00",
+        "source_version": 1,
+        "body_characters": 270,
+        "body_sha256": "0d655dfd6a6900bdb276e7a00d478b97e61cc5415ccaa234f3ff81b889b237cf",
+        "fact_excerpt_used": false
+      },
+      "finished_at": "2026-10-21T04:47:00.550383+00:00",
+      "elapsed_seconds": 0.006
+    },
+    {
+      "name": "ensure_current_v2_live_forecast",
+      "status": "passed",
+      "started_at": "2026-10-21T04:47:00.550835+00:00",
+      "checks": {
+        "analysis_id": "ff3fdde7-4f67-487b-92ea-b612da62941a",
+        "status": "queued",
+        "created": true,
+        "trade_date": "2026-10-21",
+        "source_news_id": "90bfbf6adb1183517cbc00ca",
+        "reason": "explicit_new_source_profile_live_analysis_via_normal_news_api",
+        "old_forecasts_overwritten": false,
+        "validation_baseline_reset": false
+      },
+      "finished_at": "2026-10-21T04:47:05.058305+00:00",
+      "elapsed_seconds": 4.507
+    },
+    {
+      "name": "sse_initial_connection",
+      "status": "passed",
+      "started_at": "2026-10-21T04:47:05.058941+00:00",
+      "checks": {
+        "id": 216809,
+        "type": "stream_ready",
+        "kind": null,
+        "matched_analysis_id": null,
+        "replayed_event_count": 1,
+        "cursor_mode": "initial_ready"
+      },
+      "finished_at": "2026-10-21T04:47:05.061417+00:00",
+      "elapsed_seconds": 0.002
+    },
+    {
+      "name": "manual_submit_real_news",
+      "status": "passed",
+      "started_at": "2026-10-21T04:47:05.061895+00:00",
+      "checks": {
+        "analysis_id": "c4fd5ed5-ae2c-4e43-8ae5-c75faa314810",
+        "status": "queued",
+        "real_source_news_id": "90bfbf6adb1183517cbc00ca"
+      },
+      "finished_at": "2026-10-21T04:47:09.464275+00:00",
+      "elapsed_seconds": 4.402
+    },
+    {
+      "name": "sse_last_event_id_reconnect",
+      "status": "passed",
+      "started_at": "2026-10-21T04:47:09.465018+00:00",
+      "checks": {
+        "id": 216810,
+        "type": "analysis_queued",
+        "kind": null,
+        "matched_analysis_id": "c4fd5ed5-ae2c-4e43-8ae5-c75faa314810",
+        "replayed_event_count": 1,
+        "cursor_mode": "Last-Event-ID"
+      },
+      "finished_at": "2026-10-21T04:47:09.467940+00:00",
+      "elapsed_seconds": 0.003
+    },
+    {
+      "name": "sse_after_query_reconnect",
+      "status": "passed",
+      "started_at": "2026-10-21T04:47:09.468472+00:00",
+      "checks": {
+        "id": 216810,
+        "type": "analysis_queued",
+        "kind": null,
+        "matched_analysis_id": "c4fd5ed5-ae2c-4e43-8ae5-c75faa314810",
+        "replayed_event_count": 1,
+        "cursor_mode": "after_query"
+      },
+      "finished_at": "2026-10-21T04:47:09.473504+00:00",
+      "elapsed_seconds": 0.005
+    },
+    {
+      "name": "manual_real_brief",
+      "status": "running",
+      "started_at": "2026-10-21T04:47:09.474162+00:00"
+    }
+  ],
+  "new_live_analysis_id": "ff3fdde7-4f67-487b-92ea-b612da62941a",
+  "new_analysis_id": "c4fd5ed5-ae2c-4e43-8ae5-c75faa314810"
+}

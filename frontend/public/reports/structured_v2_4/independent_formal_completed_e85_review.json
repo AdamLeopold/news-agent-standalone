@@ -1,0 +1,90 @@
+{
+  "reviewed_at": "2026-10-22T15:27:29.991683+00:00",
+  "scope": "Independent review of two formal completed 2.4 records, full source inputs, normalized facts, weighted plans, final bodies and available English rendering. No model calls or DB writes.",
+  "records": [
+    {
+      "analysis_id": "81e9b266-73e4-4ce8-824d-e64a57ab076b",
+      "actual_file": "reports/structured_v2_4/formal_completed_81e9b266-73e4-4ce8-824d-e64a57ab076b.json",
+      "actual_sha256": "91d0bdabfde25a63380cdd424be1c1b335ea391ca67a8ed84eb23b9f9c673ac1",
+      "generation_source_record": {
+        "file": ".runtime/structured-reasoning-v4/20261022T151142006907Z-resume/switch.json",
+        "sha256": "b4cd389bba78bef772086e6d8aaa770370c179ce071c4c5391554d5724461080"
+      },
+      "original_columns_sha256": {
+        "id": "4667058ce7b353c51553bf72ca0d071d5a77e5927aa2874001b1e97cbd3d3c95",
+        "news_id": "c4a27994c0e11ae1d7cdd44fe26dd3987fe358396c05309d642c2e33785f918e",
+        "kind": "247610f4dedd4ab7247d07dbda19c81ca9817f85820742cad49d407ffae9e4ed",
+        "status": "4ddb3e96801a1ee2b77dc5247c0db478d5f97a93b90e7cdb09f5f51d43764b08",
+        "created_at": "b582db9a9112408339507ff550698265661c1b257457ac2d4f8c61b225674ee2",
+        "completed_at": "7dc8ea851fabe6fd9e4d545d3959d96d7dd801876e84c86ca2cae03950d31613",
+        "trade_date": "06e45b4dfbddf8fce396407ebb876b0307f800f43cb9104ccad6df07b3bcca0c",
+        "input_snapshot": "2cf6afb451a4512076fc802aecb488a2edeec9e7bce53d018662a65ec02557d2",
+        "result": "232a5b51771348076eb4d8a085bbb7c3b96f85e365f3c33699b70f4a6fde9abe",
+        "detail_status": "f4dd094e6a2d38b614e2b2a937f82e6b94e7d0e3fff92041570422461108b56b"
+      },
+      "status": "confirmed_invalid_pending_append_only_metadata",
+      "priority": "P2",
+      "affected_parts": [
+        "brief"
+      ],
+      "source_identity": {
+        "source_id": "N0",
+        "news_id": "2e2ab65c24ca66af4363548a",
+        "version": 2,
+        "url": "https://offshore-energy.biz/2026/10/22/onesubsea-and-oil-and-gas-giants-are-unlocking-deeper-waters-with-all-electric-subsea-tech"
+      },
+      "model_classification": {
+        "source_id": "N0",
+        "fact_type": "future_project_development",
+        "quote": "OneSubsea, a joint venture backed by SLB, Aker Solutions and Subsea7, has cleared a critical path for deepwater development through a joint industry project",
+        "entity": "OneSubsea",
+        "region_scope": "europe",
+        "realization": "future",
+        "supply_chain_role": "upstream",
+        "confidence": 0.85
+      },
+      "full_source_qualifications": [
+        "OneSubsea has completed the Brazil All-Electric Joint Industry Project (JIP) , a collaboration with TotalEnergies, Equinor, BP, and Chevron, supported through the National Petroleum Agency (ANP) research and development regulation, to advance fully electric subsea production technologies for applications at water depths of up to 3,000 meters."
+      ],
+      "finding": "The model turns a technical joint-industry research/development milestone into a European upstream supply-development fact with a negative TTF supply-expansion contribution of -0.24. The full source identifies the Brazil technology JIP; the nationality of European partners is not evidence of a European upstream gas-supply expansion project. The canonical Chinese and completed English analysis inherit this unsupported mechanism.",
+      "not_alleged": [
+        "No claim that the model invented measured current lost/restored flow.",
+        "No allegation that future expectations require immediate physical delivery.",
+        "No separate confirmed error assigned to the weak Fram Sor commercial-deployment inference; it is not used to assert duplicate counting."
+      ],
+      "price_and_notice_scope": "Same-contract reference operands/clocks and capacity-not-flow distinctions were not the confirmed error.",
+      "translation_scope": "Completed English faithfully inherits the invalid canonical brief; its original text must be retained."
+    },
+    {
+      "analysis_id": "e7af774d-eeb1-40fd-be76-585ae1c97bb7",
+      "actual_file": "reports/structured_v2_4/formal_completed_e7af774d-eeb1-40fd-be76-585ae1c97bb7.json",
+      "actual_sha256": "6d6a8ff7ada22f9512bb528ea5ad64a24281c3cd43460efcea9074386b82c40e",
+      "generation_source_record": {
+        "file": ".runtime/structured-reasoning-v4/20261022T151142006907Z-resume/switch.json",
+        "sha256": "b4cd389bba78bef772086e6d8aaa770370c179ce071c4c5391554d5724461080"
+      },
+      "original_columns_sha256": {
+        "id": "416af2a38bc1ddaccc1a9cfe53ac2a5b782812a7e720400fc60174d1e6f5f5a8",
+        "kind": "247610f4dedd4ab7247d07dbda19c81ca9817f85820742cad49d407ffae9e4ed",
+        "status": "4ddb3e96801a1ee2b77dc5247c0db478d5f97a93b90e7cdb09f5f51d43764b08",
+        "created_at": "b78f6b19a04c6f87faa03127d56cec91c9475da28ae148f0aced34a5bf92011b",
+        "completed_at": "230283cd6d96d15bc35ab1be334a522d6057f2d348d8fab27bb196ee195d4d42",
+        "trade_date": "9a5028763b8b5525e18ac9a5a598a4d9994aa77acdcb1e81aac966d11bfa5a5c",
+        "input_snapshot": "dcee7cda90d037fbde61e434d65458879b9ecb1b4030c5855572e3343e8d5422",
+        "result": "4c6c7531c10acdb0a16ef23ddca6c287ce48dfe6fdf4941cf023bdc22b880ae3",
+        "detail_status": "f4dd094e6a2d38b614e2b2a937f82e6b94e7d0e3fff92041570422461108b56b"
+      },
+      "status": "no_confirmed_canonical_P1_P2",
+      "findings": [
+        "SPA contract is not treated as new physical LNG supply. Future liquefaction expansion is distinguished from current production and placed in earlier-window background.",
+        "At the new settlement window, a valid prior-day anchor was unavailable; close_forecast.direction=null is preserved.",
+        "The upstream role for liquefaction/export-support facts is imprecise metadata (P3), without a current-window physical-output or sign-reversal claim."
+      ],
+      "english_status": "failed_as_recorded",
+      "english_error": "Historical comparison narrative exceeded the existing 450-character output contract. The original failed translation must remain recorded; English was not completed for this record."
+    }
+  ],
+  "new_model_calls": 0,
+  "database_writes": false,
+  "canonical_changes": false
+}

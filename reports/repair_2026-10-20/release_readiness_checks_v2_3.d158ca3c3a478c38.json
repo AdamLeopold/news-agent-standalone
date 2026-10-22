@@ -1,0 +1,74 @@
+{
+  "policy_id": "ttf-explicit-error-release-v1",
+  "expected_prompt_version": "ttf-news-standalone-2.3",
+  "status": "not_ready_current_four_actuals_pending_and_retained_future_price_zero_P2_open",
+  "main_report_sha256": "d191d858dc1cd5c665c256765e2b38efd63ded3a11146c3c5d8cdc67a38192ff",
+  "evidence": {
+    "independent_review": {
+      "file": "reports/repair_2026-10-20/independent_release_review_v2_3.json",
+      "sha256": "26c453e68feae55d3344c3194a34b7d79ce4450add2300d3c4b94a47fb1c681c"
+    },
+    "live_smoke": {
+      "file": "reports/repair_2026-10-20/production_fifth_full_workflow_v2_3.json",
+      "sha256": "a84ae778df82c79e18e7dfdd861b7e10cae2c0bcf0ab4ef77b431d8d5da21dc2",
+      "status": "failed_not_reclassified"
+    },
+    "error_ui": {
+      "file": "reports/repair_2026-10-20/error_ui_composite_final_binding_v2_3.json",
+      "sha256": "dfc1b388da5790e73e3b2da5560572b18b7576bd11c8860de33428ddd24664d8"
+    },
+    "public_scan": {
+      "file": "reports/repair_2026-10-20/public_scan_final.json",
+      "sha256": null
+    },
+    "frontend_build": {
+      "file": "reports/repair_2026-10-20/frontend-build.log",
+      "sha256": "1c6aa95059246f62a7e464ad1ee3e45fcf65c2fe6b9815506a8b1119470a6bef"
+    },
+    "backend_deployment": {
+      "file": "reports/repair_2026-10-20/backend_detail_grounding_resumed.json",
+      "sha256": "510d9322622c5cdc6d16941c10d9cd8a0f61997810f393618c55fea9824d2384"
+    }
+  },
+  "note": "The current four evidence-slot actuals keep their own frozen source and are not repeated. A retainedfuture actual has an explicitly reassessed price-zero P2; prior path equivalence does not prove semantic correctness. Nextguard official full-path replay must identify exact affected cases before new actual. All8 known-error families remain open. No full real production success or final public release verification is claimed.",
+  "production_attempt_history": {
+    "file": "reports/repair_2026-10-20/production_e2e_attempt_history_v2_3.json",
+    "sha256": "ee013f1ecaf28016e366c80ffb54f2a083af0fcfdd870404628758fc53eef94b"
+  },
+  "updated_at": "2026-10-21T03:02:26.468618+00:00",
+  "current_maintenance_deployment": {
+    "file": "reports/repair_2026-10-20/backend_detail_grounding_paused.json",
+    "sha256": "d5a316cfa5577a7d9a67306ee3786b60368738658e149dc36de2bbc8909c95f2"
+  },
+  "previous_readiness": {
+    "file": "reports/repair_2026-10-20/release_readiness_checks_v2_3.87d995d196a8cb5a.json",
+    "sha256": "87d995d196a8cb5a0db5ac224a79778f44a6a4d515761250092c9c8bf014afe4"
+  },
+  "current_unit_binding": {
+    "file": "reports/repair_2026-10-20/risk_anchor_full_unit_binding_v2_3.json",
+    "sha256": "5a74da1264334f1a1368fdd6d6527984399ee5274a60910720a74df680aea60b"
+  },
+  "current_selected_cohort": {
+    "file": "reports/repair_2026-10-20/selected_bounded_risk_twenty_plus_detail_manifest_v2_3.json",
+    "sha256": "447be8ebf84c97223bc664cae2f0ffde4664cec22e17b515abc4b33acadf448a"
+  },
+  "known_accepted_error_ledger": {
+    "file": "reports/repair_2026-10-20/release_known_accepted_errors.json",
+    "sha256": "6225413f7a81cf76b2baacbcf895df13d7014bb6dc00786e6b1df6bad6b92c94"
+  },
+  "latest_physical_six_actual_manifest": {
+    "file": "reports/repair_2026-10-20/physical_unit_six_actual_manifest_v2_3.json",
+    "sha256": "11791d3ee3bb74ae7c4c6f6035b7ef14cd9045428bfd9eaf75b860ac4699a008"
+  },
+  "latest_accepted_error_supplement": {
+    "file": "reports/repair_2026-10-20/physical_unit_accepted_evidence_and_price_scope_defects_v2_3.json",
+    "sha256": "7e3932d0bb39781199187f78d493ac1d3d03a6c379a1cc30be804bf80654de98"
+  },
+  "next_registered_case_only_stage": "candidate-price-zero-consistency-validation",
+  "registered_stage_is_not_actual_model_evidence": true,
+  "main_report_current_phase_not_finalized": true,
+  "latest_retained_future_price_zero_reassessment": {
+    "file": "reports/repair_2026-10-20/independent_retained_future_price_zero_reassessment_v2_3.json",
+    "sha256": "712fb98fd7c3ec0e32fcca74f03f7f57f2702b6a32e4cd056d973588bf4882a3"
+  }
+}

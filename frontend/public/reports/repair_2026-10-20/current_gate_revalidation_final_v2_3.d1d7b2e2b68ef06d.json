@@ -1,0 +1,784 @@
+{
+  "generated_at": "2026-10-21T01:49:15.421515+00:00",
+  "current_prompt_version": "ttf-news-standalone-2.3",
+  "source_sha256": {
+    "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+    "ttf_news/analysis.py": "28f186ea7f11453ec42737fd82a71b47b3f29d094121911a4e12813c93d3b1b9",
+    "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+    "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+    "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+    "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+    "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+    "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+    "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+    "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+    "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+    "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987",
+    "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+    "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+    "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+    "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+    "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+    "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+    "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+    "ttf_news/public_gateway.py": "fac8fe10429bc62a6be241817491d1f35eecdaa7f8a37357cb8dbcab7f43fae5",
+    "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+    "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+    "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+    "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+    "ttf_news/semantics.py": "932f7dd1fb44f8625685cfa0978c9294bf2c9d8817fbf71362a9813449d7edb5",
+    "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+    "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+    "ttf_news/translation.py": "d47b232a5f77ea68e2d5bc5d092021e9727e555c6b1dd702922325519982d7c5"
+  },
+  "selected_cohort_proof": {
+    "file": "reports/repair_2026-10-20/selected_bounded_risk_twenty_plus_detail_manifest_v2_3.json",
+    "sha256": "447be8ebf84c97223bc664cae2f0ffde4664cec22e17b515abc4b33acadf448a"
+  },
+  "complete_path_proof": {
+    "file": "reports/repair_2026-10-20/full_path_equivalence_v2_3.5761213bd8779498.json",
+    "sha256": "5761213bd87794980b9fd9204ae362e024fb620d1ce80b438c341288302a0ccc"
+  },
+  "records": [
+    {
+      "case": "supply_loss_40",
+      "file": "reports/repair_2026-10-20/candidate-bounded-output-validation/supply_loss_40.json",
+      "file_sha256": "5fd936c046b2e9a5f19699ac7abbf11f5b10d1e191acd60bfabd9a630e1a1711",
+      "recorded_run_succeeded": true,
+      "recorded_contract_passed": true,
+      "current_logic_revalidation": {
+        "passed": true,
+        "prepared_context_sha256": "3c154270224da8811dc0d43b6c46d6f9c9d98c07d033039b53d6aacf2ba1d152",
+        "source_reference_count": 2,
+        "context_window": 8192,
+        "raw_validation_source": "saved_final_model_call_raw_content",
+        "canonical_backend_materialization_verified": true,
+        "recorded_model_risk_flags_normalization": null,
+        "saved_model_raw_sha256": "ee4602404cffa887a56a7b23faa4f7d21d3bf52271452fc4ccd3de2e0ec6ef20",
+        "stored_canonical_arrays_modified": false
+      },
+      "final_output_regression_passed": true,
+      "current_complete_path_equivalence": {
+        "compatible": true,
+        "mode": "same_version_actual_execution_with_verified_final_path_equivalence",
+        "no_new_model_call": true,
+        "proof_file": "reports/repair_2026-10-20/full_path_equivalence_v2_3.json",
+        "proof_sha256": "5761213bd87794980b9fd9204ae362e024fb620d1ce80b438c341288302a0ccc",
+        "source_record_sha256": "5fd936c046b2e9a5f19699ac7abbf11f5b10d1e191acd60bfabd9a630e1a1711",
+        "original_generation_unchanged": true,
+        "is_new_final_source_model_generation": false,
+        "attempt_count": 1
+      },
+      "actual_model_calls": 1,
+      "has_result": true,
+      "no_default_direction": true,
+      "original_record_unchanged": true
+    },
+    {
+      "case": "supply_restore_40",
+      "file": "reports/repair_2026-10-20/candidate-bounded-output-validation/supply_restore_40.json",
+      "file_sha256": "f44fbd91bc2689913c5abbda118a1996768a00ca0a4d77837aa2c79f1764350f",
+      "recorded_run_succeeded": true,
+      "recorded_contract_passed": true,
+      "current_logic_revalidation": {
+        "passed": true,
+        "prepared_context_sha256": "08c3c1165a56ddda45f11fdcce5ee803b9fb0b072d36484e3d593430c152bfc9",
+        "source_reference_count": 2,
+        "context_window": 8192,
+        "raw_validation_source": "saved_final_model_call_raw_content",
+        "canonical_backend_materialization_verified": true,
+        "recorded_model_risk_flags_normalization": null,
+        "saved_model_raw_sha256": "6a2a8fa1d9e71744544ca06e24f716e8ab972974a84910182d94fa7c8b7e98ec",
+        "stored_canonical_arrays_modified": false
+      },
+      "final_output_regression_passed": true,
+      "current_complete_path_equivalence": {
+        "compatible": true,
+        "mode": "same_version_actual_execution_with_verified_final_path_equivalence",
+        "no_new_model_call": true,
+        "proof_file": "reports/repair_2026-10-20/full_path_equivalence_v2_3.json",
+        "proof_sha256": "5761213bd87794980b9fd9204ae362e024fb620d1ce80b438c341288302a0ccc",
+        "source_record_sha256": "f44fbd91bc2689913c5abbda118a1996768a00ca0a4d77837aa2c79f1764350f",
+        "original_generation_unchanged": true,
+        "is_new_final_source_model_generation": false,
+        "attempt_count": 2
+      },
+      "actual_model_calls": 2,
+      "has_result": true,
+      "no_default_direction": true,
+      "original_record_unchanged": true
+    },
+    {
+      "case": "weak_exploration_no_quote",
+      "file": "reports/repair_2026-10-20/candidate-source-feedback-validation/weak_exploration_no_quote.json",
+      "file_sha256": "22b161fb55838c020c59f95c9352f4d4a569466ad0b27ff7f1a1dc49188fb98c",
+      "recorded_run_succeeded": false,
+      "recorded_contract_passed": false,
+      "current_logic_revalidation": {
+        "passed": false,
+        "error_type": "ValueError",
+        "reason": "evidence必须含事实与TTF机制，不能只有编号；格式[N0]事实 → TTF机制"
+      },
+      "final_output_regression_passed": false,
+      "current_complete_path_equivalence": {
+        "compatible": true,
+        "mode": "same_version_actual_execution_with_verified_final_path_equivalence",
+        "no_new_model_call": true,
+        "proof_file": "reports/repair_2026-10-20/full_path_equivalence_v2_3.json",
+        "proof_sha256": "5761213bd87794980b9fd9204ae362e024fb620d1ce80b438c341288302a0ccc",
+        "source_record_sha256": "22b161fb55838c020c59f95c9352f4d4a569466ad0b27ff7f1a1dc49188fb98c",
+        "original_generation_unchanged": true,
+        "is_new_final_source_model_generation": false,
+        "attempt_count": 2
+      },
+      "actual_model_calls": 2,
+      "has_result": false,
+      "no_default_direction": true,
+      "original_record_unchanged": true
+    },
+    {
+      "case": "warm_heating_demand",
+      "file": "reports/repair_2026-10-20/candidate-bounded-output-validation/warm_heating_demand.json",
+      "file_sha256": "c03ad9a2877f6de0f4677f2c99005944ed58a3ccb58e37e0f36ae65718344621",
+      "recorded_run_succeeded": true,
+      "recorded_contract_passed": true,
+      "current_logic_revalidation": {
+        "passed": true,
+        "prepared_context_sha256": "5da6e47f32a176ba44915b8154245a088436235e736c22a5714d06f2ef6fd13b",
+        "source_reference_count": 2,
+        "context_window": 8192,
+        "raw_validation_source": "saved_final_model_call_raw_content",
+        "canonical_backend_materialization_verified": true,
+        "recorded_model_risk_flags_normalization": null,
+        "saved_model_raw_sha256": "8fbf7440af41867fc14d49f5c84dbaaa76bfb52877ee551140372dde8308c0d2",
+        "stored_canonical_arrays_modified": false
+      },
+      "final_output_regression_passed": true,
+      "current_complete_path_equivalence": {
+        "compatible": true,
+        "mode": "same_version_actual_execution_with_verified_final_path_equivalence",
+        "no_new_model_call": true,
+        "proof_file": "reports/repair_2026-10-20/full_path_equivalence_v2_3.json",
+        "proof_sha256": "5761213bd87794980b9fd9204ae362e024fb620d1ce80b438c341288302a0ccc",
+        "source_record_sha256": "c03ad9a2877f6de0f4677f2c99005944ed58a3ccb58e37e0f36ae65718344621",
+        "original_generation_unchanged": true,
+        "is_new_final_source_model_generation": false,
+        "attempt_count": 1
+      },
+      "actual_model_calls": 1,
+      "has_result": true,
+      "no_default_direction": true,
+      "original_record_unchanged": true
+    },
+    {
+      "case": "cold_heating_demand",
+      "file": "reports/repair_2026-10-20/candidate-final-output-scope-validation/cold_heating_demand.json",
+      "file_sha256": "c2c0d5a0dc353139d800c62f75c6de6199f4fc8dc13f16678dc8caa3415704d1",
+      "recorded_run_succeeded": true,
+      "recorded_contract_passed": true,
+      "current_logic_revalidation": {
+        "passed": true,
+        "prepared_context_sha256": "e18fb08113109bc554486bf4b03a25760dcc30acb28b2ce1d6db274e23759ce4",
+        "source_reference_count": 2,
+        "context_window": 8192,
+        "raw_validation_source": "saved_final_model_call_raw_content",
+        "canonical_backend_materialization_verified": true,
+        "recorded_model_risk_flags_normalization": {
+          "raw_count": 0,
+          "exact_unique_count": 0,
+          "duplicates_removed": 0,
+          "method": "exact_string_dedup_at_known_limitations",
+          "raw_preserved_in_model_calls": true
+        },
+        "saved_model_raw_sha256": "2bfd107a25a7201c6a6d86ce2f205c0036eeea0b11e82eb73a6b878e07ddc2f2",
+        "stored_canonical_arrays_modified": false
+      },
+      "final_output_regression_passed": true,
+      "current_complete_path_equivalence": {
+        "compatible": true,
+        "mode": "same_version_actual_execution_with_verified_final_path_equivalence",
+        "no_new_model_call": true,
+        "proof_file": "reports/repair_2026-10-20/full_path_equivalence_v2_3.json",
+        "proof_sha256": "5761213bd87794980b9fd9204ae362e024fb620d1ce80b438c341288302a0ccc",
+        "source_record_sha256": "c2c0d5a0dc353139d800c62f75c6de6199f4fc8dc13f16678dc8caa3415704d1",
+        "original_generation_unchanged": true,
+        "is_new_final_source_model_generation": false,
+        "attempt_count": 1
+      },
+      "actual_model_calls": 1,
+      "has_result": true,
+      "no_default_direction": true,
+      "original_record_unchanged": true
+    },
+    {
+      "case": "negated_outage",
+      "file": "reports/repair_2026-10-20/candidate-bounded-output-validation/negated_outage.json",
+      "file_sha256": "ef907029c3f4702e657ba80fb3e1132747c3fe7245bee88cee272fc80c15217a",
+      "recorded_run_succeeded": true,
+      "recorded_contract_passed": true,
+      "current_logic_revalidation": {
+        "passed": true,
+        "prepared_context_sha256": "b0bc0e851ef8eb9c3ebdf064b3e8114ff583e49d29459e78b57e30c04fadb7c3",
+        "source_reference_count": 2,
+        "context_window": 8192,
+        "raw_validation_source": "saved_final_model_call_raw_content",
+        "canonical_backend_materialization_verified": true,
+        "recorded_model_risk_flags_normalization": null,
+        "saved_model_raw_sha256": "44a850c51e1c26409a44b6e9d04d77fec80984c473a2b37f13be64e669779671",
+        "stored_canonical_arrays_modified": false
+      },
+      "final_output_regression_passed": true,
+      "current_complete_path_equivalence": {
+        "compatible": true,
+        "mode": "same_version_actual_execution_with_verified_final_path_equivalence",
+        "no_new_model_call": true,
+        "proof_file": "reports/repair_2026-10-20/full_path_equivalence_v2_3.json",
+        "proof_sha256": "5761213bd87794980b9fd9204ae362e024fb620d1ce80b438c341288302a0ccc",
+        "source_record_sha256": "ef907029c3f4702e657ba80fb3e1132747c3fe7245bee88cee272fc80c15217a",
+        "original_generation_unchanged": true,
+        "is_new_final_source_model_generation": false,
+        "attempt_count": 1
+      },
+      "actual_model_calls": 1,
+      "has_result": true,
+      "no_default_direction": true,
+      "original_record_unchanged": true
+    },
+    {
+      "case": "cumulative_shock_then_weak",
+      "file": "reports/repair_2026-10-20/candidate-bounded-output-validation/cumulative_shock_then_weak.json",
+      "file_sha256": "45e787c612da733e44340ddaa95620f19763d19d6d57a6863ddd877f40afbba9",
+      "recorded_run_succeeded": true,
+      "recorded_contract_passed": true,
+      "current_logic_revalidation": {
+        "passed": true,
+        "prepared_context_sha256": "e4ce5a2bfe94fcfc492e726828fb0a50c56ed66659c3c44d8338cfdb90039deb",
+        "source_reference_count": 3,
+        "context_window": 8192,
+        "raw_validation_source": "saved_final_model_call_raw_content",
+        "canonical_backend_materialization_verified": true,
+        "recorded_model_risk_flags_normalization": null,
+        "saved_model_raw_sha256": "2bdc0182d29f9079d43253819728f2bddd977c63c1ec2461a11331fcd66c4f21",
+        "stored_canonical_arrays_modified": false
+      },
+      "final_output_regression_passed": true,
+      "current_complete_path_equivalence": {
+        "compatible": true,
+        "mode": "same_version_actual_execution_with_verified_final_path_equivalence",
+        "no_new_model_call": true,
+        "proof_file": "reports/repair_2026-10-20/full_path_equivalence_v2_3.json",
+        "proof_sha256": "5761213bd87794980b9fd9204ae362e024fb620d1ce80b438c341288302a0ccc",
+        "source_record_sha256": "45e787c612da733e44340ddaa95620f19763d19d6d57a6863ddd877f40afbba9",
+        "original_generation_unchanged": true,
+        "is_new_final_source_model_generation": false,
+        "attempt_count": 1
+      },
+      "actual_model_calls": 1,
+      "has_result": true,
+      "no_default_direction": true,
+      "original_record_unchanged": true
+    },
+    {
+      "case": "weak_news_observed_market_up",
+      "file": "reports/repair_2026-10-20/candidate-source-feedback-validation/weak_news_observed_market_up.json",
+      "file_sha256": "e6da0f4433040a2f38aa64347d80f689d1d255a8e092a02bebd37a485fd975b1",
+      "recorded_run_succeeded": false,
+      "recorded_contract_passed": false,
+      "current_logic_revalidation": {
+        "passed": false,
+        "error_type": "ValueError",
+        "reason": "模型未返回JSON正文（可能输出额度不足）"
+      },
+      "final_output_regression_passed": false,
+      "current_complete_path_equivalence": {
+        "compatible": true,
+        "mode": "same_version_actual_execution_with_verified_final_path_equivalence",
+        "no_new_model_call": true,
+        "proof_file": "reports/repair_2026-10-20/full_path_equivalence_v2_3.json",
+        "proof_sha256": "5761213bd87794980b9fd9204ae362e024fb620d1ce80b438c341288302a0ccc",
+        "source_record_sha256": "e6da0f4433040a2f38aa64347d80f689d1d255a8e092a02bebd37a485fd975b1",
+        "original_generation_unchanged": true,
+        "is_new_final_source_model_generation": false,
+        "attempt_count": 2
+      },
+      "actual_model_calls": 2,
+      "has_result": false,
+      "no_default_direction": true,
+      "original_record_unchanged": true
+    },
+    {
+      "case": "supplied_conflicting_mechanisms",
+      "file": "reports/repair_2026-10-20/candidate-bounded-output-validation/supplied_conflicting_mechanisms.json",
+      "file_sha256": "98b8c7e46c8963a97fd9e736d6734ed902200ef94e330c1471f2fce17c7de18a",
+      "recorded_run_succeeded": true,
+      "recorded_contract_passed": true,
+      "current_logic_revalidation": {
+        "passed": true,
+        "prepared_context_sha256": "45a02c30ae3cc363b7ca5e89fd1a512d435d41785a7dd2d34231c8f7a29dd26f",
+        "source_reference_count": 2,
+        "context_window": 8192,
+        "raw_validation_source": "saved_final_model_call_raw_content",
+        "canonical_backend_materialization_verified": true,
+        "recorded_model_risk_flags_normalization": null,
+        "saved_model_raw_sha256": "80fba823a9faeaec3250139d7fe3fcc7417782eec3a0e638152f1fb605f8e385",
+        "stored_canonical_arrays_modified": false
+      },
+      "final_output_regression_passed": true,
+      "current_complete_path_equivalence": {
+        "compatible": true,
+        "mode": "same_version_actual_execution_with_verified_final_path_equivalence",
+        "no_new_model_call": true,
+        "proof_file": "reports/repair_2026-10-20/full_path_equivalence_v2_3.json",
+        "proof_sha256": "5761213bd87794980b9fd9204ae362e024fb620d1ce80b438c341288302a0ccc",
+        "source_record_sha256": "98b8c7e46c8963a97fd9e736d6734ed902200ef94e330c1471f2fce17c7de18a",
+        "original_generation_unchanged": true,
+        "is_new_final_source_model_generation": false,
+        "attempt_count": 1
+      },
+      "actual_model_calls": 1,
+      "has_result": true,
+      "no_default_direction": true,
+      "original_record_unchanged": true
+    },
+    {
+      "case": "future_planned_notice",
+      "file": "reports/repair_2026-10-20/candidate-final-output-scope-validation/future_planned_notice.json",
+      "file_sha256": "c3188a06f17422b957352d1d764118273c78784d1d0f5d92af0918ae86805d38",
+      "recorded_run_succeeded": true,
+      "recorded_contract_passed": true,
+      "current_logic_revalidation": {
+        "passed": true,
+        "prepared_context_sha256": "b32fc46383dc91aa35bf672101fc55d5fca54334c01571b181d86756ce70571f",
+        "source_reference_count": 2,
+        "context_window": 8192,
+        "raw_validation_source": "saved_final_model_call_raw_content",
+        "canonical_backend_materialization_verified": true,
+        "recorded_model_risk_flags_normalization": {
+          "raw_count": 0,
+          "exact_unique_count": 0,
+          "duplicates_removed": 0,
+          "method": "exact_string_dedup_at_known_limitations",
+          "raw_preserved_in_model_calls": true
+        },
+        "saved_model_raw_sha256": "bbff4e9280b02e22641542c24941d03738d933c8093123125bc3aa0a18d4e405",
+        "stored_canonical_arrays_modified": false
+      },
+      "final_output_regression_passed": true,
+      "current_complete_path_equivalence": {
+        "compatible": true,
+        "mode": "same_version_actual_execution_with_verified_final_path_equivalence",
+        "no_new_model_call": true,
+        "proof_file": "reports/repair_2026-10-20/full_path_equivalence_v2_3.json",
+        "proof_sha256": "5761213bd87794980b9fd9204ae362e024fb620d1ce80b438c341288302a0ccc",
+        "source_record_sha256": "c3188a06f17422b957352d1d764118273c78784d1d0f5d92af0918ae86805d38",
+        "original_generation_unchanged": true,
+        "is_new_final_source_model_generation": false,
+        "attempt_count": 1
+      },
+      "actual_model_calls": 1,
+      "has_result": true,
+      "no_default_direction": true,
+      "original_record_unchanged": true
+    },
+    {
+      "case": "dismissed_notice_not_verified_recovery",
+      "file": "reports/repair_2026-10-20/candidate-risk-polarity-validation/dismissed_notice_not_verified_recovery.json",
+      "file_sha256": "cdc41017c1ad917f678e1fa6e9bdbeffed9e03e896b08fed8156fae5619db4fa",
+      "recorded_run_succeeded": true,
+      "recorded_contract_passed": true,
+      "current_logic_revalidation": {
+        "passed": true,
+        "prepared_context_sha256": "1e2d3def72fadcd224b413adb6c1780f24d7453bce38a7d51ccc4c7355702db8",
+        "source_reference_count": 2,
+        "context_window": 8192,
+        "raw_validation_source": "saved_final_model_call_raw_content",
+        "canonical_backend_materialization_verified": true,
+        "recorded_model_risk_flags_normalization": {
+          "raw_count": 0,
+          "exact_unique_count": 0,
+          "duplicates_removed": 0,
+          "method": "exact_string_dedup_at_known_limitations",
+          "raw_preserved_in_model_calls": true
+        },
+        "saved_model_raw_sha256": "d7978c34b15a601461fd567ddc6b38ecf3f6aaa86d240680e43079bbead712cc",
+        "stored_canonical_arrays_modified": false
+      },
+      "final_output_regression_passed": true,
+      "current_complete_path_equivalence": {
+        "compatible": true,
+        "mode": "direct_final_source_execution",
+        "no_new_model_call": true
+      },
+      "actual_model_calls": 2,
+      "has_result": true,
+      "no_default_direction": true,
+      "original_record_unchanged": true
+    },
+    {
+      "case": "real_nyhamna",
+      "file": "reports/repair_2026-10-20/candidate-bounded-output-validation/real_nyhamna.json",
+      "file_sha256": "2747e3388dc7655dbc75d55a2245caadb6fea6d2c78f73d53b873beb05d91e48",
+      "recorded_run_succeeded": true,
+      "recorded_contract_passed": true,
+      "current_logic_revalidation": {
+        "passed": true,
+        "prepared_context_sha256": "d12cb5d2016869ffc4766b4e286bfc23fad812cf3ed0ab8ab45d8cf4a186de2c",
+        "source_reference_count": 15,
+        "context_window": 16384,
+        "raw_validation_source": "saved_final_model_call_raw_content",
+        "canonical_backend_materialization_verified": true,
+        "recorded_model_risk_flags_normalization": null,
+        "saved_model_raw_sha256": "adc2ab6052ec95f2fa42308526a267be9faf511cddcbad3f988d14bf4b516856",
+        "stored_canonical_arrays_modified": false
+      },
+      "final_output_regression_passed": true,
+      "current_complete_path_equivalence": {
+        "compatible": true,
+        "mode": "same_version_actual_execution_with_verified_final_path_equivalence",
+        "no_new_model_call": true,
+        "proof_file": "reports/repair_2026-10-20/full_path_equivalence_v2_3.json",
+        "proof_sha256": "5761213bd87794980b9fd9204ae362e024fb620d1ce80b438c341288302a0ccc",
+        "source_record_sha256": "2747e3388dc7655dbc75d55a2245caadb6fea6d2c78f73d53b873beb05d91e48",
+        "original_generation_unchanged": true,
+        "is_new_final_source_model_generation": false,
+        "attempt_count": 1
+      },
+      "actual_model_calls": 1,
+      "has_result": true,
+      "no_default_direction": true,
+      "original_record_unchanged": true
+    },
+    {
+      "case": "real_eni",
+      "file": "reports/repair_2026-10-20/candidate-source-feedback-validation/real_eni.json",
+      "file_sha256": "356262d6994a1c1aad8275eecb3d458f51812cf2157322b8152b1c15965efbce",
+      "recorded_run_succeeded": false,
+      "recorded_contract_passed": false,
+      "current_logic_revalidation": {
+        "passed": false,
+        "error_type": "JSONDecodeError",
+        "reason": "Unterminated string starting at: line 1 column 3707 (char 3706)"
+      },
+      "final_output_regression_passed": false,
+      "current_complete_path_equivalence": {
+        "compatible": true,
+        "mode": "same_version_actual_execution_with_verified_final_path_equivalence",
+        "no_new_model_call": true,
+        "proof_file": "reports/repair_2026-10-20/full_path_equivalence_v2_3.json",
+        "proof_sha256": "5761213bd87794980b9fd9204ae362e024fb620d1ce80b438c341288302a0ccc",
+        "source_record_sha256": "356262d6994a1c1aad8275eecb3d458f51812cf2157322b8152b1c15965efbce",
+        "original_generation_unchanged": true,
+        "is_new_final_source_model_generation": false,
+        "attempt_count": 2
+      },
+      "actual_model_calls": 2,
+      "has_result": false,
+      "no_default_direction": true,
+      "original_record_unchanged": true
+    },
+    {
+      "case": "supply_loss_40_with_flat_baseline",
+      "file": "reports/repair_2026-10-20/candidate-source-feedback-validation/supply_loss_40_with_flat_baseline.json",
+      "file_sha256": "012bbf3c97d931bb50f7356759d79d7d6ec323a9ba4dc50836d9c6f40de6aa92",
+      "recorded_run_succeeded": false,
+      "recorded_contract_passed": false,
+      "current_logic_revalidation": {
+        "passed": false,
+        "error_type": "ValueError",
+        "reason": "close_forecast:合法同合约比较锚点已给；报价若早于消息仅是基准，未知后续反应不等于零反应或未计价。请据源供需与锚点给条件收盘预判，五档自由、不自动复制新闻方向；缺少公告前后反应不能单独作为拒绝收盘预判的理由，真实冲突须引用具体反向事实"
+      },
+      "final_output_regression_passed": false,
+      "current_complete_path_equivalence": {
+        "compatible": true,
+        "mode": "same_version_actual_execution_with_verified_final_path_equivalence",
+        "no_new_model_call": true,
+        "proof_file": "reports/repair_2026-10-20/full_path_equivalence_v2_3.json",
+        "proof_sha256": "5761213bd87794980b9fd9204ae362e024fb620d1ce80b438c341288302a0ccc",
+        "source_record_sha256": "012bbf3c97d931bb50f7356759d79d7d6ec323a9ba4dc50836d9c6f40de6aa92",
+        "original_generation_unchanged": true,
+        "is_new_final_source_model_generation": false,
+        "attempt_count": 2
+      },
+      "actual_model_calls": 2,
+      "has_result": false,
+      "no_default_direction": true,
+      "original_record_unchanged": true
+    },
+    {
+      "case": "supply_restore_40_with_flat_baseline",
+      "file": "reports/repair_2026-10-20/candidate-source-feedback-validation/supply_restore_40_with_flat_baseline.json",
+      "file_sha256": "179f2d6d013c8b71fbd5089b4abe730be1d08b703e29d7a3848203f202201bf4",
+      "recorded_run_succeeded": true,
+      "recorded_contract_passed": true,
+      "current_logic_revalidation": {
+        "passed": true,
+        "prepared_context_sha256": "b57072214a10426825c3ee96f47432dbf1c42c852f1ec97d2747989d24561950",
+        "source_reference_count": 2,
+        "context_window": 8192,
+        "raw_validation_source": "saved_final_model_call_raw_content",
+        "canonical_backend_materialization_verified": true,
+        "recorded_model_risk_flags_normalization": {
+          "raw_count": 1,
+          "exact_unique_count": 1,
+          "duplicates_removed": 0,
+          "method": "exact_string_dedup_at_known_limitations",
+          "raw_preserved_in_model_calls": true
+        },
+        "saved_model_raw_sha256": "dc7838e69434abdf4f6c56094f4892df8349f1812a307061bd28eb729f82766b",
+        "stored_canonical_arrays_modified": false
+      },
+      "final_output_regression_passed": true,
+      "current_complete_path_equivalence": {
+        "compatible": true,
+        "mode": "same_version_actual_execution_with_verified_final_path_equivalence",
+        "no_new_model_call": true,
+        "proof_file": "reports/repair_2026-10-20/full_path_equivalence_v2_3.json",
+        "proof_sha256": "5761213bd87794980b9fd9204ae362e024fb620d1ce80b438c341288302a0ccc",
+        "source_record_sha256": "179f2d6d013c8b71fbd5089b4abe730be1d08b703e29d7a3848203f202201bf4",
+        "original_generation_unchanged": true,
+        "is_new_final_source_model_generation": false,
+        "attempt_count": 2
+      },
+      "actual_model_calls": 2,
+      "has_result": true,
+      "no_default_direction": true,
+      "original_record_unchanged": true
+    },
+    {
+      "case": "anchor_real_manual_missing_prevday",
+      "file": "reports/repair_2026-10-20/candidate-source-feedback-validation/anchor_real_manual_missing_prevday.json",
+      "file_sha256": "993f54377a3242f27a4fc30486b05e7fe6fe1fa3bc4a431729616f1abfa6902a",
+      "recorded_run_succeeded": true,
+      "recorded_contract_passed": true,
+      "current_logic_revalidation": {
+        "passed": true,
+        "prepared_context_sha256": "53c631507cbcd337b867f2f6b9fd1974da0b05115067b40d7ea6340062e6237a",
+        "source_reference_count": 1,
+        "context_window": 16384,
+        "raw_validation_source": "saved_final_model_call_raw_content",
+        "canonical_backend_materialization_verified": true,
+        "recorded_model_risk_flags_normalization": {
+          "raw_count": 1,
+          "exact_unique_count": 1,
+          "duplicates_removed": 0,
+          "method": "exact_string_dedup_at_known_limitations",
+          "raw_preserved_in_model_calls": true
+        },
+        "saved_model_raw_sha256": "7247c676490f7d7ef6419a21a55737a74578cbe3d99a770f1089fd8c5aedd9e5",
+        "stored_canonical_arrays_modified": false
+      },
+      "final_output_regression_passed": true,
+      "current_complete_path_equivalence": {
+        "compatible": true,
+        "mode": "same_version_actual_execution_with_verified_final_path_equivalence",
+        "no_new_model_call": true,
+        "proof_file": "reports/repair_2026-10-20/full_path_equivalence_v2_3.json",
+        "proof_sha256": "5761213bd87794980b9fd9204ae362e024fb620d1ce80b438c341288302a0ccc",
+        "source_record_sha256": "993f54377a3242f27a4fc30486b05e7fe6fe1fa3bc4a431729616f1abfa6902a",
+        "original_generation_unchanged": true,
+        "is_new_final_source_model_generation": false,
+        "attempt_count": 1
+      },
+      "actual_model_calls": 1,
+      "has_result": true,
+      "no_default_direction": true,
+      "original_record_unchanged": true
+    },
+    {
+      "case": "anchor_gap_supply_loss_40",
+      "file": "reports/repair_2026-10-20/candidate-bounded-output-validation/anchor_gap_supply_loss_40.json",
+      "file_sha256": "984d680feb7e96209734e9653577a480fcf04e5ccfd809697afdd130c4a68e90",
+      "recorded_run_succeeded": true,
+      "recorded_contract_passed": true,
+      "current_logic_revalidation": {
+        "passed": true,
+        "prepared_context_sha256": "f0a8856b5acffcee6dceeeb692d6373963fe7635e87e054b5ae904125950b5ae",
+        "source_reference_count": 2,
+        "context_window": 8192,
+        "raw_validation_source": "saved_final_model_call_raw_content",
+        "canonical_backend_materialization_verified": true,
+        "recorded_model_risk_flags_normalization": null,
+        "saved_model_raw_sha256": "b6446e18828249d3f5027c647ecce0ad293f76b137616c2003a99dcb219ec22c",
+        "stored_canonical_arrays_modified": false
+      },
+      "final_output_regression_passed": true,
+      "current_complete_path_equivalence": {
+        "compatible": true,
+        "mode": "same_version_actual_execution_with_verified_final_path_equivalence",
+        "no_new_model_call": true,
+        "proof_file": "reports/repair_2026-10-20/full_path_equivalence_v2_3.json",
+        "proof_sha256": "5761213bd87794980b9fd9204ae362e024fb620d1ce80b438c341288302a0ccc",
+        "source_record_sha256": "984d680feb7e96209734e9653577a480fcf04e5ccfd809697afdd130c4a68e90",
+        "original_generation_unchanged": true,
+        "is_new_final_source_model_generation": false,
+        "attempt_count": 1
+      },
+      "actual_model_calls": 1,
+      "has_result": true,
+      "no_default_direction": true,
+      "original_record_unchanged": true
+    },
+    {
+      "case": "anchor_gap_supply_restore_40",
+      "file": "reports/repair_2026-10-20/candidate-final-output-scope-validation/anchor_gap_supply_restore_40.json",
+      "file_sha256": "41c76538a5debb0976a0ef65587394640ec6abecfe600d1a99f98505afe30bae",
+      "recorded_run_succeeded": true,
+      "recorded_contract_passed": true,
+      "current_logic_revalidation": {
+        "passed": true,
+        "prepared_context_sha256": "0c48e0d6a55a6003d80f098e58a5a24a5d00629a846ae7538a1654a0e64ade0a",
+        "source_reference_count": 2,
+        "context_window": 8192,
+        "raw_validation_source": "saved_final_model_call_raw_content",
+        "canonical_backend_materialization_verified": true,
+        "recorded_model_risk_flags_normalization": {
+          "raw_count": 2,
+          "exact_unique_count": 1,
+          "duplicates_removed": 1,
+          "method": "exact_string_dedup_at_known_limitations",
+          "raw_preserved_in_model_calls": true
+        },
+        "saved_model_raw_sha256": "94739ac0ee89d4a67a03fcfd5457180d7d36b33de2ddb6d1ce0a8ccd145a38f0",
+        "stored_canonical_arrays_modified": false
+      },
+      "final_output_regression_passed": true,
+      "current_complete_path_equivalence": {
+        "compatible": true,
+        "mode": "same_version_actual_execution_with_verified_final_path_equivalence",
+        "no_new_model_call": true,
+        "proof_file": "reports/repair_2026-10-20/full_path_equivalence_v2_3.json",
+        "proof_sha256": "5761213bd87794980b9fd9204ae362e024fb620d1ce80b438c341288302a0ccc",
+        "source_record_sha256": "41c76538a5debb0976a0ef65587394640ec6abecfe600d1a99f98505afe30bae",
+        "original_generation_unchanged": true,
+        "is_new_final_source_model_generation": false,
+        "attempt_count": 1
+      },
+      "actual_model_calls": 1,
+      "has_result": true,
+      "no_default_direction": true,
+      "original_record_unchanged": true
+    },
+    {
+      "case": "anchor_legal_prevday_weak_market_up",
+      "file": "reports/repair_2026-10-20/candidate-risk-polarity-validation/anchor_legal_prevday_weak_market_up.json",
+      "file_sha256": "1a9ed27b426b90bf43c935649661dd4d93f1e20eac267295e9ab360d50437794",
+      "recorded_run_succeeded": true,
+      "recorded_contract_passed": true,
+      "current_logic_revalidation": {
+        "passed": true,
+        "prepared_context_sha256": "2b86b4baa918445b61b1dec3a33e3119ae657c931e7ac0fad1b894e9fb957e6f",
+        "source_reference_count": 2,
+        "context_window": 8192,
+        "raw_validation_source": "saved_final_model_call_raw_content",
+        "canonical_backend_materialization_verified": true,
+        "recorded_model_risk_flags_normalization": {
+          "raw_count": 0,
+          "exact_unique_count": 0,
+          "duplicates_removed": 0,
+          "method": "exact_string_dedup_at_known_limitations",
+          "raw_preserved_in_model_calls": true
+        },
+        "saved_model_raw_sha256": "be9455f276a7db61a580ec1d02958156e460e5f6daebfb69f5b966593ab3a9da",
+        "stored_canonical_arrays_modified": false
+      },
+      "final_output_regression_passed": true,
+      "current_complete_path_equivalence": {
+        "compatible": true,
+        "mode": "direct_final_source_execution",
+        "no_new_model_call": true
+      },
+      "actual_model_calls": 2,
+      "has_result": true,
+      "no_default_direction": true,
+      "original_record_unchanged": true
+    },
+    {
+      "case": "real_future_well_b1",
+      "file": "reports/repair_2026-10-20/candidate-final-output-scope-validation/real_future_well_b1.json",
+      "file_sha256": "808f33e888ce040231d73c4efb049662b9ec96c5a07c876aee1c8727c54a6d78",
+      "recorded_run_succeeded": true,
+      "recorded_contract_passed": true,
+      "current_logic_revalidation": {
+        "passed": true,
+        "prepared_context_sha256": "d1a55cf85f1861b5fb43f1a3b7e69bff65850aac97d5e183c0784184eb671ed4",
+        "source_reference_count": 7,
+        "context_window": 16384,
+        "raw_validation_source": "saved_final_model_call_raw_content",
+        "canonical_backend_materialization_verified": true,
+        "recorded_model_risk_flags_normalization": {
+          "raw_count": 0,
+          "exact_unique_count": 0,
+          "duplicates_removed": 0,
+          "method": "exact_string_dedup_at_known_limitations",
+          "raw_preserved_in_model_calls": true
+        },
+        "saved_model_raw_sha256": "b9d879add37f69fb804c53b841da496b56dd99c6dc08d69501dd911112be19a1",
+        "stored_canonical_arrays_modified": false
+      },
+      "final_output_regression_passed": true,
+      "current_complete_path_equivalence": {
+        "compatible": true,
+        "mode": "same_version_actual_execution_with_verified_final_path_equivalence",
+        "no_new_model_call": true,
+        "proof_file": "reports/repair_2026-10-20/full_path_equivalence_v2_3.json",
+        "proof_sha256": "5761213bd87794980b9fd9204ae362e024fb620d1ce80b438c341288302a0ccc",
+        "source_record_sha256": "808f33e888ce040231d73c4efb049662b9ec96c5a07c876aee1c8727c54a6d78",
+        "original_generation_unchanged": true,
+        "is_new_final_source_model_generation": false,
+        "attempt_count": 1
+      },
+      "actual_model_calls": 1,
+      "has_result": true,
+      "no_default_direction": true,
+      "original_record_unchanged": true
+    }
+  ],
+  "detail_records": [
+    {
+      "case": "supply_restore_40_with_flat_baseline",
+      "file": "reports/repair_2026-10-20/candidate-risk-polarity-validation-detail/supply_restore_40_with_flat_baseline.json",
+      "file_sha256": "3e60e0d55e1b597966946bf790f468355b0f0a430e43e97d4cfd9aee2da96333",
+      "recorded_run_succeeded": true,
+      "recorded_contract_passed": true,
+      "current_logic_revalidation": {
+        "passed": true,
+        "prepared_context_sha256": "9f5f979e06bf803f8fae54632946c485c9cd74ea53e274e2fb3405001c84cd03",
+        "source_reference_count": 2,
+        "context_window": 16384,
+        "raw_validation_source": "saved_final_model_call_raw_content",
+        "canonical_backend_materialization_verified": true,
+        "recorded_model_risk_flags_normalization": {
+          "raw_count": 0,
+          "exact_unique_count": 0,
+          "duplicates_removed": 0,
+          "method": "exact_string_dedup_at_known_limitations",
+          "raw_preserved_in_model_calls": true
+        },
+        "saved_model_raw_sha256": "46038465089dc6e9cab8a3c752f99bbfb13b5894c4bbf8caf1a1885e268998ca",
+        "stored_canonical_arrays_modified": false
+      },
+      "final_output_regression_passed": true,
+      "current_complete_path_equivalence": {
+        "compatible": true,
+        "mode": "direct_final_source_execution",
+        "no_new_model_call": true
+      },
+      "actual_model_calls": 2,
+      "has_result": true,
+      "no_default_direction": true,
+      "original_record_unchanged": true
+    }
+  ],
+  "passed": true,
+  "strict_contract_passed_count": 16,
+  "deliverable_unvalidated_real_news_label_disagreement_count": 0,
+  "explicit_error_count": 4,
+  "no_model_calls": true,
+  "no_database_access": true,
+  "no_network_calls": true,
+  "boundary": "All selected twenty briefs plus current detail rechecked against final code. Four actual no-result errors remain independently rejected. This validates current API failure-to-null/UI contract together with runtime tests, not a new UI screenshot or new inference.",
+  "previous_gate_proof": {
+    "file": "reports/repair_2026-10-20/current_gate_revalidation_final_v2_3.906e4a5c33cc44d1.json",
+    "sha256": "906e4a5c33cc44d19215ca6afe6e9cd7403cc140347eb5063173404ac86478f0"
+  }
+}

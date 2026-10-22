@@ -9,6 +9,39 @@ from .context import build_context, update_event_memory
 log = logging.getLogger(__name__)
 
 
+def market_refresh_reason(latest: dict, old: dict, baseline: dict, now=None):
+    """Bound retries and compare prices only within one contract identity."""
+    if not latest or latest.get('status') in ('queued','running') or not baseline.get('available'):
+        return None
+    now=now or utcnow()
+    if (now-parse_time(latest['created_at'])).total_seconds()<900:
+        return None
+    if not old.get('available'):
+        return 'first_price_baseline'
+    if baseline.get('contract')!=old.get('contract'):
+        return 'contract_change'
+    # A corrected daily reference can reverse the observed move even when the
+    # latest quote is unchanged. Compare its identity and threshold separately
+    # after the contract check, without subtracting prices across contracts.
+    if baseline.get('previous_date')!=old.get('previous_date'):
+        return 'previous_reference_date_change'
+    import math
+    def same_number(left, right):
+        if left is None or right is None:
+            return left is right
+        try:
+            return math.isclose(float(left),float(right),rel_tol=0,abs_tol=1e-9)
+        except (TypeError,ValueError):
+            return left==right
+    if not same_number(baseline.get('previous_price'),old.get('previous_price')):
+        return 'previous_reference_price_change'
+    if not same_number(baseline.get('extreme_threshold'),old.get('extreme_threshold')):
+        return 'extreme_threshold_change'
+    if abs(baseline['latest_price']-old['latest_price'])>=.30-1e-9:
+        return 'market_price_change'
+    return None
+
+
 def freeze_due(store, now=None):
     now = now or utcnow()
     with store.connection() as c:
@@ -25,12 +58,32 @@ def freeze_due(store, now=None):
         with store.connection() as c:
             if c.execute("SELECT 1 FROM daily_snapshots WHERE trade_date=?", (ds,)).fetchone():
                 continue
-            row = c.execute("SELECT id FROM analyses WHERE trade_date=? AND kind='live' AND status='completed' AND completed_at<? AND created_at<? ORDER BY completed_at DESC LIMIT 1", (ds,end_iso,end_iso)).fetchone()
-            aid = row[0] if row else None
+            rows = c.execute("SELECT id FROM analyses WHERE trade_date=? AND kind='live' AND status='completed' AND completed_at<? AND created_at<? ORDER BY created_at DESC,completed_at DESC", (ds,end_iso,end_iso)).fetchall()
+            # A review already known at the close prevents freezing an invalid
+            # signal. Later reviews cannot rewrite what was known at that time.
+            aid = next((row[0] for row in rows if 'brief' not in
+                        ((store.analysis_review(row[0], as_of=end_iso) or {}).get('invalid_parts') or [])), None)
             c.execute("INSERT INTO daily_snapshots VALUES (?,?,?,?)", (ds,end_iso,aid,iso(now)))
             if aid:
                 c.execute("UPDATE analyses SET frozen=1 WHERE id=?", (aid,))
         store.emit("daily_frozen", {"trade_date":ds,"analysis_id":aid})
+
+
+def _inference_metric(store, kind, data):
+    """Telemetry failures must never change a persisted model result."""
+    try:
+        store.metric(kind,data)
+    except Exception:
+        log.exception("Could not persist inference metric %s; job state preserved",kind)
+
+
+def _job_result_committed(store, job):
+    if job['kind']=='translation':
+        record=store.translation_record(job['analysis_id'])
+        return bool(record and record['status']=='completed' and record.get('result') is not None)
+    record=store.analysis(job['analysis_id'])
+    prefix='detail_' if job['kind']=='detail' else ''
+    return bool(record and record[prefix+'status']=='completed' and record.get(prefix+'result') is not None)
 
 
 async def inference_worker(store, analyst):
@@ -40,6 +93,7 @@ async def inference_worker(store, analyst):
             await asyncio.sleep(1)
             continue
         started = time.monotonic()
+        generated=False
         try:
             if job['kind']=='translation':
                 from .translation import translate_analysis, source_hash
@@ -51,21 +105,44 @@ async def inference_worker(store, analyst):
                 result=await translate_analysis(analyst,original)
             else:
                 record = store.analysis(job["analysis_id"],include_input=True)
-                result = await analyst.analyze(record["input_snapshot"],detail=job["kind"]=="detail")
+                if (job['kind']=='detail' and (record.get('result') or {}).get('_meta',{}).get('structured')
+                        and hasattr(analyst,'detail_from_brief')):
+                    result = await analyst.detail_from_brief(record['result'])
+                else:
+                    result = await analyst.analyze(record["input_snapshot"],detail=job["kind"]=="detail")
+            generated=True
             store.finish_job(job,result=result)
-            store.metric("translation_success" if job['kind']=='translation' else "model_success",{"analysis_id":record["id"],"kind":job["kind"],"seconds":round(time.monotonic()-started,3),"model_metadata":result.get("_meta",{})})
-            if job['kind']=='short' and record['kind']=='live':
-                try:
-                    store.request_translation(record['id'])
-                except Exception as exc:
-                    store.metric('translation_enqueue_failure',{'analysis_id':record['id'],'error':str(exc)[:300]})
         except asyncio.CancelledError:
             raise
         except Exception as exc:
             message = str(exc)[:1800]
-            store.finish_job(job,error=message)
-            store.metric("translation_failure" if job['kind']=='translation' else "model_failure",{"analysis_id":job["analysis_id"],"kind":job["kind"],"seconds":round(time.monotonic()-started,3),"error":message})
-            log.exception("Model job failed")
+            committed=False
+            if generated:
+                try:
+                    # finish_job commits before emitting SSE. A notification
+                    # failure is not permission to erase its committed result.
+                    committed=_job_result_committed(store,job)
+                except Exception:
+                    log.exception("Cannot verify job commit; leave persisted state for recovery")
+                    continue
+            if committed:
+                log.exception("Post-commit job notification failed; completed result preserved")
+                _inference_metric(store,'post_commit_notification_failure',{'analysis_id':job['analysis_id'],'kind':job['kind'],'error':message})
+            else:
+                store.finish_job(job,error=message)
+                from .prompts import PROMPT_VERSION
+                failure_meta={"prompt_version":getattr(analyst,'prompt_version',PROMPT_VERSION),"reasoning":getattr(analyst,'reasoning',None),
+                              **getattr(exc,'audit',{})}
+                _inference_metric(store,"translation_failure" if job['kind']=='translation' else "model_failure",{"analysis_id":job["analysis_id"],"kind":job["kind"],"seconds":round(time.monotonic()-started,3),"error":message,"model_metadata":failure_meta})
+                log.exception("Model job failed")
+                continue
+        _inference_metric(store,"translation_success" if job['kind']=='translation' else "model_success",{"analysis_id":record["id"],"kind":job["kind"],"seconds":round(time.monotonic()-started,3),"model_metadata":result.get("_meta",{})})
+        if job['kind']=='short' and record['kind']=='live':
+            try:
+                store.request_translation(record['id'])
+            except Exception as exc:
+                log.exception("English enqueue failed; original model result preserved")
+                _inference_metric(store,'translation_enqueue_failure',{'analysis_id':record['id'],'error':str(exc)[:300]})
 
 
 async def collection_worker(store):
@@ -100,6 +177,13 @@ async def collection_worker(store):
                 age = (utcnow()-parse_time(published)).total_seconds()
                 if -60 <= age <= 48*3600:
                     context = build_context(store,news)
+                    delta = (context.get('current_news') or {}).get('revision_delta') or {}
+                    if news.get('_revised') and delta.get('substantive_change') is False:
+                        previous = store.previous_news_version(news['id'], news.get('version', 1), context['as_of'])
+                        # Keep genuine publication/window corrections. A new
+                        # retrieval clock alone is not a new price-analysis event.
+                        if previous and previous['data'].get('trade_date') == news.get('trade_date'):
+                            continue
                     kind = "live" if news.get("trade_date")==context["session"]["trade_date"] or news.get('ingestion_kind')=='live' and (news.get('_revised') or not news.get('published_at')) else "article"
                     context["analysis_kind"] = kind
                     store.create_analysis(context,kind=kind,news_id=news["id"],priority=10 if kind=='live' else 20)
@@ -114,6 +198,26 @@ async def collection_worker(store):
                     if not context['window_news']:
                         context['coverage']['risk_flags']=list(dict.fromkeys(context['coverage'].get('risk_flags',[])+['本结算窗口暂无新增新闻，此预判依据近五日新闻与持续事件，未把旧新闻归为今日新增。']))
                     store.create_analysis(context,kind='live',priority=3)
+            else:
+                # New prices can change the close baseline without any new
+                # headline. Refresh at most every 15 minutes after a material
+                # same-contract move, never crowding pending live analyses.
+                latest=store.latest_analysis(trade_date=session['trade_date'],live_only=True)
+                if latest and latest['status'] not in ('queued','running'):
+                    now=iso()
+                    completed=store.latest_analysis(trade_date=session['trade_date'],live_only=True,completed_only=True)
+                    record=store.analysis((completed or latest)['id'],include_input=True)
+                    from .context import price_context
+                    reference=price_context(store,now)
+                    baseline=reference.get('market_baseline') or {}
+                    old=((record.get('input_snapshot') or {}).get('price_reference') or {}).get('market_baseline') or {}
+                    refresh_reason=market_refresh_reason(latest,old,baseline)
+                    if refresh_reason:
+                        focus=(record.get('input_snapshot') or {}).get('current_news')
+                        context=build_context(store,focus,as_of=now)
+                        context['outlook_trigger']='market_baseline_update'
+                        context['outlook_refresh_reason']=refresh_reason
+                        store.create_analysis(context,kind='live',priority=12)
             store.metric("collection_cycle",{"seconds":round(time.monotonic()-started,3),"created":len(result.get("created", [])),"revised":len(result.get("revised", []))})
         except asyncio.CancelledError:
             raise

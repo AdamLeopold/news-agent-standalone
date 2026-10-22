@@ -1,0 +1,40 @@
+{
+  "created_at": "2026-10-22T16:52:48.038142+00:00",
+  "status": "private_v2_final_identity_and_english_closed_cpu_passed_real_revision_model_unobserved",
+  "model_calls": 0,
+  "production_source_edits": 0,
+  "production_db_writes": 0,
+  "files": {
+    "ttf_news/context.py": "464bfbc789ea5e8768fe94fa5bfe0cf74827a9b58e3cee7eceb4052a3b8f9108",
+    "ttf_news/structured_core.py": "28f75f146687b311ab4c2ae464c86512ca3ff61f14de34f7954cf1a321f465fc",
+    "tests/test_revision_evidence.py": "ddeee5a6d6c9f920697fbb1fac1230c0feceb702fd235672dc36163949d03fe7",
+    "tests/real_publisher_id_migration.json": "c5b69f6a91cd7b42eb572d9677826dc0e5a4190554f00d3c9bda01c5633201ca",
+    "context-final.diff": "085146fd855130da0ce389a8530243caaf20b3be261c1d603222e1e8de1c5fb9",
+    "structured_core-final.diff": "a81fedc544da62bac09ca6367a271d79ba9556f4761547aeb2ab6c6a01f8cca0",
+    "focused-final.log": "2a478b5123741bc2c16cf9b2a2fa445a4dda94d1f2b3d1bf6b499bf6d6478b01",
+    "mixed-zero-call-replay-final.json": "66d1406573ee30d328e8bf71fb745d0ce8783f8bd619ab37d52defef8e950bd9"
+  },
+  "base_source_sha256": {
+    "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+    "ttf_news/structured_core.py": "027bc8d862b3cc3f8eff7ea54b881a51030372009c9087dbdac2815c0582e4cc"
+  },
+  "test_summary": "13 passed in 0.10s",
+  "test_returncode": 0,
+  "prior_proposal_preserved": {
+    "path": ".runtime/revision-evidence-proposal/proposal-proof.json",
+    "sha256": "5d8804d20468c2bf09e73b49e7ac4e3d7e1806ba5e963d105df77fd24ac9a1ff"
+  },
+  "new_identity_contract": "source_version_metadata stores publisher_article_id before/after. API authority requires known nonempty equal publisher ID; same URL and timestamp_source alone are not lineage. A changed/missing ID never supplies a current publisher-revision novelty clock, but all original versions remain preserved.",
+  "real_negative_evidence": "One exact actual before/after source pair was copied from the existing backup with mode=ro/query_only, both stored-data SHA values verified against the supplied eligibility-review. Its same URL/different publisher_article_id is rejected. No historical clocks/text were modified for this negative control.",
+  "original_controls": "Verified publisher-clock progression, same body authority, per-claim novelty and prior immutable evidence still required. Metadata/first-seen/first-authority migrations cannot refresh all old facts; explicit historical claims remain background.",
+  "request_replay": "Existing real2.4.5 mixed classes/weights/close render replay has identical classification, weighting and closing request tuples, catalog economics, plan and all four rendered bodies with zero model calls.",
+  "acceptance_boundary": [
+    "Real724-pair audit has zero verified same publisher-record factual revision pairs. Positive CPU fixtures are constructed from exact real source paragraphs and diagnostic clocks; they are not observed publisher history or model novelty accuracy.",
+    "The new eligible publisher-revision branch still requires final frozen-source model testing, with this coverage boundary retained.",
+    "Exact quote integrity/source lineage/time checks do not automatically verify semantic novelty within changed paragraphs.",
+    "Deletion-only retraction without a current corrective evidence paragraph is not inferred by this minimal contract."
+  ],
+  "prior_v2_12_case_proof_sha256": "162b0d06b024aa4818c867e5b8bf4a55d59f87c8bb1fd9ae892d5041dfadb665",
+  "prior_v2_sources_archived_in": "before-en-render-fix",
+  "english_contract": "English prior evidence containing Chinese keeps immutable evidence ID, source version and full text SHA in generated detail; raw Chinese text remains intact in source metadata. Chinese rendering retains the full prior quote. A zero-model full English detail render verifies no CJK leakage into analytical fields."
+}

@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "no_model_calls": true,
+  "no_database_access": true,
+  "no_records_modified": true,
+  "scope": "Revalidate the unchanged real completed English cache after fixing Chinese-adjacent N/E identifier token boundaries; do not change the failed end-to-end attempt.",
+  "source_record": {
+    "file": "reports/repair_2026-10-20/production_manual_brief_actual_v2_3.json",
+    "sha256": "b4e126c63aa200cce3ac197bb6e513b3244b97713d58b0b0ea9855e6496553a4"
+  },
+  "english_record": {
+    "file": "reports/repair_2026-10-20/production_manual_english_failed_epcm_v2_3.json",
+    "sha256": "e4e55343709b455161103198a1b163f23adad83c2a675a459b8eb09493b851a2",
+    "actual_status": "completed",
+    "generation_translation_version": "ttf-analysis-english-2"
+  },
+  "current_translation_source_sha256": "d47b232a5f77ea68e2d5bc5d092021e9727e555c6b1dd702922325519982d7c5",
+  "current_translation_version": "ttf-analysis-english-3",
+  "checks": {
+    "translated_fields_checked": 17,
+    "protected_labels_numbers_citations_unchanged": true,
+    "untranslated_chinese_fields": 0,
+    "source_sha256": "f2ecc1a0c0269d9b472041dee5874736562062ecd323ddf14dd3661f7dd8ad5d",
+    "news_direction": "flat",
+    "close_direction": null,
+    "close_evidence_status": "insufficient_evidence",
+    "english_close_label": "No closing outlook yet",
+    "english_summary_sha256": "1f6b14801233a69f7a24d679c04cbd0e931655e62b4446808cb8b7a84831f4e7",
+    "english_summary_characters": 155,
+    "translation_model_seconds": 40.346
+  },
+  "old_translation_private_archive": ".runtime/source-archives/e6c50833f58eb7d063286f298c91f5816520fd4caff87ba4fa29e2dccbd3b680/ttf_news/translation.py",
+  "old_translation_sha256": "e6c50833f58eb7d063286f298c91f5816520fd4caff87ba4fa29e2dccbd3b680"
+}

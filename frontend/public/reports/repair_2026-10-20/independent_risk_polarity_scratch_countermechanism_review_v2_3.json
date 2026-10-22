@@ -1,0 +1,36 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "audited_at": "2026-10-21T01:17:09.107686+00:00",
+  "status": "scratch_review_requires_countermechanism_scope_fix",
+  "scratch_semantics_sha256": "b866b580c37f434b63436e45c801de6a77ff012bd8d8353a0bac4f8527d8bd45",
+  "base_actual_record_sha256": "6a52a56aef8b57e98cc4ac39908ab3a9dacc47a019d888c8661c3ff18f33cafb",
+  "root_source_not_changed": true,
+  "checks": [
+    {
+      "claim": "[N0]TTF机制：供应风险降低，但需求实际增加，净上行压力",
+      "expected": "reject_unsupported_countermechanism",
+      "observed": "allow",
+      "errors": []
+    },
+    {
+      "claim": "[N0]TTF机制：供应风险降低，但供气实际减少，净上行压力",
+      "expected": "reject_unsupported_countermechanism",
+      "observed": "allow",
+      "errors": []
+    },
+    {
+      "claim": "[N0]TTF机制：供应风险降低，但需求可能增加，净上行压力",
+      "expected": "reject_unsupported_countermechanism",
+      "observed": "allow",
+      "errors": []
+    }
+  ],
+  "finding": {
+    "severity": "P2",
+    "location": "_check_supply_risk_buckets mixedsign exception",
+    "reason": "A generated opposing mechanism suppresses risk-polarity gate without checking same cited known source supplies it. Full semantic collector also accepts these modified bodies; source has no demand increase or measured flow reduction.",
+    "fix_scope": "Only when explicit risk_only pressure contradicts evidence bucket: a mixed-direction exception must be source-backed, not merely generated or possible counter-facts. Keep netflat freedom, truly source-supported opposing demand, nonphysical risks, physical-risk negation and source extraction/input unchanged."
+  },
+  "no_model_api_database_or_core_edits": true
+}

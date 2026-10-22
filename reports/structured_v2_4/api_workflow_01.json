@@ -1,0 +1,199 @@
+{
+  "status": "failed",
+  "started_at": "2026-10-22T15:12:16.921150+00:00",
+  "expected_prompt_version": "ttf-news-standalone-2.4",
+  "scope": "2.4_real_manual_detail_shared_bilingual_plan_fresh_live_and_auto_english",
+  "synthetic_live_input": false,
+  "raw_thinking_included": false,
+  "stages": [
+    {
+      "name": "preservation_before",
+      "status": "passed",
+      "started_at": "2026-10-22T15:12:16.952929+00:00",
+      "checks": {
+        "passed": true,
+        "protected_analysis_count": 587,
+        "protected_nonnull_field_count": 997,
+        "current_analysis_count": 587,
+        "new_analysis_count": 0,
+        "protected_snapshot_count": 6,
+        "new_snapshot_count": 0,
+        "original_validation_record_count": 1,
+        "latest_baseline_unchanged": true,
+        "original_baseline": {
+          "id": 210,
+          "created_at": "2026-10-14T05:51:48.181167+00:00",
+          "type": "validation_started"
+        },
+        "failures": []
+      },
+      "finished_at": "2026-10-22T15:12:17.066412+00:00",
+      "elapsed_seconds": 0.113
+    },
+    {
+      "name": "live_api_v4_and_managed_identity",
+      "status": "passed",
+      "started_at": "2026-10-22T15:12:17.067156+00:00",
+      "checks": {
+        "analysis_generation_version": "ttf-news-standalone-2.4",
+        "server_pid": 46359,
+        "inference_enabled": true,
+        "collector_enabled": true,
+        "deployment": {
+          "file": ".runtime/structured-reasoning-v4/20261022T151142006907Z-resume/switch.json",
+          "sha256": "b4cd389bba78bef772086e6d8aaa770370c179ce071c4c5391554d5724461080"
+        },
+        "health": {
+          "file": "reports/structured_v2_4/api_workflow_01_artifacts/health_before.json",
+          "sha256": "312b48d0b0f5e3bc3e605e793111b35821ebc66ad2e758f00a1f53226cbae5a2"
+        }
+      },
+      "finished_at": "2026-10-22T15:12:17.197394+00:00",
+      "elapsed_seconds": 0.13
+    },
+    {
+      "name": "fresh_collected_news_live_api",
+      "status": "passed",
+      "started_at": "2026-10-22T15:12:17.198134+00:00",
+      "checks": {
+        "analysis_id": "1891637e-2f0a-48e6-a708-a34cc9297f00",
+        "source_record": {
+          "file": "reports/structured_v2_4/api_workflow_01_artifacts/selected_live_source.json",
+          "sha256": "bcf730c96f7e67b9e7e45e31f7e7c424c084d7e0b3ee31c8c952e87cea45190f"
+        },
+        "created": true,
+        "normal_api": true,
+        "actual_window_before_submission": {
+          "file": "reports/structured_v2_4/api_workflow_01_artifacts/live_source_current_window_before_submission.json",
+          "sha256": "786e888a4656e81754127c023640184a0cb0c8d06bfc98b6872217d086cb9569"
+        }
+      },
+      "finished_at": "2026-10-22T15:12:20.376157+00:00",
+      "elapsed_seconds": 3.178
+    },
+    {
+      "name": "current_live_structural_identity",
+      "status": "failed",
+      "started_at": "2026-10-22T15:12:20.376984+00:00",
+      "error_type": "RuntimeError",
+      "error": "current_live failed; retained reports/structured_v2_4/api_workflow_01_artifacts/current_live_actual.json: Structured model response failed after two attempts: Classification quote is not verbatim known source text",
+      "finished_at": "2026-10-22T15:14:11.088966+00:00",
+      "elapsed_seconds": 110.713
+    },
+    {
+      "name": "deployed_source_bytes_stable",
+      "status": "passed",
+      "started_at": "2026-10-22T15:14:11.089768+00:00",
+      "checks": {
+        "current_source_bytes_unchanged": true,
+        "core_sha256": "e85e97d0825b01320b15e33419a283bd7ba1666f48401e78b13f34bbb4e883ab"
+      },
+      "finished_at": "2026-10-22T15:14:11.096329+00:00",
+      "elapsed_seconds": 0.007
+    },
+    {
+      "name": "preservation_after",
+      "status": "passed",
+      "started_at": "2026-10-22T15:14:11.096817+00:00",
+      "checks": {
+        "passed": true,
+        "protected_analysis_count": 587,
+        "protected_nonnull_field_count": 997,
+        "current_analysis_count": 589,
+        "new_analysis_count": 2,
+        "protected_snapshot_count": 6,
+        "new_snapshot_count": 0,
+        "original_validation_record_count": 1,
+        "latest_baseline_unchanged": true,
+        "original_baseline": {
+          "id": 210,
+          "created_at": "2026-10-14T05:51:48.181167+00:00",
+          "type": "validation_started"
+        },
+        "failures": []
+      },
+      "finished_at": "2026-10-22T15:14:11.289043+00:00",
+      "elapsed_seconds": 0.192
+    }
+  ],
+  "job_timeout_including_queue_seconds": 600,
+  "live_first": true,
+  "old_release_or_83_record_replay_required": false,
+  "whole_workflow_retry": false,
+  "source_sha256": {
+    "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+    "ttf_news/analysis.py": "781127633591c780709be6cc43d1a18c0c44a61a6ef873160778c82671bbe2cb",
+    "ttf_news/api.py": "afe04d7c94a1dcb40840adffb58c5a4ade76552e173b103375e88d7cd4190c48",
+    "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+    "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+    "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+    "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+    "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+    "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+    "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+    "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+    "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987",
+    "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+    "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+    "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+    "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+    "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+    "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+    "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+    "ttf_news/public_gateway.py": "08990e223d5e7d1d348967c9625fd29fc2d1e7e58bb000c964b9cfea43b59952",
+    "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+    "ttf_news/runtime.py": "bd1e951334fc9117be11f5937ac18d7262d53c3576e9fcb8b8f63fc8ac7bf239",
+    "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+    "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+    "ttf_news/semantics.py": "d054bc812a80e0d28bfc95a098731b6b556ad0304a9775db0ec4d00d660d2d9a",
+    "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+    "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+    "ttf_news/structured_analysis.py": "eded54d937532bc6eef54bb13de8ab316c73ed686edf6626050432ea167daa3a",
+    "ttf_news/structured_core.py": "e85e97d0825b01320b15e33419a283bd7ba1666f48401e78b13f34bbb4e883ab",
+    "ttf_news/translation.py": "384072fe3139d8ece9a15915c014c683cfee91b02a2ee9ae059c073655b04d21"
+  },
+  "harness": {
+    "file": ".runtime/structured-reasoning-v4/workflow.py",
+    "sha256": "17a36b7a65451aab049761eb1ccc14267e473c9f7ac12bcce5b5e22c1454e407"
+  },
+  "legacy_mechanics": {
+    "file": ".runtime/live-repair-smoke.py",
+    "sha256": "34978f56573820a44b461cc2f019d05cc77ac6665377b0043612a2e1da31eaa3"
+  },
+  "structured_core": {
+    "file": "ttf_news/structured_core.py",
+    "sha256": "e85e97d0825b01320b15e33419a283bd7ba1666f48401e78b13f34bbb4e883ab"
+  },
+  "preservation_manifest": {
+    "file": ".runtime/structured-reasoning-v4/20261022T151142006907Z-resume/preservation_manifest.json",
+    "sha256": "7838926c387f10d7f0971a8971970bbbadd6624fdd2c6a143a1d05eea17f9f05"
+  },
+  "new_live_analysis_id": "1891637e-2f0a-48e6-a708-a34cc9297f00",
+  "terminal_error": "Stop dependent workflow after failed stage: current_live_structural_identity",
+  "finished_at": "2026-10-22T15:14:11.290178+00:00",
+  "failed_stages": [
+    "current_live_structural_identity"
+  ],
+  "missing_required_stages": [
+    "csv_jsonl_exports",
+    "current_live_automatic_english_same_plan",
+    "current_live_structural_identity",
+    "dashboard_final_window_isolation",
+    "dashboard_live_window_identity",
+    "manual_brief_structural_identity",
+    "manual_detail_request",
+    "manual_detail_structural_identity",
+    "manual_english_brief_same_plan",
+    "manual_english_detail_same_plan",
+    "manual_submit_real_news",
+    "original_chinese_results_unchanged",
+    "select_real_existing_manual_news",
+    "sse_after_query_reconnect",
+    "sse_initial_connection",
+    "sse_last_event_id_reconnect",
+    "sse_manual_completed_event"
+  ],
+  "elapsed_seconds": 114.338,
+  "structural_workflow_is_market_accuracy": false,
+  "independent_ordinary_source_semantics_review_still_required": true
+}

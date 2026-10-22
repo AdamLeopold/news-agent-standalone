@@ -1,0 +1,40 @@
+{
+  "reviewer": "/root/final_semantic_audit",
+  "analysis_sha256": "6d46d6dcee4899ea7426222014ee84dc6d9b56f8144789561ba11a02adace72d",
+  "semantics_sha256": "e0cac7cdab33b6562ee88db528ad32114540734b2b96275d7f32e67302856623",
+  "control_count": 5,
+  "passed": true,
+  "controls": [
+    {
+      "claim": "当前报价较前一交易日上涨0 EUR/MWh。",
+      "expected_allowed": false,
+      "actual_allowed": false,
+      "passed": true
+    },
+    {
+      "claim": "盘中价格已上涨至88 EUR/MWh。",
+      "expected_allowed": false,
+      "actual_allowed": false,
+      "passed": true
+    },
+    {
+      "claim": "当前报价较前一交易日上涨0.18 EUR/MWh。",
+      "expected_allowed": true,
+      "actual_allowed": true,
+      "passed": true
+    },
+    {
+      "claim": "盘中价格已上涨至87.73 EUR/MWh。",
+      "expected_allowed": true,
+      "actual_allowed": true,
+      "passed": true
+    },
+    {
+      "claim": "当前报价较前一交易日上涨0.17 EUR/MWh。",
+      "expected_allowed": false,
+      "actual_allowed": false,
+      "passed": true
+    }
+  ],
+  "boundary": "Precision cap only; preserves .011 maximum error and half stated decimal place. No input, source, model, or label mutation."
+}

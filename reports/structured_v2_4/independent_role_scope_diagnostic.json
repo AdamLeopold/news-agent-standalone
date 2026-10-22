@@ -1,0 +1,82 @@
+{
+  "created_at": "2026-10-22T16:26:29.211261+00:00",
+  "scope": "Read-only cause investigation. Reconstructed exact classification system/input/schema and evaluated a pure scope helper; no model request, backdated forecast, service or database mutation.",
+  "actual_sha256": "5090f96b7ff2405d23a3b3e4842fb7f16fdf41cb3e4a5a26f7c23b74d1b452b5",
+  "core_sha256": "0b15b314721e86afd9d32e191deaf939b1db30b58ec8565d0c017f38c3047c06",
+  "input_hash_matches": true,
+  "schema_hash_matches": true,
+  "readable_system_hash_matches": true,
+  "actual_classification": {
+    "id": "F1",
+    "source_id": "N0",
+    "kind": "future_project_development",
+    "entity": "Cheniere",
+    "region_scope": "region_only",
+    "realization": "future",
+    "origin": "model_normalized",
+    "quote_grounded": true,
+    "semantic_entailment_programmatically_verified": false,
+    "classification_confidence": 1,
+    "quote": "Through Cheniere Energy Partners, L.P. (NYSE: CQP), we are developing an expansion of the existing Sabine Pass Liquefaction Project (“SPL Project”) with an expected total peak production capacity of up to approximately 20 mtpa of LNG (the “SPL Expansion Project”), inclusive of estimated debottlenecking opportunities, which would grow the total production capacity of the SPL Project to over 50 mtpa of LNG. We expect to execute the SPL Expansion Project in a phased approach. The first phase is expected to include a single train, Train 7, and a boil-off gas re-liquefaction unit, along with supporting infrastructure and tie-ins to the existing Sabine Pass LNG terminal, and has an expected total production capacity of over 6 mtpa of LNG, inclusive of estimated debottlenecking opportunities. In May 2026, the lump sum, turnkey engineering, procurement, and construction (EPC) contract with Bechtel Energy, Inc. (“Bechtel”) for the first phase of the SPL Expansion Project was signed, and Bechtel was released to commence early engineering and procurement under a limited notice to proceed (LNTP).\n",
+    "source_title": "Cheniere Signs Long-Term Sale and Purchase Agreements to Supply QatarEnergy with LNG through 2054",
+    "evidence_id": "N0.76e929b3",
+    "evidence_source_field": "body",
+    "original_source_id": "2221a75361f049315f77be94",
+    "source_version": 1,
+    "source_identity_sha256": "76e92967b505eeaf5732feceb39105425fb10662abd316293f6b678c60bc9a9e",
+    "quote_sha256": "00d162d4222189feeeeca42e54d5f6c49a17e2407149380b4fecd9fb51524410",
+    "reported_at": "2026-10-22T13:00:00+00:00",
+    "supply_chain_role": "upstream",
+    "historical_report": true,
+    "transmission_channel": "background_only"
+  },
+  "input_complete_for_operation_classification": true,
+  "input_evidence": [
+    "Sabine Pass Liquefaction Project",
+    "Train 7",
+    "boil-off gas re-liquefaction unit",
+    "existing Sabine Pass LNG terminal",
+    "expected future capacity up to20mtpa, phase1 over6mtpa"
+  ],
+  "input_token_estimate": 6341,
+  "context_window": 16384,
+  "done_reason": "stop",
+  "explicit_definition_in_actual_prompt": "upstream=raw gas extraction or field development; lng_export=liquefaction, loading or LNG export",
+  "native_schema_fact_type_roles": {
+    "type": "string",
+    "enum": [
+      "upstream",
+      "lng_export"
+    ]
+  },
+  "observed_result": "Complete source and clear role definition were provided, but the actual structured model answer chose upstream. Fine-role classification is unreliable across changed request contexts under the same source version; model-internal cause is not observable.",
+  "plausible_prompt_factor_not_proven": "The future-project category permits upstream or LNG export, and the six contrasts include a field-upstream example without an explicit extraction-versus-liquefaction contrast. This may bias the role but is not identified as the cause from one result.",
+  "pure_helper_demonstration": {
+    "actual_historical_record": [
+      [
+        "background"
+      ],
+      "background_only"
+    ],
+    "hypothetical_same_fact_not_historical_no_new_forecast": [
+      [
+        "background"
+      ],
+      "regional_background"
+    ],
+    "only_role_lng_export_not_historical_no_new_forecast": [
+      [
+        "expectation",
+        "longer_term"
+      ],
+      "global_lng_export_expectations"
+    ]
+  },
+  "risk": "The actual prior-window record has a P3 role error with no changed output. The helper counterfactual shows the same role error can become a hard current-window background veto through the region_only+role gate. It should not be dismissed as harmless metadata for future inputs.",
+  "design_options": [
+    "Separate concrete physical operation claim from contextual geographic metadata; derive any descriptive role from that typed operation rather than allowing a second independent role prediction to veto an otherwise valid commodity supply mechanism.",
+    "If potential transmission is decided downstream, keep low/unknown relevance as an explicit model weight/scope judgment rather than letting an optional fine-role label force a zero. A nonzero weight is never required.",
+    "Do not use company-name rules, role string substitution, retry until the desired role, or silently modify the original actual output."
+  ],
+  "serialization": "exact transport compact sorted JSON, not core indented serializer"
+}

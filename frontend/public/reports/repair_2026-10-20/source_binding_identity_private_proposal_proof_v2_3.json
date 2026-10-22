@@ -1,0 +1,232 @@
+{
+  "schema_version": "ttf-exact-manual-source-identity-input-final-proposal-v2",
+  "created_at": "2026-10-21T06:12:22.980853+00:00",
+  "status": "private_status_consistency_revision_tests_passed_independent_review_pending",
+  "new_model_calls": 0,
+  "network_calls": 0,
+  "database_access": false,
+  "root_modified": false,
+  "root_source_sha256": {
+    "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+    "ttf_news/analysis.py": "1aebeb8971f13f61fd8bd4f9ab961b6284e811aeb773014ef7cc71874c94375c",
+    "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+    "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+    "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+    "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+    "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+    "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+    "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+    "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+    "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+    "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987",
+    "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+    "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+    "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+    "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+    "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+    "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+    "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+    "ttf_news/public_gateway.py": "08990e223d5e7d1d348967c9625fd29fc2d1e7e58bb000c964b9cfea43b59952",
+    "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+    "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+    "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+    "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+    "ttf_news/semantics.py": "d054bc812a80e0d28bfc95a098731b6b556ad0304a9775db0ec4d00d660d2d9a",
+    "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+    "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+    "ttf_news/translation.py": "d47b232a5f77ea68e2d5bc5d092021e9727e555c6b1dd702922325519982d7c5"
+  },
+  "candidate_analysis": {
+    "file": ".runtime/manual-source-identity-input-proposal/revision-status-scope/ttf_news/analysis.py",
+    "sha256": "f5c341c9cd1bfe6d107f5735c96d87c76ba5ab165e402658b641f7c34adc3f37"
+  },
+  "identity_requirements": [
+    "gassco source, nonempty exact title, complete uncompressed source_body equality",
+    "one exact Message ID in complete body, any explicit source_message_id agrees",
+    "a unique matching source record in eligible window news, explicit source_index IDs agree with N0 and the donor alias",
+    "source publication and a recorded source availability clock known no later than as_of",
+    "two valid ordered source event clocks equal the complete source body Event interval",
+    "no conflicting current event clock/status or supplied URL; no alias by facility, fuzzy title or compressed facts",
+    "Explicit title suffix (Active/Dismissed) must agree with donor structured event_status; contradictions do not project or deduplicate."
+  ],
+  "projection": "Fill missing event_start/event_end/event_status/source_message_id in a deep-copied current item only. Bind same_as_window_news_id to the unique donor; retain donor alias as a same_as_current_news_id pointer. Full raw current/window inputs and all source IDs remain unchanged. Explicit non-model metadata records exact identity hashes, donor clocks and original IDs.",
+  "ast_checks": {
+    "existing_functions_changed": [
+      "prepare_context"
+    ],
+    "added_functions": [
+      "_project_exact_manual_source_identity"
+    ],
+    "all_output_validators_and_parser_unchanged": true,
+    "system_schema_definition_and_profile_functions_unchanged": true,
+    "semantics_unchanged": true,
+    "helper_unchanged": true
+  },
+  "input_origins": [
+    {
+      "role": "manual_brief",
+      "original_actual_file": "reports/repair_2026-10-20/production_tenth_manual_brief_actual_v2_3.json",
+      "original_actual_sha256": "67d4081b36e18224d32c72abff7d4dff7e64d38d4c13cbc54495a475c03cb2d8",
+      "input_file": "fixtures/manual_brief_input.json",
+      "input_file_sha256": "6cbdc6b8fd6f128ecacb53ab487cf227444a1287dc40d032e7fdb1caa7fffa7d",
+      "input_model_json_sha256": "f68e15f1ae8c51f774849a23570231e372861840fea3b5a0e12b6aa7236009e8"
+    },
+    {
+      "role": "current_live",
+      "original_actual_file": "reports/repair_2026-10-20/production_tenth_current_live_actual_v2_3.json",
+      "original_actual_sha256": "e64ff7e0db32b865251822f5046456291ad331a677ff975adbae2e1757114b9d",
+      "input_file": "fixtures/current_live_input.json",
+      "input_file_sha256": "923bc0a2e003018c21445ddc21f0c645361f0726d1a79dc0c272d583b4c14774",
+      "input_model_json_sha256": "d84774848e1a5b0f1a6796e3ad413ae3ff32760082a4ca41193f093df08b05a0"
+    }
+  ],
+  "actual_input_comparisons": [
+    {
+      "role": "manual_brief",
+      "detail": false,
+      "prepared_equal": false,
+      "metadata_equal": false,
+      "system_equal": true,
+      "schema_equal": false,
+      "before_prepared_sha256": "9073f936a42dfdd83c6e2fa8e2940292c18415ace7893394a5f14d7001bb1929",
+      "after_prepared_sha256": "b3b79d47580198fe25586f4a8a463beff829bc26b0c0cbc3c1e8929ebfa3c872",
+      "before_tokens": 9088,
+      "after_tokens": 8902,
+      "all_original_source_index_alias_ids_retained": true,
+      "window_news_count_equal": true,
+      "source_narrative_equal": true,
+      "before_current_temporal_state": "reported_fact",
+      "after_current_temporal_state": "scheduled_notice",
+      "before_notice_ledger_count": 3,
+      "after_notice_ledger_count": 2
+    },
+    {
+      "role": "manual_brief",
+      "detail": true,
+      "prepared_equal": false,
+      "metadata_equal": false,
+      "system_equal": true,
+      "schema_equal": false,
+      "before_prepared_sha256": "2bf1bf0c287fce847c92d23fb7723e64f7c1c4000e759890ef51b4268bc6d87a",
+      "after_prepared_sha256": "8f0ddaadfafe426a5318c491e977531cd74eb494d4b60de04fd9eabe8ce39841",
+      "before_tokens": 10735,
+      "after_tokens": 10548,
+      "all_original_source_index_alias_ids_retained": true,
+      "window_news_count_equal": true,
+      "source_narrative_equal": true,
+      "before_current_temporal_state": "reported_fact",
+      "after_current_temporal_state": "scheduled_notice",
+      "before_notice_ledger_count": 3,
+      "after_notice_ledger_count": 2
+    },
+    {
+      "role": "current_live",
+      "detail": false,
+      "prepared_equal": true,
+      "metadata_equal": true,
+      "system_equal": true,
+      "schema_equal": true,
+      "before_prepared_sha256": "965c6d377b2f3f609e68f90ea67b477b4ade3e65a8c564a2343fce0c5a7b7665",
+      "after_prepared_sha256": "965c6d377b2f3f609e68f90ea67b477b4ade3e65a8c564a2343fce0c5a7b7665",
+      "before_tokens": 8902,
+      "after_tokens": 8902,
+      "all_original_source_index_alias_ids_retained": true,
+      "window_news_count_equal": true,
+      "source_narrative_equal": true,
+      "before_current_temporal_state": "scheduled_notice",
+      "after_current_temporal_state": "scheduled_notice",
+      "before_notice_ledger_count": 2,
+      "after_notice_ledger_count": 2
+    },
+    {
+      "role": "current_live",
+      "detail": true,
+      "prepared_equal": true,
+      "metadata_equal": true,
+      "system_equal": true,
+      "schema_equal": true,
+      "before_prepared_sha256": "e142da1f8782cc3a9576d8b21d3f707d8dcd97f0869fad5232390963d1f257de",
+      "after_prepared_sha256": "e142da1f8782cc3a9576d8b21d3f707d8dcd97f0869fad5232390963d1f257de",
+      "before_tokens": 10548,
+      "after_tokens": 10548,
+      "all_original_source_index_alias_ids_retained": true,
+      "window_news_count_equal": true,
+      "source_narrative_equal": true,
+      "before_current_temporal_state": "scheduled_notice",
+      "after_current_temporal_state": "scheduled_notice",
+      "before_notice_ledger_count": 2,
+      "after_notice_ledger_count": 2
+    }
+  ],
+  "tests": {
+    "command": ".venv/bin/python .runtime/manual-source-identity-input-proposal/revision-status-scope/run_tests.py",
+    "tests_passed": 17,
+    "failed": 0,
+    "elapsed_seconds": 1.35,
+    "log_file": ".runtime/manual-source-identity-input-proposal/revision-status-scope/identity-focused-tests-rerun.log",
+    "log_sha256": "278636a9595f6fba2c9d0d01bebe29091e75ce4aca2aac1894991f9ec1f94b1f",
+    "xml_file": ".runtime/manual-source-identity-input-proposal/revision-status-scope/identity-focused-tests.xml",
+    "xml_sha256": "f4d8f05ca82b14b3dd508b7330a8c54e43ad545e441f37c545ce14da927e590e",
+    "preserved_initial_runner_environment_failure": {
+      "file": ".runtime/manual-source-identity-input-proposal/revision-status-scope/identity-focused-tests.log",
+      "sha256": "c2e7937571dfdbe1137d340a130e904a3c1dbd072276be4b925c00c64d181b03",
+      "cause": "Nested private runner initially resolved tokenizer cache under .runtime rather than project root, using fallback counts. Runner path corrected, candidate source unchanged; successful focused runs explicitly use the existing project tokenizer cache."
+    }
+  },
+  "artifacts": {
+    "analysis.diff": "beb5929cc4e47b7d73fc50ebe1a969b0ce41418767a756677e4a86fe063df1d9",
+    "status-revision.diff": "b987fe515396a959c0ebc78c478bbee16994dc5df43935fc086ce064697da432",
+    "test_source_identity_projection.py": "505a356187fb9b56d55cfae21aa02cb243d2121b07798580486e08b0ff4e9211",
+    "input_origins.json": "ca4088a9b4ee3b9db2f936efe9d56734415a199f79a39a79f1d442c87e5f9722",
+    "build_input_comparison.py": "43f7f45395ddb2ae92be86b96aa4a96049709b045e54c81ebb86770c475f2cf4",
+    "root-actual-inputs.json": "63daccae943001b0afe3fdf85f34033d80790841deb7be5112e643ae0fcca20f",
+    "candidate-actual-inputs.json": "857ec330d63830a7ccdab572bcf2d3c9e97121a228abb5e5ec0f1049264be484"
+  },
+  "boundary": "This proves deterministic input consistency for the actual tenth snapshots and paired negative controls, not improved model availability or correctness. The manual prepared/schema input changes and requires new actual generation; the existing current-live prepared input and metadata are byte-equivalent in both brief and detail. No raw model record, expectation or original failed status is changed.",
+  "previous_immutable_private_candidate": {
+    "file": ".runtime/manual-source-identity-input-proposal/ttf_news/analysis.py",
+    "sha256": "a2f4ff204962167ba44414187efa8288c323fbfe3c70b0bca65a3ad14c2d7533",
+    "proof_sha256": "464de6efd509f7421dc980be7fcec93fbeb4e3c53fa569484c6609175467a10c"
+  },
+  "portable_tests": {
+    "original_fifteen_assertions_unchanged": true,
+    "new_status_controls": 2,
+    "total_passed": 17,
+    "elapsed_seconds": 1.4,
+    "source_identity_verification": "existing verified_historical_bytes exact private SHA or explicit complete publication_manifest source/public dual identity",
+    "public_fixture_check": "check_public completed without exception; no secret/thinking/path findings",
+    "target_files": [
+      {
+        "source": ".runtime/manual-source-identity-input-proposal/revision-status-scope/portable/tests/test_manual_source_identity_projection.py",
+        "target": "tests/test_manual_source_identity_projection.py",
+        "sha256": "e855f9ddbb1987bb4ea3cf50ad67b959e142ef803302f06545ee370556ffe4a1"
+      },
+      {
+        "source": ".runtime/manual-source-identity-input-proposal/revision-status-scope/portable/tests/fixtures/manual_source_identity_actual_v2_3.json",
+        "target": "tests/fixtures/manual_source_identity_actual_v2_3.json",
+        "sha256": "6309d022630fc86dcbcb8c76c200dea20fc80c6215eeb5f5d4e66b6046c4d3ba"
+      }
+    ],
+    "log": {
+      "file": ".runtime/manual-source-identity-input-proposal/revision-status-scope/portable/portable-focused-tests.log",
+      "sha256": "150a7b5e248c508dfc975a165c70e24441285400026dc04e20b54a2ba061ec26"
+    },
+    "xml": {
+      "file": ".runtime/manual-source-identity-input-proposal/revision-status-scope/portable/portable-focused-tests.xml",
+      "sha256": "f65db2b3b6457f3d7ed93f97c585fa223c07effa0c404e150e77e377ecaf6d35"
+    }
+  },
+  "post_combination_plan": {
+    "current_root_helper_unchanged_sha256": "8fb767f83f41e559c1f3463abdc71764c367c55dc2ff133d462075e7bf05d085",
+    "requires_combined_core_final_freeze_before_execution": true,
+    "zero_model_replay_command": "TIKTOKEN_CACHE_DIR=data/cache/tokenizer .venv/bin/python scripts/repair-validation-report.py --replay-paths",
+    "required_comparisons": [
+      "full original source and record SHA",
+      "every actual system/context/schema/options",
+      "every validation_stage/error and feedback/draft object",
+      "attempt counts and final nonmeta result SHA",
+      "terminal status and error"
+    ],
+    "selection": "Keep original20 fixture and all recorded outcomes/expectations; current bounded+partial chain chooses latest20 briefs and one detail. No new stage if zero selected paths differ; affected paths require root-authorized actual terminal, never reclassify old failure."
+  }
+}

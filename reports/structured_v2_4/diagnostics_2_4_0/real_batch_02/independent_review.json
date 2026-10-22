@@ -1,0 +1,152 @@
+{
+  "reviewed_at": "2026-10-22T15:09:49.762298+00:00",
+  "scope": "Independent reading of full actual source inputs, normalization catalogs, weighted typed plans, raw final JSON, Chinese/English briefs and same-plan details. Private real-source mechanism diagnostics only; not market accuracy, not a contemporaneous historical backtest, not complete product release acceptance.",
+  "case_count": 4,
+  "passed_cases": 4,
+  "model_calls": 12,
+  "retries": 0,
+  "detail_additional_model_calls": 0,
+  "english_additional_model_calls": 0,
+  "confirmed_P1_P2_in_completed_outputs": 0,
+  "minor_findings_count": 2,
+  "cases": [
+    {
+      "case": "p12_manual",
+      "actual_file": ".runtime/structured-reasoning-v4/real_batch_02/p12_manual.json",
+      "actual_sha256": "33926b65674d066db89b03e07b45a78ea7548625faf5baa4acf05beb8c626b10",
+      "source_hashes": {
+        "pilot.py": "1418be75cd6fd6084e8dfeeb77ccbf48c849548efbdebc212dfcd784739b04e7",
+        "structured_transport.py": "0af5eabe83a9b0f8d95a5b723ffcd1ed7a515a3e4cf491ed987f2973cdc22565",
+        "structured_core.py": "e85e97d0825b01320b15e33419a283bd7ba1666f48401e78b13f34bbb4e883ab",
+        "offline_controls.py": "00832dd8646e1d0cc7636781e1be0d55ad30c75f82e3c75ad3a3dc75e6837fd2",
+        "final_core.py": "e85e97d0825b01320b15e33419a283bd7ba1666f48401e78b13f34bbb4e883ab",
+        "real_batch.py": "8a31cad4bb0e235e7a2183ce3b79235201199fdb38126463df59558b90e6b644",
+        "manage.py": "b6655fc0f2d61c07799c025a2682e0a2b2cafd09b5ed17e100052649d9a0cb36",
+        "workflow.py": "16a48ff003588573cb2f4706e82c5ed0050ae6e995ebfb37727e606f4376fbfe"
+      },
+      "status": "passed_this_real_source_diagnostic",
+      "model_calls": 3,
+      "retries": 0,
+      "news_direction": "up",
+      "close_direction": "up",
+      "news_score": 0.84,
+      "typed_plan_sha256": "486917d241fd8fff55443ee6ba43ba814ddcb69e64eee323c75ecfb8fb0cdde9",
+      "same_plan_cn_en_brief_detail": true,
+      "checks": [
+        "Future Jackdaw approval is a potential supply-expansion mechanism with negative TTF pressure; no current production is invented.",
+        "Current planned Troll13.0, future planned13.6 and future unplanned13.0 preserve distinct times/categories. Correlated positive risk uses maximum1.62 rather than summing capacity or article votes.",
+        "Capacity revision7.6to13.6 is tightening; end-time shortening is marginal relief, not restored physical flow.",
+        "Net score1.62-0.30-0.48=0.84, up; close direction and explanations share the same typed plan.",
+        "Historical reference observations were available before as_of and were not presented as current event causality or official settlement accuracy."
+      ],
+      "minor_findings": []
+    },
+    {
+      "case": "epcm",
+      "actual_file": ".runtime/structured-reasoning-v4/real_batch_02/epcm.json",
+      "actual_sha256": "52d965dbaf43d94abc3b914322a0efe2c057ba55bb6f7f9fdcd6a665ffce6eed",
+      "source_hashes": {
+        "pilot.py": "1418be75cd6fd6084e8dfeeb77ccbf48c849548efbdebc212dfcd784739b04e7",
+        "structured_transport.py": "0af5eabe83a9b0f8d95a5b723ffcd1ed7a515a3e4cf491ed987f2973cdc22565",
+        "structured_core.py": "e85e97d0825b01320b15e33419a283bd7ba1666f48401e78b13f34bbb4e883ab",
+        "offline_controls.py": "00832dd8646e1d0cc7636781e1be0d55ad30c75f82e3c75ad3a3dc75e6837fd2",
+        "final_core.py": "e85e97d0825b01320b15e33419a283bd7ba1666f48401e78b13f34bbb4e883ab",
+        "real_batch.py": "8a31cad4bb0e235e7a2183ce3b79235201199fdb38126463df59558b90e6b644",
+        "manage.py": "b6655fc0f2d61c07799c025a2682e0a2b2cafd09b5ed17e100052649d9a0cb36",
+        "workflow.py": "16a48ff003588573cb2f4706e82c5ed0050ae6e995ebfb37727e606f4376fbfe"
+      },
+      "status": "passed_this_real_source_diagnostic",
+      "model_calls": 3,
+      "retries": 0,
+      "news_direction": "up",
+      "close_direction": "up",
+      "news_score": 0.54,
+      "typed_plan_sha256": "a40b9ffc5be820804aa74ea1b6373f3612beb63fa01739e761254194406c4977",
+      "same_plan_cn_en_brief_detail": true,
+      "checks": [
+        "Corporate EPCM award preserves LNG Canada as awarder and Tecnicas Reunidas as recipient; EUR200M is not gas volume or production.",
+        "The Phase2 FID statement is present in the original source. It is retained as earlier background, not fabricated as a fresh current-window investment decision.",
+        "Total window upward pressure comes from Troll notice risk net of shortening relief; the contract is not treated as company-equity-benefit-driven TTF bullishness."
+      ],
+      "minor_findings": [
+        {
+          "priority": "P3",
+          "field": "classification.supply_chain_role",
+          "description": "One future-development background fact uses upstream for the CoastalGasLink/LNG export-support pipeline context. A midstream or export-support role is more precise. It has zero current-window weight and does not create a physical-production claim or reverse price pressure.",
+          "blocking": false
+        }
+      ]
+    },
+    {
+      "case": "chevron_historical",
+      "actual_file": ".runtime/structured-reasoning-v4/real_batch_02/chevron_historical.json",
+      "actual_sha256": "5aa79a4d7d9df97ca9ec2979b2ecf38b56ead429f9fa069b3461849922c50e6c",
+      "source_hashes": {
+        "pilot.py": "1418be75cd6fd6084e8dfeeb77ccbf48c849548efbdebc212dfcd784739b04e7",
+        "structured_transport.py": "0af5eabe83a9b0f8d95a5b723ffcd1ed7a515a3e4cf491ed987f2973cdc22565",
+        "structured_core.py": "e85e97d0825b01320b15e33419a283bd7ba1666f48401e78b13f34bbb4e883ab",
+        "offline_controls.py": "00832dd8646e1d0cc7636781e1be0d55ad30c75f82e3c75ad3a3dc75e6837fd2",
+        "final_core.py": "e85e97d0825b01320b15e33419a283bd7ba1666f48401e78b13f34bbb4e883ab",
+        "real_batch.py": "8a31cad4bb0e235e7a2183ce3b79235201199fdb38126463df59558b90e6b644",
+        "manage.py": "b6655fc0f2d61c07799c025a2682e0a2b2cafd09b5ed17e100052649d9a0cb36",
+        "workflow.py": "16a48ff003588573cb2f4706e82c5ed0050ae6e995ebfb37727e606f4376fbfe"
+      },
+      "status": "passed_this_real_source_diagnostic",
+      "model_calls": 3,
+      "retries": 0,
+      "news_direction": "flat",
+      "close_direction": "up",
+      "news_score": 0.0,
+      "typed_plan_sha256": "094ba3d7b04904c9b9cd1670827ccc148b2e8b35b4305b0d1481f17e53b66917",
+      "same_plan_cn_en_brief_detail": true,
+      "checks": [
+        "The quote have resumed gas production is correctly normalized as source-reported physical supply increase, observed_as_reported, upstream.",
+        "No restoration quantity, measured-flow verification or European delivery quantity is fabricated.",
+        "The April source is explicitly historical/regional background at the frozen October analysis time. Its news score is zero; close-up is only the conditional continuation of the legal frozen quote baseline."
+      ],
+      "minor_findings": []
+    },
+    {
+      "case": "eia_historical",
+      "actual_file": ".runtime/structured-reasoning-v4/real_batch_02/eia_historical.json",
+      "actual_sha256": "3d6c80be95ce375e588d5e044e0067b8a53e7488f938c08baf6a73ab0e3fcade",
+      "source_hashes": {
+        "pilot.py": "1418be75cd6fd6084e8dfeeb77ccbf48c849548efbdebc212dfcd784739b04e7",
+        "structured_transport.py": "0af5eabe83a9b0f8d95a5b723ffcd1ed7a515a3e4cf491ed987f2973cdc22565",
+        "structured_core.py": "e85e97d0825b01320b15e33419a283bd7ba1666f48401e78b13f34bbb4e883ab",
+        "offline_controls.py": "00832dd8646e1d0cc7636781e1be0d55ad30c75f82e3c75ad3a3dc75e6837fd2",
+        "final_core.py": "e85e97d0825b01320b15e33419a283bd7ba1666f48401e78b13f34bbb4e883ab",
+        "real_batch.py": "8a31cad4bb0e235e7a2183ce3b79235201199fdb38126463df59558b90e6b644",
+        "manage.py": "b6655fc0f2d61c07799c025a2682e0a2b2cafd09b5ed17e100052649d9a0cb36",
+        "workflow.py": "16a48ff003588573cb2f4706e82c5ed0050ae6e995ebfb37727e606f4376fbfe"
+      },
+      "status": "passed_this_real_source_diagnostic",
+      "model_calls": 3,
+      "retries": 0,
+      "news_direction": "flat",
+      "close_direction": "up",
+      "news_score": 0.0,
+      "typed_plan_sha256": "cad7b1f58e22f712cd246a68ffc9fdfdda68cd3d7175d8f0fddbfa33c3d56656",
+      "same_plan_cn_en_brief_detail": true,
+      "checks": [
+        "The historical Henry Hub decline is a market_price_observation, while hot weather increasing electricity demand is separately classified demand_increase.",
+        "US regional and historical scopes remain distinct from current European weather/demand and current TTF outcomes.",
+        "News flat from zero background weights is separate from close-up conditional on the frozen same-contract market baseline; empty news driver references do not invent a news catalyst."
+      ],
+      "minor_findings": [
+        {
+          "priority": "P3",
+          "field": "detail.scenarios.bullish",
+          "description": "A hypothetical background-demand scenario should spell out that subsequent evidence must establish a European/LNG transmission channel. The current generic conditional wording does not assert that this channel is already observed, but is less specific than desired.",
+          "blocking": false
+        }
+      ]
+    }
+  ],
+  "verdict": "The minimal mixed-news facts, economic signs and shared bilingual output structure are viable on these four actual cases. Proceed to the separately required real API manual/detail/English/live workflow and preservation checks before publishing.",
+  "ready_for_next_production_workflow": true,
+  "complete_website_release_accepted": false,
+  "original_failed_batch01_retained": true,
+  "extra_model_calls_by_reviewer": 0,
+  "production_database_writes_by_reviewer": false
+}

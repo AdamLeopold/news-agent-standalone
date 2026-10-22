@@ -1,0 +1,23 @@
+{
+  "archived_original_published_data": [
+    {
+      "source": "data/deployment-snapshot.sqlite3",
+      "archive": "data/backups/published-snapshot-before-logic-repair-20261020/deployment-snapshot.sqlite3",
+      "sha256": "c25a515da7ddf1ae5c0aba5de2bca8085642845b9f44c77febac0eb77317fc6e",
+      "bytes": 164052992
+    },
+    {
+      "source": "data/deployment-snapshot.sqlite3.gz",
+      "archive": "data/backups/published-snapshot-before-logic-repair-20261020/deployment-snapshot.sqlite3.gz",
+      "sha256": "1c78b36ad828e2dc6cecf597cc8a28f7513e1f66b5241b1170e333f491645c66",
+      "bytes": 20091217
+    },
+    {
+      "source": "reports/github_snapshot_manifest.json",
+      "archive": "data/backups/published-snapshot-before-logic-repair-20261020/github_snapshot_manifest.json",
+      "sha256": "93ab35ecefce63849bff819b02d88f2d733fdaef445f176e43b0a9de2f50c835",
+      "bytes": 58626
+    }
+  ],
+  "previous_releases_unchanged": true
+}

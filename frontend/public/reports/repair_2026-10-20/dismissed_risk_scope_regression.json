@@ -1,0 +1,33 @@
+{
+  "input_record": "reports/repair_2026-10-20/candidate-symmetric-validation/dismissed_notice_not_verified_recovery.json",
+  "raw_sha256": "29eff41087acf3c153457b30ad0c4b50789391624e008e2eeaad015ba8483d44",
+  "raw_unchanged": true,
+  "new_gate_error": [
+    "news_impact.summary:撤销仅限该公告约束，实际流量未核实，不能宣称整体供应风险已消除/完全解除；请明确该公告容量风险撤销或缓解，整体风险清零须有同范围独立计量与风险事实"
+  ],
+  "all_current_validation_errors": [
+    "source_fact_checks与本次已知输入的公告/行情事实表不一致；须逐项复制输入原值，不能修改类型、时态或把行情变化当公告已计价",
+    "news_impact.summary:撤销仅限该公告约束，实际流量未核实，不能宣称整体供应风险已消除/完全解除；请明确该公告容量风险撤销或缓解，整体风险清零须有同范围独立计量与风险事实"
+  ],
+  "source_contract_change": "dismissed_notice + unknown flow source_fact_checks state_description now explicitly limits cancellation to this notice",
+  "same_stage_affected_const_cases": {
+    "dismissed_notice_not_verified_recovery": [
+      "N0"
+    ],
+    "real_eni": [
+      "N1"
+    ],
+    "real_nyhamna": [
+      "N1"
+    ]
+  },
+  "actual_model_calls": 0,
+  "source_sha256": {
+    "ttf_news/semantics.py": "924425a127d0cf3fd987c3fd56495210412e19cf39b2cea38d40f63c86b1a9a9"
+  },
+  "targeted_tests": {
+    "passed": 187,
+    "subtests_passed": 209,
+    "seconds": 6.38
+  }
+}

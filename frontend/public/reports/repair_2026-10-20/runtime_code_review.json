@@ -1,0 +1,279 @@
+{
+  "reviewed_at_utc": "2026-10-20T18:05:36.584400+00:00",
+  "status": "passed_after_record_preservation_fix",
+  "blocking_findings_remaining": [],
+  "scope": {
+    "repository": "[local path]",
+    "real_model_calls": 0,
+    "production_database_access": false,
+    "service_restarts": false,
+    "changed_product_files": [
+      "ttf_news/runtime.py"
+    ],
+    "new_regression_file": "tests/test_runtime_record_preservation.py"
+  },
+  "findings": [
+    {
+      "id": "runtime-postcommit-result-erasure",
+      "severity": "blocking",
+      "status": "fixed_and_regression_tested",
+      "original_defect": "A model_success metric or live translation enqueue exception after finish_job(result) entered the generation failure handler. The same job was finished again with error, replacing its already committed result with NULL.",
+      "pre_fix_reproduction": {
+        "environment": "Disposable SQLite + mock analyst; no real model or production DB",
+        "injected_fault": "metric(model_success) raises after result commit",
+        "before_fault": {
+          "status": "completed",
+          "close_direction": "up"
+        },
+        "after_old_handler": {
+          "status": "failed",
+          "result": null
+        }
+      },
+      "repair": "Success telemetry and English enqueue now execute outside the generation/commit error boundary. Telemetry failures are logged without changing job state. If finish_job raises after its transaction commits (for example SSE emit), the worker checks the committed brief/detail/translation before deciding whether any error write is allowed.",
+      "true_failure_behavior": "Generation and pre-commit failures still save failed state with error and no invented direction; detail/translation can be requeued, and interrupted running jobs retain restart recovery.",
+      "regressions": {
+        "count": 16,
+        "status": "passed",
+        "paths": [
+          "short",
+          "detail",
+          "translation"
+        ],
+        "injections": [
+          "success metric write",
+          "SSE emission after commit",
+          "live translation enqueue and failure metric",
+          "generation error",
+          "pre-commit error",
+          "interrupted running job recovery"
+        ],
+        "checks": [
+          "committed result preserved",
+          "no false model_failure after success",
+          "source brief and frozen flag unchanged",
+          "input snapshot preserved",
+          "real failure recorded",
+          "explicit retry/recovery possible"
+        ]
+      }
+    }
+  ],
+  "review_checks": [
+    {
+      "area": "semantic failure and five directions",
+      "status": "pass",
+      "evidence": [
+        "ttf_news/analysis.py:1536-1610",
+        "ttf_news/schemas.py:46-59",
+        "frontend/src/display.mjs:1-10"
+      ],
+      "conclusion": "Failed schema/semantic attempts raise AnalysisError after at most two attempts. No accepted result or flat fallback is returned. Missing/invalid displayed directions stay unanalyzed."
+    },
+    {
+      "area": "No closing outlook",
+      "status": "pass",
+      "evidence": [
+        "ttf_news/schemas.py:46-59",
+        "ttf_news/evaluation.py:34-39",
+        "frontend/src/App.tsx:57-64"
+      ],
+      "conclusion": "Insufficient evidence requires null close direction, is rendered separately from flat and receives no correctness score."
+    },
+    {
+      "area": "detail independence and recoverability",
+      "status": "pass",
+      "evidence": [
+        "ttf_news/store.py:393-440",
+        "frontend/src/App.tsx:156-165",
+        "frontend/src/App.tsx:257"
+      ],
+      "conclusion": "Detail uses original input, writes separate fields, preserves the brief/frozen forecast and offers retry after failure. Direction changes are shown explicitly."
+    },
+    {
+      "area": "English compatibility",
+      "status": "pass",
+      "evidence": [
+        "ttf_news/translation.py:12-65",
+        "ttf_news/store.py:442-491",
+        "frontend/src/AnalysisLanguage.tsx:9-59"
+      ],
+      "conclusion": "English is hash-bound cached translation of the accepted brief/detail. Directions, numbers and citations are preserved, source_fact_checks are internal and skipped. Translation failure does not substitute Chinese analysis or a new forecast and has retry."
+    },
+    {
+      "area": "15-minute market refresh and frozen records",
+      "status": "pass",
+      "evidence": [
+        "ttf_news/runtime.py:12-66",
+        "ttf_news/runtime.py:181-206",
+        "ttf_news/store.py:358-391"
+      ],
+      "conclusion": "Material same-contract price/reference/threshold changes create a new live analysis after cooldown, never update old input/results. Pending analyses throttle refresh. Close freeze selects completed live predictions strictly before cutoff and never replaces an existing daily snapshot."
+    },
+    {
+      "area": "partial failure recovery",
+      "status": "pass",
+      "evidence": [
+        "ttf_news/runtime.py:69-138",
+        "ttf_news/store.py:406-440",
+        "ttf_news/api.py:96",
+        "tests/test_runtime_record_preservation.py"
+      ],
+      "conclusion": "Commit-success side effects cannot downgrade completed brief/detail/translation records. Genuine errors remain visible/retryable, restart recovery requeues interrupted running work and the dashboard selects completed live results."
+    }
+  ],
+  "verification": {
+    "full_backend": {
+      "command": ".venv/bin/python -m pytest -q --junitxml=reports/repair_2026-10-20/unit-tests.xml",
+      "exit_code": 0,
+      "summary": "400 passed, 1 warning, 218 subtests passed in 21.07s",
+      "tests_passed": 400,
+      "subtests_passed": 218,
+      "junit_tests": 618,
+      "junit_failures": 0,
+      "junit_errors": 0,
+      "elapsed_seconds_reported": 21.07,
+      "log": "reports/repair_2026-10-20/unit-tests.log",
+      "junit": "reports/repair_2026-10-20/unit-tests.xml"
+    },
+    "targeted_backend": {
+      "tests_passed": 91,
+      "elapsed_seconds": 3.9,
+      "files": [
+        "test_runtime_record_preservation.py",
+        "test_market_refresh.py",
+        "test_forecast_baseline.py",
+        "test_temporal_integration.py",
+        "test_price_versions.py",
+        "test_translation_market.py",
+        "test_score_report.py",
+        "test_product.py"
+      ]
+    },
+    "frontend": {
+      "command": "npm test",
+      "directory": "frontend",
+      "exit_code": 0,
+      "tests_passed": 24
+    },
+    "warning": "One existing Starlette TestClient/httpx deprecation warning; no test failures."
+  },
+  "reviewed_sha256": {
+    "ttf_news/runtime.py": "3a134db7b62270e6c28ca92598cd5ba2a81aaadbabc2eb93dad8b6bf53ac32d0",
+    "ttf_news/store.py": "09a1a2427a4c7e8a227ff92d358a666953fc58585c627cbf913bbc1fbc4f9dc3",
+    "ttf_news/analysis.py": "c36cf90ee8c798d82e06aa20f4940e07b284d086f2fecc6113956c0015e07dd3",
+    "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+    "ttf_news/api.py": "74eeadbf840b82c0547a8d8c8dca275d03c791f6dfd86e72958baef3c5708211",
+    "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+    "ttf_news/translation.py": "e870cac2d960ec9dcdc0dff5f1f68011e64bd0f444c03a1f94a0cf897fc288e3",
+    "frontend/src/App.tsx": "d669c964b1804b4e27655daa0ad9b5162028c3263c93e2908a789aec9fd1047f",
+    "frontend/src/display.mjs": "34a84e3c73e562d536cb1d3aa13ee430a55b016b9a5cc309270d8513398bee12",
+    "frontend/src/AnalysisLanguage.tsx": "e0129f1db28b589065ba622e348c24ceb6e953123a71c28b45f85fcaed9ededd",
+    "tests/test_runtime_record_preservation.py": "9cabe390f4d9d1e45081c70210c00d7f9f4331fee6e7d16a9572c1fa66342be7",
+    "ttf_news/semantics.py": "924425a127d0cf3fd987c3fd56495210412e19cf39b2cea38d40f63c86b1a9a9",
+    "tests/test_semantics.py": "c8b38f6f0cac47509d718f7f31efbcff7b4241db1f829e1fc17b23674b1dea0d"
+  },
+  "function_locations": {
+    "ttf_news/runtime.py": {
+      "market_refresh_reason": {
+        "line": 12,
+        "end_line": 42
+      },
+      "freeze_due": {
+        "line": 45,
+        "end_line": 66
+      },
+      "_inference_metric": {
+        "line": 69,
+        "end_line": 74
+      },
+      "_job_result_committed": {
+        "line": 77,
+        "end_line": 83
+      },
+      "inference_worker": {
+        "line": 86,
+        "end_line": 138
+      }
+    },
+    "ttf_news/store.py": {
+      "create_analysis": {
+        "line": 358,
+        "end_line": 365
+      },
+      "request_detail": {
+        "line": 393,
+        "end_line": 404
+      },
+      "recover_jobs": {
+        "line": 406,
+        "end_line": 411
+      },
+      "claim_job": {
+        "line": 413,
+        "end_line": 426
+      },
+      "finish_job": {
+        "line": 428,
+        "end_line": 440
+      },
+      "request_translation": {
+        "line": 442,
+        "end_line": 467
+      },
+      "cached_translation": {
+        "line": 478,
+        "end_line": 491
+      }
+    }
+  },
+  "limits": [
+    "This is source review and isolated fault-injection testing, not a new seven-day production acceptance or official settlement accuracy measurement.",
+    "A telemetry/SSE storage outage can leave a metric/event missing; the committed analysis remains retrievable by ID and is never replaced by an error solely for that outage.",
+    "If a failed commit cannot be verified because storage reads also fail, the worker preserves persisted state for recovery instead of overwriting an uncertain successful result."
+  ],
+  "previous_full_test_runs": [
+    {
+      "command": ".venv/bin/python -m pytest -q --junitxml=reports/repair_2026-10-20/unit-tests.xml",
+      "exit_code": 0,
+      "summary": "400 passed, 1 warning, 218 subtests passed in 21.07s",
+      "tests_passed": 400,
+      "subtests_passed": 218,
+      "junit_tests": 618,
+      "junit_failures": 0,
+      "junit_errors": 0,
+      "elapsed_seconds_reported": 21.07,
+      "log": "reports/repair_2026-10-20/unit-tests.log",
+      "junit": "reports/repair_2026-10-20/unit-tests.xml"
+    }
+  ],
+  "subsequent_dismissed_scope_review": {
+    "status": "regression_tested",
+    "evidence": "reports/repair_2026-10-20/dismissed_risk_scope_regression.json",
+    "source_contract": "Unknown-flow dismissed notice state description now explicitly limits cancellation to that notice; no direction/forecast is fixed.",
+    "unsupported_claim_rejected": "Unqualified supply risk already eliminated/fully resolved from cancellation alone",
+    "valid_scopes_preserved": [
+      "this-announcement risk cancellation",
+      "capacity risk mitigation",
+      "conditions and uncertainty",
+      "same-scope independent metered flow plus risk evidence"
+    ],
+    "changed_files": [
+      "ttf_news/semantics.py",
+      "tests/test_semantics.py"
+    ],
+    "raw_model_records_changed": false,
+    "model_calls": 0,
+    "const_changed_in_previous_symmetric_stage": {
+      "dismissed_notice_not_verified_recovery": [
+        "N0"
+      ],
+      "real_eni": [
+        "N1"
+      ],
+      "real_nyhamna": [
+        "N1"
+      ]
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "created_at": "2026-10-22T16:46:40.183986+00:00",
+  "model_calls": 0,
+  "production_writes": 0,
+  "input_artifact": "reports/structured_v2_4/diagnostics_2_4_5/current_mixed_live.json",
+  "input_sha256": "c5e9b29f56efb754bb3c5ecc60bf2413692da196c4e062375b24b0510100be02",
+  "production_core_sha256": "027bc8d862b3cc3f8eff7ea54b881a51030372009c9087dbdac2815c0582e4cc",
+  "private_core_sha256": "58b5a10d0da9935f0cef7f8c0769069c5d492064709fbd339ea43075e9398123",
+  "checks": {
+    "prepared_source_documents_identical": true,
+    "classification_request_tuples_identical": true,
+    "facts_identical": true,
+    "mechanisms_identical": true,
+    "weight_request_tuple_identical": true,
+    "closing_request_tuple_identical": true,
+    "validated_plan_identical": true,
+    "result_body_identical": true,
+    "english_body_identical": true,
+    "detail_body_identical": true,
+    "detail_english_body_identical": true
+  },
+  "boundary": "No ordinary source in the original mixed run qualifies as a new same-authority publisher revision. Identical requests, facts, mechanisms, original model weights/close and four rendered bodies were replayed without invoking a model. This does not validate semantic novelty accuracy on a newly eligible revision pair."
+}

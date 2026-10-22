@@ -1,0 +1,31 @@
+{
+  "created_at": "2026-10-21T00:20:05.927469+00:00",
+  "entries": [
+    {
+      "original": "reports/repair_2026-10-20/unit-tests.xml",
+      "archive": "reports/repair_2026-10-20/pre-final-output-scope-units/unit-tests.xml",
+      "sha256": "6459622ea78905f4e47d46194fc9fc20ad0d8706da50989aba62aa82ecb4335c",
+      "junit_root": {
+        "name": "pytest tests"
+      }
+    },
+    {
+      "original": "reports/repair_2026-10-20/unit-tests.log",
+      "archive": "reports/repair_2026-10-20/pre-final-output-scope-units/unit-tests.log",
+      "sha256": "a03192b58469aafbc62f6d1ea4b21d705f960f15eb16d172d40633548d91b213"
+    },
+    {
+      "original": "reports/repair_2026-10-20/final-unit-tests.xml",
+      "archive": "reports/repair_2026-10-20/pre-final-output-scope-units/final-unit-tests.xml",
+      "sha256": "7dc80ffb5d230970a38be4f5741eeeaf5d0da20d58eef8b2c2920953fac40058",
+      "junit_root": {
+        "name": "pytest tests"
+      }
+    },
+    {
+      "original": "reports/repair_2026-10-20/final-unit-tests.log",
+      "archive": "reports/repair_2026-10-20/pre-final-output-scope-units/final-unit-tests.log",
+      "sha256": "4abc00310b50b2de84e150d366c1bf4f80bd527212e5ddcb4c68dbe66789f465"
+    }
+  ]
+}

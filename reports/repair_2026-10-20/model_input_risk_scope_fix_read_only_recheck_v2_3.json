@@ -1,0 +1,180 @@
+{
+  "schema_version": "ttf-model-input-risk-object-fix-recheck-v1",
+  "reviewed_at": "2026-10-21T01:32:15.680601+00:00",
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/event_retrieval",
+  "prior_wrong_card_audit": {
+    "file": "reports/repair_2026-10-20/model_input_risk_scope_read_only_audit_v2_3.json",
+    "sha256": "4748321fc9de66a937de37b96b49392786dfb1bff0cdb7ac4a22c612e2409a46"
+  },
+  "current_source_sha256": {
+    "ttf_news/analysis.py": "28f186ea7f11453ec42737fd82a71b47b3f29d094121911a4e12813c93d3b1b9",
+    "ttf_news/semantics.py": "932f7dd1fb44f8625685cfa0978c9294bf2c9d8817fbf71362a9813449d7edb5"
+  },
+  "same_five_original_controls": true,
+  "source_text_never_rewritten": true,
+  "all_spurious_physical_risk_candidates_removed": true,
+  "true_supply_plus_minus_40_controls_unchanged": true,
+  "controls": [
+    {
+      "control": "risk_lower_cn",
+      "synthetic": true,
+      "same_original_control_input": true,
+      "model_current_news_card": {
+        "id": "N0",
+        "title": "European gas market update",
+        "facts": "当前供应风险降低，实际流量未知。",
+        "time": "2026-10-20T10:00:00+00:00",
+        "time_precision": "exact",
+        "change_status": "known",
+        "source": "eia",
+        "temporal_state": "reported_fact",
+        "narrative_complete": true,
+        "same_as_window_news_id": "N1"
+      },
+      "shared_extract": [],
+      "source_facts_unchanged": true,
+      "title_and_source_unchanged": true,
+      "prepared_context_sha256": "fc666be67df725c6daec2e299ac43f1178a84ffd04e6a5be1e89182246aaae1b",
+      "spurious_physical_mechanisms_removed": true,
+      "actual_flow_not_inferred": true
+    },
+    {
+      "control": "risk_higher_cn",
+      "synthetic": true,
+      "same_original_control_input": true,
+      "model_current_news_card": {
+        "id": "N0",
+        "title": "European gas market update",
+        "facts": "当前供应风险增加，实际流量未知。",
+        "time": "2026-10-20T10:00:00+00:00",
+        "time_precision": "exact",
+        "change_status": "known",
+        "source": "eia",
+        "temporal_state": "reported_fact",
+        "narrative_complete": true,
+        "same_as_window_news_id": "N1"
+      },
+      "shared_extract": [],
+      "source_facts_unchanged": true,
+      "title_and_source_unchanged": true,
+      "prepared_context_sha256": "25686f2b69cbb9f7b0258dfc2f52df739f6b8931338f02a03acb28dc099f942d",
+      "spurious_physical_mechanisms_removed": true,
+      "actual_flow_not_inferred": true
+    },
+    {
+      "control": "risk_lower_en",
+      "synthetic": true,
+      "same_original_control_input": true,
+      "model_current_news_card": {
+        "id": "N0",
+        "title": "European gas market update",
+        "facts": "Current supply risk is lower; actual flow is unknown.",
+        "time": "2026-10-20T10:00:00+00:00",
+        "time_precision": "exact",
+        "change_status": "known",
+        "source": "eia",
+        "temporal_state": "reported_fact",
+        "narrative_complete": true,
+        "same_as_window_news_id": "N1"
+      },
+      "shared_extract": [],
+      "source_facts_unchanged": true,
+      "title_and_source_unchanged": true,
+      "prepared_context_sha256": "a6701195e83109f7f3896f50c145cc6b36b1466d70ed2331c4de48963e07a5cb",
+      "spurious_physical_mechanisms_removed": true,
+      "actual_flow_not_inferred": true
+    },
+    {
+      "control": "physical_cut",
+      "synthetic": true,
+      "same_original_control_input": true,
+      "model_current_news_card": {
+        "id": "N0",
+        "title": "European gas market update",
+        "facts": "当前欧洲实际供气减少40mcm/d。",
+        "time": "2026-10-20T10:00:00+00:00",
+        "time_precision": "exact",
+        "change_status": "known",
+        "source": "eia",
+        "temporal_state": "reported_fact",
+        "mechanism_candidates": [
+          {
+            "mechanism": "supply_decrease",
+            "pressure": "up",
+            "conditional": false,
+            "quoted_fact": "当前欧洲实际供气减少40mcm/d",
+            "evidence_kind": "actual_flow",
+            "magnitude_mcm_d": 40.0
+          }
+        ],
+        "narrative_complete": true,
+        "same_as_window_news_id": "N1"
+      },
+      "shared_extract": [
+        {
+          "mechanism": "supply_decrease",
+          "pressure": "up",
+          "conditional": false,
+          "quoted_fact": "当前欧洲实际供气减少40mcm/d",
+          "evidence_kind": "actual_flow",
+          "magnitude_mcm_d": 40.0
+        }
+      ],
+      "source_facts_unchanged": true,
+      "title_and_source_unchanged": true,
+      "prepared_context_sha256": "83c569fe121aeda34530df95c82efc1acfe4e16c367aab73304b8d51bcc8e934",
+      "original_physical_mechanism_preserved": true,
+      "full_physical_model_card_preserved": true
+    },
+    {
+      "control": "physical_restore",
+      "synthetic": true,
+      "same_original_control_input": true,
+      "model_current_news_card": {
+        "id": "N0",
+        "title": "European gas market update",
+        "facts": "当前欧洲实际供气增加40mcm/d。",
+        "time": "2026-10-20T10:00:00+00:00",
+        "time_precision": "exact",
+        "change_status": "known",
+        "source": "eia",
+        "temporal_state": "reported_fact",
+        "mechanism_candidates": [
+          {
+            "mechanism": "supply_increase",
+            "pressure": "down",
+            "conditional": false,
+            "quoted_fact": "当前欧洲实际供气增加40mcm/d",
+            "evidence_kind": "actual_flow",
+            "magnitude_mcm_d": 40.0
+          }
+        ],
+        "narrative_complete": true,
+        "same_as_window_news_id": "N1"
+      },
+      "shared_extract": [
+        {
+          "mechanism": "supply_increase",
+          "pressure": "down",
+          "conditional": false,
+          "quoted_fact": "当前欧洲实际供气增加40mcm/d",
+          "evidence_kind": "actual_flow",
+          "magnitude_mcm_d": 40.0
+        }
+      ],
+      "source_facts_unchanged": true,
+      "title_and_source_unchanged": true,
+      "prepared_context_sha256": "e511509d8b970117fea5fd5bdb3de0322fcd4002a3e741ffb7a610dc1183c5f0",
+      "original_physical_mechanism_preserved": true,
+      "full_physical_model_card_preserved": true
+    }
+  ],
+  "new_model_calls": 0,
+  "no_database_access": true,
+  "no_network_calls": true,
+  "no_source_edits": true,
+  "old_evidence_unchanged": true,
+  "not_a_final_release_decision": true,
+  "boundary": "Deterministic prepared-card verification only. Risk wording remains for model interpretation; this does not set a final direction or prove model generation accuracy. The twenty actual cohort input equality and required two followups are separately established by the complete-path proof."
+}

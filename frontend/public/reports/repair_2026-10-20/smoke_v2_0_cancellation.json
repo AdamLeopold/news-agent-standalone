@@ -1,0 +1,10 @@
+{
+  "cancelled_at": "2026-10-20T20:09:25.008913+00:00",
+  "pid": 72441,
+  "verified_command": "/Library/Frameworks/Python.framework/Versions/3.10/Resources/Python.app/Contents/MacOS/Python scripts/validate-deployment.py --manifest reports/repair_2026-10-20/predeployment_preservation_manifest.json --timeout-seconds 3600",
+  "reason": "Accepted manual forecast used an earlier reference date despite missing previous-trading-day anchor. Structural checks do not establish logical correctness.",
+  "analysis_id": "6601a466-eecc-48f0-82e5-68785d8ac5be",
+  "canonical_results_modified": false,
+  "ollama_stopped": false,
+  "project_collector_stopped": false
+}

@@ -1,0 +1,93 @@
+{
+  "captured_at": "2026-10-20T20:09:49.705907+00:00",
+  "captured_file": "reports/repair_2026-10-20/live_smoke_test.json",
+  "captured_sha256": "7d8584c0ec068dfb836d545d4135f680660561c59e5db2fd620d5f3aa377681a",
+  "preserved_file": "reports/repair_2026-10-20/live_smoke_attempted_v2_0.json",
+  "preserved_bytes_unchanged": true,
+  "original_status_at_capture": "running",
+  "completed_stages_at_capture": [
+    {
+      "name": "preservation_before",
+      "status": "passed",
+      "elapsed_seconds": 0.032,
+      "error": null
+    },
+    {
+      "name": "live_api_v2_and_managed_identity",
+      "status": "passed",
+      "elapsed_seconds": 3.228,
+      "error": null
+    },
+    {
+      "name": "select_real_existing_news",
+      "status": "passed",
+      "elapsed_seconds": 0.213,
+      "error": null
+    },
+    {
+      "name": "ensure_current_v2_live_forecast",
+      "status": "passed",
+      "elapsed_seconds": 0.774,
+      "error": null
+    },
+    {
+      "name": "sse_initial_connection",
+      "status": "passed",
+      "elapsed_seconds": 0.005,
+      "error": null
+    },
+    {
+      "name": "manual_submit_real_news",
+      "status": "passed",
+      "elapsed_seconds": 0.579,
+      "error": null
+    },
+    {
+      "name": "sse_last_event_id_reconnect",
+      "status": "passed",
+      "elapsed_seconds": 0.007,
+      "error": null
+    },
+    {
+      "name": "sse_after_query_reconnect",
+      "status": "passed",
+      "elapsed_seconds": 0.014,
+      "error": null
+    },
+    {
+      "name": "manual_real_brief",
+      "status": "passed",
+      "elapsed_seconds": 270.274,
+      "error": null
+    },
+    {
+      "name": "sse_completed_event_replay",
+      "status": "passed",
+      "elapsed_seconds": 2.014,
+      "error": null
+    },
+    {
+      "name": "manual_detail_request",
+      "status": "passed",
+      "elapsed_seconds": 0.011,
+      "error": null
+    },
+    {
+      "name": "english_brief_request",
+      "status": "passed",
+      "elapsed_seconds": 0.01,
+      "error": null
+    },
+    {
+      "name": "manual_real_detail",
+      "status": "running",
+      "elapsed_seconds": null,
+      "error": null
+    }
+  ],
+  "assessment": "attempted_v2_0_not_complete_passed",
+  "reason": "A real accepted manual result used an unavailable prior-trading-day price anchor; structural stages cannot establish causal/forecast validity. Release is blocked pending source fix and new actual validation.",
+  "analysis_id": "6601a466-eecc-48f0-82e5-68785d8ac5be",
+  "no_model_calls": true,
+  "no_database_writes": true
+}

@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuites name="pytest tests"><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="0.597" timestamp="2026-10-21T13:45:48.189282+08:00" hostname="MacBook-Pro-8.local"><testcase classname="" name="tests.test_future_capacity_pressure_scope" time="0.000"><error message="collection failure">tests/test_future_capacity_pressure_scope.py:7: in &lt;module&gt;
+    D=Path(__file__).resolve().parents[1];R=next(p for p in D.parents if (p/'pyproject.toml').is_file())
+E   StopIteration</error></testcase></testsuite></testsuites>

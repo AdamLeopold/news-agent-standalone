@@ -1,0 +1,191 @@
+{
+  "reviewer": "/root/final_semantic_audit",
+  "new_model_calls": 0,
+  "source_sha256": {
+    ".runtime/fifth-production-scope-proposal/ttf_news/analysis.py": "f3c44838f16941e503e5a542bb8d95176e83ca2d25df7af8373cfeaefe0b0d06",
+    ".runtime/fifth-production-scope-proposal/ttf_news/semantics.py": "3ed9590f39994ea29f7478439f5c0ce55e546457350e8e8fef7022631585c2c0",
+    ".runtime/fifth-production-scope-proposal/test_fifth_scope.py": "56b8efbe9e68aaccc818f41946da5ac0581c77880bf13b7892a179392c1fec9c"
+  },
+  "controls": [
+    {
+      "name": "epistemic_physical_prefix_comma",
+      "expected_allowed": true,
+      "actual_allowed": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "epistemic_then_real_zero_same_clause",
+      "expected_allowed": false,
+      "actual_allowed": false,
+      "passed": true,
+      "error": "analysis.summary:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景"
+    },
+    {
+      "name": "epistemic_then_real_zero_no_contrast",
+      "expected_allowed": false,
+      "actual_allowed": false,
+      "passed": true,
+      "error": "analysis.summary:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景"
+    },
+    {
+      "name": "conditional_consequent",
+      "expected_allowed": true,
+      "actual_allowed": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "conditional_contrast_independent_zero",
+      "expected_allowed": false,
+      "actual_allowed": false,
+      "passed": true,
+      "error": "analysis.summary:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景"
+    },
+    {
+      "name": "english_consequent",
+      "expected_allowed": true,
+      "actual_allowed": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "english_contrast",
+      "expected_allowed": false,
+      "actual_allowed": false,
+      "passed": true,
+      "error": "analysis.summary:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景"
+    },
+    {
+      "name": "wrong_energy_volume_unit",
+      "expected_allowed": false,
+      "actual_allowed": false,
+      "passed": true,
+      "error": "close_forecast.basis:TTF报价/参考变动单位必须保留输入EUR/mwh，不能写成EUR/mcm；能源报价不是体积容量，未经已给换算依据不得替换货币或分母。不改变预测方向"
+    },
+    {
+      "name": "wrong_price_currency",
+      "expected_allowed": false,
+      "actual_allowed": false,
+      "passed": true,
+      "error": "close_forecast.basis:TTF报价/参考变动单位必须保留输入EUR/mwh，不能写成USD/MWh；能源报价不是体积容量，未经已给换算依据不得替换货币或分母。不改变预测方向"
+    },
+    {
+      "name": "valid_unit_euro_symbol",
+      "expected_allowed": true,
+      "actual_allowed": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "unit_explicit_warning",
+      "expected_allowed": true,
+      "actual_allowed": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "negated_direction_not_unit_warning",
+      "expected_allowed": false,
+      "actual_allowed": false,
+      "passed": true,
+      "error": "close_forecast.basis:TTF报价/参考变动单位必须保留输入EUR/mwh，不能写成EUR/mcm；能源报价不是体积容量，未经已给换算依据不得替换货币或分母。不改变预测方向"
+    },
+    {
+      "name": "nonprice_capacity",
+      "expected_allowed": true,
+      "actual_allowed": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "known_other_market_same_delta_number",
+      "expected_allowed": true,
+      "actual_allowed": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "other_market_cannot_mask_later_wrong_ttf",
+      "expected_allowed": false,
+      "actual_allowed": false,
+      "passed": true,
+      "error": "close_forecast.basis:TTF报价/参考变动单位必须保留输入EUR/mwh，不能写成EUR/mcm；能源报价不是体积容量，未经已给换算依据不得替换货币或分母。不改变预测方向"
+    },
+    {
+      "name": "future_foreign_quote_not_available",
+      "expected_allowed": false,
+      "actual_allowed": false,
+      "passed": true,
+      "error": "close_forecast.basis:不同市场JKM报价1.733 USD/MMBtu须有该市场截至as_of已知的同单位来源，不能借TTF报价补其价格或单位；同句后续TTF价格仍须保留输入能源单位"
+    },
+    {
+      "name": "future_degree_known_notice",
+      "expected_allowed": true,
+      "actual_allowed": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "degree_alias_ascii_active_other",
+      "expected_allowed": false,
+      "actual_allowed": false,
+      "passed": true,
+      "error": "close_forecast.summary:Gassco公告撤销/结束或实际流量未确认，不能证明未形成供需冲击、供应不受影响或实际流量无变化；须有独立无变化计量事实。可写输入未显示冲击证据或恢复待核实，不能把缺测写成无冲击"
+    },
+    {
+      "name": "degree_named_other_facility",
+      "expected_allowed": false,
+      "actual_allowed": false,
+      "passed": true,
+      "error": "close_forecast.summary:Gassco公告撤销/结束或实际流量未确认，不能证明未形成供需冲击、供应不受影响或实际流量无变化；须有独立无变化计量事实。可写输入未显示冲击证据或恢复待核实，不能把缺测写成无冲击"
+    },
+    {
+      "name": "degree_cannot_hide_global_metered_claim",
+      "expected_allowed": false,
+      "actual_allowed": false,
+      "passed": true,
+      "error": "close_forecast.summary:Gassco公告撤销/结束或实际流量未确认，不能证明未形成供需冲击、供应不受影响或实际流量无变化；须有独立无变化计量事实。可写输入未显示冲击证据或恢复待核实，不能把缺测写成无冲击"
+    },
+    {
+      "name": "actual_manual_first_still_error",
+      "passed": true,
+      "errors": [
+        "news_impact.summary:N2公告开始2026-10-21T04:00:00+00:00，截至分析时点尚未开始；目标结算窗口内开始；开始时刻不证明实际流量损失；未来于as_of不等于目标窗口之后，须按该N起止和目标窗口分别判断，不改变价格方向",
+        "close_forecast.basis:新闻覆盖不足不能证明市场没有供需变化；只能说明输入新闻未显示相应冲击",
+        "analysis.evidence[0]:供需传导方向相反；供应改善/需求下降通常产生下行压力，供应约束/需求上升通常产生上行压力。请按引用事实重算，不能仅改措辞"
+      ]
+    },
+    {
+      "name": "actual_manual_second_no_semantic_error_after_scope_repair",
+      "passed": true
+    },
+    {
+      "name": "actual_live_bad_unit_rejected",
+      "passed": true
+    },
+    {
+      "name": "supplied_unit_retained_in_model_input",
+      "passed": true
+    },
+    {
+      "name": "missing_unit_not_filled",
+      "passed": true
+    },
+    {
+      "name": "future_quote_not_restored_by_input_unit_change",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "ast_changed_existing_semantic_functions": [
+    "_check_unknown_as_fact",
+    "_check_gassco_physical_state",
+    "_analysis_semantic_checks"
+  ],
+  "ast_added_semantic_functions": [
+    "_price_unit_identity",
+    "_check_ttf_price_unit_identity"
+  ],
+  "scope": "Finite pure-memory checks of fifth production actual scope/units; no API, DB, model, or core writes."
+}

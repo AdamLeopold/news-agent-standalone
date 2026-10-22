@@ -1,0 +1,363 @@
+{
+  "created_at": "2026-10-21T04:16:17.480757+00:00",
+  "status": "eight_families_open_seventh_failed_final_notice_scope_source_and_eighth_production_pending",
+  "prompt_version": "ttf-news-standalone-2.3",
+  "ledger_snapshot": {
+    "file": "reports/repair_2026-10-20/release_known_accepted_errors.json",
+    "sha256": "d10d14b144de1130fac9b8f8f157e1bdb9c48b42e334d9f13fc26799ab5ff355"
+  },
+  "records": [
+    {
+      "known_error_id": "v2_0_missing_previous_trading_day_anchor",
+      "status": "open",
+      "original_review_evidence": {
+        "file": "reports/repair_2026-10-20/independent_live_anchor_review_v2_0.json",
+        "sha256": "72d12a2fd1d297505e9dec8dd8f13b8b35502fa69fadb66ae83f4b241c798efd"
+      },
+      "affected_analysis_ids": [
+        "6601a466-eecc-48f0-82e5-68785d8ac5be",
+        "d71df0df-25eb-4d87-9b82-adf04d90fe28",
+        "91e13e0e-ee1c-458e-ade4-26f2f2930be3"
+      ],
+      "affected_cases": [],
+      "selected_diagnostic_cases_for_final_binding": [
+        "anchor_real_manual_missing_prevday",
+        "anchor_gap_supply_loss_40",
+        "anchor_gap_supply_restore_40",
+        "anchor_legal_prevday_weak_market_up"
+      ],
+      "required_family_evidence": "Exact required previous trading day/contract/known-at clocks. Current failed real-anchor remains unavailable, not a correct news direction. All4 strict-success may remainfalse under the original explicit-error policy.",
+      "resolution_evidence": null,
+      "final_dependencies": {
+        "final_source_sha256": null,
+        "final_official_full_path_proof": null,
+        "final_selected_twenty_plus_detail_manifest": null,
+        "final_selected_full_prose_independent_review": null,
+        "final_unit_binding": null,
+        "fresh_successful_production_workflow": null,
+        "fresh_production_all_three_role_and_english_review": null,
+        "final_preservation_manifest_and_verification": null,
+        "current_backend_deployment": null,
+        "final_old_accepted_bad_raw_revalidation": null,
+        "final_error_ui_composite": null,
+        "final_public_snapshot_scan": null,
+        "final_publication_manifest": null,
+        "final_public_gateway_and_pages_verification": null
+      },
+      "generation_issue_resolved": false,
+      "latest_production_is_success": false
+    },
+    {
+      "known_error_id": "v2_1_future_abandonment_asserted_completed",
+      "status": "open",
+      "original_review_evidence": {
+        "file": "reports/repair_2026-10-20/independent_live_prose_review_v2_1_initial.json",
+        "sha256": "b06ce161273accb2c0c38fbb767400e215c540785e7f84c80a5bd2b7cbe2e810"
+      },
+      "affected_analysis_ids": [
+        "b1e9c166-8851-4f7c-9803-b9c72329f6a9"
+      ],
+      "affected_cases": [],
+      "selected_diagnostic_cases_for_final_binding": [
+        "real_future_well_b1"
+      ],
+      "required_family_evidence": "Original future-well completed-action body rejected; current actual terminal independently reviewed and exact-path bound. Never borrow old well success over latestfailure. Two well production failures remain unresolved generation-availability evidence.",
+      "resolution_evidence": null,
+      "final_dependencies": {
+        "final_source_sha256": null,
+        "final_official_full_path_proof": null,
+        "final_selected_twenty_plus_detail_manifest": null,
+        "final_selected_full_prose_independent_review": null,
+        "final_unit_binding": null,
+        "fresh_successful_production_workflow": null,
+        "fresh_production_all_three_role_and_english_review": null,
+        "final_preservation_manifest_and_verification": null,
+        "current_backend_deployment": null,
+        "final_old_accepted_bad_raw_revalidation": null,
+        "final_error_ui_composite": null,
+        "final_public_snapshot_scan": null,
+        "final_publication_manifest": null,
+        "final_public_gateway_and_pages_verification": null
+      },
+      "generation_issue_resolved": false,
+      "latest_production_is_success": false
+    },
+    {
+      "known_error_id": "v2_1_field_misidentified_as_pipeline",
+      "status": "open",
+      "original_review_evidence": {
+        "file": "reports/repair_2026-10-20/independent_live_prose_review_v2_1_pre_fact_gate.json",
+        "sha256": "cd14af3e44885397e583664dbf8b540a22828c5f28cf46b8cd145870085c660b"
+      },
+      "affected_analysis_ids": [
+        "d2ef1250-6ed3-4a68-9396-e6ed4addbfb3",
+        "751b4cbd-7da1-4d1a-8e3a-f7f9de49031a"
+      ],
+      "affected_cases": [],
+      "selected_diagnostic_cases_for_final_binding": [
+        "real_nyhamna",
+        "real_eni"
+      ],
+      "required_family_evidence": "Each facility type follows its own cited source; no gasfield/Other→pipeline fabrication. New real production source identities and final prose independently reviewed.",
+      "resolution_evidence": null,
+      "final_dependencies": {
+        "final_source_sha256": null,
+        "final_official_full_path_proof": null,
+        "final_selected_twenty_plus_detail_manifest": null,
+        "final_selected_full_prose_independent_review": null,
+        "final_unit_binding": null,
+        "fresh_successful_production_workflow": null,
+        "fresh_production_all_three_role_and_english_review": null,
+        "final_preservation_manifest_and_verification": null,
+        "current_backend_deployment": null,
+        "final_old_accepted_bad_raw_revalidation": null,
+        "final_error_ui_composite": null,
+        "final_public_snapshot_scan": null,
+        "final_publication_manifest": null,
+        "final_public_gateway_and_pages_verification": null
+      },
+      "generation_issue_resolved": false,
+      "latest_production_is_success": false
+    },
+    {
+      "known_error_id": "v2_2_deterministic_source_coverage_false_warning",
+      "status": "open",
+      "original_review_evidence": {
+        "file": "reports/repair_2026-10-20/live_9fa_coverage_false_warning_review.json",
+        "sha256": "1a0b92c81a097897bfd8b8edcf8735f7831c9e88fa2e1b0674d6cac27ec85e8b"
+      },
+      "affected_analysis_ids": [
+        "9fa53da2-74ec-4fab-9443-bd501f3ba59e"
+      ],
+      "affected_cases": [],
+      "selected_diagnostic_cases_for_final_binding": [],
+      "required_family_evidence": "Fresh real production coverage health snapshot, modelraw risk_flags and deterministic append agree. Healthy/running recent news sources not failed; price-only source not news coverage. Genuine Gassco/GDELT limitations remain. This was postprocessing, not evidence of flat causation.",
+      "resolution_evidence": null,
+      "final_dependencies": {
+        "final_source_sha256": null,
+        "final_official_full_path_proof": null,
+        "final_selected_twenty_plus_detail_manifest": null,
+        "final_selected_full_prose_independent_review": null,
+        "final_unit_binding": null,
+        "fresh_successful_production_workflow": null,
+        "fresh_production_all_three_role_and_english_review": null,
+        "final_preservation_manifest_and_verification": null,
+        "current_backend_deployment": null,
+        "final_old_accepted_bad_raw_revalidation": null,
+        "final_error_ui_composite": null,
+        "final_public_snapshot_scan": null,
+        "final_publication_manifest": null,
+        "final_public_gateway_and_pages_verification": null
+      },
+      "generation_issue_resolved": false,
+      "latest_production_is_success": false
+    },
+    {
+      "known_error_id": "v2_3_isolated_price_observation_or_baseline_errors",
+      "status": "open",
+      "original_review_evidence": {
+        "file": "reports/repair_2026-10-20/initial_cohort_semantic_defects_v2_3.json",
+        "sha256": "5e61620f89d34ebdcff5240968f74568168a152609a9ef94110eb837da09151a"
+      },
+      "affected_analysis_ids": [
+        "e348df19-fd5a-4eb6-a30f-dcd0c4065f24",
+        "c5e8b981-885a-42b5-94c7-529fa93fd550"
+      ],
+      "affected_cases": [
+        "weak_exploration_no_quote",
+        "weak_news_observed_market_up",
+        "supply_restore_40_with_flat_baseline",
+        "anchor_legal_prevday_weak_market_up",
+        "future_planned_notice",
+        "supply_loss_40_with_flat_baseline",
+        "anchor_real_manual_missing_prevday",
+        "dismissed_notice_not_verified_recovery"
+      ],
+      "selected_diagnostic_cases_for_final_binding": [
+        "weak_exploration_no_quote",
+        "weak_news_observed_market_up",
+        "future_planned_notice",
+        "supply_loss_40_with_flat_baseline",
+        "supply_restore_40_with_flat_baseline",
+        "anchor_real_manual_missing_prevday",
+        "anchor_legal_prevday_weak_market_up"
+      ],
+      "required_family_evidence": "Current guard rejects unsupported zero/non-obvious price reaction and unknown-pricing signed premises; valid same-contract current-vs-previous reference has correct temporal role. Preserve all bounded/retained/sixth accepted P2 and originalstrict flags. Failed outputs are not correct forecasts.",
+      "resolution_evidence": null,
+      "final_dependencies": {
+        "final_source_sha256": null,
+        "final_official_full_path_proof": null,
+        "final_selected_twenty_plus_detail_manifest": null,
+        "final_selected_full_prose_independent_review": null,
+        "final_unit_binding": null,
+        "fresh_successful_production_workflow": null,
+        "fresh_production_all_three_role_and_english_review": null,
+        "final_preservation_manifest_and_verification": null,
+        "current_backend_deployment": null,
+        "final_old_accepted_bad_raw_revalidation": null,
+        "final_error_ui_composite": null,
+        "final_public_snapshot_scan": null,
+        "final_publication_manifest": null,
+        "final_public_gateway_and_pages_verification": null
+      },
+      "generation_issue_resolved": false,
+      "latest_production_is_success": false
+    },
+    {
+      "known_error_id": "v2_3_isolated_epcm_award_roles_reversed",
+      "status": "open",
+      "original_review_evidence": {
+        "file": "reports/repair_2026-10-20/initial_cohort_semantic_defects_v2_3.json",
+        "sha256": "5e61620f89d34ebdcff5240968f74568168a152609a9ef94110eb837da09151a"
+      },
+      "affected_analysis_ids": [],
+      "affected_cases": [
+        "anchor_real_manual_missing_prevday"
+      ],
+      "selected_diagnostic_cases_for_final_binding": [
+        "anchor_real_manual_missing_prevday"
+      ],
+      "required_family_evidence": "Awarding LNG Canada vs receiving Técnicas Reunidas preserved. Current failed actual stays null/failed; no safe-label variance from old unsafe records. Four EPCM workflows stayfailed; a different-source successful workflow does not solve EPCM generation stability.",
+      "resolution_evidence": null,
+      "final_dependencies": {
+        "final_source_sha256": null,
+        "final_official_full_path_proof": null,
+        "final_selected_twenty_plus_detail_manifest": null,
+        "final_selected_full_prose_independent_review": null,
+        "final_unit_binding": null,
+        "fresh_successful_production_workflow": null,
+        "fresh_production_all_three_role_and_english_review": null,
+        "final_preservation_manifest_and_verification": null,
+        "current_backend_deployment": null,
+        "final_old_accepted_bad_raw_revalidation": null,
+        "final_error_ui_composite": null,
+        "final_public_snapshot_scan": null,
+        "final_publication_manifest": null,
+        "final_public_gateway_and_pages_verification": null
+      },
+      "generation_issue_resolved": false,
+      "latest_production_is_success": false
+    },
+    {
+      "known_error_id": "v2_3_supply_risk_object_scope_and_evidence_polarity",
+      "status": "open",
+      "original_review_evidence": {
+        "file": "reports/repair_2026-10-20/independent_source_feedback_dismissed_supply_polarity_observation_v2_3.json",
+        "sha256": "73b54082eb70aa3f8c6201f36e3ee0a9646f23ee9a0711fe99398554b8708475"
+      },
+      "affected_analysis_ids": [],
+      "affected_cases": [
+        "dismissed_notice_not_verified_recovery",
+        "real_eni"
+      ],
+      "selected_diagnostic_cases_for_final_binding": [
+        "supply_loss_40",
+        "supply_restore_40",
+        "dismissed_notice_not_verified_recovery",
+        "real_nyhamna",
+        "real_eni"
+      ],
+      "required_family_evidence": "Risk reduction vs physical flow reduction distinguished in actual prepared input and evidence slots; capacity not measured loss, distinct non-overlapping announcements not summed, scheduled vs as_of clocks preserved. Correct rejected actuals may show guard behavior, never market accuracy or delivered analysis.",
+      "resolution_evidence": null,
+      "final_dependencies": {
+        "final_source_sha256": null,
+        "final_official_full_path_proof": null,
+        "final_selected_twenty_plus_detail_manifest": null,
+        "final_selected_full_prose_independent_review": null,
+        "final_unit_binding": null,
+        "fresh_successful_production_workflow": null,
+        "fresh_production_all_three_role_and_english_review": null,
+        "final_preservation_manifest_and_verification": null,
+        "current_backend_deployment": null,
+        "final_old_accepted_bad_raw_revalidation": null,
+        "final_error_ui_composite": null,
+        "final_public_snapshot_scan": null,
+        "final_publication_manifest": null,
+        "final_public_gateway_and_pages_verification": null
+      },
+      "generation_issue_resolved": false,
+      "latest_production_is_success": false
+    },
+    {
+      "known_error_id": "v2_3_ttf_price_energy_unit_changed_to_gas_volume",
+      "status": "open",
+      "original_review_evidence": {
+        "file": "reports/repair_2026-10-20/independent_production_fifth_current_live_and_english_review_v2_3.json",
+        "sha256": "60e35775fea240c11ed1bf29940fa4118c5feb3e4acd48cb5b39eae4e2f0d7b6"
+      },
+      "affected_analysis_ids": [
+        "341746e5-d870-42ad-8034-97eba9f389d2"
+      ],
+      "affected_cases": [],
+      "selected_diagnostic_cases_for_final_binding": [
+        "real_nyhamna",
+        "real_eni",
+        "anchor_real_manual_missing_prevday",
+        "anchor_gap_supply_loss_40",
+        "anchor_gap_supply_restore_40",
+        "real_future_well_b1"
+      ],
+      "required_family_evidence": "TTF source unit EUR/MWh preserved in current known-price input and all accepted prose/English. Source-supported other-market USD/MMBtu/UK quotes not falsely forced to TTF units. Prior341 wrongbody/review/canonical remainunchanged.",
+      "resolution_evidence": null,
+      "final_dependencies": {
+        "final_source_sha256": null,
+        "final_official_full_path_proof": null,
+        "final_selected_twenty_plus_detail_manifest": null,
+        "final_selected_full_prose_independent_review": null,
+        "final_unit_binding": null,
+        "fresh_successful_production_workflow": null,
+        "fresh_production_all_three_role_and_english_review": null,
+        "final_preservation_manifest_and_verification": null,
+        "current_backend_deployment": null,
+        "final_old_accepted_bad_raw_revalidation": null,
+        "final_error_ui_composite": null,
+        "final_public_snapshot_scan": null,
+        "final_publication_manifest": null,
+        "final_public_gateway_and_pages_verification": null
+      },
+      "generation_issue_resolved": false,
+      "latest_production_is_success": false
+    }
+  ],
+  "pending_resolution_templates": {
+    "file": "reports/repair_2026-10-20/release_closure_pending_templates_v2_3.json",
+    "sha256": "e61ce6b46a49acf33b12c63df27aefa735f4d3832231586e54bbbff6809d9ff4"
+  },
+  "previous_inventory": {
+    "file": "reports/repair_2026-10-20/release_closure_inventory_v2_3.9cc5a7d0e1d72ef0.json",
+    "sha256": "9cc5a7d0e1d72ef0e18ad414dbd6a660de8de2316f1b1349d3b9f303820e9926"
+  },
+  "latest_production_history": {
+    "file": "reports/repair_2026-10-20/production_e2e_attempt_history_v2_3.json",
+    "sha256": "52bd39bbef8a1d8c04249e527622e7fceb9b8c679f752b7fb5794a6d148cfbfc"
+  },
+  "latest_production_independent_review": {
+    "file": "reports/repair_2026-10-20/independent_production_seventh_completed_records_review_v2_3.json",
+    "sha256": "c90e8ac5ead23deb37ee35296d448b00f62f4049b0ed574a8504ecad053cd523"
+  },
+  "latest_current_isolated_binding_before_next_source": {
+    "file": "reports/repair_2026-10-20/current_reaction_predicate_twenty_plus_detail_manifest_v2_3.json",
+    "sha256": "5fe4b054b1210c94700378803ddfe59a94144bd235da056cbbe2b256a381c25e"
+  },
+  "known_previous_zero_call_twenty_bad_revalidation_source": {
+    "file": "reports/repair_2026-10-20/price_reaction_scope_final_source_controls_v2_3.json",
+    "sha256": "5f2a889554c8f4d4f21cd66487069a4be954acd32d4121490201da8bf7610c71"
+  },
+  "current_maintenance_deployment": {
+    "file": "reports/repair_2026-10-20/backend_notice_scope_paused.json",
+    "sha256": "f0fc45c99f8fb520d8f15ff2b305fc5f9a091214c5f2e95d36557ab32ce847d4"
+  },
+  "public_gateway_incident_separately_verified": {
+    "file": "reports/repair_2026-10-20/public_gateway_stream_cleanup_live_verification_v2_3.json",
+    "sha256": "dddc26cb5f77dff4e3bd4b3da2645eb8e8a9612dad591e81983d94ee4fd4a720"
+  },
+  "no_errors_resolved_by_inventory": true,
+  "accepted_error_families": 8,
+  "accepted_error_families_closed": 0,
+  "new_accepted_error_families_added": 0,
+  "no_model_calls": true,
+  "no_database_access": true,
+  "no_network_calls": true,
+  "no_direction_or_evaluation_contract_changed": true,
+  "boundary": "Only pending evidence preparation; no placeholder may be read as a passed resolution. Complete fresh real production plus full prose review is still mandatory. All7failed workflows and latest failed diagnostic terminals preserved; old well/EPCM generation issues are not cured by choosing another article."
+}

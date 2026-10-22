@@ -1,0 +1,7 @@
+{
+  "proof_sha256": "00ba5efb9b71bc9db107565adcae71afcd84185745f3e141e21daed1bf79ce48",
+  "source": "Isolated real public-source double poll; not a fresh-news or price-accuracy test",
+  "scope": "Full publisher HTTP bodies and disposable test SQLite remain in private local evidence; their hashes, request metadata, clock checks and normalized record comparisons are in the proof. Original production records unchanged.",
+  "raw_http_responses_published": false,
+  "model_calls": 0
+}

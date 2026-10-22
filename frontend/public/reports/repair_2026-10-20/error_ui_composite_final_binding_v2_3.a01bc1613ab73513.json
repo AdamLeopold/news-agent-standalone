@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "observed_at": "2026-10-20T21:53:49.652062+00:00",
+  "analysis_id": "ec3f2c31-6f49-48bb-acbd-48474ce670e2",
+  "record_origin_prompt_version": "ttf-news-standalone-2.0",
+  "backend_prompt_version": "ttf-news-standalone-2.3",
+  "backend_pid": 12598,
+  "api_result_is_null": true,
+  "ui_error_visible": true,
+  "ui_direction_element_count": 0,
+  "default_flat_used": false,
+  "screenshot_file": "reports/repair_2026-10-20/error_ui_v2_3.jpg",
+  "screenshot_sha256": "af94db6c70dcd5c147fc609a36ea54fc644e17515bec95e53ff275700acbb2bc",
+  "api_response_sha256": "35d29f818485868fbe04305d2d1ff4b76bb214464e44f5ef73936ab58f326c89",
+  "frontend_index_sha256": "e42072c502369749d68c2f5bbf97fe400e91e4d77366faf04d4517e7a6351624",
+  "dom_observation_sha256": "12f93bd274b7c2d03f1d2e0e5661dd34f697d3c4ea05d037fc438048bdddd918",
+  "evidence_boundary": "Earlier2.0 failed real record actually observed in the2.3 UI, whose frontend index remains byte-identical. Combined with final6d46/e0ca selected20+detail raw/canonical validation, exact actual paths, passed current failure-to-null runtime state tests and actual final-source17646 deployment. Not a newly observed model failure or an already verified Pages deployment.",
+  "composed_at": "2026-10-21T03:32:06.990907+00:00",
+  "evidence_kind": "existing_real_failed_record_ui_plus_current_gate_revalidation_and_state_binding",
+  "same_record_v2_end_to_end": false,
+  "ui_observation": {
+    "file": "reports/repair_2026-10-20/error_ui_current_observation_v2_3.json",
+    "sha256": "de05194ef31ddf5c2b8740cde0a616638a42660f1bf25ca3843b9ea3cbaa8918"
+  },
+  "current_gate_revalidation": {
+    "file": "reports/repair_2026-10-20/current_gate_revalidation_final_v2_3.json",
+    "sha256": "c52c7b85cb780ced4bdf96a1851c364a448b2764de1dddd03a5b018f8ed4946e"
+  },
+  "state_binding_junit": {
+    "file": "reports/repair_2026-10-20/price-zero-final-unit-tests.xml",
+    "sha256": "fd8ee50aef637b9dbb75e2fffeaf1838d84b37bdc09b8f6839f1edf94f459d78"
+  },
+  "current_backend_deployment": {
+    "file": "reports/repair_2026-10-20/backend_physical_unit_resumed.json",
+    "sha256": "28f9173b6059c90082b704d5527721bdcfb7ef05ed42c3f7f2e8eece5adb1f44"
+  },
+  "public_pages_followup_pending": true,
+  "previous_composite_preserved": {
+    "file": "reports/repair_2026-10-20/error_ui_composite_final_binding_v2_3.dfc1b388da5790e7.json",
+    "sha256": "dfc1b388da5790e73e3b2da5560572b18b7576bd11c8860de33428ddd24664d8"
+  },
+  "linked_proof_checks": {
+    "linked_current_rejections_verified": true,
+    "linked_state_binding_verified": true,
+    "linked_ui_observation_verified": true
+  }
+}

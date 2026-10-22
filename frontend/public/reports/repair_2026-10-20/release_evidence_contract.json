@@ -1,0 +1,33 @@
+{
+  "policy_id": "ttf-explicit-error-release-v1",
+  "command": ".venv/bin/python scripts/repair-validation-report.py --release-decision",
+  "input": "release_readiness_checks.json, with exact relative file names and SHA-256 hashes; main report hash must match the unchanged strict report",
+  "error_ui_real_v2_required_fields": {
+    "status": "passed only after actual API/UI check",
+    "evidence_kind": "real_v2_failed_analysis_api_ui",
+    "same_record_v2_end_to_end": true,
+    "prompt_version": "ttf-news-standalone-2.0",
+    "api_result_is_null": true,
+    "ui_error_visible": true,
+    "ui_direction_element_count": 0,
+    "default_flat_used": false
+  },
+  "error_ui_provenance_to_save": [
+    "analysis_id",
+    "api_evidence_file",
+    "api_evidence_sha256",
+    "screenshot_file",
+    "screenshot_sha256",
+    "frontend_version"
+  ],
+  "error_ui_legacy_combination_alternative": {
+    "evidence_kind": "existing_real_failed_analysis_api_ui_plus_v2_isolated_rejection",
+    "same_record_v2_end_to_end": false,
+    "v2_isolated_failure_cases": [
+      "future_planned_notice",
+      "real_eni"
+    ]
+  },
+  "other_evidence": "Existing live_smoke status/failed_stages/missing_required_stages, public_scan status/finding_count/database.unchanged, actual frontend build log marker, current backend source hashes, and independent accepted-output review are read directly. Missing, stale, unanchored, failed or incomplete evidence keeps release_ready false.",
+  "output": "release_decision.json; original strict report and model records are never modified"
+}

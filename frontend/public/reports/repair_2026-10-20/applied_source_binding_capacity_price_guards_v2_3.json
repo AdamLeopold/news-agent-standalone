@@ -1,0 +1,39 @@
+{
+  "applied_at": "2026-10-21T06:18:33.036775+00:00",
+  "base_analysis_sha256": "1aebeb8971f13f61fd8bd4f9ab961b6284e811aeb773014ef7cc71874c94375c",
+  "private_identity_analysis_sha256": "f5c341c9cd1bfe6d107f5735c96d87c76ba5ab165e402658b641f7c34adc3f37",
+  "private_guard_analysis_sha256": "e56dcbb7ef6663152b11688040d78189fcbe678c26f2757c0873f83f18b6a983",
+  "combined_analysis_sha256": "5fbbadb4a01a8a4390ddc27f5c9958e79f13da9cf974c86390c2271a1b22e1f6",
+  "changed_existing_functions": [
+    "prepare_context",
+    "_validate_notice_source_facts",
+    "_validate_prediction_semantics"
+  ],
+  "added_function": "_project_exact_manual_source_identity",
+  "merge_ast_verified": true,
+  "no_prompt_schema_label_model_or_other_guard_changes": true,
+  "test_files": [
+    {
+      "file": "tests/fixtures/tenth_actual_v2_3.json",
+      "sha256": "c78f934d15f058904e25ab345922a06d980054828b6f089a3000d0b543a2721c"
+    },
+    {
+      "file": "tests/fixtures/tenth_old_twenty_one_bad_v2_3.json",
+      "sha256": "a9fcc207d8ca4583d68cf23e23bb8acadc96a5efd4f5c5c29cf8dcda3bb64c2e"
+    },
+    {
+      "file": "tests/test_tenth_capacity_price_scopes.py",
+      "sha256": "ae90b04a88742346b6e59fc10c05d3600d55fef3849380f077b3d2d32f03ceba"
+    },
+    {
+      "file": "tests/fixtures/manual_source_identity_actual_v2_3.json",
+      "sha256": "6309d022630fc86dcbcb8c76c200dea20fc80c6215eeb5f5d4e66b6046c4d3ba"
+    },
+    {
+      "file": "tests/test_manual_source_identity_projection.py",
+      "sha256": "e855f9ddbb1987bb4ea3cf50ad67b959e142ef803302f06545ee370556ffe4a1"
+    }
+  ],
+  "baseline_reset": false,
+  "old_failed_records_upgraded": false
+}

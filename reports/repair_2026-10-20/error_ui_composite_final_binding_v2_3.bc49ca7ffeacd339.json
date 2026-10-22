@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "observed_at": "2026-10-20T21:53:49.652062+00:00",
+  "analysis_id": "ec3f2c31-6f49-48bb-acbd-48474ce670e2",
+  "record_origin_prompt_version": "ttf-news-standalone-2.0",
+  "backend_prompt_version": "ttf-news-standalone-2.3",
+  "backend_pid": 12598,
+  "api_result_is_null": true,
+  "ui_error_visible": true,
+  "ui_direction_element_count": 0,
+  "default_flat_used": false,
+  "screenshot_file": "reports/repair_2026-10-20/error_ui_v2_3.jpg",
+  "screenshot_sha256": "af94db6c70dcd5c147fc609a36ea54fc644e17515bec95e53ff275700acbb2bc",
+  "api_response_sha256": "35d29f818485868fbe04305d2d1ff4b76bb214464e44f5ef73936ab58f326c89",
+  "frontend_index_sha256": "e42072c502369749d68c2f5bbf97fe400e91e4d77366faf04d4517e7a6351624",
+  "dom_observation_sha256": "12f93bd274b7c2d03f1d2e0e5661dd34f697d3c4ea05d037fc438048bdddd918",
+  "evidence_boundary": "Retained real2.0 failed record displayed in the actual2.3 UI, combined with final a0b8 current-gate checks of all selected20 raw records and current failure-to-null state-binding regressions. The original UI observation was on a paused earlier2.3 process; final frontend index bytes match that observed UI exactly. A separate final deployment proof identifies the resumed process. This is not a new current-version model failure and not a claim of Pages publication.",
+  "composed_at": "2026-10-20T22:59:05.899412+00:00",
+  "evidence_kind": "existing_real_failed_record_ui_plus_current_gate_revalidation_and_state_binding",
+  "same_record_v2_end_to_end": false,
+  "ui_observation": {
+    "file": "reports/repair_2026-10-20/error_ui_current_observation_v2_3.json",
+    "sha256": "de05194ef31ddf5c2b8740cde0a616638a42660f1bf25ca3843b9ea3cbaa8918"
+  },
+  "current_gate_revalidation": {
+    "file": "reports/repair_2026-10-20/current_gate_revalidation_final_v2_3.json",
+    "sha256": "0d1b6f65b1b5ba7ca098fb66fe752efea7e3f80db1c11e3843940c2d35021492"
+  },
+  "state_binding_junit": {
+    "file": "reports/repair_2026-10-20/final-release-unit-tests.xml",
+    "sha256": "0f1ac617dea98553bcbf4b0884851436f592bf86a725d7bd7ad5e6b862418285"
+  },
+  "current_backend_deployment": {
+    "file": "reports/repair_2026-10-20/backend_regeneration_resumed.json",
+    "sha256": "1d67fec7b915f1e5535ba9336e96bada40d6a155ad30716b3f700f6bd626d58e"
+  },
+  "public_pages_followup_pending": true,
+  "linked_proof_checks": {
+    "linked_current_rejections_verified": true,
+    "linked_state_binding_verified": true,
+    "linked_ui_observation_verified": true
+  }
+}

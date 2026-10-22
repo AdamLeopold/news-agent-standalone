@@ -1,0 +1,40 @@
+{
+  "audit": "append_only_bounded_all20_semantic_correction_v2_3",
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "audited_at": "2026-10-21T00:23:36.478371+00:00",
+  "prior_full_review": {
+    "file": "reports/repair_2026-10-20/independent_actual_bounded_output_review_v2_3_all_20_briefs.json",
+    "sha256": "1cea761ee68fb0e699c50eb335844016de4de05e291f75b673fc1b1f8dd45e78"
+  },
+  "reassessment": {
+    "file": "reports/repair_2026-10-20/independent_bounded_epcm_price_shock_reassessment_v2_3.json",
+    "sha256": "f9870f2dfa35c57e0938263fcca12a3523676b054d5d7055f501c9792558480b"
+  },
+  "correction": "ExactrealEPCM548048 nowhas P2unhedged未产生即时价格冲击; previousnoP2/P3operationalqualificationwithdrawn. Contractrole/priorpriceanchor/downlabelassessmentunchanged, butnodeliverablewaiver.",
+  "counts_after_correction": {
+    "brief_delivered_recorded": 13,
+    "strict_contract_passed_recorded": 12,
+    "strict_false_real_label_mismatch_recorded": 1,
+    "brief_failed_recorded": 7,
+    "actual_model_calls": 30,
+    "calls_done_reason_stop": 30,
+    "calls_done_reason_length": 0,
+    "returned_body_P2_cases": 3,
+    "returned_body_no_P2_identified": 10,
+    "operational_qualified_real_label_mismatch_deliverable": 0
+  },
+  "accepted_body_P2_cases_after_correction": [
+    "future_planned_notice",
+    "supply_loss_40_with_flat_baseline",
+    "anchor_real_manual_missing_prevday"
+  ],
+  "old_files_and_raws_changed": false,
+  "old_terminal_failures_promoted": false,
+  "detail_pending": true,
+  "future_release_uses_corrected_semantic_assessment": true,
+  "no_model_calls_by_reviewer": true,
+  "no_database_access": true,
+  "no_network_calls": true,
+  "no_core_edits": true
+}

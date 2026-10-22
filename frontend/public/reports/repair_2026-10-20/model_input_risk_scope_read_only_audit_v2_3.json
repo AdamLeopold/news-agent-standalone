@@ -1,0 +1,422 @@
+{
+  "schema_version": "ttf-model-input-risk-object-read-only-audit-v1",
+  "reviewed_at": "2026-10-21T01:28:18.025397+00:00",
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/event_retrieval",
+  "source_sha256": {
+    "ttf_news/analysis.py": "28f186ea7f11453ec42737fd82a71b47b3f29d094121911a4e12813c93d3b1b9",
+    "ttf_news/semantics.py": "019afbdb2e92f5f77ac9555d3c335aae8c20a73791129984bee50fb5d111a968"
+  },
+  "source_files_unchanged_during_audit": true,
+  "controls": [
+    {
+      "control": "risk_lower_cn",
+      "synthetic": true,
+      "source_identity_for_generic_path": "eia",
+      "is_actual_publisher_article": false,
+      "input_snapshot": {
+        "as_of": "2026-10-20T12:00:00+00:00",
+        "current_news": {
+          "id": "synthetic-source-risk-audit-risk_lower_cn",
+          "source": "eia",
+          "title": "European gas market update",
+          "summary": "当前供应风险降低，实际流量未知。",
+          "published_at": "2026-10-20T10:00:00+00:00",
+          "first_seen_at": "2026-10-20T10:00:00+00:00",
+          "timestamp_precision": "exact"
+        },
+        "window_news": [
+          {
+            "id": "synthetic-source-risk-audit-risk_lower_cn",
+            "source": "eia",
+            "title": "European gas market update",
+            "summary": "当前供应风险降低，实际流量未知。",
+            "published_at": "2026-10-20T10:00:00+00:00",
+            "first_seen_at": "2026-10-20T10:00:00+00:00",
+            "timestamp_precision": "exact"
+          }
+        ],
+        "previous_sessions": [],
+        "historical_events": [],
+        "price_reference": {},
+        "coverage": {}
+      },
+      "shared_extract": [
+        {
+          "mechanism": "supply_decrease",
+          "pressure": "up",
+          "conditional": false,
+          "quoted_fact": "当前供应风险降低，实际流量未知",
+          "evidence_kind": "actual_flow"
+        }
+      ],
+      "actual_model_current_news_card": {
+        "id": "N0",
+        "title": "European gas market update",
+        "facts": "当前供应风险降低，实际流量未知。",
+        "time": "2026-10-20T10:00:00+00:00",
+        "time_precision": "exact",
+        "change_status": "known",
+        "source": "eia",
+        "temporal_state": "reported_fact",
+        "mechanism_candidates": [
+          {
+            "mechanism": "supply_decrease",
+            "pressure": "up",
+            "conditional": false,
+            "quoted_fact": "当前供应风险降低，实际流量未知",
+            "evidence_kind": "actual_flow"
+          }
+        ],
+        "narrative_complete": true,
+        "same_as_window_news_id": "N1"
+      },
+      "actual_model_window_cards": [
+        {
+          "id": "N1",
+          "same_as_current_news_id": "N0",
+          "time": "2026-10-20T10:00:00+00:00",
+          "time_precision": "exact",
+          "temporal_state": "reported_fact"
+        }
+      ],
+      "actual_model_notice_ledger": [],
+      "actual_response_schema_source_fact_checks": null,
+      "prepared_context_sha256": "54b1cbce18e9a2d8cffee51e69a3fea00cae76c2dcd1d25486f49b14ac24b273"
+    },
+    {
+      "control": "risk_higher_cn",
+      "synthetic": true,
+      "source_identity_for_generic_path": "eia",
+      "is_actual_publisher_article": false,
+      "input_snapshot": {
+        "as_of": "2026-10-20T12:00:00+00:00",
+        "current_news": {
+          "id": "synthetic-source-risk-audit-risk_higher_cn",
+          "source": "eia",
+          "title": "European gas market update",
+          "summary": "当前供应风险增加，实际流量未知。",
+          "published_at": "2026-10-20T10:00:00+00:00",
+          "first_seen_at": "2026-10-20T10:00:00+00:00",
+          "timestamp_precision": "exact"
+        },
+        "window_news": [
+          {
+            "id": "synthetic-source-risk-audit-risk_higher_cn",
+            "source": "eia",
+            "title": "European gas market update",
+            "summary": "当前供应风险增加，实际流量未知。",
+            "published_at": "2026-10-20T10:00:00+00:00",
+            "first_seen_at": "2026-10-20T10:00:00+00:00",
+            "timestamp_precision": "exact"
+          }
+        ],
+        "previous_sessions": [],
+        "historical_events": [],
+        "price_reference": {},
+        "coverage": {}
+      },
+      "shared_extract": [
+        {
+          "mechanism": "supply_increase",
+          "pressure": "down",
+          "conditional": false,
+          "quoted_fact": "当前供应风险增加，实际流量未知",
+          "evidence_kind": "actual_flow"
+        }
+      ],
+      "actual_model_current_news_card": {
+        "id": "N0",
+        "title": "European gas market update",
+        "facts": "当前供应风险增加，实际流量未知。",
+        "time": "2026-10-20T10:00:00+00:00",
+        "time_precision": "exact",
+        "change_status": "known",
+        "source": "eia",
+        "temporal_state": "reported_fact",
+        "mechanism_candidates": [
+          {
+            "mechanism": "supply_increase",
+            "pressure": "down",
+            "conditional": false,
+            "quoted_fact": "当前供应风险增加，实际流量未知",
+            "evidence_kind": "actual_flow"
+          }
+        ],
+        "narrative_complete": true,
+        "same_as_window_news_id": "N1"
+      },
+      "actual_model_window_cards": [
+        {
+          "id": "N1",
+          "same_as_current_news_id": "N0",
+          "time": "2026-10-20T10:00:00+00:00",
+          "time_precision": "exact",
+          "temporal_state": "reported_fact"
+        }
+      ],
+      "actual_model_notice_ledger": [],
+      "actual_response_schema_source_fact_checks": null,
+      "prepared_context_sha256": "1a7bde241523e40e93f9f68991dd4ca06346d6352deffe993a91d46de1c30420"
+    },
+    {
+      "control": "risk_lower_en",
+      "synthetic": true,
+      "source_identity_for_generic_path": "eia",
+      "is_actual_publisher_article": false,
+      "input_snapshot": {
+        "as_of": "2026-10-20T12:00:00+00:00",
+        "current_news": {
+          "id": "synthetic-source-risk-audit-risk_lower_en",
+          "source": "eia",
+          "title": "European gas market update",
+          "summary": "Current supply risk is lower; actual flow is unknown.",
+          "published_at": "2026-10-20T10:00:00+00:00",
+          "first_seen_at": "2026-10-20T10:00:00+00:00",
+          "timestamp_precision": "exact"
+        },
+        "window_news": [
+          {
+            "id": "synthetic-source-risk-audit-risk_lower_en",
+            "source": "eia",
+            "title": "European gas market update",
+            "summary": "Current supply risk is lower; actual flow is unknown.",
+            "published_at": "2026-10-20T10:00:00+00:00",
+            "first_seen_at": "2026-10-20T10:00:00+00:00",
+            "timestamp_precision": "exact"
+          }
+        ],
+        "previous_sessions": [],
+        "historical_events": [],
+        "price_reference": {},
+        "coverage": {}
+      },
+      "shared_extract": [
+        {
+          "mechanism": "supply_increase",
+          "pressure": "down",
+          "conditional": false,
+          "quoted_fact": "Current supply risk is lower",
+          "evidence_kind": "reported_fact"
+        },
+        {
+          "mechanism": "supply_decrease",
+          "pressure": "up",
+          "conditional": false,
+          "quoted_fact": "Current supply risk is lower",
+          "evidence_kind": "reported_fact"
+        }
+      ],
+      "actual_model_current_news_card": {
+        "id": "N0",
+        "title": "European gas market update",
+        "facts": "Current supply risk is lower; actual flow is unknown.",
+        "time": "2026-10-20T10:00:00+00:00",
+        "time_precision": "exact",
+        "change_status": "known",
+        "source": "eia",
+        "temporal_state": "reported_fact",
+        "mechanism_candidates": [
+          {
+            "mechanism": "supply_increase",
+            "pressure": "down",
+            "conditional": false,
+            "quoted_fact": "Current supply risk is lower",
+            "evidence_kind": "reported_fact"
+          },
+          {
+            "mechanism": "supply_decrease",
+            "pressure": "up",
+            "conditional": false,
+            "quoted_fact": "Current supply risk is lower",
+            "evidence_kind": "reported_fact"
+          }
+        ],
+        "narrative_complete": true,
+        "same_as_window_news_id": "N1"
+      },
+      "actual_model_window_cards": [
+        {
+          "id": "N1",
+          "same_as_current_news_id": "N0",
+          "time": "2026-10-20T10:00:00+00:00",
+          "time_precision": "exact",
+          "temporal_state": "reported_fact"
+        }
+      ],
+      "actual_model_notice_ledger": [],
+      "actual_response_schema_source_fact_checks": null,
+      "prepared_context_sha256": "dcd108d14620c0e075500ffa9feaa72e59b8bd72ed7fb56a8fbee9ce7c3206ef"
+    },
+    {
+      "control": "physical_cut",
+      "synthetic": true,
+      "source_identity_for_generic_path": "eia",
+      "is_actual_publisher_article": false,
+      "input_snapshot": {
+        "as_of": "2026-10-20T12:00:00+00:00",
+        "current_news": {
+          "id": "synthetic-source-risk-audit-physical_cut",
+          "source": "eia",
+          "title": "European gas market update",
+          "summary": "当前欧洲实际供气减少40mcm/d。",
+          "published_at": "2026-10-20T10:00:00+00:00",
+          "first_seen_at": "2026-10-20T10:00:00+00:00",
+          "timestamp_precision": "exact"
+        },
+        "window_news": [
+          {
+            "id": "synthetic-source-risk-audit-physical_cut",
+            "source": "eia",
+            "title": "European gas market update",
+            "summary": "当前欧洲实际供气减少40mcm/d。",
+            "published_at": "2026-10-20T10:00:00+00:00",
+            "first_seen_at": "2026-10-20T10:00:00+00:00",
+            "timestamp_precision": "exact"
+          }
+        ],
+        "previous_sessions": [],
+        "historical_events": [],
+        "price_reference": {},
+        "coverage": {}
+      },
+      "shared_extract": [
+        {
+          "mechanism": "supply_decrease",
+          "pressure": "up",
+          "conditional": false,
+          "quoted_fact": "当前欧洲实际供气减少40mcm/d",
+          "evidence_kind": "actual_flow",
+          "magnitude_mcm_d": 40.0
+        }
+      ],
+      "actual_model_current_news_card": {
+        "id": "N0",
+        "title": "European gas market update",
+        "facts": "当前欧洲实际供气减少40mcm/d。",
+        "time": "2026-10-20T10:00:00+00:00",
+        "time_precision": "exact",
+        "change_status": "known",
+        "source": "eia",
+        "temporal_state": "reported_fact",
+        "mechanism_candidates": [
+          {
+            "mechanism": "supply_decrease",
+            "pressure": "up",
+            "conditional": false,
+            "quoted_fact": "当前欧洲实际供气减少40mcm/d",
+            "evidence_kind": "actual_flow",
+            "magnitude_mcm_d": 40.0
+          }
+        ],
+        "narrative_complete": true,
+        "same_as_window_news_id": "N1"
+      },
+      "actual_model_window_cards": [
+        {
+          "id": "N1",
+          "same_as_current_news_id": "N0",
+          "time": "2026-10-20T10:00:00+00:00",
+          "time_precision": "exact",
+          "temporal_state": "reported_fact"
+        }
+      ],
+      "actual_model_notice_ledger": [],
+      "actual_response_schema_source_fact_checks": null,
+      "prepared_context_sha256": "83c569fe121aeda34530df95c82efc1acfe4e16c367aab73304b8d51bcc8e934"
+    },
+    {
+      "control": "physical_restore",
+      "synthetic": true,
+      "source_identity_for_generic_path": "eia",
+      "is_actual_publisher_article": false,
+      "input_snapshot": {
+        "as_of": "2026-10-20T12:00:00+00:00",
+        "current_news": {
+          "id": "synthetic-source-risk-audit-physical_restore",
+          "source": "eia",
+          "title": "European gas market update",
+          "summary": "当前欧洲实际供气增加40mcm/d。",
+          "published_at": "2026-10-20T10:00:00+00:00",
+          "first_seen_at": "2026-10-20T10:00:00+00:00",
+          "timestamp_precision": "exact"
+        },
+        "window_news": [
+          {
+            "id": "synthetic-source-risk-audit-physical_restore",
+            "source": "eia",
+            "title": "European gas market update",
+            "summary": "当前欧洲实际供气增加40mcm/d。",
+            "published_at": "2026-10-20T10:00:00+00:00",
+            "first_seen_at": "2026-10-20T10:00:00+00:00",
+            "timestamp_precision": "exact"
+          }
+        ],
+        "previous_sessions": [],
+        "historical_events": [],
+        "price_reference": {},
+        "coverage": {}
+      },
+      "shared_extract": [
+        {
+          "mechanism": "supply_increase",
+          "pressure": "down",
+          "conditional": false,
+          "quoted_fact": "当前欧洲实际供气增加40mcm/d",
+          "evidence_kind": "actual_flow",
+          "magnitude_mcm_d": 40.0
+        }
+      ],
+      "actual_model_current_news_card": {
+        "id": "N0",
+        "title": "European gas market update",
+        "facts": "当前欧洲实际供气增加40mcm/d。",
+        "time": "2026-10-20T10:00:00+00:00",
+        "time_precision": "exact",
+        "change_status": "known",
+        "source": "eia",
+        "temporal_state": "reported_fact",
+        "mechanism_candidates": [
+          {
+            "mechanism": "supply_increase",
+            "pressure": "down",
+            "conditional": false,
+            "quoted_fact": "当前欧洲实际供气增加40mcm/d",
+            "evidence_kind": "actual_flow",
+            "magnitude_mcm_d": 40.0
+          }
+        ],
+        "narrative_complete": true,
+        "same_as_window_news_id": "N1"
+      },
+      "actual_model_window_cards": [
+        {
+          "id": "N1",
+          "same_as_current_news_id": "N0",
+          "time": "2026-10-20T10:00:00+00:00",
+          "time_precision": "exact",
+          "temporal_state": "reported_fact"
+        }
+      ],
+      "actual_model_notice_ledger": [],
+      "actual_response_schema_source_fact_checks": null,
+      "prepared_context_sha256": "e511509d8b970117fea5fd5bdb3de0322fcd4002a3e741ffb7a610dc1183c5f0"
+    }
+  ],
+  "conclusion": "Incorrect generic source mechanism extraction reaches model-visible N0.mechanism_candidates; this is a true input fault, not only an output validator false positive.",
+  "observed_errors": [
+    "Chinese supply risk lower is labeled physical supply_decrease/up and actual_flow despite actual flow unknown.",
+    "Chinese supply risk higher is labeled physical supply_increase/down and actual_flow despite actual flow unknown.",
+    "English supply risk lower is assigned opposing supply increase and decrease mechanisms."
+  ],
+  "positive_controls": "Actual European physical supply reduction/increase40mcm/d retains correctup/down and40magnitude.",
+  "scope_of_input_fault": "Generic N0 source mechanism_candidates; notice ledger empty and source_fact_checks native constant absent in these controls. Original source facts stay visible; duplicate window news links to N0.",
+  "recommended_fix_boundary": "Exclude explicit risk-object spans from physical supply match/inference while retaining original source wording and actual physical-flow clauses, negation and unknown scope. Do not invent physical restoration or force final net direction.",
+  "all_final_actual_requests_equivalent_claimed": false,
+  "new_actuals_must_follow_final_complete_path_proof": true,
+  "new_model_calls": 0,
+  "no_database_access": true,
+  "no_network_calls": true,
+  "no_source_edits": true,
+  "not_a_production_dataset_insert": true
+}

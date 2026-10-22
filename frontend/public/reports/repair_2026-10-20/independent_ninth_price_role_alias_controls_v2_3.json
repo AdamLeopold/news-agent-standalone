@@ -1,0 +1,280 @@
+{
+  "candidate_analysis_sha256": "43ba0dc1d9fe85c74f3f8f78a0c939794caf341d510432d4d1ce919724958249",
+  "root_source_unmodified_sha256": "bcd240a893a87e842fc8caff8f4efa156f80cac7d8807b2c8c4c3a8599bfcdfa",
+  "paired_controls": [
+    {
+      "claim": "基于前一交易日参考价上涨。",
+      "expected_reject": true,
+      "error": "价格时间角色不符：前日参考(2026-10-20)为85.062 EUR/MWh；当前报价(2026-10-21T04:36:00+00:00)为87.73 EUR/MWh；已观察当前对前日差为2.668。这不是前一交易日自身的涨跌；请明确前日参考/当前观察各自时钟，不把观察差当未来目标幅度或指定预测方向"
+    },
+    {
+      "claim": "上一交易日结算价格从85.062 EUR/MWh升至87.73 EUR/MWh。",
+      "expected_reject": true,
+      "error": "价格时间角色不符：前日参考(2026-10-20)为85.062 EUR/MWh；当前报价(2026-10-21T04:36:00+00:00)为87.73 EUR/MWh；已观察当前对前日差为2.668。这不是前一交易日自身的涨跌；请明确前日参考/当前观察各自时钟，不把观察差当未来目标幅度或指定预测方向"
+    },
+    {
+      "claim": "当前报价较前一交易日结算价上涨2.67 EUR/MWh。",
+      "expected_reject": false,
+      "error": null
+    },
+    {
+      "claim": "前一交易日结算价为85.062 EUR/MWh，当前报价87.73 EUR/MWh。",
+      "expected_reject": false,
+      "error": null
+    },
+    {
+      "claim": "从前一交易日参考价85.062上涨至当前87.73 EUR/MWh。",
+      "expected_reject": false,
+      "error": null
+    },
+    {
+      "claim": "预计收盘上涨2.668 EUR/MWh。",
+      "expected_reject": true,
+      "error": "没有校准价格预测输入，禁止编造上涨/下跌幅度或目标价；仅可引用输入已观察的同合约参考变化"
+    },
+    {
+      "claim": "当前报价上涨87.73 EUR/MWh。",
+      "expected_reject": true,
+      "error": "没有校准价格预测输入，禁止编造上涨/下跌幅度或目标价；仅可引用输入已观察的同合约参考变化"
+    },
+    {
+      "claim": "当前报价较前一交易日参考价上涨3.14%。",
+      "expected_reject": false,
+      "error": null
+    },
+    {
+      "claim": "当前报价较前一交易日参考价上涨2 EUR/MWh。",
+      "expected_reject": true,
+      "error": "没有校准价格预测输入，禁止编造上涨/下跌幅度或目标价；仅可引用输入已观察的同合约参考变化"
+    },
+    {
+      "claim": "当前报价较前一交易日参考价上涨2.668 EUR/mcm。",
+      "expected_reject": true,
+      "error": "close_forecast.basis:TTF报价/参考变动单位必须保留输入EUR/mwh，不能写成EUR/mcm；能源报价不是体积容量，未经已给换算依据不得替换货币或分母。不改变预测方向"
+    },
+    {
+      "claim": "当前报价较前一交易日结算价下跌2 EUR/MWh。",
+      "expected_reject": false,
+      "error": null
+    },
+    {
+      "claim": "前一交易日收盘价下跌2 EUR/MWh。",
+      "expected_reject": true,
+      "error": "价格时间角色不符：前日参考(2026-10-20)为85.062 EUR/MWh；当前报价(2026-10-21T04:36:00+00:00)为83.062 EUR/MWh；已观察当前对前日差为-2.0。这不是前一交易日自身的涨跌；请明确前日参考/当前观察各自时钟，不把观察差当未来目标幅度或指定预测方向"
+    },
+    {
+      "claim": "当前报价较前一交易日参考价上涨2.668 EUR/MWh。",
+      "expected_reject": true,
+      "error": "没有校准价格预测输入，禁止编造上涨/下跌幅度或目标价；仅可引用输入已观察的同合约参考变化"
+    },
+    {
+      "claim": "当前报价较前一交易日参考价上涨2.668 EUR/MWh。",
+      "expected_reject": true,
+      "error": "没有校准价格预测输入，禁止编造上涨/下跌幅度或目标价；仅可引用输入已观察的同合约参考变化"
+    },
+    {
+      "claim": "当前报价较前一交易日参考价上涨2.668 EUR/MWh。",
+      "expected_reject": true,
+      "error": "没有校准价格预测输入，禁止编造上涨/下跌幅度或目标价；仅可引用输入已观察的同合约参考变化"
+    },
+    {
+      "claim": "[N3]前一交易日参考价上涨0.50 EUR/MWh。",
+      "expected_reject": false,
+      "error": null
+    },
+    {
+      "claim": "[N3]前一交易日参考价上涨0.50 EUR/MWh。",
+      "expected_reject": true,
+      "error": "价格时间角色不符：前日参考(2026-10-20)为85.062 EUR/MWh；当前报价(2026-10-21T04:36:00+00:00)为87.73 EUR/MWh；已观察当前对前日差为2.668。这不是前一交易日自身的涨跌；请明确前日参考/当前观察各自时钟，不把观察差当未来目标幅度或指定预测方向"
+    },
+    {
+      "claim": "[N3]前一交易日参考价上涨0.50 EUR/MWh。",
+      "expected_reject": true,
+      "error": "价格时间角色不符：前日参考(2026-10-20)为85.062 EUR/MWh；当前报价(2026-10-21T04:36:00+00:00)为87.73 EUR/MWh；已观察当前对前日差为2.668。这不是前一交易日自身的涨跌；请明确前日参考/当前观察各自时钟，不把观察差当未来目标幅度或指定预测方向"
+    }
+  ],
+  "old_twenty_plus_auto_original_bad_raw_replays": [
+    {
+      "case": "weak_exploration_no_quote",
+      "raw_sha256": "6ac8df5561c98897f3663043065321959121cfc5606a32833336b8ef529eff0b",
+      "rejected": true,
+      "errors": [
+        "close_forecast.basis、analysis.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应"
+      ]
+    },
+    {
+      "case": "weak_news_observed_market_up",
+      "raw_sha256": "ed947244f6672f8ecf2ee878e7106d28a7830ddee4d02f75bc99d0adee7df251",
+      "rejected": true,
+      "errors": [
+        "close_forecast:已有有效同合约盘中方向基准；新闻影响较弱或无法证明单新闻价格因果、未知是否计价，不能单独取消相对已给前价的条件性收盘预判。请权衡真实基准与有来源的冲突机制，保留五档选择，不得自动复制新闻方向或把参考变化当已实现收盘"
+      ]
+    },
+    {
+      "case": "supply_restore_40_with_flat_baseline",
+      "raw_sha256": "e70b1eeced61a0ca82702ee329ca6bee674dac90bc2e65abf54822c95deeffb9",
+      "rejected": true,
+      "errors": [
+        "close_forecast.basis:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应"
+      ]
+    },
+    {
+      "case": "anchor_legal_prevday_weak_market_up",
+      "raw_sha256": "978e0af10124b6ac118527bced66cb752c93310dd08bb7e5ac45f875cb8d1968",
+      "rejected": true,
+      "errors": [
+        "news_impact.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应"
+      ]
+    },
+    {
+      "case": "anchor_real_manual_missing_prevday",
+      "raw_sha256": "bdc3f17c8ff05ac997aeba24d96f987478fa8968823d0426ee030321003253cb",
+      "rejected": true,
+      "errors": [
+        "news_impact.bearish_evidence[0]:N0原来源合同授予/委托方为LNG Canada、获授/承接方为Técnicas Reunidas，不能把授予方写成获授方或反转双方角色；请保留该N具体交易，不套用其他N的合同，不要求复述角色或改变价格方向"
+      ]
+    },
+    {
+      "case": "future_planned_notice",
+      "raw_sha256": "09d26b8dcbf07c35d44803abf0d0aee8ce3c8cc4a1e4af0a5032d30259a2b63c",
+      "rejected": true,
+      "errors": [
+        "news_impact.summary、analysis.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应"
+      ]
+    },
+    {
+      "case": "supply_loss_40_with_flat_baseline",
+      "raw_sha256": "dd1f44e9ef94887f17bd051dbac3e4c282131e5bfe637ec2957c5b114f645ef5",
+      "rejected": true,
+      "errors": [
+        "close_forecast.basis:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应"
+      ]
+    },
+    {
+      "case": "anchor_real_manual_missing_prevday",
+      "raw_sha256": "11e4dd39600e3cac0308bf3ad4100900431e4314173de83e25cfd1b034e815b9",
+      "rejected": true,
+      "errors": [
+        "news_impact.summary、analysis.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应"
+      ]
+    },
+    {
+      "case": "v2_0_missing_previous_trading_day_anchor",
+      "raw_sha256": "42094e73a35ea27e1306bf4b94f757072fa0329d4ee4515375dcb00313613770",
+      "rejected": true,
+      "errors": [
+        "close_forecast:目标2026-10-21缺少前交易日2026-10-20同合约锚点；当前绝对报价或其他日期参考差不能当昨收涨跌。新闻也无方向依据时须insufficient_evidence且direction=null；有方向新闻仍可给有据条件预测，不补flat或强制复制新闻方向"
+      ]
+    },
+    {
+      "case": "v2_1_future_abandonment_asserted_completed",
+      "raw_sha256": "2be1a16116bf38be121aaeb0147abf35f97b6f71155de52979308245d1a87a91",
+      "rejected": true,
+      "errors": [
+        "news_impact.summary:N0来源仅说该井将封堵/弃置，不能写已被永久封堵/井已弃置/已完成封井；请保留将/计划等未来时态，不从报道日期已过推断完成。原句will now be plugged and abandoned；实际has been/was plugged完成事实须有相应来源，不改新闻或收盘方向"
+      ]
+    },
+    {
+      "case": "v2_1_field_misidentified_as_pipeline",
+      "raw_sha256": "979e22270e7d00c609a22825a40cfd0d258e67feb7af0292bb1f14aac05d9964",
+      "rejected": true,
+      "errors": [
+        "news_impact.summary:N1来源设施类型为Gas production field（气田/生产设施），不得称Troll等该实体为pipeline/管道维护；须保留对应N的原设施类别或泛称设施公告，不能借另一N的管道合同套类型，不改方向"
+      ]
+    },
+    {
+      "case": "dismissed_notice_not_verified_recovery",
+      "raw_sha256": "ff0860953edcff8326137e7680741f231c60ac52ca4cc792b735ecd278bb613d",
+      "rejected": true,
+      "errors": [
+        "close_forecast.basis:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应"
+      ]
+    },
+    {
+      "case": "dismissed_notice_not_verified_recovery",
+      "raw_sha256": "5a173dcdbcc64f841702d81853e17bc28d7f122bb27ff3e3ae3a8a154cf6c2d5",
+      "rejected": true,
+      "errors": [
+        "news_impact.bullish_evidence[0]:供应风险降低是TTF边际下行/中和机制，供应风险上升是边际上行机制；风险变化不等于实际流量恢复或损失，不能反放证据栏。须按引用事实重算/分栏，净方向仍可flat，不补实际流量。",
+        "news_impact.bullish_evidence[0]:证据栏与供需机制相反；请移动/重算证据，不能把供应增加放作看涨或供应减少放作看跌"
+      ]
+    },
+    {
+      "case": "anchor_legal_prevday_weak_market_up",
+      "raw_sha256": "b1ac4f872330d717ddf0748cfa4f65f536d9ac2a7d389d2d3786ac2d69985d6f",
+      "rejected": true,
+      "errors": [
+        "close_forecast:已有有效同合约盘中方向基准；新闻影响较弱或无法证明单新闻价格因果、未知是否计价，不能单独取消相对已给前价的条件性收盘预判。请权衡真实基准与有来源的冲突机制，保留五档选择，不得自动复制新闻方向或把参考变化当已实现收盘"
+      ]
+    },
+    {
+      "case": "fifth_current_wrong_price_unit",
+      "raw_sha256": "11b38edc3c6117ce32e855dd47806552f4950cbb02c7e2a146a1ac508f995124",
+      "rejected": true,
+      "errors": [
+        "close_forecast.basis:TTF报价/参考变动单位必须保留输入EUR/mwh，不能写成EUR/mcm；能源报价不是体积容量，未经已给换算依据不得替换货币或分母。不改变预测方向"
+      ]
+    },
+    {
+      "case": "real_eni",
+      "raw_sha256": "17fcc5caae952ca8feb2ad05892d96d6bf6c10c35c96886bfe6d2fda015fa3cf",
+      "rejected": true,
+      "errors": [
+        "close_forecast.basis:Gassco公告撤销/结束或实际流量未确认，不能证明未形成供需冲击、供应不受影响或实际流量无变化；须有独立无变化计量事实。可写输入未显示冲击证据或恢复待核实，不能把缺测写成无冲击",
+        "news_impact.summary:Åsgard输入仅有该设施不可用容量公告且实流未知，不能裸称设施停产/停供已发生；可写停产公告/公告容量风险、若/未来条件，实际停产须该实体截至as_of已知的独立生产/流量确认，不改变净方向",
+        "news_impact.bullish_evidence[0]:项目开启或公司合同事实不能只接TTF涨跌模板；须说明该N有来源的供需/容量风险/预期差传导，不能把公司利好直接当气价利好；净方向仍可flat；news_impact.bearish_evidence[0]:明写的TTF价格方向与证据栏相反，价格上行属看涨栏、价格下行属看跌栏；须按该N来源分栏/解释，不改变净方向"
+      ]
+    },
+    {
+      "case": "anchor_real_manual_missing_prevday",
+      "raw_sha256": "217e26d7eec7c19e54b2c9eaed8071d1496512be83f3b2d60a49d00ed7c932e9",
+      "rejected": true,
+      "errors": [
+        "news_impact.summary、analysis.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应"
+      ]
+    },
+    {
+      "case": "retained_future_price_zero",
+      "raw_sha256": "bbff4e9280b02e22641542c24941d03738d933c8093123125bc3aa0a18d4e405",
+      "rejected": true,
+      "errors": [
+        "news_impact.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应"
+      ]
+    },
+    {
+      "case": "manual_reaction_degree",
+      "raw_sha256": "d72b3686938aa585d99f2359ee1b3813dd13e63716169c9842f0590063038e80",
+      "rejected": true,
+      "errors": [
+        "news_impact.summary、analysis.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应"
+      ]
+    },
+    {
+      "case": "current_pricing_unknown",
+      "raw_sha256": "f2ba2e925a1e4ed3b601d5b0238dfe7b81a1ef8634e42443e2a2f54101ad06ae",
+      "rejected": true,
+      "errors": [
+        "close_forecast.basis:计价未知或缺少计价证据不能作为额外看涨、看跌或持平依据；请将未知单列，方向只依据已给行情基准和来源供需机制。可保留有据的条件预测，不得由未知推未计价，不改变任何方向枚举"
+      ]
+    },
+    {
+      "case": "eighth_future_window_knowledge",
+      "raw_sha256": "2f1405df32a4f7c3931d3b15106f7b732aab66223116642ed918eba1e1f6ccc9",
+      "rejected": true,
+      "errors": [
+        "news_impact.summary:目标结算窗口结束2026-10-21T15:15:00+00:00仍晚于as_of2026-10-21T04:11:36.571652+00:00，不能把截至未来窗末的确认/核实状态写成已知事实；只能陈述截至分析时点尚未确认，或明确若截至收盘仍未确认的条件，不改变预测方向"
+      ]
+    }
+  ],
+  "ninth_actual_raw_sha256": "2e07462be8969fa70485663d8aad0efe22dbe241a7ca618f93f298ce473edc78",
+  "ninth_actual_rejected": true,
+  "ninth_actual_error": "价格时间角色不符：前日参考(2026-10-20)为85.062 EUR/MWh；当前报价(2026-10-21T04:36:00+00:00)为87.73 EUR/MWh；已观察当前对前日差为2.668。这不是前一交易日自身的涨跌；请明确前日参考/当前观察各自时钟，不把观察差当未来目标幅度或指定预测方向",
+  "all_original_body_bytes_and_directions_unchanged": true,
+  "ast_changed": [
+    "_validate_prediction_semantics"
+  ],
+  "new_model_calls": 0,
+  "database_access": false,
+  "network_calls": false,
+  "source_modification": false
+}

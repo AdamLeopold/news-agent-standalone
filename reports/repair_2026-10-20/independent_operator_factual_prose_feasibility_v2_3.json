@@ -1,0 +1,114 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T07:17:51.552527+00:00",
+  "scope": "Finite Gassco-only generation feasibility; four offline profiles and two frozen eleventh contexts. Production/core/database untouched.",
+  "v2_candidate_source": {
+    "file": ".runtime/operator-factual-grammar-proposal-v2/ttf_news/analysis.py",
+    "sha256": "5495443d748cb81ab4e39180138ddd4726652f9e1e4e3cf2e93aeaccb658b5e6"
+  },
+  "v1_candidate_source": {
+    "file": ".runtime/operator-factual-grammar-proposal/ttf_news/analysis.py",
+    "sha256": "cf3e67f1c1cc2a40a8903b9f64aa516f13446636c7450cb75b6128a28797cd99"
+  },
+  "v2_diff_from_v1": {
+    "file": ".runtime/operator-factual-grammar-proposal-v2/v1-v2.diff",
+    "sha256": "52a5d79a25d59cee8a80b0227d0193cc9f019efe077662ebfe67aaee2eacfb0f"
+  },
+  "static_findings": {
+    "only_response_schema_plus_source_derived_helper_changed": true,
+    "prepared_system_parser_repair_profile_and_all_existing_gates_unchanged": true,
+    "all_five_direction_labels_score_confidence_nodes_retained": true,
+    "current_vs_future_capacity_nonoverlap_supported": true,
+    "N2_end_shortening_is_relative_previous_version_not_measured_recovery": true,
+    "eligibility_active_scheduled_only_and_other_schema_exact_fallback": true,
+    "independently_replayed_offline_controls": "4profiles;21oldbad;5revision;6fallback;4flat-band;v2also4nullpositive/4emptynegative;0modelcalls."
+  },
+  "v1_native_execution_limitation": {
+    "manual_raw_sha256": "ed05bc63c24f67d181e9ca6bbfc5997d9dcae8c1f378aa89dbe8178cfa9a6f61",
+    "current_raw_sha256": "9adf7314514ad40c4c780eb3417c0ebad79fcea75ba52c270213f04dda092785",
+    "optional_risk_outer_enum_not_enforced": true,
+    "current_exact_two_risk_flag_duplicates_native_unique_not_enforced": true,
+    "original_semantic_gate_policy_still_allows_exact_bounded_dedup": true,
+    "v1_does_not_prove_full_native_schema_compliance": true,
+    "raws_unchanged": true
+  },
+  "v2_actual_reviews": [
+    {
+      "case": "eleventh_manual",
+      "request": {
+        "file": ".runtime/operator-factual-grammar-proposal-v2/actual/eleventh_manual/attempt-1-request.json",
+        "sha256": "70c334b481dbe49e097a05568534bfada75444dec0e47ee18ec80aed9539171e"
+      },
+      "raw_response": {
+        "file": ".runtime/operator-factual-grammar-proposal-v2/actual/eleventh_manual/attempt-1-response.json",
+        "sha256": "c9aba27abe8fee29ac90e73e2e2572ce6d7393999c9caecdd60f3927941dd3ce"
+      },
+      "raw_sha256": "2a701bd820792134291691b218b1105158949f14f838f8bedcdfefbdfa72228f",
+      "result": {
+        "file": ".runtime/operator-factual-grammar-proposal-v2/actual/eleventh_manual/result.json",
+        "sha256": "043f22df41e2f1e60bfae55c0d9c7df72ead0c4b5d743f7e1df6652bae070ab9"
+      },
+      "actual_model_calls": 1,
+      "elapsed_seconds": 34.014,
+      "original_status": "completed_pending_independent_body_review",
+      "native_enum_const_membership_passed": true,
+      "original_Pydantic_and_all_semantic_gates_independently_passed": true,
+      "source_fields_price_clocks_and_unknowns_supported": true,
+      "news_direction": "up",
+      "close_direction": "up",
+      "full_body_verdict": "material_main_conclusion_inconsistency"
+    },
+    {
+      "case": "eleventh_current",
+      "request": {
+        "file": ".runtime/operator-factual-grammar-proposal-v2/actual/eleventh_current/attempt-1-request.json",
+        "sha256": "fa236c3cc7b6bd98976489115c773f29d7b9699b2525d85f13cd0f353f8f535b"
+      },
+      "raw_response": {
+        "file": ".runtime/operator-factual-grammar-proposal-v2/actual/eleventh_current/attempt-1-response.json",
+        "sha256": "a931f2a0350d327a16748b82c4d292bce1422de8954f00a39a4fa4082e531f0b"
+      },
+      "raw_sha256": "67075391143ccce583df7a10b522cfb1aa181fcc1d7053447608a20d201277f9",
+      "result": {
+        "file": ".runtime/operator-factual-grammar-proposal-v2/actual/eleventh_current/result.json",
+        "sha256": "080129fee47ee84a2f8267d0b139ab47080ba1e582e2b3f804d07c3437c7c858"
+      },
+      "actual_model_calls": 1,
+      "elapsed_seconds": 38.996,
+      "original_status": "completed_pending_independent_body_review",
+      "native_enum_const_membership_passed": true,
+      "original_Pydantic_and_all_semantic_gates_independently_passed": true,
+      "source_fields_price_clocks_and_unknowns_supported": true,
+      "news_direction": "up",
+      "close_direction": "up",
+      "full_body_verdict": "no_identified_P2_with_brief_completeness_qualification"
+    }
+  ],
+  "material_blocker": {
+    "severity": "P2",
+    "case": "eleventh_manual",
+    "raw_sha256": "2a701bd820792134291691b218b1105158949f14f838f8bedcdfefbdfa72228f",
+    "field": "close_forecast.direction versus summary andbasis",
+    "direction": "up",
+    "summary_prediction_exact": "若[N2]相对上一公告版本约束期缩短的缓解作用引发更强回吐，收盘相对前日可能下跌。",
+    "assessment": "The conditional downside scenario is itself source-supported, but it is the sole forecast sentence in both main summary andbasis while the selected displayed conclusion isup. The text does not state anup base-case or label this sentence only as aninvalidation scenario. This is main decision/explanation inconsistency, not fabricated source facts or a claim that the conditional scenario cannot coexist with anup base-case.",
+    "original_gates_did_not_reject": true,
+    "source_grammar_allows_independent_direction_and_unmatched_forecast_option_selection": true
+  },
+  "current_qualifications": [
+    "The up/up explanation is coherent and source-supported as a conditional forecast, not verified market accuracy.",
+    "Brief omits the fuller marginal balance betweenN2shortening andN0subsequent maintenance; retain P3 completeness limitation."
+  ],
+  "recommendation": "Do not adopt v2 as yet. Keep immutable sourced-fact prose options, but make the model choose a coherent main-forecast option/direction combination; alternative down scenarios belong in risk/scenarios. Do not rewrite the generated direction after inference, relax semantic gates, force a label quota, or replace old failed records.",
+  "production_deployed": false,
+  "full_workflow_or_detail_or_English_proven": false,
+  "prior_eleven_workflows_remain_failed": true,
+  "all_existing_unknown_flow_price_and_source_boundaries_retained": true,
+  "no_market_accuracy_claim": true,
+  "reviewer_new_model_calls": 0,
+  "database_access": false,
+  "network_calls": false,
+  "root_source_modified_by_reviewer": false,
+  "adoption_verdict": "not_yet_due_to_main_conclusion_inconsistency"
+}

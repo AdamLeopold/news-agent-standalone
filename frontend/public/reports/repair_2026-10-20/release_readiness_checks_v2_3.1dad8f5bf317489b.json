@@ -1,0 +1,145 @@
+{
+  "policy_id": "ttf-explicit-error-release-v1",
+  "expected_prompt_version": "ttf-news-standalone-2.3",
+  "status": "not_ready_eighth_detail_and_current_live_failed_additional_auto_timing_error",
+  "main_report_sha256": "dd9c72c452e67baa1b573a03e19862ad9f90205ba22925abb1ff2a4d4c4ae220",
+  "evidence": {
+    "independent_review": {
+      "file": "reports/repair_2026-10-20/independent_release_review_v2_3.json",
+      "sha256": null,
+      "status": "pending_current_production_independent_review"
+    },
+    "live_smoke": {
+      "file": "reports/repair_2026-10-20/production_eighth_full_workflow_v2_3.json",
+      "sha256": "0813d94c9fb283f260c98369975a73b30d58f5d590c0c28fcfb777f3aedbb3f7",
+      "status": "failed_not_reclassified"
+    },
+    "error_ui": {
+      "file": "reports/repair_2026-10-20/error_ui_composite_final_binding_v2_3.json",
+      "sha256": "66c2f0aa4b7c823d95b430156301cb4be0a34b1d5d0a7330ec5999fbfc50c7f3"
+    },
+    "public_scan": {
+      "file": "reports/repair_2026-10-20/public_scan_final.json",
+      "sha256": null
+    },
+    "frontend_build": {
+      "file": "reports/repair_2026-10-20/frontend-notice-scope-final-build.log",
+      "sha256": "698f7d1e8a9991160af158509fbc8f02d0e0f9194efad56815bbcd0d52eff023"
+    },
+    "backend_deployment": {
+      "file": "reports/repair_2026-10-20/backend_notice_scope_resumed.json",
+      "sha256": "57f8a67859c2aa21853d6b3f0891df5d067263a863a3fd2382a5dffd7543f052"
+    }
+  },
+  "note": "All8whole real workflows failed (2well+4EPCM+2Gassco). Eighth manualbrief/English returned, but detail/currentnull after2actual attempts. Separateauto30db accepted future-window knowledge claim was append-reviewed. No original terminal/strict flag is changed, no diagnostic availabilityquota added, no familyclosed or releaseapproved.",
+  "production_attempt_history": {
+    "file": "reports/repair_2026-10-20/production_e2e_attempt_history_v2_3.json",
+    "sha256": "cbd18cdcb4be32a3212cd31eff40fb164551138ec7152912865442bb2ae81c6e"
+  },
+  "updated_at": "2026-10-21T04:33:17.203195+00:00",
+  "previous_readiness": {
+    "file": "reports/repair_2026-10-20/release_readiness_checks_v2_3.f8d28a73fad5dea1.json",
+    "sha256": "f8d28a73fad5dea101708efdcfc4fcd82bcf5900a7cdd106b561ae18834b2cc7"
+  },
+  "current_unit_binding": {
+    "file": "reports/repair_2026-10-20/notice_scope_full_unit_binding_v2_3.json",
+    "sha256": "09a66fe61759366b3f67b7564545c239e03bcb2c9899ecf98822003a66c1c8d7"
+  },
+  "current_selected_cohort": {
+    "file": "reports/repair_2026-10-20/current_final_notice_scope_twenty_plus_detail_manifest_v2_3.json",
+    "sha256": "955d2ab120f0d27f5a69da663fc19d91cd7d639546a8b60492d95db505754db6"
+  },
+  "known_accepted_error_ledger": {
+    "file": "reports/repair_2026-10-20/release_known_accepted_errors.json",
+    "sha256": "d10d14b144de1130fac9b8f8f157e1bdb9c48b42e334d9f13fc26799ab5ff355"
+  },
+  "latest_physical_six_actual_manifest": {
+    "file": "reports/repair_2026-10-20/physical_unit_six_actual_manifest_v2_3.json",
+    "sha256": "11791d3ee3bb74ae7c4c6f6035b7ef14cd9045428bfd9eaf75b860ac4699a008"
+  },
+  "latest_accepted_error_supplement": {
+    "file": "reports/repair_2026-10-20/physical_unit_accepted_evidence_and_price_scope_defects_v2_3.json",
+    "sha256": "7e3932d0bb39781199187f78d493ac1d3d03a6c379a1cc30be804bf80654de98"
+  },
+  "next_registered_case_only_stage": null,
+  "registered_stage_is_not_actual_model_evidence": false,
+  "main_report_current_phase_not_finalized": true,
+  "latest_retained_future_price_zero_reassessment": {
+    "file": "reports/repair_2026-10-20/independent_retained_future_price_zero_reassessment_v2_3.json",
+    "sha256": "712fb98fd7c3ec0e32fcca74f03f7f57f2702b6a32e4cd056d973588bf4882a3"
+  },
+  "latest_price_zero_three_actual_manifest": {
+    "file": "reports/repair_2026-10-20/price_zero_consistency_three_actual_manifest_v2_3.json",
+    "sha256": "42b94eaf8f2083fb007c21df1ba7603aa4b95b7908f8660ad6b455c69f9a7326"
+  },
+  "current_complete_path_proof": {
+    "file": "reports/repair_2026-10-20/full_path_equivalence_v2_3.96921c6f40d8320a.json",
+    "sha256": "96921c6f40d8320a4ff29259881d46101e1736bb3cc2f6ee4ebe6f26140f89e4"
+  },
+  "operational_anchor_policy_correction": {
+    "file": "reports/repair_2026-10-20/operational_anchor_policy_correction_v2_3.json",
+    "sha256": "c06338ddb16f56eb145be7543574bb7a8cefd0952ac2d92aec88989730566027"
+  },
+  "latest_production_terminal_review": {
+    "file": "reports/repair_2026-10-20/production_eighth_terminal_append_evidence_v2_3.json",
+    "sha256": "18b18c90941355251286c5472c4a49fc5ab419c6a1b5cf29ed2633df08c050fd"
+  },
+  "latest_production_full_prose_review": {
+    "file": "reports/repair_2026-10-20/independent_production_eighth_terminal_cn_english_review_v2_3.json",
+    "sha256": "78a6ed11a6cff94cbc8e18ad5efb4b1aec7cbb4e781cc97cefeb24b3dfc9a89b"
+  },
+  "closure_inventory": {
+    "file": "reports/repair_2026-10-20/release_closure_inventory_v2_3.json",
+    "sha256": "d5cd511105479ee642b4b306f687f8b902b864cd63ca3849655787fbfe803a8b"
+  },
+  "pending_resolution_templates": {
+    "file": "reports/repair_2026-10-20/release_closure_pending_templates_v2_3.json",
+    "sha256": "e61ce6b46a49acf33b12c63df27aefa735f4d3832231586e54bbbff6809d9ff4"
+  },
+  "final_source_rebind_pending": false,
+  "final_unit_binding_pending": false,
+  "current_selected_independent_source_binding": {
+    "file": "reports/repair_2026-10-20/independent_current_final_notice_scope_source_binding_review_v2_3.json",
+    "sha256": "6fb30361dbbbb0117bc5fef00867fca2054c55bed59f531584c779c3d5639d34"
+  },
+  "current_original_bad_raw_revalidation": {
+    "file": "reports/repair_2026-10-20/notice_scope_final_original_twenty_bad_raw_revalidation_v2_3.json",
+    "sha256": "dd99f4eceb546f0ea3f3c38de81c626bde6bc06d54bd578b5067631f34f5ac40"
+  },
+  "current_backend_deployment": {
+    "file": "reports/repair_2026-10-20/backend_notice_scope_resumed.json",
+    "sha256": "57f8a67859c2aa21853d6b3f0891df5d067263a863a3fd2382a5dffd7543f052"
+  },
+  "current_production_phase": {
+    "status": "not_ready_eighth_detail_and_current_live_failed_additional_auto_timing_error",
+    "completed_whole_workflows": 8,
+    "successful_complete_workflows": 0,
+    "failed_complete_workflows": 8,
+    "article_counts": {
+      "well": 2,
+      "epcm": 4,
+      "gassco": 2
+    },
+    "latest_terminal": {
+      "file": "reports/repair_2026-10-20/production_eighth_full_workflow_v2_3.json",
+      "sha256": "0813d94c9fb283f260c98369975a73b30d58f5d590c0c28fcfb777f3aedbb3f7"
+    },
+    "latest_terminal_append_evidence": {
+      "file": "reports/repair_2026-10-20/production_eighth_terminal_append_evidence_v2_3.json",
+      "sha256": "c9ac9e470e08a1c0dd108833500df7eed07f0527da5ef9eae08181f8c13d57d2"
+    },
+    "eighth_manual_brief_qualified": true,
+    "eighth_detail_delivered": false,
+    "eighth_current_live_delivered": false,
+    "additional_auto_future_window_error_excluded_by_append_review": true,
+    "old_well_or_epcm_generation_stability_resolved": false,
+    "full_eighth_failed_output_prose_review_pending": false,
+    "boundary": "Retained isolated15/20 safe results and finalsource code tests cannot substitute for an unsuccessful real production workflow; local validator fixes do not make a failed actual run successful."
+  },
+  "production_full_workflow_success_pending": true,
+  "accepted_error_families_closed": 0,
+  "previous_compiled_review_not_current": {
+    "file": "reports/repair_2026-10-20/independent_release_review_v2_3.json",
+    "sha256": "26c453e68feae55d3344c3194a34b7d79ce4450add2300d3c4b94a47fb1c681c"
+  }
+}

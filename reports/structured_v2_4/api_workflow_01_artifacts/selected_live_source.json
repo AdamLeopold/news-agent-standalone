@@ -1,0 +1,47 @@
+{
+  "source": "gassco",
+  "url": "https://umm.gassco.no/details?id=f1f667ff-1ee3-45f2-bedf-7eed367ea614",
+  "title": "Gassco Troll: Planned Gas production field unavailability (Active)",
+  "summary": "Message ID: 2026-252-A________________005. Publication: 2026-10-22T12:46:45+0200. Event: 2026-10-22T06:00:00+0200 to 2026-10-23T06:00:00+0200. Technical capacity: 137.4 mcm/d; available: 129.8; unavailable: 7.6. Reason: Yearly maintenance. Remarks: Extended maintenance.",
+  "published_at": "2026-10-22T10:46:45+00:00",
+  "published_date": "2026-10-22",
+  "timestamp_precision": "exact",
+  "timestamp_source": "UMM.Publication date/time",
+  "updated_at": null,
+  "first_seen_at": "2026-10-20T20:15:04.077570+00:00",
+  "summary_created_at": "2026-10-22T11:11:31.392927+00:00",
+  "category": "supply_outage",
+  "entities": [
+    "Gassco",
+    "Troll"
+  ],
+  "source_revision": "7e9a735c36b72a67",
+  "content_hash": "2bacdd729e053ef57dc74433edda5a17c56c815ac1b659e53843dfa8423b8700",
+  "discovered_via": "https://umm.gassco.no/",
+  "ingestion_kind": "live",
+  "is_relevant": true,
+  "relevance_metadata": {
+    "scope": "background",
+    "basis": "explicit_source_terms_not_price_direction",
+    "evidence_terms": [
+      "Gas",
+      "capacity"
+    ],
+    "european_channel_explicitly_denied": false,
+    "scope_is_not_verified_price_impact": true
+  },
+  "event_status": "Active",
+  "event_start": "2026-10-22T06:00:00+0200",
+  "event_end": "2026-10-23T06:00:00+0200",
+  "source_message_id": "2026-252-A________________005",
+  "trade_date": "2026-10-22",
+  "id": "90bfbf6adb1183517cbc00ca",
+  "version": 5,
+  "version_seen_at": "2026-10-22T11:11:31.430721+00:00",
+  "analysis_id": "affb93c2-e58c-4dc1-aa41-2290605853f7",
+  "analysis_status": "failed",
+  "analysis_created_at": "2026-10-22T11:35:08.214783+00:00",
+  "analysis_completed_at": "2026-10-22T11:54:00.282613+00:00",
+  "analysis": null,
+  "review": null
+}

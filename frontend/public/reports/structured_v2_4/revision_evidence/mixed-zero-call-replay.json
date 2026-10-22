@@ -1,0 +1,17 @@
+{
+  "model_calls": 0,
+  "production_writes": 0,
+  "input_sha256": "c5e9b29f56efb754bb3c5ecc60bf2413692da196c4e062375b24b0510100be02",
+  "checks": {
+    "classification_requests": true,
+    "facts": true,
+    "mechanisms": true,
+    "weight_request": true,
+    "closing_request": true,
+    "plan": true,
+    "result_body": true,
+    "english_body": true,
+    "detail_body": true,
+    "detail_english_body": true
+  }
+}

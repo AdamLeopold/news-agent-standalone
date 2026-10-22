@@ -1,0 +1,148 @@
+{
+  "observed_at": "2026-10-21T04:43:02.908266+00:00",
+  "baseline": {
+    "file": "reports/repair_2026-10-20/physical_predicate_price_attachment_baseline_v2_3.json",
+    "sha256": "bb3227bd680f69a1bfa0e1df73d98e3780106e49b291c417fb6524887e3efb1d"
+  },
+  "source_sha256": "3fcdf8708e49be0bc7060e0e97f45fbfcf5262dabdfc431d70aca0a748791ff7",
+  "observations": [
+    {
+      "text": "实际流量未恢复，供应约束持续。",
+      "before": [],
+      "after": []
+    },
+    {
+      "text": "实际流量已经恢复，供应约束解除。",
+      "before": [
+        {
+          "mechanism": "supply_increase",
+          "pressure": "down",
+          "conditional": false,
+          "quoted_fact": "实际流量已经恢复，供应约束解除",
+          "evidence_kind": "actual_flow"
+        }
+      ],
+      "after": [
+        {
+          "mechanism": "supply_increase",
+          "pressure": "down",
+          "conditional": false,
+          "quoted_fact": "实际流量已经恢复，供应约束解除",
+          "evidence_kind": "actual_flow"
+        }
+      ]
+    },
+    {
+      "text": "若实际流量未恢复，供应约束持续，价格上升",
+      "before": [
+        {
+          "mechanism": "supply_increase",
+          "pressure": "down",
+          "conditional": true,
+          "quoted_fact": "若实际流量未恢复，供应约束持续，价格上升",
+          "evidence_kind": "reported_fact"
+        }
+      ],
+      "after": []
+    },
+    {
+      "text": "需求疲弱，价格上升。",
+      "before": [
+        {
+          "mechanism": "demand_decrease",
+          "pressure": "down",
+          "conditional": false,
+          "quoted_fact": "需求疲弱，价格上升",
+          "evidence_kind": "reported_fact"
+        },
+        {
+          "mechanism": "demand_increase",
+          "pressure": "up",
+          "conditional": false,
+          "quoted_fact": "需求疲弱，价格上升",
+          "evidence_kind": "reported_fact"
+        }
+      ],
+      "after": [
+        {
+          "mechanism": "demand_decrease",
+          "pressure": "down",
+          "conditional": false,
+          "quoted_fact": "需求疲弱，价格上升",
+          "evidence_kind": "reported_fact"
+        }
+      ]
+    },
+    {
+      "text": "需求强劲，价格下降。",
+      "before": [
+        {
+          "mechanism": "demand_decrease",
+          "pressure": "down",
+          "conditional": false,
+          "quoted_fact": "需求强劲，价格下降",
+          "evidence_kind": "reported_fact"
+        }
+      ],
+      "after": []
+    },
+    {
+      "text": "库存下降，价格上升。",
+      "before": [
+        {
+          "mechanism": "inventory_build",
+          "pressure": "down",
+          "conditional": false,
+          "quoted_fact": "库存下降，价格上升",
+          "evidence_kind": "reported_fact"
+        },
+        {
+          "mechanism": "inventory_draw",
+          "pressure": "up",
+          "conditional": false,
+          "quoted_fact": "库存下降，价格上升",
+          "evidence_kind": "reported_fact"
+        }
+      ],
+      "after": [
+        {
+          "mechanism": "inventory_draw",
+          "pressure": "up",
+          "conditional": false,
+          "quoted_fact": "库存下降，价格上升",
+          "evidence_kind": "reported_fact"
+        }
+      ]
+    },
+    {
+      "text": "库存充足，价格下降。",
+      "before": [
+        {
+          "mechanism": "inventory_build",
+          "pressure": "down",
+          "conditional": false,
+          "quoted_fact": "库存充足，价格下降",
+          "evidence_kind": "reported_fact"
+        },
+        {
+          "mechanism": "inventory_draw",
+          "pressure": "up",
+          "conditional": false,
+          "quoted_fact": "库存充足，价格下降",
+          "evidence_kind": "reported_fact"
+        }
+      ],
+      "after": [
+        {
+          "mechanism": "inventory_build",
+          "pressure": "down",
+          "conditional": false,
+          "quoted_fact": "库存充足，价格下降",
+          "evidence_kind": "reported_fact"
+        }
+      ]
+    }
+  ],
+  "model_calls": 0,
+  "scope": "Same deterministic source strings, distinct immutable before/after source hashes. This does not assign a model net direction, turn unrecovered flow into a measured new loss, or estimate market accuracy."
+}

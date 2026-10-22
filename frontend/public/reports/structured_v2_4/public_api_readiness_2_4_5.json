@@ -1,0 +1,195 @@
+{
+  "started_at": "2026-10-22T17:11:44.281900+00:00",
+  "status": "passed",
+  "scope": "read-only public connection/CORS/same-actual-data readiness, not publication or model semantic acceptance",
+  "api_base": "https://macbook-pro--5.tail9a0a45.ts.net:10000",
+  "origin": "https://adamleopold.github.io",
+  "config": {
+    "file": "deployment/public.json",
+    "sha256": "357d819fc5a89c26f3d46a44b59cbae082eacdff9ecd505329fc4dabee15c436"
+  },
+  "deployment": {
+    "file": ".runtime/structured-reasoning-v4/20261022T165904807024Z-resume/switch.json",
+    "sha256": "58c0d3bbb7d1fa9a5bca4565de71f8a2a135cc561791e86e492ad2672076ece8"
+  },
+  "manual_actual_report": {
+    "file": "reports/structured_v2_4/api_manual_segment_2_4_5.json",
+    "sha256": "e168665a9cac9fed3915403df06d90b12aa8aec501620cdbb88d23bb21332954"
+  },
+  "model_calls": 0,
+  "new_jobs": 0,
+  "services_changed": false,
+  "checks": {
+    "source_runtime_binding": {
+      "passed": true,
+      "core_sha256": "28f75f146687b311ab4c2ae464c86512ca3ff61f14de34f7954cf1a321f465fc",
+      "workflow_version": "ttf-structured-reasoning-2.4.5",
+      "runtime_pid": 73266,
+      "all_deployed_ttf_source_count": 35
+    },
+    "all_public_gets_and_exact_cors": {
+      "passed": true,
+      "routes": [
+        "health",
+        "dashboard",
+        "manual",
+        "english_brief",
+        "english_detail"
+      ],
+      "wildcard_used": false
+    },
+    "public_health_matches_local": {
+      "passed": true,
+      "server_pid": 73266,
+      "prompt_version": "ttf-news-standalone-2.4.5",
+      "model_digest": "17052f91a42e97930aa6e28a6c6c06a983e6a58dbb00434885a0cf5313e376f7"
+    },
+    "manual_same_actual": {
+      "passed": true,
+      "analysis_id": "145397f8-d82c-4547-8e83-6c9dcbcc895e",
+      "canonical_fields_sha256": {
+        "input_snapshot": "31b9b256d1b88710858dbbee72acd58739d08ff8202056a78e5b39e01994b580",
+        "result": "8142555ce23635cf49050bbd6256957285adf1970fde9915e7520b38aabaa7dc",
+        "detail_result": "aa9a65b1638ad637f484095b23f3b21acf1e24ce4cda009b3b7755d14f5d6f6f"
+      }
+    },
+    "english_brief_same_actual": {
+      "passed": true,
+      "translation_id": "0ec039fe-2c9f-418d-bcd4-4ebcbad5b5cf",
+      "analysis_id": "145397f8-d82c-4547-8e83-6c9dcbcc895e",
+      "result_sha256": "84d580ab0e52c99a6c382c9523ec04e44eb98a27fb8a9925a10c84bca380ca15",
+      "typed_plan_sha256": "d494600aeb0c9f949d9e365f799f19cf669d7d0578f9fbb0abaf73d055ae0ac7",
+      "additional_model_calls": 0,
+      "actual": {
+        "file": "reports/structured_v2_4/api_manual_segment_2_4_5_artifacts/manual_english_brief_actual.json",
+        "sha256": "32a0ba528f303079051d1045f2e93bfce979b9efd0b186822571f24be1f9b102"
+      }
+    },
+    "english_detail_same_actual": {
+      "passed": true,
+      "translation_id": "dbd0fa31-b42e-494e-805b-cd86539cde1e",
+      "analysis_id": "145397f8-d82c-4547-8e83-6c9dcbcc895e",
+      "result_sha256": "04fbe2518c0abaae1fc2a6a635b034a6e3a7d83cf23dffe5e43285fabd21a61e",
+      "typed_plan_sha256": "d494600aeb0c9f949d9e365f799f19cf669d7d0578f9fbb0abaf73d055ae0ac7",
+      "additional_model_calls": 0,
+      "actual": {
+        "file": "reports/structured_v2_4/api_manual_segment_2_4_5_artifacts/manual_english_detail_actual.json",
+        "sha256": "816fc8e076ecf5420ff22cf1caa3c64aa11a611d4625fa5cf689a43c3acae98f"
+      }
+    },
+    "dashboard_same_current_live": {
+      "passed": true,
+      "analysis_id": "17211cd3-9c5f-4edb-ac28-cc1f2f9a913f",
+      "trade_date": "2026-10-23",
+      "result_sha256": "6a3b2760446b38bec98dfd481a8b67d7d04559ac09787b115b949017bb4f919a",
+      "prompt_version": "ttf-news-standalone-2.4.5",
+      "source_window_news_count": 0,
+      "outlook_trigger": null,
+      "fresh_news_workflow_satisfied": false
+    }
+  },
+  "requests": [
+    {
+      "path": "/api/health",
+      "base": "https://macbook-pro--5.tail9a0a45.ts.net:10000",
+      "started_at": "2026-10-22T17:11:44.385010+00:00",
+      "finished_at": "2026-10-22T17:11:44.559276+00:00",
+      "status_code": 200,
+      "access_control_allow_origin": "https://adamleopold.github.io",
+      "response_bytes_sha256": "c28ff0a5c467f2ef214ea3ffd604ba5077f6100cd1313b114810b45e2d67f9ac",
+      "response_json_sha256": "8a7a38540c46b3561e9a686189868e31ccc5fda16d1263cf15ec9dc75664426e"
+    },
+    {
+      "path": "/api/dashboard",
+      "base": "https://macbook-pro--5.tail9a0a45.ts.net:10000",
+      "started_at": "2026-10-22T17:11:44.385279+00:00",
+      "finished_at": "2026-10-22T17:11:45.488181+00:00",
+      "status_code": 200,
+      "access_control_allow_origin": "https://adamleopold.github.io",
+      "response_bytes_sha256": "a754451e79b70b24182453c16455847ff7086d8bbd87cdfbf737c011987d7fcd",
+      "response_json_sha256": "717cad4321a598dac391105fff4c9a9bcd96efc7bb9989447b01ee4319e8f399"
+    },
+    {
+      "path": "/api/analyses/145397f8-d82c-4547-8e83-6c9dcbcc895e?include_input=true",
+      "base": "https://macbook-pro--5.tail9a0a45.ts.net:10000",
+      "started_at": "2026-10-22T17:11:44.385427+00:00",
+      "finished_at": "2026-10-22T17:11:44.503014+00:00",
+      "status_code": 200,
+      "access_control_allow_origin": "https://adamleopold.github.io",
+      "response_bytes_sha256": "9eb34277734970df4c788f6be57d4b234c81c4f993ffd6cc59f0cf1a5177482d",
+      "response_json_sha256": "2ddc3cd2336f48aa341c761d40786924d8ff4a5311390eba9d39321bc486b70d"
+    },
+    {
+      "path": "/api/translations/0ec039fe-2c9f-418d-bcd4-4ebcbad5b5cf",
+      "base": "https://macbook-pro--5.tail9a0a45.ts.net:10000",
+      "started_at": "2026-10-22T17:11:44.385552+00:00",
+      "finished_at": "2026-10-22T17:11:44.457782+00:00",
+      "status_code": 200,
+      "access_control_allow_origin": "https://adamleopold.github.io",
+      "response_bytes_sha256": "cffb7c80361e1df5161f2b33fb35448a4b34b27a0c37466222efec9a0ce8e275",
+      "response_json_sha256": "91411719ee16ea330b15626ce4527116341c275719e0315d8d1513f78e24f80c"
+    },
+    {
+      "path": "/api/translations/dbd0fa31-b42e-494e-805b-cd86539cde1e",
+      "base": "https://macbook-pro--5.tail9a0a45.ts.net:10000",
+      "started_at": "2026-10-22T17:11:44.458393+00:00",
+      "finished_at": "2026-10-22T17:11:44.481157+00:00",
+      "status_code": 200,
+      "access_control_allow_origin": "https://adamleopold.github.io",
+      "response_bytes_sha256": "a10f4fd957970a17ce5846b437ee0aef8f95b01384ddd5b64d74ddd3f8f8e88c",
+      "response_json_sha256": "9be5e40169edbf70e4bacf11dd15463fff16c268c07edaa6f66207927b5c66e0"
+    },
+    {
+      "path": "/api/health",
+      "base": "http://127.0.0.1:8765",
+      "started_at": "2026-10-22T17:11:45.490134+00:00",
+      "finished_at": "2026-10-22T17:11:45.544190+00:00",
+      "status_code": 200,
+      "access_control_allow_origin": null,
+      "response_bytes_sha256": "59a939d4f088c44bfb70186f63d1b3d3cfbd28f2c496b62fa7c4721c3bda155f",
+      "response_json_sha256": "e8ec7fd17e626007ba2549cb156e036552f621d82bb1cb16fc0e1972e4727b80"
+    },
+    {
+      "path": "/api/analyses/145397f8-d82c-4547-8e83-6c9dcbcc895e?include_input=true",
+      "base": "http://127.0.0.1:8765",
+      "started_at": "2026-10-22T17:11:45.547605+00:00",
+      "finished_at": "2026-10-22T17:11:45.562251+00:00",
+      "status_code": 200,
+      "access_control_allow_origin": null,
+      "response_bytes_sha256": "9eb34277734970df4c788f6be57d4b234c81c4f993ffd6cc59f0cf1a5177482d",
+      "response_json_sha256": "2ddc3cd2336f48aa341c761d40786924d8ff4a5311390eba9d39321bc486b70d"
+    },
+    {
+      "path": "/api/translations/0ec039fe-2c9f-418d-bcd4-4ebcbad5b5cf",
+      "base": "http://127.0.0.1:8765",
+      "started_at": "2026-10-22T17:11:45.569321+00:00",
+      "finished_at": "2026-10-22T17:11:45.574453+00:00",
+      "status_code": 200,
+      "access_control_allow_origin": null,
+      "response_bytes_sha256": "cffb7c80361e1df5161f2b33fb35448a4b34b27a0c37466222efec9a0ce8e275",
+      "response_json_sha256": "91411719ee16ea330b15626ce4527116341c275719e0315d8d1513f78e24f80c"
+    },
+    {
+      "path": "/api/translations/dbd0fa31-b42e-494e-805b-cd86539cde1e",
+      "base": "http://127.0.0.1:8765",
+      "started_at": "2026-10-22T17:11:45.578380+00:00",
+      "finished_at": "2026-10-22T17:11:45.583700+00:00",
+      "status_code": 200,
+      "access_control_allow_origin": null,
+      "response_bytes_sha256": "a10f4fd957970a17ce5846b437ee0aef8f95b01384ddd5b64d74ddd3f8f8e88c",
+      "response_json_sha256": "9be5e40169edbf70e4bacf11dd15463fff16c268c07edaa6f66207927b5c66e0"
+    },
+    {
+      "path": "/api/analyses/17211cd3-9c5f-4edb-ac28-cc1f2f9a913f?include_input=true",
+      "base": "http://127.0.0.1:8765",
+      "started_at": "2026-10-22T17:11:45.586048+00:00",
+      "finished_at": "2026-10-22T17:11:45.595094+00:00",
+      "status_code": 200,
+      "access_control_allow_origin": null,
+      "response_bytes_sha256": "80359ac8050f61bf107862dc8f3ac7a44133854434c596a170e0784f0b6ba34e",
+      "response_json_sha256": "0ebb6eb6f3fecb096768618c1d4d74330ca2fef456aae3733a21e6c15aea03e7"
+    }
+  ],
+  "errors": [],
+  "finished_at": "2026-10-22T17:11:45.596920+00:00"
+}

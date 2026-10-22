@@ -1,0 +1,55 @@
+{
+  "created_at": "2026-10-21T02:57:17.102850+00:00",
+  "status": "passed_allowlist_self_tests",
+  "scope": "Explicit final evidence-slot full/focused and planned public-backend tests logs; preserving initial failures. No sync performed.",
+  "script": "scripts/sync-public-evidence.py",
+  "previous_script_sha256": "8d302a471e19a1b09b9164efdfd5ab985ce4629b73cd4312a492b103c6618e30",
+  "script_sha256": "f99aeefa43da5edabbcf686ae91a65d8129e2bd57ca4b867048803004ff57fb4",
+  "added_logs": [
+    {
+      "file": "reports/repair_2026-10-20/evidence-slot-final-unit-tests.log",
+      "source_exists_at_allowlist_check": true,
+      "sha256_at_check": "f56fd35a151ba508b6c474988726ac54e5d69be8ba7ffcc75b843ee24fad3aef",
+      "explicit_log_allowlist_entry": true,
+      "test_success_not_inferred_from_presence": true
+    },
+    {
+      "file": "reports/repair_2026-10-20/evidence-slot-final-unit-tests-rerun.log",
+      "source_exists_at_allowlist_check": true,
+      "sha256_at_check": "4e03a81d0595be9d61e45331f7e81aded026eafeb6212a9d0ffe4f15d98d4920",
+      "explicit_log_allowlist_entry": true,
+      "test_success_not_inferred_from_presence": true
+    },
+    {
+      "file": "reports/repair_2026-10-20/evidence-hollow-physical-final-focused-tests.log",
+      "source_exists_at_allowlist_check": true,
+      "sha256_at_check": "2fcb8dd3c30153e936c48f28e2b44b9cd4672676de70cbee68b35daf2cbfe724",
+      "explicit_log_allowlist_entry": true,
+      "test_success_not_inferred_from_presence": true
+    },
+    {
+      "file": "reports/repair_2026-10-20/evidence-slot-price-scope-focused-tests.log",
+      "source_exists_at_allowlist_check": true,
+      "sha256_at_check": "a39a970e4821c3271f282d2c5152bb532e7987348174c16e4149217ceffddc5d",
+      "explicit_log_allowlist_entry": true,
+      "test_success_not_inferred_from_presence": true
+    },
+    {
+      "file": "reports/repair_2026-10-20/publish-backend-final-source-tests.log",
+      "source_exists_at_allowlist_check": false,
+      "sha256_at_check": null,
+      "explicit_log_allowlist_entry": true,
+      "test_success_not_inferred_from_presence": true
+    }
+  ],
+  "self_tests": {
+    "passed": 23,
+    "failed": 0
+  },
+  "encoded_json_raw_preservation_logic_changed": false,
+  "report_helper_changed": false,
+  "sync_executed": false,
+  "model_calls": 0,
+  "database_access": false,
+  "network_calls": 0
+}

@@ -1,0 +1,15 @@
+{
+  "reason": "First actual current-version manual two-call generation failed; preserve complete failed smoke before a separately recorded normal API resubmission. No model, prompt, source, direction contract or gate changed.",
+  "first_manual_analysis_id": "c1de63c0-8ad3-436f-bac4-92362e8dd476",
+  "originals_preserved": true,
+  "files": {
+    "attempted_v2_3_manual_c1de_smoke.json": {
+      "sha256": "63ad3d2a7c79c3293a9940341ddeab72608a6037a9a0cabc09a5bc04cb70bf51",
+      "bytes": 10402
+    },
+    "attempted_v2_3_manual_c1de_smoke.log": {
+      "sha256": "397a7e2146365c029edc348e04fcfc2e2c9af572220b28dc9d5db73474f4c6c3",
+      "bytes": 1492
+    }
+  }
+}

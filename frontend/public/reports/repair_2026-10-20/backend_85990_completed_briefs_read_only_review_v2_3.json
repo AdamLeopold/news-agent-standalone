@@ -1,0 +1,176 @@
+{
+  "created_at": "2026-10-21T02:23:58.898994+00:00",
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/event_retrieval",
+  "status": "one_completed_brief_already_invalid_no_additional_completed_brief_found",
+  "scope": "All completed brief records in the explicitly authorized backend85990 completion window, including background auto analyses. Historical snapshots are not re-scored.",
+  "phase": {
+    "server_pid": 85990,
+    "start_inclusive": "2026-10-21T01:44:51+00:00",
+    "end_inclusive": "2026-10-21T02:11:39+00:00",
+    "selected_by": "julianday(completed_at), status=completed, nonnull result"
+  },
+  "sql_snapshot": {
+    "file": "reports/repair_2026-10-20/backend_85990_completed_briefs_sql_snapshot_v2_3.json",
+    "sha256": "285692dac632084929a7a4e34cf51f8f29632e83a5df58c1c91eabcec004cb86"
+  },
+  "completed_brief_count": 1,
+  "phase_created_or_completed_record_count": 5,
+  "phase_record_statuses": [
+    {
+      "id": "f679eca3-29ea-493c-8468-a1908bb22760",
+      "kind": "live",
+      "status": "failed",
+      "created_at": "2026-10-21T00:11:24.555009+00:00",
+      "completed_at": "2026-10-21T01:47:36.364247+00:00",
+      "result_is_null": true,
+      "detail_result_is_null": true,
+      "protected_hashes": {
+        "input_snapshot": "2b7c57faf89dfda97fc488597d08e6a2d4839e24041089cd3e731541f92c7933",
+        "result": null,
+        "detail_result": null
+      },
+      "error_utf8_sha256": "f263196671830628fa89a60dac563d35088c65631d257d997e6fdefb2b8a4078"
+    },
+    {
+      "id": "341746e5-d870-42ad-8034-97eba9f389d2",
+      "kind": "live",
+      "status": "completed",
+      "created_at": "2026-10-21T01:45:09.610247+00:00",
+      "completed_at": "2026-10-21T01:53:43.303244+00:00",
+      "result_is_null": false,
+      "detail_result_is_null": true,
+      "protected_hashes": {
+        "input_snapshot": "c2587bd69f22f64822e931ee57be11b5f32f80c38a521c4164743390b3f007e5",
+        "result": "ea84b58d20617e5da12f3da5a299545ff4ddc939f7ce8893b50eae57e0fddb7b",
+        "detail_result": null
+      },
+      "error_utf8_sha256": null
+    },
+    {
+      "id": "3609b826-a03d-4acb-8ef8-838d0523681c",
+      "kind": "manual",
+      "status": "failed",
+      "created_at": "2026-10-21T01:45:20.253284+00:00",
+      "completed_at": "2026-10-21T01:51:14.254175+00:00",
+      "result_is_null": true,
+      "detail_result_is_null": true,
+      "protected_hashes": {
+        "input_snapshot": "17cc6b4de39201504b251d3fdf789ccac793ecc63517bf7bb39e2ebd01518900",
+        "result": null,
+        "detail_result": null
+      },
+      "error_utf8_sha256": "6a75e67537615436aad470af432edb1e304902fed67c14d945251bae826dd9a9"
+    },
+    {
+      "id": "e76ac0ff-7590-4292-86a3-abebc335e415",
+      "kind": "live",
+      "status": "failed",
+      "created_at": "2026-10-21T02:03:05.795841+00:00",
+      "completed_at": "2026-10-21T02:04:46.061405+00:00",
+      "result_is_null": true,
+      "detail_result_is_null": true,
+      "protected_hashes": {
+        "input_snapshot": "71b97a9bf7f9d420adae00130d2991c42edf002e02b7e21cf653ed1e6bf1c264",
+        "result": null,
+        "detail_result": null
+      },
+      "error_utf8_sha256": "df4fa58d2220e0591b601f2450eec6d6bde11bfa8f88204a3d8e64d25b75b4a0"
+    },
+    {
+      "id": "84756aef-ae3b-4011-831b-6ec576279406",
+      "kind": "live",
+      "status": "failed",
+      "created_at": "2026-10-21T02:03:07.150080+00:00",
+      "completed_at": "2026-10-21T02:06:16.657445+00:00",
+      "result_is_null": true,
+      "detail_result_is_null": true,
+      "protected_hashes": {
+        "input_snapshot": "37d597fe387fd88e69e1ab98eb2cf8e94423e1c505065ae37fce21f851e53a65",
+        "result": null,
+        "detail_result": null
+      },
+      "error_utf8_sha256": "d42cafedf34b9a85f9861145f2865e9738f222aa7c0f0085fd539c2addfe6285"
+    }
+  ],
+  "completed_brief_reviews": [
+    {
+      "analysis_id": "341746e5-d870-42ad-8034-97eba9f389d2",
+      "source_result_status": "completed",
+      "protected_hashes": {
+        "input_snapshot": "c2587bd69f22f64822e931ee57be11b5f32f80c38a521c4164743390b3f007e5",
+        "result": "ea84b58d20617e5da12f3da5a299545ff4ddc939f7ce8893b50eae57e0fddb7b",
+        "detail_result": null
+      },
+      "stored_text_field_bytes_unchanged": true,
+      "source_bound_gate_revalidation": {
+        "passed": false,
+        "error_type": "ValueError",
+        "reason": "close_forecast.basis:TTF报价/参考变动单位必须保留输入EUR/mwh，不能写成EUR/mcm；能源报价不是体积容量，未经已给换算依据不得替换货币或分母。不改变预测方向"
+      },
+      "known_material_logic_error": "TTF monetary price change EUR/MWh misreported as EUR/mcm; English preserves the error.",
+      "independent_full_prose_review": {
+        "file": "reports/repair_2026-10-20/independent_production_fifth_current_live_and_english_review_v2_3.json",
+        "sha256": "60e35775fea240c11ed1bf29940fa4118c5feb3e4acd48cb5b39eae4e2f0d7b6"
+      },
+      "existing_exact_bound_invalid_reviews": [
+        {
+          "metric_id": 19919,
+          "review_id": "price-denomination-341746e5-d870-42ad-8034-97eba9f389d2-brief-v1",
+          "reason_code": "v2_3_ttf_price_energy_unit_changed_to_gas_volume",
+          "metric_sql_data_utf8_sha256": "e928fdd010bf9939306757809610543d7590eca8b4341a068952245c31e0ff12"
+        }
+      ],
+      "new_additive_review_recommended": false,
+      "reason_no_duplicate_review": "The same exact SQL input/result hashes already have an applied invalid brief review. The existing canonical output must remain unchanged."
+    }
+  ],
+  "new_pending_reviews": [],
+  "newly_confirmed_unreviewed_accepted_defects": 0,
+  "no_completed_background_auto_brief_missed": true,
+  "background_completed_or_created_live_records_failed_result_null": [
+    "f679eca3-29ea-493c-8468-a1908bb22760",
+    "e76ac0ff-7590-4292-86a3-abebc335e415",
+    "84756aef-ae3b-4011-831b-6ec576279406"
+  ],
+  "final_validation_source_sha256": {
+    "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+    "ttf_news/analysis.py": "f3c44838f16941e503e5a542bb8d95176e83ca2d25df7af8373cfeaefe0b0d06",
+    "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+    "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+    "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+    "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+    "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+    "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+    "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+    "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+    "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+    "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987",
+    "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+    "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+    "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+    "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+    "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+    "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+    "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+    "ttf_news/public_gateway.py": "fac8fe10429bc62a6be241817491d1f35eecdaa7f8a37357cb8dbcab7f43fae5",
+    "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+    "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+    "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+    "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+    "ttf_news/semantics.py": "3ed9590f39994ea29f7478439f5c0ce55e546457350e8e8fef7022631585c2c0",
+    "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+    "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+    "ttf_news/translation.py": "d47b232a5f77ea68e2d5bc5d092021e9727e555c6b1dd702922325519982d7c5"
+  },
+  "production_generation_source_is_old_28f_932_not_relabelled": true,
+  "database_access": "sqlite URI mode=ro; query_only=ON; direct SQL only; no Store instantiation",
+  "database_writes": false,
+  "review_metric_writes": false,
+  "model_calls": 0,
+  "network_calls": 0,
+  "historical_daily_snapshots_re_scored": false,
+  "original_canonical_results_modified": false,
+  "dashboard_served_state_not_verified_by_HTTP": true,
+  "boundary": "Only the authorized backend85990 phase was selected. The completed341 row is already invalid by exact append-only review; failed records have no result and are not forecasts. This read-only audit does not validate the next production workflow or authorize publication."
+}

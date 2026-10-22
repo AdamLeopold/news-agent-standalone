@@ -1,0 +1,97 @@
+{
+  "generated_at": "2026-10-20T21:41:58.161256+00:00",
+  "method": "RecordedResponsesAnalyst returns exact stored model bodies after comparing all system/context/schema SHA per attempt. No model/HTTP calls and no DB writes. This is input-path equivalence, not newly generated analysis.",
+  "actual_server_at_generation": {
+    "pid": 4930,
+    "analysis_sha256": "ea44b0e629f8330510bc54d58053187616f73c3d1447934ee539b8be4b56f9da"
+  },
+  "final_source_sha256": {
+    "ttf_news/analysis.py": "2268eeb7d20679149a1dd6cddf21e5fb8d048e19b0c4ef3f49ac68d154e116a0",
+    "ttf_news/semantics.py": "6338c3173559eaf377fd0366cee40415e9d250489530d3c2d7e071e5c321a1e8",
+    "ttf_news/prompts.py": "67589b80e657767d540050f664addfab399c41dccccaf50a8314001af991ab4d",
+    "ttf_news/context.py": "6ae94608797de98b1129f673af219bde7e88faba1f4cf73a7456058d7350b23f"
+  },
+  "records": [
+    {
+      "role": "current_live",
+      "analysis_id": "9fa53da2-74ec-4fab-9443-bd501f3ba59e",
+      "field": "result",
+      "prompt_version": "ttf-news-standalone-2.2",
+      "input_snapshot_sha256": "1cf1963d5439aeee48129373f5f83a29044c308315c9f2ec3d22b445c0b6d41a",
+      "canonical_output_sha256": "8f53b7760662809ad7bde4ca78b5dd481e82f21371b8d18b6cb26d1c1df5023e",
+      "calls": [
+        {
+          "attempt": 1,
+          "recorded_request": {
+            "system_prompt_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+            "context_sha256": "01aacca6ae83d5b4971c4cfa63bf898a5adae4adb17c898937f749ae610d9854",
+            "response_schema_sha256": "06f4d5b5bfaebe798891070017e66addc9edb7d74b76fc40f4ba320e933248c9"
+          },
+          "replayed_request": {
+            "system_prompt_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+            "context_sha256": "01aacca6ae83d5b4971c4cfa63bf898a5adae4adb17c898937f749ae610d9854",
+            "response_schema_sha256": "06f4d5b5bfaebe798891070017e66addc9edb7d74b76fc40f4ba320e933248c9"
+          },
+          "sha_matches": {
+            "system_prompt_sha256": true,
+            "context_sha256": true,
+            "response_schema_sha256": true
+          },
+          "raw_content_sha256": "f8f1d3cfebb814e7f3e6805f72c662c1e3e4d47dbbcb4bee287cc3f6a38a9689",
+          "validation_errors_match": true,
+          "recorded_validation_errors": [
+            "analysis.summary:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景"
+          ],
+          "replayed_validation_errors": [
+            "analysis.summary:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景"
+          ],
+          "repair_draft_matches": true
+        },
+        {
+          "attempt": 2,
+          "recorded_request": {
+            "system_prompt_sha256": "23a2540d799f4d087018e5fada0e35d8b9430219791fcd39f2585436d8f2dd1b",
+            "context_sha256": "68a87384c86ffcb66b4a0c08a5ecfa4a82a4441057982ec3fad216c51bf4edc5",
+            "response_schema_sha256": "06f4d5b5bfaebe798891070017e66addc9edb7d74b76fc40f4ba320e933248c9"
+          },
+          "replayed_request": {
+            "system_prompt_sha256": "23a2540d799f4d087018e5fada0e35d8b9430219791fcd39f2585436d8f2dd1b",
+            "context_sha256": "68a87384c86ffcb66b4a0c08a5ecfa4a82a4441057982ec3fad216c51bf4edc5",
+            "response_schema_sha256": "06f4d5b5bfaebe798891070017e66addc9edb7d74b76fc40f4ba320e933248c9"
+          },
+          "sha_matches": {
+            "system_prompt_sha256": true,
+            "context_sha256": true,
+            "response_schema_sha256": true
+          },
+          "raw_content_sha256": "36fe367747d709a916ad51a1d7648fc6eb8a8aed0962e9904517d410e086e324",
+          "validation_errors_match": true,
+          "recorded_validation_errors": [],
+          "replayed_validation_errors": [],
+          "repair_draft_matches": true
+        }
+      ],
+      "recorded_model_calls": 2,
+      "replayed_responses": 2,
+      "new_model_calls": 0,
+      "http_requests": 0,
+      "same_request_and_validation_path": true,
+      "nonmeta_output_equal": true,
+      "error": null
+    }
+  ],
+  "pending": [
+    {
+      "role": "manual_brief",
+      "analysis_id": "f96117fa-6591-40aa-8b1c-37a0ce541a46",
+      "status": "failed"
+    },
+    {
+      "role": "manual_detail",
+      "analysis_id": "f96117fa-6591-40aa-8b1c-37a0ce541a46",
+      "status": "not_requested"
+    }
+  ],
+  "new_model_calls": 0,
+  "all_completed_paths_equivalent": true
+}

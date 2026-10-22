@@ -1,0 +1,12 @@
+{
+  "artifacts": [
+    {
+      "file": "reports/repair_2026-10-20/pre-final-source-frontend-tests.log",
+      "sha256": "ef4e0eec5226f9e850dfe41033de0e61580e8d0689b7587484b1c468f6e31119"
+    },
+    {
+      "file": "reports/repair_2026-10-20/pre-final-source-frontend-build.log",
+      "sha256": "ba87b57b151b0abc9e47bea40a091f9c930524c9bbcfeebd5ca88f1015ff0be8"
+    }
+  ]
+}

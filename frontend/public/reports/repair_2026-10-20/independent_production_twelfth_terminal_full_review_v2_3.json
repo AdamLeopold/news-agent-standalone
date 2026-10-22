@@ -1,0 +1,328 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T08:00:31.083891+00:00",
+  "scope": "Finite complete P12 manual2raw/current1raw/English body review plus automatic084twofailedraw and all3 root-reported completed live rows since06:33:27Z. No model, API, DB, Git, source or service actions.",
+  "workflow": {
+    "file": "reports/repair_2026-10-20/production_twelfth_full_workflow_v2_3.json",
+    "sha256": "314a57800db9ea11d23d6c38c8c18337698bd89df430caaa62d4770d8e19315a"
+  },
+  "original_workflow_status": "failed",
+  "server_pid": 86618,
+  "actual_generation_source_sha256": {
+    "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+    "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+    "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+    "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+    "ttf_news/public_gateway.py": "08990e223d5e7d1d348967c9625fd29fc2d1e7e58bb000c964b9cfea43b59952",
+    "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+    "ttf_news/analysis.py": "781127633591c780709be6cc43d1a18c0c44a61a6ef873160778c82671bbe2cb",
+    "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+    "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+    "ttf_news/semantics.py": "d054bc812a80e0d28bfc95a098731b6b556ad0304a9775db0ec4d00d660d2d9a",
+    "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+    "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+    "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+    "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+    "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+    "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+    "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+    "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+    "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+    "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+    "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+    "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+    "ttf_news/translation.py": "d47b232a5f77ea68e2d5bc5d092021e9727e555c6b1dd702922325519982d7c5",
+    "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+    "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+    "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+    "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+    "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987"
+  },
+  "manual_capture": {
+    "file": "reports/repair_2026-10-20/production_twelfth_manual_brief_actual_v2_3.json",
+    "sha256": "af0e023ab71ab0817bca39b8a0e2c9945f9cabc657a9e2de3045708e915a18fb"
+  },
+  "current_capture": {
+    "file": "reports/repair_2026-10-20/production_twelfth_current_live_actual_v2_3.json",
+    "sha256": "7f3de0d2ff9babf6eb619922c628b3f48b95983f200423f3519786e2b6157178"
+  },
+  "current_english_capture": {
+    "file": "reports/repair_2026-10-20/production_twelfth_current_live_english_actual_v2_3.json",
+    "sha256": "2711f661c1e2a98865ea055d78533e3c8ef2d456eb5401f9ce828a8249ffefb0"
+  },
+  "automatic_failed_capture": {
+    "file": "reports/repair_2026-10-20/production_mixed_post_resume_0843987e_actual_v2_3.json",
+    "sha256": "4218d2de951cb7e32828f1c4e18bd937bf810bca93cf96556c40c033b623fb91"
+  },
+  "full_raw_reviews": {
+    "manual": [
+      {
+        "raw_sha256": "aa08b996cd43167c2d60d3381817eb2287280b3a81731ec8a56dab4b6f74d03e",
+        "done_reason": "stop",
+        "news_direction": "up",
+        "close_direction": "up",
+        "verdict": "true_rejection",
+        "errors": [
+          {
+            "priority": "P2",
+            "field": "news_impact.summary",
+            "text": "当前窗口内Troll气田计划停产13.0mcm/d导致供应约束",
+            "finding": "N3 contains announced unavailable capacity13 only and actual flow unknown. Explicit quantified shutdown is stronger than the source and differs from a conditional capacity-risk assessment."
+          },
+          {
+            "priority": "P2",
+            "field": "analysis.summary",
+            "text": "Troll气田的13.0 mcm/d计划停产为主要供给约束",
+            "finding": "Repeats the unsupported actual/planned shutdown quantity; future13.6 is also described as shutdown rather than announced unavailable capacity."
+          }
+        ],
+        "qualifications": [
+          "Known+2.44EUR/MWh comparison across20→21Oct is valid, not previous-day ownreturn.",
+          "Troll current constraint in bullish and future Jackdaw expansion in bearish are directionally coherent.",
+          "N3 is Other/unspecified; calling the specifically cited source a gas field is imprecise."
+        ],
+        "actual_validation_errors": [
+          "news_impact.summary:公告不可用容量不等于计划停产/减供的实际数量；输入未给独立实物流量或交付计划依据，不能把容量改称停产13.0mcm/d。可列公告不可用容量、未来时段及其条件风险"
+        ],
+        "all_prose_fields_reviewed": true,
+        "copied_fact_table_does_not_override_prose": true
+      },
+      {
+        "raw_sha256": "1b6e1aa8508d040d3a39ddbfc55d512d7b4471fc4b36d2b4bd6a648fa7d14afc",
+        "done_reason": "stop",
+        "news_direction": "flat",
+        "close_direction": "up",
+        "verdict": "true_rejection",
+        "errors": [
+          {
+            "priority": "P2",
+            "field": "news_impact.summary",
+            "text": "Troll气田计划停产13.0 mcm/d，但未确认实际流量损失",
+            "finding": "The qualifier that measured flow is unconfirmed does not supply evidence for the explicit13mcm/d shutdown quantity."
+          },
+          {
+            "severity": "output_format",
+            "field": "news_impact.bearish_evidence[0] and analysis.evidence[1]",
+            "text": "[N1]Jackdaw；北海；已获批准；潜在产能≈6%英国北海天然气产量；TFF机制：未来供给↑",
+            "finding": "This is not empty evidence. It has a concrete source fact and future supply mechanism but spells TFF and lacks→/->; the existing TTF/arrow format rule rejects it. Do not misreport as empty-ID-only output."
+          }
+        ],
+        "qualifications": [
+          "Flat news with an up close forecast is not itself contradictory: the close forecast uses a known material up baseline.",
+          "No same-announcement price reaction is asserted; priced-in is explicitly unknown.",
+          "Conflicting gas constraint and future supply expansion can support a weak/net-neutral news judgment; no label quota is imposed."
+        ],
+        "actual_validation_errors": [
+          "news_impact.summary:公告不可用容量不等于计划停产/减供的实际数量；输入未给独立实物流量或交付计划依据，不能把容量改称停产13.0mcm/d。可列公告不可用容量、未来时段及其条件风险",
+          "evidence必须含事实与TTF机制，不能只有编号；格式[N0]事实 → TTF机制"
+        ],
+        "all_prose_fields_reviewed": true,
+        "copied_fact_table_does_not_override_prose": true
+      }
+    ],
+    "automatic084": [
+      {
+        "raw_sha256": "27ae2ea3212e6b018f13f2132378a040ba021882400e1afb9cc366bfb0acbc4e",
+        "done_reason": "stop",
+        "news_direction": "up",
+        "close_direction": "up",
+        "verdict": "true_rejection",
+        "errors": [
+          {
+            "priority": "P2",
+            "field": "news_impact.bullish_evidence[0]",
+            "text": "[N0]英国批准Jackdaw天然气田 → TTF供应潜在增加",
+            "finding": "Supply expansion is put in bullish evidence without a cited contrary demand/expectation mechanism."
+          },
+          {
+            "priority": "P2",
+            "field": "close_forecast.basis",
+            "text": "前一交易日价格已上涨3.033",
+            "finding": "3.033 is current88.095 minus previous-day85.062; it is not the previous-day own change."
+          },
+          {
+            "priority": "P2",
+            "field": "analysis.summary",
+            "text": "Troll维护不影响当前供给",
+            "finding": "The snapshot includes current N3 with unknown flow; maintenance absence of impact cannot be treated as observed current zero-loss."
+          }
+        ],
+        "qualifications": [
+          "Snapshotasof07:14 uses the then-knownN2v1unavailable7.6. Do not retroactively replace withv213.6 published07:29."
+        ],
+        "actual_validation_errors": [
+          "news_impact.bullish_evidence[0]:证据栏与供需机制相反；请移动/重算证据，不能把供应增加放作看涨或供应减少放作看跌",
+          "价格时间角色不符：前日参考(2026-10-20)为85.062 EUR/MWh；当前报价(2026-10-21T07:03:00+00:00)为88.095 EUR/MWh；已观察当前对前日差为3.033。这不是前一交易日自身的涨跌；请明确前日参考/当前观察各自时钟，不把观察差当未来目标幅度或指定预测方向"
+        ],
+        "all_prose_fields_reviewed": true,
+        "copied_fact_table_does_not_override_prose": true
+      },
+      {
+        "raw_sha256": "567da7b584aa12f79070a8bcf21033f1f428ab0af4dd1bf6e9c495a7c46858a6",
+        "done_reason": "stop",
+        "news_direction": "flat",
+        "close_direction": "flat",
+        "verdict": "true_rejection",
+        "errors": [
+          {
+            "priority": "P2",
+            "field": "news_impact.bullish_evidence[0]",
+            "text": "[N0] UK regulator approves Jackdaw gas field → TTF看涨机制",
+            "finding": "Company/project approval joined only to bullish price template lacks an actual source-backed bullish gas mechanism."
+          },
+          {
+            "priority": "P2",
+            "fields": [
+              "news_impact.bearish_evidence[0]",
+              "news_impact.bearish_evidence[1]"
+            ],
+            "text": "TTF机制：供应约束导致价格上涨",
+            "finding": "Both explicit price-up mechanisms are placed in bearish slots."
+          },
+          {
+            "priority": "P2",
+            "field": "close_forecast.basis",
+            "text": "N2、N3计划维护导致约20.6 mcm/d的容量损失，可能抑制价格进一步上涨",
+            "finding": "7.6 and13 apply to non-overlapping24hour intervals and cannot be added into a simultaneous20.6mcm/d rate. A supply constraint is also incorrectly used as a bearish brake on price here."
+          },
+          {
+            "priority": "P2",
+            "field": "close_forecast.basis",
+            "text": "前一交易日价格从85.062升至88.095",
+            "finding": "The source is previous-day85.062→current88.095, not a rise of the previous-day price itself."
+          }
+        ],
+        "qualifications": [
+          "Exact duplicate risk strings are handled by the existing deterministic dedup policy; not a new causal defect."
+        ],
+        "actual_validation_errors": [
+          "news_impact.bullish_evidence[0]:项目开启或公司合同事实不能只接TTF涨跌模板；须说明该N有来源的供需/容量风险/预期差传导，不能把公司利好直接当气价利好；净方向仍可flat；news_impact.bearish_evidence[0]:明写的TTF价格方向与证据栏相反，价格上行属看涨栏、价格下行属看跌栏；须按该N来源分栏/解释，不改变净方向；news_impact.bearish_evidence[1]:明写的TTF价格方向与证据栏相反，价格上行属看涨栏、价格下行属看跌栏；须按该N来源分栏/解释，不改变净方向",
+          "close_forecast:已观察同合约价格显著偏离上一日，预测flat/反向须引用输入中相反供需事实并解释回吐/反转；新闻弱或资料缺失不能把已观察变化归零。若不能形成预判，须引用真实供需冲突或价格比较不适用依据，不能仅因弱新闻、缺资料或缺少逆转证据取消有效基准；不得替填方向",
+          "价格时间角色不符：前日参考(2026-10-20)为85.062 EUR/MWh；当前报价(2026-10-21T07:03:00+00:00)为88.095 EUR/MWh；已观察当前对前日差为3.033。这不是前一交易日自身的涨跌；请明确前日参考/当前观察各自时钟，不把观察差当未来目标幅度或指定预测方向"
+        ],
+        "all_prose_fields_reviewed": true,
+        "copied_fact_table_does_not_override_prose": true
+      }
+    ]
+  },
+  "accepted_current": {
+    "analysis_id": "e713a962-366e-4608-aec7-2a3bf032077b",
+    "verdict": "confirmed_invalid",
+    "independent_fullbody_review": {
+      "file": "reports/repair_2026-10-20/independent_production_twelfth_current_live_review_v2_3.json",
+      "sha256": "edbe41e9a4f2d20bf9e76e75774ec3545494b4f7710a480b842015e28a868cd9"
+    },
+    "pending_review": {
+      "file": "reports/repair_2026-10-20/production_twelfth_current_live_pending_review_v2_3.json",
+      "sha256": "3176a4bd25d090b227e47249f1fa3d9c341dac6bb08ad4b863cb63007073e935"
+    },
+    "source_errors": [
+      "Potential future Jackdaw supply expansion in bullish evidence without opposite mechanism.",
+      "All operator notices incorrectly described as future plans;N3is already current andN4is unplanned.",
+      "Unknown current actual flow described as no current loss/no immediate supply shock."
+    ],
+    "valid_price_component": "Current87.505 minus previous-day85.062 equals+2.443EUR/MWh; rounded2.44 is correct and available beforeasof.",
+    "english": "Completed translation source hash matches; faithfully inherits the same source errors and must follow the source brief invalid disposition, not be considered a separately safe forecast."
+  },
+  "completed_live_checkpoint": {
+    "inventory_provenance": "Root read-only DB inventory supplied in collaboration message: created>=2026-10-21T06:33:27Z, exactly3 completed live IDs at the supplied checkpoint. Auditor did not independently query DB.",
+    "rows": [
+      {
+        "analysis_id": "813e86a7-39dd-4411-b0b4-c97d24d8db64",
+        "actual_capture": {
+          "file": "reports/repair_2026-10-20/production_post_source_binding_live_813e86a7_actual_v2_3.json",
+          "sha256": "1c8ebc64a4004b43782b4aab005d37611bf0f7b1063f7150e52507505a92ffe8"
+        },
+        "verdict": "qualified_no_confirmed_P2",
+        "qualifications": [
+          "Known current capacity risk and correctly observed+2.703 reference move; no non-overlapping rate sum or invented measured flow.",
+          "P3limited revision-risk differentiation and overconfident no-obvious-risk wording; not a guarantee."
+        ]
+      },
+      {
+        "analysis_id": "e713a962-366e-4608-aec7-2a3bf032077b",
+        "verdict": "confirmed_invalid",
+        "review": {
+          "file": "reports/repair_2026-10-20/independent_production_twelfth_current_live_review_v2_3.json",
+          "sha256": "edbe41e9a4f2d20bf9e76e75774ec3545494b4f7710a480b842015e28a868cd9"
+        }
+      },
+      {
+        "analysis_id": "7e6485d3-0d43-4dc4-b7e1-1fb42c6d1640",
+        "verdict": "qualified_no_confirmed_P2",
+        "final_reassessment": {
+          "file": "reports/repair_2026-10-20/independent_post_resume_7e6485d3_scope_reassessment_v2_3.json",
+          "sha256": "d541f5f23485485a51c3b8e14072a9d7853346bacb6e53b77df4826e6e9960ed"
+        },
+        "supersedes_initial_invalid_recommendation": true,
+        "withdrawn_manifest_must_not_apply": {
+          "file": "reports/repair_2026-10-20/production_post_resume_7e6485d3_pending_review_v2_3.json",
+          "sha256": "72b89ac89510de52be12f3f096b483503f0a235fa60d26d6dfabc5f4d04a3ee9"
+        },
+        "reason": "Supply-constrained wording can describe unavailable supply capacity when its cited evidence expressly says announced capacity and unknown flow. It does not explicitly claim measured flowloss or shutdown13; a categorical actual-flow-fabrication finding was too strong. P3 oil-field label/imprecise wording retained."
+      }
+    ]
+  },
+  "history_append": {
+    "previous_eleventh_full_review": {
+      "file": "reports/repair_2026-10-20/independent_production_eleventh_terminal_full_review_v2_3.json",
+      "sha256": "26f0831523f88fd7fe5b4c0e7aee2cc6d4a5ed94c5ecd3f5d88573ff584e36cf"
+    },
+    "append_attempt": 12,
+    "original_status": "failed",
+    "manual_analysis_id": "3a9abc6e-935e-4adf-8250-e0e53f17b810",
+    "manual_calls": 2,
+    "manual_result_is_null": true,
+    "current_analysis_id": "e713a962-366e-4608-aec7-2a3bf032077b",
+    "current_calls": 1,
+    "current_returned_but_semantically_invalid": true,
+    "manual_detail_delivered": false,
+    "manual_English_delivered": false,
+    "current_English_completed_but_source_invalid": true,
+    "resulting_complete_attempt_count": 12,
+    "resulting_failed_complete_attempt_count": 12,
+    "successful_complete_attempt_count": 0,
+    "prior_eleven_entries_unmodified": true,
+    "shared_history_not_overwritten": true
+  },
+  "failed_stages": [
+    "manual_real_brief"
+  ],
+  "missing_required_stages": [
+    "chinese_originals_unchanged_after_translation",
+    "english_brief_actual_text_labels_numbers",
+    "english_detail_actual_text_labels_numbers",
+    "manual_detail_request",
+    "manual_real_brief",
+    "manual_real_detail",
+    "sse_completed_event_replay"
+  ],
+  "original_preservation_check": {
+    "passed": true,
+    "protected_analysis_count": 164,
+    "protected_nonnull_field_count": 300,
+    "current_analysis_count": 169,
+    "new_analysis_count": 5,
+    "protected_snapshot_count": 5,
+    "new_snapshot_count": 0,
+    "original_validation_record_count": 1,
+    "latest_baseline_unchanged": true,
+    "original_baseline": {
+      "id": 210,
+      "created_at": "2026-10-14T05:51:48.181167+00:00",
+      "type": "validation_started"
+    },
+    "failures": []
+  },
+  "functional_state": "API, source collection, SSE reconnect and CSV/JSONL exports are reachable in the actual workflow. Manual model generation failed before detail/English could run. A returned current brief still contains known source/causal errors. Mixed real news is outside the narrow Gassco grammar scope, so its private pilot success is not full product success.",
+  "release_ready": false,
+  "all_eight_known_error_families_remain_open": true,
+  "no_new_guard_layer_or_architecture_proposed": true,
+  "new_model_calls": 0,
+  "database_access": false,
+  "network_calls": 0,
+  "source_modified_by_auditor": false,
+  "canonical_predictions_modified": false,
+  "official_settlement_accuracy": null
+}

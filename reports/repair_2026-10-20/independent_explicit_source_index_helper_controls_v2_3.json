@@ -1,0 +1,31 @@
+{
+  "candidate_helper_sha256": "7d051013abf0cd24d47645503410680f28f02bffc16b02a6a8b20985670689eb",
+  "core_analysis_sha256": "1aebeb8971f13f61fd8bd4f9ab961b6284e811aeb773014ef7cc71874c94375c",
+  "core_semantics_sha256": "d054bc812a80e0d28bfc95a098731b6b556ad0304a9775db0ec4d00d660d2d9a",
+  "base_helper_observed_path": ".runtime/github-publish/scripts/repair-validation-report.py",
+  "base_helper_observed_sha256": "07e49fbc82c5acc6987a9a6890e2cce34869895c67f5f2c210c2580a5260747c",
+  "self_tests_passed": 293,
+  "test_log": {
+    "file": "reports/repair_2026-10-20/independent-explicit-source-index-helper-tests-v2_3.log",
+    "sha256": "0437b39df119d66326134861fb518fc7dcb052de347c817d0df7efabc4d1d6b9"
+  },
+  "actual_pilot_manual_raw_revalidated": {
+    "raw_sha256": "b179f6da281a7b2f183779137c2e80a6bc404fa392dc41d281b4d4a3eacbcd8f",
+    "new_helper_result": {
+      "passed": false,
+      "error_type": "ValueError",
+      "reason": "analysis.summary:N0公告开始2026-10-22T06:00:00+0200，截至分析时点尚未开始；目标结算窗口结束时或之后开始；开始时刻不证明实际流量损失；不能把该未来公告的容量下降写成本窗口内已发生的物理容量变化。窗口内公布计划不等于计划已生效；可分别陈述该N起止与容量安排，并讨论未来价格预期，不证明实际流量损失或指定净方向"
+    },
+    "record_unmodified": true
+  },
+  "complete_module_ast_matches_base_after_removing_only": {
+    "kw": 1,
+    "new_test": 1
+  },
+  "initial_extra_harness_assertion_corrections": [
+    "Initial check expected failure text in key error; helper correctly returns it in reason.293 selftests and actual gate rejection already passed; no source changed.",
+    "Root applied the reviewed helper after provisional signoff, so the second AST check compared against a now-updated root file. The final comparison uses the SHA-verified07e49 byte-identical earlier helper still observed in the existing publication clone."
+  ],
+  "no_model_api_or_project_database_operations": true,
+  "self_tests_use_only_synthetic_in_memory_database": true
+}

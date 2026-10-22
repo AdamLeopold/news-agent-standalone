@@ -1,0 +1,40 @@
+{
+  "scope": "Finite predeployment real-source diagnostics; original bodies and failures preserved, not an accuracy evaluation.",
+  "files": [
+    {
+      "source": ".runtime/structured-reasoning-v4/clause-id-v2/real_batch_01/chevron_historical.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_2/chevron_historical.json",
+      "sha256": "9b0d30497b11c9e9fbf15c43e3e2eada640cb01530276b17bd8531886b64cad3"
+    },
+    {
+      "source": ".runtime/structured-reasoning-v4/clause-id-v2/real_batch_01/current_mixed_live.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_2/current_mixed_live.json",
+      "sha256": "06ebe48022b7b79a2a9f0121b157d75933cad55f9c1511099af031c0a8f418e4"
+    },
+    {
+      "source": ".runtime/structured-reasoning-v4/clause-id-v2/real_batch_01/eia_historical.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_2/eia_historical.json",
+      "sha256": "4e0ce27de64be59be7193d3f457419338890529a725b2d600ed803db0da2826e"
+    },
+    {
+      "source": ".runtime/structured-reasoning-v4/clause-id-v2/real_batch_01/epcm.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_2/epcm.json",
+      "sha256": "7032366c1b60b9a8141de462a95ca1991f14bdb34e2f7fd564c9774187377d15"
+    },
+    {
+      "source": ".runtime/structured-reasoning-v4/clause-id-v2/real_batch_01/independent_review.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_2/independent_review.json",
+      "sha256": "5f645f223f51862df38f62ce4ecc9a6130c61fced6a3b6c25a2fb73350351842"
+    },
+    {
+      "source": ".runtime/structured-reasoning-v4/clause-id-v2/real_batch_01/p12_manual.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_2/p12_manual.json",
+      "sha256": "c60e63150ab7422ba45299dcc2f0d1a9edf7170d64ebd4143cf60218de3fb6cd"
+    },
+    {
+      "source": ".runtime/structured-reasoning-v4/clause-id-v2/real_batch_01/summary.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_2/summary.json",
+      "sha256": "0fdd7551c3c9ee7e1357d78f8f4fc08163973bb54be55116eb3fc1ada96f284e"
+    }
+  ]
+}

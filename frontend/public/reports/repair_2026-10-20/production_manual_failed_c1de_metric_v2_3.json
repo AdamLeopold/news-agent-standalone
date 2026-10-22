@@ -1,0 +1,106 @@
+{
+  "id": 19537,
+  "created_at": "2026-10-20T23:01:05.815267+00:00",
+  "type": "model_failure",
+  "data": {
+    "analysis_id": "c1de63c0-8ad3-436f-bac4-92362e8dd476",
+    "kind": "short",
+    "seconds": 172.896,
+    "error": "模型JSON两次校验失败，未生成方向：close_forecast.basis:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知；close_forecast.basis:输入没有这条公告的价格反应观测，不能断言未影响当前价格或价格未受影响；可判断当前新闻压力较弱、未来公告不计作当前停供，并说明价格反应未知",
+    "model_metadata": {
+      "prompt_version": "ttf-news-standalone-2.3",
+      "reasoning": "medium",
+      "configured_reasoning": "medium",
+      "semantic_high_retry_enabled": false,
+      "semantic_high_scope": "operator_notice",
+      "semantic_high_scope_eligible": false,
+      "semantic_high_eligible": false,
+      "semantic_independent_regeneration": false,
+      "model_calls": [
+        {
+          "num_ctx": 16384,
+          "num_predict": 3072,
+          "input_token_ceiling": 12800,
+          "input_token_estimate": 9009,
+          "retry_policy": "disabled",
+          "semantic_independent_regeneration": false,
+          "semantic_high_scope": "operator_notice",
+          "semantic_high_scope_eligible": false,
+          "semantic_high_eligible": false,
+          "system_prompt_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911",
+          "response_schema_sha256": "ff0252ed7f85ba96493064ba4af4c8edc889938641adf142d9d4fa80369054dc",
+          "context_sha256": "a6430f828f09ff5c833e08b5690e2a9a13c42afac372d689f591c5a0b605d467",
+          "prompt_eval_count": 8956,
+          "eval_count": 1538,
+          "done_reason": "stop",
+          "total_duration_ns": 99361282500,
+          "raw_content": "{\"source_fact_checks\":{\"fact_contract_version\":\"operator-facts-2.2\",\"operator_notices\":[{\"id\":\"N1\",\"facility\":\"Troll\",\"facility_type\":\"气田/生产设施\",\"notice_type\":\"计划\",\"unavailable_capacity\":\"7.6\",\"period_utc\":[\"2026-10-22T04:00Z\",\"2026-10-23T04:00Z\"],\"state_description\":\"未来公告\",\"cause_original\":\"Yearly maintenance\"},{\"id\":\"N2\",\"facility\":\"Troll\",\"facility_type\":\"类别未给\",\"notice_type\":\"计划\",\"unavailable_capacity\":\"13.0\",\"period_utc\":[\"2026-10-21T04:00Z\",\"2026-10-22T04:00Z\"],\"state_description\":\"未来公告\",\"cause_original\":\"Yearly maintenance\"}],\"capacity_scope\":\"公告不可用容量，非实际流量计量\",\"pricing_observation\":{\"observed_at\":\"2026-10-20T20:59:00+00:00\",\"available_at\":\"2026-10-20T21:09:54.498786+00:00\",\"clock_roles\":{\"observed_at\":\"报价发生时刻\",\"available_at\":\"本机获知时刻；不是报价发生时刻\"},\"current_news_timing\":{\"id\":\"N0\",\"publication_time\":\"2026-10-19T07:51:38+00:00\",\"quote_relation\":\"at_or_after_publication\",\"quote_role\":\"已观察市场基准；单个报价不证明公告反应\"},\"reaction_evidence_available\":false,\"pricing_status\":\"无法确认是否已计价；不是尚未计价或价格无反应\"},\"non_overlapping_notice_ids\":[[\"N1\",\"N2\"]]},\"news_impact\":{\"bullish_evidence\":[],\"bearish_evidence\":[],\"neutralizing_evidence\":[\"[N0] 发现新油气资源 → 未来供给潜力，但未产生即时供给变化\",\"[N1]Troll；计划；公告不可用容量7.6mcm/d；未来容量公告；实流未知；TTF机制：无即时供给损失\",\"[N2]Troll；计划；公告不可用容量13.0mcm/d；未来容量公告；实流未知；结束时间修订：2026-10-23T06:00:00+0200→2026-10-22T06:00:00+0200；TTF机制：无即时供给损失\"],\"summary\":\"截至2026‑10‑20，已知新闻均为未来公告或资源发现，未导致即时供给变化，故对TTF价格的净影响为平稳。\",\"contextual_news_score\":0,\"direction\":\"flat\",\"confidence\":0.6,\"signal_strength\":\"weak\"},\"close_forecast\":{\"basis\":\"截至2026‑10‑20，市场基准价为86.325，未提供前一交易日参考价，且无已计价新闻的即时价格反应，故缺乏足够信息判断收盘相对前一结算日的涨跌。\",\"summary\":\"缺乏前一交易日基准价与即时价格反应，无法确定收盘相对前一结算日的涨跌。\",\"evidence_status\":\"insufficient_evidence\",\"direction\":null,\"confidence\":0.4,\"extreme_move_risk\":\"无可用基准价，无法评估极端价格变动风险\"},\"analysis\":{\"summary\":\"N0为资源发现，N1、N2为未来计划停产公告，均未导致即时供给损失，故对TTF价格的净影响为平稳。\",\"evidence\":[\"[N0] 发现新油气资源 → 未来供给潜力\",\"[N1]Troll；计划；公告不可用容量7.6mcm/d；未来容量公告；实流未知；TTF机制：无即时供给损失\",\"[N2]Troll；计划；公告不可用容量13.0mcm/d；未来容量公告；实流未知；结束时间修订：2026-10-23T06:00:00+0200→2026-10-22T06:00:00+0200；TTF机制：无即时供给损失\"],\"negation_or_reversal\":[],\"priced_in_comment\":\"price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格\",\"matched_terms\":[],\"historical_comparisons\":[]},\"risk_flags\":[\"coverage:来源gdelt：最近采集失败；错误后等待重试\",\"coverage:来源gdelt：最近采集失败；错误后等待重试\",\"coverage:来源gdelt：最近采集失败；错误后等待重试\",\"coverage:来源gdelt：最近采集失败；错误后等待重试\",\"coverage:来源gdelt：最近采集失败；错误后等待重试\"],\"references\":[{\"id\":\"N0\",\"url\":\"\"},{\"id\":\"N1\",\"url\":\"\"},{\"id\":\"N2\",\"url\":\"\"}],\"missing_fields\":[]}",
+          "reference_resolution": {
+            "raw_reference_ids": [
+              "N0",
+              "N1",
+              "N2"
+            ],
+            "added_by_backend": [],
+            "input_provenance": {}
+          },
+          "validation_stage": "fact_or_mechanism",
+          "validation_errors": [
+            "close_forecast.basis:缺少公告前后价格反应，不能宣称已计价/已消化；须区分计价未知"
+          ],
+          "validation_error": "close_forecast.basis:缺少公告前后价格反应，不能宣称已计价/已消化；须区分计价未知",
+          "request_reasoning": "medium"
+        },
+        {
+          "num_ctx": 16384,
+          "num_predict": 3072,
+          "input_token_ceiling": 12800,
+          "input_token_estimate": 9455,
+          "retry_policy": "disabled",
+          "semantic_independent_regeneration": false,
+          "semantic_high_scope": "operator_notice",
+          "semantic_high_scope_eligible": false,
+          "semantic_high_eligible": false,
+          "system_prompt_sha256": "00d2ba40a7be68c1f400a98f7d3aedcd01e87448dd679e86d4f7fc0543a17176",
+          "response_schema_sha256": "ff0252ed7f85ba96493064ba4af4c8edc889938641adf142d9d4fa80369054dc",
+          "context_sha256": "776bab81d265f6bd16f46dcebebf8d0f67b6dc374d04f79ce22be5a0e21543c2",
+          "repair_draft": {
+            "version": "ttf-untrusted-repair-draft-1",
+            "previous_raw_sha256": "d4f681430c5004ef554a79457ca962ea0db62073264c2cc51dce232724cd8f1d",
+            "is_evidence": false,
+            "included": true,
+            "payload_sha256": "c023a0e8de35bece434011cc1353f9bd5b668d3b930f0eb112f9e5109906a562",
+            "payload_tokens": 285,
+            "input_token_estimate": 9455,
+            "input_token_ceiling": 12800,
+            "source_facts_sha256": "578f61a0539e5a4fbb8aa3deb06fa205b194692ec042c6ca69ebe04837e44ac2",
+            "summary_character_limit": 280,
+            "evidence_limit": 6
+          },
+          "prompt_eval_count": 9402,
+          "eval_count": 1160,
+          "done_reason": "stop",
+          "total_duration_ns": 72704112625,
+          "raw_content": "{\"news_impact\":{\"direction\":\"flat\",\"contextual_news_score\":0,\"confidence\":0.7,\"signal_strength\":\"weak\",\"summary\":\"截至2026‑10‑20，已知新闻均为未来公告或资源发现，未导致即时供给变化，故对TTF价格的净影响为平稳。\",\"bullish_evidence\":[],\"bearish_evidence\":[],\"neutralizing_evidence\":[\"[N0] 发现并将永久封堵，未导致即时供给变化 → TTF无即时供给压力\",\"[N1] 计划气田停产（7.6 mcm/d）从10/22开始，未影响当前供给 → TTF无即时供给压力\",\"[N2] 计划其他停产（13.0 mcm/d）从10/21开始，未影响当前供给 → TTF无即时供给压力\"]},\"close_forecast\":{\"direction\":null,\"confidence\":0.5,\"summary\":\"缺乏前一交易日参考价及新闻价格反应，无法判断收盘相对前一结算日的涨跌。\",\"basis\":\"市场基准价86.325，但无前一交易日参考价，且新闻未产生即时价格反应，故无法判断。\",\"extreme_move_risk\":\"缺乏前一交易日参考价，无法确认价格基准。\",\"evidence_status\":\"insufficient_evidence\"},\"analysis\":{\"summary\":\"截至2026‑10‑20，已知新闻均为未来公告或资源发现，未导致即时供给变化，故对TTF价格的净影响为平稳。\",\"evidence\":[\"[N0] 发现并将永久封堵，未导致即时供给变化 → TTF无即时供给压力\",\"[N1] 计划气田停产（7.6 mcm/d）从10/22开始，未影响当前供给 → TTF无即时供给压力\",\"[N2] 计划其他停产（13.0 mcm/d）从10/21开始，未影响当前供给 → TTF无即时供给压力\"],\"negation_or_reversal\":[],\"priced_in_comment\":\"无法确认是否已计价\",\"matched_terms\":[],\"historical_comparisons\":[]},\"risk_flags\":[],\"references\":[{\"id\":\"N0\",\"url\":\"\"},{\"id\":\"N1\",\"url\":\"\"},{\"id\":\"N2\",\"url\":\"\"}],\"missing_fields\":[]}",
+          "reference_resolution": {
+            "raw_reference_ids": [
+              "N0",
+              "N1",
+              "N2"
+            ],
+            "added_by_backend": [],
+            "input_provenance": {}
+          },
+          "validation_stage": "fact_or_mechanism",
+          "validation_errors": [
+            "close_forecast.basis:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应",
+            "close_forecast.basis:输入没有这条公告的价格反应观测，不能断言未影响当前价格或价格未受影响；可判断当前新闻压力较弱、未来公告不计作当前停供，并说明价格反应未知"
+          ],
+          "validation_error": "close_forecast.basis:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知；close_forecast.basis:输入没有这条公告的价格反应观测，不能断言未影响当前价格或价格未受影响；可判断当前新闻压力较弱、未来公告不计作当前停供，并说明价格反应未知",
+          "request_reasoning": "medium"
+        }
+      ],
+      "context_sha256": "776bab81d265f6bd16f46dcebebf8d0f67b6dc374d04f79ce22be5a0e21543c2"
+    }
+  }
+}

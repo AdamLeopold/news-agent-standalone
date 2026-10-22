@@ -1,0 +1,81 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T04:57:22.318302+00:00",
+  "scope": "Ninth original production terminal workflow and all available full Chinese actuals. No absent detail or English output is treated as delivered.",
+  "workflow": {
+    "file": "reports/repair_2026-10-20/production_ninth_full_workflow_v2_3.json",
+    "sha256": "026deaf6272de76b6e90e78742d0da6d20893ba61f26b71e0b7a06d472ff3bbd"
+  },
+  "workflow_original_status": "failed",
+  "manual_failed_full_prose_review": {
+    "file": "reports/repair_2026-10-20/independent_production_ninth_manual_failed_terminal_review_v2_3.json",
+    "sha256": "71c07e82601aeed39c0ea1c3259f266ced8cfa031de215b2d86756583fc46a2c"
+  },
+  "current_live_full_prose_review": {
+    "file": "reports/repair_2026-10-20/independent_production_ninth_current_live_initial_review_v2_3.json",
+    "sha256": "6e87e04322f3c9b363025f57d84cc1c815256e1f82e577d02cf7fa28752a3562"
+  },
+  "current_metadata_pending_review_payload": {
+    "file": "reports/repair_2026-10-20/production_ninth_current_price_role_pending_review_v2_3.json",
+    "sha256": "42cccefb999be4c08a6a066fe44183441959625ab8d4fe8987e51e2b4d26ba85"
+  },
+  "manual_brief": {
+    "analysis_id": "c4fd5ed5-ae2c-4e43-8ae5-c75faa314810",
+    "terminal": "failed",
+    "actual_attempts": 2,
+    "true_bad_bodies": 2,
+    "delivered_result": false,
+    "direction_not_scored_correct": true
+  },
+  "current_live": {
+    "analysis_id": "ff3fdde7-4f67-487b-92ea-b612da62941a",
+    "original_terminal": "completed",
+    "actual_attempts": 2,
+    "independently_safe": false,
+    "material_error_family": "observed_price_baseline_temporal_role",
+    "original_prediction_preserved": true
+  },
+  "manual_detail": {
+    "requested": false,
+    "delivered": false
+  },
+  "manual_brief_english": {
+    "delivered": false,
+    "reason": "The required manual brief did not complete."
+  },
+  "manual_detail_english": {
+    "delivered": false,
+    "reason": "No manual detail output exists for this failed workflow."
+  },
+  "current_english_full_body_reviewed": false,
+  "preservation": {
+    "workflow_reports_prior_155_records_5_snapshots_baseline210_unchanged": true,
+    "audit_performed_no_database_access": true
+  },
+  "infrastructure_passes_are_not_model_logic_passes": [
+    "SSE initial/reconnect",
+    "CSV/JSONL exports",
+    "managed service identity",
+    "current result structure",
+    "original record preservation"
+  ],
+  "failed_stages": [
+    "manual_real_brief"
+  ],
+  "missing_required_stages": [
+    "chinese_originals_unchanged_after_translation",
+    "english_brief_actual_text_labels_numbers",
+    "english_detail_actual_text_labels_numbers",
+    "manual_detail_request",
+    "manual_real_brief",
+    "manual_real_detail",
+    "sse_completed_event_replay"
+  ],
+  "prior_eight_whole_failures_preserved": true,
+  "overall_release_passed": false,
+  "new_model_calls": 0,
+  "database_access": false,
+  "network_calls": false,
+  "source_modification": false
+}

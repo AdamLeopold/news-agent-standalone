@@ -89,8 +89,9 @@ def test_legacy_outcomes_are_archived_but_not_model_evidence(tmp_path):
         db.upsert_event({"id": "legacy-event", "title": "Norway supply outage", "summary": "Historic daily aggregate", "event_date": "2024-01-01", "known_at": "2026-10-14T02:00:00+00:00", "source": "legacy_daily",
                          "legacy_label": "extreme_up", "legacy_outcomes": {"future_delta": 900, "Explanation": "Test forbidden label"}, "outcome_available_at": None})
     ctx = build_context(db, {"id": "manual", "title": "Norway supply outage", "summary": "Supply fell"}, as_of="2026-10-14T03:00:00+00:00", kind="manual")
-    assert "legacy_outcomes" not in ctx["historical_events"][0]
-    assert "legacy_label" not in ctx["historical_events"][0]
+    # The archive remains queryable, but a whole daily bundle is not an atomic
+    # event and cannot be inserted as a single historical price analogue.
+    assert ctx["historical_events"] == []
     assert "legacy_outcomes" in db.events()[0]
     model_input, _ = prepare_context(ctx)
     assert "forbidden" not in json.dumps(model_input)
@@ -125,9 +126,9 @@ def test_same_contract_threshold_excludes_target_day_and_different_contract(tmp_
     for index, day in enumerate(sorted(days)):
         value = 40 + (index % 4) * 0.10
         history.append(value)
-        db.upsert_price({"contract": "A", "delivery_month": "2026-11-01", "day": day, "value": value, "price_type": "settlement", "verified": True})
-        db.upsert_price({"contract": "B", "delivery_month": "2026-12-01", "day": day, "value": 1000 * index, "price_type": "settlement", "verified": True})
-    db.upsert_price({"contract": "A", "delivery_month": "2026-11-01", "day": "2026-10-14", "value": 9999, "price_type": "settlement", "verified": True})
+        db.upsert_price({"contract": "A", "delivery_month": "2026-11-01", "day": day, "value": value, "price_type": "settlement", "verified": True,"known_at":"2026-10-14T00:00:00+00:00"})
+        db.upsert_price({"contract": "B", "delivery_month": "2026-12-01", "day": day, "value": 1000 * index, "price_type": "settlement", "verified": True,"known_at":"2026-10-14T00:00:00+00:00"})
+    db.upsert_price({"contract": "A", "delivery_month": "2026-11-01", "day": "2026-10-14", "value": 9999, "price_type": "settlement", "verified": True,"known_at":"2026-10-14T00:00:00+00:00"})
     ref = price_context(db, "2026-10-14T03:00:00+00:00")
     expected_sigma = statistics.stdev([b-a for a,b in zip(history, history[1:])][-60:])
     assert ref["contract"] == "A" and ref["previous_price"] == history[-1]

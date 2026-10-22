@@ -1,0 +1,26 @@
+{
+  "applied": true,
+  "files": [
+    {
+      "file": "ttf_news/analysis.py",
+      "sha256": "baec41f3ee2f67949264bcb3790365bf2ce9270071a0923ed8a39cb078d62dfb"
+    },
+    {
+      "file": "ttf_news/semantics.py",
+      "sha256": "07632831d7335b0138203b78f55e4bc221c92d761628a40f09a4330834049028"
+    },
+    {
+      "file": "tests/test_seventh_source_scope.py",
+      "sha256": "3e48460ab9dcf75ee9f4c9b72494d330cd1e5b6de91f193200a8e2091ba1d69e"
+    },
+    {
+      "file": "tests/fixtures/seventh_source_scope_actual_v2_3.json",
+      "sha256": "52772b9e9a36d5a2978f7a6b675c06cfb7cb0d6fd615c47ad0bc3d894d8a0355"
+    }
+  ],
+  "new_model_calls": 0,
+  "prior_runtime_archived": true,
+  "canonical_predictions_modified": false,
+  "scope": "Six finite source-output validation corrections; the seventh original raw failures and original terminal statuses are retained. Root source application does not claim a running-backend or model pass.",
+  "candidate_proof_sha256": "619908f3aecf1432a3c106c07f16fa091a68de78436bc435d8304bf240d5fab1"
+}

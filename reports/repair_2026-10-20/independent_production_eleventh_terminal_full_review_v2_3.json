@@ -1,0 +1,290 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T06:44:52.350834+00:00",
+  "scope": "All4 complete eleventh-production raw bodies and source/price clocks; concise immutable failure review and history append. No additional general semantic rule requested.",
+  "workflow": {
+    "file": "reports/repair_2026-10-20/production_eleventh_full_workflow_v2_3.json",
+    "sha256": "b46b1c63ed2b0ec4ab8da0f38c3c48952d6bac02a339365cf2d30fe801c78f91"
+  },
+  "manual_capture": {
+    "file": "reports/repair_2026-10-20/production_eleventh_manual_brief_actual_v2_3.json",
+    "sha256": "1e2e4f2b84a034564b372a971f5f83a9aa2948559eca94dba5b81bc8e8d8b541"
+  },
+  "current_capture": {
+    "file": "reports/repair_2026-10-20/production_eleventh_current_live_actual_v2_3.json",
+    "sha256": "64c7c95ddd23506a2726cd3ab295adec83a8d17f2a266e3a3cf831471fe65b2f"
+  },
+  "server_pid": 76233,
+  "actual_generation_source_sha256": {
+    "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+    "ttf_news/analysis.py": "5fbbadb4a01a8a4390ddc27f5c9958e79f13da9cf974c86390c2271a1b22e1f6",
+    "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+    "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+    "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+    "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+    "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+    "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+    "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+    "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+    "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+    "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987",
+    "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+    "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+    "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+    "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+    "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+    "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+    "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+    "ttf_news/public_gateway.py": "08990e223d5e7d1d348967c9625fd29fc2d1e7e58bb000c964b9cfea43b59952",
+    "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+    "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+    "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+    "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+    "ttf_news/semantics.py": "d054bc812a80e0d28bfc95a098731b6b556ad0304a9775db0ec4d00d660d2d9a",
+    "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+    "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+    "ttf_news/translation.py": "d47b232a5f77ea68e2d5bc5d092021e9727e555c6b1dd702922325519982d7c5"
+  },
+  "input_as_of": {
+    "manual": "2026-10-21T06:33:56.144877+00:00",
+    "current": "2026-10-21T06:33:54.445806+00:00"
+  },
+  "known_price": {
+    "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+    "contract_name": "Nov26",
+    "previous_date": "2026-10-20",
+    "previous_reference": 85.062,
+    "current_quote": 88.28,
+    "delta": 3.218,
+    "unit": "EUR/MWh",
+    "observed_at": "2026-10-21T06:23:00+00:00",
+    "available_at": "2026-10-21T06:33:27.385604+00:00",
+    "price_type": "reference / delayed_last_trade",
+    "official_settlement_verified": false,
+    "quote_known_before_both_as_of": true,
+    "single_quote_not_announcement_reaction": true
+  },
+  "notice_facts": {
+    "N0_N1_same_notice": "Exact manual copy now canonicalized asN0future, N1duplicate pointer; ledger2notices.",
+    "N0": "Future22Oct04→23Oct04Z unavailable7.6; available129.8; field/production facility; actualflowunknown.",
+    "N2": "Current21Oct04→22Oct04Z unavailable13; available124.3; Other/specifictypeunknown; end shortened23→22Oct04Z; actualflowunknown.",
+    "nonoverlap_rates_not_simultaneous_sum": true
+  },
+  "full_raw_reviews": [
+    {
+      "role": "manual",
+      "attempt": 1,
+      "raw_sha256": "06d51e2d5ae768fb12f713b54f1e5382313794b1b9a750a8d0da46eba4b81768",
+      "full_body_fields_reviewed": [
+        "source_fact_checks",
+        "news_impact",
+        "close_forecast",
+        "analysis",
+        "risk_flags",
+        "references",
+        "missing_fields"
+      ],
+      "original_validation_errors": [
+        "两项公告容量属于不重叠时段，不能相加为同一时刻mcm/d容量下降；请按各N起止分别列出，不把相邻时段的速率求和",
+        "analysis.summary:N0公告开始2026-10-22T04:00:00+00:00，截至分析时点尚未开始；目标结算窗口结束时或之后开始；开始时刻不证明实际流量损失；不能把该未来公告的容量下降写成本窗口内已发生的物理容量变化。窗口内公布计划不等于计划已生效；可分别陈述该N起止与容量安排，并讨论未来价格预期，不证明实际流量损失或指定净方向"
+      ],
+      "directions_as_generated": {
+        "news": "flat",
+        "close": "up"
+      },
+      "verdict": "true_errors_rejected",
+      "confirmed_P2": [
+        {
+          "path": "news_impact.summary / analysis.summary",
+          "quote": "总计20.6 mcm/d / 累计可用容量下降20.6 mcm/d",
+          "error": "Nonoverlapping13 and7.6 daily capacity rates cannot be added into simultaneous20.6. N0starts22Oct04Z after target window; a current-window accumulated decline also misstates timing."
+        }
+      ],
+      "false_positive_diagnostics": []
+    },
+    {
+      "role": "manual",
+      "attempt": 2,
+      "raw_sha256": "87bdb68fd83ba5eb82a77e184d35335422ae813b45e1186f1c7ea01961107e82",
+      "full_body_fields_reviewed": [
+        "source_fact_checks",
+        "news_impact",
+        "close_forecast",
+        "analysis",
+        "risk_flags",
+        "references",
+        "missing_fields"
+      ],
+      "original_validation_errors": [
+        "close_forecast.basis:Gassco公告撤销/结束或实际流量未确认，不能证明未形成供需冲击、供应不受影响或实际流量无变化；须有独立无变化计量事实。可写输入未显示冲击证据或恢复待核实，不能把缺测写成无冲击",
+        "analysis.summary:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景",
+        "价格时间角色不符：前日参考(2026-10-20)为85.062 EUR/MWh；当前报价(2026-10-21T06:23:00+00:00)为88.28 EUR/MWh；已观察当前对前日差为3.218。这不是前一交易日自身的涨跌；请明确前日参考/当前观察各自时钟，不把观察差当未来目标幅度或指定预测方向"
+      ],
+      "directions_as_generated": {
+        "news": "flat",
+        "close": "up"
+      },
+      "verdict": "true_errors_rejected",
+      "confirmed_P2": [
+        {
+          "path": "analysis.summary",
+          "quote": "公告未形成实际供气损失",
+          "error": "Independent actual-flow state is unknown; this categorical no-loss fact is unsupported."
+        },
+        {
+          "path": "close_forecast.basis",
+          "quote": "公告仅为计划或未确认流量，未形成显著供需冲击",
+          "error": "Missing flow confirmation is used to establish an absent supply-demand shock."
+        },
+        {
+          "path": "close_forecast.basis",
+          "quote": "前一交易日价格上涨3.218EUR/MWh",
+          "error": "3.218 is today/current88.28 minus previous-day reference85.062; it is not the prior trading day’s own return."
+        }
+      ],
+      "false_positive_diagnostics": []
+    },
+    {
+      "role": "current_live",
+      "attempt": 1,
+      "raw_sha256": "e4ca6eec957cc6f0fe9ce3ec0c0239944a6b7c1116a7523ed31590d89aac2fa8",
+      "full_body_fields_reviewed": [
+        "source_fact_checks",
+        "news_impact",
+        "close_forecast",
+        "analysis",
+        "risk_flags",
+        "references",
+        "missing_fields"
+      ],
+      "original_validation_errors": [
+        "该设施所述容量字段/数值没有匹配的N公告来源；下降额、绝对可用容量及公告类型须按同一来源核对"
+      ],
+      "directions_as_generated": {
+        "news": "up",
+        "close": "up"
+      },
+      "verdict": "true_capacity_error_rejected",
+      "confirmed_P2": [
+        {
+          "path": "analysis.summary",
+          "quote": "可用容量下降20.6 mcm/d（7.6+13.0）",
+          "error": "The rate aggregation ignores nonoverlapping event intervals; copied correct source fact table does not validate incorrect prose."
+        }
+      ],
+      "false_positive_diagnostics": []
+    },
+    {
+      "role": "current_live",
+      "attempt": 2,
+      "raw_sha256": "00c5233792b76de41112e8678ea3add7ab1bdaab7613f4f2d20350d026f64c71",
+      "full_body_fields_reviewed": [
+        "source_fact_checks",
+        "news_impact",
+        "close_forecast",
+        "analysis",
+        "risk_flags",
+        "references",
+        "missing_fields"
+      ],
+      "original_validation_errors": [
+        "N0容量字段unavailable原值为7.6mcm/d，不是13.0；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算"
+      ],
+      "directions_as_generated": {
+        "news": "up",
+        "close": "up"
+      },
+      "verdict": "secondary_source_binding_false_positive_with_mechanism_qualifications",
+      "confirmed_P2": [],
+      "false_positive_diagnostics": [
+        {
+          "diagnostic": "N0容量字段unavailable原值为7.6mcm/d，不是13.0；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算",
+          "quote": "当前13.0mcm/d容量损失，未来再加7.6mcm/d",
+          "reason": "The body distinguishes current13 andfuture7.6, with N2/N0 source-specific prefixes. It does not explicitly assert N0=13; the diagnostic default-binds an unaliased multi-notice statement toN0. No successful output is retroactively created."
+        }
+      ]
+    }
+  ],
+  "manual_second_historical_comparison_checked": {
+    "source_alias": "E2",
+    "historical_date": "2026-10-16",
+    "reference_1d_delta": 0.4930000000000092,
+    "rounded_in_raw": 0.49,
+    "end_date": "2026-10-19",
+    "outcome_available_at": "2026-10-19T23:42:11.929206+00:00",
+    "known_before_analysis": true,
+    "raw_does_not_attribute_reference_delta_causally": true
+  },
+  "qualifications": [
+    "Current second wording未来再加/进一步压缩 does not explain that13 ends when7.6 starts, or the easing fromN2’s shortened duration. It is ambiguous and incomplete about the marginal mechanism; do not market it as a complete trader analysis or a proven additive shock. No explicit20.6 aggregate appears in that second raw.",
+    "Current second contains a capacity-binding diagnostic false positive, but the original failed service result remainsnull and is not counted as a successful forecast.",
+    "All copied source fact tables retain current/future,unavailable/flowunknown and pricingunknown; immutable tables alone did not prevent free-prose mistakes.",
+    "No official settlement accuracy, prediction correctness, flat quota or direction distribution claim follows from these failed calls.",
+    "No guarantee is established by empty extreme_move_risk or by observed move below the threshold."
+  ],
+  "recommended_next_generation_change": "Study the root-authorized Gassco-only source-derived finite prose options while preserving the full output contract and all gates. Source facts must remain immutable and interval-specific; the model must retain net pressure/forecast/confidence choice. Supply-demand mechanisms, revision effects,unknown flow andunknown pricing must remain distinct. Prior simple table/prefix-removal NO-GO is not adopted.",
+  "no_new_guard_layer_proposed": true,
+  "history_append": {
+    "previous_tenth_full_review": {
+      "file": "reports/repair_2026-10-20/independent_production_tenth_terminal_full_review_v2_3.json",
+      "sha256": "a96f4612ee2a55c40604ec7c416197baf3fa73b420bc4e14b55768f58e047881"
+    },
+    "previous_tenth_history_append": {
+      "file": "reports/repair_2026-10-20/independent_production_tenth_history_append_v2_3.json",
+      "sha256": "68f9c2e3e2c00dff5957c43206c8b821c0b9d655631a4ee329348711c7588692"
+    },
+    "append_attempt": 11,
+    "original_status": "failed",
+    "manual_analysis_id": "d7ed93fa-ac76-4712-8b27-20b9068caefe",
+    "current_analysis_id": "29cd2bf2-73cf-467d-ae3f-c3f1ab3bae33",
+    "manual_calls": 2,
+    "current_calls": 2,
+    "both_result_null": true,
+    "manual_detail_delivered": false,
+    "manual_English_delivered": false,
+    "current_English_delivered": false,
+    "resulting_complete_attempt_count": 11,
+    "resulting_failed_complete_attempt_count": 11,
+    "successful_complete_attempt_count": 0,
+    "prior_ten_entries_unmodified": true,
+    "shared_history_not_overwritten": true
+  },
+  "failed_stages": [
+    "manual_real_brief",
+    "current_live_forecast_v2"
+  ],
+  "missing_required_stages": [
+    "chinese_originals_unchanged_after_translation",
+    "current_live_forecast_v2",
+    "english_brief_actual_text_labels_numbers",
+    "english_detail_actual_text_labels_numbers",
+    "manual_detail_request",
+    "manual_real_brief",
+    "manual_real_detail",
+    "sse_completed_event_replay"
+  ],
+  "original_preservation_check": {
+    "passed": true,
+    "protected_analysis_count": 160,
+    "protected_nonnull_field_count": 295,
+    "current_analysis_count": 163,
+    "new_analysis_count": 3,
+    "protected_snapshot_count": 5,
+    "new_snapshot_count": 0,
+    "original_validation_record_count": 1,
+    "latest_baseline_unchanged": true,
+    "original_baseline": {
+      "id": 210,
+      "created_at": "2026-10-14T05:51:48.181167+00:00",
+      "type": "validation_started"
+    },
+    "failures": []
+  },
+  "release_ready": false,
+  "all_eight_known_error_families_remain_open": true,
+  "new_model_calls": 0,
+  "database_access": false,
+  "network_calls": false,
+  "source_modified_by_auditor": false
+}

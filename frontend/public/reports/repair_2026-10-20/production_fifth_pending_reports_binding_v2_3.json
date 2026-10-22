@@ -1,0 +1,32 @@
+{
+  "created_at": "2026-10-21T02:11:26.435478+00:00",
+  "status": "not_ready",
+  "reason": "Main report inline known-error summary synchronized to all8 open ledger families; fifth original failure remains unchanged.",
+  "main_report": {
+    "file": "reports/logic_repair_validation_2026-10-20.json",
+    "sha256": "d191d858dc1cd5c665c256765e2b38efd63ded3a11146c3c5d8cdc67a38192ff"
+  },
+  "readiness": {
+    "file": "reports/repair_2026-10-20/release_readiness_checks_v2_3.json",
+    "sha256": "e6f164c4972c272fb2d17e0048cd6b71bb6e8807704a8cc131556b671d78f6f4"
+  },
+  "ledger": {
+    "file": "reports/repair_2026-10-20/release_known_accepted_errors.json",
+    "sha256": "e8678ecc833d43029d6da6d3157f941f34e78fde24378710e983ff67ba858c48"
+  },
+  "previous_main_report": {
+    "file": "reports/logic_repair_validation_2026-10-20.c0fde7c7dd55a4cb.json",
+    "sha256": "c0fde7c7dd55a4cb75c6f49ed9978b19dfa9a0f13a42739d1f7ff6ad2fd51d14"
+  },
+  "previous_markdown": {
+    "file": "reports/logic_repair_validation_2026-10-20.d16beab199ce1476.md",
+    "sha256": "d16beab199ce147670bc1d7b8a66eb2dc09e9748830a06f9d0d773bc6760170a"
+  },
+  "previous_readiness": {
+    "file": "reports/repair_2026-10-20/release_readiness_checks_v2_3.bf6da9122a53eb0c.json",
+    "sha256": "bf6da9122a53eb0c3ae1e2e176be780287e4775646ac7bb8a33e0fdbbce6a594"
+  },
+  "new_model_calls": 0,
+  "database_access": false,
+  "network_access": false
+}

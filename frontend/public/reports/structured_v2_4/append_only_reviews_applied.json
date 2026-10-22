@@ -1,0 +1,160 @@
+{
+  "canonical_fields_modified": false,
+  "manifests": [
+    {
+      "manifest": "reports/repair_2026-10-20/production_eighth_auto_future_window_pending_review_v2_3.json",
+      "preflight": {
+        "status": "verified_read_only",
+        "canonical_analyses_modified": false,
+        "reviews": [
+          {
+            "analysis_id": "30db9f1c-7595-4f29-af5e-85e5d1df0a2e",
+            "affected_parts": [
+              "brief"
+            ],
+            "protected_hashes_match": true,
+            "review_id": "future-window-knowledge-30db9f1c-7595-4f29-af5e-85e5d1df0a2e-brief-v1"
+          }
+        ]
+      },
+      "apply": {
+        "status": "applied",
+        "canonical_analyses_modified": false,
+        "reviews": [
+          {
+            "analysis_id": "30db9f1c-7595-4f29-af5e-85e5d1df0a2e",
+            "affected_parts": [
+              "brief"
+            ],
+            "protected_hashes_match": true,
+            "review_id": "future-window-knowledge-30db9f1c-7595-4f29-af5e-85e5d1df0a2e-brief-v1"
+          }
+        ]
+      }
+    },
+    {
+      "manifest": "reports/repair_2026-10-20/production_ninth_current_price_role_pending_review_v2_3.json",
+      "preflight": {
+        "status": "verified_read_only",
+        "canonical_analyses_modified": false,
+        "reviews": [
+          {
+            "analysis_id": "ff3fdde7-4f67-487b-92ea-b612da62941a",
+            "affected_parts": [
+              "brief"
+            ],
+            "protected_hashes_match": true,
+            "review_id": "observed-price-role-ff3fdde7-4f67-487b-92ea-b612da62941a-brief-v1"
+          }
+        ]
+      },
+      "apply": {
+        "status": "applied",
+        "canonical_analyses_modified": false,
+        "reviews": [
+          {
+            "analysis_id": "ff3fdde7-4f67-487b-92ea-b612da62941a",
+            "affected_parts": [
+              "brief"
+            ],
+            "protected_hashes_match": true,
+            "review_id": "observed-price-role-ff3fdde7-4f67-487b-92ea-b612da62941a-brief-v1"
+          }
+        ]
+      }
+    },
+    {
+      "manifest": "reports/repair_2026-10-20/production_post_resume_7e6485d3_pending_review_v2_3.json",
+      "preflight": {
+        "status": "verified_read_only",
+        "canonical_analyses_modified": false,
+        "reviews": [
+          {
+            "analysis_id": "7e6485d3-0d43-4dc4-b7e1-1fb42c6d1640",
+            "affected_parts": [
+              "brief"
+            ],
+            "protected_hashes_match": true,
+            "review_id": "capacity-supply-scope-7e6485d3-0d43-4dc4-b7e1-1fb42c6d1640-brief-v1"
+          }
+        ]
+      },
+      "apply": {
+        "status": "applied",
+        "canonical_analyses_modified": false,
+        "reviews": [
+          {
+            "analysis_id": "7e6485d3-0d43-4dc4-b7e1-1fb42c6d1640",
+            "affected_parts": [
+              "brief"
+            ],
+            "protected_hashes_match": true,
+            "review_id": "capacity-supply-scope-7e6485d3-0d43-4dc4-b7e1-1fb42c6d1640-brief-v1"
+          }
+        ]
+      }
+    },
+    {
+      "manifest": "reports/repair_2026-10-20/production_twelfth_current_live_pending_review_v2_3.json",
+      "preflight": {
+        "status": "verified_read_only",
+        "canonical_analyses_modified": false,
+        "reviews": [
+          {
+            "analysis_id": "e713a962-366e-4608-aec7-2a3bf032077b",
+            "affected_parts": [
+              "brief"
+            ],
+            "protected_hashes_match": true,
+            "review_id": "supply-evidence-notice-state-e713a962-366e-4608-aec7-2a3bf032077b-brief-v1"
+          }
+        ]
+      },
+      "apply": {
+        "status": "applied",
+        "canonical_analyses_modified": false,
+        "reviews": [
+          {
+            "analysis_id": "e713a962-366e-4608-aec7-2a3bf032077b",
+            "affected_parts": [
+              "brief"
+            ],
+            "protected_hashes_match": true,
+            "review_id": "supply-evidence-notice-state-e713a962-366e-4608-aec7-2a3bf032077b-brief-v1"
+          }
+        ]
+      }
+    },
+    {
+      "manifest": "reports/structured_v2_4/formal_81e9_pending_review.json",
+      "preflight": {
+        "status": "verified_read_only",
+        "canonical_analyses_modified": false,
+        "reviews": [
+          {
+            "analysis_id": "81e9b266-73e4-4ce8-824d-e64a57ab076b",
+            "affected_parts": [
+              "brief"
+            ],
+            "protected_hashes_match": true,
+            "review_id": "structured-e85-technology-supply-scope-81e9b266-73e4-4ce8-824d-e64a57ab076b-brief-v1"
+          }
+        ]
+      },
+      "apply": {
+        "status": "applied",
+        "canonical_analyses_modified": false,
+        "reviews": [
+          {
+            "analysis_id": "81e9b266-73e4-4ce8-824d-e64a57ab076b",
+            "affected_parts": [
+              "brief"
+            ],
+            "protected_hashes_match": true,
+            "review_id": "structured-e85-technology-supply-scope-81e9b266-73e4-4ce8-824d-e64a57ab076b-brief-v1"
+          }
+        ]
+      }
+    }
+  ]
+}

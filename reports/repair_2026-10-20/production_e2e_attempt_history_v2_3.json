@@ -1,0 +1,812 @@
+{
+  "generated_at": "2026-10-21T05:07:52.502233+00:00",
+  "prompt_version": "ttf-news-standalone-2.3",
+  "status": "nine_complete_real_production_attempts_failed_not_ready",
+  "scope": "All9 normal real production workflows in this2.3acceptance sequence:2well+4EPCM+3Gassco. Every original failed run, input, result and strict state remains preserved.",
+  "attempt_count": 9,
+  "successful_complete_attempt_count": 0,
+  "attempts": [
+    {
+      "attempt": 1,
+      "actual_report": {
+        "file": "reports/repair_2026-10-20/attempted_v2_3_manual_c1de_smoke.json",
+        "sha256": "63ad3d2a7c79c3293a9940341ddeab72608a6037a9a0cabc09a5bc04cb70bf51"
+      },
+      "status": "failed",
+      "started_at": "2026-10-20T22:55:22.484938+00:00",
+      "finished_at": "2026-10-20T23:01:41.492595+00:00",
+      "prompt_version": "ttf-news-standalone-2.3",
+      "analysis_id": "c1de63c0-8ad3-436f-bac4-92362e8dd476",
+      "source_news_id": "2ca137b8a4dd54deb4d88fc8",
+      "source_title": "Nordic energy players hit paydirt with new gas and condensate discovery",
+      "source_url": "https://offshore-energy.biz/2026/10/19/nordic-energy-players-hit-paydirt-with-new-gas-and-condensate-discovery",
+      "source_body_sha256": "e1f06709f28ac1db272ddcf71962848c9ed8da0e4753867ad782a5608ca51181",
+      "server_pid": 33261,
+      "stage_status": {
+        "preservation_before": "passed",
+        "live_api_v2_and_managed_identity": "passed",
+        "select_real_existing_news": "passed",
+        "ensure_current_v2_live_forecast": "passed",
+        "sse_initial_connection": "passed",
+        "manual_submit_real_news": "passed",
+        "sse_last_event_id_reconnect": "passed",
+        "sse_after_query_reconnect": "passed",
+        "manual_real_brief": "failed",
+        "csv_jsonl_exports": "passed",
+        "current_live_forecast_v2": "passed",
+        "preservation_after": "passed"
+      },
+      "failed_stages": [
+        {
+          "name": "manual_real_brief",
+          "error_type": "RuntimeError",
+          "error": "Brief failed: 模型JSON两次校验失败，未生成方向：close_forecast.basis:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知；close_forecast.basis:输入没有这条公告的价格反应观测，不能断言未影响当前价格或价格未受影响；可判断当前新闻压力较弱、未来公告不计作当前停供，并说明价格反应未知"
+        }
+      ],
+      "all_originals_preserved": true,
+      "counts_as_successful_end_to_end": false,
+      "interpretation": "First explicit well submission: brief rejected after genuine no-reaction/pricing errors; no delivered manual brief or detail."
+    },
+    {
+      "attempt": 2,
+      "actual_report": {
+        "file": "reports/repair_2026-10-20/attempted_v2_3_manual_02d_smoke.json",
+        "sha256": "72fd950341f103921a6c4aa10a73bae05d95426ee8254b1b76e031d67abf7762"
+      },
+      "status": "failed",
+      "started_at": "2026-10-20T23:03:23.288607+00:00",
+      "finished_at": "2026-10-20T23:08:03.657001+00:00",
+      "prompt_version": "ttf-news-standalone-2.3",
+      "analysis_id": "02d2386b-b13e-4d38-8fc5-6ff2a2ab6f11",
+      "source_news_id": "2ca137b8a4dd54deb4d88fc8",
+      "source_title": "Nordic energy players hit paydirt with new gas and condensate discovery",
+      "source_url": "https://offshore-energy.biz/2026/10/19/nordic-energy-players-hit-paydirt-with-new-gas-and-condensate-discovery",
+      "source_body_sha256": "e1f06709f28ac1db272ddcf71962848c9ed8da0e4753867ad782a5608ca51181",
+      "server_pid": 33261,
+      "stage_status": {
+        "preservation_before": "passed",
+        "live_api_v2_and_managed_identity": "passed",
+        "select_real_existing_news": "passed",
+        "ensure_current_v2_live_forecast": "passed",
+        "sse_initial_connection": "passed",
+        "manual_submit_real_news": "passed",
+        "sse_last_event_id_reconnect": "passed",
+        "sse_after_query_reconnect": "passed",
+        "manual_real_brief": "failed",
+        "csv_jsonl_exports": "passed",
+        "current_live_forecast_v2": "passed",
+        "preservation_after": "passed"
+      },
+      "failed_stages": [
+        {
+          "name": "manual_real_brief",
+          "error_type": "RuntimeError",
+          "error": "Brief failed: 模型JSON两次校验失败，未生成方向：news_impact.summary:缺少公告前后价格反应，不能宣称已计价/已消化；须区分计价未知；news_impact.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，；news_impact.summary:N0来源仅说该井将封堵/弃置，不能写已被永久封堵/井已弃置/已完成封井；请保留将/计划等未来时态，不从报道日期已过推断完成。原句will now be plug"
+        }
+      ],
+      "all_originals_preserved": true,
+      "counts_as_successful_end_to_end": false,
+      "interpretation": "A separately authorized normal resubmission of the same well article: again rejected; no unchanged third well attempt was made."
+    },
+    {
+      "attempt": 3,
+      "actual_report": {
+        "file": "reports/repair_2026-10-20/attempted_v2_3_epcm_pre_condition_scope_smoke.json",
+        "sha256": "48b6001667cf05caeb72f7a0695cd556677985b10076a992b0252dd225e4b864"
+      },
+      "status": "failed",
+      "started_at": "2026-10-20T23:10:09.110705+00:00",
+      "finished_at": "2026-10-20T23:17:51.367469+00:00",
+      "prompt_version": "ttf-news-standalone-2.3",
+      "analysis_id": "8d1b57ef-422e-48e7-90af-745694e3a298",
+      "source_news_id": "c0e1e289e3aa12907e840c18",
+      "source_title": "LNG Canada entrusts Técnicas Reunidas with €200M+ EPCM deal",
+      "source_url": "https://offshore-energy.biz/2026/10/20/lng-canada-entrusts-tecnicas-reunidas-with-euro200m-epcm-deal",
+      "source_body_sha256": "d8093c3429f67dd3f819bb28669363f0caf4bc9f9db138302d968de689c80948",
+      "server_pid": 33261,
+      "stage_status": {
+        "preservation_before": "passed",
+        "live_api_v2_and_managed_identity": "passed",
+        "select_real_existing_news": "passed",
+        "ensure_current_v2_live_forecast": "passed",
+        "sse_initial_connection": "passed",
+        "manual_submit_real_news": "passed",
+        "sse_last_event_id_reconnect": "passed",
+        "sse_after_query_reconnect": "passed",
+        "manual_real_brief": "passed",
+        "sse_completed_event_replay": "passed",
+        "manual_detail_request": "passed",
+        "english_brief_request": "passed",
+        "manual_real_detail": "failed",
+        "english_brief_actual_text_labels_numbers": "failed",
+        "csv_jsonl_exports": "passed",
+        "current_live_forecast_v2": "passed",
+        "preservation_after": "passed"
+      },
+      "failed_stages": [
+        {
+          "name": "manual_real_detail",
+          "error_type": "RuntimeError",
+          "error": "Detail failed: 模型JSON两次校验失败，未生成方向：detail.invalidation_conditions[0]:Gassco未来维护公告不能写成当前实际停供或流量损失；应写未来容量风险并保留起止时间；analysis.summary:新闻覆盖不足不能证明市场没有供需变化；只能说明输入新闻未显示相应冲击；detail.invalidation_conditions[1]:N0输入仅有资源发现/勘探/许可/合作前瞻，未给已投产或实际交付事实；不能写成当前实物增供并抵消当日容量约束。可分析长期供给预期、未"
+        },
+        {
+          "name": "english_brief_actual_text_labels_numbers",
+          "error_type": "ValueError",
+          "error": "English narrative changed a number, date, citation or unit"
+        }
+      ],
+      "all_originals_preserved": true,
+      "counts_as_successful_end_to_end": false,
+      "interpretation": "Different real collected EPCM article, allowed by the original generic real-news functional clause. Brief delivered; detail had real summary defects plus narrow conditional-field false positives. English API completed, but the smoke protected-token checker falsely failed. Original whole run remains failed."
+    },
+    {
+      "attempt": 4,
+      "actual_report": {
+        "file": "reports/repair_2026-10-20/attempted_v2_3_epcm_conditional_scope_smoke.json",
+        "sha256": "4c941d6320a00cdf7c3fdcd8b267a3831a215b60f6119359224b3f63d656e95c"
+      },
+      "status": "failed",
+      "started_at": "2026-10-20T23:27:22.631771+00:00",
+      "finished_at": "2026-10-20T23:32:37.007788+00:00",
+      "prompt_version": "ttf-news-standalone-2.3",
+      "analysis_id": "7d35d08d-759a-486c-9aed-fe8baceb96a5",
+      "source_news_id": "c0e1e289e3aa12907e840c18",
+      "source_title": "LNG Canada entrusts Técnicas Reunidas with €200M+ EPCM deal",
+      "source_url": "https://offshore-energy.biz/2026/10/20/lng-canada-entrusts-tecnicas-reunidas-with-euro200m-epcm-deal",
+      "source_body_sha256": "d8093c3429f67dd3f819bb28669363f0caf4bc9f9db138302d968de689c80948",
+      "server_pid": 43554,
+      "stage_status": {
+        "preservation_before": "passed",
+        "live_api_v2_and_managed_identity": "passed",
+        "select_real_existing_news": "passed",
+        "ensure_current_v2_live_forecast": "passed",
+        "sse_initial_connection": "passed",
+        "manual_submit_real_news": "passed",
+        "sse_last_event_id_reconnect": "passed",
+        "sse_after_query_reconnect": "passed",
+        "manual_real_brief": "passed",
+        "sse_completed_event_replay": "passed",
+        "manual_detail_request": "passed",
+        "english_brief_request": "passed",
+        "manual_real_detail": "failed",
+        "english_brief_actual_text_labels_numbers": "passed",
+        "csv_jsonl_exports": "passed",
+        "current_live_forecast_v2": "passed",
+        "preservation_after": "passed"
+      },
+      "failed_stages": [
+        {
+          "name": "manual_real_detail",
+          "error_type": "RuntimeError",
+          "error": "Detail failed: 模型JSON两次校验失败，未生成方向：news_impact.summary:Gassco未来维护公告不能写成当前实际停供或流量损失；应写未来容量风险并保留起止时间；news_impact.summary:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景"
+        }
+      ],
+      "all_originals_preserved": true,
+      "counts_as_successful_end_to_end": false,
+      "interpretation": "New explicit EPCM run after the actual conditional-flow and ASCII protected-token code fixes. Brief and English-3 text verification delivered; isolated production detail remains rejected/unavailable. It is not a successful full workflow. Independent review of all raw causes must remain distinct from the original gate diagnostic."
+    },
+    {
+      "attempt": 5,
+      "actual_report": {
+        "file": "reports/repair_2026-10-20/production_fifth_full_workflow_v2_3.json",
+        "sha256": "a84ae778df82c79e18e7dfdd861b7e10cae2c0bcf0ab4ef77b431d8d5da21dc2"
+      },
+      "status": "failed",
+      "started_at": "2026-10-21T01:45:06.435929+00:00",
+      "finished_at": "2026-10-21T01:59:58.780203+00:00",
+      "prompt_version": "ttf-news-standalone-2.3",
+      "analysis_id": "3609b826-a03d-4acb-8ef8-838d0523681c",
+      "current_live_analysis_id": "341746e5-d870-42ad-8034-97eba9f389d2",
+      "source_news_id": "c0e1e289e3aa12907e840c18",
+      "source_title": "LNG Canada entrusts Técnicas Reunidas with €200M+ EPCM deal",
+      "source_url": "https://offshore-energy.biz/2026/10/20/lng-canada-entrusts-tecnicas-reunidas-with-euro200m-epcm-deal",
+      "source_body_sha256": "d8093c3429f67dd3f819bb28669363f0caf4bc9f9db138302d968de689c80948",
+      "server_pid": 85990,
+      "stage_status": {
+        "preservation_before": "passed",
+        "live_api_v2_and_managed_identity": "passed",
+        "select_real_existing_news": "passed",
+        "ensure_current_v2_live_forecast": "passed",
+        "sse_initial_connection": "passed",
+        "manual_submit_real_news": "passed",
+        "sse_last_event_id_reconnect": "passed",
+        "sse_after_query_reconnect": "passed",
+        "manual_real_brief": "failed",
+        "csv_jsonl_exports": "passed",
+        "current_live_forecast_v2": "failed",
+        "preservation_after": "passed"
+      },
+      "failed_stages": [
+        {
+          "name": "manual_real_brief",
+          "error_type": "RuntimeError",
+          "error": "Brief failed: 模型JSON两次校验失败，未生成方向：close_forecast.summary:Gassco公告撤销/结束或实际流量未确认，不能证明未形成供需冲击、供应不受影响或实际流量无变化；须有独立无变化计量事实。可写输入未显示冲击证据或恢复待核；news_impact.summary:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景"
+        },
+        {
+          "name": "current_live_forecast_v2",
+          "error_type": "RuntimeError",
+          "error": "Current dashboard forecast did not reach v2: 1 validation error for AnalysisResult\n_meta\n  Extra inputs are not permitted [type=extra_forbidden, input_value={'prompt_version': 'ttf-n...source_coverage:gdelt']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/extra_forbidden"
+        }
+      ],
+      "all_originals_preserved": true,
+      "counts_as_successful_end_to_end": false,
+      "actual_manual_review": {
+        "file": "reports/repair_2026-10-20/independent_production_fifth_manual_failure_review_v2_3.json",
+        "sha256": "2e4e7b936d900b49e95e9b83c7fbca56e1d83aa0b9cac93c6eba6fea5abedf7d"
+      },
+      "actual_current_live_and_english_review": {
+        "file": "reports/repair_2026-10-20/independent_production_fifth_current_live_and_english_review_v2_3.json",
+        "sha256": "60e35775fea240c11ed1bf29940fa4118c5feb3e4acd48cb5b39eae4e2f0d7b6"
+      },
+      "current_live_service_status": "completed",
+      "current_live_semantic_passed": false,
+      "current_live_error": "TTF monetary price change was written EUR/mcm although the source reference unit is EUR/MWh; English repeated it.",
+      "current_live_quality_review_applied": {
+        "file": "reports/repair_2026-10-20/applied-production-fifth-price-unit-review-v2_3.json",
+        "sha256": "7998b2f4db72a1052d8532758582124737e56b927b1fef46f68f17a27b7a6007"
+      },
+      "harness_current_stage_false_failure": {
+        "reason": "API _meta was passed to the body-only AnalysisResult schema, so the completed row timed out in the monitor. This monitor defect is separate from the real monetary-unit error.",
+        "original_stage_status_preserved": true,
+        "current_price_unit_error_still_invalid": true
+      },
+      "interpretation": "Fifth complete normal production attempt remains failed. Manual first raw contains true source/price errors; its second raw has two independently identified validator scope false positives. Completed current-live and its English translation contain a genuine EUR/MWh-to-EUR/mcm error and remain invalid after append-only review. Neither code-fix plans nor the monitor defect upgrade this run."
+    },
+    {
+      "attempt": 6,
+      "real_article": "LNG Canada EPCM collected article",
+      "article_id": "c0e1e289e3aa12907e840c18",
+      "production_report": {
+        "file": "reports/repair_2026-10-20/production_sixth_full_workflow_v2_3.json",
+        "sha256": "fe0ed676474bbe36241629ed70edd42cb73d6888415e0f0acfaf75e7b77fd54f"
+      },
+      "started_at": "2026-10-21T03:26:13.440592+00:00",
+      "finished_at": "2026-10-21T03:32:29.302167+00:00",
+      "status": "failed",
+      "manual_analysis_id": "e348df19-fd5a-4eb6-a30f-dcd0c4065f24",
+      "current_live_analysis_id": "c5e8b981-885a-42b5-94c7-529fa93fd550",
+      "failed_stages": [
+        "manual_real_detail"
+      ],
+      "missing_required_stages": [
+        "chinese_originals_unchanged_after_translation",
+        "english_detail_actual_text_labels_numbers",
+        "manual_real_detail"
+      ],
+      "stage_statuses": {
+        "preservation_before": "passed",
+        "live_api_v2_and_managed_identity": "passed",
+        "select_real_existing_news": "passed",
+        "ensure_current_v2_live_forecast": "passed",
+        "sse_initial_connection": "passed",
+        "manual_submit_real_news": "passed",
+        "sse_last_event_id_reconnect": "passed",
+        "sse_after_query_reconnect": "passed",
+        "manual_real_brief": "passed",
+        "sse_completed_event_replay": "passed",
+        "manual_detail_request": "passed",
+        "english_brief_request": "passed",
+        "manual_real_detail": "failed",
+        "english_brief_actual_text_labels_numbers": "passed",
+        "csv_jsonl_exports": "passed",
+        "current_live_forecast_v2": "passed",
+        "preservation_after": "passed"
+      },
+      "errors": [
+        {
+          "name": "manual_real_detail",
+          "error_type": "RuntimeError",
+          "error": "Detail failed: 模型JSON两次校验失败，未生成方向：news_impact.summary:Gassco公告撤销/结束或实际流量未确认，不能证明未形成供需冲击、供应不受影响或实际流量无变化；须有独立无变化计量事实。可写输入未显示冲击证据或恢复待核实，不；news_impact.summary:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景；detail.limitations:不得重复相同条目，请只保留不同的事实或风险"
+        }
+      ],
+      "all_originals_preserved": true,
+      "counts_as_successful_end_to_end": false,
+      "manual_brief_structurally_completed": true,
+      "manual_detail_result_is_delivered": false,
+      "manual_brief_independent_semantic_verdict": "pending_root_and_final_auditor_review",
+      "current_live_independent_semantic_verdict": "pending_root_and_final_auditor_review",
+      "interpretation": "Sixth complete workflow is failed: detail returned no valid result after two rejected attempts; required detail-English/original-preservation completion stages missing. Passed brief/current structural stages do not establish their causal correctness; possible price-observation wording is under independent review. No prior successful output is substituted."
+    },
+    {
+      "attempt": 7,
+      "real_article": "Gassco collected core supply maintenance announcement",
+      "article_id": "90bfbf6adb1183517cbc00ca",
+      "production_report": {
+        "file": "reports/repair_2026-10-20/production_seventh_full_workflow_v2_3.json",
+        "sha256": "2a9a9520202225f450ed95a76a9924a9cefc7169371a88c482a0c85028bc2fd0"
+      },
+      "started_at": "2026-10-21T03:54:59.431906+00:00",
+      "finished_at": "2026-10-21T04:09:51.571603+00:00",
+      "status": "failed",
+      "manual_analysis_id": "e444cb07-a3d1-402d-868d-dcb98a91f586",
+      "current_live_analysis_id": "d7628bcf-d68a-4d14-8ce0-20bc21beaa42",
+      "failed_stages": [
+        "manual_real_detail",
+        "current_live_forecast_v2"
+      ],
+      "missing_required_stages": [
+        "chinese_originals_unchanged_after_translation",
+        "current_live_forecast_v2",
+        "english_detail_actual_text_labels_numbers",
+        "manual_real_detail"
+      ],
+      "stage_statuses": {
+        "preservation_before": "passed",
+        "live_api_v2_and_managed_identity": "passed",
+        "select_real_existing_news": "passed",
+        "ensure_current_v2_live_forecast": "passed",
+        "sse_initial_connection": "passed",
+        "manual_submit_real_news": "passed",
+        "sse_last_event_id_reconnect": "passed",
+        "sse_after_query_reconnect": "passed",
+        "manual_real_brief": "passed",
+        "sse_completed_event_replay": "passed",
+        "manual_detail_request": "passed",
+        "english_brief_request": "passed",
+        "manual_real_detail": "failed",
+        "english_brief_actual_text_labels_numbers": "passed",
+        "csv_jsonl_exports": "passed",
+        "current_live_forecast_v2": "failed",
+        "preservation_after": "passed"
+      },
+      "errors": [
+        {
+          "name": "manual_real_detail",
+          "error_type": "RuntimeError",
+          "error": "Detail failed: 模型JSON两次校验失败，未生成方向：逐日期列出的容量时段没有唯一N来源；须保留日期/年份及对应容量，不得借另一公告原值；detail.invalidation_conditions[0]:Gassco公告撤销/结束或实际流量未确认，不能证明未形成供需冲击、供应不受影响或实际流量无变化；须有独立无变化计量事实。可写输入未；detail.invalidation_conditions[0]:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景"
+        },
+        {
+          "name": "current_live_forecast_v2",
+          "error_type": "RuntimeError",
+          "error": "Current dashboard forecast did not reach v2: Wait for the explicitly appended current-source live record"
+        }
+      ],
+      "all_originals_preserved": true,
+      "counts_as_successful_end_to_end": false,
+      "independent_reviews": [
+        {
+          "file": "reports/repair_2026-10-20/independent_production_seventh_initial_cn_review_v2_3.json",
+          "sha256": "74fe00bd1a0d0cb31e0b237e19de250f7735f7c09304aed7f27f5d8c6870cc47"
+        },
+        {
+          "file": "reports/repair_2026-10-20/independent_production_seventh_completed_records_review_v2_3.json",
+          "sha256": "c90e8ac5ead23deb37ee35296d448b00f62f4049b0ed574a8504ecad053cd523"
+        }
+      ],
+      "manual_brief_review": "qualified_no_identified_material_error_in_final_returned_brief",
+      "manual_brief_english_review": "faithful_qualified_translation_source_scalar_reference_binding_verified",
+      "manual_detail_delivered": false,
+      "current_live_delivered": false,
+      "manual_detail_english_available": false,
+      "current_live_english_available": false,
+      "failed_actual_stages": [
+        {
+          "role": "manual_detail",
+          "record": {
+            "file": "reports/repair_2026-10-20/production_seventh_manual_detail_failed_actual_v2_3.json",
+            "sha256": "04300a13120d592d761d6b920d0799604108262ec3d833a78496aebe21a766af"
+          },
+          "analysis_id": "e444cb07-a3d1-402d-868d-dcb98a91f586",
+          "status": "failed",
+          "result_is_null": true,
+          "detail_result_is_null": true,
+          "actual_model_calls": 2,
+          "raw_sha256": [
+            "729d15c499c91c913d849f9c2dfcf62f9127b5c2fd7913009787cb02c44139dd",
+            "769d8f1738ceecc738d798e4e7469fdd6b98cdf23f70e5749d958c8f0c2db180"
+          ],
+          "failure_metric_id": 20186,
+          "failure_data_sha256": "0fce75848329194988fba626402e54d956329ecadfee20177df51bcaac5497e6",
+          "error": "模型JSON两次校验失败，未生成方向：逐日期列出的容量时段没有唯一N来源；须保留日期/年份及对应容量，不得借另一公告原值；detail.invalidation_conditions[0]:Gassco公告撤销/结束或实际流量未确认，不能证明未形成供需冲击、供应不受影响或实际流量无变化；须有独立无变化计量事实。可写输入未；detail.invalidation_conditions[0]:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景",
+          "local_false_positives_identified_by_independent_review": true,
+          "independent_material_errors_in_rejected_raw_also_identified": true,
+          "not_reclassified_success_after_false_positive_correction": true
+        },
+        {
+          "role": "current_live",
+          "record": {
+            "file": "reports/repair_2026-10-20/production_seventh_current_live_failed_actual_v2_3.json",
+            "sha256": "da2615e78a97a4fff4e7a8baa202bde550e11da34a61b26f67aeda1a860854e2"
+          },
+          "analysis_id": "d7628bcf-d68a-4d14-8ce0-20bc21beaa42",
+          "status": "failed",
+          "result_is_null": true,
+          "detail_result_is_null": true,
+          "actual_model_calls": 2,
+          "raw_sha256": [
+            "d608115d4370e28cdac94157afbf6bb10ef310f2de298850b85da4eb2dbc84ac",
+            "6dc52549fcfa076601b4d6b4ec595bb6d0f1c0ae4af0a02a69ee07cc35b7a1ed"
+          ],
+          "failure_metric_id": 20178,
+          "failure_data_sha256": "b9fc1e0de7122600d8ab33e7af183672d7eda520adad7b86294afff81aaff0b3",
+          "error": "模型JSON两次校验失败，未生成方向：news_impact.summary、close_forecast.basis、analysis.summary:缺少公告前后价格反应，不能宣称已计价/已消化；须区分计价未知；news_impact.summary:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景；核心分析文案必须为中文句子；用中文概括具体事实和TTF机制，不复制完整英文标题，专有名称/单位可保留英文",
+          "local_false_positives_identified_by_independent_review": true,
+          "independent_material_errors_in_rejected_raw_also_identified": true,
+          "not_reclassified_success_after_false_positive_correction": true
+        }
+      ],
+      "interpretation": "Seventh complete workflow remains failed. Only actual completed manual brief and its English are qualified; detail/current have null results after2attempts each. Independently proven local validator false positives do not create a delivered result or override genuine errors. A different Gassco article does not repair the earlier well/EPCM generation failures."
+    },
+    {
+      "attempt": 8,
+      "real_article": "Same Gassco collected core supply maintenance announcement after actual notice-scope and gateway code corrections",
+      "article_id": "90bfbf6adb1183517cbc00ca",
+      "production_report": {
+        "file": "reports/repair_2026-10-20/production_eighth_full_workflow_v2_3.json",
+        "sha256": "0813d94c9fb283f260c98369975a73b30d58f5d590c0c28fcfb777f3aedbb3f7"
+      },
+      "started_at": "2026-10-21T04:23:30.954171+00:00",
+      "finished_at": "2026-10-21T04:30:06.441216+00:00",
+      "status": "failed",
+      "manual_analysis_id": "a137f38d-4bf5-41de-9f81-df0eaa1443fc",
+      "current_live_analysis_id": "ecd35fc0-409c-4306-a88d-71e5ee074d4b",
+      "failed_stages": [
+        "manual_real_detail",
+        "current_live_forecast_v2"
+      ],
+      "missing_required_stages": [
+        "chinese_originals_unchanged_after_translation",
+        "current_live_forecast_v2",
+        "english_detail_actual_text_labels_numbers",
+        "manual_real_detail"
+      ],
+      "stage_statuses": {
+        "preservation_before": "passed",
+        "live_api_v2_and_managed_identity": "passed",
+        "select_real_existing_news": "passed",
+        "ensure_current_v2_live_forecast": "passed",
+        "sse_initial_connection": "passed",
+        "manual_submit_real_news": "passed",
+        "sse_last_event_id_reconnect": "passed",
+        "sse_after_query_reconnect": "passed",
+        "manual_real_brief": "passed",
+        "sse_completed_event_replay": "passed",
+        "manual_detail_request": "passed",
+        "english_brief_request": "passed",
+        "manual_real_detail": "failed",
+        "english_brief_actual_text_labels_numbers": "passed",
+        "csv_jsonl_exports": "passed",
+        "current_live_forecast_v2": "failed",
+        "preservation_after": "passed"
+      },
+      "errors": [
+        {
+          "name": "manual_real_detail",
+          "error_type": "RuntimeError",
+          "error": "Detail failed: 模型JSON两次校验失败，未生成方向：分别列出的容量字段available含无来源数值7.6mcm/d；下降额与绝对可用容量须分开并逐公告匹配；detail.scenarios.bullish:情景名称与明确单向供需机制相反；供应增加/需求下降/库存增加产生下行压力，供应减少/需求增加/库存下降产生上行压力。须重新分析条件，不得只改标签"
+        },
+        {
+          "name": "current_live_forecast_v2",
+          "error_type": "RuntimeError",
+          "error": "Explicitly appended current live analysis failed: 模型JSON两次校验失败，未生成方向：N0容量字段unavailable原值为7.6mcm/d，不是13.0；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算；close_forecast.basis:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知；close_forecast.basis:输入没有这条公告的价格反应观测，不能断言未影响当前价格或价格未受影响；可判断当前新闻压力较弱、未来公告不计作当前停供，并说明价格反应未知；an"
+        }
+      ],
+      "all_originals_preserved": true,
+      "counts_as_successful_end_to_end": false,
+      "independent_reviews": [
+        {
+          "file": "reports/repair_2026-10-20/independent_production_eighth_manual_brief_initial_review_v2_3.json",
+          "sha256": "5d48fd697d2259067fae5fa8b4537e57067770af4a5d46b92340b891230a539f"
+        },
+        {
+          "file": "reports/repair_2026-10-20/independent_production_eighth_terminal_cn_english_review_v2_3.json",
+          "sha256": "78a6ed11a6cff94cbc8e18ad5efb4b1aec7cbb4e781cc97cefeb24b3dfc9a89b"
+        }
+      ],
+      "manual_brief_review": "qualified_no_identified_P2_in_final_manual_brief",
+      "manual_brief_english_actual": {
+        "file": "reports/repair_2026-10-20/production_eighth_manual_brief_english_actual_v2_3.json",
+        "sha256": "75138a9868893052bdba7412cc6cbc2aa71f6d2602373ac28ef96117e31f2dac"
+      },
+      "english_complete_review_status": "qualified_translation_no_identified_P2_full_review_bound",
+      "manual_detail_delivered": false,
+      "current_live_delivered": false,
+      "manual_detail_english_available": false,
+      "current_live_english_available": false,
+      "failed_actual_stages": [
+        {
+          "role": "manual_detail",
+          "record": {
+            "file": "reports/repair_2026-10-20/production_eighth_manual_detail_failed_actual_v2_3.json",
+            "sha256": "7c1d93061d8274d3c08db2c10bfdd07d3209cc3e1e420521a83238ef27ef73d9"
+          },
+          "analysis_id": "a137f38d-4bf5-41de-9f81-df0eaa1443fc",
+          "status": "failed",
+          "analysis_status": "completed",
+          "result_is_null": false,
+          "detail_result_is_null": true,
+          "actual_model_calls": 2,
+          "raw_sha256": [
+            "b07bf109d9071e6610b6f9cf5de45415a13c2ac91b9378ae6ad8379b63ccaa45",
+            "0b1c7a33657edaec269ddc30c9dbcfacdd7cd19d47b2938977d954b3cfcf26d9"
+          ],
+          "failure_metric_id": 20252,
+          "error": "模型JSON两次校验失败，未生成方向：分别列出的容量字段available含无来源数值7.6mcm/d；下降额与绝对可用容量须分开并逐公告匹配；detail.scenarios.bullish:情景名称与明确单向供需机制相反；供应增加/需求下降/库存增加产生下行压力，供应减少/需求增加/库存下降产生上行压力。须重新分析条件，不得只改标签",
+          "raw_classification_review_status": "independent_full_review_complete_failed_terminal_preserved",
+          "not_reclassified_success_after_possible_false_positive_correction": true,
+          "independent_review": {
+            "file": "reports/repair_2026-10-20/independent_production_eighth_terminal_cn_english_review_v2_3.json",
+            "sha256": "78a6ed11a6cff94cbc8e18ad5efb4b1aec7cbb4e781cc97cefeb24b3dfc9a89b"
+          },
+          "local_false_positives_identified_by_independent_review": true,
+          "independent_material_errors_in_rejected_raw_also_identified": true
+        },
+        {
+          "role": "current_live",
+          "record": {
+            "file": "reports/repair_2026-10-20/production_eighth_current_live_failed_actual_v2_3.json",
+            "sha256": "2e9929000a56349d10b3572ed98723d412493221d3e90796d797cf9cf60da20c"
+          },
+          "analysis_id": "ecd35fc0-409c-4306-a88d-71e5ee074d4b",
+          "status": "failed",
+          "analysis_status": "failed",
+          "result_is_null": true,
+          "detail_result_is_null": true,
+          "actual_model_calls": 2,
+          "raw_sha256": [
+            "4563605895b6060c4f15d8132e6c87986f4b994509c89f1de256e97749c57f0f",
+            "487e7d1dcea77b952a987aba77ecfbaae6658e721f213a4382e149e52784a896"
+          ],
+          "failure_metric_id": 20245,
+          "error": "模型JSON两次校验失败，未生成方向：N0容量字段unavailable原值为7.6mcm/d，不是13.0；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算；close_forecast.basis:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知；close_forecast.basis:输入没有这条公告的价格反应观测，不能断言未影响当前价格或价格未受影响；可判断当前新闻压力较弱、未来公告不计作当前停供，并说明价格反应未知；an",
+          "raw_classification_review_status": "independent_full_review_complete_failed_terminal_preserved",
+          "not_reclassified_success_after_possible_false_positive_correction": true,
+          "independent_review": {
+            "file": "reports/repair_2026-10-20/independent_production_eighth_terminal_cn_english_review_v2_3.json",
+            "sha256": "78a6ed11a6cff94cbc8e18ad5efb4b1aec7cbb4e781cc97cefeb24b3dfc9a89b"
+          },
+          "local_false_positives_identified_by_independent_review": false,
+          "independent_material_errors_in_rejected_raw_also_identified": true
+        }
+      ],
+      "additional_automatic_record_outside_workflow": {
+        "analysis_id": "30db9f1c-7595-4f29-af5e-85e5d1df0a2e",
+        "record": {
+          "file": "reports/repair_2026-10-20/production_eighth_queued_automatic_live_actual_v2_3.json",
+          "sha256": "794cc6962a49d0e8c021c6073c860d1c58ad791ee2b20ec0c026ce7b34b57b99"
+        },
+        "independent_review": {
+          "file": "reports/repair_2026-10-20/independent_production_eighth_queued_automatic_live_review_v2_3.json",
+          "sha256": "238883927fa256282c9df4e5be183e61e20e96a08c48ed0be4a715c49709c8aa"
+        },
+        "append_quality_review_applied": {
+          "file": "reports/repair_2026-10-20/production_eighth_auto_future_window_applied_review_v2_3.json",
+          "sha256": "650f044f9fd4b3b4f8167b92440f75e6e1109b64fb715d46deec2c2830377421"
+        },
+        "known_defect": "future_target_window_knowledge_claim",
+        "canonical_record_modified": false,
+        "included_in_smoke_or_isolated_case_success_counts": false
+      },
+      "interpretation": "Eighth whole real Gassco workflow failed: detail and explicitly appended current-live results are absent after2actual model attempts each. Manual brief returned qualified; English actual completed but whole acceptance stillfailed. Any later local false-positive correction must not reclassify this terminal or fabricate a detail/current result. Separately accepted auto30db future-window knowledge defect was quality-reviewed by append; no extra diagnostic sample or ninth error family is created. Full CN/English terminal review is now complete: returnedmanual+English qualified/P3; detail1capacitylocalFP anddetail2truecapacityfieldwrong plusnegationscenarioFP; current truefailed. No failed terminal is upgraded.",
+      "full_terminal_cn_english_prose_review": {
+        "file": "reports/repair_2026-10-20/independent_production_eighth_terminal_cn_english_review_v2_3.json",
+        "sha256": "78a6ed11a6cff94cbc8e18ad5efb4b1aec7cbb4e781cc97cefeb24b3dfc9a89b"
+      }
+    },
+    {
+      "attempt": 9,
+      "actual_report": {
+        "file": "reports/repair_2026-10-20/production_ninth_full_workflow_v2_3.json",
+        "sha256": "026deaf6272de76b6e90e78742d0da6d20893ba61f26b71e0b7a06d472ff3bbd"
+      },
+      "status": "failed",
+      "started_at": "2026-10-21T04:47:00.352587+00:00",
+      "finished_at": "2026-10-21T04:50:24.736928+00:00",
+      "prompt_version": "ttf-news-standalone-2.3",
+      "manual_analysis_id": "c4fd5ed5-ae2c-4e43-8ae5-c75faa314810",
+      "current_live_analysis_id": "ff3fdde7-4f67-487b-92ea-b612da62941a",
+      "source_news_id": "manual-2f2f3340-5263-4276-bba4-3a8b14337d76",
+      "source_title": "Gassco Troll: Planned Gas production field unavailability (Active)",
+      "source_url": null,
+      "server_pid": 43774,
+      "actual_generation_source_sha256": {
+        "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+        "ttf_news/analysis.py": "bcd240a893a87e842fc8caff8f4efa156f80cac7d8807b2c8c4c3a8599bfcdfa",
+        "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+        "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+        "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+        "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+        "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+        "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+        "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+        "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+        "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+        "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987",
+        "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+        "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+        "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+        "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+        "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+        "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+        "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+        "ttf_news/public_gateway.py": "08990e223d5e7d1d348967c9625fd29fc2d1e7e58bb000c964b9cfea43b59952",
+        "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+        "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+        "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+        "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+        "ttf_news/semantics.py": "3fcdf8708e49be0bc7060e0e97f45fbfcf5262dabdfc431d70aca0a748791ff7",
+        "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+        "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+        "ttf_news/translation.py": "d47b232a5f77ea68e2d5bc5d092021e9727e555c6b1dd702922325519982d7c5"
+      },
+      "stage_statuses": {
+        "preservation_before": "passed",
+        "live_api_v2_and_managed_identity": "passed",
+        "select_real_existing_news": "passed",
+        "ensure_current_v2_live_forecast": "passed",
+        "sse_initial_connection": "passed",
+        "manual_submit_real_news": "passed",
+        "sse_last_event_id_reconnect": "passed",
+        "sse_after_query_reconnect": "passed",
+        "manual_real_brief": "failed",
+        "csv_jsonl_exports": "passed",
+        "current_live_forecast_v2": "passed",
+        "preservation_after": "passed"
+      },
+      "failed_stages": [
+        "manual_real_brief"
+      ],
+      "missing_required_stages": [
+        "chinese_originals_unchanged_after_translation",
+        "english_brief_actual_text_labels_numbers",
+        "english_detail_actual_text_labels_numbers",
+        "manual_detail_request",
+        "manual_real_brief",
+        "manual_real_detail",
+        "sse_completed_event_replay"
+      ],
+      "errors": [
+        {
+          "name": "manual_real_brief",
+          "status": "failed",
+          "started_at": "2026-10-21T04:47:09.474162+00:00",
+          "error_type": "RuntimeError",
+          "error": "Brief failed: 模型JSON两次校验失败，未生成方向：news_impact.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，；analysis.summary:N1公告开始2026-10-22T04:00:00+00:00，截至分析时点尚未开始；目标结算窗口结束时或之后开始；开始时刻不证明实际流量损失；未来于as_of不等于",
+          "finished_at": "2026-10-21T04:50:09.781717+00:00",
+          "elapsed_seconds": 180.307
+        }
+      ],
+      "all_originals_preserved": true,
+      "counts_as_successful_end_to_end": false,
+      "manual_brief_delivered": false,
+      "manual_detail_delivered": false,
+      "manual_brief_english_delivered": false,
+      "manual_detail_english_delivered": false,
+      "manual_failed_actual": {
+        "record": {
+          "file": "reports/repair_2026-10-20/production_ninth_manual_brief_failed_actual_v2_3.json",
+          "sha256": "2ef79ddad979f6696a8e5153fde38a55c45b047af20dac551fd83b1dbe9db676"
+        },
+        "actual_model_calls": 2,
+        "raw_sha256": [
+          "f06a20f96d14b0a9526753b691c0635195146aff9221105f952e54940b17001b",
+          "8c7d220ba66d7ddaed0d84c89c35bce563092066420b222e6a0e5db046810592"
+        ],
+        "canonical_result": null,
+        "canonical_result_is_null": true,
+        "detail_result_is_null": true,
+        "independent_review": {
+          "file": "reports/repair_2026-10-20/independent_production_ninth_manual_failed_terminal_review_v2_3.json",
+          "sha256": "71c07e82601aeed39c0ea1c3259f266ced8cfa031de215b2d86756583fc46a2c"
+        },
+        "raw_classification": "Both full raw bodies contain real errors; original terminal remains failed. First aggregates nonoverlapping capacity rates; second misstates target-window status and asserts unobserved zero price effect."
+      },
+      "current_live_service_status": "completed",
+      "current_live_semantic_passed": false,
+      "current_live_accepted_price_clock_error": {
+        "record": {
+          "file": "reports/repair_2026-10-20/production_ninth_current_live_actual_v2_3.json",
+          "sha256": "4b8231a5e400b83a2cd872e9294bfe58c2b6b0c7871d6952c56d986b65272ab0"
+        },
+        "original_canonical_result_sha256": "c87df6cee5b36ff4c2682dec504827432de30435e026c4b85ca1ec04e2618134",
+        "canonical_result_hash_algorithm": "sha256(json.dumps(result, ensure_ascii=False, sort_keys=True)); includes original _meta",
+        "original_db_serialization_result_sha256": "db15a405c83c724c170064d65d6f54473ee75f5fdd207b72f367fcaaa6a9183c",
+        "db_serialization_hash_algorithm": "sha256(json.dumps(result, ensure_ascii=False)); original key order and default separators",
+        "original_final_raw_sha256": "2e07462be8969fa70485663d8aad0efe22dbe241a7ca618f93f298ce473edc78",
+        "unsupported_spans": [
+          "前一交易日参考价从85.062 EUR/MWh升至87.73 EUR/MWh",
+          "基于前一交易日参考价上涨"
+        ],
+        "independent_review": {
+          "file": "reports/repair_2026-10-20/independent_production_ninth_current_live_initial_review_v2_3.json",
+          "sha256": "6e87e04322f3c9b363025f57d84cc1c815256e1f82e577d02cf7fa28752a3562"
+        },
+        "append_only_review_applied": {
+          "file": "reports/repair_2026-10-20/production_ninth_current_price_role_applied_review_v2_3.json",
+          "sha256": "eef917cc5b2f81756c34a72cc130b2d87e09e0c1dc6b3787c26e3fe858193ffc"
+        },
+        "canonical_result_modified": false,
+        "direction_not_rewritten_or_scored_correct": true
+      },
+      "full_terminal_review": {
+        "file": "reports/repair_2026-10-20/independent_production_ninth_terminal_review_v2_3.json",
+        "sha256": "f508f25d751dee03f31a0bbb283cfab2328748fd9adddf74b6a09cd8d0921dac"
+      },
+      "interpretation": "Ninth complete real production workflow remains failed: manual brief was genuinely rejected twice, so no manual detail or English output was delivered. The completed current-live brief is independently invalid for describing today versus yesterday as yesterday itself rising; its original up result remains preserved with an append-only invalid review. Infrastructure success is not a successful complete workflow or semantic clearance."
+    }
+  ],
+  "well_production_attempt_count": 2,
+  "epcm_production_attempt_count": 4,
+  "well_generation_issue_resolved": false,
+  "production_detail_delivered_in_this_sequence": false,
+  "functional_clause_article_scope": "Any real collected nonpremium article; choosing EPCM does not validate well generation reliability.",
+  "isolated_diagnostic_cohort_counts_unchanged": {
+    "strict_contract_pass": 14,
+    "source_grounded_real_unverified_label_disagreement": 1,
+    "failed_no_delivered_brief": 5,
+    "failed_no_delivered_isolated_detail": 1
+  },
+  "does_not_measure_prediction_accuracy": true,
+  "no_model_calls_by_summary": true,
+  "no_database_access_by_summary": true,
+  "no_network_calls_by_summary": true,
+  "no_source_edits_by_summary": true,
+  "current_source_sha256": {
+    "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+    "ttf_news/analysis.py": "bcd240a893a87e842fc8caff8f4efa156f80cac7d8807b2c8c4c3a8599bfcdfa",
+    "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+    "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+    "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+    "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+    "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+    "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+    "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+    "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+    "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+    "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987",
+    "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+    "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+    "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+    "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+    "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+    "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+    "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+    "ttf_news/public_gateway.py": "08990e223d5e7d1d348967c9625fd29fc2d1e7e58bb000c964b9cfea43b59952",
+    "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+    "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+    "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+    "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+    "ttf_news/semantics.py": "3fcdf8708e49be0bc7060e0e97f45fbfcf5262dabdfc431d70aca0a748791ff7",
+    "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+    "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+    "ttf_news/translation.py": "d47b232a5f77ea68e2d5bc5d092021e9727e555c6b1dd702922325519982d7c5"
+  },
+  "remaining_blocker": "No successful complete real production workflow:9failed,0passed. Ninth manual brief genuinely failed twice and delivered no detail/English; current-live completed but has an accepted previous-day/current-quote time-role error now invalidated by append-only review. Eight existing error families remain open; validator changes or isolated paths alone do not close them.",
+  "previous_four_attempt_history": {
+    "file": "reports/repair_2026-10-20/production_e2e_attempt_history_v2_3.1e1f1357dd6ccb30.json",
+    "sha256": "1e1f1357dd6ccb30df4eb4d55594aea9aae5ef64037ec0bfd06880b7b6092722"
+  },
+  "current_isolated_diagnostic_cohort_snapshot": {
+    "strict_contract_pass": 15,
+    "source_grounded_real_unverified_label_disagreement": 0,
+    "failed_no_delivered_brief": 5,
+    "delivered_isolated_detail": 1,
+    "selected_manifest": {
+      "file": "reports/repair_2026-10-20/current_final_notice_scope_twenty_plus_detail_manifest_v2_3.json",
+      "sha256": "955d2ab120f0d27f5a69da663fc19d91cd7d639546a8b60492d95db505754db6"
+    },
+    "not_market_accuracy": true
+  },
+  "historical_isolated_counts_are_not_current": true,
+  "previous_attempt_history": {
+    "file": "reports/repair_2026-10-20/production_e2e_attempt_history_v2_3.cbd18cdcb4be32a3.json",
+    "sha256": "cbd18cdcb4be32a3212cd31eff40fb164551138ec7152912865442bb2ae81c6e"
+  },
+  "gassco_production_attempt_count": 3,
+  "gateway_incident_resolution": {
+    "status": "runtime_fix_verified_by_root_actual_public_streams",
+    "evidence": {
+      "file": "reports/repair_2026-10-20/public_gateway_stream_cleanup_live_verification_v2_3.json",
+      "sha256": "dddc26cb5f77dff4e3bd4b3da2645eb8e8a9612dad591e81983d94ee4fd4a720"
+    },
+    "does_not_change_model_acceptance": true
+  },
+  "latest_maintenance_deployment": {
+    "file": "reports/repair_2026-10-20/backend_notice_scope_paused.json",
+    "sha256": "f0fc45c99f8fb520d8f15ff2b305fc5f9a091214c5f2e95d36557ab32ce847d4"
+  },
+  "latest_actual_backend_deployment": {
+    "file": "reports/repair_2026-10-20/backend_notice_scope_resumed.json",
+    "sha256": "57f8a67859c2aa21853d6b3f0891df5d067263a863a3fd2382a5dffd7543f052"
+  }
+}

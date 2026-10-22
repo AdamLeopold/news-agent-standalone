@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-10-20T20:06:43.738167+00:00",
+  "evidence_kind": "real_v2_failed_analysis_api_ui",
+  "same_record_v2_end_to_end": true,
+  "analysis_id": "ec3f2c31-6f49-48bb-acbd-48474ce670e2",
+  "api_record": "reports/repair_2026-10-20/error_api_verification.json",
+  "prompt_version": "ttf-news-standalone-2.0",
+  "ui_url": "http://127.0.0.1:8765/?analysis=ec3f2c31-6f49-48bb-acbd-48474ce670e2",
+  "api_result_null": true,
+  "error_visible": true,
+  "direction_elements": 0,
+  "no_flat_fallback": true,
+  "snapshot_fallback_used": false,
+  "screenshot": "reports/repair_2026-10-20/error_ui_v2.png",
+  "screenshot_sha256": "d26039dc383456751032b3c144c06f75363b2276076278663a304e289c46f950",
+  "drawer_ax_sha256": "a957cdf556d4eea8101c7a49b8a007ec4beafbb9edad1ee8a8bbb91cfdbbd4f1",
+  "app_source_sha256": "d669c964b1804b4e27655daa0ad9b5162028c3263c93e2908a789aec9fd1047f",
+  "local_dist_index_sha256": "83d9ac599275dcd38a852ececa6c62430bb86484c19b428c2c63903af9d38206",
+  "status": "passed",
+  "public_pages_followup_pending": true
+}

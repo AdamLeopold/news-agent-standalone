@@ -1,0 +1,233 @@
+{
+  "created_at": "2026-10-20T22:30:10.340376+00:00",
+  "status": "not_ready_final_case_only_eight_detail_and_fifth_production_pending",
+  "prompt_version": "ttf-news-standalone-2.3",
+  "source_sha256": {
+    "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+    "ttf_news/analysis.py": "d1bd8f44d4611a6f2aaee82a0e1b5255fdabdc57e34ef134f6edf0fb8bfb0b4b",
+    "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+    "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+    "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+    "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+    "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+    "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+    "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+    "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+    "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+    "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987",
+    "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+    "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+    "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+    "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+    "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+    "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+    "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+    "ttf_news/public_gateway.py": "fac8fe10429bc62a6be241817491d1f35eecdaa7f8a37357cb8dbcab7f43fae5",
+    "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+    "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+    "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+    "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+    "ttf_news/semantics.py": "f719c02ef7f2c4017d4cc9a2e428befd1f6e6dc104895e6a5776d475ea8f86d3",
+    "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+    "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+    "ttf_news/translation.py": "d47b232a5f77ea68e2d5bc5d092021e9727e555c6b1dd702922325519982d7c5"
+  },
+  "ledger_snapshot": {
+    "file": "reports/repair_2026-10-20/release_known_accepted_errors.json",
+    "sha256": "a15481d681fd46415c25b07640b17adddd8cfaea1431913b3f9f5a4b69eef279"
+  },
+  "final_unit_tests": {
+    "file": "reports/repair_2026-10-20/final-release-unit-tests.xml",
+    "sha256": "d29725f98a05513606aa40f4866b2bba4b57c236678cc273bfe59f14b30436d2"
+  },
+  "records": [
+    {
+      "known_error_id": "v2_0_missing_previous_trading_day_anchor",
+      "status": "open",
+      "original_review_evidence": {
+        "file": "reports/repair_2026-10-20/independent_live_anchor_review_v2_0.json",
+        "sha256": "72d12a2fd1d297505e9dec8dd8f13b8b35502fa69fadb66ae83f4b241c798efd"
+      },
+      "source_fix_current_gate_evidence": {
+        "file": "reports/repair_2026-10-20/production_original_error_gate_revalidation_v2_3.json",
+        "sha256": "d918d39f98cd9f28212d8df415097208164ebcf003ddb74ce86f07838b9310c2"
+      },
+      "remaining_real_evidence": [
+        "Final actual missing-anchor and legal-anchor records plus the new production manual/detail/current analyses must preserve true previous-trading-day availability; they must not use October19 as October20. The functional smoke may use any real collected article under the original policy.",
+        "Append-review exclusions and all old canonical hashes remain unchanged; complete fresh end-to-end proof."
+      ],
+      "resolution_evidence": null,
+      "affected_analysis_ids": [
+        "6601a466-eecc-48f0-82e5-68785d8ac5be",
+        "d71df0df-25eb-4d87-9b82-adf04d90fe28",
+        "91e13e0e-ee1c-458e-ade4-26f2f2930be3"
+      ],
+      "affected_cases": []
+    },
+    {
+      "known_error_id": "v2_1_future_abandonment_asserted_completed",
+      "status": "open",
+      "original_review_evidence": {
+        "file": "reports/repair_2026-10-20/independent_live_prose_review_v2_1_initial.json",
+        "sha256": "b06ce161273accb2c0c38fbb767400e215c540785e7f84c80a5bd2b7cbe2e810"
+      },
+      "source_fix_current_gate_evidence": {
+        "file": "reports/repair_2026-10-20/production_original_error_gate_revalidation_v2_3.json",
+        "sha256": "d918d39f98cd9f28212d8df415097208164ebcf003ddb74ce86f07838b9310c2"
+      },
+      "remaining_real_evidence": [
+        "The final isolated real_future_well_b1 record correctly retains the explicit future action and must remain separately reviewed. Both failed real-well production submissions and all four rejected raw responses remain preserved.",
+        "The original policy requires a successful complete production workflow using an actual collected nonpremium article, not necessarily this well article. An EPCM workflow may satisfy the functional clause only on its own genuine success and full review; it never makes the two well runs successful.",
+        "Known wrong-answer recurrence may be closed only as not accepted after the source fix. Well-production generation availability remains unresolved and cannot be marked stable or successful."
+      ],
+      "resolution_evidence": null,
+      "affected_analysis_ids": [
+        "b1e9c166-8851-4f7c-9803-b9c72329f6a9"
+      ],
+      "affected_cases": [],
+      "generation_issue_resolved": false,
+      "production_well_success_claim_allowed": false
+    },
+    {
+      "known_error_id": "v2_1_field_misidentified_as_pipeline",
+      "status": "open",
+      "original_review_evidence": {
+        "file": "reports/repair_2026-10-20/independent_live_prose_review_v2_1_pre_fact_gate.json",
+        "sha256": "cd14af3e44885397e583664dbf8b540a22828c5f28cf46b8cd145870085c660b"
+      },
+      "source_fix_current_gate_evidence": {
+        "file": "reports/repair_2026-10-20/production_original_error_gate_revalidation_v2_3.json",
+        "sha256": "d918d39f98cd9f28212d8df415097208164ebcf003ddb74ce86f07838b9310c2"
+      },
+      "remaining_real_evidence": [
+        "New production current-live prose against the actual source-specific facility types; no Troll field/Other transformed into pipeline.",
+        "Preserved d2/751 bodies and appended review exclusion; complete actual successful current-live stage."
+      ],
+      "resolution_evidence": null,
+      "affected_analysis_ids": [
+        "d2ef1250-6ed3-4a68-9396-e6ed4addbfb3",
+        "751b4cbd-7da1-4d1a-8e3a-f7f9de49031a"
+      ],
+      "affected_cases": []
+    },
+    {
+      "known_error_id": "v2_2_deterministic_source_coverage_false_warning",
+      "status": "open",
+      "original_review_evidence": {
+        "file": "reports/repair_2026-10-20/live_9fa_coverage_false_warning_review.json",
+        "sha256": "1a0b92c81a097897bfd8b8edcf8735f7831c9e88fa2e1b0674d6cac27ec85e8b"
+      },
+      "source_fix_current_gate_evidence": null,
+      "remaining_real_evidence": [
+        "New actual current-live risk flags and source-health snapshot independently match final news-only coverage policy; retain genuine Gassco/GDELT gaps.",
+        "Preserve original9fa canonical output and qualified news/close review; source/test fix alone does not establish fresh coverage correctness."
+      ],
+      "resolution_evidence": null,
+      "source_fix_and_unit_tests_available": true,
+      "coverage_causal_boundary": "Deterministic warning defect; original model directions remain qualified, not invalidated.",
+      "affected_analysis_ids": [
+        "9fa53da2-74ec-4fab-9443-bd501f3ba59e"
+      ],
+      "affected_cases": []
+    },
+    {
+      "known_error_id": "v2_3_isolated_price_observation_or_baseline_errors",
+      "status": "open",
+      "original_review_evidence": {
+        "file": "reports/repair_2026-10-20/initial_cohort_semantic_defects_v2_3.json",
+        "sha256": "5e61620f89d34ebdcff5240968f74568168a152609a9ef94110eb837da09151a"
+      },
+      "source_fix_current_gate_evidence": {
+        "file": "reports/repair_2026-10-20/initial_accepted_defects_final_gate_revalidation_v2_3.json",
+        "sha256": "d7ca4e4d5cb0991a3bfab8c3b448421acb4074e1a5c2403839cf6932ba97c65d"
+      },
+      "remaining_real_evidence": [
+        "Final-output-scope actual future_planned_notice, supply_loss_40_with_flat_baseline and anchor_real_manual_missing_prevday must each have an explicit new terminal and final-code/source-bound independent review. Preserve their first bounded recorded strict flags and rejected bad bodies.",
+        "Other selected price controls must have current direct actual or exact complete-path binding. No absent or pre-news quote is an observed zero reaction; availableAt does not replace observedAt.",
+        "A real EPCM weakdown/expectedflat mismatch, if it recurs with safe new prose, requires two new exact reviews; the unsupported zero-price-impact body548048 has no operational label exemption."
+      ],
+      "resolution_evidence": null,
+      "affected_analysis_ids": [],
+      "affected_cases": [
+        "weak_exploration_no_quote",
+        "weak_news_observed_market_up",
+        "supply_restore_40_with_flat_baseline",
+        "anchor_legal_prevday_weak_market_up",
+        "future_planned_notice",
+        "supply_loss_40_with_flat_baseline",
+        "anchor_real_manual_missing_prevday"
+      ],
+      "bounded_output_added_known_errors": {
+        "file": "reports/repair_2026-10-20/bounded_output_accepted_price_defects_v2_3.json",
+        "sha256": "e93c8784ec6c03379a4fb6fcee7722a8d520c15073b291a672688a50e5482392"
+      },
+      "bounded_output_current_gate_rejection_proof": {
+        "file": "reports/repair_2026-10-20/bounded_output_accepted_price_defects_final_gate_revalidation_v2_3.json",
+        "sha256": "53c31dc85bd204ebf0115048e8f27dda9d78bdbe5ec0272b1c2c7d9e491d955c"
+      }
+    },
+    {
+      "known_error_id": "v2_3_isolated_epcm_award_roles_reversed",
+      "status": "open",
+      "original_review_evidence": {
+        "file": "reports/repair_2026-10-20/initial_cohort_semantic_defects_v2_3.json",
+        "sha256": "5e61620f89d34ebdcff5240968f74568168a152609a9ef94110eb837da09151a"
+      },
+      "source_fix_current_gate_evidence": {
+        "file": "reports/repair_2026-10-20/initial_accepted_defects_final_gate_revalidation_v2_3.json",
+        "sha256": "d7ca4e4d5cb0991a3bfab8c3b448421acb4074e1a5c2403839cf6932ba97c65d"
+      },
+      "remaining_real_evidence": [
+        "New actual anchor_real_manual_missing_prevday terminal record with final source-bound EPCM grantor/recipient facts, independently review any accepted answer.",
+        "Keep LNG Canada as awarding party and Tecnicas Reunidas as recipient where mentioned; correct flat/null labels alone do not close the role error."
+      ],
+      "resolution_evidence": null,
+      "affected_analysis_ids": [],
+      "affected_cases": [
+        "anchor_real_manual_missing_prevday"
+      ]
+    }
+  ],
+  "no_errors_resolved_by_inventory": true,
+  "no_model_calls": true,
+  "no_database_access": true,
+  "no_network_calls": true,
+  "no_direction_or_evaluation_contract_changed": true,
+  "boundary": "Inventory only. Original raw, failed actual stages, canonical results, baseline and all review restrictions remain intact. A rejected final output is unavailable and is never a correct forecast. Close each category only with immutable current real validation and independent review.",
+  "updated_at": "2026-10-21T00:33:38.469840+00:00",
+  "policy_article_scope": {
+    "policy_reference": {
+      "file": "reports/repair_2026-10-20/release_policy_v1.json",
+      "sha256": "b60aa328874ba58eea2114da80e9b5a480089c6b7f9c86e0bc8adc0e8e6114f8"
+    },
+    "article_must_be_real_collected_nonpremium": true,
+    "article_must_be_well": false,
+    "basis": "Original criterion13 and validate-deployment.py optional --news-id/source selection. The earlier inventory choice of well was a test choice and did not add a release requirement.",
+    "all_production_attempts_must_remain_visible": true
+  },
+  "current_deployment": {
+    "file": "reports/repair_2026-10-20/backend_detail_grounding_paused.json",
+    "sha256": "d5a316cfa5577a7d9a67306ee3786b60368738658e149dc36de2bbc8909c95f2"
+  },
+  "previous_inventory": {
+    "file": "reports/repair_2026-10-20/release_closure_inventory_v2_3.feb29dcc97f1e296.json",
+    "sha256": "feb29dcc97f1e2967a2471766482bdf83a0ecfefa85fc2fa1f2b9ef0e2b6d270"
+  },
+  "remaining_production_generation_issues": {
+    "all_four_prior_smoke_attempts_remain_failed": true,
+    "eight_case_only_new_actuals_pending": true,
+    "new_final_detail_actual_pending": true,
+    "fifth_fresh_live_production_workflow_pending": true,
+    "well_generation_issue_resolved": false,
+    "not_market_accuracy": true
+  },
+  "affected_followup_plan": {
+    "file": "reports/repair_2026-10-20/final_output_scope_affected_cases_v2_3.json",
+    "sha256": "88cae11ab06f4ec3a249089bcb16d10c751afbb026d294895bc19f42f6714db7"
+  },
+  "retained_base_path_binding": {
+    "file": "reports/repair_2026-10-20/independent_retained_bounded_path_binding_v2_3.json",
+    "sha256": "84d8e6dbb92e0790377827e58be70b03450c26d6af1dbaf53a8a666c7ab98862"
+  },
+  "current_deployment_boundary": "Current maintenance deployment record may describe the earlier paused108734 source. CLI followup uses the final frozen source. Final resumed backend proof and fresh production IDs have not been bound; no live-source claim is made by this inventory."
+}

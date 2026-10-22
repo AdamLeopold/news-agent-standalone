@@ -1,0 +1,194 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T04:05:59.048304+00:00",
+  "scope": "Initial independent full-prose source review of the seventh production completed manual brief and two failed current-live raw drafts. Local artifacts and pure-memory validators only; detail/English still pending separate review.",
+  "generation_source_sha256": {
+    "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+    "ttf_news/analysis.py": "6d46d6dcee4899ea7426222014ee84dc6d9b56f8144789561ba11a02adace72d",
+    "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+    "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+    "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+    "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+    "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+    "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+    "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+    "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+    "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+    "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987",
+    "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+    "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+    "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+    "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+    "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+    "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+    "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+    "ttf_news/public_gateway.py": "fac8fe10429bc62a6be241817491d1f35eecdaa7f8a37357cb8dbcab7f43fae5",
+    "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+    "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+    "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+    "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+    "ttf_news/semantics.py": "ebd95555e3a5bff846ac16e7e6b8a973f1f9b3122eba3a097b95b1bceb748ab5",
+    "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+    "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+    "ttf_news/translation.py": "d47b232a5f77ea68e2d5bc5d092021e9727e555c6b1dd702922325519982d7c5"
+  },
+  "common_source": {
+    "as_of_current_live": "2026-10-21T03:55:01.110265+00:00",
+    "as_of_manual": "2026-10-21T03:55:02.635301+00:00",
+    "target_window": {
+      "trade_date": "2026-10-21",
+      "window_start": "2026-10-20T15:15:00+00:00",
+      "window_end": "2026-10-21T15:15:00+00:00",
+      "cutoff_utc": "2026-10-21T15:15:00+00:00",
+      "cutoff_local": "2026-10-21T17:15:00+02:00",
+      "cutoff_singapore": "2026-10-21T23:15:00+08:00",
+      "display_timezone": "Europe/Amsterdam",
+      "seconds_to_close": 40797,
+      "calendar_source": "https://www.ice.com/publicdocs/ICE_Endex_Trading_Schedule.pdf",
+      "calendar_quality": "official_2026_2027",
+      "boundary": "[previous_settlement, current_settlement)"
+    },
+    "baseline": {
+      "available": true,
+      "kind": "observed_reference_move",
+      "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+      "as_of": "2026-10-21T03:55:02.635301+00:00",
+      "verified_settlement": false,
+      "flat_band": 0.3,
+      "interpretation": "已观察同合约参考变化；延续或反转均为待验证情景，不是目标日已实现结算",
+      "previous_price": 85.062,
+      "previous_date": "2026-10-20",
+      "latest_price": 86.9,
+      "observed_delta": 1.838,
+      "observed_direction": "up",
+      "observed_at": "2026-10-21T03:44:00+00:00",
+      "available_at": "2026-10-21T03:54:25.486874+00:00",
+      "price_type": "delayed_last_trade",
+      "source_url": "https://www.ice.com/products/27996665/Dutch-TTF-Gas-Futures/data",
+      "reference_source_url": "https://www.ice.com/marketdata/api/productguide/charting/data/historical?marketId=6277389&historicalSpan=3",
+      "minimum_delay_minutes": 15,
+      "extreme_threshold": 4.546830435110782
+    },
+    "unit": "EUR/MWh",
+    "known_quote": "Nov26 86.9 observed 21 Oct03:44Z, known03:54:25Z before both as_ofs, compared with20Oct85.062; +1.838, correctly rounded1.84. Reference, not official settlement or announcement-response evidence.",
+    "notices": "N0/N1 same7.6 mcm/d future22Oct04Z→23Oct04Z; N2 separate13.0 future21Oct04Z→22Oct04Z with prior end23Oct→22Oct. Both not_started at03:55Z; N2 starts inside targetwindow, N0/N1 after targetwindow."
+  },
+  "manual_brief": {
+    "record": {
+      "file": "reports/repair_2026-10-20/production_seventh_manual_brief_actual_v2_3.json",
+      "sha256": "2d5d585cac6254d4ed6994ae49a4ede1d42e193bf1edbf4a26f0ece360ee5ff3"
+    },
+    "analysis_id": "e444cb07-a3d1-402d-868d-dcb98a91f586",
+    "input_sha256": "f8344acfbbe9996ded188ccdd9f72ab102548992ba8e5a1b2be0ad5857bd1769",
+    "result_canonical_sha256": "422a32888a1ec5fc408ff52e34926b38dd8aa543cbce6234c3c5b08e7c290353",
+    "actual_calls": 2,
+    "raw_sha256": [
+      "732aa6bb89faa4fb1f7f7cb42db09b1701fe831e4e0342218f3aaaebac37e837",
+      "6e70ae7fe1af28f3c2cf15a416708b7673554b32f6e96f28c8ca79305dd7d70a"
+    ],
+    "original_status": "completed",
+    "verdict": "qualified_no_identified_P2_in_final_brief",
+    "news_direction": "up",
+    "close_direction": "up",
+    "read_all_final_free_prose": true,
+    "checks": [
+      "Announced7.6 capacity correctly separated from unknown measured flow; no20.6 sum or actual-flow invention.",
+      "Forecast+1.84 is a valid rounded observed reference baseline, not an invented future numeric target.",
+      "Potential future supply constraint can create futures price pressure before physical loss, and source uncertainty is explicitly retained.",
+      "Pricing remains unknown; missing flow/reaction data not asserted as zero reaction.",
+      "First raw remains a rejected draft: it falsely says as_of already at window end21Oct and claims no physical loss through that future cutoff. It is not counted as safe."
+    ],
+    "qualifications": [
+      "Final brief omits the timing and marginal relief from N2 end shortening while using primarily N0; simplified cumulative balance is P3. Full trader-detail must explain revisions and the new later maintenance separately.",
+      "analysis.summary “价格可能受限” is vague; evidence and labels indicate upward supply-risk pressure, without a clear claimed downward price sign.",
+      "No claim that these up labels have been validated by realized market prices."
+    ]
+  },
+  "current_live_failure": {
+    "record": {
+      "file": "reports/repair_2026-10-20/production_seventh_current_live_failed_actual_v2_3.json",
+      "sha256": "da2615e78a97a4fff4e7a8baa202bde550e11da34a61b26f67aeda1a860854e2"
+    },
+    "analysis_id": "d7628bcf-d68a-4d14-8ce0-20bc21beaa42",
+    "original_status": "failed",
+    "result_returned": false,
+    "input_sha256": "305fe003c41afa415ba15d50e3988de5bf9995efd0211adac09a9cf7d0a7a581",
+    "actual_calls": 2,
+    "raw_reviews": [
+      {
+        "attempt": 1,
+        "raw_sha256": "d608115d4370e28cdac94157afbf6bb10ef310f2de298850b85da4eb2dbc84ac",
+        "full_prose_read": true,
+        "actual_gate_errors": [
+          "N0容量字段未指明原值为137.4/129.8/7.6mcm/d，不是13.0；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算"
+        ],
+        "local_false_positive": {
+          "quote": "两条未来维护公告，分别导致7.6和13mcm/d的容量损失",
+          "diagnosis": "A source-supported pair of distinct announced capacities is incorrectly forced onto N0. The same draft analysis.evidence explicitly bindsN0=7.6,N2=13; it does not add non-overlapping rates.",
+          "pure_memory_reproduction": "_validate_notice_source_facts rejects original withN0=13; replacing only both summary phrases by explicit[N0]7.6/[N2]13 passes this source-capacity gate. Values and facts unchanged."
+        },
+        "material_error_still_present": {
+          "priority": "P2",
+          "field": "close_forecast.basis/summary",
+          "quote": "前一交易日价格从85.062升至86.9，观察到上涨1.838",
+          "reason": "This rise spans previous-day reference20Oct to current21Oct03:44 quote; it is not a rise occurring during the previous trading day itself. Correct numeric source does not validate the temporal role.",
+          "current_gate_limitation": "_validate_prediction_semantics currently returns without rejecting this exact temporal phrasing; fixing capacity FP alone must not make the whole draft safe."
+        },
+        "physical_claim_scope": "The two specific future maintenance notices have not yet caused their own current physical loss at03:55. This limited causal negation is not evidence of global measured zero flow.",
+        "terminal_verdict": "Do not retrospectively accept this failed raw."
+      },
+      {
+        "attempt": 2,
+        "raw_sha256": "6dc52549fcfa076601b4d6b4ec595bb6d0f1c0ae4af0a02a69ee07cc35b7a1ed",
+        "full_prose_read": true,
+        "actual_gate_errors": [
+          "news_impact.summary、close_forecast.basis、analysis.summary:缺少公告前后价格反应，不能宣称已计价/已消化；须区分计价未知",
+          "news_impact.summary:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景",
+          "核心分析文案必须为中文句子；用中文概括具体事实和TTF机制，不复制完整英文标题，专有名称/单位可保留英文"
+        ],
+        "material_errors": [
+          {
+            "priority": "P2",
+            "field": "news_impact.neutralizing_evidence[0]",
+            "quote": "无即时供气损失→无价格影响",
+            "reason": "Future event not yet physically effective does not demonstrate no futures price effect; this categorical causal price-zero endpoint is unsupported."
+          },
+          {
+            "priority": "P2",
+            "fields": [
+              "news_impact.summary",
+              "analysis.summary",
+              "close_forecast.basis"
+            ],
+            "quote": "市场可能已计价",
+            "reason": "Used as a reason to neutralize the news pressure/current forecast basis, rather than a separately labelled scenario. Reaction data are explicitly unavailable, so possible absorption cannot be used as established offsetting evidence. Pure conditional scenario discussion of pricing would be different."
+          }
+        ],
+        "local_false_positive": {
+          "quote": "计划维护公告提示未来供给受限，但未导致即时供气损失",
+          "diagnosis": "Known inputN0/N2 start>as_of; this is the same announced event subject under an adversative, not a new event or a whole-network zero-flow claim. _check_unknown_as_fact rejects the exact phrasing but accepts the equivalent “两条未来维护公告尚未导致当前供气损失”. This scope FP does not excuse the price-zero endpoint."
+        },
+        "language_error_clarification": {
+          "not_a_mixed_language_paragraph": true,
+          "actual_trigger": "close_forecast.extreme_move_risk is the single Chinese character低; the existing core sentence check requires at least2 Chinese characters. Proper nouns/TTF/EUR/MWh were not the cause.",
+          "quality_limitation": "The extreme-risk field is uninformative. Do not describe this as a factual English/Chinese translation failure."
+        },
+        "terminal_verdict": "Whole raw genuinely invalid notwithstanding local flow-scope FP."
+      }
+    ],
+    "overall_verdict": "genuine_failed_no_delivered_prediction_with_two_local_false_positive_diagnostics",
+    "not_promoted_to_success": true
+  },
+  "required_next_records": [
+    "actual manual detailed analysis terminal",
+    "manual brief/detail English when completed",
+    "current-live delivered output and English, currently unavailable"
+  ],
+  "overall_production_passed": false,
+  "core_source_modified": false,
+  "model_calls_by_audit": 0,
+  "database_access": false,
+  "network_calls": 0,
+  "boundary": "No old successful diagnostic, prior live result or different article is substituted for this failed current-live run. Local FP correction cannot be a backdoor for the independently identified temporal/price-causality errors."
+}

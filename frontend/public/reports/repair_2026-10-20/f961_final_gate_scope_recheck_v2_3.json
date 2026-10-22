@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-10-20T21:49:50.234081+00:00",
+  "method": "Final2.3 source/semantic validators applied read-only to preserved actual2.2 failure bodies. No model calls, no altered output, no changed canonicalfailed status; not a2.3 generation/request-equivalence claim.",
+  "analysis_id": "f96117fa-6591-40aa-8b1c-37a0ce541a46",
+  "source_input_sha256": "ec8ad0e4d968d25bfae95ea121a0d55faf9566500afd2c7ac2f9bfdb74172609",
+  "original_metric_sha256": "52b71b657f4c254a8a6bc854304b6fc22faf8b1c95315f0fb17c6cdc39d31e01",
+  "final_source_sha256": {
+    "ttf_news/analysis.py": "e8f5271b26dac384491ab054e8f317779590948d632a8e6b0c40933d0de9df34",
+    "ttf_news/semantics.py": "2e0739e5a5cbd9d6c9e2de4f16a89f9086e3b875022bfec736a134b832136885",
+    "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+    "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+    "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d"
+  },
+  "records": [
+    {
+      "attempt": 1,
+      "original_raw_content_sha256": "207e29730ed1ec210ecce22a4eaf6b25ba5213df2d9b158191fd19a438bec4c8",
+      "source_and_semantic_errors": [
+        "news_impact.summary:输入没有这条公告的价格反应观测，不能断言未影响当前价格或价格未受影响；可判断当前新闻压力较弱、未来公告不计作当前停供，并说明价格反应未知"
+      ],
+      "offline_source_semantics_pass": false
+    },
+    {
+      "attempt": 2,
+      "original_raw_content_sha256": "2888ad1ff0db909fb599724390d05798f805f36a2c590604050685c8f2338af1",
+      "source_and_semantic_errors": [],
+      "offline_source_semantics_pass": true
+    }
+  ],
+  "new_model_calls": 0
+}

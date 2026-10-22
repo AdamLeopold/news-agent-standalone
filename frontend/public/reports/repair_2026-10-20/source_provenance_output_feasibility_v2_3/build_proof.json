@@ -1,0 +1,26 @@
+{
+  "base_source": {
+    "file": "ttf_news/analysis.py",
+    "sha256": "8ac01ca8120def7f963cdeab8f4eb0bd2dae4c71eb921a9ab5941f70bf1fe1a5"
+  },
+  "independent_base_review": {
+    "file": "reports/repair_2026-10-20/independent_ninth_price_role_marker_final_source_review_v2_3.json",
+    "sha256": "553dc1049e525c6ebbc93a952b6c97bfaa17afb47563b2b203b2aca5f4be21aa"
+  },
+  "frozen_v2_seed_files": {
+    "candidate_overrides.py": "8e8b13a9817edf21811efbe8fdda9b449e8d3cc7d666bac2365956ecc000db87",
+    "prepare_pilot.py": "51e2606a5354f8a04c87b94608fddffcde89e3d517abbfeb1fdc68531a05c91d",
+    "run_pilot.py": "99e60bca0739129ea18c9540ec416b810e33eebf8d966a29a4351194443c34c7"
+  },
+  "factory_sha256": "d26ce7a3245a2141e94f9f0c92abfdbe92214260cacff45399c01b6b28e5fc20",
+  "new_candidate_file": ".runtime/source-provenance-pilot-final/candidate_analysis.py",
+  "new_candidate_sha256": "f5ae74f4c5aaab81c8c40e9db737aab2b9baaf6d716d51eae18510df8131792a",
+  "approved_plan_file": ".runtime/source-provenance-pilot-final/proposal_manifest.json",
+  "approved_plan_sha256": "dc6875635339a6d462879ca62030956ce213e4efcbe2874f47aaa33dd8679c62",
+  "model_calls": 0,
+  "network_calls": 0,
+  "database_access": false,
+  "root_source_modified": false,
+  "old_variants_unchanged": true,
+  "status": "prepared_pending_explicit_root_review_and_execution_approval"
+}

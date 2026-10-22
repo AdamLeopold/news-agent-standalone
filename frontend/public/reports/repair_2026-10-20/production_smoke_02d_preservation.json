@@ -1,0 +1,15 @@
+{
+  "reason": "Second actual normal resubmission of the same well article failed with true fact errors; retain it. No unchanged third well resubmission, no prompt/gate/direction changes.",
+  "manual_analysis_id": "02d2386b-b13e-4d38-8fc5-6ff2a2ab6f11",
+  "originals_preserved": true,
+  "files": {
+    "attempted_v2_3_manual_02d_smoke.json": {
+      "sha256": "72fd950341f103921a6c4aa10a73bae05d95426ee8254b1b76e031d67abf7762",
+      "bytes": 10275
+    },
+    "attempted_v2_3_manual_02d_smoke.log": {
+      "sha256": "c19f3242c90d4ab32bd9a4940ed0f51fe4d9042447f614089e6207675773084a",
+      "bytes": 1386
+    }
+  }
+}

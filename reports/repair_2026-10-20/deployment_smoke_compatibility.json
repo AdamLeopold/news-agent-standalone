@@ -1,0 +1,93 @@
+{
+  "reviewed_at_utc": "2026-10-20T18:52:23.407931+00:00",
+  "status": "helper_blocker_fixed_compatibility_passed_not_deployed",
+  "scope": "Offline smoke-helper compatibility with current default retry, stored audit metadata, source fact tables and detail limitation values; no real model/API run.",
+  "initial_reproduced_blocker": {
+    "function": "scripts/validate-deployment.py:validate_forecast",
+    "source_record": "reports/repair_2026-10-20/candidate-scopeguard-validation/real_eni.json",
+    "error_type": "pydantic.ValidationError",
+    "error": "AnalysisResult: _meta Extra inputs are not permitted [type=extra_forbidden]",
+    "cause": "The persisted _meta runtime envelope was passed into the strict model-body schema, although subsequent smoke checks require that same envelope.",
+    "status": "fixed_in_helper_only",
+    "repair": "Deep-copy the result, remove only top-level _meta from the schema validation copy, and keep strict prompt version/raw evidence metadata checks against the unchanged original. Unexpected model-body fields still fail."
+  },
+  "checks": [
+    {
+      "area": "default retry policy",
+      "status": "compatible",
+      "evidence": [
+        "ttf_news/analysis.py:NewsAnalyst.__init__ semantic_high_retry=False",
+        "scripts/validate-deployment.py has no analyst constructor or high-retry override"
+      ],
+      "meaning": "Smoke consumes actual backend results and never enables the earlier independent high experiment."
+    },
+    {
+      "area": "stored metadata envelope",
+      "status": "passed",
+      "tests": [
+        "actual completed brief is accepted structurally",
+        "invalid prompt/semantic/raw-evidence flags remain rejected",
+        "unexpected body fields remain rejected",
+        "original result stays equal"
+      ]
+    },
+    {
+      "area": "source_fact_checks",
+      "status": "passed",
+      "meaning": "AnalysisResult declares an optional dict; new count/clock metadata remains internal. Translation skips the entire table, and the helper regression checks exact preservation plus protected numeric/enum/citation leaves."
+    },
+    {
+      "area": "new detail limitations",
+      "status": "passed",
+      "meaning": "The generation enum still yields list[str] accepted by DetailAnalysis and consumed by translation. An actual stored detail body with the current limitation options passes helper validation without mutation."
+    },
+    {
+      "area": "live workflow",
+      "status": "not_run",
+      "meaning": "No backend restart, live submission, inference, SSE or export execution was performed in this compatibility review."
+    }
+  ],
+  "regression_fixtures": {
+    "file": "tests/fixtures/smoke_actual_results.json",
+    "sha256": "4f729efd0246cd45e3272928e4657d29d7d3d303219c63ad19f330335003cadd",
+    "sources": [
+      {
+        "part": "brief",
+        "source_record": "reports/repair_2026-10-20/candidate-scopeguard-validation/real_eni.json",
+        "source_sha256": "d11361901006ea411089acf948c6631fb046c01ebe98b0f0411b5668c20aec22",
+        "source_file_unchanged": true,
+        "fixture_result_equals_original": true
+      },
+      {
+        "part": "detail",
+        "source_record": "reports/repair_2026-10-20/candidate-parser-validation-detail/supply_restore_40.json",
+        "source_sha256": "8c643a5f1744696b06d2ba8fa0348b401f97ee32ce6b93d189dd5bdf31063210",
+        "source_file_unchanged": true,
+        "fixture_result_equals_original": true
+      }
+    ],
+    "boundary": "Actual historical stored result fixtures regress schema/envelope compatibility only; passing these helper tests does not certify their old predictions under current semantic gates."
+  },
+  "self_test": {
+    "command": ".venv/bin/python scripts/validate-deployment.py --self-test",
+    "exit_code": 0,
+    "tests_passed": 12,
+    "log": "reports/repair_2026-10-20/deployment-smoke-self-tests.log",
+    "output": "test_actual_completed_body_extra_fields_remain_rejected (__main__.SelfTests) ... ok\ntest_actual_completed_metadata_is_still_strictly_checked (__main__.SelfTests) ... ok\ntest_actual_completed_result_keeps_metadata_separate_from_strict_schema (__main__.SelfTests) ... ok\ntest_actual_detail_accepts_current_limitation_values_without_mutation (__main__.SelfTests) ... ok\ntest_english_chinese_prose_is_rejected (__main__.SelfTests) ... ok\ntest_english_numbers_and_enums_are_protected (__main__.SelfTests) ... ok\ntest_english_rendering_preserves_internal_source_fact_table (__main__.SelfTests) ... ok\ntest_null_has_no_flat_label (__main__.SelfTests) ... ok\ntest_real_source_payload_keeps_exact_article_facts (__main__.SelfTests) ... ok\ntest_sse_parser_retains_replay_id_and_payload (__main__.SelfTests) ... ok\ntest_synthetic_article_rejected (__main__.SelfTests) ... ok\ntest_version_update_never_opens_store_under_old_backend (__main__.SelfTests) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.030s\n\nOK\n"
+  },
+  "reviewed_sha256": {
+    "scripts/validate-deployment.py": "3bcb1c41c7bad36d51a9786c5b9b324bc1afdf5160ddb1257360262496ecb5e3",
+    "ttf_news/analysis.py": "6f5f01523cfaba60c4f0e7bca42d833a78228d8efe62b72e5169ea1168de081d",
+    "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+    "ttf_news/translation.py": "e870cac2d960ec9dcdc0dff5f1f68011e64bd0f444c03a1f94a0cf897fc288e3"
+  },
+  "actions": {
+    "core_edits": false,
+    "model_calls": 0,
+    "process_changes": false,
+    "production_database_access": false,
+    "original_model_records_changed": false
+  },
+  "remaining_blockers": [],
+  "final_run_boundary": "This remains pre-deployment/offline review. Actual deployment must use fresh code/PID/cwd/queue checks and execute the real smoke stages after restart."
+}

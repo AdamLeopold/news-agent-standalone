@@ -1,0 +1,85 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T02:43:01.892683+00:00",
+  "review_kind": "finite_independent_read_only_source_bound_evidence_and_price_absence_proposal_review",
+  "scope": "Only the confirmed new physical-unit Eniraw evidence polarity, its announcement-to-actual production/absence assertions, and EPCM temporary price-no-impact wording. No additional model/source categories introduced by this review.",
+  "candidate_source": {
+    ".runtime/evidence-slot-price-scope-proposal/ttf_news/semantics.py": "d8dbb58192b5c9fbfd04726d3309127142bfa02f2d18f11ee6de82c0a33204b9",
+    ".runtime/evidence-slot-price-scope-proposal/proposal.patch": "1f248bda212b9f7a37786bfa8546f5b0b1fbde0dfe2e0cb35274545a29eeeab4",
+    ".runtime/evidence-slot-price-scope-proposal/test_slot_scope.py": "9b80daa7c65b78ef6df997089dafae35c92f2d8244db8f45855c68387d38f14a",
+    ".runtime/evidence-slot-price-scope-proposal/proposal_proof.json": "aa5ad9587813f213070ebe0f59e77c1c8e12f326d52e9aa07f10b875dc16ee27"
+  },
+  "unchanged_root_source": {
+    "ttf_news/analysis.py": "f3c44838f16941e503e5a542bb8d95176e83ca2d25df7af8373cfeaefe0b0d06",
+    "ttf_news/semantics.py": "3ed9590f39994ea29f7478439f5c0ce55e546457350e8e8fef7022631585c2c0"
+  },
+  "verdict": "no_identified_material_blocker_in_requested_finite_scope_ready_for_authorized_application_and_new_actual_revalidation",
+  "known_logic_errors": [],
+  "finite_review_passed": true,
+  "production_ready": false,
+  "new_model_calls": 0,
+  "checks": {
+    "evidence_prices_and_hollow_templates": "An explicit up price mechanism belongs in bullish evidence and down in bearish. A company/project fact with only a bare TTF bullish/bearish endpoint must state a source-grounded supply/demand/capacity/expectation channel. Net direction is not assigned. Source-supported demand/expectation counterfacts and weaker upward pressure retain valid interpretation.",
+    "historical_scope": "Historical waiver is confined to explicit mechanism historical context; a fact segment containing 此前 or 低于此前预期 cannot hide a current wrong-bucket TTF up conclusion. Source-backed expectation-gap bullish evidence remains permitted by the whole collector.",
+    "bare_entity_physical_stop": "Named active unavailability capacity is not proof of actual production stop. Same-entity bare current stop must have known affirmative actual-state source. Notice descriptions, future/conditional/invalidation premises and independently confirmed actual stop pass. A source saying actual production 未停止/没有停止 cannot count as positive stop confirmation.",
+    "active_absence_vs_future_degree": "Active no-significant-supply-interruption is not established by missing flow data or a small price change. A known, explicitly scoped future notice not yet started retains the preexisting degree judgment; active mixed notices/global/metered/zero-price claims cannot borrow that exception.",
+    "temporary_price_absence": "对TTF价格暂无即时影响 is an unqualified zero-effect assertion without a reaction source. Weak/limited transmission judgments, conditional/expected propositions, observation absence, negations and known comparable reaction observations are not globally banned. Future reaction evidence remains unavailable.",
+    "input_and_label_boundary": "Only validators/new local helpers change. Shared source extraction, prospective classification, fact projection, analysis.py, prompt, schema and output budgets remain unchanged. No directions/scores/confidence are rewritten; actual error/retry paths may change and must be proven after application.",
+    "immutable_known_errors": "Fifteen prior known-bad actual/fixture bodies plus the two new Eniraw and EPCM bodies remain rejected under the complete semantic collector. This is not a retrospective successful generation; current original strict flags/results/failed service runs remain untouched."
+  },
+  "independent_evidence": {
+    "focused_tests": {
+      "file": "reports/repair_2026-10-20/independent_evidence_slot_price_scope_proposal_tests_v2_3.xml",
+      "sha256": "e462d27904426f75ced2bac63704c9317b70ff97ac2698fe38f08c7ea3ecca7d",
+      "passed": 60,
+      "failed": 0,
+      "errors": 0,
+      "seconds": 7.21,
+      "command": "PYTHONDONTWRITEBYTECODE=1 python -m pytest .runtime/evidence-slot-price-scope-proposal/test_slot_scope.py -q -p no:cacheprovider --junitxml=reports/repair_2026-10-20/independent_evidence_slot_price_scope_proposal_tests_v2_3.xml",
+      "warning": "Existing unknown asyncio_mode pytest option in the selected interpreter; all focused checks completed."
+    },
+    "extra_pure_controls": {
+      "file": "reports/repair_2026-10-20/independent_evidence_slot_price_scope_controls_v2_3.json",
+      "sha256": "8cea2c27c154276c86127ba0e147bc36436cd74c6834cdc6d9febeda05519876",
+      "passed": 21,
+      "failed": 0
+    },
+    "shared_ast_unchanged": {
+      "_matching_mechanisms": true,
+      "extract_mechanisms": true,
+      "_source_text": true,
+      "source_fact_projection": true
+    },
+    "changed_existing_functions": [
+      "_check_gassco_physical_state",
+      "_check_observed_absence_of_price_reaction",
+      "_analysis_semantic_checks"
+    ],
+    "new_functions": [
+      "_check_source_bound_evidence_slot_prices",
+      "_check_notice_entity_production_stop"
+    ]
+  },
+  "actual_reviews": [
+    {
+      "file": "reports/repair_2026-10-20/independent_actual_physical_unit_review_v2_3_all_6_briefs.json",
+      "sha256": "f7de6a40d0a43603ef20b711250fc9498139075d6fc50a2f765a2ceb46fabfcb"
+    },
+    {
+      "file": "reports/repair_2026-10-20/independent_physical_unit_eni_state_reassessment_v2_3.json",
+      "sha256": "87025fada46bc66c69b77a54b7d1be1c9911668fc0726240efee619cc724971e"
+    },
+    {
+      "file": "reports/repair_2026-10-20/independent_physical_unit_eni_absence_reassessment_v2_3.json",
+      "sha256": "1be2521f272c1173145b730b4891fcc0e46bf494dd96bef244bfc3018facce65"
+    }
+  ],
+  "qualifications": [
+    "These are bounded lexical/source invariants, not proof that arbitrary new output text has correct causality.",
+    "Weak/flat/down/up judgments are kept separate from unsupported physical or observed price-effect facts; no desired flat frequency is imposed.",
+    "The exact original Eniraw/EPCM still contain their identified errors; only new final-source actuals can establish delivery success after applying the fix.",
+    "A new full production live/manual/detail/English workflow and final coherent public code/report manifest remain required; previous failed public identity checks and production attempts are preserved.",
+    "Official complete-path replay must establish which old actual request/retry paths remain equivalent; source changes are never relabelled as having generated old records."
+  ]
+}

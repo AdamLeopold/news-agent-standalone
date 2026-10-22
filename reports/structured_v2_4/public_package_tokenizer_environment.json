@@ -1,0 +1,17 @@
+{
+  "status": "environment_identified",
+  "interrupted_run": "reports/structured_v2_4/public-package-final-tests.log",
+  "observed_result": "190 failed,230 passed,6 skipped,40 errors,22 subtests before SIGINT",
+  "cause": "Publish checkout excludes local tokenizer cache. Sandboxed download unavailable, so the deliberate UTF8-byte fallback overestimates input budgets; source synchronization was also still finishing when this run was started. It is not a valid frozen-package acceptance run.",
+  "next_run": "Waited for successful source/evidence synchronization; use the exact existing o200k_harmony vocabulary from the running product, without copying it into publication.",
+  "tokenizer_cache_relative_file": "data/cache/tokenizer/fb374d419588a4632f3f557e76b4b70aebbca790",
+  "tokenizer_file_sha256": "446a9538cb6c348e3516120d7c08b09f57c36495e2acfffe59a5bf8b0cfb1a2d",
+  "tokenizer_bytes": 3613922,
+  "probe": {
+    "encoding": "o200k_harmony",
+    "tokens": 17,
+    "utf8_upper_bound": 81
+  },
+  "production_source_changed": false,
+  "model_calls": 0
+}

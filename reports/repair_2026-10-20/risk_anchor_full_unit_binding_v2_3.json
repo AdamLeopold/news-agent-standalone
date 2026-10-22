@@ -1,0 +1,30 @@
+{
+  "tested_at": "2026-10-21T01:37:30.721047+00:00",
+  "status": "passed",
+  "source_freeze": {
+    "file": "reports/repair_2026-10-20/risk_anchor_final_source_freeze_v2_3.json",
+    "sha256": "058ebddd8669610940a8ff703d2b8afd3f137bbf78c703174a82c573aba6042c"
+  },
+  "source_hashes_unchanged": true,
+  "pytest_passed_tests": 924,
+  "pytest_passed_subtests": 375,
+  "elapsed_seconds": 73.63,
+  "failures": 0,
+  "errors": 0,
+  "junit_entries": 924,
+  "evidence": {
+    "reports/repair_2026-10-20/risk-polarity-final-unit-tests-rerun.log": "2f2afaf0729e554a32c694858785a36191a5073d411f76dfbf4b21bf1c892375",
+    "reports/repair_2026-10-20/risk-polarity-final-unit-tests-rerun.xml": "cc80e4bca36e08c5737a6685b669de55a0fe2d422efcf775e54332b061be3c9e"
+  },
+  "runtime_model_calls": 0,
+  "previous_failed_and_passed_unit_evidence_preserved": true,
+  "previous_full_failed_unit_evidence": {
+    "reports/repair_2026-10-20/risk-polarity-final-unit-tests.log": "06d25eaf8629c25d8f1713a4468ce038df55cd6af824adf295f47fb475c73935",
+    "reports/repair_2026-10-20/risk-polarity-final-unit-tests.xml": "62bdc7d9f213a64a1c5ac901f27176e6ea2a5aa920d6c3437adac1a39e3d6f4d"
+  },
+  "test_only_conflict_fixture_citation_fix": {
+    "file": "tests/test_final_price_observation_v2_3.py",
+    "sha256": "192c97d376d838a594b77e4f0ea0162b628ef697abf9eda9c4864d700fd11c15",
+    "scope": "Known opposing source now explicitly cited; uncited positive-control variant is rejected; no production code change"
+  }
+}

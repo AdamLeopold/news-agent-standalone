@@ -1,0 +1,92 @@
+{
+  "generated_at": "2026-10-20T19:49:36.815631+00:00",
+  "scope": "pricing diagnostic field aggregation only; no acceptance-condition, direction, prompt/version, draft or attempt changes",
+  "no_model_calls": true,
+  "no_production_database_or_process_changes": true,
+  "original_failure": {
+    "path": "reports/repair_2026-10-20/candidate-revision-validation/future_planned_notice.json",
+    "sha256": "ec2bf8c6f61bafed14039a3fd6690048c92e370f478e15583d2aaf9062abba42",
+    "still_failed": true,
+    "record_unmodified": true
+  },
+  "cause": {
+    "first_attempt_pricing_violations_in_three_fields_but_old_feedback_only_named_news_summary": true,
+    "old_total_feedback_characters": 177,
+    "global_320_limit_truncated_feedback": false,
+    "physical_diagnostic_tail_truncated_by_per_issue_100": 9,
+    "second_attempt_copied_first_attempt_invalid_close_basis_verbatim": true,
+    "schema_basis_remains_open_bounded_string": {
+      "minLength": 1,
+      "maxLength": 600
+    },
+    "schema_does_not_require_flat_or_null": true
+  },
+  "updated_failure_diagnostics": [
+    {
+      "attempt": 1,
+      "new_pricing_diagnostics": [
+        "news_impact.summary、close_forecast.basis、analysis.summary:缺少公告前后价格反应，不能宣称未计入价格/尚未计价；须区分计价未知"
+      ],
+      "diagnostic_character_counts": [
+        91
+      ],
+      "all_paths_survive_per_issue_100_and_total_320": true
+    },
+    {
+      "attempt": 2,
+      "new_pricing_diagnostics": [
+        "close_forecast.basis:缺少公告前后价格反应，不能宣称未计入价格/尚未计价；须区分计价未知"
+      ],
+      "diagnostic_character_counts": [
+        54
+      ],
+      "all_paths_survive_per_issue_100_and_total_320": true
+    }
+  ],
+  "accepted_records_present_at_review": [
+    {
+      "path": "reports/repair_2026-10-20/candidate-revision-validation/real_eni.json",
+      "sha256": "c19e831df2010ac10f113d4cc85cad903015c63e59acf584f83e254f4198d41c",
+      "actual_attempts": 2,
+      "attempt_reviews": [
+        {
+          "attempt": 1,
+          "new_pricing_diagnostics": []
+        },
+        {
+          "attempt": 2,
+          "new_pricing_diagnostics": []
+        }
+      ],
+      "pricing_feedback_change_would_affect_actual_retry": false
+    },
+    {
+      "path": "reports/repair_2026-10-20/candidate-revision-validation/supply_loss_40_with_flat_baseline.json",
+      "sha256": "bd5d6bae13901efe7db318008fa10a40d398c7773d7dc253c002c8d94dfce03d",
+      "actual_attempts": 2,
+      "attempt_reviews": [
+        {
+          "attempt": 1,
+          "new_pricing_diagnostics": []
+        },
+        {
+          "attempt": 2,
+          "new_pricing_diagnostics": []
+        }
+      ],
+      "pricing_feedback_change_would_affect_actual_retry": false
+    }
+  ],
+  "accepted_record_scope": "Only files already completed at review are included; in-flight cases are not certified.",
+  "regressions": {
+    "tests": 136,
+    "subtests": 254,
+    "passed": true,
+    "elapsed_seconds": 1.87,
+    "command": ".venv/bin/python -m pytest -q tests/test_semantics.py tests/test_reviewed_prose.py tests/test_generation_boundaries.py"
+  },
+  "source_sha256": {
+    "ttf_news/semantics.py": "e8ba8d971dad8cbab56ddb0cce299f25ed93f7b781ef2d3792f643d109c89a9b",
+    "tests/test_semantics.py": "6db85bb5d2e480700a8e7bea914b22099913e68dc06a3251c132614aedf4a522"
+  }
+}

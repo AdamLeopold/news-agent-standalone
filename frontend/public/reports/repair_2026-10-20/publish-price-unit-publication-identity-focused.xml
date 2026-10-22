@@ -1,0 +1,332 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="11" skipped="0" tests="86" time="8.258" timestamp="2026-10-21T10:29:51.013986+08:00" hostname="MacBook-Pro-8.local"><testcase classname="tests.test_production_price_unit_scopes" name="test_actual_fifth_second_is_scoped_epistemic_not_observed_zero" time="0.383" /><testcase classname="tests.test_production_price_unit_scopes" name="test_local_epistemic_physical_clause_allowed[\u622a\u81f3\u5206\u6790\u65f6\u70b9\uff0cGassco Troll\u8ba1\u5212\u7ef4\u62a4\u5c1a\u672a\u5f00\u59cb\uff0c\u672a\u89c1\u5b9e\u9645\u6d41\u91cf\u635f\u5931\u3002]" time="0.075" /><testcase classname="tests.test_production_price_unit_scopes" name="test_local_epistemic_physical_clause_allowed[Gassco Troll\u8ba1\u5212\u5c1a\u672a\u5f00\u59cb\uff0c\u5c1a\u672a\u89c2\u5bdf\u5230\u5b9e\u9645\u6d41\u91cf\u635f\u5931\u3002]" time="0.073" /><testcase classname="tests.test_production_price_unit_scopes" name="test_local_epistemic_physical_clause_allowed[Gassco Troll\u8ba1\u5212\u7ef4\u62a4\u672a\u5f00\u59cb\uff0c\u672a\u786e\u8ba4\u5b9e\u9645\u6d41\u91cf\u635f\u5931\u3002]" time="0.073" /><testcase classname="tests.test_production_price_unit_scopes" name="test_epistemic_prefix_does_not_hide_later_or_global_measured_claim[\u672a\u89c1\u5b9e\u9645\u6d41\u91cf\u635f\u5931\uff0c\u4f46\u5b9e\u9645\u6d41\u91cf\u4fdd\u6301\u4e0d\u53d8\u3002]" time="0.072" /><testcase classname="tests.test_production_price_unit_scopes" name="test_epistemic_prefix_does_not_hide_later_or_global_measured_claim[\u672a\u786e\u8ba4\u5b9e\u9645\u6d41\u91cf\u635f\u5931\uff0c\u4f46\u5b9e\u9645\u6d41\u91cf\u4fdd\u6301\u4e0d\u53d8\u3002]" time="0.073" /><testcase classname="tests.test_production_price_unit_scopes" name="test_epistemic_prefix_does_not_hide_later_or_global_measured_claim[Gassco Troll\u8ba1\u5212\u7ef4\u62a4\u672a\u5f00\u59cb\uff0c\u5b9e\u9645\u6d41\u91cf\u4fdd\u6301\u4e0d\u53d8\u3002]" time="0.073" /><testcase classname="tests.test_production_price_unit_scopes" name="test_epistemic_prefix_does_not_hide_later_or_global_measured_claim[\u672a\u89c1\u5b9e\u9645\u6d41\u91cf\u635f\u5931\uff1b\u5b9e\u9645\u6d41\u91cf\u4fdd\u6301\u4e0d\u53d8\u3002]" time="0.073" /><testcase classname="tests.test_production_price_unit_scopes" name="test_epistemic_prefix_does_not_hide_later_or_global_measured_claim[Gassco Troll\u516c\u544a\u7f3a\u5c11\u6d41\u91cf\u8d44\u6599\uff0c\u56e0\u6b64\u5b9e\u9645\u6d41\u91cf\u4fdd\u6301\u4e0d\u53d8\u3002]" time="0.071" /><testcase classname="tests.test_production_price_unit_scopes" name="test_epistemic_prefix_does_not_hide_later_or_global_measured_claim[Gassco Troll\u8ba1\u5212\u7ef4\u62a4\u672a\u5f00\u59cb\uff0c\u6b27\u6d32\u5b9e\u9645\u6d41\u91cf\u6ca1\u6709\u635f\u5931\u3002]" time="0.071" /><testcase classname="tests.test_production_price_unit_scopes" name="test_future_news_pressure_degree_not_measurement[\u65e0\u663e\u8457\u4f9b\u9700\u51b2\u51fb]" time="0.072" /><testcase classname="tests.test_production_price_unit_scopes" name="test_future_news_pressure_degree_not_measurement[\u6ca1\u6709\u660e\u663e\u4f9b\u5e94\u5f71\u54cd]" time="0.072" /><testcase classname="tests.test_production_price_unit_scopes" name="test_degree_not_future_scope_escape_for_unknown_active_cancelled_ended[active]" time="0.073" /><testcase classname="tests.test_production_price_unit_scopes" name="test_degree_not_future_scope_escape_for_unknown_active_cancelled_ended[dismissed]" time="0.073" /><testcase classname="tests.test_production_price_unit_scopes" name="test_degree_not_future_scope_escape_for_unknown_active_cancelled_ended[elapsed]" time="0.072" /><testcase classname="tests.test_production_price_unit_scopes" name="test_degree_or_future_words_never_hide_explicit_bad_observation[\u6b27\u6d32\u603b\u4f53\u5b9e\u9645\u6d41\u91cf\u65e0\u663e\u8457\u4f9b\u5e94\u5f71\u54cd]" time="0.077" /><testcase classname="tests.test_production_price_unit_scopes" name="test_degree_or_future_words_never_hide_explicit_bad_observation[\u6ca1\u6709\u5b9e\u9645\u6d41\u91cf\u635f\u5931]" time="0.077" /><testcase classname="tests.test_production_price_unit_scopes" name="test_degree_or_future_words_never_hide_explicit_bad_observation[\u7f3a\u4e4f\u5b9e\u9645\u6d41\u91cf\u786e\u8ba4\uff0c\u56e0\u6b64\u65e0\u663e\u8457\u4f9b\u9700\u51b2\u51fb]" time="0.076" /><testcase classname="tests.test_production_price_unit_scopes" name="test_degree_or_future_words_never_hide_explicit_bad_observation[\u65b0\u95fb\u672a\u4ea7\u751f\u53ef\u89c2\u6d4b\u4ef7\u683c\u53cd\u5e94]" time="0.078" /><testcase classname="tests.test_production_price_unit_scopes" name="test_degree_or_future_words_never_hide_explicit_bad_observation[\u622a\u81f3\u76ee\u524d\u65e0\u4ef7\u683c\u53cd\u5e94]" time="0.079" /><testcase classname="tests.test_production_price_unit_scopes" name="test_actual_price_unit_wrong_is_newly_rejected" time="0.069" /><testcase classname="tests.test_production_price_unit_scopes" name="test_unit_spelling_preserved_energy_identity[EUR/MWh]" time="0.063" /><testcase classname="tests.test_production_price_unit_scopes" name="test_unit_spelling_preserved_energy_identity[\u20ac/MWh]" time="0.062" /><testcase classname="tests.test_production_price_unit_scopes" name="test_unit_spelling_preserved_energy_identity[\u6b27\u5143/\u5146\u74e6\u65f6]" time="0.061" /><testcase classname="tests.test_production_price_unit_scopes" name="test_unit_spelling_preserved_energy_identity[EUR per MWh]" time="0.063" /><testcase classname="tests.test_production_price_unit_scopes" name="test_unit_spelling_preserved_energy_identity[\u6b27\u5143/ MWh]" time="0.062" /><testcase classname="tests.test_production_price_unit_scopes" name="test_quote_currency_and_denominator_not_silently_replaced[EUR/mcm]" time="0.064" /><testcase classname="tests.test_production_price_unit_scopes" name="test_quote_currency_and_denominator_not_silently_replaced[EUR/m3]" time="0.062" /><testcase classname="tests.test_production_price_unit_scopes" name="test_quote_currency_and_denominator_not_silently_replaced[\u6b27\u5143/\u767e\u4e07\u7acb\u65b9\u7c73]" time="0.063" /><testcase classname="tests.test_production_price_unit_scopes" name="test_quote_currency_and_denominator_not_silently_replaced[EUR/MW]" time="0.064" /><testcase classname="tests.test_production_price_unit_scopes" name="test_quote_currency_and_denominator_not_silently_replaced[USD/MWh]" time="0.066" /><testcase classname="tests.test_production_price_unit_scopes" name="test_quote_currency_and_denominator_not_silently_replaced[USD/MMBtu]" time="0.064" /><testcase classname="tests.test_production_price_unit_scopes" name="test_nonprice_quantity_or_unit_warning_unchanged[\u8bbe\u65bd\u516c\u544a\u4e0d\u53ef\u7528\u5bb9\u91cf13.0mcm/d\uff0c\u82e5\u4f9b\u7ed9\u98ce\u9669\u6269\u5927\u5219\u5f71\u54cd\u6c14\u4ef7\u3002]" time="0.067" /><testcase classname="tests.test_production_price_unit_scopes" name="test_nonprice_quantity_or_unit_warning_unchanged[\u9879\u76ee\u5408\u540c\u91d1\u989d200M EUR\uff0c\u4e3a\u957f\u671f\u5efa\u8bbe\u652f\u51fa\u3002]" time="0.064" /><testcase classname="tests.test_production_price_unit_scopes" name="test_nonprice_quantity_or_unit_warning_unchanged[TTF\u53c2\u8003\u4ef7\u683c\u4e3a86.795 EUR/MWh\uff0c\u4f9b\u5e94\u516c\u544a\u5bb9\u91cf\u4e3a13mcm/d\u3002]" time="0.065" /><testcase classname="tests.test_production_price_unit_scopes" name="test_nonprice_quantity_or_unit_warning_unchanged[TTF\u62a5\u4ef7\u5355\u4f4d\u4e0d\u662f1 EUR/mcm\uff0c\u5e94\u4fdd\u6301EUR/MWh\u3002]" time="0.063" /><testcase classname="tests.test_production_price_unit_scopes" name="test_filtered_reference_does_not_recover_future_unit" time="0.000" /><testcase classname="tests.test_production_price_unit_scopes" name="test_all_fourteen_known_bad_original_bodies_still_rejected[0]" time="0.123"><failure message="ValueError: Published artifact bytes differ from publication map">index = 0
+
+    @pytest.mark.parametrize('index',range(14))
+    def test_all_fourteen_known_bad_original_bodies_still_rejected(index):
+     rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records']
+&gt;    ctx,result=load_old(rows[index]);p,_=prepare_context(ctx)
+
+tests/test_production_price_unit_scopes.py:163: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:154: in load_old
+    raw=verified_historical_bytes(ROOT/location['file'],location['sha256'])
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:131: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;ttf_historical_test_publication_map.PublicationManifest object at 0x113b5de40&gt;
+path = PosixPath('.runtime/github-publish/scripts/repair-validation-report.py')
+
+    def identity(self,path: Path) -&gt; str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+&gt;       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:152: ValueError</failure></testcase><testcase classname="tests.test_production_price_unit_scopes" name="test_all_fourteen_known_bad_original_bodies_still_rejected[1]" time="0.118"><failure message="ValueError: Published artifact bytes differ from publication map">index = 1
+
+    @pytest.mark.parametrize('index',range(14))
+    def test_all_fourteen_known_bad_original_bodies_still_rejected(index):
+     rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records']
+&gt;    ctx,result=load_old(rows[index]);p,_=prepare_context(ctx)
+
+tests/test_production_price_unit_scopes.py:163: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:154: in load_old
+    raw=verified_historical_bytes(ROOT/location['file'],location['sha256'])
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:131: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;ttf_historical_test_publication_map.PublicationManifest object at 0x113aa4040&gt;
+path = PosixPath('.runtime/github-publish/scripts/repair-validation-report.py')
+
+    def identity(self,path: Path) -&gt; str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+&gt;       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:152: ValueError</failure></testcase><testcase classname="tests.test_production_price_unit_scopes" name="test_all_fourteen_known_bad_original_bodies_still_rejected[2]" time="0.127"><failure message="ValueError: Published artifact bytes differ from publication map">index = 2
+
+    @pytest.mark.parametrize('index',range(14))
+    def test_all_fourteen_known_bad_original_bodies_still_rejected(index):
+     rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records']
+&gt;    ctx,result=load_old(rows[index]);p,_=prepare_context(ctx)
+
+tests/test_production_price_unit_scopes.py:163: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:154: in load_old
+    raw=verified_historical_bytes(ROOT/location['file'],location['sha256'])
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:131: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;ttf_historical_test_publication_map.PublicationManifest object at 0x115f78040&gt;
+path = PosixPath('.runtime/github-publish/scripts/repair-validation-report.py')
+
+    def identity(self,path: Path) -&gt; str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+&gt;       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:152: ValueError</failure></testcase><testcase classname="tests.test_production_price_unit_scopes" name="test_all_fourteen_known_bad_original_bodies_still_rejected[3]" time="0.120"><failure message="ValueError: Published artifact bytes differ from publication map">index = 3
+
+    @pytest.mark.parametrize('index',range(14))
+    def test_all_fourteen_known_bad_original_bodies_still_rejected(index):
+     rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records']
+&gt;    ctx,result=load_old(rows[index]);p,_=prepare_context(ctx)
+
+tests/test_production_price_unit_scopes.py:163: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:154: in load_old
+    raw=verified_historical_bytes(ROOT/location['file'],location['sha256'])
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:131: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;ttf_historical_test_publication_map.PublicationManifest object at 0x104bea1d0&gt;
+path = PosixPath('.runtime/github-publish/scripts/repair-validation-report.py')
+
+    def identity(self,path: Path) -&gt; str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+&gt;       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:152: ValueError</failure></testcase><testcase classname="tests.test_production_price_unit_scopes" name="test_all_fourteen_known_bad_original_bodies_still_rejected[4]" time="0.122"><failure message="ValueError: Published artifact bytes differ from publication map">index = 4
+
+    @pytest.mark.parametrize('index',range(14))
+    def test_all_fourteen_known_bad_original_bodies_still_rejected(index):
+     rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records']
+&gt;    ctx,result=load_old(rows[index]);p,_=prepare_context(ctx)
+
+tests/test_production_price_unit_scopes.py:163: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:154: in load_old
+    raw=verified_historical_bytes(ROOT/location['file'],location['sha256'])
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:131: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;ttf_historical_test_publication_map.PublicationManifest object at 0x113a9d630&gt;
+path = PosixPath('.runtime/github-publish/scripts/repair-validation-report.py')
+
+    def identity(self,path: Path) -&gt; str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+&gt;       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:152: ValueError</failure></testcase><testcase classname="tests.test_production_price_unit_scopes" name="test_all_fourteen_known_bad_original_bodies_still_rejected[5]" time="0.119"><failure message="ValueError: Published artifact bytes differ from publication map">index = 5
+
+    @pytest.mark.parametrize('index',range(14))
+    def test_all_fourteen_known_bad_original_bodies_still_rejected(index):
+     rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records']
+&gt;    ctx,result=load_old(rows[index]);p,_=prepare_context(ctx)
+
+tests/test_production_price_unit_scopes.py:163: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:154: in load_old
+    raw=verified_historical_bytes(ROOT/location['file'],location['sha256'])
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:131: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;ttf_historical_test_publication_map.PublicationManifest object at 0x115f220e0&gt;
+path = PosixPath('.runtime/github-publish/scripts/repair-validation-report.py')
+
+    def identity(self,path: Path) -&gt; str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+&gt;       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:152: ValueError</failure></testcase><testcase classname="tests.test_production_price_unit_scopes" name="test_all_fourteen_known_bad_original_bodies_still_rejected[6]" time="0.124"><failure message="ValueError: Published artifact bytes differ from publication map">index = 6
+
+    @pytest.mark.parametrize('index',range(14))
+    def test_all_fourteen_known_bad_original_bodies_still_rejected(index):
+     rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records']
+&gt;    ctx,result=load_old(rows[index]);p,_=prepare_context(ctx)
+
+tests/test_production_price_unit_scopes.py:163: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:154: in load_old
+    raw=verified_historical_bytes(ROOT/location['file'],location['sha256'])
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:131: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;ttf_historical_test_publication_map.PublicationManifest object at 0x113aa5900&gt;
+path = PosixPath('.runtime/github-publish/scripts/repair-validation-report.py')
+
+    def identity(self,path: Path) -&gt; str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+&gt;       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:152: ValueError</failure></testcase><testcase classname="tests.test_production_price_unit_scopes" name="test_all_fourteen_known_bad_original_bodies_still_rejected[7]" time="0.118"><failure message="ValueError: Published artifact bytes differ from publication map">index = 7
+
+    @pytest.mark.parametrize('index',range(14))
+    def test_all_fourteen_known_bad_original_bodies_still_rejected(index):
+     rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records']
+&gt;    ctx,result=load_old(rows[index]);p,_=prepare_context(ctx)
+
+tests/test_production_price_unit_scopes.py:163: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:154: in load_old
+    raw=verified_historical_bytes(ROOT/location['file'],location['sha256'])
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:131: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;ttf_historical_test_publication_map.PublicationManifest object at 0x113aa5bd0&gt;
+path = PosixPath('.runtime/github-publish/scripts/repair-validation-report.py')
+
+    def identity(self,path: Path) -&gt; str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+&gt;       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:152: ValueError</failure></testcase><testcase classname="tests.test_production_price_unit_scopes" name="test_all_fourteen_known_bad_original_bodies_still_rejected[8]" time="0.080" /><testcase classname="tests.test_production_price_unit_scopes" name="test_all_fourteen_known_bad_original_bodies_still_rejected[9]" time="0.087" /><testcase classname="tests.test_production_price_unit_scopes" name="test_all_fourteen_known_bad_original_bodies_still_rejected[10]" time="0.104" /><testcase classname="tests.test_production_price_unit_scopes" name="test_all_fourteen_known_bad_original_bodies_still_rejected[11]" time="0.122"><failure message="ValueError: Published artifact bytes differ from publication map">index = 11
+
+    @pytest.mark.parametrize('index',range(14))
+    def test_all_fourteen_known_bad_original_bodies_still_rejected(index):
+     rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records']
+&gt;    ctx,result=load_old(rows[index]);p,_=prepare_context(ctx)
+
+tests/test_production_price_unit_scopes.py:163: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:154: in load_old
+    raw=verified_historical_bytes(ROOT/location['file'],location['sha256'])
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:131: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;ttf_historical_test_publication_map.PublicationManifest object at 0x113b5f850&gt;
+path = PosixPath('.runtime/github-publish/scripts/repair-validation-report.py')
+
+    def identity(self,path: Path) -&gt; str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+&gt;       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:152: ValueError</failure></testcase><testcase classname="tests.test_production_price_unit_scopes" name="test_all_fourteen_known_bad_original_bodies_still_rejected[12]" time="0.119"><failure message="ValueError: Published artifact bytes differ from publication map">index = 12
+
+    @pytest.mark.parametrize('index',range(14))
+    def test_all_fourteen_known_bad_original_bodies_still_rejected(index):
+     rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records']
+&gt;    ctx,result=load_old(rows[index]);p,_=prepare_context(ctx)
+
+tests/test_production_price_unit_scopes.py:163: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:154: in load_old
+    raw=verified_historical_bytes(ROOT/location['file'],location['sha256'])
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:131: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;ttf_historical_test_publication_map.PublicationManifest object at 0x113dfbcd0&gt;
+path = PosixPath('.runtime/github-publish/scripts/repair-validation-report.py')
+
+    def identity(self,path: Path) -&gt; str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+&gt;       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:152: ValueError</failure></testcase><testcase classname="tests.test_production_price_unit_scopes" name="test_all_fourteen_known_bad_original_bodies_still_rejected[13]" time="0.130"><failure message="ValueError: Published artifact bytes differ from publication map">index = 13
+
+    @pytest.mark.parametrize('index',range(14))
+    def test_all_fourteen_known_bad_original_bodies_still_rejected(index):
+     rows=json.loads((R/'risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json').read_text())['records']
+&gt;    ctx,result=load_old(rows[index]);p,_=prepare_context(ctx)
+
+tests/test_production_price_unit_scopes.py:163: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:154: in load_old
+    raw=verified_historical_bytes(ROOT/location['file'],location['sha256'])
+tests/test_production_price_unit_scopes.py:146: in verified_historical_bytes
+    mapped=helper.PublicationManifest(manifest)
+scripts/repair-validation-report.py:131: in __init__
+    for label in self.artifacts:self.identity(ROOT/label)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;ttf_historical_test_publication_map.PublicationManifest object at 0x106733df0&gt;
+path = PosixPath('.runtime/github-publish/scripts/repair-validation-report.py')
+
+    def identity(self,path: Path) -&gt; str:
+        resolved=path.resolve()
+        if not resolved.is_relative_to(ROOT.resolve()):raise ValueError('Referenced public artifact escapes project')
+        label=str(path.absolute().relative_to(ROOT.absolute()))
+        if self._path(label)!=resolved:raise ValueError('Referenced public artifact path mismatch')
+        row=self.artifacts.get(label)
+        if not row or not resolved.is_file():raise ValueError('Referenced artifact is missing from publication map')
+&gt;       if sha(resolved.read_bytes())!=row['public_bytes_sha256']:raise ValueError('Published artifact bytes differ from publication map')
+E       ValueError: Published artifact bytes differ from publication map
+
+scripts/repair-validation-report.py:152: ValueError</failure></testcase><testcase classname="tests.test_production_price_unit_scopes" name="test_unit_recovery_never_borrows_filtered_changed_or_future_quote[change0]" time="0.066" /><testcase classname="tests.test_production_price_unit_scopes" name="test_unit_recovery_never_borrows_filtered_changed_or_future_quote[change1]" time="0.065" /><testcase classname="tests.test_production_price_unit_scopes" name="test_unit_recovery_never_borrows_filtered_changed_or_future_quote[change2]" time="0.065" /><testcase classname="tests.test_production_price_unit_scopes" name="test_unit_recovery_never_borrows_filtered_changed_or_future_quote[change3]" time="0.067" /><testcase classname="tests.test_production_price_unit_scopes" name="test_unit_recovery_never_borrows_filtered_changed_or_future_quote[change4]" time="0.066" /><testcase classname="tests.test_production_price_unit_scopes" name="test_source_supported_actual_no_loss_is_still_allowed" time="0.077" /><testcase classname="tests.test_production_price_unit_scopes" name="test_existing_condition_consequent_scope_across_comma_is_retained[\u82e5\u7ef4\u62a4\u6ca1\u6709\u63d0\u524d\u5f00\u59cb\uff0c\u5219\u5b9e\u9645\u6d41\u91cf\u6ca1\u6709\u635f\u5931\u3002]" time="0.076" /><testcase classname="tests.test_production_price_unit_scopes" name="test_existing_condition_consequent_scope_across_comma_is_retained[\u82e5\u8be5\u7ef4\u62a4\u5c1a\u672a\u5f00\u59cb\uff0c\u5b9e\u9645\u6d41\u91cf\u6ca1\u6709\u635f\u5931\u3002]" time="0.075" /><testcase classname="tests.test_production_price_unit_scopes" name="test_condition_or_epistemic_does_not_cross_contrast_to_new_observation[\u82e5\u9700\u6c42\u589e\u52a0\u53ef\u80fd\u63a8\u9ad8\u4ef7\u683c\uff0c\u4f46\u5b9e\u9645\u6d41\u91cf\u4fdd\u6301\u4e0d\u53d8\u3002]" time="0.072" /><testcase classname="tests.test_production_price_unit_scopes" name="test_condition_or_epistemic_does_not_cross_contrast_to_new_observation[\u672a\u6838\u5b9e\u5b9e\u9645\u6d41\u91cf\u635f\u5931\uff0c\u7136\u800c\u5b9e\u9645\u6d41\u91cf\u4fdd\u6301\u4e0d\u53d8\u3002]" time="0.074" /><testcase classname="tests.test_production_price_unit_scopes" name="test_future_cancelled_status_not_degree_exception_even_if_title_unchanged" time="0.071" /><testcase classname="tests.test_production_price_unit_scopes" name="test_known_different_market_unit_does_not_become_ttf[JKM-12-USD/MMBtu]" time="0.067" /><testcase classname="tests.test_production_price_unit_scopes" name="test_known_different_market_unit_does_not_become_ttf[NBP-90-GBP/therm]" time="0.067" /><testcase classname="tests.test_production_price_unit_scopes" name="test_known_different_market_unit_does_not_become_ttf[NBP-90-\u82f1\u9551/therm]" time="0.069" /><testcase classname="tests.test_production_price_unit_scopes" name="test_known_different_market_unit_does_not_become_ttf[JKM-1.733-USD/MMBtu]" time="0.068" /><testcase classname="tests.test_production_price_unit_scopes" name="test_foreign_source_cannot_be_borrowed_after_asof_or_for_wrong_instrument" time="0.068" /><testcase classname="tests.test_production_price_unit_scopes" name="test_english_comma_contrast_does_not_hide_measured_zero[Actual flows remain unconfirmed, but actual flows are unaffected.]" time="0.073" /><testcase classname="tests.test_production_price_unit_scopes" name="test_english_comma_contrast_does_not_hide_measured_zero[If maintenance is postponed, but actual flows are unchanged.]" time="0.072" /><testcase classname="tests.test_production_price_unit_scopes" name="test_english_condition_consequent_is_still_conditional" time="0.074" /><testcase classname="tests.test_production_price_unit_scopes" name="test_degree_exception_cannot_borrow_future_notices_for_other_source[N3\u65e0\u663e\u8457\u4f9b\u9700\u51b2\u51fb]" time="0.073" /><testcase classname="tests.test_production_price_unit_scopes" name="test_degree_exception_cannot_borrow_future_notices_for_other_source[[N3]\u65e0\u663e\u8457\u4f9b\u9700\u51b2\u51fb]" time="0.075" /><testcase classname="tests.test_production_price_unit_scopes" name="test_degree_exception_cannot_borrow_future_notices_for_other_source[Nyhamna\u65e0\u663e\u8457\u4f9b\u9700\u51b2\u51fb]" time="0.073" /><testcase classname="tests.test_production_price_unit_scopes" name="test_unit_input_preserved_only_if_supplied_and_quote_known" time="0.313" /><testcase classname="tests.test_production_price_unit_scopes" name="test_known_transport_tariff_is_not_ttf_price_even_with_same_numeric_delta[1.733]" time="0.066" /><testcase classname="tests.test_production_price_unit_scopes" name="test_known_transport_tariff_is_not_ttf_price_even_with_same_numeric_delta[2.0]" time="0.067" /><testcase classname="tests.test_production_price_unit_scopes" name="test_negating_price_direction_is_not_a_unit_warning[TTF\u4ef7\u683c\u4e0d\u662f\u4e0b\u8dcc\u800c\u662f\u4e0a\u6da81.733 EUR/mcm\u3002]" time="0.065" /><testcase classname="tests.test_production_price_unit_scopes" name="test_negating_price_direction_is_not_a_unit_warning[TTF\u4ef7\u683c\u5e76\u975e\u4e0b\u8dcc\u800c\u662f\u4e0a\u6da81.733 EUR/mcm\u3002]" time="0.063" /><testcase classname="tests.test_production_price_unit_scopes" name="test_historical_copy_requires_exact_complete_publication_identity[none]" time="0.032" /><testcase classname="tests.test_production_price_unit_scopes" name="test_historical_copy_requires_exact_complete_publication_identity[missing_manifest]" time="0.001" /><testcase classname="tests.test_production_price_unit_scopes" name="test_historical_copy_requires_exact_complete_publication_identity[wrong_source]" time="0.026" /><testcase classname="tests.test_production_price_unit_scopes" name="test_historical_copy_requires_exact_complete_publication_identity[wrong_public]" time="0.028" /><testcase classname="tests.test_production_price_unit_scopes" name="test_historical_copy_requires_exact_complete_publication_identity[wrong_path]" time="0.027" /><testcase classname="tests.test_production_price_unit_scopes" name="test_historical_copy_requires_exact_complete_publication_identity[tampered_file]" time="0.030" /><testcase classname="tests.test_production_price_unit_scopes" name="test_historical_copy_requires_exact_complete_publication_identity[unrelated_stale_entry]" time="0.028" /><testcase classname="tests.test_production_price_unit_scopes" name="test_exact_original_historical_bytes_need_no_public_copy_map" time="0.001" /></testsuite></testsuites>

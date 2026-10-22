@@ -1,0 +1,109 @@
+{
+  "generated_at": "2026-10-21T04:33:17.203195+00:00",
+  "status": "eight_attempts_all_failed_not_ready",
+  "production_history": {
+    "file": "reports/repair_2026-10-20/production_e2e_attempt_history_v2_3.json",
+    "sha256": "cbd18cdcb4be32a3212cd31eff40fb164551138ec7152912865442bb2ae81c6e"
+  },
+  "eighth_terminal_report": {
+    "file": "reports/repair_2026-10-20/production_eighth_full_workflow_v2_3.json",
+    "sha256": "0813d94c9fb283f260c98369975a73b30d58f5d590c0c28fcfb777f3aedbb3f7"
+  },
+  "actual_failed_stages": [
+    {
+      "role": "manual_detail",
+      "record": {
+        "file": "reports/repair_2026-10-20/production_eighth_manual_detail_failed_actual_v2_3.json",
+        "sha256": "7c1d93061d8274d3c08db2c10bfdd07d3209cc3e1e420521a83238ef27ef73d9"
+      },
+      "analysis_id": "a137f38d-4bf5-41de-9f81-df0eaa1443fc",
+      "status": "failed",
+      "analysis_status": "completed",
+      "result_is_null": false,
+      "detail_result_is_null": true,
+      "actual_model_calls": 2,
+      "raw_sha256": [
+        "b07bf109d9071e6610b6f9cf5de45415a13c2ac91b9378ae6ad8379b63ccaa45",
+        "0b1c7a33657edaec269ddc30c9dbcfacdd7cd19d47b2938977d954b3cfcf26d9"
+      ],
+      "failure_metric_id": 20252,
+      "error": "模型JSON两次校验失败，未生成方向：分别列出的容量字段available含无来源数值7.6mcm/d；下降额与绝对可用容量须分开并逐公告匹配；detail.scenarios.bullish:情景名称与明确单向供需机制相反；供应增加/需求下降/库存增加产生下行压力，供应减少/需求增加/库存下降产生上行压力。须重新分析条件，不得只改标签",
+      "raw_classification_review_status": "independent_full_review_complete_failed_terminal_preserved",
+      "not_reclassified_success_after_possible_false_positive_correction": true,
+      "independent_review": {
+        "file": "reports/repair_2026-10-20/independent_production_eighth_terminal_cn_english_review_v2_3.json",
+        "sha256": "78a6ed11a6cff94cbc8e18ad5efb4b1aec7cbb4e781cc97cefeb24b3dfc9a89b"
+      },
+      "local_false_positives_identified_by_independent_review": true,
+      "independent_material_errors_in_rejected_raw_also_identified": true
+    },
+    {
+      "role": "current_live",
+      "record": {
+        "file": "reports/repair_2026-10-20/production_eighth_current_live_failed_actual_v2_3.json",
+        "sha256": "2e9929000a56349d10b3572ed98723d412493221d3e90796d797cf9cf60da20c"
+      },
+      "analysis_id": "ecd35fc0-409c-4306-a88d-71e5ee074d4b",
+      "status": "failed",
+      "analysis_status": "failed",
+      "result_is_null": true,
+      "detail_result_is_null": true,
+      "actual_model_calls": 2,
+      "raw_sha256": [
+        "4563605895b6060c4f15d8132e6c87986f4b994509c89f1de256e97749c57f0f",
+        "487e7d1dcea77b952a987aba77ecfbaae6658e721f213a4382e149e52784a896"
+      ],
+      "failure_metric_id": 20245,
+      "error": "模型JSON两次校验失败，未生成方向：N0容量字段unavailable原值为7.6mcm/d，不是13.0；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算；close_forecast.basis:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知；close_forecast.basis:输入没有这条公告的价格反应观测，不能断言未影响当前价格或价格未受影响；可判断当前新闻压力较弱、未来公告不计作当前停供，并说明价格反应未知；an",
+      "raw_classification_review_status": "independent_full_review_complete_failed_terminal_preserved",
+      "not_reclassified_success_after_possible_false_positive_correction": true,
+      "independent_review": {
+        "file": "reports/repair_2026-10-20/independent_production_eighth_terminal_cn_english_review_v2_3.json",
+        "sha256": "78a6ed11a6cff94cbc8e18ad5efb4b1aec7cbb4e781cc97cefeb24b3dfc9a89b"
+      },
+      "local_false_positives_identified_by_independent_review": false,
+      "independent_material_errors_in_rejected_raw_also_identified": true
+    }
+  ],
+  "manual_brief_actual": {
+    "file": "reports/repair_2026-10-20/production_eighth_manual_brief_actual_v2_3.json",
+    "sha256": "d4dc3a14b3e10b957a699e5761e55f69b66fddcaef636bba7afb714cecff07be"
+  },
+  "manual_brief_english_actual": {
+    "file": "reports/repair_2026-10-20/production_eighth_manual_brief_english_actual_v2_3.json",
+    "sha256": "75138a9868893052bdba7412cc6cbc2aa71f6d2602373ac28ef96117e31f2dac"
+  },
+  "manual_brief_independent_review": {
+    "file": "reports/repair_2026-10-20/independent_production_eighth_manual_brief_initial_review_v2_3.json",
+    "sha256": "5d48fd697d2259067fae5fa8b4537e57067770af4a5d46b92340b891230a539f"
+  },
+  "additional_auto_review": {
+    "analysis_id": "30db9f1c-7595-4f29-af5e-85e5d1df0a2e",
+    "record": {
+      "file": "reports/repair_2026-10-20/production_eighth_queued_automatic_live_actual_v2_3.json",
+      "sha256": "794cc6962a49d0e8c021c6073c860d1c58ad791ee2b20ec0c026ce7b34b57b99"
+    },
+    "independent_review": {
+      "file": "reports/repair_2026-10-20/independent_production_eighth_queued_automatic_live_review_v2_3.json",
+      "sha256": "238883927fa256282c9df4e5be183e61e20e96a08c48ed0be4a715c49709c8aa"
+    },
+    "append_quality_review_applied": {
+      "file": "reports/repair_2026-10-20/production_eighth_auto_future_window_applied_review_v2_3.json",
+      "sha256": "650f044f9fd4b3b4f8167b92440f75e6e1109b64fb715d46deec2c2830377421"
+    },
+    "known_defect": "future_target_window_knowledge_claim",
+    "canonical_record_modified": false,
+    "included_in_smoke_or_isolated_case_success_counts": false
+  },
+  "whole_failed_not_reclassified": true,
+  "models_requested_by_append": 0,
+  "database_access": false,
+  "network_calls": 0,
+  "canonical_records_changed": false,
+  "all_eight_families_closed": false,
+  "full_failure_prose_review_pending": false,
+  "full_terminal_cn_english_prose_review": {
+    "file": "reports/repair_2026-10-20/independent_production_eighth_terminal_cn_english_review_v2_3.json",
+    "sha256": "78a6ed11a6cff94cbc8e18ad5efb4b1aec7cbb4e781cc97cefeb24b3dfc9a89b"
+  }
+}

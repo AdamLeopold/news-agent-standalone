@@ -1,0 +1,62 @@
+{
+  "requested_at": "2026-10-22T16:36:11.220417+00:00",
+  "begin": "2026-10-21T16:36:11.220248+00:00",
+  "params": {
+    "limit": 2,
+    "page": 1,
+    "depth": 0,
+    "sort": "publishedAt",
+    "where[and][0][or][0][publishedAt][greater_than_equal]": "2026-10-21T16:36:11.220248+00:00",
+    "where[and][0][or][1][updatedAt][greater_than_equal]": "2026-10-21T16:36:11.220248+00:00",
+    "where[and][1][or][0][title][like]": "gas",
+    "where[and][1][or][1][title][like]": "LNG",
+    "where[and][1][or][2][title][like]": "FSRU",
+    "select[title]": "true",
+    "select[slug]": "true",
+    "select[publishedAt]": "true",
+    "select[updatedAt]": "true",
+    "select[_status]": "true"
+  },
+  "request_count": 1,
+  "model_calls": 0,
+  "status": 200,
+  "url": "https://www.offshore-energy.biz/api/articles?limit=2&page=1&depth=0&sort=publishedAt&where%5Band%5D%5B0%5D%5Bor%5D%5B0%5D%5BpublishedAt%5D%5Bgreater_than_equal%5D=2026-10-21T16%3A36%3A11.220248%2B00%3A00&where%5Band%5D%5B0%5D%5Bor%5D%5B1%5D%5BupdatedAt%5D%5Bgreater_than_equal%5D=2026-10-21T16%3A36%3A11.220248%2B00%3A00&where%5Band%5D%5B1%5D%5Bor%5D%5B0%5D%5Btitle%5D%5Blike%5D=gas&where%5Band%5D%5B1%5D%5Bor%5D%5B1%5D%5Btitle%5D%5Blike%5D=LNG&where%5Band%5D%5B1%5D%5Bor%5D%5B2%5D%5Btitle%5D%5Blike%5D=FSRU&select%5Btitle%5D=true&select%5Bslug%5D=true&select%5BpublishedAt%5D=true&select%5BupdatedAt%5D=true&select%5B_status%5D=true",
+  "response_sha256": "d46e17b0f8b405927aa9d6690adfef398441d4e36d95267bdde4f9f05d12281e",
+  "bytes": 733,
+  "passed": true,
+  "totalDocs": 7,
+  "hasNextPage": true,
+  "docs": [
+    {
+      "doc": {
+        "id": 420503,
+        "title": "Gasunie launches tender for 10-year offshore wind PPA in Netherlands",
+        "slug": "gasunie-launches-tender-for-10-year-offshore-wind-ppa-in-netherlands",
+        "publishedAt": "2026-07-24T08:57:51.000Z",
+        "updatedAt": "2026-10-21T22:05:50.893Z",
+        "_status": "published"
+      },
+      "checks": {
+        "published_matches": false,
+        "updated_matches": true,
+        "title_matches": true
+      }
+    },
+    {
+      "doc": {
+        "id": 420495,
+        "title": "Australia’s ‘largest untapped’ conventional gas resource gets significant project status",
+        "slug": "australias-largest-untapped-conventional-gas-resource-gets-significant-project-status",
+        "publishedAt": "2026-07-27T08:57:41.000Z",
+        "updatedAt": "2026-10-21T22:05:49.786Z",
+        "_status": "published"
+      },
+      "checks": {
+        "published_matches": false,
+        "updated_matches": true,
+        "title_matches": true
+      }
+    }
+  ],
+  "old_published_new_updated_count": 2
+}

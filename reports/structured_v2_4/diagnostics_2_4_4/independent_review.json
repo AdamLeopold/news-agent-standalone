@@ -1,0 +1,66 @@
+{
+  "reviewed_at": "2026-10-22T16:04:03.096869+00:00",
+  "reviewer": "independent structured_review agent",
+  "scope": "Actual current mixed result: read-only complete source/catalog/plan and Chinese/English brief/detail semantic review. No model/service/production database actions.",
+  "artifact": ".runtime/structured-reasoning-v4/clause-id-v4/real_batch_01/current_mixed_live.json",
+  "artifact_sha256": "a768b452047208f5e3b981d4e65cb4810522981c77fd5366594ca36f79c2279c",
+  "core_sha256": "0b15b314721e86afd9d32e191deaf939b1db30b58ec8565d0c017f38c3047c06",
+  "workflow_version": "ttf-news-standalone-2.4.4",
+  "status": "completed",
+  "model_calls": 5,
+  "retry_calls": 0,
+  "source_and_variant_binding_errors": [],
+  "english_generated_prose_cjk_fields": [],
+  "catalog_sha256": "761c3c40e0b7502c858b3c74471245a9212004e5133f45c70722a93c817e34f1",
+  "typed_plan_sha256": "43abc08fbacedc345a86be418fa3ebc689e67ba6a9fc6c5bd93282ee4692e072",
+  "overall": "Passed this mixed-news semantic diagnostic with no confirmed P1/P2. Eligible to proceed to actual production API workflow checks; this private result does not establish completed website release acceptance.",
+  "decision": {
+    "news_score": 1.49,
+    "news_direction": "up",
+    "close_direction": "up"
+  },
+  "semantic_checks": [
+    {
+      "topic": "Cheniere evidence and commodity channel",
+      "finding": "The selected paragraph supports future Sabine Pass liquefaction expansion, not current supply. Role is lng_export. The model region_scope is region_only; the separate channel is global_lng_export_expectations and allows expectation/longer_term. Neither regional nor unspecified labels now prove zero transmission or require a named European recipient.",
+      "mechanism_id": "M6",
+      "actual_model_judgment": "weight 0.8, confidence 0.5, expectation => -0.40. This numeric value/nonzero choice is not the acceptance criterion: a model-chosen zero remains permissible once the source-supported channel is available."
+    },
+    {
+      "topic": "Corporate contracts",
+      "finding": "The Qatar SPA and May EPC are background commercial facts, not incremental global end-use demand, observed gas output or new present-day 20 mtpa production."
+    },
+    {
+      "topic": "OneSubsea",
+      "finding": "Technical testing remains technology/background, without unsupported European upstream expansion or production commitment."
+    },
+    {
+      "topic": "Cook Inlet",
+      "finding": "The chosen paragraph describes completed geotechnical survey and data for a proposed Alaska import terminal. It is technical background with no asserted current LNG imports, new gas production, export capacity or incremental global final consumption."
+    },
+    {
+      "topic": "Gassco",
+      "finding": "Current announced capacity is not measured lost flow. Troll revision 9.6 to 7.6 is downside relief (-0.15). Åsgard capacity/extension positive mechanisms are one maximum-risk group (+0.84), without summing articles/capacity. Troll risk +1.20 and future LNG supply -0.40 combine to net +1.49."
+    },
+    {
+      "topic": "Closing and historical evidence",
+      "finding": "Closing is conditional news_dominates up from the same typed net and legal same-contract baseline 87.426 to 90.03, observed/available before frozen as_of. History exposes actual state and available_at reference observations, without treating dismissed historical notices as current recovery or reaction as causally proven."
+    },
+    {
+      "topic": "Bilingual detail",
+      "finding": "Brief, English, detail and English detail share immutable catalog and plan, including labels, numbers and citations. English analytical prose is English. Detail and English perform zero extra inference calls and do not silently rejudge direction."
+    }
+  ],
+  "p3_limits": [
+    "Cook Inlet proposed import-facility background is not separately normalized beyond the completed technical survey; complete stored paragraph remains visible.",
+    "Normalized fact entity is a source-mentioned entity or alias, not a program-verified subject; in the OneSubsea technical fact Equinor is a participant, not proof of sole actor.",
+    "Ordinary fact normalization is not exhaustive semantic ground truth; source identity/quote integrity is checked independently from human semantic judgment."
+  ],
+  "preservation_and_scope": [
+    "This review does not modify original prediction rows or acceptance history and does not overwrite failed 2.4.3 or earlier runs.",
+    "Four diagnostic controls from frozen 2.4.2 remain separately reviewed under their own source hash. They were not rerun under 2.4.4 and must not be reported as such.",
+    "Historical Chevron/EIA controls are mechanism diagnostics, not contemporaneous historical forecasts.",
+    "Price remains reference/delayed data; no official settlement accuracy or independent model trading performance is established.",
+    "Actual API manual/brief/detail/English/live/SSE, preservation checks and website deployment verification must still complete."
+  ]
+}

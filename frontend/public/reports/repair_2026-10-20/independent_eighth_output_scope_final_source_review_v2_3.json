@@ -1,0 +1,137 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T04:47:30.153394+00:00",
+  "scope": "Finite independent audit of the authorized eighth-output source candidate: future target-window epistemic knowledge, cited additional-notice capacity allocation, and negated recovery/physical-subject versus price-predicate scope. No new language families or label quota.",
+  "candidates": {
+    "analysis": {
+      "file": ".runtime/eighth-output-scope-proposal/revision-all-physical-scope/revision-explicit-alias/ttf_news/analysis.py",
+      "sha256": "bcd240a893a87e842fc8caff8f4efa156f80cac7d8807b2c8c4c3a8599bfcdfa"
+    },
+    "semantics": {
+      "file": ".runtime/eighth-output-scope-proposal/revision-all-physical-scope/revision-explicit-alias/ttf_news/semantics.py",
+      "sha256": "3fcdf8708e49be0bc7060e0e97f45fbfcf5262dabdfc431d70aca0a748791ff7"
+    }
+  },
+  "root_source_matches_candidates": true,
+  "proposal": {
+    "file": ".runtime/eighth-output-scope-proposal/revision-all-physical-scope/revision-explicit-alias/proposal_proof_final.json",
+    "sha256": "60ef555a3045f8bd09b70958d7d69cca6b3a2e38b89935de97f9f4a0ea122afa"
+  },
+  "analysis_patch": {
+    "file": ".runtime/eighth-output-scope-proposal/revision-all-physical-scope/revision-explicit-alias/analysis.patch",
+    "sha256": "5d75ef1c77fc51e10cc1a6d6db087382e222ebc007e0366d5bb2b8ef0f3225eb"
+  },
+  "semantics_patch": {
+    "file": ".runtime/eighth-output-scope-proposal/revision-all-physical-scope/revision-explicit-alias/semantics.patch",
+    "sha256": "670b8b07b6af1467f6362447b93509561ec80d090958761d4e2887ee5e38a300"
+  },
+  "test_module": {
+    "file": ".runtime/eighth-output-scope-proposal/revision-all-physical-scope/revision-explicit-alias/test_eighth_output_scope.py",
+    "sha256": "883452ffb99481b6b70b49fe66861b8cb1f94fb0436d1567ee94f7fc28ecb1ce"
+  },
+  "portable_actual_fixture": {
+    "file": ".runtime/eighth-output-scope-proposal/revision-all-physical-scope/revision-explicit-alias/actual_fixture.json",
+    "sha256": "4257821205395fe7dc66123e93b04db7a0c9ca9849f23130a0bda6bfc78f4987"
+  },
+  "independent_finite_controls": {
+    "file": "reports/repair_2026-10-20/independent_eighth_output_scope_final_controls_v2_3.json",
+    "sha256": "a31e2f62eb0d0a9e0086f118309ebd68550c73c2634b2bbd0fb16cd5baf7760b"
+  },
+  "independently_executed_tests": {
+    "junit": {
+      "file": "reports/repair_2026-10-20/independent-eighth-output-scope-final-tests-v2_3.xml",
+      "sha256": "88b6abfe757b67c2bab31c857b3b4b14de2a577d61b27eb156b537902805057d"
+    },
+    "pytest_cases_passed": 223,
+    "subtests_passed": 293,
+    "junit_total": 516,
+    "failures": 0,
+    "errors": 0,
+    "seconds": 6.199
+  },
+  "changed_top_level_ast_nodes": {
+    "analysis": [
+      "_validate_notice_source_facts"
+    ],
+    "semantics": [
+      "_matching_mechanisms",
+      "_condition_mechanism_signs",
+      "_check_notice_settlement_timing"
+    ]
+  },
+  "all_other_top_level_functions_and_classes_ast_identical": true,
+  "finite_assessments": [
+    {
+      "scope": "future_window_epistemic_state",
+      "verdict": "pass",
+      "reason": "Before target window_end, categorical confirmation status at window end is rejected. As-of missing evidence, explicit prior window, and conditional future confirmation remain allowed. Epistemic absence does not itself imply measured zero flow."
+    },
+    {
+      "scope": "additional_notice_capacity",
+      "verdict": "pass",
+      "reason": "The allowance requires two cited notices, explicit additional-notice clauses with one rate per part, local source field/type and target-window compatibility. Explicit source aliases, wrong available field, unsupported rates and positive aggregation remain checked. Original eighth detail first draft now passes local gates, without rewriting its failed terminal state."
+    },
+    {
+      "scope": "physical_predicate_and_negated_recovery",
+      "verdict": "pass",
+      "reason": "Six physical mechanism matches crossing comma/price predicates are discarded, while directly stated physical changes remain. Conditional actual flow not restored plus continuing constraint remains bullish; restored plus relief remains bearish; a hypothetical absence of loss does not assert a new measured change."
+    }
+  ],
+  "original_three_actual_raw_checks": [
+    {
+      "raw_sha256": "2f1405df32a4f7c3931d3b15106f7b732aab66223116642ed918eba1e1f6ccc9",
+      "detail": false,
+      "local_validation_pass": false,
+      "errors": [
+        "news_impact.summary:目标结算窗口结束2026-10-21T15:15:00+00:00仍晚于as_of2026-10-21T04:11:36.571652+00:00，不能把截至未来窗末的确认/核实状态写成已知事实；只能陈述截至分析时点尚未确认，或明确若截至收盘仍未确认的条件，不改变预测方向"
+      ],
+      "original_terminal_unchanged": true
+    },
+    {
+      "raw_sha256": "b07bf109d9071e6610b6f9cf5de45415a13c2ac91b9378ae6ad8379b63ccaa45",
+      "detail": true,
+      "local_validation_pass": true,
+      "errors": [],
+      "original_terminal_unchanged": true
+    },
+    {
+      "raw_sha256": "0b1c7a33657edaec269ddc30c9dbcfacdd7cd19d47b2938977d954b3cfcf26d9",
+      "detail": true,
+      "local_validation_pass": false,
+      "errors": [
+        "分别列出的容量字段available含无来源数值7.6mcm/d；下降额与绝对可用容量须分开并逐公告匹配"
+      ],
+      "original_terminal_unchanged": true
+    }
+  ],
+  "old_twenty_bad_raw_all_rejected": true,
+  "shared_input_change": {
+    "function": "_matching_mechanisms",
+    "explicitly_authorized": true,
+    "raw_source_facts_retained": true,
+    "other_four_shared_functions_unchanged": [
+      "_source_text",
+      "extract_mechanisms",
+      "prospective_supply_only",
+      "source_fact_projection"
+    ],
+    "per_request_full_path_replay_required": true,
+    "blanket_equivalence_not_assumed": true
+  },
+  "material_known_logic_errors": [],
+  "verdict": "finite_source_audit_passed_no_reproduced_blocker",
+  "may_resume_frozen_source_for_controlled_actual_validation": true,
+  "overall_release_passed": false,
+  "qualifications": [
+    "Pure local source/gate tests do not establish model availability, direction accuracy or a successful full production workflow.",
+    "Original eighth production current/detail failures, auto future-window P2, all prior production failures and all old output bytes/statuses remain unchanged.",
+    "Offline acceptance of the first detail draft does not constitute delivered production detail or retrospective success.",
+    "No forecast direction, score, source prose, output prose, model profile, prompt, schema, expectation or budget was rewritten by this audit."
+  ],
+  "new_model_calls": 0,
+  "database_access": false,
+  "api_calls": 0,
+  "service_operations": 0,
+  "source_modification": false
+}

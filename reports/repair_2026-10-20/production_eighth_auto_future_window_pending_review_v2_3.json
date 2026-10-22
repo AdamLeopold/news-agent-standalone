@@ -1,0 +1,32 @@
+{
+  "generated_at": "2026-10-21T04:30:45.006089+00:00",
+  "status": "confirmed_invalid_pending_root_preflight_and_application",
+  "scope": "Future-window knowledge statement in one already-completed automatic live brief; no canonical prediction changes.",
+  "evidence": {
+    "file": "reports/repair_2026-10-20/independent_production_eighth_queued_automatic_live_review_v2_3.json",
+    "sha256": "238883927fa256282c9df4e5be183e61e20e96a08c48ed0be4a715c49709c8aa"
+  },
+  "pending_reviews": [
+    {
+      "analysis_id": "30db9f1c-7595-4f29-af5e-85e5d1df0a2e",
+      "protected_hashes": {
+        "input_snapshot": "4e100efced7811de2868b63f1a0131c316b1dee704b85ce4d1bf19fa9cbd0c8b",
+        "result": "5d7026edbb1e6ec556ef7b7c5871d97e40a84ddfbc7e524b5fdc5992205fa9b2",
+        "detail_result": null
+      },
+      "confirmed_invalid": true,
+      "review": {
+        "review_id": "future-window-knowledge-30db9f1c-7595-4f29-af5e-85e5d1df0a2e-brief-v1",
+        "status": "invalid",
+        "reason_code": "v2_3_future_target_window_knowledge_assertion",
+        "affected_parts": [
+          "brief"
+        ],
+        "reviewer": "independent_production_eighth_queued_automatic_live_review",
+        "message_zh": "简报在收盘窗口结束尚未来到时，写成“截至窗口结束时尚未确认实际流量损失”。原预测保留，这条简报未通过分析时点与未来窗口事实复核。",
+        "message_en": "The brief claims no flow-loss confirmation through the settlement-window end even though that end is later than the analysis cutoff. The original prediction is preserved; this brief fails the as-of and future-window evidence review."
+      }
+    }
+  ],
+  "preflight_required": "Protected hashes use existing Store.dumps serialization of the read-only API objects. Root must run its normal exact DB-hash preflight before appending metadata; this file performs no DB access or application."
+}

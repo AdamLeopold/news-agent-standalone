@@ -1,0 +1,137 @@
+{
+  "reviewed_at": "2026-10-22T15:35:58.882060+00:00",
+  "core_file": ".runtime/structured-reasoning-v4/clause-id-v1/real_batch_01/structured_core.py",
+  "core_sha256": "5bbf59d8f58d18ccede7c44a4b8f611313952975273f2b971db8372700049bd7",
+  "scope": "Independent full-result semantic review plus exact immutable source-segment binding checks. Historical-source cases are mechanism diagnostics, not contemporaneous market backtests or accuracy.",
+  "cases": [
+    {
+      "case": "current_mixed_live",
+      "file": ".runtime/structured-reasoning-v4/clause-id-v1/real_batch_01/current_mixed_live.json",
+      "sha256": "b7ceb751efca6da9ed59af7401e925dd011e2ed49d41d727195c19dd9f679a5a",
+      "transport_status": "failed",
+      "model_calls": 2,
+      "semantic_status": "failed_no_completed_output",
+      "findings": [
+        "First classification response was truncated. The second selected immutable evidence IDs but misclassified the Cheniere SPA paragraph as future LNG procurement demand with LNG export role, violating the type-role contract.",
+        "A purchase agreement alone is not evidence of incremental final consumption/competition. The invalid combination was rejected; no direction was silently filled."
+      ]
+    },
+    {
+      "case": "p12_manual",
+      "file": ".runtime/structured-reasoning-v4/clause-id-v1/real_batch_01/p12_manual.json",
+      "sha256": "05f3da5a612f93e9295bfa7d30afb7e22a873e2713f6e70d901c7ee93f11de80",
+      "transport_status": "completed",
+      "model_calls": 3,
+      "semantic_status": "no_confirmed_P1_P2_in_completed_output",
+      "news": "flat",
+      "close": "up",
+      "news_score": 0.25,
+      "source_binding_checks": [
+        {
+          "fact_id": "F3",
+          "source_id": "N1",
+          "evidence_id": "N1:9ce19d1627b62761:body:0",
+          "source_version": 1,
+          "exact_complete_stored_segment": true
+        }
+      ],
+      "same_plan_bilingual_detail": true,
+      "findings": [
+        "Source-preserved future Jackdaw approval is negative pressure, shortening is relief, notice capacity remains distinct from measured flow. Correlated risk0.70 minus relief0.15 and future supply0.30 gives0.25, legitimately within the flat news band. Close-up continues the observed positive same-contract baseline rather than pretending balanced news erased it."
+      ]
+    },
+    {
+      "case": "epcm",
+      "file": ".runtime/structured-reasoning-v4/clause-id-v1/real_batch_01/epcm.json",
+      "sha256": "a24be066ddc74cea2834fac837d0cf76f79ea743898d70536c77fa62afd3f1ed",
+      "transport_status": "completed",
+      "model_calls": 3,
+      "semantic_status": "no_confirmed_P1_P2_in_completed_output",
+      "news": "up",
+      "close": "up",
+      "news_score": 0.45,
+      "source_binding_checks": [
+        {
+          "fact_id": "F2",
+          "source_id": "N0",
+          "evidence_id": "N0:c5431fbdcfc7940d:title:0",
+          "source_version": 1,
+          "exact_complete_stored_segment": true
+        }
+      ],
+      "same_plan_bilingual_detail": true,
+      "findings": [
+        "The original contract title is restored exactly and classified corporate_contract. No EUR-to-gas conversion, reversed contract role, or current production claim. Window up-pressure arises from notice risk net of revision relief."
+      ]
+    },
+    {
+      "case": "chevron_historical",
+      "file": ".runtime/structured-reasoning-v4/clause-id-v1/real_batch_01/chevron_historical.json",
+      "sha256": "d576399560bcccfb2cb0de6defd5e5a7238839e9c436e8f1aa288b33da984920",
+      "transport_status": "completed",
+      "model_calls": 3,
+      "semantic_status": "no_confirmed_P1_P2_in_completed_output",
+      "news": "flat",
+      "close": "up",
+      "news_score": 0.0,
+      "source_binding_checks": [
+        {
+          "fact_id": "F0",
+          "source_id": "N0",
+          "evidence_id": "N0:36e33a286ca7eff0:body:0",
+          "source_version": 1,
+          "exact_complete_stored_segment": true
+        }
+      ],
+      "same_plan_bilingual_detail": true,
+      "findings": [
+        "Restoration is correctly a source-reported physical supply increase, historical/regional background at the frozen October as_of; no volume or independent flow measurement invented."
+      ]
+    },
+    {
+      "case": "eia_historical",
+      "file": ".runtime/structured-reasoning-v4/clause-id-v1/real_batch_01/eia_historical.json",
+      "sha256": "357007d2be6fcb13f04c0ca06150bc6c59beb752746d68b87280025029f80db3",
+      "transport_status": "completed",
+      "model_calls": 3,
+      "semantic_status": "no_confirmed_P1_P2_in_completed_output",
+      "news": "flat",
+      "close": "up",
+      "news_score": 0.0,
+      "source_binding_checks": [
+        {
+          "fact_id": "F0",
+          "source_id": "N0",
+          "evidence_id": "N0:6b03af6309d5bcba:title:0",
+          "source_version": 3,
+          "exact_complete_stored_segment": true
+        },
+        {
+          "fact_id": "F1",
+          "source_id": "N0",
+          "evidence_id": "N0:6b03af6309d5bcba:body:0",
+          "source_version": 3,
+          "exact_complete_stored_segment": true
+        }
+      ],
+      "same_plan_bilingual_detail": true,
+      "findings": [
+        "US historical Henry Hub price observation and heat-related demand increase remain separate. Background0 is not a current European physical shock; scenarios explicitly require new evidence establishing a European/global-LNG link."
+      ]
+    }
+  ],
+  "case_count": 5,
+  "completed_cases": 4,
+  "failed_cases": 1,
+  "model_calls": 14,
+  "confirmed_P1_P2_in_completed_outputs": 0,
+  "candidate_ready": false,
+  "reason": "The complete current mixed-source case still fails, despite four completed frozen cases being internally sound. Do not publish this candidate or substitute the older four cases for the current live mixed-source requirement.",
+  "minimum_structural_next_step": [
+    "Keep immutable evidence selection and complete source text.",
+    "Use a single consistent fact-type/state/role contract and define additional demand distinctly from a SPA or an import facility.",
+    "Address truncated final JSON through a measured reasoning/output-budget choice, retaining failed attempts."
+  ],
+  "extra_model_calls_by_reviewer": 0,
+  "production_database_writes_by_reviewer": false
+}

@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-10-20T20:37:16.485821+00:00",
+  "status": "confirmed_invalid_pending_application",
+  "production_reviews_applied": false,
+  "inspection_scope": "Independent human source-time review of the exact completed 2.1 live raw; canonical values are not rewritten.",
+  "pending_reviews": [
+    {
+      "analysis_id": "b1e9c166-8851-4f7c-9803-b9c72329f6a9",
+      "protected_hashes": {
+        "input_snapshot": "9295e8ca8ca58c9183493097e3d407a1a63d97589312df41208377f5dc233dc5",
+        "result": "fa0a68927d7bff6c7de8f55a70ad9035de9e7f2a6bfd1faf68a19a41d117dcc4",
+        "detail_result": null
+      },
+      "confirmed_invalid": true,
+      "review": {
+        "review_id": "source-tense-b1e9c166-8851-4f7c-9803-b9c72329f6a9-brief-v1",
+        "status": "invalid",
+        "reason_code": "prospective_well_action_as_completed",
+        "affected_parts": [
+          "brief"
+        ],
+        "reviewer": "independent_source_time_review",
+        "message_zh": "原文说该井将永久封堵并弃置，分析却写“已被永久封堵”，把未来计划改成已完成事实。此简报的事实时态未通过复核；保留原预测及来源，不重写其方向。",
+        "message_en": "The source says the well will be permanently plugged and abandoned, while the brief says it has already been permanently plugged. This brief fails source-time review. Its original forecast and source are preserved without rewriting its direction."
+      }
+    }
+  ]
+}

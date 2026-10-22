@@ -80,10 +80,11 @@ async def refresh_prices(store: Store, *, start_date: str = "2024-02-01") -> dic
                 response = await client.get(DBNOMICS_URL, params={"limit": 100, "offset": offset, "observations": 1})
                 response.raise_for_status()
                 payload = response.json()
+                fetched_at=datetime.now(timezone.utc).isoformat()
                 series = payload.get("series", {})
                 docs = series.get("docs", [])
                 series_total = int(series.get("num_found", len(docs)))
-                for observation in parse_dbnomics(payload, start_date=start_date, fetched_at=now):
+                for observation in parse_dbnomics(payload, start_date=start_date, fetched_at=fetched_at):
                     store.upsert_price(observation)
                     imported += 1
                 if not docs:
@@ -148,7 +149,9 @@ async def refresh_ice_chart_references(store: Store, *, start_date: str = "2024-
                 await asyncio.sleep(1.05)
                 response = await client.get(ICE_HISTORY_URL, params={"marketId": contract_id, "historicalSpan": 3})
                 response.raise_for_status()
-                records = parse_ice_chart(response.json(), contract_id=contract_id, label=label, fetched_at=now, start_date=start_date)
+                payload=response.json()
+                fetched_at=datetime.now(timezone.utc).isoformat()
+                records = parse_ice_chart(payload, contract_id=contract_id, label=label, fetched_at=fetched_at, start_date=start_date)
                 for record in records:
                     store.upsert_price(record)
                     imported += 1

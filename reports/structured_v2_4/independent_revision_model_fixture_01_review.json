@@ -1,0 +1,59 @@
+{
+  "reviewed_at": "2026-10-22T16:59:39.779784+00:00",
+  "reviewer": "structured_review agent, private source-evidence proposal author and read-only actual model output auditor",
+  "scope": "Final frozen-source source-version novelty fixture: full input/current+prior evidence, model classifications/weights/closing, Chinese/English brief/detail. No new inference/service/DB/source changes.",
+  "artifact": "reports/structured_v2_4/revision_evidence/model_fixture_01/actual.json",
+  "artifact_sha256": "366ee2c09aa80bb49a6e508c1cd72740f48f2f4edb78c4200d5240edb843caaa",
+  "source_sha256": {
+    "ttf_news/structured_core.py": "28f75f146687b311ab4c2ae464c86512ca3ff61f14de34f7954cf1a321f465fc",
+    "ttf_news/structured_analysis.py": "da13165f47e0b7ac4d46b963c0ea10f8c566c9b3ce4ee341ed9cacbba0f6d1df",
+    "ttf_news/context.py": "464bfbc789ea5e8768fe94fa5bfe0cf74827a9b58e3cee7eceb4052a3b8f9108",
+    ".runtime/structured-reasoning-v4/revision_model_fixture_final.py": "ba5d6b783b4d28ced10844c7850f8014666fe42572e2719b1f1acb04c24175b3"
+  },
+  "overall": "Passed this constructed-version-history model diagnostic with no confirmed P1/P2. It demonstrates one correct per-claim novelty distinction over real stored text; it is not an observed publisher-history revision or market evaluation.",
+  "status": "completed",
+  "model_calls": 3,
+  "retry_calls": 0,
+  "derived_model_calls": {
+    "detail": 0,
+    "english": 0,
+    "english_detail": 0
+  },
+  "binding_errors": [],
+  "english_cjk_fields": [],
+  "catalog_sha256": "c3d0eab975fbb2e1e6635b5c8871196b9a0b38bd9e6eaff9a9cafa3598a0557a",
+  "typed_plan_sha256": "44db915529f81df79d63990e58e8b2c2d8e2ae9c52298a7f52d296f78b07f96e",
+  "result": {
+    "news_direction": "down",
+    "news_score": -1.05,
+    "close_direction": null
+  },
+  "semantic_findings": [
+    "The previous constructed version already contains the SPA title and old May EPC contract. The model preserves that commercial information as unchanged/historical background with zero present-window contribution.",
+    "The current version supplies the future Sabine Pass capacity/project information absent from that constructed previous body. The model selects added future_project_development/lng_export, not observed production, final-use demand or a new May contract.",
+    "The selected added future-supply claim has expectation scope and fixed downside sign. The model-selected1.5weight*0.7confidence gives-1.05; this particular magnitude or nonzero selection is not an acceptance target.",
+    "Original publication2026-10-21T13:00Z remains unchanged. Constructed publisher revision2026-10-22T15:30Z and local knowledge15:31Z are distinct and precede as_of16:00Z; unchanged facts do not inherit new-current status merely by sharing the revised document.",
+    "The unavailable previous-trading-day price anchor still yields close=null, so no old price anchor or completed settlement outcome is invented.",
+    "Exact full current and prior quote hashes, source IDs/versions and selected prior evidence bindings are preserved. Chinese/English/detail share one plan, label/number/citation identity and add zero inference calls."
+  ],
+  "p3_observations": [
+    "The unchanged commercial fact cites the previous EPC paragraph in addition to the directly matching prior SPA title/body. This is broader supporting-source selection than needed; the matching prior SPA evidence exists and no false supply inference follows.",
+    "The inferred importance/confidence and semantic novelty are model judgements, not programmatically verified or empirically calibrated accuracy."
+  ],
+  "coverage_boundary": {
+    "real_publisher_pair_observed": false,
+    "synthetic_version_history": true,
+    "source_text_origin": {
+      "file": "reports/structured_v2_4/api_engine_upgrade_01_artifacts/current_live_actual.json",
+      "sha256": "5090f96b7ff2405d23a3b3e4842fb7f16fdf41cb3e4a5a26f7c23b74d1b452b5"
+    },
+    "verified_real_publisher_revision_pair_count": 0,
+    "not_established": [
+      "Accuracy on real natural source revisions or a deletion-only retraction",
+      "Fresh news discovery/automatic ingestion from this fixture",
+      "Official settlement forecasting accuracy or model trading performance",
+      "Final public website/current managed API acceptance, which remains separate"
+    ]
+  },
+  "preservation": "The positive fixture lives outside productionDB. Real source rows, old predictions, original failures, source lineage and frozen acceptance baseline were not changed by this review."
+}

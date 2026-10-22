@@ -1,0 +1,20 @@
+{
+  "tested_at": "2026-10-21T01:01:23.265959+00:00",
+  "status": "passed",
+  "source_freeze": {
+    "file": "reports/repair_2026-10-20/source_feedback_final_source_freeze_v2_3.json",
+    "sha256": "20980dc81c2c83084834cc40e53780bfd28bb8797489f6ee30e3ec23bc461116"
+  },
+  "source_hashes_unchanged": true,
+  "pytest_passed_tests": 865,
+  "pytest_passed_subtests": 375,
+  "failures": 0,
+  "errors": 0,
+  "junit_entries": 1240,
+  "evidence": {
+    "reports/repair_2026-10-20/final-release-unit-tests.log": "435874e9c6fb87651ee86d1b4aa6d234769cfba6b2b70676fa373fd2278a98ba",
+    "reports/repair_2026-10-20/final-release-unit-tests.xml": "8a2f01de758b13b1522d99ba6416d0dacbaa46fc313e7d39e72009430e9f4440"
+  },
+  "runtime_model_calls": 0,
+  "previous_failed_transport_expectation_test_evidence_preserved": true
+}

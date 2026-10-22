@@ -1,0 +1,42 @@
+[
+  {
+    "case": "current_mixed_live",
+    "status": "completed",
+    "error": null,
+    "calls": 5,
+    "news": "up",
+    "close": "up"
+  },
+  {
+    "case": "p12_manual",
+    "status": "completed",
+    "error": null,
+    "calls": 3,
+    "news": "up",
+    "close": "up"
+  },
+  {
+    "case": "epcm",
+    "status": "completed",
+    "error": null,
+    "calls": 3,
+    "news": "flat",
+    "close": "up"
+  },
+  {
+    "case": "chevron_historical",
+    "status": "completed",
+    "error": null,
+    "calls": 3,
+    "news": "flat",
+    "close": "up"
+  },
+  {
+    "case": "eia_historical",
+    "status": "completed",
+    "error": null,
+    "calls": 3,
+    "news": "flat",
+    "close": "up"
+  }
+]

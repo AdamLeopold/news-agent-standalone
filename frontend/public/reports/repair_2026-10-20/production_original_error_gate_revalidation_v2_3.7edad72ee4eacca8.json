@@ -1,0 +1,108 @@
+{
+  "generated_at": "2026-10-20T22:28:31.518786+00:00",
+  "prompt_version": "ttf-news-standalone-2.3",
+  "scope": "Zero-call final gate rejection of preserved original production wrong-answer fixtures; does not replace new actual production validation, review exclusions, or original-record preservation. Deterministic source-coverage warnings are a separate issue whose model raw was valid and is not rejected here.",
+  "source_sha256": {
+    "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+    "ttf_news/analysis.py": "79061b8e132a456fc80fa6f067dc057bdcb681261d68bb1e93769a16069d0d03",
+    "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+    "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+    "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+    "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+    "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+    "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+    "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+    "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+    "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+    "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987",
+    "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+    "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+    "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+    "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+    "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+    "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+    "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+    "ttf_news/public_gateway.py": "fac8fe10429bc62a6be241817491d1f35eecdaa7f8a37357cb8dbcab7f43fae5",
+    "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+    "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+    "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+    "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+    "ttf_news/semantics.py": "41e559588a222c51cf7a85642bb45199476118777b9a8b2195d15bd31dff95e5",
+    "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+    "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+    "ttf_news/translation.py": "e6c50833f58eb7d063286f298c91f5816520fd4caff87ba4fa29e2dccbd3b680"
+  },
+  "records": [
+    {
+      "known_error_id": "v2_0_missing_previous_trading_day_anchor",
+      "fixture": {
+        "file": "tests/fixtures/manual_stale_previous_settlement_6601.json",
+        "sha256": "bd6cb7a52aa0307f8ec124bf5ab6574d2e492434ec58a26b0c556e372b272011"
+      },
+      "original_record_provenance": {
+        "id": "6601a466-eecc-48f0-82e5-68785d8ac5be",
+        "kind": "manual",
+        "status": "completed",
+        "created_at": "2026-10-20T20:02:06.022759+00:00",
+        "trade_date": "2026-10-21",
+        "input_sha256": "f02a72a0d74cdf4cdd48dd389265eb002e8af73d14c8e8b2af4759df0686d50e",
+        "stored_result_sha256": "d09faad330a95d4d12970222f5a158572d365fadf0828a8ccf1940dd0dd09b57"
+      },
+      "original_raw_sha256": "42094e73a35ea27e1306bf4b94f757072fa0329d4ee4515375dcb00313613770",
+      "current_final_gate_revalidation": {
+        "passed": false,
+        "error_type": "ValueError",
+        "reason": "close_forecast:目标2026-10-21缺少前交易日2026-10-20同合约锚点；当前绝对报价或其他日期参考差不能当昨收涨跌。新闻也无方向依据时须insufficient_evidence且direction=null；有方向新闻仍可给有据条件预测，不补flat或强制复制新闻方向"
+      },
+      "rejected_by_final_gate": true,
+      "fixture_unchanged": true
+    },
+    {
+      "known_error_id": "v2_1_future_abandonment_asserted_completed",
+      "fixture": {
+        "file": "tests/fixtures/live_future_well_action_as_completed.json",
+        "sha256": "879d249bc690fb61159765d973a8e0eed55bd1e83f04cbc31d825a0a11cdaed2"
+      },
+      "original_record_provenance": {
+        "analysis_id": "b1e9c166-8851-4f7c-9803-b9c72329f6a9",
+        "kind": "live",
+        "prompt_version": "ttf-news-standalone-2.1",
+        "input_snapshot_sha256": "9295e8ca8ca58c9183493097e3d407a1a63d97589312df41208377f5dc233dc5",
+        "stored_result_sha256": "fa0a68927d7bff6c7de8f55a70ad9035de9e7f2a6bfd1faf68a19a41d117dcc4"
+      },
+      "original_raw_sha256": "2be1a16116bf38be121aaeb0147abf35f97b6f71155de52979308245d1a87a91",
+      "current_final_gate_revalidation": {
+        "passed": false,
+        "error_type": "ValueError",
+        "reason": "news_impact.summary:N0来源仅说该井将封堵/弃置（will now be plugged and abandoned），不能写已被永久封堵/已完成封井，事实叙述的随后封井须有将/计划/下一步等未来标记；实际has been/was plugged完成事实须有相应来源，不改新闻或收盘方向"
+      },
+      "rejected_by_final_gate": true,
+      "fixture_unchanged": true
+    },
+    {
+      "known_error_id": "v2_1_field_misidentified_as_pipeline",
+      "fixture": {
+        "file": "tests/fixtures/live_troll_field_not_pipeline.json",
+        "sha256": "e5e18ff37ee556c30bfcb7871217d77d9e8b7c945ce83ccc69a3d0ba1e7f3345"
+      },
+      "original_record_provenance": {
+        "analysis_id": "d2ef1250-6ed3-4a68-9396-e6ed4addbfb3",
+        "input_snapshot_sha256": "00742222c3d42beed286a1a8716ac5cda0edb7c2e0983be6420c92d4b1b72005",
+        "stored_result_sha256": "66347a76e7d9e0744aa626df9229dec527cc62a2696924585b85223523d545e4"
+      },
+      "original_raw_sha256": "979e22270e7d00c609a22825a40cfd0d258e67feb7af0292bb1f14aac05d9964",
+      "current_final_gate_revalidation": {
+        "passed": false,
+        "error_type": "ValueError",
+        "reason": "news_impact.summary:N1来源设施类型为Gas production field（气田/生产设施），不得称Troll等该实体为pipeline/管道维护；须保留对应N的原设施类别或泛称设施公告，不能借另一N的管道合同套类型，不改方向"
+      },
+      "rejected_by_final_gate": true,
+      "fixture_unchanged": true
+    }
+  ],
+  "all_original_wrong_bodies_rejected": true,
+  "no_model_calls": true,
+  "no_database_access": true,
+  "no_network_calls": true,
+  "does_not_resolve_known_errors_without_new_actual_validation": true
+}

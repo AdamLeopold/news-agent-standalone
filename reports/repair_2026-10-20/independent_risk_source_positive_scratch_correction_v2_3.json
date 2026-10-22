@@ -1,0 +1,43 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "audited_at": "2026-10-21T01:26:30.141855+00:00",
+  "status": "correction_new_source_risk_positive_false_positives_found",
+  "scratch_semantics_sha256": "019afbdb2e92f5f77ac9555d3c335aae8c20a73791129984bee50fb5d111a968",
+  "prior_review_preserved": {
+    "path": "reports/repair_2026-10-20/independent_risk_anchor_final_scratch_review_v2_3.json",
+    "sha256": "3fe316e4c0baed002c492c40a5e5a376c73ca295265cb8fe5adf87c14fbff4ab"
+  },
+  "prior_clearance_qualified": true,
+  "controls": [
+    {
+      "source": "当前供应风险降低，实际流量未知。",
+      "field": "bearish_evidence",
+      "claim": "[N0]TTF机制：供应风险降低",
+      "expected": "allow",
+      "observed": "reject",
+      "errors": [
+        "news_impact.bearish_evidence[0]:引用来源的supply变化方向与所述事实相反；不能把来源的供应增加改写成供应减少或反向需求"
+      ]
+    },
+    {
+      "source": "当前供应风险上升，实际流量未知。",
+      "field": "bullish_evidence",
+      "claim": "[N0]TTF机制：供应风险上升",
+      "expected": "allow",
+      "observed": "reject",
+      "errors": [
+        "news_impact.bullish_evidence[0]:引用来源的supply变化方向与所述事实相反；不能把来源的供应增加改写成供应减少或反向需求"
+      ]
+    }
+  ],
+  "finding": {
+    "severity": "P2",
+    "type": "false_positive",
+    "location": "_check_source_direction_reversal using old sharedsource signals versus new result risk signals",
+    "reason": "The shared source extraction intentionally stays unchanged, but misreads risk lowering as physical supply falling. New result-only risk pressure is then incorrectly compared against that old physical sign and rejected as a source contradiction, even though the cited source explicitly states the same risk change.",
+    "bounded_fix": "Within result validation only compare risk objects as risk, not physical supply change. Preserve shared preparedinput/source projection bytes and actual-flow source opposite checking. Add source-risk lower/bearish and higher/bullish positive controls."
+  },
+  "root_source_unmodified": true,
+  "no_model_api_database_calls": true
+}

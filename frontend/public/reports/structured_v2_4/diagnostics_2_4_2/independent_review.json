@@ -1,0 +1,167 @@
+{
+  "reviewed_at": "2026-10-22T15:52:58.775643+00:00",
+  "reviewer": "independent structured_review agent",
+  "review_scope": "Read-only source, full catalog/plan, Chinese brief/detail and English brief/detail review of five actual local gpt-oss:20b diagnostic results. No model, service or production database actions.",
+  "core_sha256": "6980cbafddf2d84f7ec51f9cb71660af8ed6e0f6c89d3fc1f11ce9eceb6cd372",
+  "candidate_workflow_version": "ttf-news-standalone-2.4.2",
+  "overall": "No confirmed P1/P2 source-fabrication, supply-demand sign, timing or rendered decision inconsistency in these completed five cases. P3 metadata/secondary-fact coverage issues remain; this is not production API acceptance or exhaustive semantic ground truth.",
+  "model_calls_total": 17,
+  "retry_calls": 0,
+  "cases": [
+    {
+      "case": "current_mixed_live",
+      "artifact": ".runtime/structured-reasoning-v4/clause-id-v2/real_batch_01/current_mixed_live.json",
+      "artifact_sha256": "06ebe48022b7b79a2a9f0121b157d75933cad55f9c1511099af031c0a8f418e4",
+      "status": "completed",
+      "source_core_sha256": "6980cbafddf2d84f7ec51f9cb71660af8ed6e0f6c89d3fc1f11ce9eceb6cd372",
+      "model_calls": 5,
+      "call_statuses": [
+        "completed",
+        "completed",
+        "completed",
+        "completed",
+        "completed"
+      ],
+      "normalized_fact_count": 5,
+      "source_and_variant_binding_errors": [],
+      "news_direction": "up",
+      "news_score": 2.0,
+      "close_direction": "up",
+      "catalog_sha256": "2bc78822eef2cce9c21dc89c33bf9d1513f7ae8abfccaa23aef11945b97b0da5",
+      "typed_plan_sha256": "9a4bdf3a22ec3c46e0ab0fc229f796d5f7b5cd3f6150400c74cefb4d60f861dc",
+      "semantic_observations": [
+        "Troll and Åsgard notice constraints remain conditional capacity risks, not measured lost flow; Troll 9.6 to 7.6 revision is separate downside relief.",
+        "Åsgard related positive notices are grouped with maximum contribution 1.36, rather than summing mcm/d or articles.",
+        "The Cheniere future Sabine Pass liquefaction expansion supports a global-LNG future-supply downside mechanism, contribution -0.30; the SPA and old EPC contract are not made into present gas output or incremental final demand.",
+        "OneSubsea is technical background with zero supply mechanism, correcting the unsupported technology-to-European-upstream expansion in formal 81e9.",
+        "N2 region_scope=europe and supply_chain_role=upstream are inaccurate metadata for US liquefaction/export; actual rendered text remains future upstream/export and the weight scope is future_expectation, with no claim of European local gas or observed cargo.",
+        "N5 corporate_contract is an imprecise classification of technical survey work; the proposed import-terminal background is not separately normalized. There is no current output, gas-production commitment or global demand increase asserted."
+      ]
+    },
+    {
+      "case": "p12_manual",
+      "artifact": ".runtime/structured-reasoning-v4/clause-id-v2/real_batch_01/p12_manual.json",
+      "artifact_sha256": "c60e63150ab7422ba45299dcc2f0d1a9edf7170d64ebd4143cf60218de3fb6cd",
+      "status": "completed",
+      "source_core_sha256": "6980cbafddf2d84f7ec51f9cb71660af8ed6e0f6c89d3fc1f11ce9eceb6cd372",
+      "model_calls": 3,
+      "call_statuses": [
+        "completed",
+        "completed",
+        "completed"
+      ],
+      "normalized_fact_count": 1,
+      "source_and_variant_binding_errors": [],
+      "news_direction": "up",
+      "news_score": 0.75,
+      "close_direction": "up",
+      "catalog_sha256": "018174abb75e5ef985153e6529642e6221fd12614a14f19dadbd68918c326d53",
+      "typed_plan_sha256": "aabdbf788cc981af7c39b4cd04ac98aa4a2a5067bdaa25d1958d96bc6aeb0e45",
+      "semantic_observations": [
+        "Jackdaw is future approval in the UK/European gas system, not observed production.",
+        "Current planned and future planned/unplanned Troll notices remain distinct. Future 13.6 and 13.0 are not added to current 13.0 measured loss.",
+        "Risk group +1.20, shortening -0.30 and future supply -0.15 derive score +0.75; up is consistent. Direction is not judged against a desired label distribution."
+      ]
+    },
+    {
+      "case": "epcm",
+      "artifact": ".runtime/structured-reasoning-v4/clause-id-v2/real_batch_01/epcm.json",
+      "artifact_sha256": "7032366c1b60b9a8141de462a95ca1991f14bdb34e2f7fd564c9774187377d15",
+      "status": "completed",
+      "source_core_sha256": "6980cbafddf2d84f7ec51f9cb71660af8ed6e0f6c89d3fc1f11ce9eceb6cd372",
+      "model_calls": 3,
+      "call_statuses": [
+        "completed",
+        "completed",
+        "completed"
+      ],
+      "normalized_fact_count": 1,
+      "source_and_variant_binding_errors": [],
+      "news_direction": "flat",
+      "news_score": 0.08,
+      "close_direction": "up",
+      "catalog_sha256": "7698fb8f32d80a7ce12f1eb58c90b6fac1fe1c35958834fedef63488838205a5",
+      "typed_plan_sha256": "c01bd0f9d770a8c89ac77107123323858bb3469fd051eb27394f050426d32e15",
+      "semantic_observations": [
+        "The selected EPCM fact is commercial engineering work; LNG Canada awards the assignment and Tecnicas Reunidas performs it. Contract value is not gas volume.",
+        "The full stored article also has earlier Phase2 FID and five additional compressor-station development facts that were not separately normalized in this run. This is incomplete secondary-fact coverage, not a fabricated production/TTF pressure claim.",
+        "Future Gassco positive risk max 0.18 minus revision relief 0.10 gives net 0.08, flat; close up derives a frozen same-contract intraday baseline, not the corporate award."
+      ]
+    },
+    {
+      "case": "chevron_historical",
+      "artifact": ".runtime/structured-reasoning-v4/clause-id-v2/real_batch_01/chevron_historical.json",
+      "artifact_sha256": "9b0d30497b11c9e9fbf15c43e3e2eada640cb01530276b17bd8531886b64cad3",
+      "status": "completed",
+      "source_core_sha256": "6980cbafddf2d84f7ec51f9cb71660af8ed6e0f6c89d3fc1f11ce9eceb6cd372",
+      "model_calls": 3,
+      "call_statuses": [
+        "completed",
+        "completed",
+        "completed"
+      ],
+      "normalized_fact_count": 1,
+      "source_and_variant_binding_errors": [],
+      "news_direction": "flat",
+      "news_score": 0.0,
+      "close_direction": "up",
+      "catalog_sha256": "d5f3117359ebb4020f137a825cc81dc14fe772213312ec4731e9d5916d9651aa",
+      "typed_plan_sha256": "5376b2b02b4b8dd56fad243c0b3e957a37df33bc615f5e0f7d33f0b01977ac32",
+      "semantic_observations": [
+        "The exact source says have resumed gas production. It is source-reported physical resumption, not a future approval or supply loss.",
+        "No metered volume or European delivery quantity is supplied or invented. The old regional story remains background with zero current-window contribution.",
+        "The up close comes only from the frozen October same-contract reference baseline. This is a historical mechanism diagnostic, not an April contemporaneous forecast or accuracy result."
+      ]
+    },
+    {
+      "case": "eia_historical",
+      "artifact": ".runtime/structured-reasoning-v4/clause-id-v2/real_batch_01/eia_historical.json",
+      "artifact_sha256": "4e0ce27de64be59be7193d3f457419338890529a725b2d600ed803db0da2826e",
+      "status": "completed",
+      "source_core_sha256": "6980cbafddf2d84f7ec51f9cb71660af8ed6e0f6c89d3fc1f11ce9eceb6cd372",
+      "model_calls": 3,
+      "call_statuses": [
+        "completed",
+        "completed",
+        "completed"
+      ],
+      "normalized_fact_count": 2,
+      "source_and_variant_binding_errors": [],
+      "news_direction": "flat",
+      "news_score": 0.0,
+      "close_direction": "up",
+      "catalog_sha256": "8fc04c58199b36db9e564976d9c26f6ee7de29a0f1a06dc0a3c13f5edf9dd5dd",
+      "typed_plan_sha256": "cad7b1f58e22f712cd246a68ffc9fdfdda68cd3d7175d8f0fddbfa33c3d56656",
+      "semantic_observations": [
+        "The source price observation (summer Henry Hub lower by 6 percent) and hot-weather power demand increase are separate facts.",
+        "Neither the price observation nor old US weather is turned into current European physical demand or supply. Both remain zero-weight historical regional background.",
+        "The conditional bullish scenario requires new independent evidence establishing the European/global-LNG link; the close up is the frozen October baseline, not a historical backtest."
+      ]
+    }
+  ],
+  "p3_findings": [
+    {
+      "case": "current_mixed_live",
+      "issue": "N2 US liquefaction/export development is tagged europe/upstream rather than global_lng/lng_export.",
+      "severity_reason": "The actual source supports future LNG supply expansion; sign is downside, scope future_expectation, contribution -0.30. The rendered output makes no European-local-production or current-output claim. These wrong metadata are still explicitly retained as errors, not declared correct."
+    },
+    {
+      "case": "current_mixed_live",
+      "issue": "Cook Inlet survey work is coarsely corporate_contract/technology; planned import-facility context is not separately normalized.",
+      "severity_reason": "No incremental gas production, current importing or new final demand is inferred; complete stored source remains in snapshot."
+    },
+    {
+      "case": "epcm",
+      "issue": "Only the engineering award is normalized, leaving the earlier FID and compressor-development context unexpanded.",
+      "severity_reason": "The award itself is correctly corporate background and the output does not invent gas output or a source-specific current TTF price move."
+    }
+  ],
+  "acceptance_boundaries": [
+    "Normalized-fact source quote/hash integrity is programmatically checked here; economic entailment is human reviewed and not claimed as automatically verified.",
+    "English and detail use the same immutable catalog and plan with zero additional inference calls; they are full renderings, not additional independent model analyses.",
+    "Historical cases are mechanism diagnostics at the frozen October analysis time. No historical contemporaneous forecast or market accuracy is established.",
+    "Price inputs remain reference/delayed same-contract observations. No official settlement accuracy is reported.",
+    "The forthcoming 2.4.3 role/region definition candidate is a different frozen source and needs its own actual-result review; the 17 calls here must not be attributed to it.",
+    "Actual production API manual, detail, English, live/SSE and preservation checks remain outside this private diagnostic review."
+  ]
+}

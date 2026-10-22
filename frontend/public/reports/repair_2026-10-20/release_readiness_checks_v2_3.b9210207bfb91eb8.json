@@ -1,0 +1,33 @@
+{
+  "policy_id": "ttf-explicit-error-release-v1",
+  "expected_prompt_version": "ttf-news-standalone-2.3",
+  "status": "pending_actual_evidence",
+  "main_report_sha256": null,
+  "evidence": {
+    "independent_review": {
+      "file": "reports/repair_2026-10-20/independent_release_review_v2_3.json",
+      "sha256": null
+    },
+    "live_smoke": {
+      "file": "reports/repair_2026-10-20/live_smoke_test.json",
+      "sha256": null
+    },
+    "error_ui": {
+      "file": "reports/repair_2026-10-20/error_ui_composite_final_binding_v2_3.json",
+      "sha256": null
+    },
+    "public_scan": {
+      "file": "reports/repair_2026-10-20/public_scan_final.json",
+      "sha256": null
+    },
+    "frontend_build": {
+      "file": "reports/repair_2026-10-20/frontend-build.log",
+      "sha256": null
+    },
+    "backend_deployment": {
+      "file": "reports/repair_2026-10-20/backend_conditional_scope_deployment_v2_3.json",
+      "sha256": "63e4c2a89b18a1489973cbe9f8ea581401d32639424de24926253689ed945eab"
+    }
+  },
+  "note": "Pending the genuinely new fourth production E2E after the condition-scope/English3 fixes, final independent Chinese/English reviews, asset scan and evidence-backed accepted-error closures. Earlier three production attempts remain failed and preserved; well generation_issue_resolved=false remains. All model generation source hashes stay original; final7715/d47b source validation is separately proven by complete saved-response path equality. No readiness claim."
+}

@@ -1,0 +1,114 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T04:21:52.577968+00:00",
+  "scope": "One finite independent review of six authorized seventh-run output-scope changes plus the single aggregate-warning false-positive correction. No models/API/DB/service/Git/source modification.",
+  "candidate": {
+    "analysis": {
+      "file": ".runtime/seventh-source-scope-proposal/revision-aggregate-scope/ttf_news/analysis.py",
+      "sha256": "baec41f3ee2f67949264bcb3790365bf2ce9270071a0923ed8a39cb078d62dfb"
+    },
+    "semantics": {
+      "file": ".runtime/seventh-source-scope-proposal/revision-aggregate-scope/ttf_news/semantics.py",
+      "sha256": "07632831d7335b0138203b78f55e4bc221c92d761628a40f09a4330834049028"
+    }
+  },
+  "patches": {
+    "analysis": {
+      "file": ".runtime/seventh-source-scope-proposal/revision-aggregate-scope/analysis.patch",
+      "sha256": "28cf5449863780bd7924090109867fdde38ffadf0a6adc129f1a8e2db39811a3"
+    },
+    "semantics": {
+      "file": ".runtime/seventh-source-scope-proposal/revision-aggregate-scope/semantics.patch",
+      "sha256": "a6589e97d70421e9daae052a1cc04aaebeb8be232c83b57369285f5ae85e686f"
+    }
+  },
+  "owner_proof": {
+    "file": ".runtime/seventh-source-scope-proposal/revision-aggregate-scope/proposal_proof_final.json",
+    "sha256": "619908f3aecf1432a3c106c07f16fa091a68de78436bc435d8304bf240d5fab1"
+  },
+  "verdict": "finite_scope_source_review_passed",
+  "known_actionable_source_blockers_in_scope": [],
+  "independent_controls": {
+    "file": "reports/repair_2026-10-20/independent_seventh_source_scope_final_controls_v2_3.json",
+    "sha256": "8c41bf0edebbca5188513ebd8be592fa48144fc07997fe872ca0f195d8bd24d5"
+  },
+  "independent_test_run": {
+    "tests_passed": 287,
+    "subtests_passed": 324,
+    "failed": 0,
+    "seconds": 8.56,
+    "junit": {
+      "file": "reports/repair_2026-10-20/independent-seventh-source-scope-final-tests-v2_3.xml",
+      "sha256": "9993d5b74e3128a0b4bd74c649047472c1d6c5fda92a093ec6b305fa72887ac3"
+    },
+    "cacheprovider_disabled": true,
+    "python_bytecode_disabled": true
+  },
+  "own_paired_aggregate_controls": 4,
+  "old_bad_raw_replays_rejected": 20,
+  "original_seventh_raw_replays": 4,
+  "changed_ast_nodes": {
+    "analysis": [
+      "_parse_result",
+      "_validate_notice_source_facts",
+      "_validate_prediction_semantics"
+    ],
+    "semantics": [
+      "_future_notice_not_yet_physical_claim",
+      "_check_unknown_as_fact",
+      "_check_gassco_physical_state"
+    ]
+  },
+  "all_other_top_level_functions_and_classes_ast_unchanged": true,
+  "source_input_prompt_profile_schema_budget_direction_or_expectations_changed": false,
+  "boundaries_verified": [
+    {
+      "item": "Unaliased explicit two-notice separately listed rates",
+      "pass": "Known cited notice pair can support7.6 and13 as separate capacities. A single explicitN, nonexistent value, or affirmative non-overlapping20.6 rate sum remains rejected.",
+      "initial_false_positive_fixed": "Original13f candidate rejected even “不能合计20.6”; finalbaec passes that warning and “不得合计”, while positive sum and a positive sum followed by unrelated若 remain rejected."
+    },
+    {
+      "item": "Explicit event start day versus calendar overlap",
+      "pass": "“22日开始” binds toN1 start22Oct; the N2 interval ending22Oct no longer creates false ambiguity. Generic22Oct with no start role remains ambiguous. Identical complete notice aliases collapse only when their full supplied facts agree; contradictory values remain separate.",
+      "exact_original_cause_review": {
+        "file": "reports/repair_2026-10-20/independent_seventh_detail_date_binding_cause_correction_v2_3.json",
+        "sha256": "79c6f8761439ad142c29e36e552af7ca80f2fcb31778d4b591825ffa16c3ba70"
+      }
+    },
+    {
+      "item": "Previous-day reference/current quote levels",
+      "pass": "Previous-day-own rise85.062→86.9 is rejected; explicit current-vs-prior reference remains allowed. Source-known numbers still do not authorize a future numeric target or a price level represented as a delta."
+    },
+    {
+      "item": "Future specific notice negated physical cause",
+      "pass": "A known future notice can remain subject across the exact contrast, with start>as_of. Active/unknown other-event/global actual-flow assertions stay rejected. This is no price-zero exemption."
+    },
+    {
+      "item": "Short risk labels",
+      "pass": "Exact低/中/高/未知 only in close_forecast.extreme_move_risk; summaries and bases still require proper Chinese prose. This does not relax English paragraphs or other short body fields."
+    },
+    {
+      "item": "Invidation field physical condition scope",
+      "pass": "The existing field-condition helper is reused only for each physical predicate, not the whole field. Explicit current/confirmed actual-flow assertions and unit/pricing errors still fail; ordinary summary/evidence cannot borrow field scope."
+    }
+  ],
+  "four_raw_terminal_interpretation": {
+    "seventh_current_attempt1": "Capacity FP removed, true previous-day/current price-clock error remains rejected.",
+    "seventh_current_attempt2": "Unsupported absorption/price-zero reasoning remains rejected; does not become a safe forecast because some physical scope wording is corrected.",
+    "seventh_detail_attempt1": "Physical13mcm/d loss quantity and previous-day price-clock defects remain rejected.",
+    "seventh_detail_attempt2": "Offline validators now pass the same raw after local FP fixes; original actual remains failed/null and is not a newly delivered detailed result. P3 cumulative revision explanation remains limited."
+  },
+  "facility_type_scope_clarification": {
+    "file": "reports/repair_2026-10-20/independent_seventh_detail_facility_reference_clarification_v2_3.json",
+    "sha256": "5ff10d5a310f710c5479afee71e8773d86a435413e9f54cc37caacbb86a644f1"
+  },
+  "original_analysis_statuses_raws_reviews_and_validation_baseline_changed": false,
+  "production_or_market_accuracy_pass_claimed": false,
+  "required_next_step": "Parent root full suite and exact complete-path impact proof; fresh successful real production workflow plus independent full CN/English review still required.",
+  "limits": [
+    "Finite paired contracts do not establish universal natural-language correctness.",
+    "No original failed output is upgraded, no failed result is counted as a correct market prediction, and no lower-flat quota is introduced.",
+    "The exact same generation input/profile/model request is preserved; this audit modifies no prediction body or source fact."
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "generated_at": "2026-10-20T19:53:16.520141+00:00",
+  "source_record": {
+    "source_record": "reports/repair_2026-10-20/candidate-revision-validation/real_eni.json",
+    "source_record_sha256": "c19e831df2010ac10f113d4cc85cad903015c63e59acf584f83e254f4198d41c",
+    "source_contract_passed": true,
+    "finding": "Expired N2 notice used as bare current supply-constraint mechanism; source prefix unknown does not establish residual flow."
+  },
+  "original_record_unmodified": true,
+  "finding": "The machine-accepted raw puts expired N2 Troll capacity in current bullish and analysis evidence using a bare supply-constraint mechanism. A copied unknown-state prefix is not evidence of ongoing residual flow restrictions.",
+  "new_raw_diagnostics": [
+    "news_impact.bullish_evidence[0]:N2公告时段已过，前缀当前未知不证明残余约束；机制不能裸写供应约束作为当前看涨依据。须明确独立实流仍受限的条件/结束后已知残余流量证据，或仅列历史背景；不推断恢复、不改净方向"
+  ],
+  "gate_scope": [
+    "Only bullish evidence and analysis evidence with explicit N IDs",
+    "Mechanism tail after TTF机制 or arrow; immutable prefixes are not residual qualifications",
+    "Pure historical mechanism or explicit current residual-flow condition allowed",
+    "Independent same-facility actual residual flow must be observed after notice end and known as of the analysis",
+    "Another active same-facility notice is validated by its own cited ID"
+  ],
+  "unchanged": [
+    "All directions, scores and outputs remain model decisions",
+    "No source/input/schema/prompt/version/retry-policy edits",
+    "No original raw result rewritten; original machine-pass and independent flaw both retained"
+  ],
+  "fixture": {
+    "path": "tests/fixtures/revision_eni_elapsed_notice.json",
+    "sha256": "4578bb989611e803b8452b96e3d7d0f8cf952fbad7e6d29b7dfe17f667124cd3"
+  },
+  "no_model_calls": true,
+  "no_production_database_or_process_changes": true,
+  "regressions": {
+    "tests": 140,
+    "subtests": 264,
+    "passed": true,
+    "elapsed_seconds": 1.69,
+    "command": ".venv/bin/python -m pytest -q tests/test_semantics.py tests/test_reviewed_prose.py tests/test_generation_boundaries.py"
+  },
+  "source_sha256": {
+    "ttf_news/semantics.py": "4c690dfa006fde35793ad10c0c2642576b339cd686b6cff623963b39cba7747e",
+    "tests/test_semantics.py": "3956a284a359403a54d553ed4e10c1cb1dea836eb226c370325b8bec557c9cfc"
+  }
+}

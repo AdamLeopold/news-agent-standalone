@@ -1,0 +1,342 @@
+{
+  "created_at_utc": "2026-10-20 18:08:30 UTC",
+  "reviewer": "independent event_retrieval agent",
+  "review_method": "逐条人工核对冻结input_snapshot、最后一次原始模型回答及失败尝试；不只核对标签，不修改输入、原文、结论或记录。",
+  "stage": "candidate-symmetric-validation",
+  "scope": "15条简报；详析与targeted scopeguard重跑另行复核。",
+  "status": "needs_attention",
+  "model_or_network_requests": 0,
+  "production_database_access": false,
+  "summary": {
+    "reviewed": 15,
+    "verdict_counts": {
+      "pass": 11,
+      "needs_attention": 3,
+      "failed_safely": 1
+    }
+  },
+  "limitations": [
+    "该复核不是实际预测准确率评估；行情仍为reference。",
+    "记录中的contract_passed是生成当时的程序结果，不能代替独立语义复核。",
+    "原始失败、原先通过但独立发现错误的回答全部保留。",
+    "future新闻的弱直接传导允许news flat；无价格基准允许close null；有基准的flat也不因标签本身判错。"
+  ],
+  "records": [
+    {
+      "case": "cold_heating_demand",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/cold_heating_demand.json",
+      "file_sha256": "18b1d8f926c9a737f1c7586c45ee48755999f97893d97bd962ccf8181bd11180",
+      "input_sha256": "d9df78997d786ae788e9377cc47347fd44dfd4c6695428d930717c4e26582fc0",
+      "final_raw_sha256": "aeea63333fbd44bc09671f24e8a679a561957c304033eca5455b8be913cadc43",
+      "has_final_result": true,
+      "recorded_contract_passed": true,
+      "model_call_count": 1,
+      "generation_source_sha256": {
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56",
+        "ttf_news/analysis.py": "c36cf90ee8c798d82e06aa20f4940e07b284d086f2fecc6113956c0015e07dd3",
+        "ttf_news/semantics.py": "2d4e2013e6dec27ad05fad824c9b32af2c3594bb98384ec3c660e6194cbc441e"
+      },
+      "verdict": "pass",
+      "notes": [
+        "未来七天气温下修4摄氏度、预计采暖天然气需求上升15%，原文传导为上行压力。",
+        "原始隔离条件无恢复或其他反向事实，输出未虚构抵消新闻、历史类比或已/未计价结论。"
+      ]
+    },
+    {
+      "case": "cumulative_shock_then_weak",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/cumulative_shock_then_weak.json",
+      "file_sha256": "c52aea14465011166b0aa7b6d0e1020923eef5874d90d03ebc81bc5bc238cf25",
+      "input_sha256": "5e7023133552a37edb4b49958159871fe1beafb41b84d9c45176d5265d121c25",
+      "final_raw_sha256": "f1451d3a8e1fbfdcef41bcde00c0b7ecfd6699c4b75f5166d98d6a72ab133632",
+      "has_final_result": true,
+      "recorded_contract_passed": true,
+      "model_call_count": 1,
+      "generation_source_sha256": {
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56",
+        "ttf_news/analysis.py": "c36cf90ee8c798d82e06aa20f4940e07b284d086f2fecc6113956c0015e07dd3",
+        "ttf_news/semantics.py": "2d4e2013e6dec27ad05fad824c9b32af2c3594bb98384ec3c660e6194cbc441e"
+      },
+      "verdict": "pass",
+      "notes": [
+        "当日早先N1实测输欧流量减少40mcm/d仍持续，最新N0只是无交付安排的牙买加许可；最终保持累计供给冲击up，引用N1原值与持续7天。",
+        "没有用最新弱新闻覆盖/抵消仍在的窗口供给缺口，也未声称冲击已或未计价。无价格基准时close保持null。"
+      ]
+    },
+    {
+      "case": "dismissed_notice_not_verified_recovery",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/dismissed_notice_not_verified_recovery.json",
+      "file_sha256": "29eff41087acf3c153457b30ad0c4b50789391624e008e2eeaad015ba8483d44",
+      "input_sha256": "dc8a50f0ed4b2e64a5a97b9b3d697e61aa88afa3e25f195a97a44e8b017f36a0",
+      "final_raw_sha256": "393893632764ff463e549b03d488cf955486fc8a3f680e65c1f62ec83b7fb93a",
+      "has_final_result": true,
+      "recorded_contract_passed": true,
+      "model_call_count": 2,
+      "generation_source_sha256": {
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56",
+        "ttf_news/analysis.py": "c36cf90ee8c798d82e06aa20f4940e07b284d086f2fecc6113956c0015e07dd3",
+        "ttf_news/semantics.py": "2d4e2013e6dec27ad05fad824c9b32af2c3594bb98384ec3c660e6194cbc441e"
+      },
+      "verdict": "needs_attention",
+      "notes": [
+        "结构化事实与风险栏正确说明Dismissed、非计划、不可用容量20、实际流量未知，未明说实流已恢复。撤销公告容量风险可支持弱下行判断，标签本身不判错。",
+        "正文/evidence多处‘供应风险已消除’未限定公告容量风险；仅凭撤销且恢复未确认，不能泛化为所有供应风险已消除。已将精确原句与路径报告root待裁定，不修改原始raw或新增gate。",
+        "root确认属于无范围风险清零错误，将以窄scope guard拒绝并targeted重跑。原contract_passed=True只属旧程序结果，本独立复核不判通过。"
+      ]
+    },
+    {
+      "case": "future_planned_notice",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/future_planned_notice.json",
+      "file_sha256": "d9f471ebcf16b96dfe9038a7d1c55d0f6deeeedfffd6511d0275af11c71562f3",
+      "input_sha256": "99aa1883186e4c7746647f781489670cf07addc2c015b7bbd5f4d28310eef1e8",
+      "final_raw_sha256": "05157dd5b31ff9e0ad9bdd6bdcb870f566ac2dcb24848d6805a976c6570fe6da",
+      "has_final_result": true,
+      "recorded_contract_passed": true,
+      "model_call_count": 2,
+      "generation_source_sha256": {
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56",
+        "ttf_news/analysis.py": "c36cf90ee8c798d82e06aa20f4940e07b284d086f2fecc6113956c0015e07dd3",
+        "ttf_news/semantics.py": "2d4e2013e6dec27ad05fad824c9b32af2c3594bb98384ec3c660e6194cbc441e"
+      },
+      "verdict": "pass",
+      "notes": [
+        "as_of为2026-10-20，原文保留2027-05-22至25未来计划时段，20mcm/d为计划产能约束，没有写成当前实际减供或停产20。",
+        "结构化事实表明确公告容量≠实际流量，价格反应未知；最终没有旧批次‘当前未计入价格’断言。news flat体现未生效且直接供需作用弱，close缺基准为null。",
+        "首轮曾把容量写成计划停产20mcm/d，正确被拒；独立high最终生成保留，两次尝试不覆盖。",
+        "对‘当前无影响/暂无直接影响’按整段限定读为未生效公告没有当前实物直接冲击、新闻压力弱，未读成已观察到报价确定无反应：最终仍明确价格反应未知且close=null。未因远期弱传导强迫非flat。"
+      ]
+    },
+    {
+      "case": "negated_outage",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/negated_outage.json",
+      "file_sha256": "e0869eaf2ac442d6a92a5b60e82c9a89a9c3faa27b893988632e41e18e6106d8",
+      "input_sha256": "cd7bc687f1582ff719ddc239f55399405c0dc494c214b24da84b9371e6ca5ce2",
+      "final_raw_sha256": "db059c2be2189a8cc3c99dbe20bf415e7622976856b84c6400030894cae72302",
+      "has_final_result": true,
+      "recorded_contract_passed": true,
+      "model_call_count": 1,
+      "generation_source_sha256": {
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56",
+        "ttf_news/analysis.py": "c36cf90ee8c798d82e06aa20f4940e07b284d086f2fecc6113956c0015e07dd3",
+        "ttf_news/semantics.py": "2d4e2013e6dec27ad05fad824c9b32af2c3594bb98384ec3c660e6194cbc441e"
+      },
+      "verdict": "pass",
+      "notes": [
+        "来源明确运营方否认供应中断且出口计量流量未变，原文保留否认与计量事实，未把不存在的停产当供应减少，也未编造先前溢价回吐。",
+        "最终因果证据只引用当前辟谣与流量无变化；未断言已/未计价，收盘基准不足为null。summary的“未见价格或报价变化”属于未见观测，未给实际价格变化数值。"
+      ]
+    },
+    {
+      "case": "real_eni",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/real_eni.json",
+      "file_sha256": "498153370fa048e282a21d65ca4321e6306effd8927c73906cec50fd1ae1dd3c",
+      "input_sha256": "0dd52f2daf32aeaf1edc94d3394b0df67eba21b6f8d1b3b6ca0652c0faf8f075",
+      "final_raw_sha256": "5894a1392b1d53965e3006c51d073b693935741b210e9fb3e87c1b82f35e0439",
+      "has_final_result": true,
+      "recorded_contract_passed": true,
+      "model_call_count": 1,
+      "generation_source_sha256": {
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56",
+        "ttf_news/analysis.py": "c36cf90ee8c798d82e06aa20f4940e07b284d086f2fecc6113956c0015e07dd3",
+        "ttf_news/semantics.py": "2d4e2013e6dec27ad05fad824c9b32af2c3594bb98384ec3c660e6194cbc441e"
+      },
+      "verdict": "needs_attention",
+      "notes": [
+        "原旧错句‘增加/提升/扩大供应→看涨’全部消失；Eni利比亚domestic grid项目没有被当作输欧实测交付，N3/N7公告5.2/19.8保留为可能供应约束、实际流量未确认。",
+        "N3/N7两条可能供应约束置于neutralizing_evidence且bullish为空，构成证据分类错误：未确认实际流量不能抵消已明确的容量风险。应保留条件性上行风险，最终news/close可依据整体证据另判。",
+        "close flat引用同合约87.547→87.725差+0.178，在0.30平稳带内；无未经证实已计价。未来Kollsnes历史E1被scheduled_future排除，未作为已发生类比，也未重复当日持续事件或虚构历史价格因果。"
+      ],
+      "decision_history": [
+        {
+          "decision": "pass",
+          "basis": "初读认为未确认流量保留未知边界且未写反向利空、+0.178参考支持close flat，未将风险所在bucket判为实质错误。"
+        },
+        {
+          "decision": "needs_attention",
+          "basis": "复核证据分类：可能供应约束是条件上行风险，流量未确认只降低强度/把握，不能作为neutralizing抵消事实；两条均无来源支持的反向供需机制。保留close flat的独立基准合理性，不强迫news非flat。"
+        }
+      ]
+    },
+    {
+      "case": "real_nyhamna",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/real_nyhamna.json",
+      "file_sha256": "e7924af95e65eeb1ccb2c05e1f2a0e45a31ecac67ac7b44dd79c73d3a2f393b5",
+      "input_sha256": "4ba9dbdac43a9ce84acad5d9dde536a9d5e5a5fa02b6e1a3d65fc64ad7c7990a",
+      "final_raw_sha256": null,
+      "has_final_result": false,
+      "recorded_contract_passed": false,
+      "model_call_count": 2,
+      "generation_source_sha256": {
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56",
+        "ttf_news/analysis.py": "c36cf90ee8c798d82e06aa20f4940e07b284d086f2fecc6113956c0015e07dd3",
+        "ttf_news/semantics.py": "2d4e2013e6dec27ad05fad824c9b32af2c3594bb98384ec3c660e6194cbc441e"
+      },
+      "verdict": "failed_safely",
+      "notes": [
+        "没有最终有效分析，不能仅凭其他历史阶段正确方向判通过。",
+        "首轮medium 16K/3072达到length上限并出现重复右括号；第二轮medium 16K/4096返回HTTP500，错误与原始尝试保留；未默认生成方向。"
+      ]
+    },
+    {
+      "case": "supplied_conflicting_mechanisms",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/supplied_conflicting_mechanisms.json",
+      "file_sha256": "d8a75ccbcb121b79a71660b0d257afdb5993d1a462907479a06e6c888500eab8",
+      "input_sha256": "d269f8b3026c87f3afe318e628da4a952ab2c9fa4918032d0abd31b7491bda22",
+      "final_raw_sha256": "f4103fe1c89c67739167b2e9e969eea70f4d98314376b4983991be0a44583170",
+      "has_final_result": true,
+      "recorded_contract_passed": true,
+      "model_call_count": 1,
+      "generation_source_sha256": {
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56",
+        "ttf_news/analysis.py": "c36cf90ee8c798d82e06aa20f4940e07b284d086f2fecc6113956c0015e07dd3",
+        "ttf_news/semantics.py": "2d4e2013e6dec27ad05fad824c9b32af2c3594bb98384ec3c660e6194cbc441e"
+      },
+      "verdict": "pass",
+      "notes": [
+        "同一假设明确管道实流-20与新增LNG再气化+30，分别进入供给约束/供应增加栏，净+10算术与down压力正确。",
+        "未将未给需求变化写成需求稳定，未以冲突自动判flat；close缺同合约基准保留null和条件倾向。"
+      ]
+    },
+    {
+      "case": "supply_loss_40",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/supply_loss_40.json",
+      "file_sha256": "b98e8729352dea3641479ac9be1cc92b12f64050dc1a539eb84e5abefc25f7fd",
+      "input_sha256": "553fd886f414b2cfbd776893eb06a1caf72582ff87f878d064c5ae8fbf4e4dc7",
+      "final_raw_sha256": "3b413caadb690f99636d112303171bfbc996bbb2c23a4aae0f64b1d16247161a",
+      "has_final_result": true,
+      "recorded_contract_passed": true,
+      "model_call_count": 1,
+      "generation_source_sha256": {
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56",
+        "ttf_news/analysis.py": "c36cf90ee8c798d82e06aa20f4940e07b284d086f2fecc6113956c0015e07dd3",
+        "ttf_news/semantics.py": "2d4e2013e6dec27ad05fad824c9b32af2c3594bb98384ec3c660e6194cbc441e"
+      },
+      "verdict": "pass",
+      "notes": [
+        "来源明确运营方和出口计量确认输欧实际流量减少40mcm/d、持续7天；最终原文40mcm/d供应减少→价格上行，供需因果与数量一致。",
+        "没有补造反向新闻或已/未计价事实；close为insufficient_evidence/null，理由包括确实缺失的前价及盘中基准。"
+      ]
+    },
+    {
+      "case": "supply_loss_40_with_flat_baseline",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/supply_loss_40_with_flat_baseline.json",
+      "file_sha256": "d354125ed2997f9c4b1f5c7f34511f31b3e765a312c7dc7eaec29270dda80e44",
+      "input_sha256": "42c8e106e6a41ed1aac5d22ac7d754fd5b8a62ed28c539d0fcdf99bd07e5bf29",
+      "final_raw_sha256": "bf4181869e89e7efd3046b2a2139d5d6e98ff1b802356e1daeef000ba0bf5486",
+      "has_final_result": true,
+      "recorded_contract_passed": true,
+      "model_call_count": 2,
+      "generation_source_sha256": {
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56",
+        "ttf_news/analysis.py": "c36cf90ee8c798d82e06aa20f4940e07b284d086f2fecc6113956c0015e07dd3",
+        "ttf_news/semantics.py": "2d4e2013e6dec27ad05fad824c9b32af2c3594bb98384ec3c660e6194cbc441e"
+      },
+      "verdict": "pass",
+      "notes": [
+        "同合约Nov26参考前价/最新均88.04，quote观测在as_of前20分钟、可用在as_of前1秒，参考差为0；明确synthetic控制，不是实际结算成绩。",
+        "供减40mcm/d持续7天→上行压力；最终close在持平基准上作条件性forecast up，而非因为未知计价拒绝全部方向或盲目判flat。",
+        "首轮仅因未知价格反应拒绝收盘方向被正确拦截，第二轮medium生成有基准与供需机制的条件性预判；两次尝试保留，无确定已/未计价断言。"
+      ]
+    },
+    {
+      "case": "supply_restore_40",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/supply_restore_40.json",
+      "file_sha256": "804b8c86f82a73cbc420d492d6223d004ab74c3bbf9507cb4d694f713a0006c1",
+      "input_sha256": "34528870d8c93ae88245489993d0a452b219603f455aebefe082e48742003c94",
+      "final_raw_sha256": "954f948d244bea26f3f9da4900e6b673f2fe23cf5b9c97424476a07d75fd2be3",
+      "has_final_result": true,
+      "recorded_contract_passed": true,
+      "model_call_count": 1,
+      "generation_source_sha256": {
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56",
+        "ttf_news/analysis.py": "c36cf90ee8c798d82e06aa20f4940e07b284d086f2fecc6113956c0015e07dd3",
+        "ttf_news/semantics.py": "2d4e2013e6dec27ad05fad824c9b32af2c3594bb98384ec3c660e6194cbc441e"
+      },
+      "verdict": "pass",
+      "notes": [
+        "来源提前恢复、出口计量确认输欧实际流量增加40mcm/d且持续；最终原文供给增加→下行，与供应恢复机制一致。",
+        "未将原定持续7天停产当作继续的新增损失；无未计价/已计价断言或杜撰历史结果，缺价格基准的close保持null。"
+      ]
+    },
+    {
+      "case": "supply_restore_40_with_flat_baseline",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/supply_restore_40_with_flat_baseline.json",
+      "file_sha256": "80cd7a1a3744f74b66b9d6e3eca4d43890202567d1b9a0b40d99cfca97be0588",
+      "input_sha256": "464d1b4829706e3760d34f544c7b1028ab149fdf9aae15c7c9f40febbcb66e9c",
+      "final_raw_sha256": "c90dc00a4d57c29a2824050a5d6a94216214f65b9627f3d7f49c0fc878101831",
+      "has_final_result": true,
+      "recorded_contract_passed": false,
+      "model_call_count": 1,
+      "generation_source_sha256": {
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56",
+        "ttf_news/analysis.py": "c36cf90ee8c798d82e06aa20f4940e07b284d086f2fecc6113956c0015e07dd3",
+        "ttf_news/semantics.py": "2d4e2013e6dec27ad05fad824c9b32af2c3594bb98384ec3c660e6194cbc441e"
+      },
+      "verdict": "needs_attention",
+      "notes": [
+        "供给恢复40mcm/d→news down正确，同合约88.04持平基准也真实来自该synthetic输入；close flat的证据论证失败。",
+        "quote observed11:50:58在当前公告/as_of12:10:58之前20分钟，且输入明确无前后价格反应；原文却写‘供应增加未见即时价格反应/未导致价格下跌’，把冲击前基准当事后反应来判flat。",
+        "原文条件说明‘若充分预期可能继续下行；若未被计价可能维持’缺少其他支持条件。不是因为flat标签本身拒绝，而是未经观察的事后反应与定价机制论证不成立；应保留错误原文并重生，不能直接改成down。"
+      ]
+    },
+    {
+      "case": "warm_heating_demand",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/warm_heating_demand.json",
+      "file_sha256": "9ef336c549af09adb54396811ee20f433f066f188261e55ee9954c7f120066f1",
+      "input_sha256": "ac46f6f4ed4d341d627245bc13e3f29355d5e5adaf3b970a2ed5b343defe21b7",
+      "final_raw_sha256": "6113145569fafc4da21ba8e80f638ac4be6815e8adc2fff2fe1cea01d9afe515",
+      "has_final_result": true,
+      "recorded_contract_passed": true,
+      "model_call_count": 1,
+      "generation_source_sha256": {
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56",
+        "ttf_news/analysis.py": "c36cf90ee8c798d82e06aa20f4940e07b284d086f2fecc6113956c0015e07dd3",
+        "ttf_news/semantics.py": "2d4e2013e6dec27ad05fad824c9b32af2c3594bb98384ec3c660e6194cbc441e"
+      },
+      "verdict": "pass",
+      "notes": [
+        "未来七天气温上修4摄氏度、预计采暖天然气需求下降15%，证据维持原预测数量并传导为下行压力。",
+        "未误写温和天气导致采暖需求增加；没有虚构供给中断或价格反应。"
+      ]
+    },
+    {
+      "case": "weak_exploration_no_quote",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/weak_exploration_no_quote.json",
+      "file_sha256": "250f8e8932eae89462d1bda85a784dfd5e8604caff03a6bc6612d739c1eb08a0",
+      "input_sha256": "6d252c5abf714717916f99ef8e3f038aa5a942635795825e4dfa32da25dc9cfa",
+      "final_raw_sha256": "94fdf99ccc69afc75bfa58fa957408acc1f702c5267429bd17a1213d7b2ec3f1",
+      "has_final_result": true,
+      "recorded_contract_passed": true,
+      "model_call_count": 1,
+      "generation_source_sha256": {
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56",
+        "ttf_news/analysis.py": "c36cf90ee8c798d82e06aa20f4940e07b284d086f2fecc6113956c0015e07dd3",
+        "ttf_news/semantics.py": "2d4e2013e6dec27ad05fad824c9b32af2c3594bb98384ec3c660e6194cbc441e"
+      },
+      "verdict": "pass",
+      "notes": [
+        "未钻探、无已探明产量/投产日/欧洲供气安排，最终仅判该许可无即时供给影响，news flat合理。",
+        "新原文没有旧批次无依据的未计价断言；close缺市场基准为null。没有活跃供应约束被未知流量抹除。"
+      ]
+    },
+    {
+      "case": "weak_news_observed_market_up",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/weak_news_observed_market_up.json",
+      "file_sha256": "043e2b241432c05cdf84e38c8697935fe0781a44fce05fabe3d9aca1e79f5805",
+      "input_sha256": "a0a64a5ee688b273dacc019cdfb921d8d4d92b62470c5f646b60bd5e6dc89a71",
+      "final_raw_sha256": "cc139912ce7388a3512e0ae853e957e5df45becf2b5532f99d12ef388b8554c8",
+      "has_final_result": true,
+      "recorded_contract_passed": true,
+      "model_call_count": 1,
+      "generation_source_sha256": {
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56",
+        "ttf_news/analysis.py": "c36cf90ee8c798d82e06aa20f4940e07b284d086f2fecc6113956c0015e07dd3",
+        "ttf_news/semantics.py": "2d4e2013e6dec27ad05fad824c9b32af2c3594bb98384ec3c660e6194cbc441e"
+      },
+      "verdict": "pass",
+      "notes": [
+        "勘探许可无现时交付，news flat；同合约Nov26参考88.04→89.8、差1.76被close单独作为已观察参考基准，close up没有被弱新闻归零。",
+        "输出没有把该许可说成上涨成因或断言已计价；参考行情仍未验证为官方结算，复核只核对输入与推理，不计算真实准确率。"
+      ]
+    }
+  ]
+}

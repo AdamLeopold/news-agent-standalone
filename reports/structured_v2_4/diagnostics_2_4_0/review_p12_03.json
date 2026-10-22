@@ -1,0 +1,58 @@
+{
+  "reviewed_at": "2026-10-22T14:45:34.767953+00:00",
+  "scope": "Independent reading of the full actual Chinese/English result, fact catalog, typed plan, source input and raw final JSON; private frozen real-news diagnostic, not market accuracy or release acceptance.",
+  "actual_file": ".runtime/structured-reasoning-v4/p12_current_pilot_03.json",
+  "actual_sha256": "7d8ff4272efe2739a72d15159f985d293dc136b530f40917bfae412879f14f31",
+  "actual_status": "completed",
+  "model_calls": 4,
+  "call_stages": [
+    "fact_classification",
+    "mechanism_weights",
+    "mechanism_weights",
+    "closing_decision"
+  ],
+  "fact_and_direction_checks": {
+    "jackdaw": {
+      "type": "future_project_approval",
+      "scope": "europe",
+      "realization": "future",
+      "mechanism_sign": -1,
+      "source_quote_verified": true
+    },
+    "gassco": {
+      "future_13_6_not_current_flow": true,
+      "current_13_not_erased_from_catalog": true,
+      "future_unplanned_13_category_preserved": true,
+      "shortened_period_is_revision_relief_not_flow_recovery": true,
+      "no_rate_sum": true
+    },
+    "prices": {
+      "previous_date": "2026-10-20",
+      "previous_price": 85.062,
+      "latest_price": 87.505,
+      "observed_delta": 2.443,
+      "observation_and_availability_clocks_distinguished": true,
+      "reference_not_official_settlement_accuracy": true
+    },
+    "bilingual": {
+      "same_canonical_plan": true,
+      "directions_and_numeric_fields_unchanged": true,
+      "english_analysis_prose_is_english": true,
+      "source_links_present": true
+    }
+  },
+  "semantic_verdict": "No confirmed reversed supply-demand sign or invented factual quantity in this completed output. Importance/selection reasoning and brief source coverage remain insufficient for release.",
+  "remaining_findings": [
+    {
+      "kind": "explainability_and_focus_coverage",
+      "description": "The actual model set both future Jackdaw supply and shortened-period relief weights to zero with confidence one, without a reason. The focused Jackdaw article therefore disappears from the brief despite correct catalog classification. Do not force nonzero weights; record the importance/zero-selection basis and retain the focused fact in displayed analysis."
+    },
+    {
+      "kind": "group_display_coverage",
+      "description": "Equal positive weights in the correlated Troll risk group select the first future notice as the max representative. The current and other future notices remain in the catalog but are not shown in brief evidence. Display their related group membership and distinct timing without adding capacities or counting them as independent votes."
+    }
+  ],
+  "release_ready": false,
+  "database_writes": false,
+  "extra_model_calls_by_reviewer": 0
+}

@@ -1,0 +1,296 @@
+{
+  "status": "failed",
+  "started_at": "2026-10-20T22:55:22.484938+00:00",
+  "expected_prompt_version": "ttf-news-standalone-2.3",
+  "scope": "real_local_manual_detail_english_exports_sse_and_preservation",
+  "synthetic_live_input": false,
+  "raw_thinking_included": false,
+  "stages": [
+    {
+      "name": "preservation_before",
+      "status": "passed",
+      "started_at": "2026-10-20T22:55:22.506550+00:00",
+      "checks": {
+        "passed": true,
+        "protected_analysis_count": 137,
+        "protected_nonnull_field_count": 261,
+        "current_analysis_count": 137,
+        "new_analysis_count": 0,
+        "protected_snapshot_count": 5,
+        "new_snapshot_count": 0,
+        "original_validation_record_count": 1,
+        "latest_baseline_unchanged": true,
+        "original_baseline": {
+          "id": 210,
+          "created_at": "2026-10-14T05:51:48.181167+00:00",
+          "type": "validation_started"
+        },
+        "failures": []
+      },
+      "finished_at": "2026-10-20T22:55:22.546646+00:00",
+      "elapsed_seconds": 0.04
+    },
+    {
+      "name": "live_api_v2_and_managed_identity",
+      "status": "passed",
+      "started_at": "2026-10-20T22:55:22.547496+00:00",
+      "checks": {
+        "prompt_version": "ttf-news-standalone-2.3",
+        "model": "gpt-oss:20b",
+        "server_pid": 33261,
+        "managed_pid_identity_verified": true,
+        "collector": {
+          "enabled": true,
+          "poll_seconds": 60
+        },
+        "counts": {
+          "news": 3996,
+          "events": 1575,
+          "legacy_daily": 3456,
+          "prices": 65879,
+          "analyses": 137
+        },
+        "monitoring_reachable": true
+      },
+      "finished_at": "2026-10-20T22:55:24.395812+00:00",
+      "elapsed_seconds": 1.848
+    },
+    {
+      "name": "select_real_existing_news",
+      "status": "passed",
+      "started_at": "2026-10-20T22:55:24.398511+00:00",
+      "checks": {
+        "news_id": "2ca137b8a4dd54deb4d88fc8",
+        "title": "Nordic energy players hit paydirt with new gas and condensate discovery",
+        "source": "offshore_energy",
+        "url": "https://offshore-energy.biz/2026/10/19/nordic-energy-players-hit-paydirt-with-new-gas-and-condensate-discovery",
+        "published_at": "2026-10-19T07:51:38+00:00",
+        "source_version": 2,
+        "body_characters": 1023,
+        "body_sha256": "e1f06709f28ac1db272ddcf71962848c9ed8da0e4753867ad782a5608ca51181",
+        "fact_excerpt_used": true
+      },
+      "finished_at": "2026-10-20T22:55:24.428003+00:00",
+      "elapsed_seconds": 0.029
+    },
+    {
+      "name": "ensure_current_v2_live_forecast",
+      "status": "passed",
+      "started_at": "2026-10-20T22:55:24.428568+00:00",
+      "checks": {
+        "analysis_id": "e2285944-9e11-498e-ab62-431d7c093536",
+        "status": "queued",
+        "created": true,
+        "trade_date": "2026-10-21",
+        "source_news_id": "90bfbf6adb1183517cbc00ca",
+        "reason": "append_fresh_version_update_forecast",
+        "priority": 3,
+        "old_forecasts_overwritten": false,
+        "validation_baseline_reset": false
+      },
+      "finished_at": "2026-10-20T22:55:26.130387+00:00",
+      "elapsed_seconds": 1.702
+    },
+    {
+      "name": "sse_initial_connection",
+      "status": "passed",
+      "started_at": "2026-10-20T22:55:26.130938+00:00",
+      "checks": {
+        "id": 208872,
+        "type": "stream_ready",
+        "kind": null,
+        "matched_analysis_id": null,
+        "replayed_event_count": 1,
+        "cursor_mode": "initial_ready"
+      },
+      "finished_at": "2026-10-20T22:55:26.200955+00:00",
+      "elapsed_seconds": 0.07
+    },
+    {
+      "name": "manual_submit_real_news",
+      "status": "passed",
+      "started_at": "2026-10-20T22:55:26.201722+00:00",
+      "checks": {
+        "analysis_id": "c1de63c0-8ad3-436f-bac4-92362e8dd476",
+        "status": "queued",
+        "real_source_news_id": "2ca137b8a4dd54deb4d88fc8"
+      },
+      "finished_at": "2026-10-20T22:55:40.949655+00:00",
+      "elapsed_seconds": 14.748
+    },
+    {
+      "name": "sse_last_event_id_reconnect",
+      "status": "passed",
+      "started_at": "2026-10-20T22:55:40.950496+00:00",
+      "checks": {
+        "id": 208881,
+        "type": "analysis_queued",
+        "kind": null,
+        "matched_analysis_id": "c1de63c0-8ad3-436f-bac4-92362e8dd476",
+        "replayed_event_count": 9,
+        "cursor_mode": "Last-Event-ID"
+      },
+      "finished_at": "2026-10-20T22:55:40.955865+00:00",
+      "elapsed_seconds": 0.005
+    },
+    {
+      "name": "sse_after_query_reconnect",
+      "status": "passed",
+      "started_at": "2026-10-20T22:55:40.956610+00:00",
+      "checks": {
+        "id": 208881,
+        "type": "analysis_queued",
+        "kind": null,
+        "matched_analysis_id": "c1de63c0-8ad3-436f-bac4-92362e8dd476",
+        "replayed_event_count": 9,
+        "cursor_mode": "after_query"
+      },
+      "finished_at": "2026-10-20T22:55:40.963859+00:00",
+      "elapsed_seconds": 0.007
+    },
+    {
+      "name": "manual_real_brief",
+      "status": "failed",
+      "started_at": "2026-10-20T22:55:40.964539+00:00",
+      "error_type": "RuntimeError",
+      "error": "Brief failed: 模型JSON两次校验失败，未生成方向：close_forecast.basis:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知；close_forecast.basis:输入没有这条公告的价格反应观测，不能断言未影响当前价格或价格未受影响；可判断当前新闻压力较弱、未来公告不计作当前停供，并说明价格反应未知",
+      "finished_at": "2026-10-20T23:01:09.052299+00:00",
+      "elapsed_seconds": 328.086
+    },
+    {
+      "name": "csv_jsonl_exports",
+      "status": "passed",
+      "started_at": "2026-10-20T23:01:09.058011+00:00",
+      "checks": {
+        "news": {
+          "csv": {
+            "rows": 3996,
+            "bytes": 5003952,
+            "sha256": "d7eaefadaeca93532815ae499f71b6dee041b940a53710e4b3c3f2acf87ca95b",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 3996,
+            "bytes": 6693112,
+            "sha256": "d59b7efefc61bdf0fad22f34624d6208bbbc751cfc3003bc8398ceb60649dff6",
+            "parsed": true
+          },
+          "row_counts_match": true,
+          "independent_snapshot_requests": true
+        },
+        "daily": {
+          "csv": {
+            "rows": 628,
+            "bytes": 3916576,
+            "sha256": "763fe0dc96dcbd5f8fdd21d1d0d546979d962eec5adb6c66d80aed2d0804910c",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 628,
+            "bytes": 3808063,
+            "sha256": "fa0f558cc00dc166f9443a20a9ec28d38d9430a24202c4f8ec3f8208cb47d9d8",
+            "parsed": true
+          },
+          "row_counts_match": true,
+          "independent_snapshot_requests": true
+        },
+        "events": {
+          "csv": {
+            "rows": 1575,
+            "bytes": 5972140,
+            "sha256": "b18ac5c48e513fffb9a6974cc4f5c7e9da5077f583508ba4fd3ddf389d497143",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 1575,
+            "bytes": 6384997,
+            "sha256": "c2eccd02077e5ab80f633e5fe26ff5100583741aab6040cb4ec62e51ae140e30",
+            "parsed": true
+          },
+          "row_counts_match": true,
+          "independent_snapshot_requests": true
+        },
+        "prices": {
+          "csv": {
+            "rows": 65879,
+            "bytes": 26613306,
+            "sha256": "9a01528c52186ca44f9dccc39109b6221e5850395bf76a492aa1fb0f24c3f527",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 65879,
+            "bytes": 43742146,
+            "sha256": "21c480261979ec0e9039db0f0cb43e30a04a53ec276299b28b31e7e2ca6f0aa1",
+            "parsed": true
+          },
+          "row_counts_match": true,
+          "independent_snapshot_requests": true
+        }
+      },
+      "finished_at": "2026-10-20T23:01:18.183322+00:00",
+      "elapsed_seconds": 9.125
+    },
+    {
+      "name": "current_live_forecast_v2",
+      "status": "passed",
+      "started_at": "2026-10-20T23:01:18.185867+00:00",
+      "checks": {
+        "prompt_version": "ttf-news-standalone-2.3",
+        "news_direction": "up",
+        "close_direction": null,
+        "close_evidence_status": "insufficient_evidence",
+        "english_close_label": "No closing outlook yet",
+        "summary_sha256": "f57ec66b61451a590e917312576990955ec76b4b1c517dca3e75cd3016d6cffa",
+        "summary_characters": 18,
+        "model_seconds": 166.122,
+        "as_of": "2026-10-20T22:55:24.492322+00:00",
+        "raw_evidence_validated": true,
+        "analysis_id": "e2285944-9e11-498e-ab62-431d7c093536",
+        "trade_date": "2026-10-21",
+        "dashboard_current_window_verified": true
+      },
+      "finished_at": "2026-10-20T23:01:41.390476+00:00",
+      "elapsed_seconds": 23.204
+    },
+    {
+      "name": "preservation_after",
+      "status": "passed",
+      "started_at": "2026-10-20T23:01:41.393440+00:00",
+      "checks": {
+        "passed": true,
+        "protected_analysis_count": 137,
+        "protected_nonnull_field_count": 261,
+        "current_analysis_count": 139,
+        "new_analysis_count": 2,
+        "protected_snapshot_count": 5,
+        "new_snapshot_count": 0,
+        "original_validation_record_count": 1,
+        "latest_baseline_unchanged": true,
+        "original_baseline": {
+          "id": 210,
+          "created_at": "2026-10-14T05:51:48.181167+00:00",
+          "type": "validation_started"
+        },
+        "failures": []
+      },
+      "finished_at": "2026-10-20T23:01:41.490469+00:00",
+      "elapsed_seconds": 0.097
+    }
+  ],
+  "new_live_analysis_id": "e2285944-9e11-498e-ab62-431d7c093536",
+  "new_analysis_id": "c1de63c0-8ad3-436f-bac4-92362e8dd476",
+  "finished_at": "2026-10-20T23:01:41.492595+00:00",
+  "failed_stages": [
+    "manual_real_brief"
+  ],
+  "missing_required_stages": [
+    "chinese_originals_unchanged_after_translation",
+    "english_brief_actual_text_labels_numbers",
+    "english_detail_actual_text_labels_numbers",
+    "manual_detail_request",
+    "manual_real_brief",
+    "manual_real_detail",
+    "sse_completed_event_replay"
+  ],
+  "elapsed_seconds": 379.005
+}

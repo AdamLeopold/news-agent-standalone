@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-10-21T07:58:58.150351+00:00",
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "status": "qualified_no_confirmed_material_logic_error",
+  "supersedes_for_disposition": {
+    "review": {
+      "file": "reports/repair_2026-10-20/independent_post_resume_7e6485d3_full_review_v2_3.json",
+      "sha256": "f8a0bdddefc6137f3895519e0e4f43420c569a7dc18ea73dac0d524e5dd55d7a"
+    },
+    "withdrawn_pending_manifest": {
+      "file": "reports/repair_2026-10-20/production_post_resume_7e6485d3_pending_review_v2_3.json",
+      "sha256": "72b89ac89510de52be12f3f096b483503f0a235fa60d26d6dfabc5f4d04a3ee9",
+      "must_not_apply": true
+    }
+  },
+  "actual_record": {
+    "file": "reports/repair_2026-10-20/production_post_resume_7e6485d3_actual_v2_3.json",
+    "sha256": "2337d3552d01148700b5939cf4500723983925fe641fcc6eb9ca4222eb693391",
+    "analysis_id": "7e6485d3-0d43-4dc4-b7e1-1fb42c6d1640",
+    "raw_sha256": "9da1d338dcea90dd2f999d1894f7430be0aec8e7cd2e9cf61dda7c52db4729fc"
+  },
+  "reassessment": "The earlier P2 interpretation was too categorical. The summary says supply is constrained by13mcm/d, but does not explicitly assert a measured13mcm/d flow decline or actual shutdown. In full context the cited evidence says announced unavailable capacity, unknown actual flow, and a possible price-pressure effect. Supply-constrained can reasonably describe available supply capacity here. There is insufficient evidence to rule out that capacity reading and classify a confirmed actual-flow fabrication.",
+  "known_logic_errors": [],
+  "qualifications": [
+    {
+      "priority": "P3",
+      "field": "news_impact.summary and analysis.summary",
+      "text": "Troll油田当前维护导致13 mcm/d供给受限，短期内可能推高TTF价格。",
+      "finding": "Prefer explicit announced unavailable capacity wording; the specific N3 category is Other/unspecified rather than an input-confirmed oil field. The imprecise oil-field label does not here change the gas-supply mechanism."
+    },
+    {
+      "priority": "P3",
+      "finding": "Discussion does not clearly separate the shortened N3 constraint duration from future N2/N0 supply risks and Jackdaw expansion; this is limited explanation, not evidence of measured restoration or a forced bullish label."
+    }
+  ],
+  "retained_positive_checks": [
+    "Known current-vs-previous same-contract delta2.418EUR/MWh is accurate and was available beforeasof.",
+    "No announcement-specific price reaction or priced-in status is invented.",
+    "E3 historical delta+0.49, availability time and explicit noncausal scope are correct.",
+    "Bullish announced capacity constraint is directionally coherent; forecast up is a judgment rather than realized settlement."
+  ],
+  "recommended_action": "Do not apply the withdrawn7e invalid manifest. Retain original result with P3 wording qualifications; no confirmed P2 identified in this complete-body review.",
+  "database_modified": false,
+  "canonical_records_modified": false,
+  "other_reviews_unchanged": "e713 remains confirmed invalid for explicit all-future/no-current-loss assertion and reversed bullish evidence. P12 manual remains failed for actual-stop wording, distinct from ambiguous constrained-capacity wording."
+}

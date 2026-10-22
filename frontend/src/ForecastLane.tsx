@@ -1,12 +1,14 @@
 import {Localized, useLanguage} from './Localized';
-import {signalInfo} from './display.mjs';
+import {analysisPartInvalid, analysisReviewTitle, signalInfo} from './display.mjs';
 import type {Analysis} from './types';
 
 export function ForecastLane({analysis, onOpen}: {analysis?: Analysis | null; onOpen?: () => void}) {
   const en = useLanguage() === 'en';
   const direction = analysis?.result?.close_forecast?.direction;
-  const ready = analysis?.status === 'completed' && ['extreme_up', 'up', 'flat', 'down', 'extreme_down'].includes(direction || '');
-  const info = signalInfo(ready ? direction : undefined);
+  const insufficient = analysis?.result?.close_forecast?.evidence_status === 'insufficient_evidence';
+  const invalid = analysisPartInvalid(analysis?.review);
+  const ready = analysis?.status === 'completed' && !invalid && !insufficient && ['extreme_up', 'up', 'flat', 'down', 'extreme_down'].includes(direction || '');
+  const info = signalInfo(ready ? direction || undefined : undefined);
   const rising = direction === 'up' || direction === 'extreme_up';
   const falling = direction === 'down' || direction === 'extreme_down';
   const extreme = ready && direction?.startsWith('extreme_');
@@ -16,7 +18,7 @@ export function ForecastLane({analysis, onOpen}: {analysis?: Analysis | null; on
     timeZone: 'Asia/Singapore', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false,
   }).format(new Date(asOf)) : null;
 
-  return <Localized>{<aside className={`forecast-lane ${info.tone} ${extreme ? 'extreme' : ''}`} data-direction={ready ? direction : 'pending'} aria-label="当前收盘预测">
+  return <Localized>{<aside className={`forecast-lane ${info.tone} ${extreme ? 'extreme' : ''}`} data-direction={ready ? direction : invalid ? 'invalid' : insufficient ? 'insufficient' : 'pending'} aria-label="当前收盘预测">
     <div className="forecast-lane-heading"><span>AI OUTLOOK</span><i/></div>
     <span className="forecast-horizon">当日收盘</span>
     <div className="forecast-motion" aria-hidden="true">
@@ -28,10 +30,10 @@ export function ForecastLane({analysis, onOpen}: {analysis?: Analysis | null; on
             <circle cx="24" cy="50" r="2.5" className="forecast-origin"/>
           </g></g>
         </svg>
-      </> : <div className="forecast-pending"><i/><i/><i/></div>}
+      </> : insufficient || invalid ? <span className="forecast-no-outlook">—</span> : <div className="forecast-pending"><i/><i/><i/></div>}
     </div>
-    <strong className="forecast-direction" key={direction || 'pending'}>{ready ? info.label : '分析中'}</strong>
+    <strong className="forecast-direction" key={direction || 'pending'}>{ready ? info.label : invalid ? analysisReviewTitle(analysis?.review) : insufficient ? '暂缺收盘判断' : '分析中'}</strong>
     <span className="forecast-update">{time ? <>{time}<small>SGT</small></> : '等待更新'}</span>
-    {ready && onOpen && <button className="forecast-detail" type="button" onClick={onOpen}>查看分析<svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5"/></svg></button>}
+    {analysis?.status === 'completed' && onOpen && <button className="forecast-detail" type="button" onClick={onOpen}>查看分析<svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5"/></svg></button>}
   </aside>}</Localized>;
 }

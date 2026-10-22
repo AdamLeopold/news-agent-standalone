@@ -1,0 +1,80 @@
+{
+  "created_at": "2026-10-21T02:30:32.308418+00:00",
+  "status": "confirmed_two_accepted_material_errors_pending_source_fix_actual_followup",
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/event_retrieval",
+  "physical_unit_actual_manifest": {
+    "file": "reports/repair_2026-10-20/physical_unit_six_actual_manifest_v2_3.json",
+    "sha256": "11791d3ee3bb74ae7c4c6f6035b7ef14cd9045428bfd9eaf75b860ac4699a008"
+  },
+  "independent_full_prose_review": {
+    "file": "reports/repair_2026-10-20/independent_actual_physical_unit_review_v2_3_all_6_briefs.json",
+    "sha256": "f7de6a40d0a43603ef20b711250fc9498139075d6fc50a2f765a2ceb46fabfcb"
+  },
+  "records": [
+    {
+      "case": "real_eni",
+      "known_error_family_id": "v2_3_supply_risk_object_scope_and_evidence_polarity",
+      "source_record": {
+        "file": "reports/repair_2026-10-20/candidate-physical-unit-validation/real_eni.json",
+        "sha256": "9e85944a044ac9bb195d41e0faa1756bbb2cae3991356a32644854c192a39d2d"
+      },
+      "input_sha256": "0dd52f2daf32aeaf1edc94d3394b0df67eba21b6f8d1b3b6ca0652c0faf8f075",
+      "recorded_contract_passed": true,
+      "result_was_returned": true,
+      "independent_semantic_passed": false,
+      "known_logic_errors": [
+        {
+          "id": "P2-eni-evidence-polarity",
+          "severity": "P2",
+          "fields": [
+            "news_impact.bullish_evidence[0]",
+            "news_impact.bearish_evidence[0]"
+          ],
+          "quotes": [
+            "[N0]尼尼与利比亚国家石油公司开启非洲天然气项目 → TTF看涨机制",
+            "[N3]Åsgard；非计划；公告不可用容量5.2mcm/d；当前容量公告；实流未知；TTF机制：供应约束导致价格上行"
+          ],
+          "explanation": "N0 source and generated summary frame potential new gas supply, which does not make gas commodity prices bullish merely because a project is good for its company. N3 explicitly says a supply constraint pushes prices upward while placed in the bearish bucket. Net flat may still be a reasonable synthesis; reversed evidence buckets are materially wrong independent of the flat label."
+        }
+      ],
+      "safe_label_disagreement": false,
+      "original_file_unchanged": true,
+      "resolution_status": "open_pending_next_source_and_actual_followup"
+    },
+    {
+      "case": "anchor_real_manual_missing_prevday",
+      "known_error_family_id": "v2_3_isolated_price_observation_or_baseline_errors",
+      "source_record": {
+        "file": "reports/repair_2026-10-20/candidate-physical-unit-validation/anchor_real_manual_missing_prevday.json",
+        "sha256": "6b2256d02d1814f658e7a1283be7beebeb9526eb329bdb00dad6ad02029111e5"
+      },
+      "input_sha256": "e55ff6ad23498905721120306597d3ae1e5c5d223a7021658c2a430913a210fb",
+      "recorded_contract_passed": false,
+      "result_was_returned": true,
+      "independent_semantic_passed": false,
+      "known_logic_errors": [
+        {
+          "id": "P2-epcm-unobserved-immediate-price-no-impact",
+          "severity": "P2",
+          "fields": [
+            "news_impact.summary",
+            "analysis.summary"
+          ],
+          "quotes": [
+            "LNG Canada授予€200M+ EPCM合同给Técnicas Reunidas，预示Coastal GasLink Phase 2未来供给扩张，但对TTF价格暂无即时影响。",
+            "LNG Canada EPCM合同表明未来供给扩张，但对TTF价格暂无即时影响。"
+          ],
+          "explanation": "The source supports future construction/supply expectations, not an observed absence of effect on current TTF prices. 暂无即时影响 is unqualified zero-price-effect wording, without 预计/可能/新闻压力较弱. Its simultaneous pricedunknown statement does not supply reaction evidence. A forecast of limited pressure is allowed; a categorical price-no-effect claim is unsupported."
+        }
+      ],
+      "safe_label_disagreement": false,
+      "original_file_unchanged": true,
+      "resolution_status": "open_pending_next_source_and_actual_followup"
+    }
+  ],
+  "source_or_database_changed": false,
+  "model_calls": 0,
+  "original_recorded_strict_flags_modified": false,
+  "counts_as_correct_prediction": false
+}

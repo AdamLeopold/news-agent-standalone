@@ -1,0 +1,65 @@
+{
+  "observed_at": "2026-10-22T17:04:25.168978+00:00",
+  "passed": true,
+  "previous_capture": {
+    "file": ".runtime/structured-reasoning-v4/resume-2-4-5-extra-preservation-20261022T165901111600Z.json",
+    "sha256": "bdd7a45fc833fe87b32b4c8eae0c9001710112d54cce26791e79c25a9fb3f579"
+  },
+  "manager_preservation_manifest": {
+    "file": ".runtime/structured-reasoning-v4/20261022T165904807024Z-resume/preservation_manifest.json",
+    "sha256": "715c286784c14b979c979a2f559d95ac47cd5402c7775c69cb036dda4167fd0d"
+  },
+  "all_original_metric_rows_unchanged": true,
+  "metric_count_protected": 25089,
+  "metric_max_id_protected": 25089,
+  "original_metrics_sha256_before": "4a81823e6e5c25173bca423fefd09d4fa37551050cb92d8845e8255605a71be0",
+  "original_metrics_sha256_after": "4a81823e6e5c25173bca423fefd09d4fa37551050cb92d8845e8255605a71be0",
+  "original_job_identity_unchanged": true,
+  "job_count_protected": 955,
+  "job_identity_columns": [
+    "id",
+    "kind",
+    "analysis_id",
+    "priority",
+    "created_at"
+  ],
+  "missing_job_ids": [],
+  "changed_job_ids": [],
+  "normal_job_progress_allowed": true,
+  "canonical_preservation": {
+    "passed": true,
+    "protected_analysis_count": 604,
+    "protected_nonnull_field_count": 1031,
+    "current_analysis_count": 613,
+    "new_analysis_count": 9,
+    "protected_snapshot_count": 7,
+    "new_snapshot_count": 0,
+    "original_validation_record_count": 1,
+    "latest_baseline_unchanged": true,
+    "original_baseline": {
+      "id": 210,
+      "created_at": "2026-10-14T05:51:48.181167+00:00",
+      "type": "validation_started"
+    },
+    "failures": []
+  },
+  "protected_analyses": 604,
+  "protected_snapshots": 7,
+  "baseline_id": 210,
+  "validation_started_reset": false,
+  "manual_segment": {
+    "file": "reports/structured_v2_4/api_manual_segment_2_4_5.json",
+    "sha256": "e168665a9cac9fed3915403df06d90b12aa8aec501620cdbb88d23bb21332954"
+  },
+  "automatic_live_observation": {
+    "file": "reports/structured_v2_4/api_automatic_live_2_4_5.json",
+    "sha256": "baba4e72792fc2bf1ac87065899a74f55a3ea12067d77d59a2f5c4172681919b"
+  },
+  "natural_collector_observation": {
+    "file": "reports/structured_v2_4/production_collector_2_4_5.json",
+    "sha256": "69c2eac9a86b6beb148695b460febacdb16cc6b74712d7d3bb7bb281962940de"
+  },
+  "no_engine_refresh_created": true,
+  "fresh_news_workflow_satisfied": false,
+  "semantic_ground_truth_or_market_accuracy": false
+}

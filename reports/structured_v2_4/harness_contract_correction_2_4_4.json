@@ -1,0 +1,63 @@
+{
+  "created_at": "2026-10-22T16:16:15.502866+00:00",
+  "kind": "exact_harness_api_contract_correction_no_product_change",
+  "original_failed_report": {
+    "file": "reports/structured_v2_4/api_manual_segment_02.json",
+    "sha256": "1941211835967001bdb20c74b02c6190c5ed4ca946a3e9cd7d420dc928c4f2f5",
+    "status_preserved": "failed"
+  },
+  "same_existing_manual_id": "12b62a61-afa4-4356-95f8-5fa16db95098",
+  "actual": {
+    "file": "reports/structured_v2_4/api_manual_segment_02_artifacts/manual_brief_actual.json",
+    "sha256": "7c5bebb9c62387abe25531a120483065a27449e285d3713b0a99c7cd31436bb5"
+  },
+  "changes": [
+    {
+      "field": "generation_structure",
+      "previous_harness_expected": "facts-mechanisms-shared-bilingual-plan-v1",
+      "formal_source_and_actual": "per-source-evidence-ids-mechanisms-shared-bilingual-plan-v3"
+    },
+    {
+      "field": "context_sha256",
+      "previous_harness_serializer": "core.digest/_json with spaces",
+      "formal_source_serializer": "transport.digest/sorted compact JSON",
+      "complete_prepared_object_unchanged": true,
+      "actual_compact_digest": "caf74b67617c1627a4499f9fe865dda14499ae5839951d138855f287df6a7c23",
+      "old_inapplicable_serializer_digest": "9702d14171f3db2010005cbb00fd2ae1d0e5d666ff6918f6ac5712264764ba47"
+    }
+  ],
+  "strict_checks_retained": [
+    "prompt/workflow/source SHA",
+    "catalog/plan/full body rebuild",
+    "source_documents",
+    "directions/numbers/references",
+    "original input/result bytes protection"
+  ],
+  "new_product_source_or_model_changes": false,
+  "new_brief_posts_or_model_regenerations": 0,
+  "continuation_report": "reports/structured_v2_4/api_manual_segment_03_continuation.json",
+  "new_harness_sources": [
+    {
+      "file": ".runtime/structured-reasoning-v4/workflow_v2_4_4_formal.py",
+      "sha256": "24b2fe3d11c78b2d9b5925c2477423a366bd5cb5f8e3f6356a34cf1c348a66fd"
+    },
+    {
+      "file": ".runtime/structured-reasoning-v4/workflow_segments_v2_4_4_formal.py",
+      "sha256": "66735ecce3eebe68f980ae285c0765b04072f40c84f1c0c237d19577383f0833"
+    },
+    {
+      "file": ".runtime/structured-reasoning-v4/engine_upgrade_v2_4_4_formal.py",
+      "sha256": "b1476f9cc7f0f545af905e04bafb84542a61affbcb19cfd76469e46a4be85194"
+    },
+    {
+      "file": ".runtime/structured-reasoning-v4/continue_manual_12b62_formal.py",
+      "sha256": "fede83400c21a0e5dcda77e684bf2cfe28ca69e366debd6e81ed5d2979eb58d8"
+    }
+  ],
+  "offline_tests": [
+    13,
+    5,
+    2
+  ],
+  "independent_semantics_acceptance_claimed": false
+}

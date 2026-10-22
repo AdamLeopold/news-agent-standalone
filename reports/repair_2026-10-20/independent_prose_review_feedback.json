@@ -1,0 +1,47 @@
+{
+  "created_at": "2026-10-20T18:47:05.133186+00:00",
+  "stage": "candidate-feedback-validation",
+  "status": "canceled_needs_attention",
+  "review_method": "人工核对冻结输入、两轮原始正文和失败原因；不以contract结果替代语义阅读。",
+  "model_calls_requested_by_reviewer": 0,
+  "no_database_access": true,
+  "expected_brief_targets": 5,
+  "completed_briefs": 1,
+  "remaining_briefs_canceled": 4,
+  "detail_not_started_due_to_cancellation": true,
+  "records": [
+    {
+      "case": "future_planned_notice",
+      "file": "reports/repair_2026-10-20/candidate-feedback-validation/future_planned_notice.json",
+      "file_sha256": "63b2736cb2212eca48b9586a2103607c43c3a9d67125954a1387480563da623a",
+      "input_sha256": "99aa1883186e4c7746647f781489670cf07addc2c015b7bbd5f4d28310eef1e8",
+      "final_raw_sha256": "51cffc0884297bde30616fc82bd29da56c1b8eb4cfbfadfb2b29b2e60e277963",
+      "has_final_result": false,
+      "recorded_contract_passed": false,
+      "verdict": "failed_safely_schema_contract_mismatch",
+      "notes": [
+        "首轮将未来公告写价格不受影响，缺少反应观测，正确被拒。",
+        "末轮保留公告不可用容量20mcm/d、未来时段与实流未知，机制为供应约束潜在上行压力，未再次断言当前价格无影响或未计价。",
+        "末轮失败来自新强制证据前缀以“；机制：”结束，而既有解析要求证据包含→/->/TTF；模型沿强制前缀生成后没有这些标记，属于schema与validator契约不一致。",
+        "不能把格式失败当作已验证预测，也不以此宣称末轮供需方向错误；原文与失败完整保留，等待prefix修复后的新stage实测。"
+      ],
+      "actual_attempt_reasoning": [
+        "medium",
+        "medium"
+      ],
+      "independent_high_used": false
+    }
+  ],
+  "cancellation": {
+    "file": "reports/repair_2026-10-20/feedback_policy_cancellation.json",
+    "sha256": "45b2bc989faf49b90416155dc4aa9b64a2de4bd6f7983d5cfae2fcd910255ea7",
+    "recorded_at": "2026-10-20T18:45:53.428062+00:00",
+    "recorded_reason": "Generated bound evidence prefix lacks existing required mechanism marker; cancel own remaining model comparisons to repair schema-validator conflict. Keep all terminal files.",
+    "reviewer_performed_cancellation": false
+  },
+  "superseding_stage_planned": "candidate-contract-validation and candidate-contract-validation-detail",
+  "limits": [
+    "不是交易日准确率评估，行情仍为reference。",
+    "未修改源记录、方向、源代码或服务。"
+  ]
+}

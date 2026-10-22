@@ -1,0 +1,196 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T04:56:49.877910+00:00",
+  "scope": "Complete original ninth manual brief terminal failure, both full raw bodies, frozen input clocks, two operator intervals, history and price basis. No source/gate relaxation and no retrospective pass.",
+  "actual_record": {
+    "file": "reports/repair_2026-10-20/production_ninth_manual_brief_failed_actual_v2_3.json",
+    "sha256": "2ef79ddad979f6696a8e5153fde38a55c45b047af20dac551fd83b1dbe9db676"
+  },
+  "analysis_id": "c4fd5ed5-ae2c-4e43-8ae5-c75faa314810",
+  "server_pid": 43774,
+  "original_status": "failed",
+  "result_null": true,
+  "detail_status": "not_requested",
+  "source_sha256": {
+    "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+    "ttf_news/analysis.py": "bcd240a893a87e842fc8caff8f4efa156f80cac7d8807b2c8c4c3a8599bfcdfa",
+    "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+    "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+    "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+    "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+    "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+    "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+    "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+    "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+    "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+    "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987",
+    "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+    "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+    "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+    "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+    "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+    "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+    "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+    "ttf_news/public_gateway.py": "08990e223d5e7d1d348967c9625fd29fc2d1e7e58bb000c964b9cfea43b59952",
+    "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+    "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+    "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+    "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+    "ttf_news/semantics.py": "3fcdf8708e49be0bc7060e0e97f45fbfcf5262dabdfc431d70aca0a748791ff7",
+    "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+    "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+    "ttf_news/translation.py": "d47b232a5f77ea68e2d5bc5d092021e9727e555c6b1dd702922325519982d7c5"
+  },
+  "as_of": "2026-10-21T04:47:05.064706+00:00",
+  "target_window": {
+    "trade_date": "2026-10-21",
+    "window_start": "2026-10-20T15:15:00+00:00",
+    "window_end": "2026-10-21T15:15:00+00:00",
+    "cutoff_utc": "2026-10-21T15:15:00+00:00",
+    "cutoff_local": "2026-10-21T17:15:00+02:00",
+    "cutoff_singapore": "2026-10-21T23:15:00+08:00",
+    "display_timezone": "Europe/Amsterdam",
+    "seconds_to_close": 37674,
+    "calendar_source": "https://www.ice.com/publicdocs/ICE_Endex_Trading_Schedule.pdf",
+    "calendar_quality": "official_2026_2027",
+    "boundary": "[previous_settlement, current_settlement)"
+  },
+  "price_reference": {
+    "available": true,
+    "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+    "contract_name": "Nov26",
+    "price_type": "reference",
+    "intraday": {
+      "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+      "contract_id": "6277389",
+      "contract_name": "Nov26",
+      "value": 87.73,
+      "observed_at": "2026-10-21T04:36:00+00:00",
+      "available_at": "2026-10-21T04:46:42.899486+00:00",
+      "unit": "EUR/MWh",
+      "source": "ICE public delayed market data",
+      "source_url": "https://www.ice.com/products/27996665/Dutch-TTF-Gas-Futures/data",
+      "price_type": "delayed_last_trade",
+      "verified_settlement": false,
+      "minimum_delay_minutes": 15,
+      "volume": 175975,
+      "age_seconds": 665,
+      "stale": false
+    },
+    "verified": false,
+    "previous_price": 85.062,
+    "price_date": "2026-10-20",
+    "price_known_at": "2026-10-20T23:27:31.613875+00:00",
+    "reference_source": "ICE public chart",
+    "source_url": "https://www.ice.com/marketdata/api/productguide/charting/data/historical?marketId=6277389&historicalSpan=3",
+    "extreme_threshold": 4.546830435110782,
+    "sigma60": 2.273415217555391,
+    "threshold_frozen_as_of": "2026-10-21T04:47:05.064706+00:00",
+    "flat_delta": 0.3,
+    "observation_count": 702,
+    "risk_flags": [
+      "价格类型尚未验证为ICE官方日结算，不用于官方结算评分"
+    ],
+    "market_baseline": {
+      "available": true,
+      "kind": "observed_reference_move",
+      "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+      "as_of": "2026-10-21T04:47:05.064706+00:00",
+      "verified_settlement": false,
+      "flat_band": 0.3,
+      "interpretation": "已观察同合约参考变化；延续或反转均为待验证情景，不是目标日已实现结算",
+      "previous_price": 85.062,
+      "previous_date": "2026-10-20",
+      "latest_price": 87.73,
+      "observed_delta": 2.668,
+      "observed_direction": "up",
+      "observed_at": "2026-10-21T04:36:00+00:00",
+      "available_at": "2026-10-21T04:46:42.899486+00:00",
+      "price_type": "delayed_last_trade",
+      "source_url": "https://www.ice.com/products/27996665/Dutch-TTF-Gas-Futures/data",
+      "reference_source_url": "https://www.ice.com/marketdata/api/productguide/charting/data/historical?marketId=6277389&historicalSpan=3",
+      "minimum_delay_minutes": 15,
+      "extreme_threshold": 4.546830435110782
+    },
+    "settlement_anchor": {
+      "available": true,
+      "target_trade_date": "2026-10-21",
+      "expected_previous_trade_date": "2026-10-20",
+      "reference_date": "2026-10-20",
+      "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+      "known_time_precision": "exact",
+      "scope": "仅目标日前一交易日同合约参考价可作前结算比较；其他日价不是昨收",
+      "reason": "exact_previous_trading_day_same_contract"
+    }
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "raw_sha256": "f06a20f96d14b0a9526753b691c0635195146aff9221105f952e54940b17001b",
+      "all_free_body_fields_read": true,
+      "original_diagnostics": [
+        "N0容量字段未指明原值为137.4/129.8/7.6mcm/d，不是13.0；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算"
+      ],
+      "model_request_context_sha256": "e741597a9cf7c035da2e43dcac4dc2f929a72c9ee8e912baeeb8b74a00b89e1a",
+      "system_prompt_sha256": "023b681339eeaa1e22b30cb4a761aecf4fddf147f4bc6711995915aa77b09911"
+    },
+    {
+      "attempt": 2,
+      "raw_sha256": "8c7d220ba66d7ddaed0d84c89c35bce563092066420b222e6a0e5db046810592",
+      "all_free_body_fields_read": true,
+      "original_diagnostics": [
+        "news_impact.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应",
+        "analysis.summary:N1公告开始2026-10-22T04:00:00+00:00，截至分析时点尚未开始；目标结算窗口结束时或之后开始；开始时刻不证明实际流量损失；未来于as_of不等于目标窗口之后，须按该N起止和目标窗口分别判断，不改变价格方向"
+      ],
+      "model_request_context_sha256": "de960d9a5efc51aeb4ec23d313676b58a54d642bfb3b33e5d93f07ca240f3367",
+      "system_prompt_sha256": "b00ed0b19aeeee70f9d1e38b9eed84b4fbd30c8eaf89081c444e8c9e68f7b09d"
+    }
+  ],
+  "verdict": "genuine_two_attempt_failure_no_delivered_brief",
+  "material_known_logic_errors": [
+    {
+      "attempt": 1,
+      "priority": "P2",
+      "family": "nonoverlapping_capacity_rate_aggregation",
+      "path": "news_impact.summary",
+      "quote": "Troll气田计划维护导致7.6+13.0 mcm/d容量损失，供应受限，价格上行压力增强。",
+      "reason": "The expression7.6+13.0mcm/d combines two non-overlapping notice rates into one supply/capacity-loss pressure.7.6 belongs22Oct04Z→23Oct04Z, outside the21Oct targetclose;13.0 belongs21Oct04Z→22Oct04Z. They may be separately compared over time; they cannot be an instantaneous combined loss. No measurement verifies actual flow loss."
+    },
+    {
+      "attempt": 2,
+      "priority": "P2",
+      "family": "notice_asof_and_target_window_roles",
+      "paths": [
+        "analysis.summary",
+        "news_impact.neutralizing_evidence[2]"
+      ],
+      "quotes": [
+        "新增事实：N0、N1、N2均为计划维护，导致容量损失但未在当前窗口内生效，净影响平淡",
+        "[N2]Troll；计划；公告不可用容量13.0mcm/d；当前容量公告；实流未知；结束时间修订：2026-10-23T06:00:00+0200→2026-10-22T06:00:00+0200；TTF机制：未来供给约束但当前无影响"
+      ],
+      "reason": "N2 is a current notice starting21Oct04Z before as_of04:47 and inside the20Oct15:15→21Oct15:15 targetwindow. It cannot join all notices in a categorical statement that none has taken effect in the current window. N0/N1 are duplicate source references for the later7.6notice; no duplicate extra capacity is inferred."
+    },
+    {
+      "attempt": 2,
+      "priority": "P2",
+      "family": "unsupported_price_zero_from_future_physical_state",
+      "path": "news_impact.summary",
+      "quote": "计划维护导致7.6mcm/d容量损失，但未在当前窗口内生效，故对TTF价格无即时影响",
+      "reason": "The causal conclusion故对TTF价格无即时影响 is categorical zero price effect without event-reaction observations. Future physical unavailability and unknown actual flows do not establish no futures-price effect. This is not merely a weak-pressure judgment or an as-of absence of evidence."
+    }
+  ],
+  "valid_or_qualified_fields": [
+    "Same-contract baseline85.062 previous20Oct versus87.73 current21Oct04:36 was known by04:46:42 beforeas_of; a conditionalup forecast from that baseline is allowed and not scored correct.",
+    "Both drafts preserve explicit unknown actual-flow evidence in the source ledger; that does not rescue contradictory free prose.",
+    "Second draft E1 historical1d−2.98 reference is explicitly noncausal and past-known; no future history outcome is added.",
+    "Source-specific unavailable capacities7.6/13, facility categories and ended-time revision are present in evidence; rate aggregation and window-role prose are the identified errors."
+  ],
+  "failed_predictions_not_counted_correct": true,
+  "raw_or_status_rewriting": false,
+  "overall_release_passed": false,
+  "new_model_calls": 0,
+  "database_access": false,
+  "network_calls": false,
+  "source_modification": false
+}

@@ -1,0 +1,65 @@
+{
+  "reviewed_at": "2026-10-22T15:02:24.835896+00:00",
+  "scope": "Independent actual full-output/source reading. Private real-source diagnostics, not market accuracy or release acceptance.",
+  "cases": [
+    {
+      "case": "p12_manual",
+      "actual_file": ".runtime/structured-reasoning-v4/real_batch_01/p12_manual.json",
+      "actual_sha256": "06a00bdb05814d69ed59fc5724739e0d2b7ec2d4f533963f547c493987624a85",
+      "transport_status": "completed",
+      "model_calls": 4,
+      "semantic_status": "needs_structural_fix",
+      "findings": [
+        "The model labels Jackdaw future supply and independent revision relief as overlapping_notice even though their groups are single-member. This falsely explains zero weight as de-duplication.",
+        "Source facts, fixed mechanism signs, distinct operational times, group maximum rather than capacity sum, current news visibility, and same-plan Chinese/English/detail were otherwise preserved."
+      ]
+    },
+    {
+      "case": "epcm",
+      "actual_file": ".runtime/structured-reasoning-v4/real_batch_01/epcm.json",
+      "actual_sha256": "8907af9ae48be1c842cf0f3cf31ef7419e4484d1e373d51522805895b89b573e",
+      "transport_status": "completed",
+      "model_calls": 4,
+      "semantic_status": "no_confirmed_material_error_in_completed_output",
+      "findings": [
+        "LNG Canada awarding EPCM to Tecnicas Reunidas is classified corporate_contract, without reversing roles or treating EUR contract value as gas volume.",
+        "The total window upward pressure comes from Troll capacity notices, not corporate equity benefit or current LNG production.",
+        "Future/project supply expectations remain conditional; this output assigns contract background weight zero, a model relevance judgement rather than proof of zero price impact."
+      ]
+    },
+    {
+      "case": "chevron_historical",
+      "actual_file": ".runtime/structured-reasoning-v4/real_batch_01/chevron_historical.json",
+      "actual_sha256": "67879246bbe5d6bd764841eee48d61fdefe87f7efd0db5b2163f8e3ee4bcc39c",
+      "transport_status": "failed",
+      "model_calls": 3,
+      "semantic_status": "failed_and_fact_classification_wrong",
+      "findings": [
+        "The exact quote says have resumed gas production, but the model labels supply_risk_increase, realization=future and role=storage. These labels do not follow the source.",
+        "The final analysis failed because regional/background weight was nonzero; no incorrect finished analysis was emitted."
+      ]
+    },
+    {
+      "case": "eia_historical",
+      "actual_file": ".runtime/structured-reasoning-v4/real_batch_01/eia_historical.json",
+      "actual_sha256": "185e384d192384887bab6f5b3e4cd0dbca37dcc6cbdb32e8b6b10ed4c8109a1c",
+      "transport_status": "failed",
+      "model_calls": 4,
+      "semantic_status": "failed_and_fact_classification_wrong",
+      "findings": [
+        "A historical Henry Hub price report was incorrectly labeled exploration_uncommitted with storage role; US regional/historical scope was preserved.",
+        "Background zero weight was retained, but closing baseline_persists twice cited the zero-weight background mechanism as its driver and was rejected.",
+        "A valid market baseline should be its own source identity rather than turning an unrelated background article into a driver."
+      ]
+    }
+  ],
+  "model_calls_total": 15,
+  "release_ready": false,
+  "minimum_structural_changes": [
+    "Move fixed group/de-duplication identity out of model importance reasons.",
+    "Clarify source normalization of reported restoration, market-price observations, and historical/regional scope with general definitions/examples.",
+    "For baseline continuation, cite the canonical price baseline without requiring a nonzero news mechanism."
+  ],
+  "extra_model_calls_by_reviewer": 0,
+  "database_writes": false
+}

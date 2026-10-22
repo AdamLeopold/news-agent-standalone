@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "observed_at": "2026-10-20T21:53:49.652062+00:00",
+  "analysis_id": "ec3f2c31-6f49-48bb-acbd-48474ce670e2",
+  "record_origin_prompt_version": "ttf-news-standalone-2.0",
+  "backend_prompt_version": "ttf-news-standalone-2.3",
+  "backend_pid": 12598,
+  "api_result_is_null": true,
+  "ui_error_visible": true,
+  "ui_direction_element_count": 0,
+  "default_flat_used": false,
+  "screenshot_file": "reports/repair_2026-10-20/error_ui_v2_3.jpg",
+  "screenshot_sha256": "af94db6c70dcd5c147fc609a36ea54fc644e17515bec95e53ff275700acbb2bc",
+  "api_response_sha256": "35d29f818485868fbe04305d2d1ff4b76bb214464e44f5ef73936ab58f326c89",
+  "frontend_index_sha256": "e42072c502369749d68c2f5bbf97fe400e91e4d77366faf04d4517e7a6351624",
+  "dom_observation_sha256": "12f93bd274b7c2d03f1d2e0e5661dd34f697d3c4ea05d037fc438048bdddd918",
+  "evidence_boundary": "Earlier2.0 failed real record actually observed in the2.3 UI with no direction/defaultflat; frontend index still byte-identical. Bound to bcd240/3fcdf8 final source selected20+detail exactraw/canonical/fullpath evidence,1296-test runtime failure-to-null regressions and actual43774 final-source deployment. This composite is neither a new same-record final-version model failure nor a verified new Pages deployment.",
+  "composed_at": "2026-10-21T04:49:29.127204+00:00",
+  "evidence_kind": "existing_real_failed_record_ui_plus_current_gate_revalidation_and_state_binding",
+  "same_record_v2_end_to_end": false,
+  "ui_observation": {
+    "file": "reports/repair_2026-10-20/error_ui_current_observation_v2_3.json",
+    "sha256": "de05194ef31ddf5c2b8740cde0a616638a42660f1bf25ca3843b9ea3cbaa8918"
+  },
+  "current_gate_revalidation": {
+    "file": "reports/repair_2026-10-20/current_gate_revalidation_final_v2_3.json",
+    "sha256": "9a0957e143da83121f841ebd56ac2fd57e9daa94acdf1b97871145f849c495a2"
+  },
+  "state_binding_junit": {
+    "file": "reports/repair_2026-10-20/output-scope-final-unit-tests.xml",
+    "sha256": "5c62ee3cf09b66f3aafc0f4c4d866aa2345f566929f487aa2b9c5a6a16327f61"
+  },
+  "current_backend_deployment": {
+    "file": "reports/repair_2026-10-20/backend_output_scope_resumed.json",
+    "sha256": "b855d228d963da6befe9345b27f9b8a77252dbefeaddeb788c26ed7fe1a79d8f"
+  },
+  "public_pages_followup_pending": true,
+  "previous_composite_preserved": {
+    "file": "reports/repair_2026-10-20/error_ui_composite_final_binding_v2_3.66c2f0aa4b7c823d.json",
+    "sha256": "66c2f0aa4b7c823d95b430156301cb4be0a34b1d5d0a7330ec5999fbfc50c7f3"
+  },
+  "linked_proof_checks": {
+    "linked_current_rejections_verified": true,
+    "linked_state_binding_verified": true,
+    "linked_ui_observation_verified": true
+  }
+}

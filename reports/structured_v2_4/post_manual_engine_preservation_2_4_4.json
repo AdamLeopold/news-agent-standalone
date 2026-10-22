@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "verified_at": "2026-10-22T16:20:17.917637+00:00",
+  "old_metric_prefix": {
+    "max_id": 24946,
+    "row_count": 24946,
+    "canonical_sha256": "7f6362c7dffe25b71c6c1b032ab68fa134607aec777d03474b65bc8c8536cb0a",
+    "method": "SELECT * FROM metrics ORDER BY id; UTF8 JSON sort_keys compact"
+  },
+  "all_old_metrics_rows_unchanged": true,
+  "old_queued_jobs": 12,
+  "old_job_priority_created_at_input_unchanged": true,
+  "normal_attempt_status_progress_not_overwritten": true,
+  "manual_original_analysis_id": "12b62a61-afa4-4356-95f8-5fa16db95098",
+  "engine_analysis_id": "eea9e279-ea05-4d4f-87c9-0eb46839f30d",
+  "model_or_db_manual_correction_actions": 0
+}

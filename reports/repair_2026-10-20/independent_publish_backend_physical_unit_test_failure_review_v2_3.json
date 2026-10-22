@@ -1,0 +1,112 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T02:25:27.754792+00:00",
+  "scope": "Authorized exact-byte clone code/test/fixture sync plus local clone-cwd full pytest. No model, external API, DB, Git or publication action.",
+  "source_sync": {
+    "file": "reports/repair_2026-10-20/publish_backend_physical_unit_source_sync_v2_3.json",
+    "sha256": "af26e9588412389b8f48f8cbcd19dde86dac51c7a222877eebe7bce005459b51"
+  },
+  "exit_code": 1,
+  "passed": 985,
+  "failed": 11,
+  "skipped": 6,
+  "passed_subtests": 371,
+  "seconds": 40.77,
+  "junit_total_cases_including_subtests": 1373,
+  "junit": {
+    "file": "reports/repair_2026-10-20/publish-backend-physical-unit-tests.xml",
+    "sha256": "5dc9726074d52fbbab3e53aa81edc281301a486918b109bb65c61a53d336bf8e"
+  },
+  "log": {
+    "file": "reports/repair_2026-10-20/publish-backend-physical-unit-tests.log",
+    "sha256": "3861fb7f24fa6a53c25f2ce2b1d454847869bc99d0bd22835e8ef1f3716d8d8c"
+  },
+  "clone_sources_unchanged_after_test": true,
+  "failure_category": "private_archive_hash_assertions_on_already_publicly_processed_copies",
+  "failures": [
+    {
+      "name": "test_all_fourteen_known_bad_original_bodies_still_rejected[0]",
+      "class": "tests.test_production_price_unit_scopes",
+      "failure_message": "AssertionError: assert '4e0e731c5ec8...07ad3237f9077' == '20278b8467e5...9204fa59c3503'\n  \n  - 20278b8467e5d3fc20e0c1bda14f987f67dca77e6a32df985709204fa59c3503\n  + 4e0e731c5ec832036c8ad5eb595e48041108b7262710d78380407ad3237f9077"
+    },
+    {
+      "name": "test_all_fourteen_known_bad_original_bodies_still_rejected[1]",
+      "class": "tests.test_production_price_unit_scopes",
+      "failure_message": "AssertionError: assert '1deacbef75ef...e73fb3fbc70fe' == '1ad04f04f26d...34c6acb9f6060'\n  \n  - 1ad04f04f26dac92ef224664aed156f8fd84cc3d28a2ee6192b34c6acb9f6060\n  + 1deacbef75effefe130d31149e958bdd46708e36cdeea51880ae73fb3fbc70fe"
+    },
+    {
+      "name": "test_all_fourteen_known_bad_original_bodies_still_rejected[2]",
+      "class": "tests.test_production_price_unit_scopes",
+      "failure_message": "AssertionError: assert 'a4610ea852e1...baa57bdd54ea7' == 'db0d75eee0f8...6b79164f9beb2'\n  \n  - db0d75eee0f83a73b1d6b25eb2706f6ccc77ccd444489149c1e6b79164f9beb2\n  + a4610ea852e1ec8fe50cbe44b44847134e4d6e36d283aeddd45baa57bdd54ea7"
+    },
+    {
+      "name": "test_all_fourteen_known_bad_original_bodies_still_rejected[3]",
+      "class": "tests.test_production_price_unit_scopes",
+      "failure_message": "AssertionError: assert 'e9c3485a3d9d...5864051919a22' == '9de0440215cd...073470329a00c'\n  \n  - 9de0440215cdf3d36b3b522cc2c2d3457de8ffb55b02bd62ad1073470329a00c\n  + e9c3485a3d9d843ac714dd42e1199bbf7aa2abd817344dcf3685864051919a22"
+    },
+    {
+      "name": "test_all_fourteen_known_bad_original_bodies_still_rejected[4]",
+      "class": "tests.test_production_price_unit_scopes",
+      "failure_message": "AssertionError: assert '09f26c334adf...32392c01a4dfb' == 'b2e29adefd21...e6c717206639b'\n  \n  - b2e29adefd2195156fc9d0d616150529e17dbbf1fe50243dc54e6c717206639b\n  + 09f26c334adf062466ae189081c49ca3e4d8526cc80501d07dd32392c01a4dfb"
+    },
+    {
+      "name": "test_all_fourteen_known_bad_original_bodies_still_rejected[5]",
+      "class": "tests.test_production_price_unit_scopes",
+      "failure_message": "AssertionError: assert 'a85bcf913e3b...0b5d6f444de2a' == 'ed1939b87c3e...625bf442c5c79'\n  \n  - ed1939b87c3ef14220eb5c824df3cd3eeb87553a6f39df78a3c625bf442c5c79\n  + a85bcf913e3b6c4cf34710a87c4427095fe028cdcd170ea40a70b5d6f444de2a"
+    },
+    {
+      "name": "test_all_fourteen_known_bad_original_bodies_still_rejected[6]",
+      "class": "tests.test_production_price_unit_scopes",
+      "failure_message": "AssertionError: assert '9400cdcfe9c0...17c105865ab8f' == 'df8fe61f7a33...380d15298986f'\n  \n  - df8fe61f7a3335f8b5705424dbbc6b1b397f57def2e197cf467380d15298986f\n  + 9400cdcfe9c0a7bbbb61ee63ff2f366d7210402c2ef6aefc9d617c105865ab8f"
+    },
+    {
+      "name": "test_all_fourteen_known_bad_original_bodies_still_rejected[7]",
+      "class": "tests.test_production_price_unit_scopes",
+      "failure_message": "AssertionError: assert '1ea42c72b346...3798138c6d080' == '548048cbbb16...d3a90c0e02327'\n  \n  - 548048cbbb16a292c29684b46393af5c7ffb6a2a193f1e3b136d3a90c0e02327\n  + 1ea42c72b34686f0725bc65d02f28d49df7eec5a090941755803798138c6d080"
+    },
+    {
+      "name": "test_all_fourteen_known_bad_original_bodies_still_rejected[11]",
+      "class": "tests.test_production_price_unit_scopes",
+      "failure_message": "AssertionError: assert '235daad658fb...3654c17f69385' == 'eac8fdca4d7d...2a83bb608c2cd'\n  \n  - eac8fdca4d7d9ee56172c5ecbf9ed3043aabcfecc1e97c4ebc72a83bb608c2cd\n  + 235daad658fb34dad70a843f07d5cd63927b38b5f2f34156a6a3654c17f69385"
+    },
+    {
+      "name": "test_all_fourteen_known_bad_original_bodies_still_rejected[12]",
+      "class": "tests.test_production_price_unit_scopes",
+      "failure_message": "AssertionError: assert '6444a80c6562...ac45acfe6bd35' == '6a52a56aef8b...c3ff18f33cafb'\n  \n  - 6a52a56aef8b57e98cc4ac39908ab3a9dacc47a019d888c8661c3ff18f33cafb\n  + 6444a80c6562a7e1a5215c93af9880b662d9e9fa6f796a40229ac45acfe6bd35"
+    },
+    {
+      "name": "test_all_fourteen_known_bad_original_bodies_still_rejected[13]",
+      "class": "tests.test_production_price_unit_scopes",
+      "failure_message": "AssertionError: assert '386cf0195dc3...0f8263741afac' == '466fb0f5b6c2...3854ec22e8dff'\n  \n  - 466fb0f5b6c2fe978e4d2059e4889d427ece27f0b26f1d76e013854ec22e8dff\n  + 386cf0195dc3b8a8198f4f3207edd7f5e438616130579a2e8920f8263741afac"
+    }
+  ],
+  "skips": [
+    {
+      "name": "test_fresh_production_event_reactions_fit_brief_and_detail_read_only",
+      "reason": "部署机器生产数据库不可用"
+    },
+    {
+      "name": "test_real_article_detail_snapshot_fits_budget_with_all_window_ids",
+      "reason": "部署快照未提供"
+    },
+    {
+      "name": "test_real_failed_production_snapshots_fit_and_keep_current_facts",
+      "reason": "真实生产快照未随该checkout提供；需在部署机器运行本测试"
+    },
+    {
+      "name": "test_brief_archive_changes_only_supplied_unit_and_native_risk_bounds",
+      "reason": "private historical runtime archive not in public source distribution"
+    },
+    {
+      "name": "test_first_requests_all_twenty_add_only_explicit_supplied_unit_to_backend51753",
+      "reason": "private historical runtime archive not in public source distribution"
+    },
+    {
+      "name": "test_fitting_second_request_preserves_original_request_bytes",
+      "reason": "private historical runtime archive not in public source distribution"
+    }
+  ],
+  "interpretation": "All eleven failures happen before model semantic checks because the published historical report copies differ bytewise from the immutable private archival SHA. These failures are preserved and are not claimed as passes or hidden by copying private archives. The three portable fixture members of this fourteen-control group run normally.",
+  "next_action": "Parent/semantic owner to authorize a precise public-archive compatibility guard or portable fixture path while retaining strict SHA checks for private immutable originals. Any corrected clone rerun must use new log/XML names and preserve this failed attempt."
+}

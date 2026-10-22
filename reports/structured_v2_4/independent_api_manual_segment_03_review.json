@@ -1,0 +1,89 @@
+{
+  "reviewed_at": "2026-10-22T16:18:03.356256+00:00",
+  "reviewer": "independent structured_review agent",
+  "scope": "Read-only semantic review of terminal actual manual API brief, detail, English brief and English detail. Harness report read as supporting transport/preservation evidence; no new API/model/service/database actions.",
+  "harness_report": "reports/structured_v2_4/api_manual_segment_03_continuation.json",
+  "harness_report_sha256": "5a97898bf88da49550c7377a4cfc89e6816753c4409e0979868409eb60fd1c17",
+  "analysis_id": "12b62a61-afa4-4356-95f8-5fa16db95098",
+  "workflow_version": "ttf-structured-reasoning-2.4.4",
+  "overall": "Manual segment independently passed: no confirmed P1/P2 fact, supply-demand direction, temporal or bilingual decision inconsistency. Live reanalysis and website verification remain separate.",
+  "binding_errors": [],
+  "catalog_sha256": "ae76d7874e1c47a0a2851452c0b5f0acd5e61d492d7f2a4f6f7c5ee30bf58cdd",
+  "typed_plan_sha256": "96f42f649c19dbd0866145334048962af4377702d7ee723c9bd31de8d157a33f",
+  "terminal_artifacts": [
+    {
+      "artifact": "reports/structured_v2_4/api_manual_segment_03_continuation_artifacts/manual_brief_actual.json",
+      "sha256": "7c5bebb9c62387abe25531a120483065a27449e285d3713b0a99c7cd31436bb5",
+      "status": "completed",
+      "detail_status": "not_requested",
+      "same_catalog_and_plan": true,
+      "same_news_and_close_direction": true,
+      "actual_model_calls": 3,
+      "renderer_elapsed_seconds": 69.208,
+      "english_cjk_fields": []
+    },
+    {
+      "artifact": "reports/structured_v2_4/api_manual_segment_03_continuation_artifacts/manual_detail_actual.json",
+      "sha256": "badd94ff7fa390f0785f8932ae5675655fc1a0912dfeb55aacc75180af215242",
+      "status": "completed",
+      "detail_status": "completed",
+      "same_catalog_and_plan": true,
+      "same_news_and_close_direction": true,
+      "actual_model_calls": 0,
+      "renderer_elapsed_seconds": 0.003,
+      "english_cjk_fields": []
+    },
+    {
+      "artifact": "reports/structured_v2_4/api_manual_segment_03_continuation_artifacts/manual_english_brief_actual.json",
+      "sha256": "e96fc5e10163424f5a96dccbd45c28072fb472f39a3df61864f701f61b5170a1",
+      "status": "completed",
+      "detail_status": null,
+      "same_catalog_and_plan": true,
+      "same_news_and_close_direction": true,
+      "actual_model_calls": 0,
+      "renderer_elapsed_seconds": 0.003,
+      "english_cjk_fields": []
+    },
+    {
+      "artifact": "reports/structured_v2_4/api_manual_segment_03_continuation_artifacts/manual_english_detail_actual.json",
+      "sha256": "05b6727485b6ff8c2481e99ee7fcc82e57e1b61294e461139845d2b183ba50cf",
+      "status": "completed",
+      "detail_status": null,
+      "same_catalog_and_plan": true,
+      "same_news_and_close_direction": true,
+      "actual_model_calls": 0,
+      "renderer_elapsed_seconds": 0.004,
+      "english_cjk_fields": []
+    }
+  ],
+  "semantic_findings": [
+    "SPA and May EPC contract are commercial facts; they are not observed extra production or proof of incremental global final demand.",
+    "The full Sabine Pass paragraph separately supports future LNG-export development; role lng_export and region global_lng are correct, with source-supported future production figures kept in original quote. No current 4/20 mtpa supply increase is invented.",
+    "The actual as_of is 2026-10-22T16:07:03Z in the October23 trading window starting15:15Z; the source was published13:00Z in the preceding window. Zero current-window contribution here reflects its earlier-publication background status, not a finding that the original announcement had zero impact when published.",
+    "October22 previous-day same-contract reference is missing for the October23 target. The existing October21 reference cannot become yesterday close; close=null is appropriate and preserved in every rendering.",
+    "Chinese and English detail expose the same source quotes, commercial/future distinction, history state and known_at reference outcomes. English analytical fields are English, with no Chinese leftovers.",
+    "All derived results share the original catalog and typed plan; they do not change earlier Chinese labels, numbers or citations or perform extra model inference."
+  ],
+  "harness_outcome_interpretation": {
+    "initial_segment_02": "The original brief product succeeded once in three actual model calls. The first harness stopped on an outdated generation_structure expectation; its failed artifact remains. It is not counted as a model failure or silently replaced.",
+    "continuation_03": "Same analysis ID reused; no duplicate brief inference. Detail, English brief and English detail completed with zero additional model calls.",
+    "supporting_harness_checks": [
+      "SSE initial connection and both reconnection forms, queued/completed event retrieval",
+      "CSV/JSONL exports parse and row-count parity",
+      "602 protected old analyses,7 frozen snapshots and original baseline210 preserved",
+      "deployed source bytes stable"
+    ],
+    "full_product_acceptance": false
+  },
+  "p3_limits": [
+    "The manual form has no source URL field in this request, so its N0 reference URL is empty rather than a fabricated URL.",
+    "Detail history uses generic notice-state comparison wording even for ordinary LNG history; it does not assert that these particular events were withdrawn or restore current production.",
+    "Ordinary fact semantics are reviewed for this case; quote integrity is not an entailment oracle or proof of exhaustive normalization."
+  ],
+  "not_established": [
+    "Fresh news discovery/initial ingestion was not exercised by reusing an existing source as manual input.",
+    "The current live engine_upgrade segment and automatic English enqueue require their own terminal review.",
+    "No official settlement accuracy or independently validated trading performance is inferred.",
+    "Queue wait time for zero-call render jobs is distinct from their few-millisecond renderer elapsed time."
+  ]
+}

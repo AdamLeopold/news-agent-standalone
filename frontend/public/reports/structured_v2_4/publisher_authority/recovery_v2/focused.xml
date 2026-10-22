@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="52" time="11.439" timestamp="2026-10-23T00:38:33.707875+08:00" hostname="MacBook-Pro-8.local"><testcase classname=".runtime.publisher-extraction-proposal.recovery-v2.tests.test_publisher_authority" name="test_body_dom_excludes_presentation_preserves_real_dates_negation_and_numbers" time="0.007" /><testcase classname=".runtime.publisher-extraction-proposal.recovery-v2.tests.test_publisher_authority" name="test_api_failure_rss_discovers_new_url_without_downgrading_known_api" time="0.021" /><testcase classname=".runtime.publisher-extraction-proposal.recovery-v2.tests.test_publisher_authority" name="test_same_instant_api_and_missing_fields_preserve_facts_real_body_change_revises" time="0.012" /><testcase classname=".runtime.publisher-extraction-proposal.recovery-v2.tests.test_publisher_authority" name="test_collection_dispatch_skips_only_compared_metadata_revision[False-False-0]" time="0.001" /><testcase classname=".runtime.publisher-extraction-proposal.recovery-v2.tests.test_publisher_authority" name="test_collection_dispatch_skips_only_compared_metadata_revision[True-False-1]" time="0.001" /><testcase classname=".runtime.publisher-extraction-proposal.recovery-v2.tests.test_publisher_authority" name="test_collection_dispatch_skips_only_compared_metadata_revision[False-True-1]" time="0.001" /><testcase classname=".runtime.publisher-extraction-proposal.recovery-v2.tests.test_publisher_authority" name="test_api_complete_cursor_survives_partial_rss_success_and_recovers_old_updated_article" time="0.013"><failure message="AssertionError: assert ('failed' == 'partial'&#10;  &#10;  - partial&#10;  + failed)">tmp_path = PosixPath('[local path]')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x104db07c0&gt;
+
+    def test_api_complete_cursor_survives_partial_rss_success_and_recovers_old_updated_article(tmp_path,monkeypatch):
+        now=datetime.now(UTC);old_complete=now-timedelta(days=5);published=now-timedelta(days=30)
+        db=Store(tmp_path/'cursor.sqlite3');source={'id':'offshore_energy','name':'Offshore','feed_url':'https://publisher.test/feed','api_url':'https://publisher.test/api/articles'}
+        db.set_source_state('offshore_energy',{'last_complete_api_success_at':old_complete.isoformat(),'last_success_at':now.isoformat()})
+        api_calls=[];attempts=0
+        def handler(request):
+            nonlocal attempts
+            if request.url.path=='/api/articles':
+                attempts+=1;api_calls.append(request.url)
+                if attempts&lt;=2:return httpx.Response(503,text='API outage; RSS discovery still available')
+                return httpx.Response(200,json={'docs':[{'id':1,'title':'Old gas article with genuine body revision','slug':'old-gas','publishedAt':published.isoformat(),'updatedAt':now.isoformat(),'_status':'published','meta':{'description':'A genuine new source body observation.'},'content':[{'type':'paragraph','children':[{'type':'text','text':'European actual gas supply increased by 40 mcm/d after a confirmed restart.'}]}]}],'hasNextPage':False,'totalDocs':1})
+            return httpx.Response(200,text='&lt;rss&gt;&lt;channel&gt;&lt;/channel&gt;&lt;/rss&gt;')
+        original=httpx.AsyncClient
+        monkeypatch.setattr(ingest,'load_sources',lambda:[source])
+        monkeypatch.setattr(ingest.httpx,'AsyncClient',lambda **kwargs:original(transport=httpx.MockTransport(handler)))
+        async def no_sleep(_):pass
+        monkeypatch.setattr(ingest.asyncio,'sleep',no_sleep)
+        for _ in range(2):
+            result=asyncio.run(ingest.poll_sources(db));state=db.get_source_state('offshore_energy')
+&gt;           assert result['sources'][0]['status']=='partial' and state['last_api_error']
+E           AssertionError: assert ('failed' == 'partial'
+E             
+E             - partial
+E             + failed)
+
+.runtime/publisher-extraction-proposal/recovery-v2/tests/test_publisher_authority.py:108: AssertionError</failure></testcase><testcase classname=".runtime.publisher-extraction-proposal.recovery-v2.tests.test_publisher_authority" name="test_failed_initial_api_cursor_latches_and_bad_date_rows_do_not_advance" time="0.013"><failure message="AssertionError: assert ('failed' == 'partial'&#10;  &#10;  - partial&#10;  + failed)">tmp_path = PosixPath('[local path]')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x104db3c70&gt;
+
+    def test_failed_initial_api_cursor_latches_and_bad_date_rows_do_not_advance(tmp_path,monkeypatch):
+        now=datetime.now(UTC);db=Store(tmp_path/'invalid-slice.sqlite3')
+        source={'id':'offshore_energy','name':'Offshore','feed_url':'https://publisher.test/feed','api_url':'https://publisher.test/api/articles'}
+        db.set_source_state('offshore_energy',{'api_recovery_from':(now-timedelta(days=8)).date().isoformat(),'last_success_at':now.isoformat()})
+        calls=[]
+        def handler(request):
+            if request.url.path=='/api/articles':
+                calls.append(request.url)
+                return httpx.Response(200,json={'docs':[{'id':1,'title':'Old gas report outside both filter arms','slug':'old-gas','publishedAt':(now-timedelta(days=30)).isoformat(),'updatedAt':(now-timedelta(days=20)).isoformat(),'_status':'published','meta':{'description':'Not a valid incremental result.'}}],'hasNextPage':False})
+            return httpx.Response(200,text='&lt;rss&gt;&lt;channel&gt;&lt;/channel&gt;&lt;/rss&gt;')
+        original=httpx.AsyncClient
+        monkeypatch.setattr(ingest,'load_sources',lambda:[source]);monkeypatch.setattr(ingest.httpx,'AsyncClient',lambda **kwargs:original(transport=httpx.MockTransport(handler)))
+        async def no_sleep(_):pass
+        monkeypatch.setattr(ingest.asyncio,'sleep',no_sleep)
+        result=asyncio.run(ingest.poll_sources(db));state=db.get_source_state('offshore_energy')
+&gt;       assert result['sources'][0]['status']=='partial' and state['last_api_error']
+E       AssertionError: assert ('failed' == 'partial'
+E         
+E         - partial
+E         + failed)
+
+.runtime/publisher-extraction-proposal/recovery-v2/tests/test_publisher_authority.py:137: AssertionError</failure></testcase><testcase classname=".runtime.publisher-extraction-proposal.recovery-v2.tests.test_ingest" name="test_missing_clock_is_not_fabricated" time="0.000" /><testcase classname=".runtime.publisher-extraction-proposal.recovery-v2.tests.test_ingest" name="test_rss_timezone_and_bounded_source_summary" time="0.001" /><testcase classname=".runtime.publisher-extraction-proposal.recovery-v2.tests.test_ingest" name="test_article_metadata_and_jsonld" time="0.001" /><testcase classname=".runtime.publisher-extraction-proposal.recovery-v2.tests.test_ingest" name="test_revision_hash_and_no_discovery_timestamp_substitution" time="0.000" /><testcase classname=".runtime.publisher-extraction-proposal.recovery-v2.tests.test_ingest" name="test_canonical_url_preserves_identity_query" time="0.000" /><testcase classname=".runtime.publisher-extraction-proposal.recovery-v2.tests.test_ingest" name="test_poll_failure_is_distinct_from_no_news_and_restart_deduplicates" time="0.034" /><testcase classname=".runtime.publisher-extraction-proposal.recovery-v2.tests.test_ingest" name="test_gassco_archive_rows_without_ids_and_real_pagination" time="2.153" /><testcase classname=".runtime.publisher-extraction-proposal.recovery-v2.tests.test_ingest" name="test_rate_limited_source_waits_at_least_fifteen_minutes" time="0.019" /><testcase classname=".runtime.publisher-extraction-proposal.recovery-v2.tests.test_ingest" name="test_offshore_recovers_sleep_gap_without_backdating_arrival" time="2.138" /><testcase classname=".runtime.publisher-extraction-proposal.recovery-v2.tests.test_ingest" name="test_partial_archive_clears_old_completed_marker_in_merged_checkpoint" time="1.095" /><testcase classname=".runtime.publisher-extraction-proposal.recovery-v2.tests.test_ingest" name="test_offshore_broken_rss_redirect_uses_bounded_api_and_preserves_failure" time="1.073"><failure message="AssertionError: assert '2026-10-20T00:00:00.000Z' == '2026-10-21T00:00:00.000Z'&#10;  &#10;  - 2026-10-21T00:00:00.000Z&#10;  ?          ^&#10;  + 2026-10-20T00:00:00.000Z&#10;  ?          ^">tmp_path = PosixPath('[local path]')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x104e0b550&gt;
+
+    def test_offshore_broken_rss_redirect_uses_bounded_api_and_preserves_failure(tmp_path, monkeypatch):
+        from datetime import datetime, timedelta, timezone
+        now = datetime.now(timezone.utc)
+        previous_success = now - timedelta(hours=4)
+        requests = []
+        def handler(request):
+            requests.append(request.url)
+            if request.url.path == '/feed':
+                if request.url.host == 'offshore.example.org':
+                    return httpx.Response(308, headers={'Location': 'https://www.offshore.example.org/feed'})
+                return httpx.Response(404, text='Unknown domain')
+            return httpx.Response(200, json={'docs': [{'id': 42, 'title': 'LNG supply update after RSS failure', 'slug': 'lng-after-feed-failure',
+                                                       'publishedAt': now.isoformat(), 'updatedAt': None, '_status': 'published',
+                                                       'meta': {'description': 'Source LNG supply summary.'}}],
+                                                   'hasNextPage': False, 'totalDocs': 1})
+        original_client = httpx.AsyncClient
+        monkeypatch.setattr(ingest.httpx, 'AsyncClient', lambda **kwargs: original_client(transport=httpx.MockTransport(handler), follow_redirects=True))
+        monkeypatch.setattr(ingest, 'load_sources', lambda: [{'id': 'offshore_energy', 'name': 'Offshore',
+                                                           'feed_url': 'https://offshore.example.org/feed',
+                                                           'api_url': 'https://offshore.example.org/api/articles'}])
+        store = Store(tmp_path / 'rss-fallback.db')
+        store.set_source_state('offshore_energy', {'last_success_at': previous_success.isoformat(), 'archive_cursor': 29,
+                                                  'historical_pages': 28, 'historical_status': 'ok', 'backfill_completed_at': previous_success.isoformat()})
+        result = asyncio.run(ingest.poll_sources(store))
+        state = store.get_source_state('offshore_energy')
+        assert result['total_created'] == 1 and result['sources'][0]['status'] == 'partial'
+        assert state['live_transport'] == 'api_primary' and state['last_success_at']
+        assert state['failures'] and 'www.offshore.example.org/feed' in state['failures'][-1]['error']
+        api = next(url for url in requests if url.path == '/api/articles')
+        expected_start = (previous_success - timedelta(days=1)).date().isoformat() + 'T00:00:00.000Z'
+&gt;       assert api.params['where[and][0][or][0][publishedAt][greater_than_equal]'] == expected_start
+E       AssertionError: assert '2026-10-20T00:00:00.000Z' == '2026-10-21T00:00:00.000Z'
+E         
+E         - 2026-10-21T00:00:00.000Z
+E         ?          ^
+E         + 2026-10-20T00:00:00.000Z
+E         ?          ^
+
+.runtime/publisher-extraction-proposal/recovery-v2/tests/test_ingest.py:204: AssertionError</failure></testcase><testcase classname=".runtime.publisher-extraction-proposal.recovery-v2.tests.test_ingest" name="test_offshore_first_start_rss_failure_only_queries_two_recent_days" time="1.072" /><testcase classname="tests.test_fact_excerpt_ingest" name="test_complete_negation_and_quantity_paragraphs_survive_bounded_selection" time="0.001" /><testcase classname="tests.test_fact_excerpt_ingest" name="test_public_html_retains_fact_provenance_without_replacing_meta_summary" time="0.002" /><testcase classname="tests.test_fact_excerpt_ingest" name="test_premium_html_keeps_only_metadata_and_never_body_even_without_description" time="0.001" /><testcase classname="tests.test_fact_excerpt_ingest" name="test_public_rss_content_can_add_paragraphs_without_article_fetch" time="0.002" /><testcase classname="tests.test_fact_excerpt_ingest" name="test_premium_rss_content_is_not_persisted" time="0.002" /><testcase classname="tests.test_fact_excerpt_ingest" name="test_payload_content_is_used_when_metadata_exists_but_premium_content_is_skipped[False]" time="0.014" /><testcase classname="tests.test_fact_excerpt_ingest" name="test_payload_content_is_used_when_metadata_exists_but_premium_content_is_skipped[True]" time="0.015" /><testcase classname="tests.test_fact_excerpt_ingest" name="test_unchanged_rss_poll_keeps_enrichment_and_does_not_refetch_or_oscillate" time="0.014" /><testcase classname="tests.test_fact_excerpt_ingest" name="test_store_metadata_only_writer_cannot_downgrade_an_identical_enriched_record" time="0.010" /><testcase classname="tests.test_fact_excerpt_ingest" name="test_changed_publisher_metadata_does_not_carry_stale_excerpt" time="0.010" /><testcase classname="tests.test_fact_excerpt_ingest" name="test_missing_feed_updated_time_is_not_retraction_but_explicit_change_is_revision" time="0.013" /><testcase classname="tests.test_fact_excerpt_ingest" name="test_rss_missing_updated_clock_reuses_api_enrichment_without_repeated_fetch" time="0.015" /><testcase classname="tests.test_fact_excerpt_ingest" name="test_same_metadata_excerpt_update_is_newly_known_not_retroactive" time="1.076" /><testcase classname="tests.test_fact_excerpt_ingest" name="test_detail_request_count_is_bounded_and_known_premium_never_fetched" time="1.068" /><testcase classname="tests.test_fact_excerpt_ingest" name="test_detail_rate_limit_preserves_backoff_and_metadata_news" time="1.073" /><testcase classname="tests.test_fact_excerpt_ingest" name="test_scope_metadata_is_source_faithful_and_does_not_assign_model_direction" time="0.000" /><testcase classname="tests.test_runtime_record_preservation" name="test_success_metric_failure_preserves_committed_result[short]" time="0.022" /><testcase classname="tests.test_runtime_record_preservation" name="test_success_metric_failure_preserves_committed_result[detail]" time="0.022" /><testcase classname="tests.test_runtime_record_preservation" name="test_success_metric_failure_preserves_committed_result[translation]" time="0.022" /><testcase classname="tests.test_runtime_record_preservation" name="test_post_commit_sse_failure_is_not_a_failed_generation[short]" time="0.016" /><testcase classname="tests.test_runtime_record_preservation" name="test_post_commit_sse_failure_is_not_a_failed_generation[detail]" time="0.020" /><testcase classname="tests.test_runtime_record_preservation" name="test_post_commit_sse_failure_is_not_a_failed_generation[translation]" time="0.028" /><testcase classname="tests.test_runtime_record_preservation" name="test_live_translation_enqueue_and_failure_metric_do_not_erase_brief" time="0.019" /><testcase classname="tests.test_runtime_record_preservation" name="test_real_generation_or_precommit_failure_remains_failed_and_retryable[generation-short]" time="0.024" /><testcase classname="tests.test_runtime_record_preservation" name="test_real_generation_or_precommit_failure_remains_failed_and_retryable[generation-detail]" time="0.023" /><testcase classname="tests.test_runtime_record_preservation" name="test_real_generation_or_precommit_failure_remains_failed_and_retryable[generation-translation]" time="0.027" /><testcase classname="tests.test_runtime_record_preservation" name="test_real_generation_or_precommit_failure_remains_failed_and_retryable[commit-short]" time="0.023" /><testcase classname="tests.test_runtime_record_preservation" name="test_real_generation_or_precommit_failure_remains_failed_and_retryable[commit-detail]" time="0.023" /><testcase classname="tests.test_runtime_record_preservation" name="test_real_generation_or_precommit_failure_remains_failed_and_retryable[commit-translation]" time="0.026" /><testcase classname="tests.test_runtime_record_preservation" name="test_interrupted_job_recovery_retains_original_input_and_completed_source[short]" time="0.018" /><testcase classname="tests.test_runtime_record_preservation" name="test_interrupted_job_recovery_retains_original_input_and_completed_source[detail]" time="0.024" /><testcase classname="tests.test_runtime_record_preservation" name="test_interrupted_job_recovery_retains_original_input_and_completed_source[translation]" time="0.026" /></testsuite></testsuites>

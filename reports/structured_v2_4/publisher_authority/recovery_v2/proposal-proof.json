@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "model_calls": 0,
+  "root_source_changes": 0,
+  "production_db_writes": 0,
+  "tests": {
+    "passed": 52,
+    "failed": 0,
+    "log": "focused-final.log",
+    "xml": "focused-final.xml"
+  },
+  "source": {
+    "ttf_news/ingest.py": "51386adad216ecf3164a38aefff201fbda44ce8af05c5040b6af01075962705e",
+    "ttf_news/runtime.py": "dd24abb89c0b878e19f7d74d531e3dd0b4640cd53e372ee189bd2dd2efe2f14f",
+    "tests/test_publisher_authority.py": "e25ec1efc43d68db75988a80ccd985a57ef8a8868af7bdb8e95eec9cc5ba0059",
+    "tests/test_ingest.py": "9f467a2c9ab53fe7d5c7cbca6e51b3ec1884bd7c13403c20667dccdc8ac4eb8b"
+  },
+  "api_probe": {
+    "successful_data_requests": 1,
+    "redirect_only_responses": 1,
+    "sandbox_dns_failure_attempts": 1,
+    "file": "../api-or-filter-probe-www/probe.json",
+    "sha256": "2c387a9ac39146025d7e49561360a63e97bd066109c59908045106cc0213ebc1",
+    "response_sha256": "d46e17b0f8b405927aa9d6690adfef398441d4e36d95267bdde4f9f05d12281e",
+    "old_publication_new_update_rows": 2,
+    "limit": 2,
+    "title_slice": [
+      "gas",
+      "LNG",
+      "FSRU"
+    ]
+  },
+  "cursor_policy": [
+    "last_success_at may include partial RSS and never advances the API cursor.",
+    "last_complete_api_success_at advances only after complete API pagination and successful persistence of its returned items.",
+    "api_recovery_from latches the first incomplete interval; RSS progress cannot erase it.",
+    "Live uses verified OR publishedAt/updatedAt bounded filter and validates each row. Historical remains publication-only.",
+    "At API page bound with more pages, explicit incomplete error and no API cursor advance."
+  ],
+  "base": {
+    "ttf_news/ingest.py": "7f460f7a3260b685914264f3fc7638e31716d6dadde1f913580d064465395059",
+    "ttf_news/runtime.py": "dd24abb89c0b878e19f7d74d531e3dd0b4640cd53e372ee189bd2dd2efe2f14f",
+    "ttf_news/structured_core.py": "027bc8d862b3cc3f8eff7ea54b881a51030372009c9087dbdac2815c0582e4cc"
+  },
+  "first_candidate_history_preserved": true,
+  "double_poll_status": "Not executed: initial import failure before any requests; preserved ../live-two-polls-invocation.log. Awaiting final source application before live two-poll experiment."
+}

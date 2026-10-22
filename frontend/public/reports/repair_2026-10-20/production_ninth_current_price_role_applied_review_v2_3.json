@@ -1,0 +1,57 @@
+{
+  "generated_at": "2026-10-21T05:01:14.675705+00:00",
+  "source_payload_sha256": "42cccefb999be4c08a6a066fe44183441959625ab8d4fe8987e51e2b4d26ba85",
+  "analysis_id": "ff3fdde7-4f67-487b-92ea-b612da62941a",
+  "protected_fields_before": {
+    "input_snapshot": "a4c314b618e6be0c4bdf4ce76c9138a86439489ee2ca3da997452593a34c3e0f",
+    "result": "db15a405c83c724c170064d65d6f54473ee75f5fdd207b72f367fcaaa6a9183c",
+    "detail_result": null
+  },
+  "protected_fields_after": {
+    "input_snapshot": "a4c314b618e6be0c4bdf4ce76c9138a86439489ee2ca3da997452593a34c3e0f",
+    "result": "db15a405c83c724c170064d65d6f54473ee75f5fdd207b72f367fcaaa6a9183c",
+    "detail_result": null
+  },
+  "original_prediction_preserved": true,
+  "review": {
+    "status": "invalid",
+    "invalid_parts": [
+      "brief"
+    ],
+    "parts": {
+      "brief": {
+        "status": "invalid",
+        "reason_code": "v2_3_observed_price_baseline_temporal_role",
+        "message_zh": "简报把今日盘中87.73与前一交易日参考85.062的比较，写成“前一交易日参考价从85.062升至87.73”，并以“前一交易日参考价上涨”推导。原预测保留，这条简报未通过报价时间角色复核。",
+        "message_en": "The brief describes the move from the previous-day reference85.062 to the current intraday quote87.73 as a rise in the previous-day reference itself. The original prediction is preserved; this brief fails the quote time-role evidence review.",
+        "review_id": "observed-price-role-ff3fdde7-4f67-487b-92ea-b612da62941a-brief-v1",
+        "metric_id": 20329,
+        "reviewed_at": "2026-10-21T05:01:14.672993+00:00"
+      }
+    },
+    "latest_review": {
+      "review_id": "observed-price-role-ff3fdde7-4f67-487b-92ea-b612da62941a-brief-v1",
+      "status": "invalid",
+      "reason_code": "v2_3_observed_price_baseline_temporal_role",
+      "affected_parts": [
+        "brief"
+      ],
+      "reviewer": "independent_production_ninth_current_live_initial_review",
+      "message_zh": "简报把今日盘中87.73与前一交易日参考85.062的比较，写成“前一交易日参考价从85.062升至87.73”，并以“前一交易日参考价上涨”推导。原预测保留，这条简报未通过报价时间角色复核。",
+      "message_en": "The brief describes the move from the previous-day reference85.062 to the current intraday quote87.73 as a rise in the previous-day reference itself. The original prediction is preserved; this brief fails the quote time-role evidence review.",
+      "analysis_id": "ff3fdde7-4f67-487b-92ea-b612da62941a",
+      "protected_hashes": {
+        "input_snapshot": "a4c314b618e6be0c4bdf4ce76c9138a86439489ee2ca3da997452593a34c3e0f",
+        "result": "db15a405c83c724c170064d65d6f54473ee75f5fdd207b72f367fcaaa6a9183c",
+        "detail_result": null
+      },
+      "canonical_result_modified": false,
+      "metric_id": 20329,
+      "reviewed_at": "2026-10-21T05:01:14.672993+00:00"
+    },
+    "reason_code": "v2_3_observed_price_baseline_temporal_role",
+    "message_zh": "简报把今日盘中87.73与前一交易日参考85.062的比较，写成“前一交易日参考价从85.062升至87.73”，并以“前一交易日参考价上涨”推导。原预测保留，这条简报未通过报价时间角色复核。",
+    "message_en": "The brief describes the move from the previous-day reference85.062 to the current intraday quote87.73 as a rise in the previous-day reference itself. The original prediction is preserved; this brief fails the quote time-role evidence review."
+  },
+  "db_change_scope": "append-only review metadata and SSE event, no prediction edits"
+}

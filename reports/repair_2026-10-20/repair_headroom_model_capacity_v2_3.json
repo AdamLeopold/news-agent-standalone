@@ -1,0 +1,13 @@
+{
+  "observed_at": "2026-10-21T00:21:26.506523+00:00",
+  "model": "gpt-oss:20b",
+  "advertised_model_info": {
+    "general.architecture": "gptoss",
+    "gptoss.context_length": 131072,
+    "gptoss.rope.scaling.original_context_length": 4096
+  },
+  "capability_read_only": true,
+  "new_model_calls": 0,
+  "no_service_actions": true,
+  "scope": "Advertised supported context from existing local model, not a speed or actual token-usage benchmark."
+}

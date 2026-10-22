@@ -1,0 +1,61 @@
+{
+  "created_at": "2026-10-21T02:25:11.619475+00:00",
+  "status": "passed_allowlist_self_tests",
+  "scope": "Explicit authorized physical-unit focused/full-test and public-backend logs; inclusion preserves initial failures and does not infer terminal success from a file. No sync/copy performed.",
+  "script": "scripts/sync-public-evidence.py",
+  "previous_script_sha256": "322968bfedc144f2a5ada5fb8f5f5115181c4a68652bc24fce6e872ab9c843ae",
+  "script_sha256": "fe3e7b09510eba77d85f66c16bc7eb93f57132230c740e47b8904f4fcb82f7b6",
+  "added_logs": [
+    {
+      "file": "reports/repair_2026-10-20/production-api-metadata-harness-self-tests.log",
+      "sha256_at_allowlist_check": "17c0555d0c75084f4958672fa3b366e655d553e0761d101b4d22a1125d6fabae",
+      "explicit_log_allowlist_entry": true,
+      "final_terminal_status_not_inferred_from_file_presence": true
+    },
+    {
+      "file": "reports/repair_2026-10-20/physical-unit-final-unit-tests.log",
+      "sha256_at_allowlist_check": "791f0571abfff1509ec2411c90465aa8da07453daee510fcc691d3a38289a8e5",
+      "explicit_log_allowlist_entry": true,
+      "final_terminal_status_not_inferred_from_file_presence": true
+    },
+    {
+      "file": "reports/repair_2026-10-20/physical-unit-final-unit-tests-rerun.log",
+      "sha256_at_allowlist_check": "2c5bb1dd500ff7b51cf7ab95fa852d140e66258ff60c562c56bcebd7f691c43d",
+      "explicit_log_allowlist_entry": true,
+      "final_terminal_status_not_inferred_from_file_presence": true
+    },
+    {
+      "file": "reports/repair_2026-10-20/physical-unit-scoped-focused-tests.log",
+      "sha256_at_allowlist_check": "e9dfdfb030f62d0e579bb154e8c4a0834e46df950c15569c92b6e229fc75c6e2",
+      "explicit_log_allowlist_entry": true,
+      "final_terminal_status_not_inferred_from_file_presence": true
+    },
+    {
+      "file": "reports/repair_2026-10-20/physical-unit-scoped-focused-tests-rerun.log",
+      "sha256_at_allowlist_check": "0da8c0507f1a73aed935acc94fe87447d11c0ff79051ebf96202bab48ca799f8",
+      "explicit_log_allowlist_entry": true,
+      "final_terminal_status_not_inferred_from_file_presence": true
+    },
+    {
+      "file": "reports/repair_2026-10-20/physical-unit-scoped-focused-tests-final.log",
+      "sha256_at_allowlist_check": "68d1ebcce11dbe80ec1825a31238aa1d9e2e86b628b2877081d79f020a2c7aec",
+      "explicit_log_allowlist_entry": true,
+      "final_terminal_status_not_inferred_from_file_presence": true
+    },
+    {
+      "file": "reports/repair_2026-10-20/publish-backend-physical-unit-tests.log",
+      "sha256_at_allowlist_check": "3861fb7f24fa6a53c25f2ce2b1d454847869bc99d0bd22835e8ef1f3716d8d8c",
+      "explicit_log_allowlist_entry": true,
+      "final_terminal_status_not_inferred_from_file_presence": true
+    }
+  ],
+  "self_tests": {
+    "passed": 23,
+    "failed": 0
+  },
+  "encoded_json_raw_preservation_logic_changed": false,
+  "sync_executed": false,
+  "model_calls": 0,
+  "database_access": false,
+  "network_calls": 0
+}

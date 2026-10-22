@@ -1,0 +1,486 @@
+{
+  "schema_version": "independent-production-prose-review-v1",
+  "audit": "fresh_production_current_live_full_review_v2_3",
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "audited_at": "2026-10-20T23:01:09.806797+00:00",
+  "role": "current_live",
+  "actual_record_path": "reports/repair_2026-10-20/production_current_live_actual_v2_3.json",
+  "actual_record_sha256": "e53a988a5b15150fed61cdcc4ccd4c2b19f6c4c023de5c09b17aca6badaacfd9",
+  "analysis_id": "e2285944-9e11-498e-ab62-431d7c093536",
+  "result_canonical_sha256": "d47acad822a500d2772efd9ecd3f2fd61b679a083a74c7cb369bda9a6dbd9869",
+  "input_snapshot_canonical_sha256": "8ee195b998b52593ebf3a21cca75cdd71f215691daa1c00c985581fb6bf84b73",
+  "generation_source_binding": {
+    "deployment_artifact": "reports/repair_2026-10-20/backend_regeneration_resumed.json",
+    "deployment_artifact_sha256": "1d67fec7b915f1e5535ba9336e96bada40d6a155ad30716b3f700f6bd626d58e",
+    "pid_from_deployment": 33261,
+    "deployment_source_hashes": {
+      "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+      "ttf_news/analysis.py": "79061b8e132a456fc80fa6f067dc057bdcb681261d68bb1e93769a16069d0d03",
+      "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+      "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+      "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+      "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+      "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+      "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+      "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+      "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+      "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+      "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987",
+      "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+      "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+      "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+      "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+      "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+      "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+      "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+      "ttf_news/public_gateway.py": "fac8fe10429bc62a6be241817491d1f35eecdaa7f8a37357cb8dbcab7f43fae5",
+      "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+      "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+      "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+      "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+      "ttf_news/semantics.py": "a0b8c530ba84b912801f2a294a2f5e94aed419d8083cd9f72270b76e3e53f000",
+      "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+      "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+      "ttf_news/translation.py": "e6c50833f58eb7d063286f298c91f5816520fd4caff87ba4fa29e2dccbd3b680"
+    },
+    "source_files_still_match_at_read": true,
+    "prompt_version": "ttf-news-standalone-2.3",
+    "actual_created_at": "2026-10-20T22:55:26.128098+00:00",
+    "actual_completed_at": "2026-10-20T22:58:12.882758+00:00",
+    "no_claim_artifact_contains_process_attestation": true
+  },
+  "verdict": "no_P2_identified_with_P3_revision_mechanism_explanation_limit",
+  "material_known_logic_errors": [],
+  "all_final_body_fields": {
+    "news_impact": {
+      "direction": "up",
+      "contextual_news_score": 1.0,
+      "confidence": 0.4,
+      "signal_strength": "moderate",
+      "summary": "两条未来维护公告提示短期供给受限，但无价格反应证据，净影响不确定。",
+      "bullish_evidence": [
+        "[N0]Troll；计划；公告不可用容量7.6mcm/d；未来容量公告；实流未知；TTF机制：capacity_constraint",
+        "[N2]Troll；计划；公告不可用容量13.0mcm/d；未来容量公告；实流未知；结束时间修订：2026-10-23T06:00:00+0200→2026-10-22T06:00:00+0200；TTF机制：capacity_constraint"
+      ],
+      "bearish_evidence": [],
+      "neutralizing_evidence": []
+    },
+    "close_forecast": {
+      "confidence": 0.0,
+      "summary": "缺乏可比价格基准，无法判断收盘走势。",
+      "basis": "无可比价格基准，未观察到价格反应。",
+      "extreme_move_risk": "缺乏价格基准，无法评估极端变动风险。",
+      "evidence_status": "insufficient_evidence",
+      "direction": null
+    },
+    "analysis": {
+      "summary": "两条未来维护公告提示短期供给受限，但无价格反应证据，净影响不确定。",
+      "evidence": [
+        "[N0]Troll；计划；公告不可用容量7.6mcm/d；未来容量公告；实流未知；TTF机制：capacity_constraint",
+        "[N2]Troll；计划；公告不可用容量13.0mcm/d；未来容量公告；实流未知；结束时间修订：2026-10-23T06:00:00+0200→2026-10-22T06:00:00+0200；TTF机制：capacity_constraint"
+      ],
+      "negation_or_reversal": [],
+      "priced_in_comment": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格",
+      "matched_terms": [],
+      "historical_comparisons": []
+    },
+    "risk_flags": [
+      "缺少前一交易日可用行情；收盘预判仅由新闻证据驱动",
+      "行情尚未验证为ICE官方日结算，不参与官方结算准确率评分",
+      "价格类型尚未验证为ICE官方日结算，不用于官方结算评分",
+      "最近价格并非上一完整交易日，存在行情缺口",
+      "模型把握程度未经统计校准，不代表已验证准确率",
+      "来源gdelt：最近采集失败；错误后等待重试"
+    ],
+    "references": [
+      {
+        "id": "90bfbf6adb1183517cbc00ca",
+        "url": "https://umm.gassco.no/details?id=f1f667ff-1ee3-45f2-bedf-7eed367ea614",
+        "title": "Gassco Troll: Planned Gas production field unavailability (Active)"
+      },
+      {
+        "id": "a21b1cffbd1454613a5d0793",
+        "url": "https://umm.gassco.no/details?id=345ca395-a74a-4c9d-9c6c-abf24a16aaf8",
+        "title": "Gassco Troll: Planned Other unavailability (Active)"
+      }
+    ],
+    "missing_fields": [
+      "previous_contract_price",
+      "settlement_verification",
+      "confidence_calibration",
+      "source_coverage:gdelt"
+    ],
+    "source_fact_checks": {
+      "fact_contract_version": "operator-facts-2.2",
+      "operator_notices": [
+        {
+          "id": "N0",
+          "facility": "Troll",
+          "facility_type": "气田/生产设施",
+          "notice_type": "计划",
+          "unavailable_capacity": "7.6",
+          "period_utc": [
+            "2026-10-22T04:00Z",
+            "2026-10-23T04:00Z"
+          ],
+          "state_description": "未来公告",
+          "cause_original": "Yearly maintenance"
+        },
+        {
+          "id": "N2",
+          "facility": "Troll",
+          "facility_type": "类别未给",
+          "notice_type": "计划",
+          "unavailable_capacity": "13.0",
+          "period_utc": [
+            "2026-10-21T04:00Z",
+            "2026-10-22T04:00Z"
+          ],
+          "state_description": "未来公告",
+          "cause_original": "Yearly maintenance"
+        }
+      ],
+      "capacity_scope": "公告不可用容量，非实际流量计量",
+      "pricing_observation": {
+        "observed_at": "2026-10-20T20:59:00+00:00",
+        "available_at": "2026-10-20T21:09:54.498786+00:00",
+        "clock_roles": {
+          "observed_at": "报价发生时刻",
+          "available_at": "本机获知时刻；不是报价发生时刻"
+        },
+        "current_news_timing": {
+          "id": "N0",
+          "publication_time": "2026-10-20T20:13:18+00:00",
+          "quote_relation": "at_or_after_publication",
+          "quote_role": "已观察市场基准；单个报价不证明公告反应"
+        },
+        "reaction_evidence_available": false,
+        "pricing_status": "无法确认是否已计价；不是尚未计价或价格无反应"
+      },
+      "non_overlapping_notice_ids": [
+        [
+          "N0",
+          "N2"
+        ]
+      ]
+    }
+  },
+  "source_clock_projection": {
+    "as_of": "2026-10-20T22:55:24.492322+00:00",
+    "session": {
+      "trade_date": "2026-10-21",
+      "window_start": "2026-10-20T15:15:00+00:00",
+      "window_end": "2026-10-21T15:15:00+00:00",
+      "cutoff_utc": "2026-10-21T15:15:00+00:00",
+      "cutoff_local": "2026-10-21T17:15:00+02:00",
+      "cutoff_singapore": "2026-10-21T23:15:00+08:00",
+      "display_timezone": "Europe/Amsterdam",
+      "seconds_to_close": 58775,
+      "calendar_source": "https://www.ice.com/publicdocs/ICE_Endex_Trading_Schedule.pdf",
+      "calendar_quality": "official_2026_2027",
+      "boundary": "[previous_settlement, current_settlement)"
+    },
+    "current_news": {
+      "source": "gassco",
+      "url": "https://umm.gassco.no/details?id=f1f667ff-1ee3-45f2-bedf-7eed367ea614",
+      "title": "Gassco Troll: Planned Gas production field unavailability (Active)",
+      "summary": "Message ID: 2026-252-A________________001. Publication: 2026-10-20T22:13:18+0200. Event: 2026-10-22T06:00:00+0200 to 2026-10-23T06:00:00+0200. Technical capacity: 137.4 mcm/d; available: 129.8; unavailable: 7.6. Reason: Yearly maintenance. Remarks: Extended maintenance.",
+      "published_at": "2026-10-20T20:13:18+00:00",
+      "published_date": "2026-10-20",
+      "timestamp_precision": "exact",
+      "timestamp_source": "UMM.Publication date/time",
+      "updated_at": null,
+      "first_seen_at": "2026-10-20T20:15:04.077570+00:00",
+      "summary_created_at": "2026-10-20T20:15:04.077573+00:00",
+      "category": "supply_outage",
+      "entities": [
+        "Gassco",
+        "Troll"
+      ],
+      "source_revision": "85efe0f36f137fb0",
+      "content_hash": "12b4efff548514e45ec50a2ccba89b1eed49df6f4647c0bbf5746e98413084b7",
+      "discovered_via": "https://umm.gassco.no/",
+      "ingestion_kind": "live",
+      "is_relevant": true,
+      "relevance_metadata": {
+        "scope": "background",
+        "basis": "explicit_source_terms_not_price_direction",
+        "evidence_terms": [
+          "Gas",
+          "capacity"
+        ],
+        "european_channel_explicitly_denied": false,
+        "scope_is_not_verified_price_impact": true
+      },
+      "event_status": "Active",
+      "event_start": "2026-10-22T06:00:00+0200",
+      "event_end": "2026-10-23T06:00:00+0200",
+      "source_message_id": "2026-252-A________________001",
+      "trade_date": "2026-10-21",
+      "id": "90bfbf6adb1183517cbc00ca",
+      "version": 1,
+      "version_seen_at": "2026-10-20T20:15:04.642029+00:00"
+    },
+    "window_news": [
+      {
+        "source": "gassco",
+        "url": "https://umm.gassco.no/details?id=f1f667ff-1ee3-45f2-bedf-7eed367ea614",
+        "title": "Gassco Troll: Planned Gas production field unavailability (Active)",
+        "summary": "Message ID: 2026-252-A________________001. Publication: 2026-10-20T22:13:18+0200. Event: 2026-10-22T06:00:00+0200 to 2026-10-23T06:00:00+0200. Technical capacity: 137.4 mcm/d; available: 129.8; unavailable: 7.6. Reason: Yearly maintenance. Remarks: Extended maintenance.",
+        "published_at": "2026-10-20T20:13:18+00:00",
+        "published_date": "2026-10-20",
+        "timestamp_precision": "exact",
+        "timestamp_source": "UMM.Publication date/time",
+        "updated_at": null,
+        "first_seen_at": "2026-10-20T20:15:04.077570+00:00",
+        "summary_created_at": "2026-10-20T20:15:04.077573+00:00",
+        "category": "supply_outage",
+        "entities": [
+          "Gassco",
+          "Troll"
+        ],
+        "source_revision": "85efe0f36f137fb0",
+        "content_hash": "12b4efff548514e45ec50a2ccba89b1eed49df6f4647c0bbf5746e98413084b7",
+        "discovered_via": "https://umm.gassco.no/",
+        "ingestion_kind": "live",
+        "is_relevant": true,
+        "relevance_metadata": {
+          "scope": "background",
+          "basis": "explicit_source_terms_not_price_direction",
+          "evidence_terms": [
+            "Gas",
+            "capacity"
+          ],
+          "european_channel_explicitly_denied": false,
+          "scope_is_not_verified_price_impact": true
+        },
+        "event_status": "Active",
+        "event_start": "2026-10-22T06:00:00+0200",
+        "event_end": "2026-10-23T06:00:00+0200",
+        "source_message_id": "2026-252-A________________001",
+        "trade_date": "2026-10-21",
+        "id": "90bfbf6adb1183517cbc00ca",
+        "version": 1,
+        "version_seen_at": "2026-10-20T20:15:04.642029+00:00"
+      },
+      {
+        "source": "gassco",
+        "url": "https://umm.gassco.no/details?id=345ca395-a74a-4c9d-9c6c-abf24a16aaf8",
+        "title": "Gassco Troll: Planned Other unavailability (Active)",
+        "summary": "Message ID: 2026-252__________________009. Publication: 2026-10-20T22:10:15+0200. Event: 2026-10-21T06:00:00+0200 to 2026-10-22T06:00:00+0200. Technical capacity: 137.3 mcm/d; available: 124.3; unavailable: 13.0. Reason: Yearly maintenance. Remarks: Extended maintenance.",
+        "published_at": "2026-10-20T20:10:15+00:00",
+        "published_date": "2026-10-20",
+        "timestamp_precision": "exact",
+        "timestamp_source": "UMM.Publication date/time",
+        "updated_at": null,
+        "first_seen_at": "2026-10-14T03:18:21.660030+00:00",
+        "summary_created_at": "2026-10-20T20:11:12.163269+00:00",
+        "category": "supply_outage",
+        "entities": [
+          "Gassco",
+          "Troll"
+        ],
+        "source_revision": "65aa70a8ab24f660",
+        "content_hash": "9307a0f676a344f495d892a622046258bad7481e52785c9f25a737ff51124499",
+        "discovered_via": "https://umm.gassco.no/",
+        "ingestion_kind": "live",
+        "is_relevant": true,
+        "relevance_metadata": {
+          "scope": "background",
+          "basis": "explicit_source_terms_not_price_direction",
+          "evidence_terms": [
+            "capacity"
+          ],
+          "european_channel_explicitly_denied": false,
+          "scope_is_not_verified_price_impact": true
+        },
+        "event_status": "Active",
+        "event_start": "2026-10-21T06:00:00+0200",
+        "event_end": "2026-10-22T06:00:00+0200",
+        "source_message_id": "2026-252__________________009",
+        "trade_date": "2026-10-21",
+        "id": "a21b1cffbd1454613a5d0793",
+        "version": 4,
+        "version_seen_at": "2026-10-20T20:11:12.948941+00:00",
+        "revision_delta": {
+          "previous_version": 3,
+          "previous_known_at": "2026-10-20T20:08:03.258789+00:00",
+          "changed_fields": {
+            "event_end": {
+              "before": "2026-10-23T06:00:00+0200",
+              "after": "2026-10-22T06:00:00+0200"
+            }
+          },
+          "substantive_change": true,
+          "comparison_status": "compared",
+          "metadata_changed_fields": [
+            "source_message_id",
+            "source_revision",
+            "published_at",
+            "version_seen_at",
+            "summary_created_at"
+          ]
+        }
+      }
+    ],
+    "price_reference": {
+      "available": true,
+      "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+      "contract_name": "Nov26",
+      "price_type": "reference",
+      "intraday": {
+        "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+        "contract_id": "6277389",
+        "contract_name": "Nov26",
+        "value": 86.325,
+        "observed_at": "2026-10-20T20:59:00+00:00",
+        "available_at": "2026-10-20T21:09:54.498786+00:00",
+        "unit": "EUR/MWh",
+        "source": "ICE public delayed market data",
+        "source_url": "https://www.ice.com/products/27996665/Dutch-TTF-Gas-Futures/data",
+        "price_type": "delayed_last_trade",
+        "verified_settlement": false,
+        "minimum_delay_minutes": 15,
+        "volume": 173025,
+        "age_seconds": 6984,
+        "stale": true
+      },
+      "verified": false,
+      "previous_price": 88.04,
+      "price_date": "2026-10-19",
+      "price_known_at": "2026-10-20T15:09:02.021914+00:00",
+      "reference_source": "ICE public chart",
+      "source_url": "https://www.ice.com/marketdata/api/productguide/charting/data/historical?marketId=6277389&historicalSpan=3",
+      "extreme_threshold": 4.466853677887938,
+      "sigma60": 2.233426838943969,
+      "threshold_frozen_as_of": "2026-10-20T22:55:24.492322+00:00",
+      "flat_delta": 0.3,
+      "observation_count": 701,
+      "risk_flags": [
+        "价格类型尚未验证为ICE官方日结算，不用于官方结算评分",
+        "最近价格并非上一完整交易日，存在行情缺口"
+      ],
+      "market_baseline": {
+        "available": false,
+        "kind": "observed_reference_move",
+        "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+        "as_of": "2026-10-20T22:55:24.492322+00:00",
+        "verified_settlement": false,
+        "flat_band": 0.3,
+        "interpretation": "已观察同合约参考变化；延续或反转均为待验证情景，不是目标日已实现结算",
+        "reason": "previous_trading_day_reference_missing"
+      },
+      "settlement_anchor": {
+        "available": false,
+        "target_trade_date": "2026-10-21",
+        "expected_previous_trade_date": "2026-10-20",
+        "reference_date": "2026-10-19",
+        "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+        "known_time_precision": "exact",
+        "scope": "仅目标日前一交易日同合约参考价可作前结算比较；其他日价不是昨收",
+        "reason": "previous_trading_day_reference_missing"
+      }
+    },
+    "event_role_summary": [
+      {
+        "id": "event-gassco-2026-352",
+        "title": "Gassco Troll: Unplanned Gas production field unavailability (Dismissed)",
+        "retrieval_role": "historical_analogue",
+        "operational_state_at_as_of": "notice_dismissed",
+        "current_window_overlap": false
+      },
+      {
+        "id": "event-gassco-2026-351-A",
+        "title": "Gassco Troll: Unplanned Gas production field unavailability (Active)",
+        "retrieval_role": "historical_analogue",
+        "operational_state_at_as_of": "announced_window_elapsed_unverified_flow",
+        "current_window_overlap": false
+      },
+      {
+        "id": "event-gassco-2026-351",
+        "title": "Gassco Troll: Unplanned Gas production field unavailability (Active)",
+        "retrieval_role": "historical_analogue",
+        "operational_state_at_as_of": "announced_window_elapsed_unverified_flow",
+        "current_window_overlap": false
+      },
+      {
+        "id": "event-gassco-2026-343",
+        "title": "Gassco Troll: Planned Other unavailability (Active)",
+        "retrieval_role": "historical_analogue",
+        "operational_state_at_as_of": "announced_window_elapsed_unverified_flow",
+        "current_window_overlap": false
+      },
+      {
+        "id": "event-gassco-2026-222-A",
+        "title": "Gassco Åsgard: Unplanned Gas production field unavailability (Active)",
+        "retrieval_role": "ongoing_background",
+        "operational_state_at_as_of": "announced_active",
+        "current_window_overlap": false,
+        "counted_in_window": false
+      },
+      {
+        "id": "event-gassco-2026-93",
+        "title": "Gassco Nyhamna: Planned Other unavailability (Active)",
+        "retrieval_role": "ongoing_background",
+        "operational_state_at_as_of": "announced_active",
+        "current_window_overlap": false,
+        "counted_in_window": false
+      }
+    ]
+  },
+  "checks": {
+    "facts_numbers_facility_tense": "Both current notices are planned future announcements; source N0 gas-production field7.6 Oct22 04:00Z→Oct23 04:00Z, N2 categoryOther13.0 Oct21 04:00Z→Oct22 04:00Z. Final body lists each separately without20.6 rate sum, physical-flow equivalence, fabricated facility type, or currently operating loss. N0 duplicate window alias is not double counted.",
+    "revision_mechanism": "N2 end moves Oct23→Oct22: that announcement revision reduces the duration of its constraint and is marginal supply-risk relief. Its remaining Oct21→22 unavailable capacity still indicates a constraint; N0 adds/continues a lower7.6 announced constraint for Oct22→23. Final evidence includes the exact revision but treats both simply as capacity_constraint in bullish evidence and does not explain the marginal relief in bearish/negation narrative. This is an explanation/completeness limit, not an explicit statement that earlier ending itself is bullish or proof the chosen netup is wrong. Full old-version baseline is not supplied; neither actual recovery nor a complete cumulative net-news counterfactual can be inferred from these entries alone.",
+    "price_anchor": "TargetOct21 requires Oct20 same-contract reference. Only Oct19 previous88.04 and Oct20 absolute delayed86.325 are present; quote is stale and baseline unavailable. Null close properly avoids manufacturing target-day−1.715 from older anchor. No official settlement accuracy or targetprice claimed.",
+    "price_reaction_language": "无可比价格基准，未观察到价格反应 is read together with 无价格反应证据 and explicit pricingunknown as missing observation, not measured zero response. A single postpublication quote at20:59 cannot establish causal reaction, and final body does not claim it does.",
+    "events_and_history": "E1 dismissed and E2/E3/E4 elapsed notices stay historical; E5Åsgard/E6Nyhamna are explicitly ongoing_background/countedinwindowFalse. Output does not fabricate recovery, newness, measured offsets or causal historic reaction from them; no historic comparison is offered, limiting richness rather than reversing facts.",
+    "direction_separation": "Newsup1 with lowconfidence.4 states constrained supply risk, while closeNone has a genuine missing anchor. Uncertainty wording does not force newsflat. Neither economic pressure nor closeoutlook is rewritten in review."
+  },
+  "qualifications": [
+    {
+      "severity": "P3",
+      "id": "marginal_revision_relief_not_explained",
+      "field_paths": [
+        "news_impact.bullish_evidence[1]",
+        "news_impact.bearish_evidence",
+        "analysis.negation_or_reversal",
+        "analysis.summary"
+      ],
+      "quote": "结束时间修订：2026-10-23T06:00:00+0200→2026-10-22T06:00:00+0200；TTF机制：capacity_constraint",
+      "recommendation": "Do not claim this brief fully articulates revision marginal impact. A richer explanation should distinguish the earlier-ending13 capacity constraint from the remaining future constraints; do not force a down/flat label or infer measured recovery."
+    }
+  ],
+  "raw_attempts": [
+    {
+      "attempt": 1,
+      "raw_content_sha256": "2bb1347227ff0cbf628c5973cb5bd9e4eea7be9a2b62bce05c2dec39e2e72459",
+      "validation_errors": [
+        "N0容量字段未指明原值为137.4/129.8/7.6mcm/d，不是13.0；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算",
+        "close_forecast.basis:缺少公告前后价格反应，不能宣称已计价/已消化；须区分计价未知"
+      ],
+      "done_reason": "stop",
+      "total_duration_ns": 76726917916
+    },
+    {
+      "attempt": 2,
+      "raw_content_sha256": "3e302f112fafbb3924515a6a3fe1be3e4f91ffa43ed0f3ae2c8fc436f237a112",
+      "validation_errors": [],
+      "done_reason": "stop",
+      "total_duration_ns": 86301191334
+    }
+  ],
+  "actual_model_call_count": 2,
+  "first_rejected_attempt_not_upgraded": true,
+  "no_model_calls_by_reviewer": true,
+  "no_network_calls": true,
+  "no_database_access": true,
+  "no_tests_run": true,
+  "no_core_edits": true,
+  "limits": [
+    "No outcome accuracy or settlement-price validation.",
+    "This saved production API record is audited, not every future service result.",
+    "Manual/detail/English roles require separate saved-artifact review.",
+    "The marginal revision explanation limitation remains; no new directional label is imposed."
+  ]
+}

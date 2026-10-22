@@ -1,4 +1,7 @@
-import type {Article, Result, SourceState} from './types';
+import type {AnalysisReview, Article, Dashboard, Result, SourceState} from './types';
+export function analysisPartInvalid(review?: AnalysisReview | null, part?: 'brief' | 'detail'): boolean;
+export function analysisReviewTitle(review?: AnalysisReview | null, part?: 'brief' | 'detail'): string;
+export function dailyReferenceLabel(price?: Dashboard['price_reference']): string;
 export function signalInfo(direction?: string): {label: string; short: string; tone: string; symbol: string};
 export function analysisDirectionChanges(brief?: Result | null, detail?: Result | null): {key: string; label: string; brief: string; detail: string}[];
 export function displayConfidence(confidence?: number | string): string;

@@ -1,0 +1,9 @@
+{
+  "at": "2026-10-20T18:45:53.428062+00:00",
+  "pid": 52797,
+  "verified_command": "/Library/Frameworks/Python.framework/Versions/3.10/Resources/Python.app/Contents/MacOS/Python scripts/validate-news-logic.py --engine candidate --semantic-high-scope operator_notice --run-id feedback-validation --case future_planned_notice --case dismissed_notice_not_verified_recovery --case real_nyhamna --case real_eni --case supply_restore_40_with_flat_baseline",
+  "reason": "Generated bound evidence prefix lacks existing required mechanism marker; cancel own remaining model comparisons to repair schema-validator conflict. Keep all terminal files.",
+  "terminal_files": {
+    "future_planned_notice.json": "63b2736cb2212eca48b9586a2103607c43c3a9d67125954a1387480563da623a"
+  }
+}

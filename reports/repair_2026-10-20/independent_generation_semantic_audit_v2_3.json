@@ -1,0 +1,512 @@
+{
+  "version": "2.3",
+  "status": "passed_with_documented_scope",
+  "audited_at": "2026-10-20T21:52:41.657625+00:00",
+  "auditor": "independent_final_semantic_audit",
+  "source_hashes": {
+    "ttf_news/analysis.py": "e8f5271b26dac384491ab054e8f317779590948d632a8e6b0c40933d0de9df34",
+    "ttf_news/semantics.py": "2e0739e5a5cbd9d6c9e2de4f16a89f9086e3b875022bfec736a134b832136885",
+    "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+    "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+    "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181"
+  },
+  "scope": "Finite pure in-memory validator/source-health audit; no model or network calls, no production DB access",
+  "no_model_calls": true,
+  "no_network": true,
+  "no_database_access": true,
+  "original_45_controls": {
+    "first_30": {
+      "file": "reports/repair_2026-10-20/independent_validator_controls_v2_3.json",
+      "sha256": "4155491b2d939ec8d2178744e5dad69debab46e3cba0316499a97fde5ff789c5",
+      "passed": 30
+    },
+    "additional_15": {
+      "passed": 15,
+      "total": 15
+    }
+  },
+  "semantic_controls": [
+    {
+      "case": "actual_multi_number_text_without_price_fields",
+      "claim": "截至2026-10-20，Troll将于10月21-22日因年度维护导致13.0 mcm/d容量不可用，10月22-23日再有7.6 mcm/d不可用，合计约20.6 mcm/d，约占总产能9.5%，为未来供应约束。",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "diagnostics": [
+        "两项公告容量属于不重叠时段，不能相加为同一时刻mcm/d容量下降；请按各N起止分别列出，不把相邻时段的速率求和"
+      ]
+    },
+    {
+      "case": "correct_daily_listing_no_combined_rate",
+      "claim": "截至2026-10-20，Troll将于10月21-22日因年度维护导致13.0mcm/d容量不可用，10月22-23日再有7.6mcm/d不可用，为未来容量约束。",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "diagnostics": []
+    },
+    {
+      "case": "explicit_unavailable_mean",
+      "claim": "Troll两项相邻公告时段加权平均不可用容量10.3mcm/d。",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "diagnostics": []
+    },
+    {
+      "case": "explicit_available_mean",
+      "claim": "Troll两项相邻公告时段加权平均可用容量127.05mcm/d。",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "diagnostics": []
+    },
+    {
+      "case": "explicit_technical_mean",
+      "claim": "Troll两项相邻公告时段加权平均技术容量137.35mcm/d。",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "diagnostics": []
+    },
+    {
+      "case": "wrong_sum_disguised_as_mean",
+      "claim": "Troll两项相邻公告时段加权平均不可用容量20.6mcm/d。",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "diagnostics": [
+        "公告相邻时段加权平均容量应为10.3mcm/d，不是20.6；均值须用对应N时长与容量计算"
+      ]
+    },
+    {
+      "case": "wrong_field_average",
+      "claim": "Troll两项相邻公告时段加权平均可用容量10.3mcm/d。",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "diagnostics": [
+        "公告相邻时段加权平均容量应为127.05mcm/d，不是10.3；均值须用对应N时长与容量计算"
+      ]
+    },
+    {
+      "case": "integral_volume_correct_daily_units",
+      "claim": "[N0]与[N2]各24小时的公告不可用容量积分为20.6百万立方米；这是理论容量体积，不是实测流量损失或同一时刻速率。",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "diagnostics": []
+    },
+    {
+      "case": "negative_sum_warning",
+      "claim": "Troll于21-22日和22-23日分别不可用13和7.6mcm/d，不能把相邻时段相加为20.6mcm/d。",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "diagnostics": []
+    },
+    {
+      "case": "synthetic_simultaneous_independent_capacity_sum",
+      "claim": "[N0]与[N2]两项独立设施同一时段公告不可用容量合计20.6mcm/d；这不是实际供气量损失。",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "diagnostics": []
+    },
+    {
+      "case": "natural_date_values_swapped",
+      "claim": "截至2026-10-20，Troll将于10月21-22日因年度维护导致7.6mcm/d容量不可用，10月22-23日再有13.0mcm/d不可用，为未来容量约束。",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "diagnostics": [
+        "N0容量字段unavailable原值为13.0mcm/d，不是7.6；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算"
+      ]
+    },
+    {
+      "case": "natural_date_wrong_explicit_year",
+      "claim": "Troll将于2027年10月21-22日因维护导致13.0mcm/d容量不可用，2026年10月22-23日有7.6mcm/d不可用。",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "diagnostics": [
+        "逐日期列出的容量时段没有唯一N来源；须保留日期/年份及对应容量，不得借另一公告原值"
+      ]
+    },
+    {
+      "case": "natural_date_available_levels_correct",
+      "claim": "Troll未来10月21-22日可用容量124.3mcm/d，10月22-23日可用容量129.8mcm/d。",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "diagnostics": []
+    },
+    {
+      "case": "natural_date_available_levels_wrong_field",
+      "claim": "Troll未来10月21-22日可用容量13.0mcm/d，10月22-23日可用容量7.6mcm/d。",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "diagnostics": [
+        "N0容量字段available原值为124.3mcm/d，不是13.0；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算"
+      ]
+    },
+    {
+      "case": "natural_date_single_range_wrong_value",
+      "claim": "Troll未来10月21-22日不可用容量7.6mcm/d。",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "diagnostics": [
+        "N0容量字段unavailable原值为13.0mcm/d，不是7.6；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算"
+      ]
+    },
+    {
+      "case": "actual_f961_raw_0",
+      "claim": null,
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "diagnostics": [
+        "news_impact.summary:输入没有这条公告的价格反应观测，不能断言未影响当前价格或价格未受影响；可判断当前新闻压力较弱、未来公告不计作当前停供，并说明价格反应未知"
+      ]
+    },
+    {
+      "case": "actual_f961_raw_1",
+      "claim": null,
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "diagnostics": []
+    },
+    {
+      "case": "future_event_negated_cause",
+      "claim": "Troll气田计划维护公告未导致实际供气损失；未来公告不计入当前停供，价格反应未知。",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "diagnostics": [],
+      "harness": "Complete actual second-raw baseline retains N1/N2 evidence and valid close null. Only claim fields copied-source validation view changed; active-context evidence describes both source notices without a future-state assertion."
+    },
+    {
+      "case": "future_event_affirmed_loss",
+      "claim": "Troll气田计划维护公告导致实际供气损失。",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "diagnostics": [
+        "news_impact.summary:Gassco未来维护公告不能写成当前实际停供或流量损失；应写未来容量风险并保留起止时间"
+      ],
+      "harness": "Complete actual second-raw baseline retains N1/N2 evidence and valid close null. Only claim fields copied-source validation view changed; active-context evidence describes both source notices without a future-state assertion.",
+      "required_semantic_diagnostic_present": true
+    },
+    {
+      "case": "future_event_then_overall_zero",
+      "claim": "Troll气田未来计划维护公告未导致实际供气损失，但当前全网实际流量没有损失。",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "diagnostics": [
+        "news_impact.summary:Gassco公告撤销/结束或实际流量未确认，不能证明未形成供需冲击、供应不受影响或实际流量无变化；须有独立无变化计量事实。可写输入未显示冲击证据或恢复待核实，不能把缺测写成无冲击"
+      ],
+      "harness": "Complete actual second-raw baseline retains N1/N2 evidence and valid close null. Only claim fields copied-source validation view changed; active-context evidence describes both source notices without a future-state assertion.",
+      "required_semantic_diagnostic_present": true
+    },
+    {
+      "case": "overall_zero_without_event_subject",
+      "claim": "本窗口内无实际供气损失。",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "diagnostics": [
+        "news_impact.summary:Gassco公告撤销/结束或实际流量未确认，不能证明未形成供需冲击、供应不受影响或实际流量无变化；须有独立无变化计量事实。可写输入未显示冲击证据或恢复待核实，不能把缺测写成无冲击"
+      ],
+      "harness": "Complete actual second-raw baseline retains N1/N2 evidence and valid close null. Only claim fields copied-source validation view changed; active-context evidence describes both source notices without a future-state assertion.",
+      "required_semantic_diagnostic_present": true
+    },
+    {
+      "case": "facility_flow_zero_not_event_cause",
+      "claim": "Troll当前实际流量没有损失。",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "diagnostics": [
+        "news_impact.summary:Gassco公告撤销/结束或实际流量未确认，不能证明未形成供需冲击、供应不受影响或实际流量无变化；须有独立无变化计量事实。可写输入未显示冲击证据或恢复待核实，不能把缺测写成无冲击"
+      ],
+      "harness": "Complete actual second-raw baseline retains N1/N2 evidence and valid close null. Only claim fields copied-source validation view changed; active-context evidence describes both source notices without a future-state assertion.",
+      "required_semantic_diagnostic_present": true
+    },
+    {
+      "case": "active_event_negated_cause_not_observed",
+      "claim": "Troll气田计划维护公告未导致实际供气损失。",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "diagnostics": [
+        "news_impact.summary:Gassco未来维护公告不能写成当前实际停供或流量损失；应写未来容量风险并保留起止时间",
+        "news_impact.summary:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景"
+      ],
+      "harness": "Complete actual second-raw baseline retains N1/N2 evidence and valid close null. Only claim fields copied-source validation view changed; active-context evidence describes both source notices without a future-state assertion.",
+      "required_semantic_diagnostic_present": true
+    },
+    {
+      "case": "future_event_not_price_zero",
+      "claim": "Troll气田未来计划维护公告未对价格产生影响。",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "diagnostics": [
+        "news_impact.summary:输入没有这条公告的价格反应观测，不能断言未影响当前价格或价格未受影响；可判断当前新闻压力较弱、未来公告不计作当前停供，并说明价格反应未知"
+      ],
+      "harness": "Complete actual second-raw baseline retains N1/N2 evidence and valid close null. Only claim fields copied-source validation view changed; active-context evidence describes both source notices without a future-state assertion.",
+      "required_semantic_diagnostic_present": true
+    },
+    {
+      "case": "single_day_source_21_correct",
+      "claim": "2026-10-21窗口内，Troll计划维护公告不可用容量13.0mcm/d，为未来容量约束。",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "diagnostics": []
+    },
+    {
+      "case": "single_day_22_is_ambiguous_between_adjacent_intervals",
+      "claim": "Troll未来2026年10月22日计划维护不可用容量7.6mcm/d。",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "diagnostics": [
+        "逐日期列出的容量时段没有唯一N来源；须保留日期/年份及对应容量，不得借另一公告原值"
+      ],
+      "explanation": "Oct22 00:00-04:00UTC belongs to N2; from04:00 N1 applies. An unqualified date does not uniquely identify one notice."
+    },
+    {
+      "case": "single_day_wrong_capacity",
+      "claim": "Troll未来2026年10月21日计划维护不可用容量7.6mcm/d。",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "diagnostics": [
+        "N0容量字段unavailable原值为13.0mcm/d，不是7.6；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算"
+      ]
+    },
+    {
+      "case": "single_day_wrong_available_field",
+      "claim": "Troll未来2026年10月21日计划维护可用容量13.0mcm/d。",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "diagnostics": [
+        "N0容量字段available原值为124.3mcm/d，不是13.0；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算"
+      ]
+    }
+  ],
+  "source_health_controls": [
+    {
+      "case": "recent_success_refreshing",
+      "expected_gap": false,
+      "expected_status": "refreshing",
+      "passed": true,
+      "observed_status": "refreshing",
+      "observed_gap": false,
+      "reasons": []
+    },
+    {
+      "case": "real_failed",
+      "expected_gap": true,
+      "expected_status": "failed",
+      "passed": true,
+      "observed_status": "failed",
+      "observed_gap": true,
+      "reasons": [
+        "last_poll_failed"
+      ]
+    },
+    {
+      "case": "real_partial",
+      "expected_gap": true,
+      "expected_status": "partial",
+      "passed": true,
+      "observed_status": "partial",
+      "observed_gap": true,
+      "reasons": [
+        "last_poll_partial"
+      ]
+    },
+    {
+      "case": "real_429_backoff",
+      "expected_gap": true,
+      "expected_status": "backoff",
+      "passed": true,
+      "observed_status": "backoff",
+      "observed_gap": true,
+      "reasons": [
+        "last_poll_failed",
+        "retry_backoff"
+      ]
+    },
+    {
+      "case": "stale_success",
+      "expected_gap": true,
+      "expected_status": "stale",
+      "passed": true,
+      "observed_status": "stale",
+      "observed_gap": true,
+      "reasons": [
+        "last_success_stale"
+      ]
+    },
+    {
+      "case": "run_timed_out",
+      "expected_gap": true,
+      "expected_status": "timeout",
+      "passed": true,
+      "observed_status": "timeout",
+      "observed_gap": true,
+      "reasons": [
+        "poll_timed_out"
+      ]
+    },
+    {
+      "case": "future_attempt_preserves_known_past_error",
+      "expected_gap": true,
+      "expected_status": "failed",
+      "passed": true,
+      "observed_status": "failed",
+      "observed_gap": true,
+      "reasons": [
+        "last_poll_error"
+      ]
+    },
+    {
+      "case": "old_error_recovered_by_known_success",
+      "expected_gap": false,
+      "expected_status": "refreshing",
+      "passed": true,
+      "observed_status": "refreshing",
+      "observed_gap": false,
+      "reasons": []
+    },
+    {
+      "case": "future_poll_without_error_keeps_prior_success",
+      "expected_gap": false,
+      "expected_status": "healthy",
+      "passed": true,
+      "observed_status": "healthy",
+      "observed_gap": false,
+      "reasons": []
+    },
+    {
+      "case": "future_success_not_healthy",
+      "expected_gap": false,
+      "expected_status": "unknown",
+      "passed": true,
+      "observed_status": "unknown",
+      "observed_gap": false,
+      "reasons": []
+    },
+    {
+      "case": "disabled_not_failed",
+      "expected_gap": false,
+      "expected_status": "disabled",
+      "passed": true,
+      "observed_status": "disabled",
+      "observed_gap": false,
+      "reasons": []
+    },
+    {
+      "case": "only_seven_registered_news_feeds",
+      "passed": true,
+      "retained_ids": [
+        "offshore_energy",
+        "eia",
+        "eu_energy",
+        "equinor",
+        "cheniere",
+        "gassco",
+        "gdelt"
+      ],
+      "ignored_price_and_repair_ids": true
+    }
+  ],
+  "source_health_all_compression_levels_keep_clocks_and_gap_decisions": true,
+  "source_health_poll_seconds": 60,
+  "actual_f961": {
+    "file": "reports/repair_2026-10-20/live_v2_2_manual_f961_failure.json",
+    "sha256": "55102c56abe51c217042416d8057357bfa05a802f9946715467c6c03c4cbbf24",
+    "original_run_status": "failed",
+    "run_status_not_rewritten": true,
+    "calls": [
+      {
+        "call_index": 0,
+        "raw_sha256": "207e29730ed1ec210ecce22a4eaf6b25ba5213df2d9b158191fd19a438bec4c8",
+        "original_news_direction": "up",
+        "original_close_direction": null,
+        "semantic_revalidation": {
+          "case": "actual_f961_raw_0",
+          "claim": null,
+          "expected": "rejected",
+          "actual": "rejected",
+          "passed": true,
+          "diagnostics": [
+            "news_impact.summary:输入没有这条公告的价格反应观测，不能断言未影响当前价格或价格未受影响；可判断当前新闻压力较弱、未来公告不计作当前停供，并说明价格反应未知"
+          ]
+        },
+        "canonical_run_status_unchanged": "failed"
+      },
+      {
+        "call_index": 1,
+        "raw_sha256": "2888ad1ff0db909fb599724390d05798f805f36a2c590604050685c8f2338af1",
+        "original_news_direction": "flat",
+        "original_close_direction": null,
+        "semantic_revalidation": {
+          "case": "actual_f961_raw_1",
+          "claim": null,
+          "expected": "accepted",
+          "actual": "accepted",
+          "passed": true,
+          "diagnostics": []
+        },
+        "canonical_run_status_unchanged": "failed"
+      }
+    ]
+  },
+  "preserved_prior_reports": [
+    {
+      "file": "reports/repair_2026-10-20/independent_generation_semantic_audit_v2_2.json",
+      "sha256": "3f0ef9c5a2337c3f1eda7f6229197bd97d6202c17bc3c7ed0342b50037a2813d"
+    },
+    {
+      "file": "reports/repair_2026-10-20/independent_final_semantic_audit.json",
+      "sha256": "4e6b9bbdef578304faa6154730fef078fa34ff5ad07761ea55f54a661fc3d8ce"
+    }
+  ],
+  "direction_contract": {
+    "five_news_classes_retained": true,
+    "close_null_retained": true,
+    "trader_scenarios_and_extreme_risk_free_prose": true,
+    "no_generation_or_direction_rewrite_in_new_diff": true
+  },
+  "source_review": [
+    "Future-event exception requires explicit negated causal wording, event subject, known source and source start strictly after as_of. It does not establish measured total flow.",
+    "Single-day and dated-field binding run after aggregate rejection, recursively validate only an internal single-source view, and do not replace model output.",
+    "Coverage compression, grounded risk options and final deterministic coverage metadata share source_coverage_gaps; price/repair feeds are excluded from news-source coverage.",
+    "Explicit pre-as_of errors newer than known success survive a future attempt; later known success supersedes older residual error; future-only success does not prove healthy."
+  ],
+  "limits": [
+    "Offline semantic acceptance of f961 second raw is not a new model generation; the original failed run remains failed and excluded from successful counts.",
+    "No class-distribution goal, causal market accuracy or official settlement accuracy is inferred.",
+    "Earlier integral arithmetic correction remains documented; this audit does not claim a general volume arithmetic verifier."
+  ],
+  "counts": {
+    "original_controls_passed": 45,
+    "new_semantic_controls_total": 13,
+    "new_semantic_controls_passed": 13,
+    "source_health_controls_total": 12,
+    "source_health_controls_passed": 12
+  },
+  "auditor_harness_checkpoint": {
+    "file": "reports/repair_2026-10-20/independent_generation_semantic_audit_v2_3_initial_harness.json",
+    "sha256": "d6da4d4eec10845493b79aa8f3719f7d8314d17f7e45e9f9f3e06239c13b674e",
+    "explanation": "Initial incomplete-result and ambiguous-date expectations preserved; corrected controls use complete real output and retain its explicit operator evidence. Production code unchanged."
+  }
+}

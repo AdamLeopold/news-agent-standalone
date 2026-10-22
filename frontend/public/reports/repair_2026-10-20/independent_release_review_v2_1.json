@@ -1,0 +1,135 @@
+{
+  "created_at": "2026-10-20T21:20:28.091114+00:00",
+  "status": "pending_current_live_and_final_release_evidence",
+  "prompt_version": "ttf-news-standalone-2.1",
+  "release_ready": false,
+  "all_valid_outputs_reviewed": true,
+  "known_accepted_logic_errors": [],
+  "reviewed_accepted_cases": [
+    "anchor_gap_supply_loss_40",
+    "anchor_gap_supply_restore_40",
+    "anchor_legal_prevday_weak_market_up",
+    "anchor_real_manual_missing_prevday",
+    "cold_heating_demand",
+    "cumulative_shock_then_weak",
+    "dismissed_notice_not_verified_recovery",
+    "negated_outage",
+    "real_nyhamna",
+    "supplied_conflicting_mechanisms",
+    "supply_loss_40",
+    "supply_loss_40_with_flat_baseline",
+    "supply_restore_40",
+    "supply_restore_40_with_flat_baseline",
+    "warm_heating_demand",
+    "weak_exploration_no_quote",
+    "weak_news_observed_market_up"
+  ],
+  "rejected_cases": [
+    "future_planned_notice",
+    "real_eni"
+  ],
+  "selected_record_sha256": {
+    "supply_loss_40": "b98e8729352dea3641479ac9be1cc92b12f64050dc1a539eb84e5abefc25f7fd",
+    "supply_restore_40": "804b8c86f82a73cbc420d492d6223d004ab74c3bbf9507cb4d694f713a0006c1",
+    "weak_exploration_no_quote": "250f8e8932eae89462d1bda85a784dfd5e8604caff03a6bc6612d739c1eb08a0",
+    "warm_heating_demand": "9ef336c549af09adb54396811ee20f433f066f188261e55ee9954c7f120066f1",
+    "cold_heating_demand": "18b1d8f926c9a737f1c7586c45ee48755999f97893d97bd962ccf8181bd11180",
+    "negated_outage": "e0869eaf2ac442d6a92a5b60e82c9a89a9c3faa27b893988632e41e18e6106d8",
+    "cumulative_shock_then_weak": "c52aea14465011166b0aa7b6d0e1020923eef5874d90d03ebc81bc5bc238cf25",
+    "weak_news_observed_market_up": "043e2b241432c05cdf84e38c8697935fe0781a44fce05fabe3d9aca1e79f5805",
+    "supplied_conflicting_mechanisms": "d8a75ccbcb121b79a71660b0d257afdb5993d1a462907479a06e6c888500eab8",
+    "future_planned_notice": "c42359e901f332add193af87a1a4841dc670666a49f9a3dfe7cb66bc147b0318",
+    "dismissed_notice_not_verified_recovery": "4aefabe50ea4cde0d3f6b74bc67b92932ff6db935e0dead45f9a0c2f15bccf6b",
+    "real_nyhamna": "aea850f53c16043fd7b65fb01d1712ab9bc32e7ce9e9521a95ea0f75f02ac46d",
+    "real_eni": "9c87606b846a2c5f138150148da5b3a0fbacbeb00d114928e0597418ce529d3c",
+    "supply_loss_40_with_flat_baseline": "bd5d6bae13901efe7db318008fa10a40d398c7773d7dc253c002c8d94dfce03d",
+    "supply_restore_40_with_flat_baseline": "1d39b9c57e942415a6a05265eac28623a095d4210103e4e67b931c35b8369dad",
+    "anchor_real_manual_missing_prevday": "7cedc9b9a752ce0b53c2ac26330b7d524b0a4ea38cc1b837850e862d822821a5",
+    "anchor_gap_supply_loss_40": "c9ea67e89d0bd8ab2278e4f7fc1499b0e832a387349d427fe4e10d7d45976b03",
+    "anchor_gap_supply_restore_40": "f6e86c0f81c4f4a529fef803fa9eec762c4219797ea0298841a74ca99c2711e9",
+    "anchor_legal_prevday_weak_market_up": "e736424e2b48f71c4f33ae431ef7ebcdb0a645a78472453e039f3846714cbaf2"
+  },
+  "source_sha256": {
+    "ttf_news/analysis.py": "3b67ad8d17b465be7f9a2e02b26ed3e3ea07ba71ccd60cba1f986b4f13e7e298",
+    "ttf_news/semantics.py": "e6c49b09507a3a272cc67773e14b8bca8b8c4d061794e54022d095f90f7d9c2b",
+    "ttf_news/context.py": "6ae94608797de98b1129f673af219bde7e88faba1f4cf73a7456058d7350b23f",
+    "ttf_news/prompts.py": "530d03e685092c9992bee59b20ce7ce4a2e34a8bcbe6805eafa024fa590d3570"
+  },
+  "accepted_detail_reviewed": true,
+  "accepted_detail_record_sha256": {
+    "supply_restore_40": "f1213c856a8d3125c9f0523b532f35af34f563626ded877f27e8d45aa2d3e89b"
+  },
+  "independent_review_evidence": [
+    {
+      "file": "reports/repair_2026-10-20/independent_release_review.json",
+      "sha256": "8019dc4e6036a543a5db3b0a23fc5325dab2dbec469c392f5a85b4917698a484"
+    },
+    {
+      "file": "reports/repair_2026-10-20/independent_prose_review_reviewwording_v2_1.json",
+      "sha256": "4fa717c6ac7560164fdce18045792b0ad54ffb3c4568ce6070dc1064c3c32676"
+    },
+    {
+      "file": "reports/repair_2026-10-20/final_19_current_binding_gate_regression_v2_1.json",
+      "sha256": "da8668fa1cea0dac21209166e79d027b8e1a5e3bdac3c68c5208e0dc0000664c"
+    },
+    {
+      "file": "reports/repair_2026-10-20/generation_path_input_boundaries_final_binding_v2_1.json",
+      "sha256": "1907849b3b58fd0a67f54a1e2b8dc2fbc2ca9e099d82003faa0fd7bcb6fbbbc0"
+    },
+    {
+      "file": "reports/repair_2026-10-20/independent_live_prose_review_manual960d_snapshot.json",
+      "sha256": "12f0f2caa5a45219f83f08b35eb3c1938001625f94334863790f3e64a559fd07"
+    }
+  ],
+  "live_v2_1_outputs": [
+    {
+      "role": "manual_brief",
+      "analysis_id": "960d00b0-6d55-4f81-9731-5290ea07b505",
+      "prompt_version": "ttf-news-standalone-2.1",
+      "summary_sha256": "efce286107afadbf6a66c942fb3ec0a4767ae26a5bdffbe80988a419241f076b",
+      "stored_result_sha256": "c7898eeff4713c5a584bbed0001f4ca3c066e980dd13726deda03ec6c4d46e3b",
+      "verdict": "pass",
+      "qualification": "Human source/causal pass under supplied-news-pressure scope; wording/completeness notes explicitly retained in the full record.",
+      "known_logic_errors": []
+    },
+    {
+      "role": "manual_detail",
+      "analysis_id": "960d00b0-6d55-4f81-9731-5290ea07b505",
+      "prompt_version": "ttf-news-standalone-2.1",
+      "summary_sha256": "efce286107afadbf6a66c942fb3ec0a4767ae26a5bdffbe80988a419241f076b",
+      "stored_result_sha256": "c148ff758e2b120f664b0ccf56d7a0f79d01f595f1634fc7d2549e4617cff919",
+      "verdict": "pass",
+      "qualification": "Human source/causal pass under supplied-news-pressure scope; wording/completeness notes explicitly retained in the full record.",
+      "known_logic_errors": []
+    }
+  ],
+  "pending_live_roles": [
+    "current_live"
+  ],
+  "failed_live_not_reclassified": {
+    "analysis_id": "69c389a8-c205-4f97-a637-a1bc8eb1a267",
+    "status": "failed",
+    "counted_as_accepted": false,
+    "pilot_changes_production_policy": false
+  },
+  "known_production_errors_ledger": {
+    "file": "reports/repair_2026-10-20/release_known_accepted_errors.json",
+    "sha256": "51e279bc18e38a2fde6c77b141e8e6fa581d690f22cb609b27604c2fb08dd408"
+  },
+  "scope": "Original fifteen v2.0 generated answers and separate four v2.1 anchor answers retain their original generation/repair-policy identities. Their accepted prose was independently reviewed and revalidated with current gates; this is not new inference. Current real manual brief/detail and English pass with the stated wording/completeness qualifications. This pending review is not final release approval.",
+  "manual_qualified_pass_limits": [
+    "The news_impact and analysis.summary fields assess the causal pressure of supplied reporting, not a measured claim that total European flow is unchanged. No-direct-shock wording passes under this product contract, with a scope-clarity limitation.",
+    "N1/N2 are specific future maintenance periods that have not started; their rate capacities remain separate and actual flow unknown. E5/E6 are unchanged ongoing background, not newly revised current-window shocks; not discussing them in depth is a completeness limitation, not a fabricated opposing offset.",
+    "The brief does not discuss N1/N2 in depth; the detail includes them. The bearish scenario needs a clearer maintenance-completion/recovery stage. English base scenario translates 反向回吐 as reverse flow rather than price reversal/giveback; record as terminology ambiguity in a hypothetical condition."
+  ],
+  "remaining_release_evidence": [
+    "A genuine accepted current_live result with independent full-prose review, matching live smoke analysis ID and close summary SHA.",
+    "Terminal real full smoke with no missing/failed stage, including current live, preservation after and health after.",
+    "Each known accepted error resolved by an immutable specific source-fix/old-raw rejection/actual-model/review-exclusion proof; do not substitute unrelated successful news.",
+    "Final public JSON/JSONL/CSV/SQLite asset scan after the fresh snapshot.",
+    "Final source deployment, tests, report, proof hashes and publication derivation map anchored consistently."
+  ],
+  "no_model_calls": true,
+  "no_database_access": true,
+  "no_network_calls": true
+}

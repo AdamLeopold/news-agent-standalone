@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "observed_at": "2026-10-20T21:08:00.400372+00:00",
+  "api_base": "https://macbook-pro--5.tail9a0a45.ts.net:10000",
+  "backend_prompt_version": "ttf-news-standalone-2.1",
+  "server_pid": 94455,
+  "inference_enabled": true,
+  "public_health_http_status": 200,
+  "allowed_origin": "https://adamleopold.github.io",
+  "manual_post_preflight_status": 200,
+  "manual_route_invalid_payload_status": 422,
+  "invalid_payload_created_analysis": false,
+  "sse_stream_received": true,
+  "sse_first_event_sha256": "28f4bf34648655db820746ab93057d107cfd153877b2d0d4c7b73ca4313421f1",
+  "model_calls_for_this_check": 0,
+  "scope": "Public routing/CORS/SSE; actual valid manual/detail/English inference is exercised by the separate local real-model smoke test."
+}

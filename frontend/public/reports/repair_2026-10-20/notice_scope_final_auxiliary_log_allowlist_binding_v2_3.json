@@ -1,0 +1,13 @@
+{
+  "scope": "One literal public-log allowlist entry appended after the 1252-test run to publish the honest cache-environment rerun. All 28 application sources, both model/report validation scripts, and tests remain at their tested hashes.",
+  "full_unit_binding": {
+    "file": "reports/repair_2026-10-20/notice_scope_full_unit_binding_v2_3.json",
+    "sha256": "09a66fe61759366b3f67b7564545c239e03bcb2c9899ecf98822003a66c1c8d7"
+  },
+  "previous_sync_script_sha256": "efdf3da837f5356e67582a41b2f2fbbff85ecaaa00aeaf7d83e4b9d2bf11f82f",
+  "current_sync_script_sha256": "9cbf2221e9c7bbe8d7c52381e16513722982b39b2f9b44b74c92ed93d33c1f45",
+  "added_literal_log": "publish-backend-notice-scope-final-tests-rerun.log",
+  "sync_self_tests_passed": 23,
+  "sync_self_test_output": "test_allowlist_script_names_and_detail_stages (__main__.SelfTests) ... ok\ntest_arbitrary_or_incomplete_image_is_rejected (__main__.SelfTests) ... ok\ntest_archives_and_runtime_are_forbidden (__main__.SelfTests) ... ok\ntest_broken_json_fails (__main__.SelfTests) ... ok\ntest_credentials_in_text (__main__.SelfTests) ... ok\ntest_embedded_thinking_is_rejected_if_not_json_parseable (__main__.SelfTests) ... ok\ntest_encoded_json_keeps_reasoning_configuration_under_public_alias (__main__.SelfTests) ... ok\ntest_encoded_json_requires_both_recursive_and_original_text_identity (__main__.SelfTests) ... ok\ntest_encoded_model_json_is_still_redacted_when_private_fields_exist (__main__.SelfTests) ... ok\ntest_exact_reasoning_configuration_is_preserved_without_mutation (__main__.SelfTests) ... ok\ntest_frozen_generation_fixture_is_published_with_its_test (__main__.SelfTests) ... ok\ntest_local_path_keys_are_sanitized (__main__.SelfTests) ... ok\ntest_nested_and_encoded_reasoning_configuration (__main__.SelfTests) ... ok\ntest_non_configuration_think_values_are_removed (__main__.SelfTests) ... ok\ntest_only_four_verified_ui_images_are_published_byte_exact (__main__.SelfTests) ... ok\ntest_partial_private_key_is_rejected (__main__.SelfTests) ... ok\ntest_publication_manifest_distinguishes_source_and_derived_bytes (__main__.SelfTests) ... ok\ntest_publication_manifest_excludes_self_and_paths_outside_allowlist (__main__.SelfTests) ... ok\ntest_publication_manifest_rejects_missing_stale_changed_and_duplicate_maps (__main__.SelfTests) ... ok\ntest_reasoning_configuration_conflict_never_overwrites (__main__.SelfTests) ... ok\ntest_recursive_and_encoded_fields (__main__.SelfTests) ... ok\ntest_safe_encoded_model_json_preserves_exact_original_bytes_and_hash (__main__.SelfTests) ... ok\ntest_xml_paths_are_redacted (__main__.SelfTests) ... ok\n\n----------------------------------------------------------------------\nRan 23 tests in 0.113s\n\nOK\n",
+  "no_model_calls": true
+}

@@ -1,0 +1,257 @@
+[
+  {
+    "case": "ninth_manual",
+    "backend_source_provenance": {
+      "schema_version": "ttf-backend-source-provenance-pilot-2-narrow",
+      "origin": "deterministic_backend_input_projection",
+      "generated_by_model": false,
+      "model_checked_facts": false,
+      "is_forecast_or_verified_event_causality": false,
+      "source_scope": "Prepared input known at frozen as_of; original source IDs and clocks retained",
+      "as_of": "2026-10-21T04:47:05.064706+00:00",
+      "source_facts": {
+        "fact_contract_version": "operator-facts-2.2",
+        "operator_notices": [
+          {
+            "id": "N0",
+            "facility": "Troll",
+            "facility_type": "气田/生产设施",
+            "notice_type": "计划",
+            "unavailable_capacity": "7.6",
+            "state_description": "报道状态见该N原文",
+            "cause_original": "Yearly maintenance"
+          },
+          {
+            "id": "N1",
+            "facility": "Troll",
+            "facility_type": "气田/生产设施",
+            "notice_type": "计划",
+            "unavailable_capacity": "7.6",
+            "period_utc": [
+              "2026-10-22T04:00Z",
+              "2026-10-23T04:00Z"
+            ],
+            "state_description": "未来公告",
+            "cause_original": "Yearly maintenance"
+          },
+          {
+            "id": "N2",
+            "facility": "Troll",
+            "facility_type": "类别未给",
+            "notice_type": "计划",
+            "unavailable_capacity": "13.0",
+            "period_utc": [
+              "2026-10-21T04:00Z",
+              "2026-10-22T04:00Z"
+            ],
+            "state_description": "当前公告；流量未知",
+            "cause_original": "Yearly maintenance"
+          }
+        ],
+        "capacity_scope": "公告不可用容量，非实际流量计量",
+        "pricing_observation": {
+          "observed_delta": 2.668,
+          "observed_at": "2026-10-21T04:36:00+00:00",
+          "available_at": "2026-10-21T04:46:42.899486+00:00",
+          "clock_roles": {
+            "observed_at": "报价发生时刻",
+            "available_at": "本机获知时刻；不是报价发生时刻"
+          },
+          "current_news_timing": {
+            "id": "N0",
+            "publication_time": "2026-10-20T20:13:18+00:00",
+            "quote_relation": "at_or_after_publication",
+            "quote_role": "已观察市场基准；单个报价不证明公告反应"
+          },
+          "reaction_evidence_available": false,
+          "pricing_status": "无法确认是否已计价；不是尚未计价或价格无反应"
+        },
+        "non_overlapping_notice_ids": [
+          [
+            "N1",
+            "N2"
+          ]
+        ]
+      },
+      "notice_facts": [
+        {
+          "id": "N0",
+          "facility": "Troll",
+          "notice_type": "计划",
+          "state": "reported_fact",
+          "state_description": "报道状态见该N原文",
+          "cause_original": "Yearly maintenance",
+          "facility_type": "Gas production field（气田/生产设施）",
+          "unavailable_capacity": "7.6",
+          "capacity_unit": "mcm/d",
+          "actual_flow_observation": "输入未提供独立实际流量计量"
+        },
+        {
+          "id": "N1",
+          "facility": "Troll",
+          "notice_type": "计划",
+          "state": "scheduled_notice",
+          "state_description": "未来容量公告，不是当前供气损失",
+          "capacity_is_not_measured_flow": true,
+          "cause_original": "Yearly maintenance",
+          "facility_type": "Gas production field（气田/生产设施）",
+          "event_start_utc": "2026-10-22T04:00:00+00:00",
+          "event_end_utc": "2026-10-23T04:00:00+00:00",
+          "unavailable_capacity": "7.6",
+          "capacity_unit": "mcm/d",
+          "actual_flow_observation": "输入未提供独立实际流量计量"
+        },
+        {
+          "id": "N2",
+          "facility": "Troll",
+          "notice_type": "计划",
+          "state": "active_notice",
+          "state_description": "当前容量公告，实际流量未独立核实",
+          "capacity_is_not_measured_flow": true,
+          "cause_original": "Yearly maintenance",
+          "facility_type": "Other（来源未给具体类别）",
+          "event_start_utc": "2026-10-21T04:00:00+00:00",
+          "event_end_utc": "2026-10-22T04:00:00+00:00",
+          "unavailable_capacity": "13.0",
+          "capacity_unit": "mcm/d",
+          "actual_flow_observation": "输入未提供独立实际流量计量"
+        }
+      ],
+      "nonoverlap_relations": [
+        {
+          "ids": [
+            "N1",
+            "N2"
+          ],
+          "relationship": "non_overlapping_intervals",
+          "same_time_rate_sum_supported": false
+        }
+      ],
+      "historical_source_observations": [
+        "[E1]历史记录日期2026-10-19，类别为供应中断/复产；公告容量限制不等于已核实流量损失；1d同合约参考价差-2.98欧元/MWh（截止2026-10-20）；同期价差不能归因于事件；输入未提供可验证的天气及LNG差异，需核对具体供需情景",
+        "[E2]历史记录日期2026-10-16，类别为供应中断/复产；公告容量限制不等于已核实流量损失；1d同合约参考价差+0.49欧元/MWh（截止2026-10-19）；同期价差不能归因于事件；输入未提供可验证的天气及LNG差异，需核对具体供需情景",
+        "[E3]历史记录日期2026-10-16，类别为供应中断/复产；公告容量限制不等于已核实流量损失；1d同合约参考价差+0.49欧元/MWh（截止2026-10-19）；同期价差不能归因于事件；输入未提供可验证的天气及LNG差异，需核对具体供需情景",
+        "[E5]本窗口同一持续事件，只作背景并去重，不是独立历史类比；公告或入库不证明已计价"
+      ],
+      "model_prose_modified": false,
+      "direction_or_score_supplied_by_backend": false
+    }
+  },
+  {
+    "case": "ninth_current",
+    "backend_source_provenance": {
+      "schema_version": "ttf-backend-source-provenance-pilot-2-narrow",
+      "origin": "deterministic_backend_input_projection",
+      "generated_by_model": false,
+      "model_checked_facts": false,
+      "is_forecast_or_verified_event_causality": false,
+      "source_scope": "Prepared input known at frozen as_of; original source IDs and clocks retained",
+      "as_of": "2026-10-21T04:47:03.624559+00:00",
+      "source_facts": {
+        "fact_contract_version": "operator-facts-2.2",
+        "operator_notices": [
+          {
+            "id": "N0",
+            "facility": "Troll",
+            "facility_type": "气田/生产设施",
+            "notice_type": "计划",
+            "unavailable_capacity": "7.6",
+            "period_utc": [
+              "2026-10-22T04:00Z",
+              "2026-10-23T04:00Z"
+            ],
+            "state_description": "未来公告",
+            "cause_original": "Yearly maintenance"
+          },
+          {
+            "id": "N2",
+            "facility": "Troll",
+            "facility_type": "类别未给",
+            "notice_type": "计划",
+            "unavailable_capacity": "13.0",
+            "period_utc": [
+              "2026-10-21T04:00Z",
+              "2026-10-22T04:00Z"
+            ],
+            "state_description": "当前公告；流量未知",
+            "cause_original": "Yearly maintenance"
+          }
+        ],
+        "capacity_scope": "公告不可用容量，非实际流量计量",
+        "pricing_observation": {
+          "observed_delta": 2.668,
+          "observed_at": "2026-10-21T04:36:00+00:00",
+          "available_at": "2026-10-21T04:46:42.899486+00:00",
+          "clock_roles": {
+            "observed_at": "报价发生时刻",
+            "available_at": "本机获知时刻；不是报价发生时刻"
+          },
+          "current_news_timing": {
+            "id": "N0",
+            "publication_time": "2026-10-20T20:13:18+00:00",
+            "quote_relation": "at_or_after_publication",
+            "quote_role": "已观察市场基准；单个报价不证明公告反应"
+          },
+          "reaction_evidence_available": false,
+          "pricing_status": "无法确认是否已计价；不是尚未计价或价格无反应"
+        },
+        "non_overlapping_notice_ids": [
+          [
+            "N0",
+            "N2"
+          ]
+        ]
+      },
+      "notice_facts": [
+        {
+          "id": "N0",
+          "facility": "Troll",
+          "notice_type": "计划",
+          "state": "scheduled_notice",
+          "state_description": "未来容量公告，不是当前供气损失",
+          "capacity_is_not_measured_flow": true,
+          "cause_original": "Yearly maintenance",
+          "facility_type": "Gas production field（气田/生产设施）",
+          "event_start_utc": "2026-10-22T04:00:00+00:00",
+          "event_end_utc": "2026-10-23T04:00:00+00:00",
+          "unavailable_capacity": "7.6",
+          "capacity_unit": "mcm/d",
+          "actual_flow_observation": "输入未提供独立实际流量计量"
+        },
+        {
+          "id": "N2",
+          "facility": "Troll",
+          "notice_type": "计划",
+          "state": "active_notice",
+          "state_description": "当前容量公告，实际流量未独立核实",
+          "capacity_is_not_measured_flow": true,
+          "cause_original": "Yearly maintenance",
+          "facility_type": "Other（来源未给具体类别）",
+          "event_start_utc": "2026-10-21T04:00:00+00:00",
+          "event_end_utc": "2026-10-22T04:00:00+00:00",
+          "unavailable_capacity": "13.0",
+          "capacity_unit": "mcm/d",
+          "actual_flow_observation": "输入未提供独立实际流量计量"
+        }
+      ],
+      "nonoverlap_relations": [
+        {
+          "ids": [
+            "N0",
+            "N2"
+          ],
+          "relationship": "non_overlapping_intervals",
+          "same_time_rate_sum_supported": false
+        }
+      ],
+      "historical_source_observations": [
+        "[E1]历史记录日期2026-10-19，类别为供应中断/复产；公告容量限制不等于已核实流量损失；1d同合约参考价差-2.98欧元/MWh（截止2026-10-20）；同期价差不能归因于事件；输入未提供可验证的天气及LNG差异，需核对具体供需情景",
+        "[E2]历史记录日期2026-10-16，类别为供应中断/复产；公告容量限制不等于已核实流量损失；1d同合约参考价差+0.49欧元/MWh（截止2026-10-19）；同期价差不能归因于事件；输入未提供可验证的天气及LNG差异，需核对具体供需情景",
+        "[E3]历史记录日期2026-10-16，类别为供应中断/复产；公告容量限制不等于已核实流量损失；1d同合约参考价差+0.49欧元/MWh（截止2026-10-19）；同期价差不能归因于事件；输入未提供可验证的天气及LNG差异，需核对具体供需情景",
+        "[E5]本窗口同一持续事件，只作背景并去重，不是独立历史类比；公告或入库不证明已计价"
+      ],
+      "model_prose_modified": false,
+      "direction_or_score_supplied_by_backend": false
+    }
+  }
+]

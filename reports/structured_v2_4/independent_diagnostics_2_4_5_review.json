@@ -1,0 +1,54 @@
+{
+  "reviewed_at": "2026-10-22T16:33:09.650903+00:00",
+  "reviewer": "independent structured_review agent",
+  "scope": "Independent read-only complete input/source/catalog/plan and Chinese brief/detail, English brief/detail review of one real2.4.5 mixed-news diagnostic. No model/API/service/database actions.",
+  "artifact": "reports/structured_v2_4/diagnostics_2_4_5/current_mixed_live.json",
+  "artifact_sha256": "c5e9b29f56efb754bb3c5ecc60bf2413692da196c4e062375b24b0510100be02",
+  "source_hashes": {
+    "structured_core.py": "027bc8d862b3cc3f8eff7ea54b881a51030372009c9087dbdac2815c0582e4cc",
+    "structured_analysis.py": "da13165f47e0b7ac4d46b963c0ea10f8c566c9b3ce4ee341ed9cacbba0f6d1df",
+    "real_batch.py": "416ebeb06312ca842921be7814d23b5cfc03b521ce4005e2678c1b60b3e1bba6"
+  },
+  "scope_contract_review": {
+    "file": "reports/structured_v2_4/independent_scope_2_4_5_terminal_review.json",
+    "sha256": "005bc95c450d86963243502e21db89e33075af178274ea125f8c48a505a8b987"
+  },
+  "overall": "Passed this real mixed-news semantic diagnostic, including source binding and bilingual/detail decision identity. No confirmed P1/P2. Actual final deployed API/collector/UI validation remains separate.",
+  "status": "completed",
+  "model_calls": 5,
+  "retry_calls": 0,
+  "model_call_statuses": [
+    "completed",
+    "completed",
+    "completed",
+    "completed",
+    "completed"
+  ],
+  "source_and_variant_binding_errors": [],
+  "english_generated_prose_cjk_fields": [],
+  "catalog_sha256": "b7481f67e45c30407851417286921abbec42ae5101a15b0ad0a808fdcf7519f9",
+  "typed_plan_sha256": "1038a7d2ae1927b8b88d05cf3cec7904812f5c268ea64842bfd02c24990abaf7",
+  "news_score": 1.6,
+  "news_direction": "up",
+  "close_direction": "up",
+  "semantic_findings": [
+    "Cheniere SPA is corporate background, distinct from future Sabine Pass liquidfaction/export development. The actual future fact role is lng_export, realization future and region_only. The separate global_lng_export_expectations channel permits expectation/longer_term without falsely claiming current European gas flow.",
+    "The model chooses export-development weight0.5 and confidence0.4, contribution -0.20. Its exact nonzero value is not the acceptance criterion: the source-supported economic channel, permissible zero judgement and fixed downside sign are the criteria.",
+    "The source20mtpa total expansion/phase1 over6mtpa remain expected future capacity in source quotes, not current added gas production. The4mtpa SPA is not new global final demand.",
+    "OneSubsea all-electric testing and Cook Inlet geotechnical survey are technical background. No unsupported European upstream expansion, present gas output, current Alaska imports or new final LNG consumption is inferred.",
+    "Troll announced current7.6mcm/d is not measured lost flow;9.6-to7.6 revision relief contributes -0.60 separately. Troll conditional risk+1.20 and correlated Åsgard maximum+1.20 are not counted by article number or summed mcm/d. Combined with future LNG-0.20, net score1.60 supports up.",
+    "Close news_dominates up is consistent with the typed news net and same-contract prior87.426/current90.03 frozen reference. Reference availability and historical outcomes precede frozen as_of; no official settlement result or causal announcement response is fabricated.",
+    "English analyses are English. Detail and English share exact immutable catalog/plan/labels/quantities/references, adding zero model calls rather than extra independent re-prediction."
+  ],
+  "structural_regression_resolution": [
+    "Fine role metadata can still be misclassified by the model, as the preserved older formal2.4.4 engine example demonstrates. In2.4.5 that residual no longer hard-vetoes a nonhistorical regional/unspecified future supply project: only conditional/longer-term scope opens, source-market linkage is assessed downstream, and0 remains allowed.",
+    "The active weight_request includes the generic market-link instruction; the earlier lost-prompt preflight issue is fixed and its record retained.",
+    "The more precise export-chain channel stays distinct from the new unresolved regional-future channel; regional observed US supply/end-use and historical facts remain background."
+  ],
+  "p3_limits": [
+    "Cook Inlet future import-facility context is not separately normalized beyond the technical survey; full stored paragraph remains available.",
+    "Source-mentioned entity remains a mentioned participant/alias, not automatically a verified grammatical subject.",
+    "This diagnostic is not exhaustive ordinary-fact semantic ground truth, model accuracy or a completed website release."
+  ],
+  "preservation_boundary": "All prior model failures, formal prediction rows, independent reviews and frozen validation baseline remain separate; this new review does not overwrite their outcomes or claim the four earlier controls were rerun under2.4.5."
+}

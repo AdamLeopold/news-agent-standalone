@@ -1,0 +1,193 @@
+{
+  "analysis_id": "9fa53da2-74ec-4fab-9443-bd501f3ba59e",
+  "prompt_version": "ttf-news-standalone-2.2",
+  "as_of": "2026-10-20T21:33:54.395855+00:00",
+  "read_only_audit": true,
+  "canonical_record_modified": false,
+  "canonical_input_bytes_sha256": "1cf1963d5439aeee48129373f5f83a29044c308315c9f2ec3d22b445c0b6d41a",
+  "canonical_result_bytes_sha256": "8f53b7760662809ad7bde4ca78b5dd481e82f21371b8d18b6cb26d1c1df5023e",
+  "original_input_coverage_risk_flags": [],
+  "original_model_calls": [
+    {
+      "attempt": 1,
+      "context_sha256": "01aacca6ae83d5b4971c4cfa63bf898a5adae4adb17c898937f749ae610d9854",
+      "raw_content_sha256": "f8f1d3cfebb814e7f3e6805f72c662c1e3e4d47dbbcb4bee287cc3f6a38a9689",
+      "risk_flags": [],
+      "missing_fields": [],
+      "close_evidence_status": "insufficient_evidence",
+      "close_basis": "缺乏前一交易日参考价及新闻价格反应，无法判断收盘价相对前一日的走势。"
+    },
+    {
+      "attempt": 2,
+      "context_sha256": "68a87384c86ffcb66b4a0c08a5ecfa4a82a4441057982ec3fad216c51bf4edc5",
+      "raw_content_sha256": "36fe367747d709a916ad51a1d7648fc6eb8a8aed0962e9904517d410e086e324",
+      "risk_flags": [],
+      "missing_fields": [],
+      "close_evidence_status": "insufficient_evidence",
+      "close_basis": "市场基准未提供前一交易日参考价，且无新闻价格反应证据"
+    }
+  ],
+  "stored_risk_flags": [
+    "缺少前一交易日可用行情；收盘预判仅由新闻证据驱动",
+    "行情尚未验证为ICE官方日结算，不参与官方结算准确率评分",
+    "价格类型尚未验证为ICE官方日结算，不用于官方结算评分",
+    "最近价格并非上一完整交易日，存在行情缺口",
+    "模型把握程度未经统计校准，不代表已验证准确率",
+    "来源dbnomics_ice采集失败或尚未完成，本窗口新闻覆盖可能不完整",
+    "来源equinor采集失败或尚未完成，本窗口新闻覆盖可能不完整",
+    "来源gassco采集失败或尚未完成，本窗口新闻覆盖可能不完整",
+    "来源gdelt采集失败或尚未完成，本窗口新闻覆盖可能不完整"
+  ],
+  "stored_deterministic_risk_flags": [
+    "缺少前一交易日可用行情；收盘预判仅由新闻证据驱动",
+    "行情尚未验证为ICE官方日结算，不参与官方结算准确率评分",
+    "价格类型尚未验证为ICE官方日结算，不用于官方结算评分",
+    "最近价格并非上一完整交易日，存在行情缺口",
+    "模型把握程度未经统计校准，不代表已验证准确率",
+    "来源dbnomics_ice采集失败或尚未完成，本窗口新闻覆盖可能不完整",
+    "来源equinor采集失败或尚未完成，本窗口新闻覆盖可能不完整",
+    "来源gassco采集失败或尚未完成，本窗口新闻覆盖可能不完整",
+    "来源gdelt采集失败或尚未完成，本窗口新闻覆盖可能不完整"
+  ],
+  "all_stored_risks_appended_after_model": true,
+  "original_news_impact_direction": "flat",
+  "original_close_forecast_direction": null,
+  "causal_finding": "两次模型原始风险均为空；展示风险由后端追加。原始收盘不足依据是缺前交易日价格锚，未证明采集风险导致flat。",
+  "original_failure_path": [
+    "context.build_context -> unfiltered store.sources",
+    "analysis._coverage -> raw running source state",
+    "analysis._detail_limitation_options -> running treated as gap",
+    "analysis._add_known_limitations -> running treated as failed/incomplete after validation"
+  ],
+  "new_news_source_health": [
+    {
+      "name": "Cheniere Energy",
+      "status": "ok",
+      "last_success_at": "2026-10-20T21:33:39.993624+00:00",
+      "last_attempt_at": "2026-10-20T21:33:38.429319+00:00",
+      "last_finished_at": "2026-10-20T21:33:39.993638+00:00",
+      "last_error": null,
+      "id": "cheniere",
+      "source": "cheniere",
+      "state_clock_after_as_of": false,
+      "coverage_status": "healthy",
+      "coverage_gap": false,
+      "gap_reasons": [],
+      "coverage_note": ""
+    },
+    {
+      "name": "EIA Today in Energy",
+      "status": "ok",
+      "last_success_at": "2026-10-20T21:33:47.628130+00:00",
+      "last_attempt_at": "2026-10-20T21:33:38.388788+00:00",
+      "last_finished_at": "2026-10-20T21:33:47.628158+00:00",
+      "last_error": null,
+      "id": "eia",
+      "source": "eia",
+      "state_clock_after_as_of": false,
+      "coverage_status": "healthy",
+      "coverage_gap": false,
+      "gap_reasons": [],
+      "coverage_note": ""
+    },
+    {
+      "name": "Equinor",
+      "status": "running",
+      "last_success_at": "2026-10-20T21:33:15.514100+00:00",
+      "last_attempt_at": "2026-10-20T21:33:55.195592+00:00",
+      "last_finished_at": "2026-10-20T21:33:15.514126+00:00",
+      "last_error": null,
+      "id": "equinor",
+      "source": "equinor",
+      "state_clock_after_as_of": true,
+      "coverage_status": "healthy",
+      "coverage_gap": false,
+      "gap_reasons": [],
+      "coverage_note": ""
+    },
+    {
+      "name": "European Commission DG Energy",
+      "status": "ok",
+      "last_success_at": "2026-10-20T21:33:41.316013+00:00",
+      "last_attempt_at": "2026-10-20T21:33:38.403560+00:00",
+      "last_finished_at": "2026-10-20T21:33:41.316042+00:00",
+      "last_error": null,
+      "id": "eu_energy",
+      "source": "eu_energy",
+      "state_clock_after_as_of": false,
+      "coverage_status": "healthy",
+      "coverage_gap": false,
+      "gap_reasons": [],
+      "coverage_note": ""
+    },
+    {
+      "name": "Gassco UMM",
+      "status": "running",
+      "last_success_at": "2026-10-20T21:32:16.805697+00:00",
+      "last_attempt_at": "2026-10-20T21:33:38.440967+00:00",
+      "last_finished_at": "2026-10-20T21:33:08.553017+00:00",
+      "last_error": "ReadError",
+      "id": "gassco",
+      "source": "gassco",
+      "state_clock_after_as_of": false,
+      "coverage_status": "failed",
+      "coverage_gap": true,
+      "gap_reasons": [
+        "last_poll_error"
+      ],
+      "coverage_note": "来源gassco：最近采集记录有错误"
+    },
+    {
+      "name": "GDELT news discovery",
+      "status": "failed",
+      "last_attempt_at": "2026-10-20T21:20:13.460426+00:00",
+      "last_finished_at": "2026-10-20T21:20:13.651644+00:00",
+      "last_error": "Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22natural+gas%22+OR+%22LNG%22+OR+%22TTF%22%29+sourcelang%3Aenglish&mode=ArtList&format=json&maxrecords=250&sort=DateDesc&startdatetime=20261018000000&enddatetime=20261021000000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
+      "next_poll_at": "2026-10-20T21:35:13.460405+00:00",
+      "id": "gdelt",
+      "source": "gdelt",
+      "state_clock_after_as_of": false,
+      "coverage_status": "backoff",
+      "coverage_gap": true,
+      "gap_reasons": [
+        "last_poll_failed",
+        "retry_backoff"
+      ],
+      "coverage_note": "来源gdelt：最近采集失败；错误后等待重试"
+    },
+    {
+      "name": "Offshore Energy",
+      "status": "ok",
+      "last_success_at": "2026-10-20T21:33:40.097754+00:00",
+      "last_attempt_at": "2026-10-20T21:33:38.375978+00:00",
+      "last_finished_at": "2026-10-20T21:33:40.097766+00:00",
+      "last_error": null,
+      "id": "offshore_energy",
+      "source": "offshore_energy",
+      "state_clock_after_as_of": false,
+      "coverage_status": "healthy",
+      "coverage_gap": false,
+      "gap_reasons": [],
+      "coverage_note": ""
+    }
+  ],
+  "excluded_non_news_ids": [
+    "capital_candles",
+    "dbnomics_ice",
+    "eia_summary_repair",
+    "ice_chart",
+    "ice_intraday"
+  ],
+  "retained_real_gap_ids": [
+    "gassco",
+    "gdelt"
+  ],
+  "cleared_false_gap_ids": [
+    "equinor"
+  ],
+  "source_hashes": {
+    "ttf_news/coverage.py": "f8be89a9c3ecb9bab55481201a4420be97764635c6f10100959faac9fd99c00e",
+    "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+    "tests/test_source_coverage.py": "073f9c0d3159db6ed3c104b9029d94408f332a2edc2d5f4ebd7db7576268d13b"
+  }
+}

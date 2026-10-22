@@ -1,0 +1,314 @@
+{
+  "schema": "ttf-structured-repair-validation-v1",
+  "generated_at": "2026-10-22T17:12:47.354219+00:00",
+  "status": "validated_for_publication",
+  "scope": "Product repair and finite real-source workflow validation, not market forecasting accuracy or a restarted seven-day acceptance",
+  "engine": {
+    "prompt_version": "ttf-news-standalone-2.4.5",
+    "workflow_version": "ttf-structured-reasoning-2.4.5",
+    "model": "gpt-oss:20b",
+    "model_digest": "17052f91a42e97930aa6e28a6c6c06a983e6a58dbb00434885a0cf5313e376f7",
+    "fine_tuning": false,
+    "sources": {
+      "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+      "ttf_news/analysis.py": "781127633591c780709be6cc43d1a18c0c44a61a6ef873160778c82671bbe2cb",
+      "ttf_news/api.py": "afe04d7c94a1dcb40840adffb58c5a4ade76552e173b103375e88d7cd4190c48",
+      "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+      "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+      "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+      "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+      "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+      "ttf_news/context.py": "464bfbc789ea5e8768fe94fa5bfe0cf74827a9b58e3cee7eceb4052a3b8f9108",
+      "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+      "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+      "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987",
+      "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+      "ttf_news/ingest.py": "51386adad216ecf3164a38aefff201fbda44ce8af05c5040b6af01075962705e",
+      "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+      "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+      "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+      "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+      "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+      "ttf_news/public_gateway.py": "08990e223d5e7d1d348967c9625fd29fc2d1e7e58bb000c964b9cfea43b59952",
+      "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+      "ttf_news/runtime.py": "dd24abb89c0b878e19f7d74d531e3dd0b4640cd53e372ee189bd2dd2efe2f14f",
+      "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+      "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+      "ttf_news/semantics.py": "d054bc812a80e0d28bfc95a098731b6b556ad0304a9775db0ec4d00d660d2d9a",
+      "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+      "ttf_news/store.py": "022cb9b606ee22f01274e3673b22b58df096f60c446703deac157881e681749f",
+      "ttf_news/structured_analysis.py": "da13165f47e0b7ac4d46b963c0ea10f8c566c9b3ce4ee341ed9cacbba0f6d1df",
+      "ttf_news/structured_core.py": "28f75f146687b311ab4c2ae464c86512ca3ff61f14de34f7954cf1a321f465fc",
+      "ttf_news/structured_core_v2_4_0.py": "e85e97d0825b01320b15e33419a283bd7ba1666f48401e78b13f34bbb4e883ab",
+      "ttf_news/structured_core_v2_4_1.py": "5bbf59d8f58d18ccede7c44a4b8f611313952975273f2b971db8372700049bd7",
+      "ttf_news/structured_core_v2_4_2.py": "6980cbafddf2d84f7ec51f9cb71660af8ed6e0f6c89d3fc1f11ce9eceb6cd372",
+      "ttf_news/structured_core_v2_4_3.py": "7b66352892b7a24d47cb2959a447425cc96d36446003e20f03f7850f1d9619ac",
+      "ttf_news/structured_core_v2_4_4.py": "0b15b314721e86afd9d32e191deaf939b1db30b58ec8565d0c017f38c3047c06",
+      "ttf_news/translation.py": "384072fe3139d8ece9a15915c014c683cfee91b02a2ee9ae059c073655b04d21"
+    }
+  },
+  "changes": [
+    "Source identity and immutable paragraph evidence IDs precede semantic classification. Complete stored source text is restored by code; its publisher completeness is not asserted.",
+    "Physical production, announced unavailable capacity, future projects, import/receiving capability, incremental consumption, contracts and technology remain distinct. Geography is separate from conditional transmission and importance; zero weight remains legal.",
+    "Same-entity announced risks use maximum contribution, with revision relief separate. Closing cases consume the computed net and only the available same-contract anchor. Missing anchors produce no direction, rather than flat.",
+    "Chinese, English, brief and detail render the same saved fact catalog and typed plan; detail and English add no model calls. Frozen renderers preserve old decisions.",
+    "Offshore API is the authority for body and precise clocks. RSS discovers new URLs without downgrading known API facts. DOM extraction selects body structure without deleting factual dates, negation or quantities.",
+    "API-complete recovery watermark is distinct from partial RSS success. Live queries include publication or update time; incomplete API fetch/persistence never advances the watermark. Metadata-only revisions do not dispatch price inference."
+  ],
+  "diagnostics": [
+    {
+      "file": "reports/structured_v2_4/diagnostics_2_4_0/real_batch_01/summary.json",
+      "sha256": "cf557e5e143e205aaf0b29d06b2cd8879ff04b971b6b48f86764c4a4faea6779"
+    },
+    {
+      "file": "reports/structured_v2_4/diagnostics_2_4_0/real_batch_02/summary.json",
+      "sha256": "23ed681600fd288c079352be2d6ffbd25d4c5cbc9c086ff84ec879f15a8cb019"
+    },
+    {
+      "file": "reports/structured_v2_4/diagnostics_2_4_1/summary.json",
+      "sha256": "95116fd8e8c2147f4590017f52f682e35eaf3f14ff58feebab8ae05f625a9801"
+    },
+    {
+      "file": "reports/structured_v2_4/diagnostics_2_4_2/summary.json",
+      "sha256": "0fdd7551c3c9ee7e1357d78f8f4fc08163973bb54be55116eb3fc1ada96f284e"
+    },
+    {
+      "file": "reports/structured_v2_4/diagnostics_2_4_3/summary.json",
+      "sha256": "b9605632d14e376e5d55b60944214b9cd5a9762df34ed37a5bca962486a2826b"
+    },
+    {
+      "file": "reports/structured_v2_4/diagnostics_2_4_4/summary.json",
+      "sha256": "b9605632d14e376e5d55b60944214b9cd5a9762df34ed37a5bca962486a2826b"
+    },
+    {
+      "file": "reports/structured_v2_4/diagnostics_2_4_5/summary.json",
+      "sha256": "b9605632d14e376e5d55b60944214b9cd5a9762df34ed37a5bca962486a2826b"
+    }
+  ],
+  "actual_api": {
+    "manual": {
+      "file": "reports/structured_v2_4/api_manual_segment_2_4_5.json",
+      "sha256": "e168665a9cac9fed3915403df06d90b12aa8aec501620cdbb88d23bb21332954"
+    },
+    "previous_manual_2_4_4": {
+      "file": "reports/structured_v2_4/api_manual_segment_03_continuation.json",
+      "sha256": "5a97898bf88da49550c7377a4cfc89e6816753c4409e0979868409eb60fd1c17"
+    },
+    "previous_engine_refresh_2_4_4": {
+      "file": "reports/structured_v2_4/api_engine_upgrade_01.json",
+      "sha256": "a460d18461212f2a6a19c7949504df84ef02d165c018dd761fa6b2d53d6ee821"
+    },
+    "production_collection": {
+      "file": "reports/structured_v2_4/production_collector_2_4_5.json",
+      "sha256": "69c2eac9a86b6beb148695b460febacdb16cc6b74712d7d3bb7bb281962940de"
+    },
+    "isolated_real_two_poll": {
+      "file": "reports/structured_v2_4/publisher_authority/actual_two_polls/actual-two-poll-proof.json",
+      "sha256": "00ba5efb9b71bc9db107565adcae71afcd84185745f3e141e21daed1bf79ce48"
+    },
+    "automatic_live": {
+      "file": "reports/structured_v2_4/api_automatic_live_2_4_5.json",
+      "sha256": "baba4e72792fc2bf1ac87065899a74f55a3ea12067d77d59a2f5c4172681919b"
+    }
+  },
+  "tests": {
+    "unit-tests-2-4-5-final.log": {
+      "artifact": {
+        "file": "reports/structured_v2_4/unit-tests-2-4-5-final.log",
+        "sha256": "430742db6e40422d2a3506226d411fd8bff207ea3a9aa0941f16ba5b104affe4"
+      },
+      "terminal": "1577 passed, 1 warning, 375 subtests passed in 65.46s (0:01:05)"
+    },
+    "production-targeted-corrected.log": {
+      "artifact": {
+        "file": "reports/structured_v2_4/publisher_authority/recovery_v2/production-targeted-corrected.log",
+        "sha256": "7275e05f83a7038dd12a95680c8376ee6dd87df5abdbb9ea24ec5885077b9790"
+      },
+      "terminal": "52 passed in 11.62s"
+    },
+    "frontend-final-tests.log": {
+      "artifact": {
+        "file": "reports/structured_v2_4/frontend-final-tests.log",
+        "sha256": "a5e238ce8d432bbe4114dcfe6b813b94264e5b4af33bb8ae3ac1b3b730ad1d20"
+      },
+      "terminal": "26 passed, 0 failed"
+    },
+    "frontend-final-build.log": {
+      "artifact": {
+        "file": "reports/structured_v2_4/frontend-final-build.log",
+        "sha256": "5677be91925d4ebbd8586d154cf3cc2252f2dbbe127c05b9105b3f178fe1bb74"
+      },
+      "terminal": "✓ built in 1.59s"
+    },
+    "public-package-final-tests-frozen.log": {
+      "artifact": {
+        "file": "reports/structured_v2_4/public-package-final-tests-frozen.log",
+        "sha256": "448543f829b0bc4d218f8a64c5a2302f615f08f3f508041f2d0faac5310dca88"
+      },
+      "terminal": "1571 passed, 6 skipped, 1 warning, 371 subtests passed in 122.84s (0:02:02)"
+    }
+  },
+  "preservation": {
+    "minimum_original_analyses": 604,
+    "frozen_windows": 7,
+    "baseline": {
+      "id": 210,
+      "type": "validation_started",
+      "created_at": "2026-10-14T05:51:48.181167+00:00"
+    },
+    "append_only_reviews": {
+      "file": "reports/structured_v2_4/append_only_reviews_applied.json",
+      "sha256": "35d2acdecb59e5f4951511f2068c30f5c59ede07686903e2f70485f61cb3d0e8"
+    },
+    "previous_actual_render_compatibility": {
+      "file": "reports/structured_v2_4/2_4_4_actual_history_compatibility.json",
+      "sha256": "d95ec1142a1ea19b8ea9a77fd3c43b15c3df299e82a4bfdbbfb6515a327c4729"
+    },
+    "seven_day_json": {
+      "file": "reports/seven_day_validation.json",
+      "sha256": "5643d1267344fb0959c7a17719288d3615ecc84194116dc463091b9e021ec30b"
+    },
+    "seven_day_markdown": {
+      "file": "reports/seven_day_validation.md",
+      "sha256": "7843aacf11b53c1ef52e879c62b244b76b656b4bc7b9e308064499c07f5dae28"
+    },
+    "seven_day_outcome": "not_passed; unchanged",
+    "automation": "Existing seven-day follow-up remains paused; no new baseline or task",
+    "final_all_records": {
+      "file": "reports/structured_v2_4/post_resume_preservation_2_4_5.json",
+      "sha256": "f92881906dba63426e87f3ed958635fb54d16ff0d244fc2b502b6689f8e693ef"
+    }
+  },
+  "evaluation": {
+    "official_settlement_accuracy": null,
+    "reason": "Daily prices remain reference; CFD OHLC is display-only. No official five-class accuracy, abnormal-event accuracy or staged performance is claimed from these diagnostics."
+  },
+  "publication": {
+    "site": "https://adamleopold.github.io/news-agent-standalone/",
+    "repository": "https://github.com/AdamLeopold/news-agent-standalone",
+    "previous_main": "5040a1e78b10dc1cae5c72f155a1888761570d73",
+    "api": "Existing user-authorized public API; no new network exposure",
+    "public_api_readiness": {
+      "file": "reports/structured_v2_4/public_api_readiness_2_4_5.json",
+      "sha256": "a3e2ea953569a3f89244350f05d8b8875188ad6e86d51602adfc6ab42ec72bc4"
+    }
+  },
+  "limits": [
+    "Ordinary-source semantic classification and importance remain model judgments. These are finite regression examples, not a guarantee that every extracted fact is correct.",
+    "A source-triggered revision, engine refresh, and genuinely new published headline are separate evidence. No late-discovered old report is relabeled as a fresh headline.",
+    "All earlier failed candidates, failed real calls and harness interruptions remain archived with their actual source hashes; they are not silently replaced by a passing run."
+  ],
+  "revision_validation": {
+    "nonrevision_real_mixed_requests_replay": {
+      "file": "reports/structured_v2_4/revision_evidence/mixed-zero-call-replay.json",
+      "sha256": "66d1406573ee30d328e8bf71fb745d0ce8783f8bd619ab37d52defef8e950bd9"
+    },
+    "model_contract_probe": {
+      "file": "reports/structured_v2_4/revision_evidence/model_fixture_01/actual.json",
+      "sha256": "366ee2c09aa80bb49a6e508c1cd72740f48f2f4edb78c4200d5240edb843caaa"
+    },
+    "model_calls": 3,
+    "observed_real_publisher_revision_pairs": 0,
+    "probe_history": "Constructed versions/clocks with actual stored Cheniere paragraphs; not an observed publisher pair or market backtest",
+    "freshly_published_headline_observed": false
+  },
+  "known_model_metadata_residuals": [
+    "Final real manual example classified liquefaction development as upstream; this fine role field is wrong. Its future-supply sign remains negative and the conditional transmission no longer depends on that role veto. Original fields are preserved.",
+    "Natural live example classified a PPA tender under the coarse corporate_contract category. The source remains a tender, not a signed PPA; no completed transaction quantity or physical supply change is inferred."
+  ],
+  "snapshot": {
+    "file": "reports/structured_v2_4/final_snapshot_scan_2026_10_23.json",
+    "sha256": "26f94b91c59d258331c96ac81bbd59df4f55deeef708c8a29328103166ec810e"
+  },
+  "snapshot_manifest": {
+    "file": "reports/github_snapshot_manifest.json",
+    "sha256": "fd311423dd46b8e8887561079fc8fc1d24f2122223ca076b2950ef83303d957e"
+  },
+  "snapshot_counts": {
+    "news": 4006,
+    "events": 1580,
+    "legacy_daily": 3456,
+    "prices": 65885,
+    "analyses": 613
+  },
+  "final_reviews": [
+    {
+      "file": "reports/structured_v2_4/independent_revision_evidence_final_source_review_v2_4_5.json",
+      "sha256": "66d9230f2c483b29d5cdc1a154a30788748e8db6e5eedb1dfd60471e9ba04507"
+    },
+    {
+      "file": "reports/structured_v2_4/independent_api_manual_2_4_5_review.json",
+      "sha256": "27b5cc0ecf4dbf908a9f120ee5ee3d048a589ca5fc1d1368f3a29e95daba46a7"
+    },
+    {
+      "file": "reports/structured_v2_4/independent_api_automatic_live_2_4_5_review.json",
+      "sha256": "572fbcb100575ebdfe6ccaaffa38a6506142496f917ed4ff01e07b13fe6a8acb"
+    },
+    {
+      "file": "reports/structured_v2_4/independent_revision_model_fixture_01_review.json",
+      "sha256": "859cf5ac366063c8aa2c7758dcf6798b0dd14b3a597d928ac030e73f0f814132"
+    },
+    {
+      "file": "reports/structured_v2_4/independent_publisher_authority_terminal_review.json",
+      "sha256": "87dff638cac4b0cd76cd6931fa84503fa53d5f37a3b6cb8094648d8ecae464b1"
+    }
+  ],
+  "review_history": [
+    {
+      "file": "reports/structured_v2_4/independent_api_automatic_live_2_4_5_review.json",
+      "sha256": "572fbcb100575ebdfe6ccaaffa38a6506142496f917ed4ff01e07b13fe6a8acb"
+    },
+    {
+      "file": "reports/structured_v2_4/independent_api_engine_upgrade_01_review.json",
+      "sha256": "97e256211b5382ba831861372ac70cbfbbb4d9804a83fd69f30a9ba1dc6f6a3d"
+    },
+    {
+      "file": "reports/structured_v2_4/independent_api_manual_2_4_5_review.json",
+      "sha256": "27b5cc0ecf4dbf908a9f120ee5ee3d048a589ca5fc1d1368f3a29e95daba46a7"
+    },
+    {
+      "file": "reports/structured_v2_4/independent_api_manual_segment_03_review.json",
+      "sha256": "a6c970e4c6f39007af745b08845c6a7a95dc8ee490b18ff9cb0fe8d44732e751"
+    },
+    {
+      "file": "reports/structured_v2_4/independent_diagnostics_2_4_5_review.json",
+      "sha256": "1a137f443e55afdd569416c07265f06bf9879b7cebb05bfb6273e2b0797bbd9a"
+    },
+    {
+      "file": "reports/structured_v2_4/independent_formal_completed_e85_review.json",
+      "sha256": "8194d1b4177839b790e60ae7931c2481f8ab78e24db53af30b599eeec4854a56"
+    },
+    {
+      "file": "reports/structured_v2_4/independent_future_scope_proposal.json",
+      "sha256": "7a6b9b04e48b3f33f6803462093f719ef534defe104e0c89aed2b9bb736d727f"
+    },
+    {
+      "file": "reports/structured_v2_4/independent_publisher_authority_preflight_01.json",
+      "sha256": "b516f71f813222159bb43e1295603c8443576b45ac027003112cd6735696afd7"
+    },
+    {
+      "file": "reports/structured_v2_4/independent_publisher_authority_terminal_review.json",
+      "sha256": "87dff638cac4b0cd76cd6931fa84503fa53d5f37a3b6cb8094648d8ecae464b1"
+    },
+    {
+      "file": "reports/structured_v2_4/independent_revision_evidence_final_source_review_v2_4_5.json",
+      "sha256": "66d9230f2c483b29d5cdc1a154a30788748e8db6e5eedb1dfd60471e9ba04507"
+    },
+    {
+      "file": "reports/structured_v2_4/independent_revision_model_fixture_01_review.json",
+      "sha256": "859cf5ac366063c8aa2c7758dcf6798b0dd14b3a597d928ac030e73f0f814132"
+    },
+    {
+      "file": "reports/structured_v2_4/independent_role_scope_diagnostic.json",
+      "sha256": "58de9bea83cb53b7f9dfdd678d125963e9182cc026b93f66423537220a0947c5"
+    },
+    {
+      "file": "reports/structured_v2_4/independent_scope_2_4_5_preflight_01.json",
+      "sha256": "39e35eec582a5097fe34b7b8ae17c82740504f4a93af3fb7b3e6c807728e1f09"
+    },
+    {
+      "file": "reports/structured_v2_4/independent_scope_2_4_5_terminal_review.json",
+      "sha256": "005bc95c450d86963243502e21db89e33075af178274ea125f8c48a505a8b987"
+    }
+  ]
+}

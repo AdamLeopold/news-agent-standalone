@@ -1,0 +1,389 @@
+{
+  "status": "running",
+  "started_at": "2026-10-20T21:05:41.735422+00:00",
+  "expected_prompt_version": "ttf-news-standalone-2.1",
+  "scope": "real_local_manual_detail_english_exports_sse_and_preservation",
+  "synthetic_live_input": false,
+  "raw_thinking_included": false,
+  "stages": [
+    {
+      "name": "preservation_before",
+      "status": "passed",
+      "started_at": "2026-10-20T21:05:41.792311+00:00",
+      "checks": {
+        "passed": true,
+        "protected_analysis_count": 133,
+        "protected_nonnull_field_count": 254,
+        "current_analysis_count": 133,
+        "new_analysis_count": 0,
+        "protected_snapshot_count": 5,
+        "new_snapshot_count": 0,
+        "original_validation_record_count": 1,
+        "latest_baseline_unchanged": true,
+        "original_baseline": {
+          "id": 210,
+          "created_at": "2026-10-14T05:51:48.181167+00:00",
+          "type": "validation_started"
+        },
+        "failures": []
+      },
+      "finished_at": "2026-10-20T21:05:41.897242+00:00",
+      "elapsed_seconds": 0.105
+    },
+    {
+      "name": "live_api_v2_and_managed_identity",
+      "status": "passed",
+      "started_at": "2026-10-20T21:05:41.898200+00:00",
+      "checks": {
+        "prompt_version": "ttf-news-standalone-2.1",
+        "model": "gpt-oss:20b",
+        "server_pid": 94455,
+        "managed_pid_identity_verified": true,
+        "collector": {
+          "enabled": true,
+          "poll_seconds": 60
+        },
+        "counts": {
+          "news": 3996,
+          "events": 1575,
+          "legacy_daily": 3456,
+          "prices": 65879,
+          "analyses": 133
+        },
+        "monitoring_reachable": true
+      },
+      "finished_at": "2026-10-20T21:05:42.303847+00:00",
+      "elapsed_seconds": 0.406
+    },
+    {
+      "name": "select_real_existing_news",
+      "status": "passed",
+      "started_at": "2026-10-20T21:05:42.305891+00:00",
+      "checks": {
+        "news_id": "c0e1e289e3aa12907e840c18",
+        "title": "LNG Canada entrusts Técnicas Reunidas with €200M+ EPCM deal",
+        "source": "offshore_energy",
+        "url": "https://offshore-energy.biz/2026/10/20/lng-canada-entrusts-tecnicas-reunidas-with-euro200m-epcm-deal",
+        "published_at": "2026-10-20T13:11:12+00:00",
+        "source_version": 2,
+        "body_characters": 1417,
+        "body_sha256": "d8093c3429f67dd3f819bb28669363f0caf4bc9f9db138302d968de689c80948",
+        "fact_excerpt_used": true
+      },
+      "finished_at": "2026-10-20T21:05:42.321084+00:00",
+      "elapsed_seconds": 0.015
+    },
+    {
+      "name": "ensure_current_v2_live_forecast",
+      "status": "passed",
+      "started_at": "2026-10-20T21:05:42.322269+00:00",
+      "checks": {
+        "analysis_id": "69c389a8-c205-4f97-a637-a1bc8eb1a267",
+        "status": "queued",
+        "created": true,
+        "trade_date": "2026-10-21",
+        "source_news_id": "90bfbf6adb1183517cbc00ca",
+        "reason": "append_fresh_version_update_forecast",
+        "priority": 3,
+        "old_forecasts_overwritten": false,
+        "validation_baseline_reset": false
+      },
+      "finished_at": "2026-10-20T21:05:46.971153+00:00",
+      "elapsed_seconds": 4.649
+    },
+    {
+      "name": "sse_initial_connection",
+      "status": "passed",
+      "started_at": "2026-10-20T21:05:46.977350+00:00",
+      "checks": {
+        "id": 206398,
+        "type": "stream_ready",
+        "kind": null,
+        "matched_analysis_id": null,
+        "replayed_event_count": 1,
+        "cursor_mode": "initial_ready"
+      },
+      "finished_at": "2026-10-20T21:05:47.040943+00:00",
+      "elapsed_seconds": 0.064
+    },
+    {
+      "name": "manual_submit_real_news",
+      "status": "passed",
+      "started_at": "2026-10-20T21:05:47.042226+00:00",
+      "checks": {
+        "analysis_id": "960d00b0-6d55-4f81-9731-5290ea07b505",
+        "status": "queued",
+        "real_source_news_id": "c0e1e289e3aa12907e840c18"
+      },
+      "finished_at": "2026-10-20T21:06:18.294122+00:00",
+      "elapsed_seconds": 31.252
+    },
+    {
+      "name": "sse_last_event_id_reconnect",
+      "status": "passed",
+      "started_at": "2026-10-20T21:06:18.296679+00:00",
+      "checks": {
+        "id": 206421,
+        "type": "analysis_queued",
+        "kind": null,
+        "matched_analysis_id": "960d00b0-6d55-4f81-9731-5290ea07b505",
+        "replayed_event_count": 23,
+        "cursor_mode": "Last-Event-ID"
+      },
+      "finished_at": "2026-10-20T21:06:18.322824+00:00",
+      "elapsed_seconds": 0.026
+    },
+    {
+      "name": "sse_after_query_reconnect",
+      "status": "passed",
+      "started_at": "2026-10-20T21:06:18.324274+00:00",
+      "checks": {
+        "id": 206421,
+        "type": "analysis_queued",
+        "kind": null,
+        "matched_analysis_id": "960d00b0-6d55-4f81-9731-5290ea07b505",
+        "replayed_event_count": 23,
+        "cursor_mode": "after_query"
+      },
+      "finished_at": "2026-10-20T21:06:18.363567+00:00",
+      "elapsed_seconds": 0.039
+    },
+    {
+      "name": "manual_real_brief",
+      "status": "passed",
+      "started_at": "2026-10-20T21:06:18.365751+00:00",
+      "checks": {
+        "prompt_version": "ttf-news-standalone-2.1",
+        "news_direction": "flat",
+        "close_direction": null,
+        "close_evidence_status": "insufficient_evidence",
+        "english_close_label": "No closing outlook yet",
+        "summary_sha256": "efce286107afadbf6a66c942fb3ec0a4767ae26a5bdffbe80988a419241f076b",
+        "summary_characters": 22,
+        "model_seconds": 104.303,
+        "as_of": "2026-10-20T21:05:47.209596+00:00",
+        "raw_evidence_validated": true,
+        "analysis_id": "960d00b0-6d55-4f81-9731-5290ea07b505",
+        "poll_count": 60,
+        "completed_at": "2026-10-20T21:10:43.598829+00:00",
+        "source_body_unchanged": true
+      },
+      "finished_at": "2026-10-20T21:10:47.677753+00:00",
+      "elapsed_seconds": 269.311
+    },
+    {
+      "name": "sse_completed_event_replay",
+      "status": "passed",
+      "started_at": "2026-10-20T21:10:47.679973+00:00",
+      "checks": {
+        "id": 206511,
+        "type": "analysis_completed",
+        "kind": "short",
+        "matched_analysis_id": "960d00b0-6d55-4f81-9731-5290ea07b505",
+        "replayed_event_count": 113,
+        "cursor_mode": "Last-Event-ID"
+      },
+      "finished_at": "2026-10-20T21:10:49.767740+00:00",
+      "elapsed_seconds": 2.088
+    },
+    {
+      "name": "manual_detail_request",
+      "status": "passed",
+      "started_at": "2026-10-20T21:10:49.769730+00:00",
+      "checks": {
+        "id": "960d00b0-6d55-4f81-9731-5290ea07b505",
+        "status": "queued"
+      },
+      "finished_at": "2026-10-20T21:10:49.795126+00:00",
+      "elapsed_seconds": 0.025
+    },
+    {
+      "name": "english_brief_request",
+      "status": "passed",
+      "started_at": "2026-10-20T21:10:49.796851+00:00",
+      "checks": {
+        "translation_id": "9c8e69ed-e1ec-499e-8f1d-acb5b66e6139",
+        "part": "brief",
+        "status": "queued"
+      },
+      "finished_at": "2026-10-20T21:10:49.829584+00:00",
+      "elapsed_seconds": 0.033
+    },
+    {
+      "name": "manual_real_detail",
+      "status": "passed",
+      "started_at": "2026-10-20T21:10:49.831028+00:00",
+      "checks": {
+        "prompt_version": "ttf-news-standalone-2.1",
+        "news_direction": "flat",
+        "close_direction": null,
+        "close_evidence_status": "insufficient_evidence",
+        "english_close_label": "No closing outlook yet",
+        "summary_sha256": "efce286107afadbf6a66c942fb3ec0a4767ae26a5bdffbe80988a419241f076b",
+        "summary_characters": 22,
+        "model_seconds": 141.896,
+        "as_of": "2026-10-20T21:05:47.209596+00:00",
+        "raw_evidence_validated": true,
+        "analysis_id": "960d00b0-6d55-4f81-9731-5290ea07b505",
+        "poll_count": 32,
+        "completed_at": "2026-10-20T21:10:43.598829+00:00",
+        "source_body_unchanged": true
+      },
+      "finished_at": "2026-10-20T21:13:12.694826+00:00",
+      "elapsed_seconds": 142.863
+    },
+    {
+      "name": "english_detail_request",
+      "status": "passed",
+      "started_at": "2026-10-20T21:13:12.696308+00:00",
+      "checks": {
+        "translation_id": "ef8cd01b-c7f4-46c0-a747-fb9990672ae3",
+        "part": "detail",
+        "status": "queued"
+      },
+      "finished_at": "2026-10-20T21:13:12.712196+00:00",
+      "elapsed_seconds": 0.016
+    },
+    {
+      "name": "english_brief_actual_text_labels_numbers",
+      "status": "passed",
+      "started_at": "2026-10-20T21:13:12.714691+00:00",
+      "checks": {
+        "translated_fields_checked": 16,
+        "protected_labels_numbers_citations_unchanged": true,
+        "untranslated_chinese_fields": 0,
+        "source_sha256": "7a4ddade85c422796fa8e4801bda0cfe7a140d097164f5925b31a042916b6236",
+        "news_direction": "flat",
+        "close_direction": null,
+        "close_evidence_status": "insufficient_evidence",
+        "english_close_label": "No closing outlook yet",
+        "english_summary_sha256": "05f5e88969e17902efd7b96a439d1bad7d56711584be6b78668dbbe884627ad7",
+        "english_summary_characters": 109,
+        "translation_model_seconds": 55.792,
+        "translation_id": "9c8e69ed-e1ec-499e-8f1d-acb5b66e6139",
+        "part": "brief",
+        "poll_count": 14,
+        "cache_endpoint_verified": true
+      },
+      "finished_at": "2026-10-20T21:14:11.817298+00:00",
+      "elapsed_seconds": 59.102
+    },
+    {
+      "name": "english_detail_actual_text_labels_numbers",
+      "status": "passed",
+      "started_at": "2026-10-20T21:14:11.818584+00:00",
+      "checks": {
+        "translated_fields_checked": 32,
+        "protected_labels_numbers_citations_unchanged": true,
+        "untranslated_chinese_fields": 0,
+        "source_sha256": "cf7757050bd2efdfd02506766376c1f25d65ff132a1e4c96f9e0f1a820d0fc50",
+        "news_direction": "flat",
+        "close_direction": null,
+        "close_evidence_status": "insufficient_evidence",
+        "english_close_label": "No closing outlook yet",
+        "english_summary_sha256": "69aee4422a405e25a6b17639df4fbe9410eaf3bf51ee2b2fc811b2f698f85ab6",
+        "english_summary_characters": 116,
+        "translation_model_seconds": 50.61,
+        "translation_id": "ef8cd01b-c7f4-46c0-a747-fb9990672ae3",
+        "part": "detail",
+        "poll_count": 12,
+        "cache_endpoint_verified": true
+      },
+      "finished_at": "2026-10-20T21:15:02.311280+00:00",
+      "elapsed_seconds": 50.493
+    },
+    {
+      "name": "chinese_originals_unchanged_after_translation",
+      "status": "passed",
+      "started_at": "2026-10-20T21:15:02.312674+00:00",
+      "checks": {
+        "brief_sha256": "7a4ddade85c422796fa8e4801bda0cfe7a140d097164f5925b31a042916b6236",
+        "detail_sha256": "cf7757050bd2efdfd02506766376c1f25d65ff132a1e4c96f9e0f1a820d0fc50",
+        "original_chinese_results_unchanged": true,
+        "detail_direction_change": false
+      },
+      "finished_at": "2026-10-20T21:15:02.359539+00:00",
+      "elapsed_seconds": 0.047
+    },
+    {
+      "name": "csv_jsonl_exports",
+      "status": "passed",
+      "started_at": "2026-10-20T21:15:02.360576+00:00",
+      "checks": {
+        "news": {
+          "csv": {
+            "rows": 3996,
+            "bytes": 5003952,
+            "sha256": "d7eaefadaeca93532815ae499f71b6dee041b940a53710e4b3c3f2acf87ca95b",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 3996,
+            "bytes": 6693112,
+            "sha256": "d59b7efefc61bdf0fad22f34624d6208bbbc751cfc3003bc8398ceb60649dff6",
+            "parsed": true
+          },
+          "row_counts_match": true,
+          "independent_snapshot_requests": true
+        },
+        "daily": {
+          "csv": {
+            "rows": 628,
+            "bytes": 3916576,
+            "sha256": "763fe0dc96dcbd5f8fdd21d1d0d546979d962eec5adb6c66d80aed2d0804910c",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 628,
+            "bytes": 3808063,
+            "sha256": "fa0f558cc00dc166f9443a20a9ec28d38d9430a24202c4f8ec3f8208cb47d9d8",
+            "parsed": true
+          },
+          "row_counts_match": true,
+          "independent_snapshot_requests": true
+        },
+        "events": {
+          "csv": {
+            "rows": 1575,
+            "bytes": 5972140,
+            "sha256": "b18ac5c48e513fffb9a6974cc4f5c7e9da5077f583508ba4fd3ddf389d497143",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 1575,
+            "bytes": 6384997,
+            "sha256": "c2eccd02077e5ab80f633e5fe26ff5100583741aab6040cb4ec62e51ae140e30",
+            "parsed": true
+          },
+          "row_counts_match": true,
+          "independent_snapshot_requests": true
+        },
+        "prices": {
+          "csv": {
+            "rows": 65879,
+            "bytes": 26613306,
+            "sha256": "be6bdcb513dcff5768682a7bfa9c10764ff5a285d33747c6e65f597ef68f2663",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 65879,
+            "bytes": 43742146,
+            "sha256": "b3ea99a5f05f2f67723708e5d45f04c046ddbe9f574e68e66dca17951261467b",
+            "parsed": true
+          },
+          "row_counts_match": true,
+          "independent_snapshot_requests": true
+        }
+      },
+      "finished_at": "2026-10-20T21:15:40.195584+00:00",
+      "elapsed_seconds": 37.835
+    },
+    {
+      "name": "current_live_forecast_v2",
+      "status": "running",
+      "started_at": "2026-10-20T21:15:40.198970+00:00"
+    }
+  ],
+  "new_live_analysis_id": "69c389a8-c205-4f97-a637-a1bc8eb1a267",
+  "new_analysis_id": "960d00b0-6d55-4f81-9731-5290ea07b505"
+}

@@ -1,0 +1,65 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T03:14:28.093646+00:00",
+  "scope": "Only two finite validators: unqualified future-news current price-zero predicate, and known observed same-contract price role versus prior-day-own-change/future numeric target. No new word families, model/API/DB/service/core operations.",
+  "candidate_source": {
+    ".runtime/future-price-observation-role-proposal/ttf_news/analysis.py": "3a47ab408bcc26b71bb23bfaa117100e7f72454dfb8657d50b2851f55e20e66d",
+    ".runtime/future-price-observation-role-proposal/ttf_news/semantics.py": "e0cac7cdab33b6562ee88db528ad32114540734b2b96275d7f32e67302856623",
+    ".runtime/future-price-observation-role-proposal/analysis.patch": "20b75b310c0914687d41a3c75f463b8d346504b36d11c1e692d0f96d9ca4b2f2",
+    ".runtime/future-price-observation-role-proposal/semantics.patch": "8520af822796461f87c5aceb4d7fb4f5aca8cfe39421a8773872e71cde6381af",
+    ".runtime/future-price-observation-role-proposal/test_future_price_role.py": "3f41d5655785f3092690ed444947ba67a1d8fe9c3695078f571b6b4e149d47c8",
+    ".runtime/future-price-observation-role-proposal/actual_fixture.json": "9e3325c3106447d623be3ae9d35dfae555fab0d745d95617e43774e4814991ce",
+    ".runtime/future-price-observation-role-proposal/proposal_proof.json": "37ecc6ce16e97e40480d6dc5d31ba3e661a3490185d86a582a5287661667e14f"
+  },
+  "root_source_at_review": {
+    "ttf_news/analysis.py": "f3c44838f16941e503e5a542bb8d95176e83ca2d25df7af8373cfeaefe0b0d06",
+    "ttf_news/semantics.py": "2db667a7aa52d51956cc4c27b4b32ad97ec5ca9d98f8fc4195a330bedcba094d"
+  },
+  "verdict": "no_identified_material_blocker_in_requested_two_validator_scope",
+  "finite_review_passed": true,
+  "production_ready": false,
+  "known_logic_errors": [],
+  "new_model_calls": 0,
+  "checks": {
+    "future_announcement_price_zero": "Original c318 unqualified 当前不影响TTF价格 is rejected even when the physical maintenance start is future. Missing current flow measurements are not proof that TTF prices cannot react to news. Conditional/expected/weak-pressure propositions and explicit unknown evidence remain permitted; a known comparable reaction source is required for an asserted absence of reaction.",
+    "legal_direct_source_boundary": "Exact previously adjudicated legal-source 无直接影响 remains permitted only as the source-limited absent direct delivery/supply channel. This review creates no general direct-word exemption from price observation requirements.",
+    "observed_numeric_role": "Only an as_of-known same-contract comparison rebuilt from source prices/date/clocks can supply a quoted observed delta, level or percentage. Current-versus-previous delta, current level introduced with 至/到, direction sign, monetary-energy unit and rounding at stated precision are checked separately.",
+    "no_future_target_by_matching_number": "A known observed0.178 does not permit a forecast of0.178, nor does a known87.725 price level permit a87.725 delta. The same sentence containing an observation followed by a numeric future target is still rejected per predicate.",
+    "prior_day_own_change": "Exact failed Enisecond 前一交易日价格上涨0.178 remains rejected with time-role explanation; it does not become a correct observation by matching a known number. A legitimate 当前报价较前一交易日上涨0.178 is allowed. Prior failed record is not retroactively promoted.",
+    "no_input_or_label_change": "AST comparison changes exactly _validate_prediction_semantics and _check_observed_absence_of_price_reaction. No top-level definitions added, source extraction/formatter/prepared input/prompt/schema/budgets unchanged, no output labels or numbers rewritten."
+  },
+  "evidence": {
+    "focused_tests": {
+      "file": "reports/repair_2026-10-20/independent_future_price_observation_role_tests_v2_3.xml",
+      "sha256": "6e941175f5ccce423ee013666fb9d0e566d6a1408762b0d32ce205dd4ccfd02f",
+      "log": "reports/repair_2026-10-20/independent_future_price_observation_role_tests_v2_3.log",
+      "log_sha256": "859705f2309c56154225e6b0b03a36c6aefe77ecb8976980a8616a811a7d6e4c",
+      "passed": 313,
+      "passed_subtests": 324,
+      "failed": 0,
+      "seconds": 10.18
+    },
+    "independent_controls": {
+      "file": "reports/repair_2026-10-20/independent_future_price_observation_role_controls_v2_3.json",
+      "sha256": "9e08597ad2e9590a14b70d23f542af51a12e449594863158b93113dd2a9c953d",
+      "passed": 14,
+      "failed": 0
+    },
+    "changed_top_definitions": {
+      "analysis": [
+        "_validate_prediction_semantics"
+      ],
+      "semantics": [
+        "_check_observed_absence_of_price_reaction"
+      ]
+    },
+    "original_bad_raw_checks": "Owner immutable proof37ecc6ce binds eighteen known-bad bodies and the exact Enitime role body; focused tests retain their rejection."
+  },
+  "qualifications": [
+    "These finite validator checks are not a universal numeric/causal-language proof or actual market accuracy result.",
+    "The retained future actual still contains its original P2; source fix acceptance does not replace its recorded prediction.",
+    "Full unit suite and official complete request/retry/error-path replay remain required after authorized application. Older generation-source metadata must be preserved even if the complete request is equivalent.",
+    "Fresh final-source required cases and a successful full production live/manual/detail/English workflow are still needed before release readiness."
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "applied_at": "2026-10-21T06:31:48.351905+00:00",
+  "core_analysis_sha256": "5fbbadb4a01a8a4390ddc27f5c9958e79f13da9cf974c86390c2271a1b22e1f6",
+  "core_changed": false,
+  "model_calls": 0,
+  "old_model_records_changed": false,
+  "expectations_changed": false,
+  "changes": [
+    {
+      "file": "tests/test_future_capacity_pressure_scope.py",
+      "sha256": "4f2f8546fc59506840621f179b34ca0112872f0e251b7153088a06a05b9f91a5"
+    },
+    {
+      "file": "tests/test_eighth_output_scope.py",
+      "sha256": "99720398bae7ad544781cf83d286adad0f97a667bd0d01af63a3055e63e6c726"
+    },
+    {
+      "file": "tests/test_seventh_source_scope.py",
+      "sha256": "581932d20f38cf99edb101ca79d1b7382b90366d81f51261ddef8e4dfc68ac71"
+    },
+    {
+      "file": "tests/fixtures/legacy_manual_prepared_1aeb_v2_3.json",
+      "sha256": "6160ae3f5dafc0d9ee5c0276b272fa16ebc56de6cd725e8329966d740a8dd3e4"
+    }
+  ],
+  "original_test_source_archive": {
+    "file": "reports/repair_2026-10-20/source_binding_original_test_source_archive_v2_3.json",
+    "sha256": "216eef665c8b84d6f9ec4f7a44b02c9d932875d2377977e3872a6f83e39b3c3a"
+  },
+  "source_proofs": [
+    {
+      "file": "reports/repair_2026-10-20/source_binding_test_premise_only_proof_v2_3.json",
+      "sha256": "989a5a1121f783f889a4be77a960b49493497a8cfb27f1a9e919020bca64e333"
+    },
+    {
+      "file": "reports/repair_2026-10-20/source_binding_legacy_prepared_fixture_proof_v2_3.json",
+      "sha256": "e8e6df75b88283a2a8c51a79f656cac3e23f51af17618995386a6615987eecf5"
+    },
+    {
+      "file": "reports/repair_2026-10-20/source_binding_guard_private_proposal_proof_v2_3.json",
+      "sha256": "e69b04827fcdfb60a556e3b8141e34b76b10205b3ec04bf72e908fcca028a551"
+    },
+    {
+      "file": "reports/repair_2026-10-20/source_binding_identity_private_proposal_proof_v2_3.json",
+      "sha256": "1d08ad2e25e7e99b3440235865beba3439f0d9087b8b99438955a6d130192838"
+    }
+  ],
+  "earlier_failed_full_run_preserved": {
+    "binding": "reports/repair_2026-10-20/source_binding_full_unit_binding_v2_3.json",
+    "binding_sha256": "41928d5f24273ee753a61047fcfcd9a152d790f4120df330382d1b8c6efb7677",
+    "original_result": "6 failed, 1497 passed, 1 warning, 375 subtests passed in 63.40s (0:01:03)",
+    "unit_log": {
+      "file": "reports/repair_2026-10-20/source-binding-final-unit-tests.log",
+      "sha256": "0fae2a59fd2e3dc5cfc1cf4d8b4df369d6a8e8eab1c5cef7df1ef60b0e17df50"
+    },
+    "unit_xml": {
+      "file": "reports/repair_2026-10-20/source-binding-final-unit-tests.xml",
+      "sha256": "229b9f35d918e0b6ac3b4b3299f1feeb3b72b57520c20268501efaf7babcabd5"
+    }
+  }
+}

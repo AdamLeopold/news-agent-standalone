@@ -1,0 +1,47 @@
+{
+  "reviewed_at_utc": "2026-10-20T18:10:37.148332+00:00",
+  "records": [
+    {
+      "case": "real_eni",
+      "raw_record": "reports/repair_2026-10-20/candidate-symmetric-validation/real_eni.json",
+      "raw_sha256": "498153370fa048e282a21d65ca4321e6306effd8927c73906cec50fd1ae1dd3c",
+      "raw_unchanged": true,
+      "new_diagnostics": [
+        "news_impact.neutralizing_evidence[0]:当前容量缺口→可能供应约束是条件性上行风险，不能以未确认流量损失作为抵消证据；须分列该风险与未知/把握程度，或引用真实反向机制/同范围独立流量未变事实。净方向仍可基于有据的弱传导或权衡判flat，不得强制up"
+      ],
+      "all_diagnostics": [
+        "source_fact_checks与本次已知输入的公告/行情事实表不一致；须逐项复制输入原值，不能修改类型、时态或把行情变化当公告已计价",
+        "news_impact.neutralizing_evidence[0]:当前容量缺口→可能供应约束是条件性上行风险，不能以未确认流量损失作为抵消证据；须分列该风险与未知/把握程度，或引用真实反向机制/同范围独立流量未变事实。净方向仍可基于有据的弱传导或权衡判flat，不得强制up"
+      ]
+    },
+    {
+      "case": "supply_restore_40_with_flat_baseline",
+      "raw_record": "reports/repair_2026-10-20/candidate-symmetric-validation/supply_restore_40_with_flat_baseline.json",
+      "raw_sha256": "80cd7a1a3744f74b66b9d6e3eca4d43890202567d1b9a0b40d99cfca97be0588",
+      "raw_unchanged": true,
+      "new_diagnostics": [
+        "close_forecast.summary:已给报价的observed_at不晚于新闻发布时间，available_at只是获知/抓取时刻，不能当作公告后报价；未提供该消息前后独立价格反应，不能宣称供应增加/该消息未导致价格下跌或无即时反应；可描述已观察基准持平、反应未知及有依据的条件性收盘预判，不强制复制新闻方向"
+      ],
+      "all_diagnostics": [
+        "close_forecast.summary:已给报价的observed_at不晚于新闻发布时间，available_at只是获知/抓取时刻，不能当作公告后报价；未提供该消息前后独立价格反应，不能宣称供应增加/该消息未导致价格下跌或无即时反应；可描述已观察基准持平、反应未知及有依据的条件性收盘预判，不强制复制新闻方向"
+      ]
+    }
+  ],
+  "product_changes": [
+    "ttf_news/semantics.py"
+  ],
+  "test_changes": [
+    "tests/test_semantics.py"
+  ],
+  "test_result": {
+    "command": ".venv/bin/python -m pytest -q tests/test_semantics.py tests/test_reviewed_prose.py",
+    "passed": 104,
+    "subtests_passed": 192,
+    "seconds": 0.26
+  },
+  "source_sha256": "34a2673c8e8116c7f99060cec076b2d2cb88479080643de2b72ab2234ecf1e65",
+  "full_junit_pending": "Root will run final full suite after the coordinated analysis grammar change; no full-suite run initiated here.",
+  "real_model_calls": 0,
+  "old_records_changed": false,
+  "net_direction_rewrites": false
+}

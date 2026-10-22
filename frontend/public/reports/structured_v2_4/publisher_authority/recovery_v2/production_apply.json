@@ -1,0 +1,20 @@
+{
+  "applied_at": "2026-10-22T16:41:07.949365+00:00",
+  "files": [
+    {
+      "file": "ttf_news/ingest.py",
+      "sha256": "51386adad216ecf3164a38aefff201fbda44ce8af05c5040b6af01075962705e"
+    },
+    {
+      "file": "tests/test_publisher_authority.py",
+      "sha256": "e25ec1efc43d68db75988a80ccd985a57ef8a8868af7bdb8e95eec9cc5ba0059"
+    },
+    {
+      "file": "tests/test_ingest.py",
+      "sha256": "9f467a2c9ab53fe7d5c7cbca6e51b3ec1884bd7c13403c20667dccdc8ac4eb8b"
+    }
+  ],
+  "history_modified": false,
+  "model_calls": 0,
+  "restart_pending": true
+}

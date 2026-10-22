@@ -1,0 +1,15 @@
+
+==================================== ERRORS ====================================
+_________ ERROR collecting tests/test_detail_bounded_timing_profile.py _________
+ImportError while importing test module 'tests/test_detail_bounded_timing_profile.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_detail_bounded_timing_profile.py:9: in <module>
+    from ttf_news.analysis import (prepare_context, response_schema, _parse_result,
+E   ImportError: cannot import name '_token_count' from 'ttf_news.analysis' (ttf_news/analysis.py)
+=========================== short test summary info ============================
+ERROR tests/test_detail_bounded_timing_profile.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 0.22s

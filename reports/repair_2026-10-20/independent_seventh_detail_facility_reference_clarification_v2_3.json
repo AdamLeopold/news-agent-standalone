@@ -1,0 +1,85 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T04:16:00.714666+00:00",
+  "scope": "One requested exact facility-type/reference decision on seventh detail second raw; no generalized ontology change.",
+  "actual_record": {
+    "file": "reports/repair_2026-10-20/production_seventh_manual_detail_failed_actual_v2_3.json",
+    "sha256": "04300a13120d592d761d6b920d0799604108262ec3d833a78496aebe21a766af"
+  },
+  "raw_sha256": "769d8f1738ceecc738d798e4e7469fdd6b98cdf23f70e5749d958c8f0c2db180",
+  "field": "news_impact.summary",
+  "span": "另有一项未分类设施计划维护将于10月21日开始，容量不可用13.0mcm/d",
+  "exact_input_rows": [
+    {
+      "alias": "N1",
+      "title": "Gassco Troll: Planned Gas production field unavailability (Active)",
+      "id": "90bfbf6adb1183517cbc00ca",
+      "unavailable_capacity": "7.6",
+      "facility_type_field": null
+    },
+    {
+      "alias": "N2",
+      "title": "Gassco Troll: Planned Other unavailability (Active)",
+      "id": "a21b1cffbd1454613a5d0793",
+      "unavailable_capacity": "13.0",
+      "facility_type_field": null
+    }
+  ],
+  "raw_source_fact_ledger": [
+    {
+      "id": "N0",
+      "facility": "Troll",
+      "facility_type": "气田/生产设施",
+      "notice_type": "计划",
+      "unavailable_capacity": "7.6",
+      "state_description": "报道状态见该N原文",
+      "cause_original": "Yearly maintenance"
+    },
+    {
+      "id": "N1",
+      "facility": "Troll",
+      "facility_type": "气田/生产设施",
+      "notice_type": "计划",
+      "unavailable_capacity": "7.6",
+      "period_utc": [
+        "2026-10-22T04:00Z",
+        "2026-10-23T04:00Z"
+      ],
+      "state_description": "未来公告",
+      "settlement_timing": {
+        "as_of_relation": "not_started",
+        "start_vs_target_window": "at_or_after_target_window_end",
+        "description": "截至分析时点尚未开始；目标结算窗口结束时或之后开始；开始时刻不证明实际流量损失",
+        "notice_interval_overlaps_target_window": false
+      },
+      "cause_original": "Yearly maintenance"
+    },
+    {
+      "id": "N2",
+      "facility": "Troll",
+      "facility_type": "类别未给",
+      "notice_type": "计划",
+      "unavailable_capacity": "13.0",
+      "period_utc": [
+        "2026-10-21T04:00Z",
+        "2026-10-22T04:00Z"
+      ],
+      "state_description": "未来公告",
+      "settlement_timing": {
+        "as_of_relation": "not_started",
+        "start_vs_target_window": "starts_inside_target_window",
+        "description": "截至分析时点尚未开始；目标结算窗口内开始；开始时刻不证明实际流量损失",
+        "notice_interval_overlaps_target_window": true
+      },
+      "cause_original": "Yearly maintenance"
+    }
+  ],
+  "verdict": "P3_ambiguous_reference_not_P2_source_type_reversal",
+  "reason": "N1 is explicitly Gas production field; N2 is explicitly Other with no supplied facility category. Thus saying the13.0 notice category is unspecified does not erase a known gas-production-field category. Both source titles nameTroll, so “another unspecified facility” is imprecise and may imply a separate location; clarify to anotherTroll notice of unspecified category rather than inventing a second site.",
+  "not_allowed": "Do not transfer N1 facility category toN2 merely because both concernTroll, or rewrite N2 as a pipeline. Do not use historical/background facility records to fill a missing source-specific classification.",
+  "original_failure_unchanged": true,
+  "new_model_calls": 0,
+  "database_access": false,
+  "network_calls": 0
+}

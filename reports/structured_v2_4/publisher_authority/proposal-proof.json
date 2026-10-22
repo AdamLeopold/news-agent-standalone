@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "model_calls": 0,
+  "production_db_writes": 0,
+  "root_source_edits": 0,
+  "source_ast_changes": {
+    "ingest": {
+      "changed": [
+        "extract_article",
+        "enrich_live_facts",
+        "ingest_offshore"
+      ],
+      "added": [
+        "_article_paragraphs",
+        "_publisher_api_record",
+        "_preserve_publisher_authority"
+      ]
+    },
+    "runtime": {
+      "changed": [
+        "collection_worker"
+      ],
+      "added": []
+    }
+  },
+  "files": {
+    "ttf_news/ingest.py": "7f460f7a3260b685914264f3fc7638e31716d6dadde1f913580d064465395059",
+    "ttf_news/runtime.py": "dd24abb89c0b878e19f7d74d531e3dd0b4640cd53e372ee189bd2dd2efe2f14f",
+    "tests/test_publisher_authority.py": "2f1d6ae1ff4c9d7a84f6e3514a8a441d51d6f688f4f1ea896e58a31d7c28e97a",
+    "tests/test_ingest.py": "ab50249cef53f1be3c3581ab2df3e3fcde575881da6f69ee307da64ceba419a4",
+    "ingest.diff": "f564ae0a79d2d0b28647d7d9b62f89c04be477ae7737b8f13f1354467ba3533a",
+    "runtime.diff": "38a2443bd0c31f48893227b018ef9f7c553d38d8bff51a1674f1baf3afae570c",
+    "test_ingest.diff": "2c23faa5ecad98cde86e38f83cf0ea01ffcdfb9108ac334383631d647d59c7a1",
+    "original-12-readonly-audit.json": "4ee98a566d02d89ff7a8ea9f2e599398a621f15d7954b1d9fc03a93c3e60628c",
+    "focused-initial.log": "962ff44b676c19e12f2b35ecf8603780bddadcecd1bc4a356de9de65c2814438",
+    "focused-initial.xml": "29840be58becc39a51b9051c6bb88b1a889e149fdfe852043041664b044bdf06",
+    "focused-freeze.log": "4642a3b1b4afd3023d124a5956b1978ef7a758531e8e3bd213972d378c87b42f",
+    "focused-freeze.xml": "a92cd1932f8f939e0328bbbc7bc348d3ef4734fba8755f5361231da4a4ac1cb6"
+  },
+  "base_source_sha256": {
+    "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+    "ttf_news/runtime.py": "bd1e951334fc9117be11f5937ac18d7262d53c3576e9fcb8b8f63fc8ac7bf239",
+    "ttf_news/structured_core.py": "027bc8d862b3cc3f8eff7ea54b881a51030372009c9087dbdac2815c0582e4cc"
+  },
+  "test_result": {
+    "new_test_functions": 4,
+    "new_cases": 6,
+    "existing_cases": 44,
+    "passed": 50,
+    "failed": 0,
+    "seconds": 11.5,
+    "log": "focused-freeze.log"
+  },
+  "test_only_adaptation": "Exactly two existing live_transport expectations api_fallback -> api_primary. Failure visibility, partial status, bounded date filter, timestamps, news counts and archive checkpoints remain strict.",
+  "replay": "10 of original12 had prior-known authoritative API and replay without substantive facts change; 2 first-authoritative body migrations may legitimately be newly observed facts. All12 are preserved; no retroactive queue deletion.",
+  "policy_change": "Offshore public Payload API is the primary complete-body/precise-clock authority; RSS remains URL discovery. Missing API body/updated timestamp carries known fields; retrieval failure remains partial/failed source coverage. No generic rounding or relative-age keyword filter."
+}

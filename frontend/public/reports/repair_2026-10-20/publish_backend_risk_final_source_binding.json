@@ -1,0 +1,121 @@
+{
+  "schema_version": "ttf-public-backend-source-bound-tests-v1",
+  "captured_at": "2026-10-21T01:58:48.490522+00:00",
+  "publication_checkout": ".runtime/github-publish",
+  "python": ".venv/bin/python",
+  "actual_import_root": ".runtime/github-publish/ttf_news",
+  "source_sha256": {
+    "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+    "ttf_news/analysis.py": "28f186ea7f11453ec42737fd82a71b47b3f29d094121911a4e12813c93d3b1b9",
+    "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+    "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+    "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+    "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+    "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+    "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+    "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+    "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+    "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+    "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987",
+    "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+    "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+    "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+    "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+    "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+    "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+    "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+    "ttf_news/public_gateway.py": "fac8fe10429bc62a6be241817491d1f35eecdaa7f8a37357cb8dbcab7f43fae5",
+    "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+    "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+    "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+    "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+    "ttf_news/semantics.py": "932f7dd1fb44f8625685cfa0978c9294bf2c9d8817fbf71362a9813449d7edb5",
+    "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+    "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+    "ttf_news/translation.py": "d47b232a5f77ea68e2d5bc5d092021e9727e555c6b1dd702922325519982d7c5"
+  },
+  "helper_sha256": "1e5515f9e426b594a8b97ba184c305bf3ec2e670c0b7ea9b1a71417e92c93ffd",
+  "all_28_and_helper_identical_private_public_before_after": true,
+  "all_test_module_files_identical": true,
+  "test_runtime_data_isolation": "tests/conftest.py sets TTF_NEWS_DATA_DIR to TemporaryDirectory before application imports",
+  "runs": [
+    {
+      "configuration": "Default clone cache absent",
+      "summary": {
+        "failed": 103,
+        "passed": 729,
+        "skipped": 3,
+        "errors": 99,
+        "subtests_passed": 361,
+        "seconds": 169.91
+      },
+      "log": "reports/repair_2026-10-20/publish-backend-risk-final-tests.log",
+      "log_sha256": "80b010d0956513ba28c25638a7191b5f164284fc818a28b514645f9f948bebb7",
+      "junit": "reports/repair_2026-10-20/publish-backend-risk-final-tests.xml",
+      "junit_sha256": "bcfde4cce92edd316ba7c65fa3674d7fc2309367b7d9dd946a6abd18daea1c44",
+      "junit_attributes": [
+        {
+          "name": "pytest",
+          "errors": "99",
+          "failures": "103",
+          "skipped": "3",
+          "tests": "1295",
+          "time": "169.346",
+          "timestamp": "2026-10-21T09:50:23.358826+08:00",
+          "hostname": "MacBook-Pro-8.local"
+        }
+      ]
+    },
+    {
+      "configuration": "TIKTOKEN_CACHE_DIR explicitly points to existing installed local cache",
+      "summary": {
+        "failed": 3,
+        "passed": 918,
+        "skipped": 3,
+        "errors": 0,
+        "subtests_passed": 371,
+        "seconds": 53.41
+      },
+      "log": "reports/repair_2026-10-20/publish-backend-risk-final-tests-cached.log",
+      "log_sha256": "c3ad7deba304d48d85a44c93cf65412d6bf020af5a1a9f262bce29e40a865084",
+      "junit": "reports/repair_2026-10-20/publish-backend-risk-final-tests-cached.xml",
+      "junit_sha256": "b9dacf5d148fcae42f98f2116ef7db07a9aab3e0c4ce8bcae2f745a53ebfaf81",
+      "junit_attributes": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "3",
+          "skipped": "3",
+          "tests": "1295",
+          "time": "53.297",
+          "timestamp": "2026-10-21T09:53:46.078387+08:00",
+          "hostname": "MacBook-Pro-8.local"
+        }
+      ]
+    }
+  ],
+  "installed_token_cache": {
+    "path": "data/cache/tokenizer/fb374d419588a4632f3f557e76b4b70aebbca790",
+    "sha256": "446a9538cb6c348e3516120d7c08b09f57c36495e2acfffe59a5bf8b0cfb1a2d",
+    "bytes": 3613922,
+    "read_only_dependency_reused": true,
+    "copied_to_publication": false
+  },
+  "known_public_test_resource_limit": {
+    "private_archives_intentionally_not_published": true,
+    "missing": [
+      ".runtime/source-archives/backend-43554/ttf_news/analysis.py",
+      ".runtime/source-archives/backend-51753/ttf_news/analysis.py"
+    ],
+    "failed_tests": [
+      "tests/test_detail_bounded_timing_profile.py::test_all_brief_inputs_system_budgets_unchanged_schema_only_adds_risk_bounds",
+      "tests/test_final_output_scope.py::test_first_requests_all_twenty_stay_identical_to_backend51753",
+      "tests/test_final_output_scope.py::test_fitting_second_request_preserves_original_request_bytes"
+    ],
+    "current_application_copy_failure_identified": false
+  },
+  "source_model_service_git_edits": false,
+  "new_model_calls": 0,
+  "status": "blocked_only_by_unpublished_historical_test_fixtures_after_cache_configuration",
+  "boundary": "Both complete failed executions are preserved. Current public source imports and byte identities match private source; 918 functional tests passed with the tokenizer dependency available. This does not claim the full public test suite passed, deployment succeeded, or actual model generation succeeded."
+}

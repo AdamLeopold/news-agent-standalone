@@ -1,0 +1,153 @@
+{
+  "created_at": "2026-10-20T23:00:27.516553+00:00",
+  "status": "cohort_review_complete_production_review_pending",
+  "prompt_version": "ttf-news-standalone-2.3",
+  "reviewer_type": "codex_subagent",
+  "compiled_by": "/root/event_retrieval",
+  "review_boundary": "Independent source/prose checks are performed by AI agents, not external human or trader endorsement. Strict controls, unvalidated real-news label divergence and explicit no-output failures are kept separate.",
+  "all_valid_outputs_reviewed": true,
+  "reviewed_accepted_cases": [
+    "supply_loss_40",
+    "supply_restore_40",
+    "warm_heating_demand",
+    "cold_heating_demand",
+    "negated_outage",
+    "cumulative_shock_then_weak",
+    "weak_news_observed_market_up",
+    "supplied_conflicting_mechanisms",
+    "real_nyhamna",
+    "supply_restore_40_with_flat_baseline",
+    "anchor_real_manual_missing_prevday",
+    "anchor_gap_supply_loss_40",
+    "anchor_gap_supply_restore_40",
+    "anchor_legal_prevday_weak_market_up",
+    "real_future_well_b1"
+  ],
+  "rejected_cases": [
+    "weak_exploration_no_quote",
+    "future_planned_notice",
+    "dismissed_notice_not_verified_recovery",
+    "real_eni",
+    "supply_loss_40_with_flat_baseline"
+  ],
+  "selected_record_sha256": {
+    "supply_loss_40": "1ef9b443c8aafaaf19bd3217229760399bb3169ba585c74b279cfe84db590187",
+    "supply_restore_40": "5116f74ff4539190bad5222b7ee53cd6e6833a1e1953cc1be566e9bae66801e9",
+    "warm_heating_demand": "916366fe284568475f965d3b7b1519ad0610194740d5ba7c679c4007dcd3c036",
+    "cold_heating_demand": "bb31e6eaed07f4b911edd66f7598b5fdaea052894808ce3e4471e50b054d6671",
+    "negated_outage": "e9dfe324136656c2a2caf4f2ad34d1f418fd21e97e9e0fba9e0da3952fbc01dd",
+    "cumulative_shock_then_weak": "8999867dbe2c16995e35d71e7d5ebb86ede8689ca3a35d238a6e27469bfed803",
+    "weak_news_observed_market_up": "2b45eaffa9bc9484cbf4b18b5d92dc9b755098d526cf626c8954e113172f4841",
+    "supplied_conflicting_mechanisms": "31caf0ae958cb716988502cf7ce624fad6ffbfaf143809fde6c64a6ffa65e77f",
+    "real_nyhamna": "9165aa36a284c2740565ad6a5cce1f1414b6419ce476b992df297e280d35aa2a",
+    "supply_restore_40_with_flat_baseline": "c67e4a0ca8086d06dc898c9955228daa165e9f2cc2270f0de6ae98e1d09fe26f",
+    "anchor_real_manual_missing_prevday": "0f5f5fef742e674a754a6b924b4749c749ea843d1922cb9321625cb606f1329c",
+    "anchor_gap_supply_loss_40": "eb02ccabe2c0dbdd430c181aad75b3ab55edb777db8d598f4dc37f3024666305",
+    "anchor_gap_supply_restore_40": "f35a61dfd853ce98c4bd76c2a0f734eb40e7d32124eb1ebb2adb305ac4496b16",
+    "anchor_legal_prevday_weak_market_up": "e8fb7ef27fc5207d1f7b438fdab7f1ad55e8a298fb1a8916f2392ebdf1e97361",
+    "real_future_well_b1": "91950dd8aa6e93d27b2cb5511d120911b0153cdb6f39e0cee202bad43dd3e363"
+  },
+  "known_accepted_logic_errors": [],
+  "source_sha256": {
+    "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+    "ttf_news/analysis.py": "79061b8e132a456fc80fa6f067dc057bdcb681261d68bb1e93769a16069d0d03",
+    "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+    "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+    "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+    "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+    "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+    "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+    "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+    "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+    "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+    "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987",
+    "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+    "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+    "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+    "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+    "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+    "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+    "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+    "ttf_news/public_gateway.py": "fac8fe10429bc62a6be241817491d1f35eecdaa7f8a37357cb8dbcab7f43fae5",
+    "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+    "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+    "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+    "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+    "ttf_news/semantics.py": "a0b8c530ba84b912801f2a294a2f5e94aed419d8083cd9f72270b76e3e53f000",
+    "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+    "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+    "ttf_news/translation.py": "e6c50833f58eb7d063286f298c91f5816520fd4caff87ba4fa29e2dccbd3b680"
+  },
+  "accepted_detail_reviewed": true,
+  "accepted_detail_record_sha256": {},
+  "accepted_detail_scope": "No isolated detail output was delivered in the final selected stage; the empty accepted-detail set has been checked. This does not satisfy the separate mandatory real production detail success/review.",
+  "rejected_details_independently_checked": true,
+  "rejected_detail_cases": [
+    "supply_restore_40_with_flat_baseline"
+  ],
+  "rejected_detail_record_sha256": {
+    "supply_restore_40_with_flat_baseline": "1d31f93882d2250ffb850d72d0f97d48b7cb3b2c4cb57f18f2caa3df296de445"
+  },
+  "counts": {
+    "strict_contract_passed": 14,
+    "deliverable_unvalidated_real_news_label_disagreement": 1,
+    "unavailable_briefs": 5,
+    "unavailable_isolated_details": 1
+  },
+  "live_current_version_outputs": [],
+  "production_review_pending": true,
+  "cohort_review_evidence": [
+    {
+      "file": "reports/repair_2026-10-20/independent_selected_actual_full_review_final_v2_3.json",
+      "sha256": "223c39aef054d126aecec95d3c7d50e5f5dd6600a0bb38bfdb3b7d80d7e6ca10"
+    },
+    {
+      "file": "reports/repair_2026-10-20/independent_price_observation_prose_review_v2_3.json",
+      "sha256": "aa4bb2bb03fd528e5d792934d559197f6213a76c32ea32c4eb363a5c5e22e23f"
+    },
+    {
+      "file": "reports/repair_2026-10-20/independent_final_tense_prose_review_v2_3.json",
+      "sha256": "592baceea81a6e57aa8ea1d3ff05550202bd1333848c87a65c158bd5d4349b0e"
+    }
+  ],
+  "cohort_selection": {
+    "file": "reports/repair_2026-10-20/selected_actual_cohort_final_v2_3.json",
+    "sha256": "4befcb58d0a8e1084516440ae61b1c57f1c112322066fbec6548b39a5f12e581"
+  },
+  "complete_path_proof": {
+    "file": "reports/repair_2026-10-20/full_path_equivalence_v2_3.json",
+    "sha256": "72e98d6849906eb777bdcb926e75e78366f6bac55bac85066f80a1f096f8adca"
+  },
+  "current_gate_revalidation": {
+    "file": "reports/repair_2026-10-20/current_gate_revalidation_final_v2_3.json",
+    "sha256": "0d1b6f65b1b5ba7ca098fb66fe752efea7e3f80db1c11e3843940c2d35021492"
+  },
+  "real_news_label_disagreement": {
+    "file": "reports/repair_2026-10-20/real_anchor_unvalidated_label_variance_v2_3.json",
+    "sha256": "cfd6dea14f17c6bdbf9b0e400c6517595612944b32ce6c32fe2a02b3c58f9abd"
+  },
+  "availability_limitations": {
+    "generation_issues_resolved": false,
+    "failed_brief_cases": [
+      "weak_exploration_no_quote",
+      "future_planned_notice",
+      "dismissed_notice_not_verified_recovery",
+      "real_eni",
+      "supply_loss_40_with_flat_baseline"
+    ],
+    "failed_detail_cases": [
+      "supply_restore_40_with_flat_baseline"
+    ],
+    "rejected_outputs_counted_as_correct": false,
+    "market_accuracy": null,
+    "note": "Empty/truncated output, bounded repair budget termination and semantic rejection remain real model availability limits. Preventing an incorrect answer from being delivered does not mean that case now produces a usable analysis."
+  },
+  "qualifications": [
+    "The EPCM down-vs-original-flat disagreement is deliverable only for the fixed reviewed actual record and remains strictFalse; no verified real news-impact label or accuracy claim is created.",
+    "Minor scope/wording qualifications in the independent full-prose reviews remain; no claim of perfect wording is made.",
+    "Original model generation source maps and final post-generation validation maps are separate. Complete saved-response path replay does not create a new model call or guarantee deterministic model regeneration."
+  ],
+  "no_model_calls": true,
+  "no_database_access": true,
+  "no_network_calls": true
+}

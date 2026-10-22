@@ -1,0 +1,14 @@
+{
+  "status": "backend_updated_pages_pending",
+  "updated_at": "2026-10-20T20:03:04.237146+00:00",
+  "backend_record": "reports/repair_2026-10-20/backend_deployment.json",
+  "live_smoke_record": "reports/repair_2026-10-20/live_smoke_test.json",
+  "live_smoke_status": "running",
+  "site_url": "https://adamleopold.github.io/news-agent-standalone/",
+  "public_api_version": "ttf-news-standalone-2.0",
+  "public_api_http_status": 200,
+  "public_api_cors_origin": "https://adamleopold.github.io",
+  "original_predictions_and_validation_preserved": true,
+  "pages_updated": false,
+  "known_model_availability": "13 of 15 isolated cases returned reviewed valid output; two rejected after the bounded retry. Rejections are not correct forecasts."
+}

@@ -1,0 +1,2117 @@
+{
+  "audit": "independent_actual_bounded_output_stage_full_prose_review_v2_3",
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "audited_at": "2026-10-21T00:07:40.394477+00:00",
+  "stage": "candidate-bounded-output-validation",
+  "status": "partial_9_briefs_cohort_running",
+  "formal_briefs_requested": 20,
+  "formal_details_requested": 1,
+  "reviewed_briefs": 9,
+  "reviewed_details": 0,
+  "all_20_plus_1_complete": false,
+  "counts_so_far": {
+    "brief_delivered": 7,
+    "strict_contract_passed": 7,
+    "brief_failed": 2,
+    "actual_model_calls": 13,
+    "returned_body_P2_identified": 0,
+    "false_positive_rejection_cases_identified": 1
+  },
+  "case_reviews": [
+    {
+      "case": "supply_loss_40",
+      "mode": "brief",
+      "file": "reports/repair_2026-10-20/candidate-bounded-output-validation/supply_loss_40.json",
+      "file_sha256": "5fd936c046b2e9a5f19699ac7abbf11f5b10d1e191acd60bfabd9a630e1a1711",
+      "synthetic": true,
+      "prompt_version": "ttf-news-standalone-2.3",
+      "generation_source_hashes": {
+        "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+        "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+        "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+        "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+        "ttf_news/public_gateway.py": "fac8fe10429bc62a6be241817491d1f35eecdaa7f8a37357cb8dbcab7f43fae5",
+        "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+        "ttf_news/analysis.py": "1087340777d4a0b10883420d76f8ce142bc53dd7542c8ebc84893e317553a16f",
+        "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+        "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+        "ttf_news/semantics.py": "3efbab0f772839b2249a544c6c39aa4beb9386c1de9850dfe37a989129139e90",
+        "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+        "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+        "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+        "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+        "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+        "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+        "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+        "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+        "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+        "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+        "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+        "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+        "ttf_news/translation.py": "d47b232a5f77ea68e2d5bc5d092021e9727e555c6b1dd702922325519982d7c5",
+        "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+        "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+        "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+        "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+        "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987"
+      },
+      "input_sha256": "553fd886f414b2cfbd776893eb06a1caf72582ff87f878d064c5ae8fbf4e4dc7",
+      "input_sha256_independently_recomputed": "553fd886f414b2cfbd776893eb06a1caf72582ff87f878d064c5ae8fbf4e4dc7",
+      "source_context_provenance": {
+        "source_file": "reports/repair_2026-10-20/comparison_cases.json",
+        "source_file_sha256": "8d6f9202d21a3d27ac0f6714802d8da2eda76d321e4c820c0d4f73aae41eacd5",
+        "candidate_context_model_json_sha256": "3ec976e497023c8d3dbbdf9ddb222b54d8e58b1a5cb51494a9c0130b573f0203",
+        "candidate_context_unchanged": true,
+        "source_cohort": "original15"
+      },
+      "source_snapshot": {
+        "as_of": "2026-10-20T12:10:58.642680+00:00",
+        "session": {
+          "trade_date": "2026-10-20",
+          "window_start": "2026-10-19T15:15:00+00:00",
+          "window_end": "2026-10-20T15:15:00+00:00",
+          "cutoff_utc": "2026-10-20T15:15:00+00:00",
+          "cutoff_local": "2026-10-20T17:15:00+02:00",
+          "cutoff_singapore": "2026-10-20T23:15:00+08:00",
+          "display_timezone": "Europe/Amsterdam",
+          "seconds_to_close": 11041,
+          "calendar_source": "https://www.ice.com/publicdocs/ICE_Endex_Trading_Schedule.pdf",
+          "calendar_quality": "official_2026_2027",
+          "boundary": "[previous_settlement, current_settlement)"
+        },
+        "current_news": {
+          "id": "diagnostic-current",
+          "title": "隔离假设情景",
+          "summary": "诊断假设情景，以下事实按成立处理，不是真实报道：挪威主要气处理厂今日突发故障，运营方和出口计量同时确认输往欧洲的实际天然气流量减少40 mcm/d，预计持续7天。中断在本窗口首次公布并立即生效。欧洲天气、LNG到港、库存需求没有新增反向消息；未提供消息前后的报价反应。",
+          "source": "diagnostic_fixture",
+          "published_at": "2026-10-20T12:10:58.642680+00:00",
+          "first_seen_at": "2026-10-20T12:10:58.642680+00:00",
+          "timestamp_precision": "exact",
+          "url": "",
+          "version": 1
+        },
+        "window_news": [
+          {
+            "id": "diagnostic-current",
+            "title": "隔离假设情景",
+            "summary": "诊断假设情景，以下事实按成立处理，不是真实报道：挪威主要气处理厂今日突发故障，运营方和出口计量同时确认输往欧洲的实际天然气流量减少40 mcm/d，预计持续7天。中断在本窗口首次公布并立即生效。欧洲天气、LNG到港、库存需求没有新增反向消息；未提供消息前后的报价反应。",
+            "source": "diagnostic_fixture",
+            "published_at": "2026-10-20T12:10:58.642680+00:00",
+            "first_seen_at": "2026-10-20T12:10:58.642680+00:00",
+            "timestamp_precision": "exact",
+            "url": "",
+            "version": 1
+          }
+        ],
+        "historical_events": [],
+        "price_reference": {
+          "available": false,
+          "verified": false,
+          "missing_fields": [
+            "previous_contract_price",
+            "intraday_quote",
+            "sigma60"
+          ]
+        }
+      },
+      "recorded_contract_passed": true,
+      "delivered_result": true,
+      "result_canonical_sha256": "3bd24ad1a9a37faf4c802c1727c03cbb15bedd22dc4ae5862721e3a9b965ba46",
+      "all_returned_body_fields": {
+        "news_impact": {
+          "direction": "up",
+          "contextual_news_score": 1.5,
+          "confidence": 0.6,
+          "signal_strength": "moderate",
+          "summary": "挪威主要气处理厂突发故障导致向欧洲输气量下降40 mcm/d，预计持续7天，构成供应减少，可能推高TTF价格。",
+          "bullish_evidence": [
+            "[N0]挪威主要气处理厂突发故障导致向欧洲输气量下降40 mcm/d，预计持续7天 → TTF看涨机制（供应减少）"
+          ],
+          "bearish_evidence": [],
+          "neutralizing_evidence": []
+        },
+        "close_forecast": {
+          "confidence": 0.5,
+          "summary": "缺乏前一交易日同合约价格锚点及价格反应证据，无法判断收盘价相对前价的走势。",
+          "basis": "无前一交易日同合约价格锚点及价格反应证据，无法判断收盘价相对前价的走势。",
+          "extreme_move_risk": "缺乏价格反应证据，无法确认是否已计价。",
+          "evidence_status": "insufficient_evidence",
+          "direction": null
+        },
+        "analysis": {
+          "summary": "本窗口新增挪威主要气处理厂突发故障导致向欧洲输气量下降40 mcm/d，预计持续7天，构成供应减少，可能推高TTF价格。",
+          "evidence": [
+            "[N0]挪威主要气处理厂突发故障导致向欧洲输气量下降40 mcm/d，预计持续7天 → TTF供需机制"
+          ],
+          "negation_or_reversal": [],
+          "priced_in_comment": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格",
+          "matched_terms": [
+            "supply decrease"
+          ],
+          "historical_comparisons": []
+        },
+        "risk_flags": [
+          "手动输入仅作条件情景分析，事实尚未由本系统独立核实",
+          "缺少前一交易日可用行情；收盘预判仅由新闻证据驱动",
+          "缺少60日同合约波动率，异常等级尚不能按行情阈值核验",
+          "行情尚未验证为ICE官方日结算，不参与官方结算准确率评分",
+          "模型把握程度未经统计校准，不代表已验证准确率"
+        ],
+        "references": [
+          {
+            "id": "diagnostic-current",
+            "url": "",
+            "title": "隔离假设情景"
+          }
+        ],
+        "missing_fields": [
+          "independent_news_verification",
+          "current_news.source_url",
+          "previous_contract_price",
+          "sigma60",
+          "settlement_verification",
+          "intraday_quote",
+          "confidence_calibration"
+        ]
+      },
+      "judgment": "returned_body_no_P2_identified",
+      "entire_body_assessment": "Actualsourcepremise has independently confirmed Europeanflow−40mcm/d for7days without new opposingfacts. Up1.5 and bullishmechanism are correct. No previousday/marketanchor exists, so nullclose is justified. Missingreaction and pricingunknown explicit; no measuredzero/pricingclaim. Oneactualcall delivered.",
+      "material_known_logic_errors_in_returned_body": [],
+      "recorded_error": null,
+      "false_positive_rejection_identified": false,
+      "attempt_reviews": [
+        {
+          "attempt": 1,
+          "raw_content_sha256": "ee4602404cffa887a56a7b23faa4f7d21d3bf52271452fc4ccd3de2e0ec6ef20",
+          "done_reason": "stop",
+          "parsed_raw_body": {
+            "news_impact": {
+              "bullish_evidence": [
+                "[N0]挪威主要气处理厂突发故障导致向欧洲输气量下降40 mcm/d，预计持续7天 → TTF看涨机制（供应减少）"
+              ],
+              "bearish_evidence": [],
+              "neutralizing_evidence": [],
+              "summary": "挪威主要气处理厂突发故障导致向欧洲输气量下降40 mcm/d，预计持续7天，构成供应减少，可能推高TTF价格。",
+              "contextual_news_score": 1.5,
+              "direction": "up",
+              "confidence": 0.6,
+              "signal_strength": "moderate"
+            },
+            "close_forecast": {
+              "basis": "无前一交易日同合约价格锚点及价格反应证据，无法判断收盘价相对前价的走势。",
+              "summary": "缺乏前一交易日同合约价格锚点及价格反应证据，无法判断收盘价相对前价的走势。",
+              "evidence_status": "insufficient_evidence",
+              "direction": null,
+              "confidence": 0.5,
+              "extreme_move_risk": "缺乏价格反应证据，无法确认是否已计价。"
+            },
+            "analysis": {
+              "summary": "本窗口新增挪威主要气处理厂突发故障导致向欧洲输气量下降40 mcm/d，预计持续7天，构成供应减少，可能推高TTF价格。",
+              "evidence": [
+                "[N0]挪威主要气处理厂突发故障导致向欧洲输气量下降40 mcm/d，预计持续7天 → TTF供需机制"
+              ],
+              "negation_or_reversal": [],
+              "priced_in_comment": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格",
+              "matched_terms": [
+                "supply decrease"
+              ],
+              "historical_comparisons": []
+            },
+            "risk_flags": [],
+            "references": [
+              {
+                "id": "N0",
+                "url": ""
+              }
+            ],
+            "missing_fields": []
+          },
+          "model_total_duration_ns": 43589576375
+        }
+      ]
+    },
+    {
+      "case": "supply_restore_40",
+      "mode": "brief",
+      "file": "reports/repair_2026-10-20/candidate-bounded-output-validation/supply_restore_40.json",
+      "file_sha256": "f44fbd91bc2689913c5abbda118a1996768a00ca0a4d77837aa2c79f1764350f",
+      "synthetic": true,
+      "prompt_version": "ttf-news-standalone-2.3",
+      "generation_source_hashes": {
+        "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+        "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+        "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+        "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+        "ttf_news/public_gateway.py": "fac8fe10429bc62a6be241817491d1f35eecdaa7f8a37357cb8dbcab7f43fae5",
+        "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+        "ttf_news/analysis.py": "1087340777d4a0b10883420d76f8ce142bc53dd7542c8ebc84893e317553a16f",
+        "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+        "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+        "ttf_news/semantics.py": "3efbab0f772839b2249a544c6c39aa4beb9386c1de9850dfe37a989129139e90",
+        "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+        "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+        "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+        "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+        "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+        "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+        "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+        "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+        "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+        "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+        "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+        "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+        "ttf_news/translation.py": "d47b232a5f77ea68e2d5bc5d092021e9727e555c6b1dd702922325519982d7c5",
+        "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+        "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+        "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+        "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+        "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987"
+      },
+      "input_sha256": "34528870d8c93ae88245489993d0a452b219603f455aebefe082e48742003c94",
+      "input_sha256_independently_recomputed": "34528870d8c93ae88245489993d0a452b219603f455aebefe082e48742003c94",
+      "source_context_provenance": {
+        "source_file": "reports/repair_2026-10-20/comparison_cases.json",
+        "source_file_sha256": "8d6f9202d21a3d27ac0f6714802d8da2eda76d321e4c820c0d4f73aae41eacd5",
+        "candidate_context_model_json_sha256": "ee1d5e2e3892d7acd540639f9d4294eb867dd3410e4330fe14e3198dd18954ec",
+        "candidate_context_unchanged": true,
+        "source_cohort": "original15"
+      },
+      "source_snapshot": {
+        "as_of": "2026-10-20T12:10:58.642680+00:00",
+        "session": {
+          "trade_date": "2026-10-20",
+          "window_start": "2026-10-19T15:15:00+00:00",
+          "window_end": "2026-10-20T15:15:00+00:00",
+          "cutoff_utc": "2026-10-20T15:15:00+00:00",
+          "cutoff_local": "2026-10-20T17:15:00+02:00",
+          "cutoff_singapore": "2026-10-20T23:15:00+08:00",
+          "display_timezone": "Europe/Amsterdam",
+          "seconds_to_close": 11041,
+          "calendar_source": "https://www.ice.com/publicdocs/ICE_Endex_Trading_Schedule.pdf",
+          "calendar_quality": "official_2026_2027",
+          "boundary": "[previous_settlement, current_settlement)"
+        },
+        "current_news": {
+          "id": "diagnostic-current",
+          "title": "隔离假设情景",
+          "summary": "诊断假设情景，以下事实按成立处理，不是真实报道：挪威主要气处理厂今日提前恢复，运营方和出口计量同时确认输往欧洲的实际天然气流量增加40 mcm/d，恢复将持续。此前停产预期原定再持续7天，本窗口首次公布提前恢复。欧洲天气、LNG到港、库存需求没有新增反向消息；未提供消息前后的报价反应。",
+          "source": "diagnostic_fixture",
+          "published_at": "2026-10-20T12:10:58.642680+00:00",
+          "first_seen_at": "2026-10-20T12:10:58.642680+00:00",
+          "timestamp_precision": "exact",
+          "url": "",
+          "version": 1
+        },
+        "window_news": [
+          {
+            "id": "diagnostic-current",
+            "title": "隔离假设情景",
+            "summary": "诊断假设情景，以下事实按成立处理，不是真实报道：挪威主要气处理厂今日提前恢复，运营方和出口计量同时确认输往欧洲的实际天然气流量增加40 mcm/d，恢复将持续。此前停产预期原定再持续7天，本窗口首次公布提前恢复。欧洲天气、LNG到港、库存需求没有新增反向消息；未提供消息前后的报价反应。",
+            "source": "diagnostic_fixture",
+            "published_at": "2026-10-20T12:10:58.642680+00:00",
+            "first_seen_at": "2026-10-20T12:10:58.642680+00:00",
+            "timestamp_precision": "exact",
+            "url": "",
+            "version": 1
+          }
+        ],
+        "historical_events": [],
+        "price_reference": {
+          "available": false,
+          "verified": false,
+          "missing_fields": [
+            "previous_contract_price",
+            "intraday_quote",
+            "sigma60"
+          ]
+        }
+      },
+      "recorded_contract_passed": true,
+      "delivered_result": true,
+      "result_canonical_sha256": "2d466707b843ae50712134803c59d964dc9e32cd581bf5d14420fad86c046ed4",
+      "all_returned_body_fields": {
+        "news_impact": {
+          "direction": "down",
+          "contextual_news_score": -1.0,
+          "confidence": 0.5,
+          "signal_strength": "moderate",
+          "summary": "挪威主要气处理厂提前恢复，欧洲天然气流量增加40 mcm/d，供应增加，预期对TTF价格产生下行压力。",
+          "bullish_evidence": [],
+          "bearish_evidence": [
+            "[N0]挪威主要气处理厂提前恢复，欧洲天然气流量增加40 mcm/d → TTF供应增加导致价格下行。"
+          ],
+          "neutralizing_evidence": []
+        },
+        "close_forecast": {
+          "confidence": 0.3,
+          "summary": "缺乏前一交易日价格锚点及市场基准，无法判断收盘价相对前价的走势。",
+          "basis": "无可用基准，且新闻未显示价格反应，故无法判断收盘价相对前价的走势。",
+          "extreme_move_risk": "缺乏价格反应证据，市场可能未计价，存在未计价风险。",
+          "evidence_status": "insufficient_evidence",
+          "direction": null
+        },
+        "analysis": {
+          "summary": "新增事实为挪威主要气处理厂提前恢复，欧洲流量增加40 mcm/d，供应增加，预期对TTF价格产生下行压力。",
+          "evidence": [
+            "[N0]挪威主要气处理厂提前恢复，欧洲天然气流量增加40 mcm/d → TTF供应增加导致价格下行。"
+          ],
+          "negation_or_reversal": [],
+          "priced_in_comment": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格",
+          "matched_terms": [],
+          "historical_comparisons": []
+        },
+        "risk_flags": [
+          "手动输入仅作条件情景分析，事实尚未由本系统独立核实",
+          "缺少前一交易日可用行情；收盘预判仅由新闻证据驱动",
+          "缺少60日同合约波动率，异常等级尚不能按行情阈值核验",
+          "行情尚未验证为ICE官方日结算，不参与官方结算准确率评分",
+          "模型把握程度未经统计校准，不代表已验证准确率"
+        ],
+        "references": [
+          {
+            "id": "diagnostic-current",
+            "url": "",
+            "title": "隔离假设情景"
+          }
+        ],
+        "missing_fields": [
+          "previous_contract_price",
+          "intraday_quote",
+          "sigma60",
+          "market_baseline",
+          "settlement_anchor",
+          "independent_news_verification",
+          "current_news.source_url",
+          "settlement_verification",
+          "confidence_calibration"
+        ]
+      },
+      "judgment": "returned_body_no_P2_identified",
+      "entire_body_assessment": "Actualsourcepremise has confirmed Europeanflow+40mcm/d and earlyrestart. Finaldown−1 with bearishmechanism correct; nullclose has genuinely missinganchor. 未显示价格反应 is missingobservation underunknownpricing; 市场可能未计价 inrisk is conditional, not factualstatus. Firstactualdown with positive+1score violates signcontract and is preserved; schema_repair_usedtrue, real2ndgeneration corrects score without rewriting direction after generation.",
+      "material_known_logic_errors_in_returned_body": [],
+      "recorded_error": null,
+      "false_positive_rejection_identified": false,
+      "attempt_reviews": [
+        {
+          "attempt": 1,
+          "raw_content_sha256": "0a36d1368f618ccf95e4e55f7d4c39dc6cdb9c59d14508c483e8180c932ad2b2",
+          "done_reason": "stop",
+          "parsed_raw_body": {
+            "news_impact": {
+              "bullish_evidence": [],
+              "bearish_evidence": [
+                "[N0] 40 mcm/d增加 → TTF供应增加 → 价格下行。"
+              ],
+              "neutralizing_evidence": [],
+              "summary": "挪威主要气处理厂提前恢复，欧洲天然气流量增加40 mcm/d，供应增加，预期对TTF价格产生下行压力。",
+              "contextual_news_score": 1,
+              "direction": "down",
+              "confidence": 0.5,
+              "signal_strength": "moderate"
+            },
+            "close_forecast": {
+              "basis": "缺乏前一交易日价格锚点及市场基准，无法判断收盘价相对前价的走势。",
+              "summary": "缺乏前一交易日价格锚点及市场基准，无法判断收盘价相对前价的走势。",
+              "evidence_status": "insufficient_evidence",
+              "direction": null,
+              "confidence": 0.3,
+              "extreme_move_risk": "缺乏价格反应证据，无法确认是否已计价，存在价格波动风险。"
+            },
+            "analysis": {
+              "summary": "新增事实为挪威主要气处理厂提前恢复，欧洲流量增加40 mcm/d，供应增加，预期对TTF价格产生下行压力。",
+              "evidence": [
+                "[N0] 40 mcm/d增加 → TTF供应增加 → 价格下行。"
+              ],
+              "negation_or_reversal": [],
+              "priced_in_comment": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格",
+              "matched_terms": [
+                "supply_increase",
+                "TTF",
+                "40 mcm/d"
+              ],
+              "historical_comparisons": []
+            },
+            "risk_flags": [],
+            "references": [
+              {
+                "id": "N0",
+                "url": ""
+              }
+            ],
+            "missing_fields": []
+          },
+          "model_total_duration_ns": 59715849833
+        },
+        {
+          "attempt": 2,
+          "raw_content_sha256": "6a2a8fa1d9e71744544ca06e24f716e8ab972974a84910182d94fa7c8b7e98ec",
+          "done_reason": "stop",
+          "parsed_raw_body": {
+            "news_impact": {
+              "bullish_evidence": [],
+              "bearish_evidence": [
+                "[N0]挪威主要气处理厂提前恢复，欧洲天然气流量增加40 mcm/d → TTF供应增加导致价格下行。"
+              ],
+              "neutralizing_evidence": [],
+              "summary": "挪威主要气处理厂提前恢复，欧洲天然气流量增加40 mcm/d，供应增加，预期对TTF价格产生下行压力。",
+              "contextual_news_score": -1.0,
+              "direction": "down",
+              "confidence": 0.5,
+              "signal_strength": "moderate"
+            },
+            "close_forecast": {
+              "basis": "无可用基准，且新闻未显示价格反应，故无法判断收盘价相对前价的走势。",
+              "summary": "缺乏前一交易日价格锚点及市场基准，无法判断收盘价相对前价的走势。",
+              "evidence_status": "insufficient_evidence",
+              "direction": null,
+              "confidence": 0.3,
+              "extreme_move_risk": "缺乏价格反应证据，市场可能未计价，存在未计价风险。"
+            },
+            "analysis": {
+              "summary": "新增事实为挪威主要气处理厂提前恢复，欧洲流量增加40 mcm/d，供应增加，预期对TTF价格产生下行压力。",
+              "evidence": [
+                "[N0]挪威主要气处理厂提前恢复，欧洲天然气流量增加40 mcm/d → TTF供应增加导致价格下行。"
+              ],
+              "negation_or_reversal": [],
+              "priced_in_comment": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格",
+              "matched_terms": [],
+              "historical_comparisons": []
+            },
+            "risk_flags": [],
+            "references": [
+              {
+                "id": "N0",
+                "url": ""
+              }
+            ],
+            "missing_fields": [
+              "previous_contract_price",
+              "intraday_quote",
+              "sigma60",
+              "market_baseline",
+              "settlement_anchor"
+            ]
+          },
+          "model_total_duration_ns": 71719346416
+        }
+      ]
+    },
+    {
+      "case": "weak_exploration_no_quote",
+      "mode": "brief",
+      "file": "reports/repair_2026-10-20/candidate-bounded-output-validation/weak_exploration_no_quote.json",
+      "file_sha256": "ea776a6a8afe121998d205dca4edc98f9c6890e7af7b05fc82bd0337a09068e2",
+      "synthetic": true,
+      "prompt_version": "ttf-news-standalone-2.3",
+      "generation_source_hashes": {
+        "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+        "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+        "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+        "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+        "ttf_news/public_gateway.py": "fac8fe10429bc62a6be241817491d1f35eecdaa7f8a37357cb8dbcab7f43fae5",
+        "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+        "ttf_news/analysis.py": "1087340777d4a0b10883420d76f8ce142bc53dd7542c8ebc84893e317553a16f",
+        "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+        "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+        "ttf_news/semantics.py": "3efbab0f772839b2249a544c6c39aa4beb9386c1de9850dfe37a989129139e90",
+        "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+        "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+        "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+        "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+        "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+        "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+        "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+        "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+        "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+        "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+        "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+        "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+        "ttf_news/translation.py": "d47b232a5f77ea68e2d5bc5d092021e9727e555c6b1dd702922325519982d7c5",
+        "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+        "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+        "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+        "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+        "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987"
+      },
+      "input_sha256": "6d252c5abf714717916f99ef8e3f038aa5a942635795825e4dfa32da25dc9cfa",
+      "input_sha256_independently_recomputed": "6d252c5abf714717916f99ef8e3f038aa5a942635795825e4dfa32da25dc9cfa",
+      "source_context_provenance": {
+        "source_file": "reports/repair_2026-10-20/comparison_cases.json",
+        "source_file_sha256": "8d6f9202d21a3d27ac0f6714802d8da2eda76d321e4c820c0d4f73aae41eacd5",
+        "candidate_context_model_json_sha256": "3026b5577854ea229e8cd0083bd655ba9971fdd7e4b0c68d18f5c8add8fe4b96",
+        "candidate_context_unchanged": true,
+        "source_cohort": "original15"
+      },
+      "source_snapshot": {
+        "as_of": "2026-10-20T12:10:58.642680+00:00",
+        "session": {
+          "trade_date": "2026-10-20",
+          "window_start": "2026-10-19T15:15:00+00:00",
+          "window_end": "2026-10-20T15:15:00+00:00",
+          "cutoff_utc": "2026-10-20T15:15:00+00:00",
+          "cutoff_local": "2026-10-20T17:15:00+02:00",
+          "cutoff_singapore": "2026-10-20T23:15:00+08:00",
+          "display_timezone": "Europe/Amsterdam",
+          "seconds_to_close": 11041,
+          "calendar_source": "https://www.ice.com/publicdocs/ICE_Endex_Trading_Schedule.pdf",
+          "calendar_quality": "official_2026_2027",
+          "boundary": "[previous_settlement, current_settlement)"
+        },
+        "current_news": {
+          "id": "diagnostic-current",
+          "title": "隔离假设情景",
+          "summary": "诊断假设情景，以下事实按成立处理，不是真实报道：一家石油公司取得牙买加海域长期勘探许可证，尚未钻探，没有已探明天然气产量、投产日期或对欧洲供气的安排。公告本窗口首次公布。",
+          "source": "diagnostic_fixture",
+          "published_at": "2026-10-20T12:10:58.642680+00:00",
+          "first_seen_at": "2026-10-20T12:10:58.642680+00:00",
+          "timestamp_precision": "exact",
+          "url": "",
+          "version": 1
+        },
+        "window_news": [
+          {
+            "id": "diagnostic-current",
+            "title": "隔离假设情景",
+            "summary": "诊断假设情景，以下事实按成立处理，不是真实报道：一家石油公司取得牙买加海域长期勘探许可证，尚未钻探，没有已探明天然气产量、投产日期或对欧洲供气的安排。公告本窗口首次公布。",
+            "source": "diagnostic_fixture",
+            "published_at": "2026-10-20T12:10:58.642680+00:00",
+            "first_seen_at": "2026-10-20T12:10:58.642680+00:00",
+            "timestamp_precision": "exact",
+            "url": "",
+            "version": 1
+          }
+        ],
+        "historical_events": [],
+        "price_reference": {
+          "available": false,
+          "verified": false,
+          "missing_fields": [
+            "previous_contract_price",
+            "intraday_quote",
+            "sigma60"
+          ]
+        }
+      },
+      "recorded_contract_passed": false,
+      "delivered_result": false,
+      "result_canonical_sha256": null,
+      "all_returned_body_fields": {},
+      "judgment": "true_rejections_no_delivered_result",
+      "entire_body_assessment": "Bothraws wronglysay新闻未产生已计价影响 with no reference/reaction observations, exceeding pricingunknown. Secondalso replaces evidence with literal[N0]事实→... placeholder. Newsflat/nullclose themselves are reasonable for non-European explorationwithoutproductionoranchor; these labels do not rescue unsupportedpricing and placeholderevidence. Both calls stop with completeJSON/riskempty, so this is a semanticdeliveryfailure rather than a continuingrisk-loop truncation. No falsepositive identified; no fallback to oldresult.",
+      "material_known_logic_errors_in_returned_body": null,
+      "recorded_error": "模型JSON两次校验失败，未生成方向：close_forecast.summary、close_forecast.basis:缺少公告前后价格反应，不能宣称已计价/已消化；须区分计价未知；analysis.evidence[0]:证据照抄占位事实，必须写设施/规模/状态等本次实际事实及其机制",
+      "false_positive_rejection_identified": false,
+      "attempt_reviews": [
+        {
+          "attempt": 1,
+          "raw_content_sha256": "285a07eb5c55611343268f9b5acbb5889792100f53275663603d3e0db734940c",
+          "done_reason": "stop",
+          "parsed_raw_body": {
+            "news_impact": {
+              "bullish_evidence": [],
+              "bearish_evidence": [],
+              "neutralizing_evidence": [],
+              "summary": "该新闻仅涉及一家石油公司在牙买加海域取得长期勘探许可证，尚未钻探、无已探明天然气产量、无投产日期或欧洲供气安排，因而对TTF价格暂无即时供需影响。",
+              "contextual_news_score": 0,
+              "direction": "flat",
+              "confidence": 0.8,
+              "signal_strength": "weak"
+            },
+            "close_forecast": {
+              "basis": "缺乏前一交易日同合约价格锚点及市场基准，且新闻未产生已计价影响，故无法给出明确收盘价相对前价的预判。",
+              "summary": "缺乏可用基准与价格锚点，无法判断收盘价相对前价的走势。",
+              "evidence_status": "insufficient_evidence",
+              "direction": null,
+              "confidence": 0.5,
+              "extreme_move_risk": "缺乏价格锚点，无法排除极端波动风险。"
+            },
+            "analysis": {
+              "summary": "新增事实为勘探许可，未产生实际供给，净影响为中性。",
+              "evidence": [
+                "[N0]石油公司取得牙买加海域勘探许可证 → TTF供需无即时影响"
+              ],
+              "negation_or_reversal": [],
+              "priced_in_comment": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格",
+              "matched_terms": [],
+              "historical_comparisons": []
+            },
+            "risk_flags": [],
+            "references": [
+              {
+                "id": "N0",
+                "url": ""
+              }
+            ],
+            "missing_fields": [
+              "previous_contract_price",
+              "intraday_quote",
+              "sigma60"
+            ]
+          },
+          "model_total_duration_ns": 92668872375
+        },
+        {
+          "attempt": 2,
+          "raw_content_sha256": "dba9649c3d3b7799b88f5757db8b895548d13185f0fdfb08c6a9e950608ef867",
+          "done_reason": "stop",
+          "parsed_raw_body": {
+            "news_impact": {
+              "bullish_evidence": [],
+              "bearish_evidence": [],
+              "neutralizing_evidence": [],
+              "summary": "新增事实为一家石油公司在牙买加海域取得长期勘探许可证，尚未钻探、无已探明天然气产量、无投产日期或欧洲供气安排，因而对TTF价格暂无即时供需影响。",
+              "contextual_news_score": 0,
+              "direction": "flat",
+              "confidence": 0.8,
+              "signal_strength": "moderate"
+            },
+            "close_forecast": {
+              "basis": "无可用基准，缺乏前一交易日价格锚点，新闻未产生已计价影响，故无法给出明确收盘价相对前价的预判。",
+              "summary": "缺乏前一交易日同合约价格锚点及市场基准，且新闻未产生已计价影响，故无法给出明确收盘价相对前价的预判。",
+              "evidence_status": "insufficient_evidence",
+              "direction": null,
+              "confidence": 0.5,
+              "extreme_move_risk": "缺乏价格锚点，无法确认新闻是否已计价，存在未知风险"
+            },
+            "analysis": {
+              "summary": "新增事实为勘探许可，未产生实际供给，净影响为中性。",
+              "evidence": [
+                "[N0]事实 → TTF供需无即时影响"
+              ],
+              "negation_or_reversal": [],
+              "priced_in_comment": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格",
+              "matched_terms": [],
+              "historical_comparisons": []
+            },
+            "risk_flags": [],
+            "references": [
+              {
+                "id": "N0",
+                "url": ""
+              }
+            ],
+            "missing_fields": [
+              "previous_contract_price",
+              "intraday_quote",
+              "sigma60"
+            ]
+          },
+          "model_total_duration_ns": 71641984708
+        }
+      ]
+    },
+    {
+      "case": "warm_heating_demand",
+      "mode": "brief",
+      "file": "reports/repair_2026-10-20/candidate-bounded-output-validation/warm_heating_demand.json",
+      "file_sha256": "c03ad9a2877f6de0f4677f2c99005944ed58a3ccb58e37e0f36ae65718344621",
+      "synthetic": true,
+      "prompt_version": "ttf-news-standalone-2.3",
+      "generation_source_hashes": {
+        "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+        "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+        "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+        "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+        "ttf_news/public_gateway.py": "fac8fe10429bc62a6be241817491d1f35eecdaa7f8a37357cb8dbcab7f43fae5",
+        "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+        "ttf_news/analysis.py": "1087340777d4a0b10883420d76f8ce142bc53dd7542c8ebc84893e317553a16f",
+        "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+        "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+        "ttf_news/semantics.py": "3efbab0f772839b2249a544c6c39aa4beb9386c1de9850dfe37a989129139e90",
+        "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+        "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+        "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+        "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+        "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+        "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+        "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+        "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+        "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+        "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+        "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+        "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+        "ttf_news/translation.py": "d47b232a5f77ea68e2d5bc5d092021e9727e555c6b1dd702922325519982d7c5",
+        "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+        "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+        "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+        "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+        "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987"
+      },
+      "input_sha256": "ac46f6f4ed4d341d627245bc13e3f29355d5e5adaf3b970a2ed5b343defe21b7",
+      "input_sha256_independently_recomputed": "ac46f6f4ed4d341d627245bc13e3f29355d5e5adaf3b970a2ed5b343defe21b7",
+      "source_context_provenance": {
+        "source_file": "reports/repair_2026-10-20/comparison_cases.json",
+        "source_file_sha256": "8d6f9202d21a3d27ac0f6714802d8da2eda76d321e4c820c0d4f73aae41eacd5",
+        "candidate_context_model_json_sha256": "2952c15beee63be15ba64c0c508ae8c9fc9d921df8bb20db973ba6c42e2ca908",
+        "candidate_context_unchanged": true,
+        "source_cohort": "original15"
+      },
+      "source_snapshot": {
+        "as_of": "2026-10-20T12:10:58.642680+00:00",
+        "session": {
+          "trade_date": "2026-10-20",
+          "window_start": "2026-10-19T15:15:00+00:00",
+          "window_end": "2026-10-20T15:15:00+00:00",
+          "cutoff_utc": "2026-10-20T15:15:00+00:00",
+          "cutoff_local": "2026-10-20T17:15:00+02:00",
+          "cutoff_singapore": "2026-10-20T23:15:00+08:00",
+          "display_timezone": "Europe/Amsterdam",
+          "seconds_to_close": 11041,
+          "calendar_source": "https://www.ice.com/publicdocs/ICE_Endex_Trading_Schedule.pdf",
+          "calendar_quality": "official_2026_2027",
+          "boundary": "[previous_settlement, current_settlement)"
+        },
+        "current_news": {
+          "id": "diagnostic-current",
+          "title": "隔离假设情景",
+          "summary": "隔离假设：欧洲官方天气预报将未来七天气温上修4摄氏度，预计采暖天然气需求下降15%。本窗口首次发布，未给供应中断或其他反向事实。",
+          "source": "diagnostic_fixture",
+          "published_at": "2026-10-20T12:10:58.642680+00:00",
+          "first_seen_at": "2026-10-20T12:10:58.642680+00:00",
+          "timestamp_precision": "exact",
+          "url": "",
+          "version": 1
+        },
+        "window_news": [
+          {
+            "id": "diagnostic-current",
+            "title": "隔离假设情景",
+            "summary": "隔离假设：欧洲官方天气预报将未来七天气温上修4摄氏度，预计采暖天然气需求下降15%。本窗口首次发布，未给供应中断或其他反向事实。",
+            "source": "diagnostic_fixture",
+            "published_at": "2026-10-20T12:10:58.642680+00:00",
+            "first_seen_at": "2026-10-20T12:10:58.642680+00:00",
+            "timestamp_precision": "exact",
+            "url": "",
+            "version": 1
+          }
+        ],
+        "historical_events": [],
+        "price_reference": {
+          "available": false,
+          "verified": false,
+          "missing_fields": [
+            "previous_contract_price",
+            "intraday_quote",
+            "sigma60"
+          ]
+        }
+      },
+      "recorded_contract_passed": true,
+      "delivered_result": true,
+      "result_canonical_sha256": "fa86412431fd831e17c2974a61fa5afc5b3e42bac2f074fe3f50aa628593b2f7",
+      "all_returned_body_fields": {
+        "news_impact": {
+          "direction": "down",
+          "contextual_news_score": -1.0,
+          "confidence": 0.4,
+          "signal_strength": "weak",
+          "summary": "欧洲官方天气预报上修4°C，预计采暖天然气需求下降15%，对TTF构成下行压力，但缺乏价格反应证据，影响不确定。",
+          "bullish_evidence": [],
+          "bearish_evidence": [
+            "[N0]隔离假设：欧洲官方天气预报将未来七天气温上修4摄氏度，预计采暖天然气需求下降15% → TTF看跌机制"
+          ],
+          "neutralizing_evidence": []
+        },
+        "close_forecast": {
+          "confidence": 0.3,
+          "summary": "缺乏前一交易日同合约价格锚点，无法判断TTF收盘相对前价的走势。",
+          "basis": "无可用市场基准，且新闻仅为需求下降预测，缺乏价格反应证据，故无法给出明确预判。",
+          "extreme_move_risk": "缺乏价格反应证据，可能存在未计价风险。",
+          "evidence_status": "insufficient_evidence",
+          "direction": null
+        },
+        "analysis": {
+          "summary": "新增需求下降预测，可能对TTF构成下行压力，但缺乏价格反应证据，影响不确定。",
+          "evidence": [
+            "[N0]隔离假设：欧洲官方天气预报将未来七天气温上修4摄氏度，预计采暖天然气需求下降15% → TTF供需或价格传导"
+          ],
+          "negation_or_reversal": [],
+          "priced_in_comment": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格",
+          "matched_terms": [
+            "需求下降",
+            "温度上升"
+          ],
+          "historical_comparisons": []
+        },
+        "risk_flags": [
+          "手动输入仅作条件情景分析，事实尚未由本系统独立核实",
+          "缺少前一交易日可用行情；收盘预判仅由新闻证据驱动",
+          "缺少60日同合约波动率，异常等级尚不能按行情阈值核验",
+          "行情尚未验证为ICE官方日结算，不参与官方结算准确率评分",
+          "模型把握程度未经统计校准，不代表已验证准确率"
+        ],
+        "references": [
+          {
+            "id": "diagnostic-current",
+            "url": "",
+            "title": "隔离假设情景"
+          }
+        ],
+        "missing_fields": [
+          "independent_news_verification",
+          "current_news.source_url",
+          "previous_contract_price",
+          "sigma60",
+          "settlement_verification",
+          "intraday_quote",
+          "confidence_calibration"
+        ]
+      },
+      "judgment": "returned_body_no_P2_identified",
+      "entire_body_assessment": "Sourceforecasts warmerweather+4degrees andheatingdemand−15percent, correctly givingdown−1. Forecaststatus preserved, not realizedweather/demand. Missingpreviousprice/marketbaseline supportsnullclose. Unknownreaction/pricing stays explicit; possibleunpricedrisk is conditional notobservedstatus.",
+      "material_known_logic_errors_in_returned_body": [],
+      "recorded_error": null,
+      "false_positive_rejection_identified": false,
+      "attempt_reviews": [
+        {
+          "attempt": 1,
+          "raw_content_sha256": "8fbf7440af41867fc14d49f5c84dbaaa76bfb52877ee551140372dde8308c0d2",
+          "done_reason": "stop",
+          "parsed_raw_body": {
+            "news_impact": {
+              "bullish_evidence": [],
+              "bearish_evidence": [
+                "[N0]隔离假设：欧洲官方天气预报将未来七天气温上修4摄氏度，预计采暖天然气需求下降15% → TTF看跌机制"
+              ],
+              "neutralizing_evidence": [],
+              "summary": "欧洲官方天气预报上修4°C，预计采暖天然气需求下降15%，对TTF构成下行压力，但缺乏价格反应证据，影响不确定。",
+              "contextual_news_score": -1,
+              "direction": "down",
+              "confidence": 0.4,
+              "signal_strength": "weak"
+            },
+            "close_forecast": {
+              "basis": "无可用市场基准，且新闻仅为需求下降预测，缺乏价格反应证据，故无法给出明确预判。",
+              "summary": "缺乏前一交易日同合约价格锚点，无法判断TTF收盘相对前价的走势。",
+              "evidence_status": "insufficient_evidence",
+              "direction": null,
+              "confidence": 0.3,
+              "extreme_move_risk": "缺乏价格反应证据，可能存在未计价风险。"
+            },
+            "analysis": {
+              "summary": "新增需求下降预测，可能对TTF构成下行压力，但缺乏价格反应证据，影响不确定。",
+              "evidence": [
+                "[N0]隔离假设：欧洲官方天气预报将未来七天气温上修4摄氏度，预计采暖天然气需求下降15% → TTF供需或价格传导"
+              ],
+              "negation_or_reversal": [],
+              "priced_in_comment": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格",
+              "matched_terms": [
+                "需求下降",
+                "温度上升"
+              ],
+              "historical_comparisons": []
+            },
+            "risk_flags": [],
+            "references": [
+              {
+                "id": "N0",
+                "url": ""
+              }
+            ],
+            "missing_fields": []
+          },
+          "model_total_duration_ns": 89212048833
+        }
+      ]
+    },
+    {
+      "case": "cold_heating_demand",
+      "mode": "brief",
+      "file": "reports/repair_2026-10-20/candidate-bounded-output-validation/cold_heating_demand.json",
+      "file_sha256": "611e21b6a3cfecb0a624c6b29f6b3b0576f2b62692da43678d1159f9e78cfeb0",
+      "synthetic": true,
+      "prompt_version": "ttf-news-standalone-2.3",
+      "generation_source_hashes": {
+        "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+        "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+        "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+        "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+        "ttf_news/public_gateway.py": "fac8fe10429bc62a6be241817491d1f35eecdaa7f8a37357cb8dbcab7f43fae5",
+        "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+        "ttf_news/analysis.py": "1087340777d4a0b10883420d76f8ce142bc53dd7542c8ebc84893e317553a16f",
+        "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+        "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+        "ttf_news/semantics.py": "3efbab0f772839b2249a544c6c39aa4beb9386c1de9850dfe37a989129139e90",
+        "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+        "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+        "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+        "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+        "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+        "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+        "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+        "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+        "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+        "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+        "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+        "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+        "ttf_news/translation.py": "d47b232a5f77ea68e2d5bc5d092021e9727e555c6b1dd702922325519982d7c5",
+        "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+        "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+        "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+        "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+        "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987"
+      },
+      "input_sha256": "d9df78997d786ae788e9377cc47347fd44dfd4c6695428d930717c4e26582fc0",
+      "input_sha256_independently_recomputed": "d9df78997d786ae788e9377cc47347fd44dfd4c6695428d930717c4e26582fc0",
+      "source_context_provenance": {
+        "source_file": "reports/repair_2026-10-20/comparison_cases.json",
+        "source_file_sha256": "8d6f9202d21a3d27ac0f6714802d8da2eda76d321e4c820c0d4f73aae41eacd5",
+        "candidate_context_model_json_sha256": "625975c4a3324a6af3aff281d909f9ec92c6cf7f54463952d199afe11bebee56",
+        "candidate_context_unchanged": true,
+        "source_cohort": "original15"
+      },
+      "source_snapshot": {
+        "as_of": "2026-10-20T12:10:58.642680+00:00",
+        "session": {
+          "trade_date": "2026-10-20",
+          "window_start": "2026-10-19T15:15:00+00:00",
+          "window_end": "2026-10-20T15:15:00+00:00",
+          "cutoff_utc": "2026-10-20T15:15:00+00:00",
+          "cutoff_local": "2026-10-20T17:15:00+02:00",
+          "cutoff_singapore": "2026-10-20T23:15:00+08:00",
+          "display_timezone": "Europe/Amsterdam",
+          "seconds_to_close": 11041,
+          "calendar_source": "https://www.ice.com/publicdocs/ICE_Endex_Trading_Schedule.pdf",
+          "calendar_quality": "official_2026_2027",
+          "boundary": "[previous_settlement, current_settlement)"
+        },
+        "current_news": {
+          "id": "diagnostic-current",
+          "title": "隔离假设情景",
+          "summary": "隔离假设：欧洲官方天气预报将未来七天气温下修4摄氏度，预计采暖天然气需求上升15%。本窗口首次发布，未给供应恢复或其他反向事实。",
+          "source": "diagnostic_fixture",
+          "published_at": "2026-10-20T12:10:58.642680+00:00",
+          "first_seen_at": "2026-10-20T12:10:58.642680+00:00",
+          "timestamp_precision": "exact",
+          "url": "",
+          "version": 1
+        },
+        "window_news": [
+          {
+            "id": "diagnostic-current",
+            "title": "隔离假设情景",
+            "summary": "隔离假设：欧洲官方天气预报将未来七天气温下修4摄氏度，预计采暖天然气需求上升15%。本窗口首次发布，未给供应恢复或其他反向事实。",
+            "source": "diagnostic_fixture",
+            "published_at": "2026-10-20T12:10:58.642680+00:00",
+            "first_seen_at": "2026-10-20T12:10:58.642680+00:00",
+            "timestamp_precision": "exact",
+            "url": "",
+            "version": 1
+          }
+        ],
+        "historical_events": [],
+        "price_reference": {
+          "available": false,
+          "verified": false,
+          "missing_fields": [
+            "previous_contract_price",
+            "intraday_quote",
+            "sigma60"
+          ]
+        }
+      },
+      "recorded_contract_passed": false,
+      "delivered_result": false,
+      "result_canonical_sha256": null,
+      "all_returned_body_fields": {},
+      "judgment": "cosmetic_risk_duplicate_false_positive_no_delivered_result",
+      "entire_body_assessment": "Both complete rawbodies have correctforecast−4degrees/+15percentdemand, up+1 and sourceevidence; missingbaseline justifiesnullclose; no P2factual/economic/price issue. Onlyexactduplicate true sigma60 risknotes withinmax2 cause uniquenessrejection. This is a narrowcosmeticFP/availabilityregression, not a failedsupplysign analysis. Originalrecord remainsfailed/nodelivery and mustnotborrow oldsuccess.",
+      "material_known_logic_errors_in_returned_body": null,
+      "recorded_error": "模型JSON两次校验失败，未生成方向：risk_flags:不得重复相同条目，请只保留不同的事实或风险",
+      "false_positive_rejection_identified": true,
+      "attempt_reviews": [
+        {
+          "attempt": 1,
+          "raw_content_sha256": "caf28c1c8587e25b6c2bf08411e72fbbcdd7240ffa7d05209b53aa2ff48f0902",
+          "done_reason": "stop",
+          "parsed_raw_body": {
+            "news_impact": {
+              "bullish_evidence": [
+                "[N0]隔离假设：欧洲官方天气预报将未来七天气温下修4摄氏度，预计采暖天然气需求上升15% → TTF需求增加"
+              ],
+              "bearish_evidence": [],
+              "neutralizing_evidence": [],
+              "summary": "欧洲天气预报显示未来七日气温下降4°C，预计采暖天然气需求上升15%，可能推高TTF价格，但缺乏价格基准与流量数据，影响不确定。",
+              "contextual_news_score": 1,
+              "direction": "up",
+              "confidence": 0.4,
+              "signal_strength": "weak"
+            },
+            "close_forecast": {
+              "basis": "无前一交易日同合约价格锚点，无法判断价格走势。",
+              "summary": "缺乏价格基准与市场反应，无法给出明确收盘预测。",
+              "evidence_status": "insufficient_evidence",
+              "direction": null,
+              "confidence": 0.3,
+              "extreme_move_risk": "缺乏价格基准，无法评估极端波动"
+            },
+            "analysis": {
+              "summary": "新增需求上升预测，可能推高TTF价格，但缺乏价格基准与流量数据，无法确认已计价。",
+              "evidence": [
+                "[N0]隔离假设：欧洲官方天气预报将未来七天气温下修4摄氏度，预计采暖天然气需求上升15% → TTF需求增加"
+              ],
+              "negation_or_reversal": [],
+              "priced_in_comment": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格",
+              "matched_terms": [
+                "demand_increase"
+              ],
+              "historical_comparisons": []
+            },
+            "risk_flags": [
+              "price_reference:输入缺少可用sigma60，异常等级的波动率门槛无法核验",
+              "price_reference:输入缺少可用sigma60，异常等级的波动率门槛无法核验"
+            ],
+            "references": [
+              {
+                "id": "N0",
+                "url": ""
+              }
+            ],
+            "missing_fields": [
+              "previous_contract_price",
+              "intraday_quote",
+              "sigma60"
+            ]
+          },
+          "model_total_duration_ns": 53020882667
+        },
+        {
+          "attempt": 2,
+          "raw_content_sha256": "f8ec1211e9808499e953431034408ff666cf81128c38b15b1fa814bbb092c20f",
+          "done_reason": "stop",
+          "parsed_raw_body": {
+            "news_impact": {
+              "bullish_evidence": [
+                "[N0] 未来七日气温下降4°C，预计采暖天然气需求上升15% → TTF需求增加导致价格上行"
+              ],
+              "bearish_evidence": [],
+              "neutralizing_evidence": [],
+              "summary": "欧洲天气预报显示未来七日气温下降4°C，预计采暖天然气需求上升15%，可能推高TTF价格，但缺乏价格基准与流量数据，影响不确定。",
+              "contextual_news_score": 1,
+              "direction": "up",
+              "confidence": 0.5,
+              "signal_strength": "moderate"
+            },
+            "close_forecast": {
+              "basis": "缺乏前一交易日同合约价格锚点，无法判断价格走势。",
+              "summary": "缺乏前一交易日同合约价格锚点，无法判断价格走势。",
+              "evidence_status": "insufficient_evidence",
+              "direction": null,
+              "confidence": 0.0,
+              "extreme_move_risk": "缺乏价格基准与流量数据，无法确认新闻已计价，存在价格反应不确定性。"
+            },
+            "analysis": {
+              "summary": "新增需求上升预测，可能推高TTF价格，但缺乏价格基准与流量数据，无法确认已计价。",
+              "evidence": [
+                "[N0] 未来七日气温下降4°C，预计采暖天然气需求上升15% → TTF供需或价格传导"
+              ],
+              "negation_or_reversal": [],
+              "priced_in_comment": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格",
+              "matched_terms": [],
+              "historical_comparisons": []
+            },
+            "risk_flags": [
+              "price_reference:输入缺少可用sigma60，异常等级的波动率门槛无法核验",
+              "price_reference:输入缺少可用sigma60，异常等级的波动率门槛无法核验"
+            ],
+            "references": [
+              {
+                "id": "N0",
+                "url": ""
+              }
+            ],
+            "missing_fields": [
+              "previous_contract_price",
+              "intraday_quote",
+              "sigma60"
+            ]
+          },
+          "model_total_duration_ns": 70867153542
+        }
+      ],
+      "independent_FP_review": {
+        "file": "reports/repair_2026-10-20/independent_bounded_output_cold_duplicate_risk_review_v2_3.json",
+        "sha256": "ab245386ad86565069bdddf7a8f98c808a70fbd6f43e76ec697af8106332c3fd"
+      }
+    },
+    {
+      "case": "negated_outage",
+      "mode": "brief",
+      "file": "reports/repair_2026-10-20/candidate-bounded-output-validation/negated_outage.json",
+      "file_sha256": "ef907029c3f4702e657ba80fb3e1132747c3fe7245bee88cee272fc80c15217a",
+      "synthetic": true,
+      "prompt_version": "ttf-news-standalone-2.3",
+      "generation_source_hashes": {
+        "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+        "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+        "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+        "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+        "ttf_news/public_gateway.py": "fac8fe10429bc62a6be241817491d1f35eecdaa7f8a37357cb8dbcab7f43fae5",
+        "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+        "ttf_news/analysis.py": "1087340777d4a0b10883420d76f8ce142bc53dd7542c8ebc84893e317553a16f",
+        "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+        "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+        "ttf_news/semantics.py": "3efbab0f772839b2249a544c6c39aa4beb9386c1de9850dfe37a989129139e90",
+        "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+        "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+        "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+        "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+        "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+        "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+        "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+        "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+        "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+        "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+        "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+        "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+        "ttf_news/translation.py": "d47b232a5f77ea68e2d5bc5d092021e9727e555c6b1dd702922325519982d7c5",
+        "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+        "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+        "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+        "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+        "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987"
+      },
+      "input_sha256": "cd7bc687f1582ff719ddc239f55399405c0dc494c214b24da84b9371e6ca5ce2",
+      "input_sha256_independently_recomputed": "cd7bc687f1582ff719ddc239f55399405c0dc494c214b24da84b9371e6ca5ce2",
+      "source_context_provenance": {
+        "source_file": "reports/repair_2026-10-20/comparison_cases.json",
+        "source_file_sha256": "8d6f9202d21a3d27ac0f6714802d8da2eda76d321e4c820c0d4f73aae41eacd5",
+        "candidate_context_model_json_sha256": "8873deb8c6c3977552bae8a8ea817bffbc04ab054f69487adf0f800cce959245",
+        "candidate_context_unchanged": true,
+        "source_cohort": "original15"
+      },
+      "source_snapshot": {
+        "as_of": "2026-10-20T12:10:58.642680+00:00",
+        "session": {
+          "trade_date": "2026-10-20",
+          "window_start": "2026-10-19T15:15:00+00:00",
+          "window_end": "2026-10-20T15:15:00+00:00",
+          "cutoff_utc": "2026-10-20T15:15:00+00:00",
+          "cutoff_local": "2026-10-20T17:15:00+02:00",
+          "cutoff_singapore": "2026-10-20T23:15:00+08:00",
+          "display_timezone": "Europe/Amsterdam",
+          "seconds_to_close": 11041,
+          "calendar_source": "https://www.ice.com/publicdocs/ICE_Endex_Trading_Schedule.pdf",
+          "calendar_quality": "official_2026_2027",
+          "boundary": "[previous_settlement, current_settlement)"
+        },
+        "current_news": {
+          "id": "diagnostic-current",
+          "title": "隔离假设情景",
+          "summary": "隔离假设：运营方否认供应中断，出口计量确认流量未变；传闻中的意外停产未发生。没有提供先前溢价、报价变化或其他欧洲供需消息。",
+          "source": "diagnostic_fixture",
+          "published_at": "2026-10-20T12:10:58.642680+00:00",
+          "first_seen_at": "2026-10-20T12:10:58.642680+00:00",
+          "timestamp_precision": "exact",
+          "url": "",
+          "version": 1
+        },
+        "window_news": [
+          {
+            "id": "diagnostic-current",
+            "title": "隔离假设情景",
+            "summary": "隔离假设：运营方否认供应中断，出口计量确认流量未变；传闻中的意外停产未发生。没有提供先前溢价、报价变化或其他欧洲供需消息。",
+            "source": "diagnostic_fixture",
+            "published_at": "2026-10-20T12:10:58.642680+00:00",
+            "first_seen_at": "2026-10-20T12:10:58.642680+00:00",
+            "timestamp_precision": "exact",
+            "url": "",
+            "version": 1
+          }
+        ],
+        "historical_events": [],
+        "price_reference": {
+          "available": false,
+          "verified": false,
+          "missing_fields": [
+            "previous_contract_price",
+            "intraday_quote",
+            "sigma60"
+          ]
+        }
+      },
+      "recorded_contract_passed": true,
+      "delivered_result": true,
+      "result_canonical_sha256": "32948ec54f210833cf9f9a6da4aec6f7d6ef457021aba56b552dea8b394fcfc3",
+      "all_returned_body_fields": {
+        "news_impact": {
+          "direction": "flat",
+          "contextual_news_score": 0.0,
+          "confidence": 0.5,
+          "signal_strength": "weak",
+          "summary": "运营方否认供应中断，出口计量确认流量未变，传闻停产未发生，缺乏价格或供需变化证据，故对TTF价格影响不明显。",
+          "bullish_evidence": [],
+          "bearish_evidence": [],
+          "neutralizing_evidence": []
+        },
+        "close_forecast": {
+          "confidence": 0.3,
+          "summary": "缺乏前一交易日同合约价格锚点及市场基准，无法判断收盘价相对前价的走势。",
+          "basis": "缺乏前一交易日同合约价格锚点及市场基准，无法判断收盘价相对前价的走势。",
+          "extreme_move_risk": "",
+          "evidence_status": "insufficient_evidence",
+          "direction": null
+        },
+        "analysis": {
+          "summary": "新增事实：运营方否认供应中断，出口计量确认流量未变，传闻停产未发生。无价格或供需变化证据，故对TTF价格影响不确定。",
+          "evidence": [
+            "[N0]运营方否认供应中断，出口计量确认流量未变 → TTF供需无变化"
+          ],
+          "negation_or_reversal": [],
+          "priced_in_comment": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格",
+          "matched_terms": [
+            "供应中断",
+            "出口计量",
+            "流量"
+          ],
+          "historical_comparisons": []
+        },
+        "risk_flags": [
+          "手动输入仅作条件情景分析，事实尚未由本系统独立核实",
+          "缺少前一交易日可用行情；收盘预判仅由新闻证据驱动",
+          "缺少60日同合约波动率，异常等级尚不能按行情阈值核验",
+          "行情尚未验证为ICE官方日结算，不参与官方结算准确率评分",
+          "模型把握程度未经统计校准，不代表已验证准确率"
+        ],
+        "references": [
+          {
+            "id": "diagnostic-current",
+            "url": "",
+            "title": "隔离假设情景"
+          }
+        ],
+        "missing_fields": [
+          "independent_news_verification",
+          "current_news.source_url",
+          "previous_contract_price",
+          "sigma60",
+          "settlement_verification",
+          "intraday_quote",
+          "confidence_calibration"
+        ]
+      },
+      "judgment": "returned_body_no_P2_identified",
+      "entire_body_assessment": "Source operator explicitlydeniesoutage andexportmetering confirmsunchangedflow. Neutralnews pressure is coherent without inventingapriorpremiumorreversal. TTF供需无变化 evidence is scoped to thenewdenial/metering mechanism, not independentwholeEuropeanphysicalequilibrium. No referenceanchor supportsnullclose; priceimpact is uncertain and pricingunknown, notobservedzero.",
+      "material_known_logic_errors_in_returned_body": [],
+      "recorded_error": null,
+      "false_positive_rejection_identified": false,
+      "attempt_reviews": [
+        {
+          "attempt": 1,
+          "raw_content_sha256": "44a850c51e1c26409a44b6e9d04d77fec80984c473a2b37f13be64e669779671",
+          "done_reason": "stop",
+          "parsed_raw_body": {
+            "news_impact": {
+              "bullish_evidence": [],
+              "bearish_evidence": [],
+              "neutralizing_evidence": [],
+              "summary": "运营方否认供应中断，出口计量确认流量未变，传闻停产未发生，缺乏价格或供需变化证据，故对TTF价格影响不明显。",
+              "contextual_news_score": 0,
+              "direction": "flat",
+              "confidence": 0.5,
+              "signal_strength": "weak"
+            },
+            "close_forecast": {
+              "basis": "缺乏前一交易日同合约价格锚点及市场基准，无法判断收盘价相对前价的走势。",
+              "summary": "缺乏前一交易日同合约价格锚点及市场基准，无法判断收盘价相对前价的走势。",
+              "evidence_status": "insufficient_evidence",
+              "direction": null,
+              "confidence": 0.3,
+              "extreme_move_risk": ""
+            },
+            "analysis": {
+              "summary": "新增事实：运营方否认供应中断，出口计量确认流量未变，传闻停产未发生。无价格或供需变化证据，故对TTF价格影响不确定。",
+              "evidence": [
+                "[N0]运营方否认供应中断，出口计量确认流量未变 → TTF供需无变化"
+              ],
+              "negation_or_reversal": [],
+              "priced_in_comment": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格",
+              "matched_terms": [
+                "供应中断",
+                "出口计量",
+                "流量"
+              ],
+              "historical_comparisons": []
+            },
+            "risk_flags": [],
+            "references": [
+              {
+                "id": "N0",
+                "url": ""
+              }
+            ],
+            "missing_fields": []
+          },
+          "model_total_duration_ns": 125502057875
+        }
+      ]
+    },
+    {
+      "case": "cumulative_shock_then_weak",
+      "mode": "brief",
+      "file": "reports/repair_2026-10-20/candidate-bounded-output-validation/cumulative_shock_then_weak.json",
+      "file_sha256": "45e787c612da733e44340ddaa95620f19763d19d6d57a6863ddd877f40afbba9",
+      "synthetic": true,
+      "prompt_version": "ttf-news-standalone-2.3",
+      "generation_source_hashes": {
+        "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+        "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+        "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+        "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+        "ttf_news/public_gateway.py": "fac8fe10429bc62a6be241817491d1f35eecdaa7f8a37357cb8dbcab7f43fae5",
+        "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+        "ttf_news/analysis.py": "1087340777d4a0b10883420d76f8ce142bc53dd7542c8ebc84893e317553a16f",
+        "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+        "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+        "ttf_news/semantics.py": "3efbab0f772839b2249a544c6c39aa4beb9386c1de9850dfe37a989129139e90",
+        "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+        "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+        "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+        "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+        "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+        "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+        "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+        "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+        "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+        "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+        "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+        "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+        "ttf_news/translation.py": "d47b232a5f77ea68e2d5bc5d092021e9727e555c6b1dd702922325519982d7c5",
+        "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+        "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+        "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+        "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+        "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987"
+      },
+      "input_sha256": "5e7023133552a37edb4b49958159871fe1beafb41b84d9c45176d5265d121c25",
+      "input_sha256_independently_recomputed": "5e7023133552a37edb4b49958159871fe1beafb41b84d9c45176d5265d121c25",
+      "source_context_provenance": {
+        "source_file": "reports/repair_2026-10-20/comparison_cases.json",
+        "source_file_sha256": "8d6f9202d21a3d27ac0f6714802d8da2eda76d321e4c820c0d4f73aae41eacd5",
+        "candidate_context_model_json_sha256": "c746f952695a500e6b49662b613044c544c843206268d6407e7c8e3768691bd4",
+        "candidate_context_unchanged": true,
+        "source_cohort": "original15"
+      },
+      "source_snapshot": {
+        "as_of": "2026-10-20T12:10:58.642680+00:00",
+        "session": {
+          "trade_date": "2026-10-20",
+          "window_start": "2026-10-19T15:15:00+00:00",
+          "window_end": "2026-10-20T15:15:00+00:00",
+          "cutoff_utc": "2026-10-20T15:15:00+00:00",
+          "cutoff_local": "2026-10-20T17:15:00+02:00",
+          "cutoff_singapore": "2026-10-20T23:15:00+08:00",
+          "display_timezone": "Europe/Amsterdam",
+          "seconds_to_close": 11041,
+          "calendar_source": "https://www.ice.com/publicdocs/ICE_Endex_Trading_Schedule.pdf",
+          "calendar_quality": "official_2026_2027",
+          "boundary": "[previous_settlement, current_settlement)"
+        },
+        "current_news": {
+          "id": "diagnostic-current",
+          "title": "隔离假设情景",
+          "summary": "诊断假设情景，以下事实按成立处理，不是真实报道：一家石油公司取得牙买加海域长期勘探许可证，尚未钻探，没有已探明天然气产量、投产日期或对欧洲供气的安排。公告本窗口首次公布。",
+          "source": "diagnostic_fixture",
+          "published_at": "2026-10-20T12:10:58.642680+00:00",
+          "first_seen_at": "2026-10-20T12:10:58.642680+00:00",
+          "timestamp_precision": "exact",
+          "url": "",
+          "version": 1
+        },
+        "window_news": [
+          {
+            "id": "diagnostic-earlier",
+            "title": "欧洲供气实际下降",
+            "summary": "诊断假设情景，以下事实按成立处理，不是真实报道：挪威主要气处理厂今日突发故障，运营方和出口计量同时确认输往欧洲的实际天然气流量减少40 mcm/d，预计持续7天。中断在本窗口首次公布并立即生效。欧洲天气、LNG到港、库存需求没有新增反向消息；未提供消息前后的报价反应。",
+            "source": "diagnostic_fixture",
+            "published_at": "2026-10-20T11:00:00+00:00",
+            "first_seen_at": "2026-10-20T11:01:00+00:00",
+            "timestamp_precision": "exact",
+            "version": 1,
+            "url": ""
+          },
+          {
+            "id": "diagnostic-current",
+            "title": "隔离假设情景",
+            "summary": "诊断假设情景，以下事实按成立处理，不是真实报道：一家石油公司取得牙买加海域长期勘探许可证，尚未钻探，没有已探明天然气产量、投产日期或对欧洲供气的安排。公告本窗口首次公布。",
+            "source": "diagnostic_fixture",
+            "published_at": "2026-10-20T12:10:58.642680+00:00",
+            "first_seen_at": "2026-10-20T12:10:58.642680+00:00",
+            "timestamp_precision": "exact",
+            "url": "",
+            "version": 1
+          }
+        ],
+        "historical_events": [],
+        "price_reference": {
+          "available": false,
+          "verified": false,
+          "missing_fields": [
+            "previous_contract_price",
+            "intraday_quote",
+            "sigma60"
+          ]
+        }
+      },
+      "recorded_contract_passed": true,
+      "delivered_result": true,
+      "result_canonical_sha256": "0c80c531e99f3f5f535a175757f4df41a520d417b59f8c372a8cddaa167af401",
+      "all_returned_body_fields": {
+        "news_impact": {
+          "direction": "up",
+          "contextual_news_score": 1.0,
+          "confidence": 0.7,
+          "signal_strength": "moderate",
+          "summary": "挪威主要气处理厂突发故障导致欧洲供气下降40 mcm/d，预计对TTF价格形成上行压力。",
+          "bullish_evidence": [
+            "[N1] 40 mcm/d 供气下降 → TTF看涨机制"
+          ],
+          "bearish_evidence": [],
+          "neutralizing_evidence": []
+        },
+        "close_forecast": {
+          "confidence": 0.5,
+          "summary": "缺乏价格基准，无法确认新闻已计价，故对收盘价的预判为不确定。",
+          "basis": "缺乏前一交易日同合约价格锚点，无法判断收盘价相对前价的走势。",
+          "extreme_move_risk": "缺乏价格基准，无法确认新闻已计价",
+          "evidence_status": "insufficient_evidence",
+          "direction": null
+        },
+        "analysis": {
+          "summary": "N1导致欧洲供气下降40 mcm/d，预计价格上行。N0为未来勘探许可，未产生即时供给影响。",
+          "evidence": [
+            "[N1] 40 mcm/d 供气下降 → TTF供需传导"
+          ],
+          "negation_or_reversal": [],
+          "priced_in_comment": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格",
+          "matched_terms": [
+            "supply decrease"
+          ],
+          "historical_comparisons": []
+        },
+        "risk_flags": [
+          "手动输入仅作条件情景分析，事实尚未由本系统独立核实",
+          "缺少前一交易日可用行情；收盘预判仅由新闻证据驱动",
+          "缺少60日同合约波动率，异常等级尚不能按行情阈值核验",
+          "行情尚未验证为ICE官方日结算，不参与官方结算准确率评分",
+          "模型把握程度未经统计校准，不代表已验证准确率"
+        ],
+        "references": [
+          {
+            "id": "diagnostic-current",
+            "url": "",
+            "title": "隔离假设情景"
+          },
+          {
+            "id": "diagnostic-earlier",
+            "url": "",
+            "title": "欧洲供气实际下降"
+          }
+        ],
+        "missing_fields": [
+          "independent_news_verification",
+          "current_news.source_url",
+          "previous_contract_price",
+          "sigma60",
+          "settlement_verification",
+          "intraday_quote",
+          "confidence_calibration"
+        ]
+      },
+      "judgment": "returned_body_no_P2_identified",
+      "entire_body_assessment": "Earlierconfirmed European40mcm/dloss remains dominant despiteweakexploration trigger. Up+1 retainsN1instead ofoverwriting withweaklatestN0; nounprovidedoffset orcompanypositivepriceconfusion. Missingrealpreviousdayanchorjustifiesnullclose; pricingunknown. NoP2 identified.",
+      "material_known_logic_errors_in_returned_body": [],
+      "recorded_error": null,
+      "false_positive_rejection_identified": false,
+      "attempt_reviews": [
+        {
+          "attempt": 1,
+          "raw_content_sha256": "2bdc0182d29f9079d43253819728f2bddd977c63c1ec2461a11331fcd66c4f21",
+          "done_reason": "stop",
+          "parsed_raw_body": {
+            "news_impact": {
+              "bullish_evidence": [
+                "[N1] 40 mcm/d 供气下降 → TTF看涨机制"
+              ],
+              "bearish_evidence": [],
+              "neutralizing_evidence": [],
+              "summary": "挪威主要气处理厂突发故障导致欧洲供气下降40 mcm/d，预计对TTF价格形成上行压力。",
+              "contextual_news_score": 1,
+              "direction": "up",
+              "confidence": 0.7,
+              "signal_strength": "moderate"
+            },
+            "close_forecast": {
+              "basis": "缺乏前一交易日同合约价格锚点，无法判断收盘价相对前价的走势。",
+              "summary": "缺乏价格基准，无法确认新闻已计价，故对收盘价的预判为不确定。",
+              "evidence_status": "insufficient_evidence",
+              "direction": null,
+              "confidence": 0.5,
+              "extreme_move_risk": "缺乏价格基准，无法确认新闻已计价"
+            },
+            "analysis": {
+              "summary": "N1导致欧洲供气下降40 mcm/d，预计价格上行。N0为未来勘探许可，未产生即时供给影响。",
+              "evidence": [
+                "[N1] 40 mcm/d 供气下降 → TTF供需传导"
+              ],
+              "negation_or_reversal": [],
+              "priced_in_comment": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格",
+              "matched_terms": [
+                "supply decrease"
+              ],
+              "historical_comparisons": []
+            },
+            "risk_flags": [],
+            "references": [
+              {
+                "id": "N0",
+                "url": ""
+              },
+              {
+                "id": "N1",
+                "url": ""
+              }
+            ],
+            "missing_fields": []
+          },
+          "model_total_duration_ns": 49875397417
+        }
+      ]
+    },
+    {
+      "case": "weak_news_observed_market_up",
+      "mode": "brief",
+      "file": "reports/repair_2026-10-20/candidate-bounded-output-validation/weak_news_observed_market_up.json",
+      "file_sha256": "6984d86e2e2394cbfb56809e8d0cf10ceccb46d1dbfc1fe52c7548c74fdae2b7",
+      "synthetic": true,
+      "prompt_version": "ttf-news-standalone-2.3",
+      "generation_source_hashes": {
+        "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+        "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+        "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+        "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+        "ttf_news/public_gateway.py": "fac8fe10429bc62a6be241817491d1f35eecdaa7f8a37357cb8dbcab7f43fae5",
+        "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+        "ttf_news/analysis.py": "1087340777d4a0b10883420d76f8ce142bc53dd7542c8ebc84893e317553a16f",
+        "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+        "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+        "ttf_news/semantics.py": "3efbab0f772839b2249a544c6c39aa4beb9386c1de9850dfe37a989129139e90",
+        "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+        "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+        "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+        "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+        "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+        "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+        "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+        "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+        "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+        "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+        "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+        "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+        "ttf_news/translation.py": "d47b232a5f77ea68e2d5bc5d092021e9727e555c6b1dd702922325519982d7c5",
+        "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+        "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+        "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+        "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+        "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987"
+      },
+      "input_sha256": "a0a64a5ee688b273dacc019cdfb921d8d4d92b62470c5f646b60bd5e6dc89a71",
+      "input_sha256_independently_recomputed": "a0a64a5ee688b273dacc019cdfb921d8d4d92b62470c5f646b60bd5e6dc89a71",
+      "source_context_provenance": {
+        "source_file": "reports/repair_2026-10-20/comparison_cases.json",
+        "source_file_sha256": "8d6f9202d21a3d27ac0f6714802d8da2eda76d321e4c820c0d4f73aae41eacd5",
+        "candidate_context_model_json_sha256": "a249ec11cc107f9dbca1c6c68da63f1bfce180a94e2de34ccee62b2e0930fcd4",
+        "candidate_context_unchanged": true,
+        "source_cohort": "original15"
+      },
+      "source_snapshot": {
+        "as_of": "2026-10-20T12:10:58.642680+00:00",
+        "session": {
+          "trade_date": "2026-10-20",
+          "window_start": "2026-10-19T15:15:00+00:00",
+          "window_end": "2026-10-20T15:15:00+00:00",
+          "cutoff_utc": "2026-10-20T15:15:00+00:00",
+          "cutoff_local": "2026-10-20T17:15:00+02:00",
+          "cutoff_singapore": "2026-10-20T23:15:00+08:00",
+          "display_timezone": "Europe/Amsterdam",
+          "seconds_to_close": 11041,
+          "calendar_source": "https://www.ice.com/publicdocs/ICE_Endex_Trading_Schedule.pdf",
+          "calendar_quality": "official_2026_2027",
+          "boundary": "[previous_settlement, current_settlement)"
+        },
+        "current_news": {
+          "id": "diagnostic-current",
+          "title": "隔离假设情景",
+          "summary": "诊断假设情景，以下事实按成立处理，不是真实报道：一家石油公司取得牙买加海域长期勘探许可证，尚未钻探，没有已探明天然气产量、投产日期或对欧洲供气的安排。公告本窗口首次公布。",
+          "source": "diagnostic_fixture",
+          "published_at": "2026-10-20T12:10:58.642680+00:00",
+          "first_seen_at": "2026-10-20T12:10:58.642680+00:00",
+          "timestamp_precision": "exact",
+          "url": "",
+          "version": 1
+        },
+        "window_news": [
+          {
+            "id": "diagnostic-current",
+            "title": "隔离假设情景",
+            "summary": "诊断假设情景，以下事实按成立处理，不是真实报道：一家石油公司取得牙买加海域长期勘探许可证，尚未钻探，没有已探明天然气产量、投产日期或对欧洲供气的安排。公告本窗口首次公布。",
+            "source": "diagnostic_fixture",
+            "published_at": "2026-10-20T12:10:58.642680+00:00",
+            "first_seen_at": "2026-10-20T12:10:58.642680+00:00",
+            "timestamp_precision": "exact",
+            "url": "",
+            "version": 1
+          }
+        ],
+        "historical_events": [],
+        "price_reference": {
+          "available": true,
+          "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+          "contract_name": "Nov26",
+          "price_type": "reference",
+          "intraday": {
+            "value": 89.8,
+            "observed_at": "2026-10-20T12:00:00+00:00",
+            "available_at": "2026-10-20T12:10:48.541848+00:00",
+            "price_type": "delayed_last_trade",
+            "minimum_delay_minutes": 15,
+            "stale": false,
+            "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389"
+          },
+          "verified": false,
+          "previous_price": 88.04,
+          "price_date": "2026-10-19",
+          "reference_source": "ICE public chart",
+          "source_url": "https://www.ice.com/marketdata/api/productguide/charting/data/historical?marketId=6277389&historicalSpan=3",
+          "extreme_threshold": 4.466853677887938,
+          "sigma60": 2.233426838943969,
+          "threshold_frozen_as_of": "2026-10-20T12:10:58.642680+00:00",
+          "flat_delta": 0.3,
+          "observation_count": 701,
+          "risk_flags": [
+            "价格类型尚未验证为ICE官方日结算，不用于官方结算评分"
+          ],
+          "market_baseline": {
+            "available": true,
+            "kind": "observed_reference_move",
+            "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+            "as_of": "2026-10-20T12:10:58.642680+00:00",
+            "verified_settlement": false,
+            "flat_band": 0.3,
+            "interpretation": "已观察同合约参考变化；延续或反转均为待验证情景，不是目标日已实现结算",
+            "previous_price": 88.04,
+            "previous_date": "2026-10-19",
+            "latest_price": 89.8,
+            "observed_delta": 1.76,
+            "observed_direction": "up",
+            "observed_at": "2026-10-20T12:00:00+00:00",
+            "available_at": "2026-10-20T12:10:48.541848+00:00",
+            "price_type": "delayed_last_trade",
+            "source_url": null,
+            "reference_source_url": "https://www.ice.com/marketdata/api/productguide/charting/data/historical?marketId=6277389&historicalSpan=3",
+            "minimum_delay_minutes": 15,
+            "extreme_threshold": 4.466853677887938
+          }
+        }
+      },
+      "recorded_contract_passed": true,
+      "delivered_result": true,
+      "result_canonical_sha256": "e1be692c58128ab866b83688784b3ec27dc8214c9a444dccf157405909bdbc0d",
+      "all_returned_body_fields": {
+        "news_impact": {
+          "direction": "flat",
+          "contextual_news_score": 0.0,
+          "confidence": 0.6,
+          "signal_strength": "weak",
+          "summary": "石油公司在牙买加获得勘探许可，但尚未钻探、无已探明天然气产量或投产计划，未对欧洲供气产生即时影响，因而对TTF价格的净影响为中性。",
+          "bullish_evidence": [],
+          "bearish_evidence": [],
+          "neutralizing_evidence": []
+        },
+        "close_forecast": {
+          "direction": "up",
+          "confidence": 0.7,
+          "summary": "基准价格已出现上涨，且新闻未产生即时供需冲击，预计价格将继续维持上行趋势。",
+          "basis": "观察到的参考价从88.04升至89.8，涨幅1.76；新闻未显示对供需的即时冲击，故缺乏明确的价格反转或延续信号。",
+          "extreme_move_risk": "",
+          "evidence_status": "forecast"
+        },
+        "analysis": {
+          "summary": "新增事实为石油公司在牙买加获得勘探许可，但未产生即时供给影响，净影响为中性。",
+          "evidence": [
+            "[N0]石油公司在牙买加获得勘探许可，但未产生即时供给影响 → TTF供需无即时影响"
+          ],
+          "negation_or_reversal": [],
+          "priced_in_comment": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格",
+          "matched_terms": [
+            "勘探许可",
+            "牙买加",
+            "天然气产量",
+            "投产计划"
+          ],
+          "historical_comparisons": []
+        },
+        "risk_flags": [
+          "手动输入仅作条件情景分析，事实尚未由本系统独立核实",
+          "行情尚未验证为ICE官方日结算，不参与官方结算准确率评分",
+          "价格类型尚未验证为ICE官方日结算，不用于官方结算评分",
+          "模型把握程度未经统计校准，不代表已验证准确率"
+        ],
+        "references": [
+          {
+            "id": "diagnostic-current",
+            "url": "",
+            "title": "隔离假设情景"
+          }
+        ],
+        "missing_fields": [
+          "independent_news_verification",
+          "current_news.source_url",
+          "settlement_verification",
+          "confidence_calibration"
+        ]
+      },
+      "judgment": "returned_body_no_P2_identified",
+      "entire_body_assessment": "Firstraw incorrectlyrefusesanycloseforecast despitevalid+1.76 samecontractbaseline solelyfrommissingdirectnewscausality; correctrejection. Secondraw keepsnewsflat fornonproducingJamaicaexploration andforecastsup using88.04→89.8 baseline, notclaimingprepublicationquoteisreaction. Pricingunknownexplicit. NoP2 finalbody; P3basis saysno clearextension/reversalsignal yetforecastscontinuation, anabbreviatedbaseline-continuation rationale ratherthan a verifiedsignal. Conditionalinvalidation canbe expandedindetail; directionnot rewritten.",
+      "material_known_logic_errors_in_returned_body": [],
+      "recorded_error": null,
+      "false_positive_rejection_identified": false,
+      "attempt_reviews": [
+        {
+          "attempt": 1,
+          "raw_content_sha256": "61052e7b2a5b9efa627e0ff7c876cd7654aeded9dbd03e8bc5346ed5d3fb12c0",
+          "done_reason": "stop",
+          "parsed_raw_body": {
+            "news_impact": {
+              "bullish_evidence": [],
+              "bearish_evidence": [],
+              "neutralizing_evidence": [],
+              "summary": "石油公司在牙买加获得勘探许可，但尚未钻探、无已探明天然气产量或投产计划，未对欧洲供气产生即时影响。",
+              "contextual_news_score": 0,
+              "direction": "flat",
+              "confidence": 0.6,
+              "signal_strength": "weak"
+            },
+            "close_forecast": {
+              "basis": "观察到的参考价从88.04升至89.8，涨幅1.76；新闻未显示对供需的即时冲击，故缺乏明确的价格反转或延续信号。",
+              "summary": "基于当前基准价格已上涨且缺乏新闻对价格的直接影响，无法确定收盘价相对前一交易日的走势。",
+              "evidence_status": "insufficient_evidence",
+              "direction": null,
+              "confidence": 0.5,
+              "extreme_move_risk": "缺乏足够的供需或价格反应证据，无法排除潜在的极端波动。"
+            },
+            "analysis": {
+              "summary": "新增事实为石油公司在牙买加获得勘探许可，但未产生即时供给影响，净影响为中性。",
+              "evidence": [
+                "[N0]石油公司在牙买加获得勘探许可，尚未钻探或投产 → TTF供需无即时影响"
+              ],
+              "negation_or_reversal": [],
+              "priced_in_comment": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格",
+              "matched_terms": [],
+              "historical_comparisons": []
+            },
+            "risk_flags": [],
+            "references": [
+              {
+                "id": "N0",
+                "url": ""
+              }
+            ],
+            "missing_fields": []
+          },
+          "model_total_duration_ns": 94429727084
+        },
+        {
+          "attempt": 2,
+          "raw_content_sha256": "fef69e68ec665254277b9e9b3bbf479358634cb2a41b306ba558c100cf550686",
+          "done_reason": "stop",
+          "parsed_raw_body": {
+            "news_impact": {
+              "bullish_evidence": [],
+              "bearish_evidence": [],
+              "neutralizing_evidence": [],
+              "summary": "石油公司在牙买加获得勘探许可，但尚未钻探、无已探明天然气产量或投产计划，未对欧洲供气产生即时影响，因而对TTF价格的净影响为中性。",
+              "contextual_news_score": 0,
+              "direction": "flat",
+              "confidence": 0.6,
+              "signal_strength": "weak"
+            },
+            "close_forecast": {
+              "basis": "观察到的参考价从88.04升至89.8，涨幅1.76；新闻未显示对供需的即时冲击，故缺乏明确的价格反转或延续信号。",
+              "summary": "基准价格已出现上涨，且新闻未产生即时供需冲击，预计价格将继续维持上行趋势。",
+              "evidence_status": "forecast",
+              "direction": "up",
+              "confidence": 0.7,
+              "extreme_move_risk": ""
+            },
+            "analysis": {
+              "summary": "新增事实为石油公司在牙买加获得勘探许可，但未产生即时供给影响，净影响为中性。",
+              "evidence": [
+                "[N0]石油公司在牙买加获得勘探许可，但未产生即时供给影响 → TTF供需无即时影响"
+              ],
+              "negation_or_reversal": [],
+              "priced_in_comment": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格",
+              "matched_terms": [
+                "勘探许可",
+                "牙买加",
+                "天然气产量",
+                "投产计划"
+              ],
+              "historical_comparisons": []
+            },
+            "risk_flags": [],
+            "references": [
+              {
+                "id": "N0",
+                "url": ""
+              }
+            ],
+            "missing_fields": []
+          },
+          "model_total_duration_ns": 53335176334
+        }
+      ]
+    },
+    {
+      "case": "supplied_conflicting_mechanisms",
+      "mode": "brief",
+      "file": "reports/repair_2026-10-20/candidate-bounded-output-validation/supplied_conflicting_mechanisms.json",
+      "file_sha256": "98b8c7e46c8963a97fd9e736d6734ed902200ef94e330c1471f2fce17c7de18a",
+      "synthetic": true,
+      "prompt_version": "ttf-news-standalone-2.3",
+      "generation_source_hashes": {
+        "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+        "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+        "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+        "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+        "ttf_news/public_gateway.py": "fac8fe10429bc62a6be241817491d1f35eecdaa7f8a37357cb8dbcab7f43fae5",
+        "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+        "ttf_news/analysis.py": "1087340777d4a0b10883420d76f8ce142bc53dd7542c8ebc84893e317553a16f",
+        "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+        "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+        "ttf_news/semantics.py": "3efbab0f772839b2249a544c6c39aa4beb9386c1de9850dfe37a989129139e90",
+        "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+        "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+        "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+        "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+        "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+        "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+        "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+        "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+        "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+        "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+        "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+        "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+        "ttf_news/translation.py": "d47b232a5f77ea68e2d5bc5d092021e9727e555c6b1dd702922325519982d7c5",
+        "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+        "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+        "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+        "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+        "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987"
+      },
+      "input_sha256": "d269f8b3026c87f3afe318e628da4a952ab2c9fa4918032d0abd31b7491bda22",
+      "input_sha256_independently_recomputed": "d269f8b3026c87f3afe318e628da4a952ab2c9fa4918032d0abd31b7491bda22",
+      "source_context_provenance": {
+        "source_file": "reports/repair_2026-10-20/comparison_cases.json",
+        "source_file_sha256": "8d6f9202d21a3d27ac0f6714802d8da2eda76d321e4c820c0d4f73aae41eacd5",
+        "candidate_context_model_json_sha256": "7ce81fb2cce990fc260243d65af1b90e6a32ee11b1f04b5ed5666530d777a4a0",
+        "candidate_context_unchanged": true,
+        "source_cohort": "original15"
+      },
+      "source_snapshot": {
+        "as_of": "2026-10-20T12:10:58.642680+00:00",
+        "session": {
+          "trade_date": "2026-10-20",
+          "window_start": "2026-10-19T15:15:00+00:00",
+          "window_end": "2026-10-20T15:15:00+00:00",
+          "cutoff_utc": "2026-10-20T15:15:00+00:00",
+          "cutoff_local": "2026-10-20T17:15:00+02:00",
+          "cutoff_singapore": "2026-10-20T23:15:00+08:00",
+          "display_timezone": "Europe/Amsterdam",
+          "seconds_to_close": 11041,
+          "calendar_source": "https://www.ice.com/publicdocs/ICE_Endex_Trading_Schedule.pdf",
+          "calendar_quality": "official_2026_2027",
+          "boundary": "[previous_settlement, current_settlement)"
+        },
+        "current_news": {
+          "id": "diagnostic-current",
+          "title": "隔离假设情景",
+          "summary": "隔离假设：欧洲天然气管道输气实际减少20mcm/d，同时新增加的LNG实际再气化流量为30mcm/d，两者均预计持续七天。需求没有给出变化。请分别判断供给约束和供应增加机制。",
+          "source": "diagnostic_fixture",
+          "published_at": "2026-10-20T12:10:58.642680+00:00",
+          "first_seen_at": "2026-10-20T12:10:58.642680+00:00",
+          "timestamp_precision": "exact",
+          "url": "",
+          "version": 1
+        },
+        "window_news": [
+          {
+            "id": "diagnostic-current",
+            "title": "隔离假设情景",
+            "summary": "隔离假设：欧洲天然气管道输气实际减少20mcm/d，同时新增加的LNG实际再气化流量为30mcm/d，两者均预计持续七天。需求没有给出变化。请分别判断供给约束和供应增加机制。",
+            "source": "diagnostic_fixture",
+            "published_at": "2026-10-20T12:10:58.642680+00:00",
+            "first_seen_at": "2026-10-20T12:10:58.642680+00:00",
+            "timestamp_precision": "exact",
+            "url": "",
+            "version": 1
+          }
+        ],
+        "historical_events": [],
+        "price_reference": {
+          "available": false,
+          "verified": false,
+          "missing_fields": [
+            "previous_contract_price",
+            "intraday_quote",
+            "sigma60"
+          ]
+        }
+      },
+      "recorded_contract_passed": true,
+      "delivered_result": true,
+      "result_canonical_sha256": "8484a30a1b0ab4ac61dec1a27b328f9cf86923f6f5619ba9ee4701bf1c2053a7",
+      "all_returned_body_fields": {
+        "news_impact": {
+          "direction": "down",
+          "contextual_news_score": -1.0,
+          "confidence": 0.3,
+          "signal_strength": "weak",
+          "summary": "管道输气减少20mcm/d导致供给约束，LNG再气化增加30mcm/d导致供应增加，净供应增加10mcm/d，预期对TTF价格产生下行压力。",
+          "bullish_evidence": [
+            "[N0]管道输气减少20mcm/d → TTF看涨机制"
+          ],
+          "bearish_evidence": [
+            "[N0]LNG再气化流量增加30mcm/d → TTF看跌机制"
+          ],
+          "neutralizing_evidence": []
+        },
+        "close_forecast": {
+          "confidence": 0.2,
+          "summary": "缺乏前一交易日价格锚点和实时报价，无法判断TTF收盘价相对前一日的走势。",
+          "basis": "无可用市场基准，新闻仅提供供需变化，缺乏价格反应证据。",
+          "extreme_move_risk": "缺乏价格数据，无法评估极端波动风险。",
+          "evidence_status": "insufficient_evidence",
+          "direction": null
+        },
+        "analysis": {
+          "summary": "新增事实：管道输气减少20mcm/d，LNG再气化增加30mcm/d。净供应增加10mcm/d，预期对TTF价格产生下行压力。",
+          "evidence": [
+            "[N0]管道输气减少20mcm/d → TTF供需机制",
+            "[N0]LNG再气化流量增加30mcm/d → TTF供需机制"
+          ],
+          "negation_or_reversal": [],
+          "priced_in_comment": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格",
+          "matched_terms": [
+            "pipeline reduction",
+            "LNG increase"
+          ],
+          "historical_comparisons": []
+        },
+        "risk_flags": [
+          "手动输入仅作条件情景分析，事实尚未由本系统独立核实",
+          "缺少前一交易日可用行情；收盘预判仅由新闻证据驱动",
+          "缺少60日同合约波动率，异常等级尚不能按行情阈值核验",
+          "行情尚未验证为ICE官方日结算，不参与官方结算准确率评分",
+          "模型把握程度未经统计校准，不代表已验证准确率"
+        ],
+        "references": [
+          {
+            "id": "diagnostic-current",
+            "url": "",
+            "title": "隔离假设情景"
+          }
+        ],
+        "missing_fields": [
+          "independent_news_verification",
+          "current_news.source_url",
+          "previous_contract_price",
+          "sigma60",
+          "settlement_verification",
+          "intraday_quote",
+          "confidence_calibration"
+        ]
+      },
+      "judgment": "returned_body_no_P2_identified",
+      "entire_body_assessment": "SourceexplicitlyprovidessimultaneousindependentEuropeanactualpipeline−20 andLNGregas+30 for7days. Net+10 arithmetic is appropriate underthisscenario (unlike nonoverlappingnoticerate sums). Individual bullish/bearish signs andnetdown−1 coherent; no demandchange invented. Missingpreviousprice/quote justifiesnullclose, reactionunknown. NoP2 identified.",
+      "material_known_logic_errors_in_returned_body": [],
+      "recorded_error": null,
+      "false_positive_rejection_identified": false,
+      "attempt_reviews": [
+        {
+          "attempt": 1,
+          "raw_content_sha256": "80fba823a9faeaec3250139d7fe3fcc7417782eec3a0e638152f1fb605f8e385",
+          "done_reason": "stop",
+          "parsed_raw_body": {
+            "news_impact": {
+              "bullish_evidence": [
+                "[N0]管道输气减少20mcm/d → TTF看涨机制"
+              ],
+              "bearish_evidence": [
+                "[N0]LNG再气化流量增加30mcm/d → TTF看跌机制"
+              ],
+              "neutralizing_evidence": [],
+              "summary": "管道输气减少20mcm/d导致供给约束，LNG再气化增加30mcm/d导致供应增加，净供应增加10mcm/d，预期对TTF价格产生下行压力。",
+              "contextual_news_score": -1,
+              "direction": "down",
+              "confidence": 0.3,
+              "signal_strength": "weak"
+            },
+            "close_forecast": {
+              "basis": "无可用市场基准，新闻仅提供供需变化，缺乏价格反应证据。",
+              "summary": "缺乏前一交易日价格锚点和实时报价，无法判断TTF收盘价相对前一日的走势。",
+              "evidence_status": "insufficient_evidence",
+              "direction": null,
+              "confidence": 0.2,
+              "extreme_move_risk": "缺乏价格数据，无法评估极端波动风险。"
+            },
+            "analysis": {
+              "summary": "新增事实：管道输气减少20mcm/d，LNG再气化增加30mcm/d。净供应增加10mcm/d，预期对TTF价格产生下行压力。",
+              "evidence": [
+                "[N0]管道输气减少20mcm/d → TTF供需机制",
+                "[N0]LNG再气化流量增加30mcm/d → TTF供需机制"
+              ],
+              "negation_or_reversal": [],
+              "priced_in_comment": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格",
+              "matched_terms": [
+                "pipeline reduction",
+                "LNG increase"
+              ],
+              "historical_comparisons": []
+            },
+            "risk_flags": [],
+            "references": [
+              {
+                "id": "N0",
+                "url": ""
+              }
+            ],
+            "missing_fields": []
+          },
+          "model_total_duration_ns": 54089798875
+        }
+      ]
+    }
+  ],
+  "prior_code_review": {
+    "file": "reports/repair_2026-10-20/independent_bounded_output_code_review_v2_3.json",
+    "sha256": "06896e72556133a4b56cc6ec23ce851aa162f3418e4c7f7545f29a28b9538459"
+  },
+  "source_selection_rule": "Onlynewactuals inthisstage; absent/failednewcases neverborrow oldsuccesses. Thispartialdoesnotcertify remaining17briefs/detail or productionE2E.",
+  "old_audits_and_actuals_unchanged": true,
+  "no_model_calls_by_reviewer": true,
+  "no_network_calls": true,
+  "no_database_access": true,
+  "no_tests_run_during_actual_review": true,
+  "no_core_edits": true,
+  "limits": [
+    "Newcohortonly, nofallback tooldsuccess. Remaining11briefs/detail/productionE2Epending.",
+    "One truesemanticfailure andonecosmeticriskFP remainrecordedfailed; no activecohortcodechanges or retrospectivepromotions.",
+    "No officialsettlement/accuracy or forceddirectionratio inferred."
+  ],
+  "prior_partial_preserved": {
+    "file": "reports/repair_2026-10-20/independent_actual_bounded_output_review_v2_3_partial_6.json",
+    "sha256": "01f758e322f304055b15e472670b020f8fe0c885fd4224f32c2cf84e0a99fcb7"
+  }
+}

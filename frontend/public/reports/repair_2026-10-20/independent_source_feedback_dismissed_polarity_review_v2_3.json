@@ -1,0 +1,388 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "audited_at": "2026-10-21T01:07:33.086962+00:00",
+  "stage": "candidate-source-feedback-validation",
+  "case": "dismissed_notice_not_verified_recovery",
+  "actual_record_path": "reports/repair_2026-10-20/candidate-source-feedback-validation/dismissed_notice_not_verified_recovery.json",
+  "actual_record_sha256": "6a52a56aef8b57e98cc4ac39908ab3a9dacc47a019d888c8661c3ff18f33cafb",
+  "input_sha256": "dc8a50f0ed4b2e64a5a97b9b3d697e61aa88afa3e25f195a97a44e8b017f36a0",
+  "generation_source_hashes": {
+    "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+    "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+    "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+    "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+    "ttf_news/public_gateway.py": "fac8fe10429bc62a6be241817491d1f35eecdaa7f8a37357cb8dbcab7f43fae5",
+    "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+    "ttf_news/analysis.py": "28f186ea7f11453ec42737fd82a71b47b3f29d094121911a4e12813c93d3b1b9",
+    "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+    "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+    "ttf_news/semantics.py": "d739882a6d6c7e38432f5d4a46f292a6a7b4e63987a3d96095b4feb5ac9982e2",
+    "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+    "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+    "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+    "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+    "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+    "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+    "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+    "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+    "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+    "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+    "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+    "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+    "ttf_news/translation.py": "d47b232a5f77ea68e2d5bc5d092021e9727e555c6b1dd702922325519982d7c5",
+    "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+    "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+    "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+    "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+    "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987"
+  },
+  "strict_contract_passed": true,
+  "semantic_passed": false,
+  "verdict": "accepted_material_evidence_polarity_error",
+  "known_logic_errors": [
+    {
+      "severity": "P2",
+      "field": "news_impact.bullish_evidence[0]",
+      "quote": "[N0]test；非计划；公告不可用容量20mcm/d；仅该公告撤销；实流未知；TTF机制：供应风险降低",
+      "reason": "TTF price bullish evidence is price-upward pressure. Dismissal of the announcement reduces this capacity-constraint risk, potentially easing gas prices or neutralizing a prior bullish risk; no source demand-increase or shortfall-versus-expectations fact turns reduced supply risk bullish. Unknown actual flow prevents calling verified recovery, but does not reverse the risk-pressure sign.",
+      "does_not_require": "Changing flat news direction to nonflat. Correct the evidence polarity/meaning from sources; main classification is independently judged."
+    }
+  ],
+  "checks": {
+    "price_repair": "First completed zero-observable-shock clause correctly rejected; returned basis only missing comparable observation/uncertain transmission, no definite observed-zero price result.",
+    "source_state": "Dismissed notice distinguishes actual recovery unconfirmed; technical100/available80/unavailable20 are notice capacity, not meterflow.",
+    "bounded_pressure": "未形成明显供需冲击/传导有限 treated as degree-of-news-pressure judgment rather than measured global zero.",
+    "anchor": "Missing previous-day reference supports closeNone.",
+    "actual_source_feedback": {
+      "source_fields_equal_first": {
+        "current_news": true,
+        "window_news": true,
+        "previous_sessions": true,
+        "historical_events": true,
+        "price_reference": true,
+        "evidence_ledger": true
+      },
+      "feedback_equals_complete_first_errors": true,
+      "untrusted_draft_present": false,
+      "feedback": {
+        "version": "ttf-source-validator-feedback-1",
+        "is_evidence": false,
+        "origin": "local_validator",
+        "errors": [
+          "close_forecast.basis:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应"
+        ]
+      }
+    }
+  },
+  "input_snapshot": {
+    "as_of": "2026-10-20T12:10:58.642680+00:00",
+    "session": {
+      "trade_date": "2026-10-20",
+      "window_start": "2026-10-19T15:15:00+00:00",
+      "window_end": "2026-10-20T15:15:00+00:00",
+      "cutoff_utc": "2026-10-20T15:15:00+00:00",
+      "cutoff_local": "2026-10-20T17:15:00+02:00",
+      "cutoff_singapore": "2026-10-20T23:15:00+08:00",
+      "display_timezone": "Europe/Amsterdam",
+      "seconds_to_close": 11041,
+      "calendar_source": "https://www.ice.com/publicdocs/ICE_Endex_Trading_Schedule.pdf",
+      "calendar_quality": "official_2026_2027",
+      "boundary": "[previous_settlement, current_settlement)"
+    },
+    "analysis_kind": "manual",
+    "current_news": {
+      "id": "diagnostic-current",
+      "title": "Gassco test: Unplanned Gas production field unavailability (Dismissed)",
+      "summary": "隔离假设运营公告。Technical capacity: 100 mcm/d; available: 80; unavailable: 20. No independent actual flow measurement or recovery confirmation is provided.",
+      "source": "gassco",
+      "published_at": "2026-10-20T12:10:58.642680+00:00",
+      "first_seen_at": "2026-10-20T12:10:58.642680+00:00",
+      "timestamp_precision": "exact",
+      "url": "",
+      "version": 1,
+      "event_start": "2026-10-20T06:00:00+02:00",
+      "event_end": "2026-10-21T06:00:00+02:00",
+      "event_status": "Dismissed"
+    },
+    "window_news": [
+      {
+        "id": "diagnostic-current",
+        "title": "Gassco test: Unplanned Gas production field unavailability (Dismissed)",
+        "summary": "隔离假设运营公告。Technical capacity: 100 mcm/d; available: 80; unavailable: 20. No independent actual flow measurement or recovery confirmation is provided.",
+        "source": "gassco",
+        "published_at": "2026-10-20T12:10:58.642680+00:00",
+        "first_seen_at": "2026-10-20T12:10:58.642680+00:00",
+        "timestamp_precision": "exact",
+        "url": "",
+        "version": 1,
+        "event_start": "2026-10-20T06:00:00+02:00",
+        "event_end": "2026-10-21T06:00:00+02:00",
+        "event_status": "Dismissed"
+      }
+    ],
+    "previous_sessions": [],
+    "historical_events": [],
+    "price_reference": {
+      "available": false,
+      "verified": false,
+      "missing_fields": [
+        "previous_contract_price",
+        "intraday_quote",
+        "sigma60"
+      ]
+    },
+    "coverage": {
+      "observation_limits": {
+        "weather": "not_measured",
+        "storage": "not_measured",
+        "actual_flow": "not_measured"
+      }
+    },
+    "lexicon": {}
+  },
+  "returned_full_body": {
+    "news_impact": {
+      "direction": "flat",
+      "contextual_news_score": 0.0,
+      "confidence": 0.3,
+      "signal_strength": "weak",
+      "summary": "公告已撤销，未确认实际供气恢复，缺乏独立流量数据，未形成明显供需冲击，市场传导有限。",
+      "bullish_evidence": [
+        "[N0]test；非计划；公告不可用容量20mcm/d；仅该公告撤销；实流未知；TTF机制：供应风险降低"
+      ],
+      "bearish_evidence": [],
+      "neutralizing_evidence": []
+    },
+    "close_forecast": {
+      "confidence": 0.3,
+      "summary": "缺乏前一交易日价格锚点及独立价格反应观测，无法判断收盘价相对前价的走势。",
+      "basis": "无可比价格反应观测，公告已撤销但未确认实际流量恢复，市场传导不确定。",
+      "extreme_move_risk": "缺乏价格反应观测，无法排除潜在价格波动。",
+      "evidence_status": "insufficient_evidence",
+      "direction": null
+    },
+    "analysis": {
+      "summary": "公告已撤销，未确认实际供气恢复，缺乏独立流量数据，未形成明显供需冲击，市场传导有限。",
+      "evidence": [
+        "[N0]test；非计划；公告不可用容量20mcm/d；仅该公告撤销；实流未知；TTF机制：供应风险降低"
+      ],
+      "negation_or_reversal": [],
+      "priced_in_comment": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格",
+      "matched_terms": [],
+      "historical_comparisons": []
+    },
+    "risk_flags": [
+      "手动输入仅作条件情景分析，事实尚未由本系统独立核实",
+      "缺少前一交易日可用行情；收盘预判仅由新闻证据驱动",
+      "缺少60日同合约波动率，异常等级尚不能按行情阈值核验",
+      "行情尚未验证为ICE官方日结算，不参与官方结算准确率评分",
+      "模型把握程度未经统计校准，不代表已验证准确率"
+    ],
+    "references": [
+      {
+        "id": "diagnostic-current",
+        "url": "",
+        "title": "Gassco test: Unplanned Gas production field unavailability (Dismissed)"
+      }
+    ],
+    "missing_fields": [
+      "independent_news_verification",
+      "current_news.source_url",
+      "previous_contract_price",
+      "sigma60",
+      "settlement_verification",
+      "intraday_quote",
+      "confidence_calibration"
+    ],
+    "source_fact_checks": {
+      "fact_contract_version": "operator-facts-2.2",
+      "operator_notices": [
+        {
+          "id": "N0",
+          "facility": "test",
+          "facility_type": "气田/生产设施",
+          "notice_type": "非计划",
+          "unavailable_capacity": "20",
+          "period_utc": [
+            "2026-10-20T04:00Z",
+            "2026-10-21T04:00Z"
+          ],
+          "state_description": "仅该公告约束撤销；实际流量与整体供应风险是否消除仍未知"
+        }
+      ],
+      "capacity_scope": "公告不可用容量，非实际流量计量",
+      "pricing_observation": {
+        "clock_roles": {
+          "observed_at": "报价发生时刻",
+          "available_at": "本机获知时刻；不是报价发生时刻"
+        },
+        "current_news_timing": {
+          "id": "N0",
+          "publication_time": "2026-10-20T12:10:58.642680+00:00",
+          "quote_relation": "unknown",
+          "quote_role": "观测/发布时间精度不足，前后关系未知"
+        },
+        "reaction_evidence_available": false,
+        "pricing_status": "无法确认是否已计价；不是尚未计价或价格无反应"
+      }
+    }
+  },
+  "result_canonical_sha256": "a71f493e5cbe37b4a00c7570a38a9c89717d8742212a6a36760dda5d8146790c",
+  "raw_candidates": [
+    {
+      "index": 0,
+      "content_sha256": "ff0860953edcff8326137e7680741f231c60ac52ca4cc792b735ecd278bb613d",
+      "parsed_body": {
+        "source_fact_checks": {
+          "fact_contract_version": "operator-facts-2.2",
+          "operator_notices": [
+            {
+              "id": "N0",
+              "facility": "test",
+              "facility_type": "气田/生产设施",
+              "notice_type": "非计划",
+              "unavailable_capacity": "20",
+              "period_utc": [
+                "2026-10-20T04:00Z",
+                "2026-10-21T04:00Z"
+              ],
+              "state_description": "仅该公告约束撤销；实际流量与整体供应风险是否消除仍未知"
+            }
+          ],
+          "capacity_scope": "公告不可用容量，非实际流量计量",
+          "pricing_observation": {
+            "clock_roles": {
+              "observed_at": "报价发生时刻",
+              "available_at": "本机获知时刻；不是报价发生时刻"
+            },
+            "current_news_timing": {
+              "id": "N0",
+              "publication_time": "2026-10-20T12:10:58.642680+00:00",
+              "quote_relation": "unknown",
+              "quote_role": "观测/发布时间精度不足，前后关系未知"
+            },
+            "reaction_evidence_available": false,
+            "pricing_status": "无法确认是否已计价；不是尚未计价或价格无反应"
+          }
+        },
+        "news_impact": {
+          "bullish_evidence": [],
+          "bearish_evidence": [],
+          "neutralizing_evidence": [],
+          "summary": "公告已撤销，未确认实际供气恢复，缺乏独立流量数据，无法判断对TTF价格的影响。",
+          "contextual_news_score": 0,
+          "direction": "flat",
+          "confidence": 0.5,
+          "signal_strength": "weak"
+        },
+        "close_forecast": {
+          "basis": "无可用前一交易日参考价，缺乏独立流量确认，新闻未产生可观测冲击。",
+          "summary": "缺乏前一交易日参考价及独立流量数据，无法判断价格走势。",
+          "evidence_status": "insufficient_evidence",
+          "direction": null,
+          "confidence": 0.5,
+          "extreme_move_risk": "缺乏独立流量确认，若实际供气未恢复可能导致价格波动。"
+        },
+        "analysis": {
+          "summary": "公告已撤销，未确认实际供气恢复，缺乏独立流量数据，无法判断对TTF价格的影响。",
+          "evidence": [
+            "[N0]test；非计划；公告不可用容量20mcm/d；仅该公告撤销；实流未知；TTF机制：供应风险已移除"
+          ],
+          "negation_or_reversal": [],
+          "priced_in_comment": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格",
+          "matched_terms": [],
+          "historical_comparisons": []
+        },
+        "risk_flags": [],
+        "references": [
+          {
+            "id": "N0",
+            "url": ""
+          }
+        ],
+        "missing_fields": []
+      }
+    },
+    {
+      "index": 1,
+      "content_sha256": "5a173dcdbcc64f841702d81853e17bc28d7f122bb27ff3e3ae3a8a154cf6c2d5",
+      "parsed_body": {
+        "source_fact_checks": {
+          "fact_contract_version": "operator-facts-2.2",
+          "operator_notices": [
+            {
+              "id": "N0",
+              "facility": "test",
+              "facility_type": "气田/生产设施",
+              "notice_type": "非计划",
+              "unavailable_capacity": "20",
+              "period_utc": [
+                "2026-10-20T04:00Z",
+                "2026-10-21T04:00Z"
+              ],
+              "state_description": "仅该公告约束撤销；实际流量与整体供应风险是否消除仍未知"
+            }
+          ],
+          "capacity_scope": "公告不可用容量，非实际流量计量",
+          "pricing_observation": {
+            "clock_roles": {
+              "observed_at": "报价发生时刻",
+              "available_at": "本机获知时刻；不是报价发生时刻"
+            },
+            "current_news_timing": {
+              "id": "N0",
+              "publication_time": "2026-10-20T12:10:58.642680+00:00",
+              "quote_relation": "unknown",
+              "quote_role": "观测/发布时间精度不足，前后关系未知"
+            },
+            "reaction_evidence_available": false,
+            "pricing_status": "无法确认是否已计价；不是尚未计价或价格无反应"
+          }
+        },
+        "news_impact": {
+          "bullish_evidence": [
+            "[N0]test；非计划；公告不可用容量20mcm/d；仅该公告撤销；实流未知；TTF机制：供应风险降低"
+          ],
+          "bearish_evidence": [],
+          "neutralizing_evidence": [],
+          "summary": "公告已撤销，未确认实际供气恢复，缺乏独立流量数据，未形成明显供需冲击，市场传导有限。",
+          "contextual_news_score": 0,
+          "direction": "flat",
+          "confidence": 0.3,
+          "signal_strength": "weak"
+        },
+        "close_forecast": {
+          "basis": "无可比价格反应观测，公告已撤销但未确认实际流量恢复，市场传导不确定。",
+          "summary": "缺乏前一交易日价格锚点及独立价格反应观测，无法判断收盘价相对前价的走势。",
+          "evidence_status": "insufficient_evidence",
+          "direction": null,
+          "confidence": 0.3,
+          "extreme_move_risk": "缺乏价格反应观测，无法排除潜在价格波动。"
+        },
+        "analysis": {
+          "summary": "公告已撤销，未确认实际供气恢复，缺乏独立流量数据，未形成明显供需冲击，市场传导有限。",
+          "evidence": [
+            "[N0]test；非计划；公告不可用容量20mcm/d；仅该公告撤销；实流未知；TTF机制：供应风险降低"
+          ],
+          "negation_or_reversal": [],
+          "priced_in_comment": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格",
+          "matched_terms": [],
+          "historical_comparisons": []
+        },
+        "risk_flags": [],
+        "references": [
+          {
+            "id": "N0",
+            "url": ""
+          }
+        ],
+        "missing_fields": []
+      }
+    }
+  ],
+  "qualifications": [
+    "Original strictTrue/model result retained, independent semanticFalse tracked separately. No retroactive source/generation rewrite.",
+    "No model/API/DB calls and no core changes by reviewer; remainder stage remains frozen."
+  ]
+}

@@ -1,0 +1,589 @@
+............................................. [  4%]
+.................................................................... [ 11%]
+............................F.......................................................................................................F...... [ 25%]
+........................................................................ [ 32%]
+........................................................................ [ 39%]
+...................................................................... [ 46%]
+........................................................................ [ 53%]
+.........................................................FFFFF.......... [ 60%]
+........................................................................................................................... [ 73%]
+................................................ [ 77%]
+................................................................................................................................................................... [ 94%]
+................................................. [ 99%]
+.........                                                                [100%]
+=================================== FAILURES ===================================
+_____ test_brief_archive_changes_only_supplied_unit_and_native_risk_bounds _____
+
+    def test_brief_archive_changes_only_supplied_unit_and_native_risk_bounds():
+        archived=ROOT/'.runtime/source-archives/backend-43554/ttf_news/analysis.py'
+        if not archived.is_file():
+            pytest.skip('private historical runtime archive not in public source distribution')
+        spec=importlib.util.spec_from_file_location('ttf_news._analysis_backend43554',archived)
+        old=importlib.util.module_from_spec(spec);spec.loader.exec_module(old)
+        cases=json.loads((ROOT/'reports/repair_2026-10-20/semantic_regeneration_cases_v2_2.json').read_text())
+        assert len(cases)==20
+        for case in cases:
+            context=case.get('candidate_context') or case['context']
+            new_data,new_meta=prepare_context(context,reserve_tokens=32)
+            old_data,old_meta=old.prepare_context(context,reserve_tokens=32)
+            expected=copy.deepcopy(old_data)
+            quote=expected.get('price_reference',{}).get('intraday')
+            supplied=(context.get('price_reference') or {}).get('intraday') or {}
+            if quote and 'unit' in supplied:quote['unit']=supplied['unit']
+>           assert _json(new_data)==_json(expected),case['id']
+E           AssertionError: real_nyhamna
+E           assert '{"as_of":"20...rl，系统恢复原来源"}}' == '{"as_of":"20...rl，系统恢复原来源"}}'
+E             
+E             Skipping 20878 identical leading characters in diff, use -v to show
+E             Skipping 10843 identical trailing characters in diff, use -v to show
+E             - ":88.175,"observed_at":"2026-10-19T11:31:00+00:00","available_at":"2026-10-19T11:41:10.509603+00:00","price_type":"delayed_last_trade","minimum_delay_minutes":15,"stale":false,"unit":"EUR/MWh"},"verifi
+E             + ":88.175,"unit":"EUR/MWh","observed_at":"2026-10-19T11:31:00+00:00","available_at":"2026-10-19T11:41:10.509603+00:00","price_type":"delayed_last_trade","minimum_delay_minutes":15,"stale":false},"verifi
+
+tests/test_detail_bounded_timing_profile.py:202: AssertionError
+_ test_first_requests_all_twenty_add_only_explicit_supplied_unit_to_backend51753 _
+
+    def test_first_requests_all_twenty_add_only_explicit_supplied_unit_to_backend51753():
+        old=archive_analysis()
+        cases=json.loads((ROOT/'reports/repair_2026-10-20/semantic_regeneration_cases_v2_2.json').read_text())
+        for case in cases:
+            data,meta=prepare_context(case['candidate_context'],reserve_tokens=32)
+            prior,previous=old.prepare_context(case['candidate_context'],reserve_tokens=32)
+            expected=copy.deepcopy(prior)
+            quote=expected.get('price_reference',{}).get('intraday')
+            supplied=(case['candidate_context'].get('price_reference') or {}).get('intraday') or {}
+            if quote and 'unit' in supplied:quote['unit']=supplied['unit']
+>           assert _json(data)==_json(expected),case['id']
+E           AssertionError: real_nyhamna
+E           assert '{"as_of":"20...rl，系统恢复原来源"}}' == '{"as_of":"20...rl，系统恢复原来源"}}'
+E             
+E             Skipping 20878 identical leading characters in diff, use -v to show
+E             Skipping 10843 identical trailing characters in diff, use -v to show
+E             - ":88.175,"observed_at":"2026-10-19T11:31:00+00:00","available_at":"2026-10-19T11:41:10.509603+00:00","price_type":"delayed_last_trade","minimum_delay_minutes":15,"stale":false,"unit":"EUR/MWh"},"verifi
+E             + ":88.175,"unit":"EUR/MWh","observed_at":"2026-10-19T11:31:00+00:00","available_at":"2026-10-19T11:41:10.509603+00:00","price_type":"delayed_last_trade","minimum_delay_minutes":15,"stale":false},"verifi
+
+tests/test_final_output_scope.py:147: AssertionError
+__ test_unit_recovery_never_borrows_filtered_changed_or_future_quote[change0] __
+
+live = ({'as_of': '2026-10-21T01:45:08.003186+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:...限→价格上行'], 'negation_or_reversal': [], 'priced_in_comment': 'price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格', ...}, ...})
+change = {'observed_at': '2026-10-21T02:00:00Z'}
+
+    @pytest.mark.parametrize('change',[
+     {'observed_at':'2026-10-21T02:00:00Z'},
+     {'available_at':'2026-10-21T02:00:00Z'},
+     {'fetched_at':'2026-10-21T02:00:00Z'},
+     {'contract':'another contract'},
+     {'value':999.0},
+    ])
+    def test_unit_recovery_never_borrows_filtered_changed_or_future_quote(live,change):
+     ctx,_=live;p,_=prepare_context(ctx)
+     changed=copy.deepcopy(ctx);changed['price_reference']['intraday'].update(change)
+     body={'close_forecast':{'basis':'参考价上涨1.733 EUR/mcm'}}
+     # The candidate has no authority to reintroduce a discarded unit/quote.
+>    candidate._check_ttf_price_unit_identity(body,changed,p)
+
+tests/test_production_price_unit_scopes.py:153: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+result = {'close_forecast': {'basis': '参考价上涨1.733 EUR/mcm'}}
+context = {'as_of': '2026-10-21T01:45:08.003186+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1....3 mcm/d; available: 124.3; unavailable: 13.0. Reason: Yearly maintenance. Remarks: Extended maintenance.', ...}], ...}
+prepared = {'as_of': '2026-10-21T01:45:08.003186+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1... 'facts': 'Reason: Yearly maintenance. Remarks: Extended maintenance.', 'time': '2026-10-20T20:13:18+00:00', ...}, ...}
+
+    def _check_ttf_price_unit_identity(result: dict, context: dict, prepared: dict) -> None:
+        """An observed TTF price/delta keeps its supplied monetary-energy unit."""
+        reference=_known_price_reference(context,prepared)
+        quote_rows=[reference,reference.get('intraday') or {},reference.get('market_baseline') or {}]
+        units={identity for row in quote_rows if isinstance(row,dict) and (identity:=_price_unit_identity(row.get('unit','')))}
+        # Compression may omit unit from a retained observation. Its immutable
+        # source unit is usable only when the exact same known quote survived,
+        # never by recovering a filtered/future quote from the original snapshot.
+        original=(context.get('price_reference') or {}).get('intraday') or {}
+        retained=reference.get('intraday') or {}
+        now=_moment(context.get('as_of') or prepared.get('as_of'))
+        same_quote=(isinstance(original,dict) and isinstance(retained,dict)
+            and original.get('contract') and all(original.get(key)==retained.get(key)
+                for key in ('contract','value','observed_at','available_at'))
+            and retained.get('value') is not None and retained.get('observed_at')
+            and _known_source(original,now)
+            and not any((stamp:=_moment(original.get(key))) is not None and now is not None and stamp>now
+                        for key in ('fetched_at','known_at','price_known_at')))
+        if same_quote and (identity:=_price_unit_identity(original.get('unit',''))):units.add(identity)
+        # Only apply an identity contract when the supplied quote has an
+        # unambiguous unit. Missing/filtered quotes do not invent a default unit.
+        if len(units)!=1:return
+        expected=next(iter(units))
+        amount_unit=re.compile(r"(?P<amount>[+-]?\d+(?:\.\d+)?)\s*(?P<unit>(?:EUR|USD|GBP|€|£|\$|欧元|美元|英镑)\s*(?:/|per)\s*(?:MWh|kWh|MMBtu|therm|mcm|m3|m³|MW|百万立方米|立方米|兆瓦时|千瓦时))(?![A-Za-z0-9])",re.I)
+        instrument=re.compile(r'(?P<ttf>TTF|荷兰天然气)|(?P<foreign>JKM|NBP|Henry\s+Hub|亨利港|英国天然气)',re.I)
+        cards={row.get('id'):row for row in prepared.get('window_news',[]) if isinstance(row,dict) and row.get('id')}
+        cards['N0']=context.get('current_news') or prepared.get('current_news') or {}
+        for alias,row in list(cards.items()):
+            if row.get('same_as_current_news_id') in cards:cards[alias]=cards[row['same_as_current_news_id']]
+        known=_current_source_rows(context,prepared)
+        quote_values=[reference.get('previous_price'),(reference.get('intraday') or {}).get('value')]
+        quote_values.extend((reference.get('market_baseline') or {}).get(k) for k in ('previous_price','latest_price','observed_delta'))
+        def source_rate_supported(source_topic,amount,identity,clause):
+            aliases=re.findall(r'(?<![A-Za-z0-9_])N\d+(?![A-Za-z0-9_])',clause)
+            sources=[cards[a] for a in aliases if a in cards] if aliases else known
+            for source in sources:
+                if not _known_source(source,now):continue
+                for source_clause in _clauses(_source_text(source)):
+                    if not re.search(source_topic,source_clause,re.I):continue
+                    for supplied in amount_unit.finditer(source_clause):
+                        if (_price_unit_identity(supplied['unit'])==identity and abs(float(supplied['amount'])-amount)<1e-9
+                                and not re.search(r'若|如果|假设|预计|预期|可能|未提供|缺少|无法确认|whether|\bif\b|expected|forecast',source_clause[:supplied.start()],re.I)):
+                            return True
+            return False
+        for path,text in _strings(result):
+            for clause in _clauses(text):
+                for match in amount_unit.finditer(clause):
+                    local=re.split(r'[，,；;]|→|->|但是|但',clause[:match.start()])[-1]
+                    instruments=list(instrument.finditer(local))
+                    scope=instruments[-1] if instruments else None
+                    observed=_price_unit_identity(match['unit'])
+                    if observed is None or observed==expected:continue
+                    cost_topic=r'transport(?:ation)?\s+(?:tariff|cost)|pipeline\s+tariff|tariff|输气(?:成本|费用|费率|资费)|运输(?:成本|费用|费率)|管道(?:成本|费用|费率|资费)'
+                    costs=list(re.finditer(cost_topic,local,re.I))
+                    price_nouns=list(re.finditer(r'气价|价格|报价|结算价|收盘价|price|quote',local,re.I))
+                    cost_object=bool(costs and (not price_nouns or costs[-1].start()>price_nouns[-1].start()))
+                    if cost_object and source_rate_supported(cost_topic,float(match['amount']),observed,clause):
+                        continue  # A sourced transport cost is not a TTF quote.
+                    # A distinct quoted market retains its own unit, backed by
+                    # that cited/known instrument's observation, not the TTF unit.
+                    if scope is not None and scope['foreign']:
+                        if (source_rate_supported(re.escape(scope['foreign']),float(match['amount']),observed,clause)
+                                or re.search(r'若|如果|假设|一旦|\bif\b',local,re.I)):
+                            continue
+                        raise ValueError(f'{path}:不同市场{scope["foreign"]}报价{match.group()}须有该市场截至as_of已知的同单位来源，不能借TTF报价补其价格或单位；同句后续TTF价格仍须保留输入能源单位')
+                    exact_quote_amount=any(isinstance(value,(int,float)) and not isinstance(value,bool)
+                        and abs(float(match['amount'])-value)<1e-9 for value in quote_values)
+                    price_scope=(bool(scope is not None and scope['ttf']) or exact_quote_amount
+                        or bool(re.search(r'(?:本|该|此)合约|参考价|市场基准|收盘(?:价)?|结算(?:价)?|价格(?:上升|上涨|下降|下跌)|TTF|气价',local,re.I)))
+                    if not price_scope:continue
+                    # A warning not to substitute units is not a price assertion.
+                    if re.search(r'(?:单位|计量口径)(?:并非|不是|不应为|不能为)\s*$|(?:不能|不得)(?:写成|当作|改成|换成)\s*$',local):continue
+>                   raise ValueError(f'{path}:TTF报价/参考变动单位必须保留输入{expected[0].upper()}/{expected[1]}，不能写成{match["unit"]}；能源报价不是体积容量，未经已给换算依据不得替换货币或分母。不改变预测方向')
+E                   ValueError: close_forecast.basis:TTF报价/参考变动单位必须保留输入EUR/mwh，不能写成EUR/mcm；能源报价不是体积容量，未经已给换算依据不得替换货币或分母。不改变预测方向
+
+ttf_news/semantics.py:2097: ValueError
+__ test_unit_recovery_never_borrows_filtered_changed_or_future_quote[change1] __
+
+live = ({'as_of': '2026-10-21T01:45:08.003186+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:...限→价格上行'], 'negation_or_reversal': [], 'priced_in_comment': 'price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格', ...}, ...})
+change = {'available_at': '2026-10-21T02:00:00Z'}
+
+    @pytest.mark.parametrize('change',[
+     {'observed_at':'2026-10-21T02:00:00Z'},
+     {'available_at':'2026-10-21T02:00:00Z'},
+     {'fetched_at':'2026-10-21T02:00:00Z'},
+     {'contract':'another contract'},
+     {'value':999.0},
+    ])
+    def test_unit_recovery_never_borrows_filtered_changed_or_future_quote(live,change):
+     ctx,_=live;p,_=prepare_context(ctx)
+     changed=copy.deepcopy(ctx);changed['price_reference']['intraday'].update(change)
+     body={'close_forecast':{'basis':'参考价上涨1.733 EUR/mcm'}}
+     # The candidate has no authority to reintroduce a discarded unit/quote.
+>    candidate._check_ttf_price_unit_identity(body,changed,p)
+
+tests/test_production_price_unit_scopes.py:153: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+result = {'close_forecast': {'basis': '参考价上涨1.733 EUR/mcm'}}
+context = {'as_of': '2026-10-21T01:45:08.003186+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1....3 mcm/d; available: 124.3; unavailable: 13.0. Reason: Yearly maintenance. Remarks: Extended maintenance.', ...}], ...}
+prepared = {'as_of': '2026-10-21T01:45:08.003186+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1... 'facts': 'Reason: Yearly maintenance. Remarks: Extended maintenance.', 'time': '2026-10-20T20:13:18+00:00', ...}, ...}
+
+    def _check_ttf_price_unit_identity(result: dict, context: dict, prepared: dict) -> None:
+        """An observed TTF price/delta keeps its supplied monetary-energy unit."""
+        reference=_known_price_reference(context,prepared)
+        quote_rows=[reference,reference.get('intraday') or {},reference.get('market_baseline') or {}]
+        units={identity for row in quote_rows if isinstance(row,dict) and (identity:=_price_unit_identity(row.get('unit','')))}
+        # Compression may omit unit from a retained observation. Its immutable
+        # source unit is usable only when the exact same known quote survived,
+        # never by recovering a filtered/future quote from the original snapshot.
+        original=(context.get('price_reference') or {}).get('intraday') or {}
+        retained=reference.get('intraday') or {}
+        now=_moment(context.get('as_of') or prepared.get('as_of'))
+        same_quote=(isinstance(original,dict) and isinstance(retained,dict)
+            and original.get('contract') and all(original.get(key)==retained.get(key)
+                for key in ('contract','value','observed_at','available_at'))
+            and retained.get('value') is not None and retained.get('observed_at')
+            and _known_source(original,now)
+            and not any((stamp:=_moment(original.get(key))) is not None and now is not None and stamp>now
+                        for key in ('fetched_at','known_at','price_known_at')))
+        if same_quote and (identity:=_price_unit_identity(original.get('unit',''))):units.add(identity)
+        # Only apply an identity contract when the supplied quote has an
+        # unambiguous unit. Missing/filtered quotes do not invent a default unit.
+        if len(units)!=1:return
+        expected=next(iter(units))
+        amount_unit=re.compile(r"(?P<amount>[+-]?\d+(?:\.\d+)?)\s*(?P<unit>(?:EUR|USD|GBP|€|£|\$|欧元|美元|英镑)\s*(?:/|per)\s*(?:MWh|kWh|MMBtu|therm|mcm|m3|m³|MW|百万立方米|立方米|兆瓦时|千瓦时))(?![A-Za-z0-9])",re.I)
+        instrument=re.compile(r'(?P<ttf>TTF|荷兰天然气)|(?P<foreign>JKM|NBP|Henry\s+Hub|亨利港|英国天然气)',re.I)
+        cards={row.get('id'):row for row in prepared.get('window_news',[]) if isinstance(row,dict) and row.get('id')}
+        cards['N0']=context.get('current_news') or prepared.get('current_news') or {}
+        for alias,row in list(cards.items()):
+            if row.get('same_as_current_news_id') in cards:cards[alias]=cards[row['same_as_current_news_id']]
+        known=_current_source_rows(context,prepared)
+        quote_values=[reference.get('previous_price'),(reference.get('intraday') or {}).get('value')]
+        quote_values.extend((reference.get('market_baseline') or {}).get(k) for k in ('previous_price','latest_price','observed_delta'))
+        def source_rate_supported(source_topic,amount,identity,clause):
+            aliases=re.findall(r'(?<![A-Za-z0-9_])N\d+(?![A-Za-z0-9_])',clause)
+            sources=[cards[a] for a in aliases if a in cards] if aliases else known
+            for source in sources:
+                if not _known_source(source,now):continue
+                for source_clause in _clauses(_source_text(source)):
+                    if not re.search(source_topic,source_clause,re.I):continue
+                    for supplied in amount_unit.finditer(source_clause):
+                        if (_price_unit_identity(supplied['unit'])==identity and abs(float(supplied['amount'])-amount)<1e-9
+                                and not re.search(r'若|如果|假设|预计|预期|可能|未提供|缺少|无法确认|whether|\bif\b|expected|forecast',source_clause[:supplied.start()],re.I)):
+                            return True
+            return False
+        for path,text in _strings(result):
+            for clause in _clauses(text):
+                for match in amount_unit.finditer(clause):
+                    local=re.split(r'[，,；;]|→|->|但是|但',clause[:match.start()])[-1]
+                    instruments=list(instrument.finditer(local))
+                    scope=instruments[-1] if instruments else None
+                    observed=_price_unit_identity(match['unit'])
+                    if observed is None or observed==expected:continue
+                    cost_topic=r'transport(?:ation)?\s+(?:tariff|cost)|pipeline\s+tariff|tariff|输气(?:成本|费用|费率|资费)|运输(?:成本|费用|费率)|管道(?:成本|费用|费率|资费)'
+                    costs=list(re.finditer(cost_topic,local,re.I))
+                    price_nouns=list(re.finditer(r'气价|价格|报价|结算价|收盘价|price|quote',local,re.I))
+                    cost_object=bool(costs and (not price_nouns or costs[-1].start()>price_nouns[-1].start()))
+                    if cost_object and source_rate_supported(cost_topic,float(match['amount']),observed,clause):
+                        continue  # A sourced transport cost is not a TTF quote.
+                    # A distinct quoted market retains its own unit, backed by
+                    # that cited/known instrument's observation, not the TTF unit.
+                    if scope is not None and scope['foreign']:
+                        if (source_rate_supported(re.escape(scope['foreign']),float(match['amount']),observed,clause)
+                                or re.search(r'若|如果|假设|一旦|\bif\b',local,re.I)):
+                            continue
+                        raise ValueError(f'{path}:不同市场{scope["foreign"]}报价{match.group()}须有该市场截至as_of已知的同单位来源，不能借TTF报价补其价格或单位；同句后续TTF价格仍须保留输入能源单位')
+                    exact_quote_amount=any(isinstance(value,(int,float)) and not isinstance(value,bool)
+                        and abs(float(match['amount'])-value)<1e-9 for value in quote_values)
+                    price_scope=(bool(scope is not None and scope['ttf']) or exact_quote_amount
+                        or bool(re.search(r'(?:本|该|此)合约|参考价|市场基准|收盘(?:价)?|结算(?:价)?|价格(?:上升|上涨|下降|下跌)|TTF|气价',local,re.I)))
+                    if not price_scope:continue
+                    # A warning not to substitute units is not a price assertion.
+                    if re.search(r'(?:单位|计量口径)(?:并非|不是|不应为|不能为)\s*$|(?:不能|不得)(?:写成|当作|改成|换成)\s*$',local):continue
+>                   raise ValueError(f'{path}:TTF报价/参考变动单位必须保留输入{expected[0].upper()}/{expected[1]}，不能写成{match["unit"]}；能源报价不是体积容量，未经已给换算依据不得替换货币或分母。不改变预测方向')
+E                   ValueError: close_forecast.basis:TTF报价/参考变动单位必须保留输入EUR/mwh，不能写成EUR/mcm；能源报价不是体积容量，未经已给换算依据不得替换货币或分母。不改变预测方向
+
+ttf_news/semantics.py:2097: ValueError
+__ test_unit_recovery_never_borrows_filtered_changed_or_future_quote[change2] __
+
+live = ({'as_of': '2026-10-21T01:45:08.003186+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:...限→价格上行'], 'negation_or_reversal': [], 'priced_in_comment': 'price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格', ...}, ...})
+change = {'fetched_at': '2026-10-21T02:00:00Z'}
+
+    @pytest.mark.parametrize('change',[
+     {'observed_at':'2026-10-21T02:00:00Z'},
+     {'available_at':'2026-10-21T02:00:00Z'},
+     {'fetched_at':'2026-10-21T02:00:00Z'},
+     {'contract':'another contract'},
+     {'value':999.0},
+    ])
+    def test_unit_recovery_never_borrows_filtered_changed_or_future_quote(live,change):
+     ctx,_=live;p,_=prepare_context(ctx)
+     changed=copy.deepcopy(ctx);changed['price_reference']['intraday'].update(change)
+     body={'close_forecast':{'basis':'参考价上涨1.733 EUR/mcm'}}
+     # The candidate has no authority to reintroduce a discarded unit/quote.
+>    candidate._check_ttf_price_unit_identity(body,changed,p)
+
+tests/test_production_price_unit_scopes.py:153: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+result = {'close_forecast': {'basis': '参考价上涨1.733 EUR/mcm'}}
+context = {'as_of': '2026-10-21T01:45:08.003186+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1....3 mcm/d; available: 124.3; unavailable: 13.0. Reason: Yearly maintenance. Remarks: Extended maintenance.', ...}], ...}
+prepared = {'as_of': '2026-10-21T01:45:08.003186+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1... 'facts': 'Reason: Yearly maintenance. Remarks: Extended maintenance.', 'time': '2026-10-20T20:13:18+00:00', ...}, ...}
+
+    def _check_ttf_price_unit_identity(result: dict, context: dict, prepared: dict) -> None:
+        """An observed TTF price/delta keeps its supplied monetary-energy unit."""
+        reference=_known_price_reference(context,prepared)
+        quote_rows=[reference,reference.get('intraday') or {},reference.get('market_baseline') or {}]
+        units={identity for row in quote_rows if isinstance(row,dict) and (identity:=_price_unit_identity(row.get('unit','')))}
+        # Compression may omit unit from a retained observation. Its immutable
+        # source unit is usable only when the exact same known quote survived,
+        # never by recovering a filtered/future quote from the original snapshot.
+        original=(context.get('price_reference') or {}).get('intraday') or {}
+        retained=reference.get('intraday') or {}
+        now=_moment(context.get('as_of') or prepared.get('as_of'))
+        same_quote=(isinstance(original,dict) and isinstance(retained,dict)
+            and original.get('contract') and all(original.get(key)==retained.get(key)
+                for key in ('contract','value','observed_at','available_at'))
+            and retained.get('value') is not None and retained.get('observed_at')
+            and _known_source(original,now)
+            and not any((stamp:=_moment(original.get(key))) is not None and now is not None and stamp>now
+                        for key in ('fetched_at','known_at','price_known_at')))
+        if same_quote and (identity:=_price_unit_identity(original.get('unit',''))):units.add(identity)
+        # Only apply an identity contract when the supplied quote has an
+        # unambiguous unit. Missing/filtered quotes do not invent a default unit.
+        if len(units)!=1:return
+        expected=next(iter(units))
+        amount_unit=re.compile(r"(?P<amount>[+-]?\d+(?:\.\d+)?)\s*(?P<unit>(?:EUR|USD|GBP|€|£|\$|欧元|美元|英镑)\s*(?:/|per)\s*(?:MWh|kWh|MMBtu|therm|mcm|m3|m³|MW|百万立方米|立方米|兆瓦时|千瓦时))(?![A-Za-z0-9])",re.I)
+        instrument=re.compile(r'(?P<ttf>TTF|荷兰天然气)|(?P<foreign>JKM|NBP|Henry\s+Hub|亨利港|英国天然气)',re.I)
+        cards={row.get('id'):row for row in prepared.get('window_news',[]) if isinstance(row,dict) and row.get('id')}
+        cards['N0']=context.get('current_news') or prepared.get('current_news') or {}
+        for alias,row in list(cards.items()):
+            if row.get('same_as_current_news_id') in cards:cards[alias]=cards[row['same_as_current_news_id']]
+        known=_current_source_rows(context,prepared)
+        quote_values=[reference.get('previous_price'),(reference.get('intraday') or {}).get('value')]
+        quote_values.extend((reference.get('market_baseline') or {}).get(k) for k in ('previous_price','latest_price','observed_delta'))
+        def source_rate_supported(source_topic,amount,identity,clause):
+            aliases=re.findall(r'(?<![A-Za-z0-9_])N\d+(?![A-Za-z0-9_])',clause)
+            sources=[cards[a] for a in aliases if a in cards] if aliases else known
+            for source in sources:
+                if not _known_source(source,now):continue
+                for source_clause in _clauses(_source_text(source)):
+                    if not re.search(source_topic,source_clause,re.I):continue
+                    for supplied in amount_unit.finditer(source_clause):
+                        if (_price_unit_identity(supplied['unit'])==identity and abs(float(supplied['amount'])-amount)<1e-9
+                                and not re.search(r'若|如果|假设|预计|预期|可能|未提供|缺少|无法确认|whether|\bif\b|expected|forecast',source_clause[:supplied.start()],re.I)):
+                            return True
+            return False
+        for path,text in _strings(result):
+            for clause in _clauses(text):
+                for match in amount_unit.finditer(clause):
+                    local=re.split(r'[，,；;]|→|->|但是|但',clause[:match.start()])[-1]
+                    instruments=list(instrument.finditer(local))
+                    scope=instruments[-1] if instruments else None
+                    observed=_price_unit_identity(match['unit'])
+                    if observed is None or observed==expected:continue
+                    cost_topic=r'transport(?:ation)?\s+(?:tariff|cost)|pipeline\s+tariff|tariff|输气(?:成本|费用|费率|资费)|运输(?:成本|费用|费率)|管道(?:成本|费用|费率|资费)'
+                    costs=list(re.finditer(cost_topic,local,re.I))
+                    price_nouns=list(re.finditer(r'气价|价格|报价|结算价|收盘价|price|quote',local,re.I))
+                    cost_object=bool(costs and (not price_nouns or costs[-1].start()>price_nouns[-1].start()))
+                    if cost_object and source_rate_supported(cost_topic,float(match['amount']),observed,clause):
+                        continue  # A sourced transport cost is not a TTF quote.
+                    # A distinct quoted market retains its own unit, backed by
+                    # that cited/known instrument's observation, not the TTF unit.
+                    if scope is not None and scope['foreign']:
+                        if (source_rate_supported(re.escape(scope['foreign']),float(match['amount']),observed,clause)
+                                or re.search(r'若|如果|假设|一旦|\bif\b',local,re.I)):
+                            continue
+                        raise ValueError(f'{path}:不同市场{scope["foreign"]}报价{match.group()}须有该市场截至as_of已知的同单位来源，不能借TTF报价补其价格或单位；同句后续TTF价格仍须保留输入能源单位')
+                    exact_quote_amount=any(isinstance(value,(int,float)) and not isinstance(value,bool)
+                        and abs(float(match['amount'])-value)<1e-9 for value in quote_values)
+                    price_scope=(bool(scope is not None and scope['ttf']) or exact_quote_amount
+                        or bool(re.search(r'(?:本|该|此)合约|参考价|市场基准|收盘(?:价)?|结算(?:价)?|价格(?:上升|上涨|下降|下跌)|TTF|气价',local,re.I)))
+                    if not price_scope:continue
+                    # A warning not to substitute units is not a price assertion.
+                    if re.search(r'(?:单位|计量口径)(?:并非|不是|不应为|不能为)\s*$|(?:不能|不得)(?:写成|当作|改成|换成)\s*$',local):continue
+>                   raise ValueError(f'{path}:TTF报价/参考变动单位必须保留输入{expected[0].upper()}/{expected[1]}，不能写成{match["unit"]}；能源报价不是体积容量，未经已给换算依据不得替换货币或分母。不改变预测方向')
+E                   ValueError: close_forecast.basis:TTF报价/参考变动单位必须保留输入EUR/mwh，不能写成EUR/mcm；能源报价不是体积容量，未经已给换算依据不得替换货币或分母。不改变预测方向
+
+ttf_news/semantics.py:2097: ValueError
+__ test_unit_recovery_never_borrows_filtered_changed_or_future_quote[change3] __
+
+live = ({'as_of': '2026-10-21T01:45:08.003186+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:...限→价格上行'], 'negation_or_reversal': [], 'priced_in_comment': 'price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格', ...}, ...})
+change = {'contract': 'another contract'}
+
+    @pytest.mark.parametrize('change',[
+     {'observed_at':'2026-10-21T02:00:00Z'},
+     {'available_at':'2026-10-21T02:00:00Z'},
+     {'fetched_at':'2026-10-21T02:00:00Z'},
+     {'contract':'another contract'},
+     {'value':999.0},
+    ])
+    def test_unit_recovery_never_borrows_filtered_changed_or_future_quote(live,change):
+     ctx,_=live;p,_=prepare_context(ctx)
+     changed=copy.deepcopy(ctx);changed['price_reference']['intraday'].update(change)
+     body={'close_forecast':{'basis':'参考价上涨1.733 EUR/mcm'}}
+     # The candidate has no authority to reintroduce a discarded unit/quote.
+>    candidate._check_ttf_price_unit_identity(body,changed,p)
+
+tests/test_production_price_unit_scopes.py:153: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+result = {'close_forecast': {'basis': '参考价上涨1.733 EUR/mcm'}}
+context = {'as_of': '2026-10-21T01:45:08.003186+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1....3 mcm/d; available: 124.3; unavailable: 13.0. Reason: Yearly maintenance. Remarks: Extended maintenance.', ...}], ...}
+prepared = {'as_of': '2026-10-21T01:45:08.003186+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1... 'facts': 'Reason: Yearly maintenance. Remarks: Extended maintenance.', 'time': '2026-10-20T20:13:18+00:00', ...}, ...}
+
+    def _check_ttf_price_unit_identity(result: dict, context: dict, prepared: dict) -> None:
+        """An observed TTF price/delta keeps its supplied monetary-energy unit."""
+        reference=_known_price_reference(context,prepared)
+        quote_rows=[reference,reference.get('intraday') or {},reference.get('market_baseline') or {}]
+        units={identity for row in quote_rows if isinstance(row,dict) and (identity:=_price_unit_identity(row.get('unit','')))}
+        # Compression may omit unit from a retained observation. Its immutable
+        # source unit is usable only when the exact same known quote survived,
+        # never by recovering a filtered/future quote from the original snapshot.
+        original=(context.get('price_reference') or {}).get('intraday') or {}
+        retained=reference.get('intraday') or {}
+        now=_moment(context.get('as_of') or prepared.get('as_of'))
+        same_quote=(isinstance(original,dict) and isinstance(retained,dict)
+            and original.get('contract') and all(original.get(key)==retained.get(key)
+                for key in ('contract','value','observed_at','available_at'))
+            and retained.get('value') is not None and retained.get('observed_at')
+            and _known_source(original,now)
+            and not any((stamp:=_moment(original.get(key))) is not None and now is not None and stamp>now
+                        for key in ('fetched_at','known_at','price_known_at')))
+        if same_quote and (identity:=_price_unit_identity(original.get('unit',''))):units.add(identity)
+        # Only apply an identity contract when the supplied quote has an
+        # unambiguous unit. Missing/filtered quotes do not invent a default unit.
+        if len(units)!=1:return
+        expected=next(iter(units))
+        amount_unit=re.compile(r"(?P<amount>[+-]?\d+(?:\.\d+)?)\s*(?P<unit>(?:EUR|USD|GBP|€|£|\$|欧元|美元|英镑)\s*(?:/|per)\s*(?:MWh|kWh|MMBtu|therm|mcm|m3|m³|MW|百万立方米|立方米|兆瓦时|千瓦时))(?![A-Za-z0-9])",re.I)
+        instrument=re.compile(r'(?P<ttf>TTF|荷兰天然气)|(?P<foreign>JKM|NBP|Henry\s+Hub|亨利港|英国天然气)',re.I)
+        cards={row.get('id'):row for row in prepared.get('window_news',[]) if isinstance(row,dict) and row.get('id')}
+        cards['N0']=context.get('current_news') or prepared.get('current_news') or {}
+        for alias,row in list(cards.items()):
+            if row.get('same_as_current_news_id') in cards:cards[alias]=cards[row['same_as_current_news_id']]
+        known=_current_source_rows(context,prepared)
+        quote_values=[reference.get('previous_price'),(reference.get('intraday') or {}).get('value')]
+        quote_values.extend((reference.get('market_baseline') or {}).get(k) for k in ('previous_price','latest_price','observed_delta'))
+        def source_rate_supported(source_topic,amount,identity,clause):
+            aliases=re.findall(r'(?<![A-Za-z0-9_])N\d+(?![A-Za-z0-9_])',clause)
+            sources=[cards[a] for a in aliases if a in cards] if aliases else known
+            for source in sources:
+                if not _known_source(source,now):continue
+                for source_clause in _clauses(_source_text(source)):
+                    if not re.search(source_topic,source_clause,re.I):continue
+                    for supplied in amount_unit.finditer(source_clause):
+                        if (_price_unit_identity(supplied['unit'])==identity and abs(float(supplied['amount'])-amount)<1e-9
+                                and not re.search(r'若|如果|假设|预计|预期|可能|未提供|缺少|无法确认|whether|\bif\b|expected|forecast',source_clause[:supplied.start()],re.I)):
+                            return True
+            return False
+        for path,text in _strings(result):
+            for clause in _clauses(text):
+                for match in amount_unit.finditer(clause):
+                    local=re.split(r'[，,；;]|→|->|但是|但',clause[:match.start()])[-1]
+                    instruments=list(instrument.finditer(local))
+                    scope=instruments[-1] if instruments else None
+                    observed=_price_unit_identity(match['unit'])
+                    if observed is None or observed==expected:continue
+                    cost_topic=r'transport(?:ation)?\s+(?:tariff|cost)|pipeline\s+tariff|tariff|输气(?:成本|费用|费率|资费)|运输(?:成本|费用|费率)|管道(?:成本|费用|费率|资费)'
+                    costs=list(re.finditer(cost_topic,local,re.I))
+                    price_nouns=list(re.finditer(r'气价|价格|报价|结算价|收盘价|price|quote',local,re.I))
+                    cost_object=bool(costs and (not price_nouns or costs[-1].start()>price_nouns[-1].start()))
+                    if cost_object and source_rate_supported(cost_topic,float(match['amount']),observed,clause):
+                        continue  # A sourced transport cost is not a TTF quote.
+                    # A distinct quoted market retains its own unit, backed by
+                    # that cited/known instrument's observation, not the TTF unit.
+                    if scope is not None and scope['foreign']:
+                        if (source_rate_supported(re.escape(scope['foreign']),float(match['amount']),observed,clause)
+                                or re.search(r'若|如果|假设|一旦|\bif\b',local,re.I)):
+                            continue
+                        raise ValueError(f'{path}:不同市场{scope["foreign"]}报价{match.group()}须有该市场截至as_of已知的同单位来源，不能借TTF报价补其价格或单位；同句后续TTF价格仍须保留输入能源单位')
+                    exact_quote_amount=any(isinstance(value,(int,float)) and not isinstance(value,bool)
+                        and abs(float(match['amount'])-value)<1e-9 for value in quote_values)
+                    price_scope=(bool(scope is not None and scope['ttf']) or exact_quote_amount
+                        or bool(re.search(r'(?:本|该|此)合约|参考价|市场基准|收盘(?:价)?|结算(?:价)?|价格(?:上升|上涨|下降|下跌)|TTF|气价',local,re.I)))
+                    if not price_scope:continue
+                    # A warning not to substitute units is not a price assertion.
+                    if re.search(r'(?:单位|计量口径)(?:并非|不是|不应为|不能为)\s*$|(?:不能|不得)(?:写成|当作|改成|换成)\s*$',local):continue
+>                   raise ValueError(f'{path}:TTF报价/参考变动单位必须保留输入{expected[0].upper()}/{expected[1]}，不能写成{match["unit"]}；能源报价不是体积容量，未经已给换算依据不得替换货币或分母。不改变预测方向')
+E                   ValueError: close_forecast.basis:TTF报价/参考变动单位必须保留输入EUR/mwh，不能写成EUR/mcm；能源报价不是体积容量，未经已给换算依据不得替换货币或分母。不改变预测方向
+
+ttf_news/semantics.py:2097: ValueError
+__ test_unit_recovery_never_borrows_filtered_changed_or_future_quote[change4] __
+
+live = ({'as_of': '2026-10-21T01:45:08.003186+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:...限→价格上行'], 'negation_or_reversal': [], 'priced_in_comment': 'price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格', ...}, ...})
+change = {'value': 999.0}
+
+    @pytest.mark.parametrize('change',[
+     {'observed_at':'2026-10-21T02:00:00Z'},
+     {'available_at':'2026-10-21T02:00:00Z'},
+     {'fetched_at':'2026-10-21T02:00:00Z'},
+     {'contract':'another contract'},
+     {'value':999.0},
+    ])
+    def test_unit_recovery_never_borrows_filtered_changed_or_future_quote(live,change):
+     ctx,_=live;p,_=prepare_context(ctx)
+     changed=copy.deepcopy(ctx);changed['price_reference']['intraday'].update(change)
+     body={'close_forecast':{'basis':'参考价上涨1.733 EUR/mcm'}}
+     # The candidate has no authority to reintroduce a discarded unit/quote.
+>    candidate._check_ttf_price_unit_identity(body,changed,p)
+
+tests/test_production_price_unit_scopes.py:153: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+result = {'close_forecast': {'basis': '参考价上涨1.733 EUR/mcm'}}
+context = {'as_of': '2026-10-21T01:45:08.003186+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1....3 mcm/d; available: 124.3; unavailable: 13.0. Reason: Yearly maintenance. Remarks: Extended maintenance.', ...}], ...}
+prepared = {'as_of': '2026-10-21T01:45:08.003186+00:00', 'session': {'trade_date': '2026-10-21', 'window_start': '2026-10-20T15:1... 'facts': 'Reason: Yearly maintenance. Remarks: Extended maintenance.', 'time': '2026-10-20T20:13:18+00:00', ...}, ...}
+
+    def _check_ttf_price_unit_identity(result: dict, context: dict, prepared: dict) -> None:
+        """An observed TTF price/delta keeps its supplied monetary-energy unit."""
+        reference=_known_price_reference(context,prepared)
+        quote_rows=[reference,reference.get('intraday') or {},reference.get('market_baseline') or {}]
+        units={identity for row in quote_rows if isinstance(row,dict) and (identity:=_price_unit_identity(row.get('unit','')))}
+        # Compression may omit unit from a retained observation. Its immutable
+        # source unit is usable only when the exact same known quote survived,
+        # never by recovering a filtered/future quote from the original snapshot.
+        original=(context.get('price_reference') or {}).get('intraday') or {}
+        retained=reference.get('intraday') or {}
+        now=_moment(context.get('as_of') or prepared.get('as_of'))
+        same_quote=(isinstance(original,dict) and isinstance(retained,dict)
+            and original.get('contract') and all(original.get(key)==retained.get(key)
+                for key in ('contract','value','observed_at','available_at'))
+            and retained.get('value') is not None and retained.get('observed_at')
+            and _known_source(original,now)
+            and not any((stamp:=_moment(original.get(key))) is not None and now is not None and stamp>now
+                        for key in ('fetched_at','known_at','price_known_at')))
+        if same_quote and (identity:=_price_unit_identity(original.get('unit',''))):units.add(identity)
+        # Only apply an identity contract when the supplied quote has an
+        # unambiguous unit. Missing/filtered quotes do not invent a default unit.
+        if len(units)!=1:return
+        expected=next(iter(units))
+        amount_unit=re.compile(r"(?P<amount>[+-]?\d+(?:\.\d+)?)\s*(?P<unit>(?:EUR|USD|GBP|€|£|\$|欧元|美元|英镑)\s*(?:/|per)\s*(?:MWh|kWh|MMBtu|therm|mcm|m3|m³|MW|百万立方米|立方米|兆瓦时|千瓦时))(?![A-Za-z0-9])",re.I)
+        instrument=re.compile(r'(?P<ttf>TTF|荷兰天然气)|(?P<foreign>JKM|NBP|Henry\s+Hub|亨利港|英国天然气)',re.I)
+        cards={row.get('id'):row for row in prepared.get('window_news',[]) if isinstance(row,dict) and row.get('id')}
+        cards['N0']=context.get('current_news') or prepared.get('current_news') or {}
+        for alias,row in list(cards.items()):
+            if row.get('same_as_current_news_id') in cards:cards[alias]=cards[row['same_as_current_news_id']]
+        known=_current_source_rows(context,prepared)
+        quote_values=[reference.get('previous_price'),(reference.get('intraday') or {}).get('value')]
+        quote_values.extend((reference.get('market_baseline') or {}).get(k) for k in ('previous_price','latest_price','observed_delta'))
+        def source_rate_supported(source_topic,amount,identity,clause):
+            aliases=re.findall(r'(?<![A-Za-z0-9_])N\d+(?![A-Za-z0-9_])',clause)
+            sources=[cards[a] for a in aliases if a in cards] if aliases else known
+            for source in sources:
+                if not _known_source(source,now):continue
+                for source_clause in _clauses(_source_text(source)):
+                    if not re.search(source_topic,source_clause,re.I):continue
+                    for supplied in amount_unit.finditer(source_clause):
+                        if (_price_unit_identity(supplied['unit'])==identity and abs(float(supplied['amount'])-amount)<1e-9
+                                and not re.search(r'若|如果|假设|预计|预期|可能|未提供|缺少|无法确认|whether|\bif\b|expected|forecast',source_clause[:supplied.start()],re.I)):
+                            return True
+            return False
+        for path,text in _strings(result):
+            for clause in _clauses(text):
+                for match in amount_unit.finditer(clause):
+                    local=re.split(r'[，,；;]|→|->|但是|但',clause[:match.start()])[-1]
+                    instruments=list(instrument.finditer(local))
+                    scope=instruments[-1] if instruments else None
+                    observed=_price_unit_identity(match['unit'])
+                    if observed is None or observed==expected:continue
+                    cost_topic=r'transport(?:ation)?\s+(?:tariff|cost)|pipeline\s+tariff|tariff|输气(?:成本|费用|费率|资费)|运输(?:成本|费用|费率)|管道(?:成本|费用|费率|资费)'
+                    costs=list(re.finditer(cost_topic,local,re.I))
+                    price_nouns=list(re.finditer(r'气价|价格|报价|结算价|收盘价|price|quote',local,re.I))
+                    cost_object=bool(costs and (not price_nouns or costs[-1].start()>price_nouns[-1].start()))
+                    if cost_object and source_rate_supported(cost_topic,float(match['amount']),observed,clause):
+                        continue  # A sourced transport cost is not a TTF quote.
+                    # A distinct quoted market retains its own unit, backed by
+                    # that cited/known instrument's observation, not the TTF unit.
+                    if scope is not None and scope['foreign']:
+                        if (source_rate_supported(re.escape(scope['foreign']),float(match['amount']),observed,clause)
+                                or re.search(r'若|如果|假设|一旦|\bif\b',local,re.I)):
+                            continue
+                        raise ValueError(f'{path}:不同市场{scope["foreign"]}报价{match.group()}须有该市场截至as_of已知的同单位来源，不能借TTF报价补其价格或单位；同句后续TTF价格仍须保留输入能源单位')
+                    exact_quote_amount=any(isinstance(value,(int,float)) and not isinstance(value,bool)
+                        and abs(float(match['amount'])-value)<1e-9 for value in quote_values)
+                    price_scope=(bool(scope is not None and scope['ttf']) or exact_quote_amount
+                        or bool(re.search(r'(?:本|该|此)合约|参考价|市场基准|收盘(?:价)?|结算(?:价)?|价格(?:上升|上涨|下降|下跌)|TTF|气价',local,re.I)))
+                    if not price_scope:continue
+                    # A warning not to substitute units is not a price assertion.
+                    if re.search(r'(?:单位|计量口径)(?:并非|不是|不应为|不能为)\s*$|(?:不能|不得)(?:写成|当作|改成|换成)\s*$',local):continue
+>                   raise ValueError(f'{path}:TTF报价/参考变动单位必须保留输入{expected[0].upper()}/{expected[1]}，不能写成{match["unit"]}；能源报价不是体积容量，未经已给换算依据不得替换货币或分母。不改变预测方向')
+E                   ValueError: close_forecast.basis:TTF报价/参考变动单位必须保留输入EUR/mwh，不能写成EUR/mcm；能源报价不是体积容量，未经已给换算依据不得替换货币或分母。不改变预测方向
+
+ttf_news/semantics.py:2097: ValueError
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/fastapi/testclient.py:1
+  .venv/lib/python3.10/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_detail_bounded_timing_profile.py::test_brief_archive_changes_only_supplied_unit_and_native_risk_bounds
+FAILED tests/test_final_output_scope.py::test_first_requests_all_twenty_add_only_explicit_supplied_unit_to_backend51753
+FAILED tests/test_production_price_unit_scopes.py::test_unit_recovery_never_borrows_filtered_changed_or_future_quote[change0]
+FAILED tests/test_production_price_unit_scopes.py::test_unit_recovery_never_borrows_filtered_changed_or_future_quote[change1]
+FAILED tests/test_production_price_unit_scopes.py::test_unit_recovery_never_borrows_filtered_changed_or_future_quote[change2]
+FAILED tests/test_production_price_unit_scopes.py::test_unit_recovery_never_borrows_filtered_changed_or_future_quote[change3]
+FAILED tests/test_production_price_unit_scopes.py::test_unit_recovery_never_borrows_filtered_changed_or_future_quote[change4]
+7 failed, 995 passed, 1 warning, 375 subtests passed in 40.43s

@@ -1,0 +1,184 @@
+{
+  "audit": "fourth_production_epcm_manual_english3_full_review_v2_3",
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "audited_at": "2026-10-20T23:37:25.344852+00:00",
+  "role": "manual_brief_english",
+  "verdict": "completed_english3_translation_no_P2_identified_with_inherited_P3_limits",
+  "actual_record_path": "reports/repair_2026-10-20/production_manual_english_conditional_actual_v2_3.json",
+  "actual_record_sha256": "9e0b30f4d5c83d333c290880dbe219cae39b088bbe80675692ac6d40338501e7",
+  "translation_id": "147e95b4-7122-47d0-bafa-95cf1ceb0511",
+  "analysis_id": "7d35d08d-759a-486c-9aed-fe8baceb96a5",
+  "actual_status": "completed",
+  "source_chinese_record": {
+    "file": "reports/repair_2026-10-20/production_manual_brief_conditional_actual_v2_3.json",
+    "sha256": "c6daf0b663d9ba15abb9cf2f901ade0a4e5f05616394573ad4175be420de856b"
+  },
+  "source_hash_independently_recomputed": "93f49c3b26f6d60717a0efbd5348b7aabe129f0937de7bd96c04bdba5a569097",
+  "source_hash_and_meta_match": true,
+  "translation_version": "ttf-analysis-english-3",
+  "translation_elapsed_seconds": 50.161,
+  "english_result_canonical_sha256": "aed22a19caef3bec785ceed4ef84d3d03df9ff6a09f0d7c0adcdf698d313aa1c",
+  "material_known_logic_errors": [],
+  "all_english_body_fields": {
+    "news_impact": {
+      "direction": "flat",
+      "contextual_news_score": 0.0,
+      "confidence": 0.6,
+      "signal_strength": "weak",
+      "summary": "LNG Canada awarded Técnicas Reunidas €200M+ EPCM contract, a future construction project, which does not immediately affect TTF supply. Both planned maintenance announcements for the Troll facility are scheduled for future periods and do not constitute a current supply shortfall. Overall, there is no obvious supply-demand shock within the current window, and the net impact is stable.",
+      "bullish_evidence": [],
+      "bearish_evidence": [],
+      "neutralizing_evidence": []
+    },
+    "close_forecast": {
+      "confidence": 0.4,
+      "summary": "Lack of a previous settlement anchor and immediate price reaction makes it impossible to determine whether the closing price will rise or fall relative to the previous trading day.",
+      "basis": "As of 2026‑10‑20, the TTF benchmark price is 86.325, with no settlement anchor from the previous trading day and no immediate price reaction observed.",
+      "extreme_move_risk": "The absence of a previous settlement anchor prevents assessment of price direction.",
+      "evidence_status": "insufficient_evidence",
+      "direction": null
+    },
+    "analysis": {
+      "summary": "N0 is a future construction contract, N1 and N2 are future maintenance announcements, none of which constitute a current supply shortfall, resulting in a stable net impact.",
+      "evidence": [
+        "[N0] LNG Canada awarded Técnicas Reunidas €200M+ EPCM contract → TTF supply is unaffected",
+        "[N1] Troll; plan; announcement unavailable capacity 7.6mcm/d; future capacity announcement; actual flow unknown; TTF mechanism: no immediate supply shortfall",
+        "[N2] Troll; plan; announcement unavailable capacity 13.0mcm/d; future capacity announcement; actual flow unknown; end time revised: 2026-10-23T06:00:00+0200→2026-10-22T06:00:00+0200; TTF mechanism: no immediate supply shortfall"
+      ],
+      "negation_or_reversal": [],
+      "priced_in_comment": "price_reference: no comparable price reaction before or after the announcement provided, so it cannot be confirmed whether the news has been priced in",
+      "matched_terms": [],
+      "historical_comparisons": []
+    },
+    "risk_flags": [
+      "coverage: source gassco: recent collection failed",
+      "manual input used only for conditional scenario analysis; facts have not yet been independently verified by this system",
+      "no available market data from the previous trading day; closing forecast driven solely by news evidence",
+      "market data has not been verified as ICE official daily settlement, not included in official settlement accuracy scoring",
+      "price type has not been verified as ICE official daily settlement, not used for official settlement scoring",
+      "the most recent price is not from the last complete trading day, creating a market gap",
+      "the triggering news was released in an earlier settlement window; this is known background as of the analysis point; the original report should not be treated as a new impact for this window and the revised content must be checked against what has been priced",
+      "the model's grasp has not been statistically calibrated, not representing verified accuracy",
+      "source gassco: recent collection failed",
+      "source gdelt: recent collection failed"
+    ],
+    "references": [
+      {
+        "id": "manual-b0ac3397-4cbc-4f7d-8745-7ede6c3b1a45",
+        "url": "",
+        "title": "LNG Canada entrusts Técnicas Reunidas with €200M+ EPCM deal"
+      },
+      {
+        "id": "90bfbf6adb1183517cbc00ca",
+        "url": "https://umm.gassco.no/details?id=f1f667ff-1ee3-45f2-bedf-7eed367ea614",
+        "title": "Gassco Troll: Planned Gas production field unavailability (Active)"
+      },
+      {
+        "id": "a21b1cffbd1454613a5d0793",
+        "url": "https://umm.gassco.no/details?id=345ca395-a74a-4c9d-9c6c-abf24a16aaf8",
+        "title": "Gassco Troll: Planned Other unavailability (Active)"
+      }
+    ],
+    "missing_fields": [
+      "independent_news_verification",
+      "current_news.source_url",
+      "previous_contract_price",
+      "settlement_verification",
+      "confidence_calibration",
+      "source_coverage:gassco",
+      "source_coverage:gdelt"
+    ],
+    "source_fact_checks": {
+      "fact_contract_version": "operator-facts-2.2",
+      "operator_notices": [
+        {
+          "id": "N1",
+          "facility": "Troll",
+          "facility_type": "气田/生产设施",
+          "notice_type": "计划",
+          "unavailable_capacity": "7.6",
+          "period_utc": [
+            "2026-10-22T04:00Z",
+            "2026-10-23T04:00Z"
+          ],
+          "state_description": "未来公告",
+          "cause_original": "Yearly maintenance"
+        },
+        {
+          "id": "N2",
+          "facility": "Troll",
+          "facility_type": "类别未给",
+          "notice_type": "计划",
+          "unavailable_capacity": "13.0",
+          "period_utc": [
+            "2026-10-21T04:00Z",
+            "2026-10-22T04:00Z"
+          ],
+          "state_description": "未来公告",
+          "cause_original": "Yearly maintenance"
+        }
+      ],
+      "capacity_scope": "公告不可用容量，非实际流量计量",
+      "pricing_observation": {
+        "observed_at": "2026-10-20T20:59:00+00:00",
+        "available_at": "2026-10-20T21:09:54.498786+00:00",
+        "clock_roles": {
+          "observed_at": "报价发生时刻",
+          "available_at": "本机获知时刻；不是报价发生时刻"
+        },
+        "current_news_timing": {
+          "id": "N0",
+          "publication_time": "2026-10-20T13:11:12+00:00",
+          "quote_relation": "at_or_after_publication",
+          "quote_role": "已观察市场基准；单个报价不证明公告反应"
+        },
+        "reaction_evidence_available": false,
+        "pricing_status": "无法确认是否已计价；不是尚未计价或价格无反应"
+      },
+      "non_overlapping_notice_ids": [
+        [
+          "N1",
+          "N2"
+        ]
+      ]
+    }
+  },
+  "checks": {
+    "identity": "ExactsourceChinese fullresult hash matches translation.source_hash and metadata. English3 is a renderingof thiscompletedbrief, not newnewsimpact/closingforecast.",
+    "roles_amount_dates_numbers": "LNGCanada awardedTR€200M+ correct. N1/N2capacity7.6/13.0 and N2endOct23→22 preserved. No crossNrate sum, priceeffect or completedconstruction invented.",
+    "directions": "Newsflat0/confidence.6 and closeNone/insufficient_evidence/confidence.4 unchanged; stable netimpact is not a newlyimputedclosingflat.",
+    "supply_scope": "TTFsupplyunaffected inherits explicit futureconstruction/current-shortfall scope, not perpetualsupplyzero/currentpricezero. Futureperiods is accurate asof; translatedbrief does not contain wrongdetailbothafterwindow assertion.",
+    "reaction_anchor": "No immediateprice reaction observed remains epistemic with explicit noobservationsprovided/pricingunknown; genuinepreviousdayanchormissing rationale preserved, no stalepricechange fabricated.",
+    "language_identifiers": "Allnarratives are English outside preservedauditmetadata/sourcefacts/originalreferences. N0/N1/N2 UnicodeadjacentChinesereference issue is absent using consistentASCIIidentifiercomparison; actualidentifiers unchanged.",
+    "inherited_scope": "Futureexpectationchannels and N2marginalrelief versusN1laterconstraint netting stillnotexpanded, matchingChineseP3limit."
+  },
+  "qualifications": [
+    {
+      "severity": "P3",
+      "id": "inherited_expectations_revision_explanation_limit",
+      "assessment": "Faithfultranslation doesnot establish economicflatcorrectness or resolve the brief abbreviatedexpectations rationale."
+    },
+    {
+      "severity": "P3",
+      "id": "minor_english_style",
+      "assessment": "Modelgrasp is an awkwardtranslation of modelconfidence, but surrounding uncalibrated/notverifiedaccuracy meaning remains accurate."
+    }
+  ],
+  "chinese_full_review_dependency": {
+    "file": "reports/repair_2026-10-20/independent_production_manual_conditional_brief_review_v2_3.json",
+    "sha256": "550aa38b99eef1fcf967d125d81c41ffe8d430784471e0b409039f2c8a5d6ba9"
+  },
+  "detail_role_success_claimed": false,
+  "old_failed_production_attempts_upgraded": false,
+  "no_model_calls_by_reviewer": true,
+  "no_network_calls": true,
+  "no_database_access": true,
+  "no_tests_run": true,
+  "no_core_edits": true,
+  "limits": [
+    "OnlyfourthmanualbriefEnglish; detailstillfailed and no detailEnglish exists.",
+    "Renderingpass isnot forecastaccuracy or fullproductacceptance.",
+    "Existingfirstfourwhole-run failures remain separatehistory."
+  ]
+}

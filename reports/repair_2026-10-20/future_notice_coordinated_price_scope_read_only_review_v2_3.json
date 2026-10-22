@@ -1,0 +1,52 @@
+{
+  "schema_version": "ttf-coordinated-price-negation-read-only-review-v1",
+  "created_at": "2026-10-21T00:11:00.522705+00:00",
+  "reviewer_type": "codex_subagent",
+  "record_file": "reports/repair_2026-10-20/candidate-bounded-output-validation/future_planned_notice.json",
+  "record_sha256": "ed1939b87c3ef14220eb5c824df3cd3eeb87553a6f39df78a3c625bf442c5c79",
+  "raw_content_sha256": "09d26b8dcbf07c35d44803abf0d0aee8ce3c8cc4a1e4af0a5032d30259a2b63c",
+  "input_sha256": "99aa1883186e4c7746647f781489670cf07addc2c015b7bbd5f4d28310eef1e8",
+  "source_sha256": {
+    "ttf_news/analysis.py": "1087340777d4a0b10883420d76f8ce142bc53dd7542c8ebc84893e317553a16f",
+    "ttf_news/semantics.py": "3efbab0f772839b2249a544c6c39aa4beb9386c1de9850dfe37a989129139e90",
+    "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d"
+  },
+  "read_only": {
+    "source_or_test_edits": false,
+    "DB_API_model_service_actions": false,
+    "original_strict_true_or_result_changed": false,
+    "new_rule_implemented": false
+  },
+  "observed_original": {
+    "attempt_count": 1,
+    "contract_passed": true,
+    "current_semantic_errors": [],
+    "news_summary": "Gassco宣布计划在2027年5月22日至25日停产，容量从100 mcm/d降至80 mcm/d，减少20 mcm/d。该事件为未来公告，未导致当前供气损失或价格反应，因而对TTF价格无即时影响。",
+    "analysis_summary": "新增事实：Gassco计划在2027年5月22日至25日停产，容量减少20 mcm/d。该事件为未来公告，未导致当前供气损失或价格反应。",
+    "priced_in_comment": "price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格"
+  },
+  "manual_review": {
+    "verdict": "P2 accepted unsupported price observation",
+    "allowed_part": "The not-yet-started specific notice has not physically caused its future outage; this does not prove global measured flow is unchanged.",
+    "invalid_part": "The same unqualified negation covers the coordinated object 或价格反应, despite no observed price-reaction input. Repeating pricing unknown elsewhere does not repair this statement.",
+    "direction": "Flat news and insufficient/null close need not be changed to reject this unsupported causal claim."
+  },
+  "precise_failure_mode": "Not a whole-field early-return exemption: _future_notice_not_yet_physical_claim correctly excuses the physical-loss match only. Independent price regexes fail to match 未导致当前供气损失或价格反应: they require immediate price object and/or omit 导致. Thus coordinated price-object scope is never evaluated.",
+  "minimal_proposal_after_run": {
+    "module": "ttf_news/semantics.py existing _check_observed_absence_of_price_reaction",
+    "logic": "Detect a declarative negated causal verb scoped over a same-subclause physical-loss object followed by 或/及/和 price reaction. Run the existing as-of-known reaction/source support checks independently of physical-event timing. Do not alter future-flow exemption, net direction, generation input/system/schema, or retry count.",
+    "positive_boundaries": [
+      "未来维护尚未导致实际流量损失；价格反应未知",
+      "未见价格反应证据",
+      "无法确认是否出现反应",
+      "若该维护未来未导致价格反应，则...",
+      "独立且当时已知的可比价格反应资料支持无反应"
+    ],
+    "negative_controls": [
+      "未来事件未导致当前供气损失或价格反应",
+      "未来公告未造成实际流量损失及价格波动（缺反应证据）",
+      "same asserted price result in summary or evidence despite separate priced_in unknown field"
+    ],
+    "impact": "Validator/diagnostic only if schema remains unchanged. Original future strictTrue remains immutable with independent P2 flag. Cold duplicate-risk fix plus this rule require full-path replay to identify all affected cases and separate actual reruns; never retroactively call original accepted claim correct."
+  }
+}

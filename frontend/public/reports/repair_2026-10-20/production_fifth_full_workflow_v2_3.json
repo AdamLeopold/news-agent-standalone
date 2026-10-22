@@ -1,0 +1,284 @@
+{
+  "status": "failed",
+  "started_at": "2026-10-21T01:45:06.435929+00:00",
+  "expected_prompt_version": "ttf-news-standalone-2.3",
+  "scope": "real_local_manual_detail_english_exports_sse_and_preservation",
+  "synthetic_live_input": false,
+  "raw_thinking_included": false,
+  "stages": [
+    {
+      "name": "preservation_before",
+      "status": "passed",
+      "started_at": "2026-10-21T01:45:06.455714+00:00",
+      "checks": {
+        "passed": true,
+        "protected_analysis_count": 142,
+        "protected_nonnull_field_count": 269,
+        "current_analysis_count": 143,
+        "new_analysis_count": 1,
+        "protected_snapshot_count": 5,
+        "new_snapshot_count": 0,
+        "original_validation_record_count": 1,
+        "latest_baseline_unchanged": true,
+        "original_baseline": {
+          "id": 210,
+          "created_at": "2026-10-14T05:51:48.181167+00:00",
+          "type": "validation_started"
+        },
+        "failures": []
+      },
+      "finished_at": "2026-10-21T01:45:06.489897+00:00",
+      "elapsed_seconds": 0.034
+    },
+    {
+      "name": "live_api_v2_and_managed_identity",
+      "status": "passed",
+      "started_at": "2026-10-21T01:45:06.490441+00:00",
+      "checks": {
+        "prompt_version": "ttf-news-standalone-2.3",
+        "model": "gpt-oss:20b",
+        "server_pid": 85990,
+        "managed_pid_identity_verified": true,
+        "collector": {
+          "enabled": true,
+          "poll_seconds": 60
+        },
+        "counts": {
+          "news": 3996,
+          "events": 1575,
+          "legacy_daily": 3456,
+          "prices": 65882,
+          "analyses": 143
+        },
+        "monitoring_reachable": true
+      },
+      "finished_at": "2026-10-21T01:45:06.642971+00:00",
+      "elapsed_seconds": 0.153
+    },
+    {
+      "name": "select_real_existing_news",
+      "status": "passed",
+      "started_at": "2026-10-21T01:45:06.643588+00:00",
+      "checks": {
+        "news_id": "c0e1e289e3aa12907e840c18",
+        "title": "LNG Canada entrusts Técnicas Reunidas with €200M+ EPCM deal",
+        "source": "offshore_energy",
+        "url": "https://offshore-energy.biz/2026/10/20/lng-canada-entrusts-tecnicas-reunidas-with-euro200m-epcm-deal",
+        "published_at": "2026-10-20T13:11:12+00:00",
+        "source_version": 2,
+        "body_characters": 1417,
+        "body_sha256": "d8093c3429f67dd3f819bb28669363f0caf4bc9f9db138302d968de689c80948",
+        "fact_excerpt_used": true
+      },
+      "finished_at": "2026-10-21T01:45:06.650874+00:00",
+      "elapsed_seconds": 0.007
+    },
+    {
+      "name": "ensure_current_v2_live_forecast",
+      "status": "passed",
+      "started_at": "2026-10-21T01:45:06.651303+00:00",
+      "checks": {
+        "analysis_id": "341746e5-d870-42ad-8034-97eba9f389d2",
+        "status": "queued",
+        "created": true,
+        "trade_date": "2026-10-21",
+        "source_news_id": "90bfbf6adb1183517cbc00ca",
+        "reason": "explicit_new_source_profile_live_analysis_via_normal_news_api",
+        "old_forecasts_overwritten": false,
+        "validation_baseline_reset": false
+      },
+      "finished_at": "2026-10-21T01:45:09.619618+00:00",
+      "elapsed_seconds": 2.968
+    },
+    {
+      "name": "sse_initial_connection",
+      "status": "passed",
+      "started_at": "2026-10-21T01:45:09.620202+00:00",
+      "checks": {
+        "id": 212706,
+        "type": "stream_ready",
+        "kind": null,
+        "matched_analysis_id": null,
+        "replayed_event_count": 1,
+        "cursor_mode": "initial_ready"
+      },
+      "finished_at": "2026-10-21T01:45:09.624380+00:00",
+      "elapsed_seconds": 0.004
+    },
+    {
+      "name": "manual_submit_real_news",
+      "status": "passed",
+      "started_at": "2026-10-21T01:45:09.625096+00:00",
+      "checks": {
+        "analysis_id": "3609b826-a03d-4acb-8ef8-838d0523681c",
+        "status": "queued",
+        "real_source_news_id": "c0e1e289e3aa12907e840c18"
+      },
+      "finished_at": "2026-10-21T01:45:20.267671+00:00",
+      "elapsed_seconds": 10.643
+    },
+    {
+      "name": "sse_last_event_id_reconnect",
+      "status": "passed",
+      "started_at": "2026-10-21T01:45:20.269635+00:00",
+      "checks": {
+        "id": 212709,
+        "type": "analysis_queued",
+        "kind": null,
+        "matched_analysis_id": "3609b826-a03d-4acb-8ef8-838d0523681c",
+        "replayed_event_count": 3,
+        "cursor_mode": "Last-Event-ID"
+      },
+      "finished_at": "2026-10-21T01:45:20.285227+00:00",
+      "elapsed_seconds": 0.016
+    },
+    {
+      "name": "sse_after_query_reconnect",
+      "status": "passed",
+      "started_at": "2026-10-21T01:45:20.286686+00:00",
+      "checks": {
+        "id": 212709,
+        "type": "analysis_queued",
+        "kind": null,
+        "matched_analysis_id": "3609b826-a03d-4acb-8ef8-838d0523681c",
+        "replayed_event_count": 3,
+        "cursor_mode": "after_query"
+      },
+      "finished_at": "2026-10-21T01:45:20.311915+00:00",
+      "elapsed_seconds": 0.025
+    },
+    {
+      "name": "manual_real_brief",
+      "status": "failed",
+      "started_at": "2026-10-21T01:45:20.313527+00:00",
+      "error_type": "RuntimeError",
+      "error": "Brief failed: 模型JSON两次校验失败，未生成方向：close_forecast.summary:Gassco公告撤销/结束或实际流量未确认，不能证明未形成供需冲击、供应不受影响或实际流量无变化；须有独立无变化计量事实。可写输入未显示冲击证据或恢复待核；news_impact.summary:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景",
+      "finished_at": "2026-10-21T01:51:14.650817+00:00",
+      "elapsed_seconds": 354.333
+    },
+    {
+      "name": "csv_jsonl_exports",
+      "status": "passed",
+      "started_at": "2026-10-21T01:51:14.652161+00:00",
+      "checks": {
+        "news": {
+          "csv": {
+            "rows": 3996,
+            "bytes": 5003952,
+            "sha256": "d7eaefadaeca93532815ae499f71b6dee041b940a53710e4b3c3f2acf87ca95b",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 3996,
+            "bytes": 6693112,
+            "sha256": "d59b7efefc61bdf0fad22f34624d6208bbbc751cfc3003bc8398ceb60649dff6",
+            "parsed": true
+          },
+          "row_counts_match": true,
+          "independent_snapshot_requests": true
+        },
+        "daily": {
+          "csv": {
+            "rows": 628,
+            "bytes": 3916576,
+            "sha256": "763fe0dc96dcbd5f8fdd21d1d0d546979d962eec5adb6c66d80aed2d0804910c",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 628,
+            "bytes": 3808063,
+            "sha256": "fa0f558cc00dc166f9443a20a9ec28d38d9430a24202c4f8ec3f8208cb47d9d8",
+            "parsed": true
+          },
+          "row_counts_match": true,
+          "independent_snapshot_requests": true
+        },
+        "events": {
+          "csv": {
+            "rows": 1575,
+            "bytes": 5979384,
+            "sha256": "0e6556480966e6612fa92799d9b5334a9bba19dcd93482a64aba109a62b2fdd4",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 1575,
+            "bytes": 6391647,
+            "sha256": "1900b32e66e96cb531c615b627ed238ca4922477b609d3fe8a7d1e3bfdf0496b",
+            "parsed": true
+          },
+          "row_counts_match": true,
+          "independent_snapshot_requests": true
+        },
+        "prices": {
+          "csv": {
+            "rows": 65882,
+            "bytes": 26615025,
+            "sha256": "23c48426921cf11c95bed9e76a2e144e1f3d10badb491a4e2918b48c67f728fa",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 65882,
+            "bytes": 43744696,
+            "sha256": "1cce2a22f96c23452d4d7ed13be4197e919abfe0c7cc01fafb63f7ed7f283d5b",
+            "parsed": true
+          },
+          "row_counts_match": true,
+          "independent_snapshot_requests": true
+        }
+      },
+      "finished_at": "2026-10-21T01:51:21.753755+00:00",
+      "elapsed_seconds": 7.102
+    },
+    {
+      "name": "current_live_forecast_v2",
+      "status": "failed",
+      "started_at": "2026-10-21T01:51:21.754857+00:00",
+      "error_type": "RuntimeError",
+      "error": "Current dashboard forecast did not reach v2: 1 validation error for AnalysisResult\n_meta\n  Extra inputs are not permitted [type=extra_forbidden, input_value={'prompt_version': 'ttf-n...source_coverage:gdelt']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/extra_forbidden",
+      "finished_at": "2026-10-21T01:59:58.680615+00:00",
+      "elapsed_seconds": 516.923
+    },
+    {
+      "name": "preservation_after",
+      "status": "passed",
+      "started_at": "2026-10-21T01:59:58.681975+00:00",
+      "checks": {
+        "passed": true,
+        "protected_analysis_count": 142,
+        "protected_nonnull_field_count": 269,
+        "current_analysis_count": 145,
+        "new_analysis_count": 3,
+        "protected_snapshot_count": 5,
+        "new_snapshot_count": 0,
+        "original_validation_record_count": 1,
+        "latest_baseline_unchanged": true,
+        "original_baseline": {
+          "id": 210,
+          "created_at": "2026-10-14T05:51:48.181167+00:00",
+          "type": "validation_started"
+        },
+        "failures": []
+      },
+      "finished_at": "2026-10-21T01:59:58.779025+00:00",
+      "elapsed_seconds": 0.097
+    }
+  ],
+  "new_live_analysis_id": "341746e5-d870-42ad-8034-97eba9f389d2",
+  "new_analysis_id": "3609b826-a03d-4acb-8ef8-838d0523681c",
+  "finished_at": "2026-10-21T01:59:58.780203+00:00",
+  "failed_stages": [
+    "manual_real_brief",
+    "current_live_forecast_v2"
+  ],
+  "missing_required_stages": [
+    "chinese_originals_unchanged_after_translation",
+    "current_live_forecast_v2",
+    "english_brief_actual_text_labels_numbers",
+    "english_detail_actual_text_labels_numbers",
+    "manual_detail_request",
+    "manual_real_brief",
+    "manual_real_detail",
+    "sse_completed_event_replay"
+  ],
+  "elapsed_seconds": 892.337
+}

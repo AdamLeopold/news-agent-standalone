@@ -1,0 +1,61 @@
+{
+  "source": "cheniere",
+  "url": "https://lngir.cheniere.com/news-events/press-releases/detail/348/cheniere-signs-long-term-sale-and-purchase-agreements-to",
+  "title": "Cheniere Signs Long-Term Sale and Purchase Agreements to Supply QatarEnergy with LNG through 2054",
+  "summary": "HOUSTON--(BUSINESS WIRE)-- Cheniere Energy, Inc. (“Cheniere” or the “Company”) (NYSE: LNG) announced today that its subsidiaries,…",
+  "published_at": "2026-10-22T13:00:00+00:00",
+  "published_date": "2026-10-22",
+  "timestamp_precision": "exact",
+  "timestamp_source": "rss.pubDate",
+  "updated_at": null,
+  "first_seen_at": "2026-10-22T13:00:16.988936+00:00",
+  "summary_created_at": "2026-10-22T13:00:16.988940+00:00",
+  "category": "lng",
+  "entities": [
+    "Cheniere",
+    "QatarEnergy",
+    "Sabine Pass",
+    "Corpus Christi"
+  ],
+  "source_revision": "d5ed54008dbefebc",
+  "content_hash": "2a9a38971b1080754e35e9d50f9cad6b75febd6e4dfb116f923aa2ec42985777",
+  "discovered_via": "https://lngir.cheniere.com/news-events/press-releases/rss",
+  "ingestion_kind": "live",
+  "is_relevant": true,
+  "relevance_metadata": {
+    "scope": "indirect",
+    "basis": "explicit_source_terms_not_price_direction",
+    "evidence_terms": [
+      "LNG",
+      "Supply",
+      "capacity",
+      "gas",
+      "supply"
+    ],
+    "european_channel_explicitly_denied": false,
+    "scope_is_not_verified_price_impact": true
+  },
+  "fact_excerpt": "HOUSTON--(BUSINESS WIRE)-- Cheniere Energy, Inc. (“Cheniere” or the “Company”) (NYSE: LNG) announced today that its subsidiaries, Sabine Pass Liquefaction, LLC (“SPL”) and Corpus Christi Liquefaction, LLC (“CCL”), have each entered into long-term liquefied natural gas (“LNG”) sale and purchase agreements (“SPA”) with QatarEnergy to supply a total of 4 million tonnes per annum (“mtpa”) of LNG through 2054.\n\nThrough Cheniere Energy Partners, L.P. (NYSE: CQP), we are developing an expansion of the existing Sabine Pass Liquefaction Project (“SPL Project”) with an expected total peak production capacity of up to approximately 20 mtpa of LNG (the “SPL Expansion Project”), inclusive of estimated debottlenecking opportunities, which would grow the total production capacity of the SPL Project to over 50 mtpa of LNG. We expect to execute the SPL Expansion Project in a phased approach. The first phase is expected to include a single train, Train 7, and a boil-off gas re-liquefaction unit, along with supporting infrastructure and tie-ins to the existing Sabine Pass LNG terminal, and has an expected total production capacity of over 6 mtpa of LNG, inclusive of estimated debottlenecking opportunities. In May 2026, the lump sum, turnkey engineering, procurement, and construction (EPC) contract with Bechtel Energy, Inc. (“Bechtel”) for the first phase of the SPL Expansion Project was signed, and Bechtel was released to commence early engineering and procurement under a limited notice to proceed (LNTP).\n\nInvestors Randy Bhatia 713-375-5479 Frances Smith 713-375-5753",
+  "fact_excerpt_created_at": "2026-10-22T13:00:16.990661+00:00",
+  "fact_excerpt_status": "public_excerpt",
+  "fact_excerpt_provenance": {
+    "url": "https://lngir.cheniere.com/news-events/press-releases/detail/348/cheniere-signs-long-term-sale-and-purchase-agreements-to",
+    "method": "public_rss_content",
+    "retrieved_at": "2026-10-22T13:00:16.990661+00:00",
+    "access": "public",
+    "paragraph_indices": [
+      1,
+      5,
+      14
+    ],
+    "selection": "bounded_complete_source_paragraphs",
+    "omitted_paragraph_count": 9,
+    "oversized_paragraph_count": 1,
+    "character_limit": 1600
+  },
+  "fact_excerpt_feed_digest": "720be5fbc95ffb376ca9c2a90247a62aa3b76492c77dfd91ec1431d81692d2a0",
+  "trade_date": "2026-10-22",
+  "id": "2221a75361f049315f77be94",
+  "version": 1,
+  "version_seen_at": "2026-10-22T13:00:17.276715+00:00"
+}

@@ -1,0 +1,13 @@
+
+> ttf-news-terminal@1.0.0 build
+> tsc -b && vite build --outDir dist-pages
+
+vite v6.4.4 building for production...
+transforming...
+✓ 36 modules transformed.
+rendering chunks...
+computing gzip size...
+dist-pages/index.html                   0.67 kB │ gzip:  0.46 kB
+dist-pages/assets/index-OQ2RZvZS.css   63.91 kB │ gzip: 12.69 kB
+dist-pages/assets/index-_Ehfq-5G.js   239.84 kB │ gzip: 79.54 kB
+✓ built in 2.85s

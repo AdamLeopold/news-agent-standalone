@@ -1,0 +1,131 @@
+{
+  "clearly_synthetic_paired_control_not_actual": true,
+  "source_semantics_sha256": "e7388b6be6994b6f1d57e7ed8fd2662777582dbf43515272a105d5058951334d",
+  "N0_full_source": {
+    "id": "manual-2f2f3340-5263-4276-bba4-3a8b14337d76",
+    "title": "Gassco Troll: Planned Gas production field unavailability (Active)",
+    "summary": "Message ID: different-current-notice. Publication: 2026-10-20T22:13:18+0200. Event: 2026-10-21T06:00:00+0200 to 2026-10-22T06:00:00+0200. Technical capacity: 137.4 mcm/d; available: 129.8; unavailable: 7.6. Reason: Yearly maintenance. Remarks: Extended maintenance.",
+    "source": "gassco",
+    "url": null,
+    "published_at": "2026-10-20T20:13:18+00:00",
+    "first_seen_at": "2026-10-21T04:47:05.064700+00:00",
+    "timestamp_precision": "exact",
+    "timestamp_source": "user_supplied",
+    "version": 1
+  },
+  "N1_full_source": {
+    "source": "gassco",
+    "url": "https://umm.gassco.no/details?id=f1f667ff-1ee3-45f2-bedf-7eed367ea614",
+    "title": "Gassco Troll: Planned Gas production field unavailability (Active)",
+    "summary": "Message ID: 2026-252-A________________001. Publication: 2026-10-20T22:13:18+0200. Event: 2026-10-22T06:00:00+0200 to 2026-10-23T06:00:00+0200. Technical capacity: 137.4 mcm/d; available: 129.8; unavailable: 7.6. Reason: Yearly maintenance. Remarks: Extended maintenance.",
+    "published_at": "2026-10-20T20:13:18+00:00",
+    "published_date": "2026-10-20",
+    "timestamp_precision": "exact",
+    "timestamp_source": "UMM.Publication date/time",
+    "updated_at": null,
+    "first_seen_at": "2026-10-20T20:15:04.077570+00:00",
+    "summary_created_at": "2026-10-20T20:15:04.077573+00:00",
+    "category": "supply_outage",
+    "entities": [
+      "Gassco",
+      "Troll"
+    ],
+    "source_revision": "85efe0f36f137fb0",
+    "content_hash": "12b4efff548514e45ec50a2ccba89b1eed49df6f4647c0bbf5746e98413084b7",
+    "discovered_via": "https://umm.gassco.no/",
+    "ingestion_kind": "live",
+    "is_relevant": true,
+    "relevance_metadata": {
+      "scope": "background",
+      "basis": "explicit_source_terms_not_price_direction",
+      "evidence_terms": [
+        "Gas",
+        "capacity"
+      ],
+      "european_channel_explicitly_denied": false,
+      "scope_is_not_verified_price_impact": true
+    },
+    "event_status": "Active",
+    "event_start": "2026-10-22T06:00:00+0200",
+    "event_end": "2026-10-23T06:00:00+0200",
+    "source_message_id": "2026-252-A________________001",
+    "trade_date": "2026-10-21",
+    "id": "90bfbf6adb1183517cbc00ca",
+    "version": 1,
+    "version_seen_at": "2026-10-20T20:15:04.642029+00:00"
+  },
+  "N0_prepared": {
+    "id": "N0",
+    "title": "Gassco Troll: Planned Gas production field unavailability (Active)",
+    "facts": "Reason: Yearly maintenance. Remarks: Extended maintenance.",
+    "time": "2026-10-20T20:13:18+00:00",
+    "time_precision": "exact",
+    "change_status": "new",
+    "source": "gassco",
+    "version": 1,
+    "operational": {
+      "technical_capacity": "137.4",
+      "available_capacity": "129.8",
+      "unavailable_capacity": "7.6",
+      "capacity_unit": "mcm/d"
+    },
+    "temporal_state": "reported_fact",
+    "mechanism_candidates": [
+      {
+        "mechanism": "capacity_constraint",
+        "pressure": "up",
+        "conditional": true,
+        "quoted_fact": "unavailable: 7.6.",
+        "evidence_kind": "capacity_only"
+      }
+    ],
+    "narrative_complete": true
+  },
+  "N1_prepared": {
+    "id": "N1",
+    "title": "Gassco Troll: Planned Gas production field unavailability (Active)",
+    "facts": "Reason: Yearly maintenance. Remarks: Extended maintenance.",
+    "time": "2026-10-20T20:13:18+00:00",
+    "time_precision": "exact",
+    "change_status": "new",
+    "source": "gassco",
+    "version": 1,
+    "operational": {
+      "event_status": "Active",
+      "event_start_utc": "2026-10-22T04:00:00+00:00",
+      "scheduled_for_future": true,
+      "event_end_utc": "2026-10-23T04:00:00+00:00",
+      "announced_end_passed": false,
+      "capacity_is_not_lost_flow": true,
+      "actual_flow_recovery": "未提供独立实际流量数据，恢复状态待核实",
+      "source_notice_type": "Planned（计划）；不能改称意外或非计划停产",
+      "source_observation_kind": "设施不可用容量公告，非独立计量的实际供气损失",
+      "technical_capacity": "137.4",
+      "available_capacity": "129.8",
+      "unavailable_capacity": "7.6",
+      "capacity_unit": "mcm/d"
+    },
+    "temporal_state": "scheduled_notice",
+    "evidence_scope": "未来公告时段的容量安排；不能作为当前停供或当前容量损失相加",
+    "mechanism_candidates": [
+      {
+        "mechanism": "capacity_constraint",
+        "pressure": "up",
+        "conditional": true,
+        "quoted_fact": "unavailable: 7.6.",
+        "evidence_kind": "capacity_only"
+      }
+    ],
+    "narrative_complete": true
+  },
+  "claim": {
+    "analysis": {
+      "summary": "[N0]本窗口内公告可用产能下降7.6mcm/d，实际流量未知。"
+    }
+  },
+  "candidate_error": "analysis.summary:N0公告开始2026-10-22T04:00:00+00:00，截至分析时点尚未开始；目标结算窗口结束时或之后开始；开始时刻不证明实际流量损失；不能把该未来公告的容量下降写成本窗口内已发生的物理容量变化。窗口内公布计划不等于计划已生效；可分别陈述该N起止与容量安排，并讨论未来价格预期，不证明实际流量损失或指定净方向",
+  "finding": "New timing fallback borrowed a different message and future interval because prepared facts were only matching reason/remarks; the full N0 source explicitly has a different current interval. Nonempty exact uncompressed source identity is needed.",
+  "new_model_calls": 0,
+  "database_access": false,
+  "source_modification": false
+}

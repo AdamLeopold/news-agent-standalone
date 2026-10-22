@@ -1,0 +1,715 @@
+{
+  "started_at": "2026-10-20T17:51:05.933241+00:00",
+  "finished_at": "2026-10-20T17:51:06.661097+00:00",
+  "status": "passed",
+  "source": "data/ttf_news.sqlite3",
+  "source_access": "mode=ro; PRAGMA query_only=ON; sqlite backup only",
+  "copy": ".runtime/migration-rehearsal.sqlite3",
+  "copy_created_exclusively": true,
+  "formal_store_instantiated": false,
+  "protected_backup_opened": false,
+  "no_model_calls": true,
+  "production_records_modified": false,
+  "store_source_sha256": "09a1a2427a4c7e8a227ff92d358a666953fc58585c627cbf913bbc1fbc4f9dc3",
+  "manifest": "reports/repair_2026-10-20/preservation_manifest.json",
+  "manifest_sha256": "afdb6fc9c87261371eb880837d54b82f6277fb7be1aadb0e8ef563cc3b164e7e",
+  "backup_seconds": 0.403794,
+  "migration_seconds": 0.035017,
+  "added_schema_objects": [],
+  "added_tables": [],
+  "removed_schema_objects": [],
+  "count_changes": {},
+  "before": {
+    "sha256": "41e1aad312e8df60814f52900efa07954f3554e23311cc91c314355b655c25bb",
+    "bytes": 238993408,
+    "schema": [
+      {
+        "type": "index",
+        "name": "analysis_news",
+        "tbl_name": "analyses",
+        "sql": "CREATE INDEX analysis_news ON analyses(news_id,created_at)"
+      },
+      {
+        "type": "index",
+        "name": "market_quote_known",
+        "tbl_name": "market_quotes",
+        "sql": "CREATE INDEX market_quote_known ON market_quotes(contract,available_at,observed_at)"
+      },
+      {
+        "type": "index",
+        "name": "news_day",
+        "tbl_name": "news",
+        "sql": "CREATE INDEX news_day ON news(trade_date)"
+      },
+      {
+        "type": "index",
+        "name": "news_seen",
+        "tbl_name": "news",
+        "sql": "CREATE INDEX news_seen ON news(first_seen_at)"
+      },
+      {
+        "type": "index",
+        "name": "price_day",
+        "tbl_name": "prices",
+        "sql": "CREATE INDEX price_day ON prices(day,price_type)"
+      },
+      {
+        "type": "index",
+        "name": "price_version_known",
+        "tbl_name": "price_versions",
+        "sql": "CREATE INDEX price_version_known ON price_versions(known_at,day)"
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_analyses_1",
+        "tbl_name": "analyses",
+        "sql": null
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_analysis_translations_1",
+        "tbl_name": "analysis_translations",
+        "sql": null
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_analysis_translations_2",
+        "tbl_name": "analysis_translations",
+        "sql": null
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_daily_snapshots_1",
+        "tbl_name": "daily_snapshots",
+        "sql": null
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_evaluations_1",
+        "tbl_name": "evaluations",
+        "sql": null
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_event_versions_1",
+        "tbl_name": "event_versions",
+        "sql": null
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_events_1",
+        "tbl_name": "events",
+        "sql": null
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_jobs_1",
+        "tbl_name": "jobs",
+        "sql": null
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_legacy_daily_1",
+        "tbl_name": "legacy_daily",
+        "sql": null
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_market_candles_1",
+        "tbl_name": "market_candles",
+        "sql": null
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_market_points_1",
+        "tbl_name": "market_points",
+        "sql": null
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_market_quotes_1",
+        "tbl_name": "market_quotes",
+        "sql": null
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_news_1",
+        "tbl_name": "news",
+        "sql": null
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_news_2",
+        "tbl_name": "news",
+        "sql": null
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_news_versions_1",
+        "tbl_name": "news_versions",
+        "sql": null
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_price_versions_1",
+        "tbl_name": "price_versions",
+        "sql": null
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_prices_1",
+        "tbl_name": "prices",
+        "sql": null
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_source_states_1",
+        "tbl_name": "source_states",
+        "sql": null
+      },
+      {
+        "type": "table",
+        "name": "analyses",
+        "tbl_name": "analyses",
+        "sql": "CREATE TABLE analyses (id TEXT PRIMARY KEY, news_id TEXT, kind TEXT, status TEXT,\n                created_at TEXT, completed_at TEXT, trade_date TEXT, input_snapshot TEXT, result TEXT, error TEXT,\n                detail_status TEXT DEFAULT 'not_requested', detail_result TEXT, detail_error TEXT, frozen INTEGER DEFAULT 0)"
+      },
+      {
+        "type": "table",
+        "name": "analysis_translations",
+        "tbl_name": "analysis_translations",
+        "sql": "CREATE TABLE analysis_translations (id TEXT PRIMARY KEY, analysis_id TEXT, part TEXT,\n                language TEXT, source_hash TEXT, status TEXT, result TEXT, error TEXT, created_at TEXT, completed_at TEXT,\n                UNIQUE(analysis_id,part,language,source_hash))"
+      },
+      {
+        "type": "table",
+        "name": "daily_snapshots",
+        "tbl_name": "daily_snapshots",
+        "sql": "CREATE TABLE daily_snapshots (trade_date TEXT PRIMARY KEY, cutoff TEXT, analysis_id TEXT, frozen_at TEXT)"
+      },
+      {
+        "type": "table",
+        "name": "evaluations",
+        "tbl_name": "evaluations",
+        "sql": "CREATE TABLE evaluations (trade_date TEXT PRIMARY KEY, analysis_id TEXT, contract TEXT, delta REAL,\n                threshold REAL, actual_direction TEXT, predicted_direction TEXT, correct INTEGER, status TEXT, data TEXT)"
+      },
+      {
+        "type": "table",
+        "name": "event_search",
+        "tbl_name": "event_search",
+        "sql": "CREATE VIRTUAL TABLE event_search USING fts5(id UNINDEXED, text)"
+      },
+      {
+        "type": "table",
+        "name": "event_search_config",
+        "tbl_name": "event_search_config",
+        "sql": "CREATE TABLE 'event_search_config'(k PRIMARY KEY, v) WITHOUT ROWID"
+      },
+      {
+        "type": "table",
+        "name": "event_search_content",
+        "tbl_name": "event_search_content",
+        "sql": "CREATE TABLE 'event_search_content'(id INTEGER PRIMARY KEY, c0, c1)"
+      },
+      {
+        "type": "table",
+        "name": "event_search_data",
+        "tbl_name": "event_search_data",
+        "sql": "CREATE TABLE 'event_search_data'(id INTEGER PRIMARY KEY, block BLOB)"
+      },
+      {
+        "type": "table",
+        "name": "event_search_docsize",
+        "tbl_name": "event_search_docsize",
+        "sql": "CREATE TABLE 'event_search_docsize'(id INTEGER PRIMARY KEY, sz BLOB)"
+      },
+      {
+        "type": "table",
+        "name": "event_search_idx",
+        "tbl_name": "event_search_idx",
+        "sql": "CREATE TABLE 'event_search_idx'(segid, term, pgno, PRIMARY KEY(segid, term)) WITHOUT ROWID"
+      },
+      {
+        "type": "table",
+        "name": "event_versions",
+        "tbl_name": "event_versions",
+        "sql": "CREATE TABLE event_versions (event_id TEXT, known_at TEXT, data TEXT,\n                PRIMARY KEY(event_id,known_at))"
+      },
+      {
+        "type": "table",
+        "name": "events",
+        "tbl_name": "events",
+        "sql": "CREATE TABLE events (id TEXT PRIMARY KEY, event_date TEXT, known_at TEXT, updated_at TEXT,\n                state TEXT, data TEXT NOT NULL)"
+      },
+      {
+        "type": "table",
+        "name": "jobs",
+        "tbl_name": "jobs",
+        "sql": "CREATE TABLE jobs (id TEXT PRIMARY KEY, kind TEXT, analysis_id TEXT, priority INTEGER,\n                status TEXT, created_at TEXT, attempts INTEGER DEFAULT 0, error TEXT)"
+      },
+      {
+        "type": "table",
+        "name": "legacy_daily",
+        "tbl_name": "legacy_daily",
+        "sql": "CREATE TABLE legacy_daily (id TEXT PRIMARY KEY, trade_date TEXT, data TEXT NOT NULL)"
+      },
+      {
+        "type": "table",
+        "name": "market_candles",
+        "tbl_name": "market_candles",
+        "sql": "CREATE TABLE market_candles (source TEXT, contract TEXT, day TEXT,\n                content_hash TEXT, available_at TEXT, data TEXT,\n                PRIMARY KEY(source,contract,day,content_hash))"
+      },
+      {
+        "type": "table",
+        "name": "market_points",
+        "tbl_name": "market_points",
+        "sql": "CREATE TABLE market_points (contract TEXT, observed_at TEXT, available_at TEXT,\n                value REAL, PRIMARY KEY(contract,observed_at,value))"
+      },
+      {
+        "type": "table",
+        "name": "market_quotes",
+        "tbl_name": "market_quotes",
+        "sql": "CREATE TABLE market_quotes (id TEXT PRIMARY KEY, contract TEXT, observed_at TEXT,\n                available_at TEXT, data TEXT)"
+      },
+      {
+        "type": "table",
+        "name": "metrics",
+        "tbl_name": "metrics",
+        "sql": "CREATE TABLE metrics (id INTEGER PRIMARY KEY AUTOINCREMENT, created_at TEXT, type TEXT, data TEXT)"
+      },
+      {
+        "type": "table",
+        "name": "news",
+        "tbl_name": "news",
+        "sql": "CREATE TABLE news (id TEXT PRIMARY KEY, url TEXT UNIQUE, source TEXT NOT NULL,\n                trade_date TEXT, published_at TEXT, first_seen_at TEXT NOT NULL, content_hash TEXT NOT NULL, data TEXT NOT NULL)"
+      },
+      {
+        "type": "table",
+        "name": "news_versions",
+        "tbl_name": "news_versions",
+        "sql": "CREATE TABLE news_versions (news_id TEXT, version INTEGER, known_at TEXT, data TEXT,\n                PRIMARY KEY(news_id,version))"
+      },
+      {
+        "type": "table",
+        "name": "price_versions",
+        "tbl_name": "price_versions",
+        "sql": "CREATE TABLE price_versions (contract TEXT, day TEXT, price_type TEXT,\n                known_at TEXT, value REAL, data TEXT NOT NULL,\n                PRIMARY KEY(contract,day,price_type,known_at))"
+      },
+      {
+        "type": "table",
+        "name": "prices",
+        "tbl_name": "prices",
+        "sql": "CREATE TABLE prices (contract TEXT, day TEXT, price_type TEXT, value REAL, data TEXT NOT NULL,\n                PRIMARY KEY(contract,day,price_type))"
+      },
+      {
+        "type": "table",
+        "name": "source_states",
+        "tbl_name": "source_states",
+        "sql": "CREATE TABLE source_states (id TEXT PRIMARY KEY, data TEXT NOT NULL)"
+      },
+      {
+        "type": "table",
+        "name": "sqlite_sequence",
+        "tbl_name": "sqlite_sequence",
+        "sql": "CREATE TABLE sqlite_sequence(name,seq)"
+      },
+      {
+        "type": "table",
+        "name": "stream_events",
+        "tbl_name": "stream_events",
+        "sql": "CREATE TABLE stream_events (id INTEGER PRIMARY KEY AUTOINCREMENT, type TEXT, created_at TEXT, payload TEXT)"
+      }
+    ],
+    "schema_sha256": "9b1f2067320add08737c85652a21e77c7444a1c3dd62df7ead1ab180355b712a",
+    "table_counts": {
+      "analyses": 117,
+      "analysis_translations": 17,
+      "daily_snapshots": 5,
+      "evaluations": 5,
+      "event_search": 1669,
+      "event_search_config": 1,
+      "event_search_content": 1669,
+      "event_search_data": 392,
+      "event_search_docsize": 1669,
+      "event_search_idx": 339,
+      "event_versions": 6125,
+      "events": 1669,
+      "jobs": 146,
+      "legacy_daily": 3456,
+      "market_candles": 170,
+      "market_points": 221,
+      "market_quotes": 1287,
+      "metrics": 18852,
+      "news": 3995,
+      "news_versions": 4419,
+      "price_versions": 65879,
+      "prices": 65879,
+      "source_states": 12,
+      "sqlite_sequence": 2,
+      "stream_events": 201912
+    },
+    "price_versions_rows": 65879,
+    "preservation": {
+      "passed": true,
+      "protected_analysis_count": 116,
+      "protected_nonnull_field_count": 229,
+      "current_analysis_count": 117,
+      "new_analysis_count": 1,
+      "protected_snapshot_count": 4,
+      "new_snapshot_count": 1,
+      "original_validation_record_count": 1,
+      "latest_baseline_unchanged": true,
+      "original_baseline": {
+        "id": 210,
+        "created_at": "2026-10-14T05:51:48.181167+00:00",
+        "type": "validation_started"
+      },
+      "failures": []
+    }
+  },
+  "after": {
+    "sha256": "41e1aad312e8df60814f52900efa07954f3554e23311cc91c314355b655c25bb",
+    "bytes": 238993408,
+    "schema": [
+      {
+        "type": "index",
+        "name": "analysis_news",
+        "tbl_name": "analyses",
+        "sql": "CREATE INDEX analysis_news ON analyses(news_id,created_at)"
+      },
+      {
+        "type": "index",
+        "name": "market_quote_known",
+        "tbl_name": "market_quotes",
+        "sql": "CREATE INDEX market_quote_known ON market_quotes(contract,available_at,observed_at)"
+      },
+      {
+        "type": "index",
+        "name": "news_day",
+        "tbl_name": "news",
+        "sql": "CREATE INDEX news_day ON news(trade_date)"
+      },
+      {
+        "type": "index",
+        "name": "news_seen",
+        "tbl_name": "news",
+        "sql": "CREATE INDEX news_seen ON news(first_seen_at)"
+      },
+      {
+        "type": "index",
+        "name": "price_day",
+        "tbl_name": "prices",
+        "sql": "CREATE INDEX price_day ON prices(day,price_type)"
+      },
+      {
+        "type": "index",
+        "name": "price_version_known",
+        "tbl_name": "price_versions",
+        "sql": "CREATE INDEX price_version_known ON price_versions(known_at,day)"
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_analyses_1",
+        "tbl_name": "analyses",
+        "sql": null
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_analysis_translations_1",
+        "tbl_name": "analysis_translations",
+        "sql": null
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_analysis_translations_2",
+        "tbl_name": "analysis_translations",
+        "sql": null
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_daily_snapshots_1",
+        "tbl_name": "daily_snapshots",
+        "sql": null
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_evaluations_1",
+        "tbl_name": "evaluations",
+        "sql": null
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_event_versions_1",
+        "tbl_name": "event_versions",
+        "sql": null
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_events_1",
+        "tbl_name": "events",
+        "sql": null
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_jobs_1",
+        "tbl_name": "jobs",
+        "sql": null
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_legacy_daily_1",
+        "tbl_name": "legacy_daily",
+        "sql": null
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_market_candles_1",
+        "tbl_name": "market_candles",
+        "sql": null
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_market_points_1",
+        "tbl_name": "market_points",
+        "sql": null
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_market_quotes_1",
+        "tbl_name": "market_quotes",
+        "sql": null
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_news_1",
+        "tbl_name": "news",
+        "sql": null
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_news_2",
+        "tbl_name": "news",
+        "sql": null
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_news_versions_1",
+        "tbl_name": "news_versions",
+        "sql": null
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_price_versions_1",
+        "tbl_name": "price_versions",
+        "sql": null
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_prices_1",
+        "tbl_name": "prices",
+        "sql": null
+      },
+      {
+        "type": "index",
+        "name": "sqlite_autoindex_source_states_1",
+        "tbl_name": "source_states",
+        "sql": null
+      },
+      {
+        "type": "table",
+        "name": "analyses",
+        "tbl_name": "analyses",
+        "sql": "CREATE TABLE analyses (id TEXT PRIMARY KEY, news_id TEXT, kind TEXT, status TEXT,\n                created_at TEXT, completed_at TEXT, trade_date TEXT, input_snapshot TEXT, result TEXT, error TEXT,\n                detail_status TEXT DEFAULT 'not_requested', detail_result TEXT, detail_error TEXT, frozen INTEGER DEFAULT 0)"
+      },
+      {
+        "type": "table",
+        "name": "analysis_translations",
+        "tbl_name": "analysis_translations",
+        "sql": "CREATE TABLE analysis_translations (id TEXT PRIMARY KEY, analysis_id TEXT, part TEXT,\n                language TEXT, source_hash TEXT, status TEXT, result TEXT, error TEXT, created_at TEXT, completed_at TEXT,\n                UNIQUE(analysis_id,part,language,source_hash))"
+      },
+      {
+        "type": "table",
+        "name": "daily_snapshots",
+        "tbl_name": "daily_snapshots",
+        "sql": "CREATE TABLE daily_snapshots (trade_date TEXT PRIMARY KEY, cutoff TEXT, analysis_id TEXT, frozen_at TEXT)"
+      },
+      {
+        "type": "table",
+        "name": "evaluations",
+        "tbl_name": "evaluations",
+        "sql": "CREATE TABLE evaluations (trade_date TEXT PRIMARY KEY, analysis_id TEXT, contract TEXT, delta REAL,\n                threshold REAL, actual_direction TEXT, predicted_direction TEXT, correct INTEGER, status TEXT, data TEXT)"
+      },
+      {
+        "type": "table",
+        "name": "event_search",
+        "tbl_name": "event_search",
+        "sql": "CREATE VIRTUAL TABLE event_search USING fts5(id UNINDEXED, text)"
+      },
+      {
+        "type": "table",
+        "name": "event_search_config",
+        "tbl_name": "event_search_config",
+        "sql": "CREATE TABLE 'event_search_config'(k PRIMARY KEY, v) WITHOUT ROWID"
+      },
+      {
+        "type": "table",
+        "name": "event_search_content",
+        "tbl_name": "event_search_content",
+        "sql": "CREATE TABLE 'event_search_content'(id INTEGER PRIMARY KEY, c0, c1)"
+      },
+      {
+        "type": "table",
+        "name": "event_search_data",
+        "tbl_name": "event_search_data",
+        "sql": "CREATE TABLE 'event_search_data'(id INTEGER PRIMARY KEY, block BLOB)"
+      },
+      {
+        "type": "table",
+        "name": "event_search_docsize",
+        "tbl_name": "event_search_docsize",
+        "sql": "CREATE TABLE 'event_search_docsize'(id INTEGER PRIMARY KEY, sz BLOB)"
+      },
+      {
+        "type": "table",
+        "name": "event_search_idx",
+        "tbl_name": "event_search_idx",
+        "sql": "CREATE TABLE 'event_search_idx'(segid, term, pgno, PRIMARY KEY(segid, term)) WITHOUT ROWID"
+      },
+      {
+        "type": "table",
+        "name": "event_versions",
+        "tbl_name": "event_versions",
+        "sql": "CREATE TABLE event_versions (event_id TEXT, known_at TEXT, data TEXT,\n                PRIMARY KEY(event_id,known_at))"
+      },
+      {
+        "type": "table",
+        "name": "events",
+        "tbl_name": "events",
+        "sql": "CREATE TABLE events (id TEXT PRIMARY KEY, event_date TEXT, known_at TEXT, updated_at TEXT,\n                state TEXT, data TEXT NOT NULL)"
+      },
+      {
+        "type": "table",
+        "name": "jobs",
+        "tbl_name": "jobs",
+        "sql": "CREATE TABLE jobs (id TEXT PRIMARY KEY, kind TEXT, analysis_id TEXT, priority INTEGER,\n                status TEXT, created_at TEXT, attempts INTEGER DEFAULT 0, error TEXT)"
+      },
+      {
+        "type": "table",
+        "name": "legacy_daily",
+        "tbl_name": "legacy_daily",
+        "sql": "CREATE TABLE legacy_daily (id TEXT PRIMARY KEY, trade_date TEXT, data TEXT NOT NULL)"
+      },
+      {
+        "type": "table",
+        "name": "market_candles",
+        "tbl_name": "market_candles",
+        "sql": "CREATE TABLE market_candles (source TEXT, contract TEXT, day TEXT,\n                content_hash TEXT, available_at TEXT, data TEXT,\n                PRIMARY KEY(source,contract,day,content_hash))"
+      },
+      {
+        "type": "table",
+        "name": "market_points",
+        "tbl_name": "market_points",
+        "sql": "CREATE TABLE market_points (contract TEXT, observed_at TEXT, available_at TEXT,\n                value REAL, PRIMARY KEY(contract,observed_at,value))"
+      },
+      {
+        "type": "table",
+        "name": "market_quotes",
+        "tbl_name": "market_quotes",
+        "sql": "CREATE TABLE market_quotes (id TEXT PRIMARY KEY, contract TEXT, observed_at TEXT,\n                available_at TEXT, data TEXT)"
+      },
+      {
+        "type": "table",
+        "name": "metrics",
+        "tbl_name": "metrics",
+        "sql": "CREATE TABLE metrics (id INTEGER PRIMARY KEY AUTOINCREMENT, created_at TEXT, type TEXT, data TEXT)"
+      },
+      {
+        "type": "table",
+        "name": "news",
+        "tbl_name": "news",
+        "sql": "CREATE TABLE news (id TEXT PRIMARY KEY, url TEXT UNIQUE, source TEXT NOT NULL,\n                trade_date TEXT, published_at TEXT, first_seen_at TEXT NOT NULL, content_hash TEXT NOT NULL, data TEXT NOT NULL)"
+      },
+      {
+        "type": "table",
+        "name": "news_versions",
+        "tbl_name": "news_versions",
+        "sql": "CREATE TABLE news_versions (news_id TEXT, version INTEGER, known_at TEXT, data TEXT,\n                PRIMARY KEY(news_id,version))"
+      },
+      {
+        "type": "table",
+        "name": "price_versions",
+        "tbl_name": "price_versions",
+        "sql": "CREATE TABLE price_versions (contract TEXT, day TEXT, price_type TEXT,\n                known_at TEXT, value REAL, data TEXT NOT NULL,\n                PRIMARY KEY(contract,day,price_type,known_at))"
+      },
+      {
+        "type": "table",
+        "name": "prices",
+        "tbl_name": "prices",
+        "sql": "CREATE TABLE prices (contract TEXT, day TEXT, price_type TEXT, value REAL, data TEXT NOT NULL,\n                PRIMARY KEY(contract,day,price_type))"
+      },
+      {
+        "type": "table",
+        "name": "source_states",
+        "tbl_name": "source_states",
+        "sql": "CREATE TABLE source_states (id TEXT PRIMARY KEY, data TEXT NOT NULL)"
+      },
+      {
+        "type": "table",
+        "name": "sqlite_sequence",
+        "tbl_name": "sqlite_sequence",
+        "sql": "CREATE TABLE sqlite_sequence(name,seq)"
+      },
+      {
+        "type": "table",
+        "name": "stream_events",
+        "tbl_name": "stream_events",
+        "sql": "CREATE TABLE stream_events (id INTEGER PRIMARY KEY AUTOINCREMENT, type TEXT, created_at TEXT, payload TEXT)"
+      }
+    ],
+    "schema_sha256": "9b1f2067320add08737c85652a21e77c7444a1c3dd62df7ead1ab180355b712a",
+    "table_counts": {
+      "analyses": 117,
+      "analysis_translations": 17,
+      "daily_snapshots": 5,
+      "evaluations": 5,
+      "event_search": 1669,
+      "event_search_config": 1,
+      "event_search_content": 1669,
+      "event_search_data": 392,
+      "event_search_docsize": 1669,
+      "event_search_idx": 339,
+      "event_versions": 6125,
+      "events": 1669,
+      "jobs": 146,
+      "legacy_daily": 3456,
+      "market_candles": 170,
+      "market_points": 221,
+      "market_quotes": 1287,
+      "metrics": 18852,
+      "news": 3995,
+      "news_versions": 4419,
+      "price_versions": 65879,
+      "prices": 65879,
+      "source_states": 12,
+      "sqlite_sequence": 2,
+      "stream_events": 201912
+    },
+    "price_versions_rows": 65879,
+    "preservation": {
+      "passed": true,
+      "protected_analysis_count": 116,
+      "protected_nonnull_field_count": 229,
+      "current_analysis_count": 117,
+      "new_analysis_count": 1,
+      "protected_snapshot_count": 4,
+      "new_snapshot_count": 1,
+      "original_validation_record_count": 1,
+      "latest_baseline_unchanged": true,
+      "original_baseline": {
+        "id": 210,
+        "created_at": "2026-10-14T05:51:48.181167+00:00",
+        "type": "validation_started"
+      },
+      "failures": []
+    }
+  },
+  "note": "SHA values describe the rehearsal copy before and after Store initialization; migrations may add price version history while original protected prediction text and acceptance baseline remain byte-identical."
+}

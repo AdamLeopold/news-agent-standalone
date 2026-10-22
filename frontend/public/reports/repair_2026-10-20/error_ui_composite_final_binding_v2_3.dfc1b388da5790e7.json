@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "observed_at": "2026-10-20T21:53:49.652062+00:00",
+  "analysis_id": "ec3f2c31-6f49-48bb-acbd-48474ce670e2",
+  "record_origin_prompt_version": "ttf-news-standalone-2.0",
+  "backend_prompt_version": "ttf-news-standalone-2.3",
+  "backend_pid": 12598,
+  "api_result_is_null": true,
+  "ui_error_visible": true,
+  "ui_direction_element_count": 0,
+  "default_flat_used": false,
+  "screenshot_file": "reports/repair_2026-10-20/error_ui_v2_3.jpg",
+  "screenshot_sha256": "af94db6c70dcd5c147fc609a36ea54fc644e17515bec95e53ff275700acbb2bc",
+  "api_response_sha256": "35d29f818485868fbe04305d2d1ff4b76bb214464e44f5ef73936ab58f326c89",
+  "frontend_index_sha256": "e42072c502369749d68c2f5bbf97fe400e91e4d77366faf04d4517e7a6351624",
+  "dom_observation_sha256": "12f93bd274b7c2d03f1d2e0e5661dd34f697d3c4ea05d037fc438048bdddd918",
+  "evidence_boundary": "Real original2.0 failed record actually observed in the earlier2.3 UI; frontend index unchanged. Combined with final28f/932 current20+detail gates, successful current runtime failure-to-null state tests and actually resumed final-source85990 backend. Not a newly observed model failure or Pages deployment.",
+  "composed_at": "2026-10-21T01:49:15.426594+00:00",
+  "evidence_kind": "existing_real_failed_record_ui_plus_current_gate_revalidation_and_state_binding",
+  "same_record_v2_end_to_end": false,
+  "ui_observation": {
+    "file": "reports/repair_2026-10-20/error_ui_current_observation_v2_3.json",
+    "sha256": "de05194ef31ddf5c2b8740cde0a616638a42660f1bf25ca3843b9ea3cbaa8918"
+  },
+  "current_gate_revalidation": {
+    "file": "reports/repair_2026-10-20/current_gate_revalidation_final_v2_3.json",
+    "sha256": "d1d7b2e2b68ef06d9113beecf5a8b9c3c3b999481d009ae44442fba69c75d3db"
+  },
+  "state_binding_junit": {
+    "file": "reports/repair_2026-10-20/risk-polarity-final-unit-tests-rerun.xml",
+    "sha256": "cc80e4bca36e08c5737a6685b669de55a0fe2d422efcf775e54332b061be3c9e"
+  },
+  "current_backend_deployment": {
+    "file": "reports/repair_2026-10-20/backend_detail_grounding_resumed.json",
+    "sha256": "510d9322622c5cdc6d16941c10d9cd8a0f61997810f393618c55fea9824d2384"
+  },
+  "public_pages_followup_pending": true,
+  "previous_composite_preserved": {
+    "file": "reports/repair_2026-10-20/error_ui_composite_final_binding_v2_3.93814159a16b1573.json",
+    "sha256": "93814159a16b157384d8a222ad7f537a34e191c32b4e043a9dab4dc99b63eb2b"
+  },
+  "linked_proof_checks": {
+    "linked_current_rejections_verified": true,
+    "linked_state_binding_verified": true,
+    "linked_ui_observation_verified": true
+  }
+}

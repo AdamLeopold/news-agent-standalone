@@ -1,0 +1,430 @@
+{
+  "schema_version": "ttf-risk-anchor-closure-preparation-v1",
+  "prepared_at": "2026-10-21T01:41:47.929717+00:00",
+  "status": "not_ready_detail_and_production_pending",
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/event_retrieval",
+  "ledger_snapshot": {
+    "file": "reports/repair_2026-10-20/release_known_accepted_errors.json",
+    "sha256": "35557e8bd9ac5c92941c15ace1ce89a65dc2efdd364112c54673132c76c0d6b7"
+  },
+  "current_source_sha256": {
+    "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+    "ttf_news/analysis.py": "28f186ea7f11453ec42737fd82a71b47b3f29d094121911a4e12813c93d3b1b9",
+    "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+    "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+    "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+    "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+    "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+    "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+    "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+    "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+    "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+    "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987",
+    "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+    "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+    "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+    "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+    "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+    "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+    "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+    "ttf_news/public_gateway.py": "fac8fe10429bc62a6be241817491d1f35eecdaa7f8a37357cb8dbcab7f43fae5",
+    "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+    "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+    "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+    "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+    "ttf_news/semantics.py": "932f7dd1fb44f8625685cfa0978c9294bf2c9d8817fbf71362a9813449d7edb5",
+    "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+    "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+    "ttf_news/translation.py": "d47b232a5f77ea68e2d5bc5d092021e9727e555c6b1dd702922325519982d7c5"
+  },
+  "records": [
+    {
+      "known_error_id": "v2_0_missing_previous_trading_day_anchor",
+      "status": "open_prepared_only",
+      "passed": false,
+      "real_model_validation_complete": false,
+      "current_evidence": {
+        "current_selected_briefs": {
+          "file": "reports/repair_2026-10-20/selected_bounded_risk_brief_manifest_v2_3.json",
+          "sha256": "fe467d33c23b3767aab06cc96b2ffc6d7df606a62d31542ac00421ab0eee44ca"
+        },
+        "final_unit_binding": {
+          "file": "reports/repair_2026-10-20/risk_anchor_full_unit_binding_v2_3.json",
+          "sha256": "5a74da1264334f1a1368fdd6d6527984399ee5274a60910720a74df680aea60b"
+        },
+        "old_accepted_error_current_gate_rejection": {
+          "file": "reports/repair_2026-10-20/risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json",
+          "sha256": "040ed83d91850411279ada954ec697f6c02a9d5323b0b82924d987fe2f867ab1"
+        }
+      },
+      "relevant_selected_actuals": [
+        {
+          "case": "anchor_real_manual_missing_prevday",
+          "actual_record": {
+            "file": "reports/repair_2026-10-20/candidate-source-feedback-validation/anchor_real_manual_missing_prevday.json",
+            "sha256": "993f54377a3242f27a4fc30486b05e7fe6fe1fa3bc4a431729616f1abfa6902a"
+          },
+          "input_sha256": "e55ff6ad23498905721120306597d3ae1e5c5d223a7021658c2a430913a210fb",
+          "recorded_result_returned": true,
+          "passed_current_contract_and_logic": true
+        },
+        {
+          "case": "anchor_gap_supply_loss_40",
+          "actual_record": {
+            "file": "reports/repair_2026-10-20/candidate-bounded-output-validation/anchor_gap_supply_loss_40.json",
+            "sha256": "984d680feb7e96209734e9653577a480fcf04e5ccfd809697afdd130c4a68e90"
+          },
+          "input_sha256": "9577980a0131e91fe37cfcfee11418a76c9733f4b755d18a9c8f818d7169bbe5",
+          "recorded_result_returned": true,
+          "passed_current_contract_and_logic": true
+        },
+        {
+          "case": "anchor_gap_supply_restore_40",
+          "actual_record": {
+            "file": "reports/repair_2026-10-20/candidate-final-output-scope-validation/anchor_gap_supply_restore_40.json",
+            "sha256": "41c76538a5debb0976a0ef65587394640ec6abecfe600d1a99f98505afe30bae"
+          },
+          "input_sha256": "9343567f30a58a1d81dafc5a123439d0dc4a02ff80fc27c9e17adc2498fed7cd",
+          "recorded_result_returned": true,
+          "passed_current_contract_and_logic": true
+        },
+        {
+          "case": "anchor_legal_prevday_weak_market_up",
+          "actual_record": {
+            "file": "reports/repair_2026-10-20/candidate-risk-polarity-validation/anchor_legal_prevday_weak_market_up.json",
+            "sha256": "1a9ed27b426b90bf43c935649661dd4d93f1e20eac267295e9ab360d50437794"
+          },
+          "input_sha256": "8db90c0d7727b0382e85862dabec773b99115480a5815b962e4d7ee470f99fa7",
+          "recorded_result_returned": true,
+          "passed_current_contract_and_logic": true
+        }
+      ],
+      "remaining_required_evidence": [
+        "Final all20 plus current isolated detail independent full-prose review and exact source/path binding.",
+        "Fresh successful final-source real manual/detail/current-live and English, exports/SSE and record preservation.",
+        "Actual resumed final-source process and final error-UI composite; old records/reviews remain preserved."
+      ],
+      "boundary": "Require fresh production source clocks/contract/true previous day validation; deterministic source tests and current legal/missing-anchor actuals are already evidence, not production completion.",
+      "resolution_evidence_to_ledger": null
+    },
+    {
+      "known_error_id": "v2_1_future_abandonment_asserted_completed",
+      "status": "open_prepared_only",
+      "passed": false,
+      "real_model_validation_complete": false,
+      "current_evidence": {
+        "current_selected_briefs": {
+          "file": "reports/repair_2026-10-20/selected_bounded_risk_brief_manifest_v2_3.json",
+          "sha256": "fe467d33c23b3767aab06cc96b2ffc6d7df606a62d31542ac00421ab0eee44ca"
+        },
+        "final_unit_binding": {
+          "file": "reports/repair_2026-10-20/risk_anchor_full_unit_binding_v2_3.json",
+          "sha256": "5a74da1264334f1a1368fdd6d6527984399ee5274a60910720a74df680aea60b"
+        },
+        "old_accepted_error_current_gate_rejection": {
+          "file": "reports/repair_2026-10-20/risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json",
+          "sha256": "040ed83d91850411279ada954ec697f6c02a9d5323b0b82924d987fe2f867ab1"
+        }
+      },
+      "relevant_selected_actuals": [
+        {
+          "case": "real_future_well_b1",
+          "actual_record": {
+            "file": "reports/repair_2026-10-20/candidate-final-output-scope-validation/real_future_well_b1.json",
+            "sha256": "808f33e888ce040231d73c4efb049662b9ec96c5a07c876aee1c8727c54a6d78"
+          },
+          "input_sha256": "fc251c4d37a8c877cc68dc333bef2cc99ff3156b8ff467c890bb5171ad3d0348",
+          "recorded_result_returned": true,
+          "passed_current_contract_and_logic": true
+        }
+      ],
+      "remaining_required_evidence": [
+        "Final all20 plus current isolated detail independent full-prose review and exact source/path binding.",
+        "Fresh successful final-source real manual/detail/current-live and English, exports/SSE and record preservation.",
+        "Actual resumed final-source process and final error-UI composite; old records/reviews remain preserved."
+      ],
+      "boundary": "May establish old wrong completion is no longer accepted, using current isolated well future-plan actual plus real failed production well raw refusals and append-review exclusions. generation_issue_resolved remains false: the two same-well production attempts failed; a later EPCM workflow is not well production success.",
+      "resolution_evidence_to_ledger": null
+    },
+    {
+      "known_error_id": "v2_1_field_misidentified_as_pipeline",
+      "status": "open_prepared_only",
+      "passed": false,
+      "real_model_validation_complete": false,
+      "current_evidence": {
+        "current_selected_briefs": {
+          "file": "reports/repair_2026-10-20/selected_bounded_risk_brief_manifest_v2_3.json",
+          "sha256": "fe467d33c23b3767aab06cc96b2ffc6d7df606a62d31542ac00421ab0eee44ca"
+        },
+        "final_unit_binding": {
+          "file": "reports/repair_2026-10-20/risk_anchor_full_unit_binding_v2_3.json",
+          "sha256": "5a74da1264334f1a1368fdd6d6527984399ee5274a60910720a74df680aea60b"
+        },
+        "old_accepted_error_current_gate_rejection": {
+          "file": "reports/repair_2026-10-20/risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json",
+          "sha256": "040ed83d91850411279ada954ec697f6c02a9d5323b0b82924d987fe2f867ab1"
+        }
+      },
+      "relevant_selected_actuals": [
+        {
+          "case": "real_nyhamna",
+          "actual_record": {
+            "file": "reports/repair_2026-10-20/candidate-bounded-output-validation/real_nyhamna.json",
+            "sha256": "2747e3388dc7655dbc75d55a2245caadb6fea6d2c78f73d53b873beb05d91e48"
+          },
+          "input_sha256": "4ba9dbdac43a9ce84acad5d9dde536a9d5e5a5fa02b6e1a3d65fc64ad7c7990a",
+          "recorded_result_returned": true,
+          "passed_current_contract_and_logic": true
+        }
+      ],
+      "remaining_required_evidence": [
+        "Final all20 plus current isolated detail independent full-prose review and exact source/path binding.",
+        "Fresh successful final-source real manual/detail/current-live and English, exports/SSE and record preservation.",
+        "Actual resumed final-source process and final error-UI composite; old records/reviews remain preserved."
+      ],
+      "boundary": "Require fresh current-live source-bound facility type and non-overlapping capacity reasoning review. Existing real_nyhamna mechanism case alone does not prove every new mixed production window.",
+      "resolution_evidence_to_ledger": null
+    },
+    {
+      "known_error_id": "v2_2_deterministic_source_coverage_false_warning",
+      "status": "open_prepared_only",
+      "passed": false,
+      "real_model_validation_complete": false,
+      "current_evidence": {
+        "current_selected_briefs": {
+          "file": "reports/repair_2026-10-20/selected_bounded_risk_brief_manifest_v2_3.json",
+          "sha256": "fe467d33c23b3767aab06cc96b2ffc6d7df606a62d31542ac00421ab0eee44ca"
+        },
+        "final_unit_binding": {
+          "file": "reports/repair_2026-10-20/risk_anchor_full_unit_binding_v2_3.json",
+          "sha256": "5a74da1264334f1a1368fdd6d6527984399ee5274a60910720a74df680aea60b"
+        },
+        "old_accepted_error_current_gate_rejection": {
+          "file": "reports/repair_2026-10-20/risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json",
+          "sha256": "040ed83d91850411279ada954ec697f6c02a9d5323b0b82924d987fe2f867ab1"
+        }
+      },
+      "relevant_selected_actuals": [],
+      "remaining_required_evidence": [
+        "Final all20 plus current isolated detail independent full-prose review and exact source/path binding.",
+        "Fresh successful final-source real manual/detail/current-live and English, exports/SSE and record preservation.",
+        "Actual resumed final-source process and final error-UI composite; old records/reviews remain preserved."
+      ],
+      "boundary": "Require actual final production health/source coverage risk provenance. Prior9fa news direction is not declared wrong; only deterministic false warnings are this family.",
+      "resolution_evidence_to_ledger": null
+    },
+    {
+      "known_error_id": "v2_3_isolated_price_observation_or_baseline_errors",
+      "status": "open_prepared_only",
+      "passed": false,
+      "real_model_validation_complete": false,
+      "current_evidence": {
+        "current_selected_briefs": {
+          "file": "reports/repair_2026-10-20/selected_bounded_risk_brief_manifest_v2_3.json",
+          "sha256": "fe467d33c23b3767aab06cc96b2ffc6d7df606a62d31542ac00421ab0eee44ca"
+        },
+        "final_unit_binding": {
+          "file": "reports/repair_2026-10-20/risk_anchor_full_unit_binding_v2_3.json",
+          "sha256": "5a74da1264334f1a1368fdd6d6527984399ee5274a60910720a74df680aea60b"
+        },
+        "old_accepted_error_current_gate_rejection": {
+          "file": "reports/repair_2026-10-20/risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json",
+          "sha256": "040ed83d91850411279ada954ec697f6c02a9d5323b0b82924d987fe2f867ab1"
+        }
+      },
+      "relevant_selected_actuals": [
+        {
+          "case": "future_planned_notice",
+          "actual_record": {
+            "file": "reports/repair_2026-10-20/candidate-final-output-scope-validation/future_planned_notice.json",
+            "sha256": "c3188a06f17422b957352d1d764118273c78784d1d0f5d92af0918ae86805d38"
+          },
+          "input_sha256": "99aa1883186e4c7746647f781489670cf07addc2c015b7bbd5f4d28310eef1e8",
+          "recorded_result_returned": true,
+          "passed_current_contract_and_logic": true
+        },
+        {
+          "case": "dismissed_notice_not_verified_recovery",
+          "actual_record": {
+            "file": "reports/repair_2026-10-20/candidate-risk-polarity-validation/dismissed_notice_not_verified_recovery.json",
+            "sha256": "cdc41017c1ad917f678e1fa6e9bdbeffed9e03e896b08fed8156fae5619db4fa"
+          },
+          "input_sha256": "dc8a50f0ed4b2e64a5a97b9b3d697e61aa88afa3e25f195a97a44e8b017f36a0",
+          "recorded_result_returned": true,
+          "passed_current_contract_and_logic": true
+        },
+        {
+          "case": "anchor_real_manual_missing_prevday",
+          "actual_record": {
+            "file": "reports/repair_2026-10-20/candidate-source-feedback-validation/anchor_real_manual_missing_prevday.json",
+            "sha256": "993f54377a3242f27a4fc30486b05e7fe6fe1fa3bc4a431729616f1abfa6902a"
+          },
+          "input_sha256": "e55ff6ad23498905721120306597d3ae1e5c5d223a7021658c2a430913a210fb",
+          "recorded_result_returned": true,
+          "passed_current_contract_and_logic": true
+        },
+        {
+          "case": "anchor_legal_prevday_weak_market_up",
+          "actual_record": {
+            "file": "reports/repair_2026-10-20/candidate-risk-polarity-validation/anchor_legal_prevday_weak_market_up.json",
+            "sha256": "1a9ed27b426b90bf43c935649661dd4d93f1e20eac267295e9ab360d50437794"
+          },
+          "input_sha256": "8db90c0d7727b0382e85862dabec773b99115480a5815b962e4d7ee470f99fa7",
+          "recorded_result_returned": true,
+          "passed_current_contract_and_logic": true
+        },
+        {
+          "case": "supply_restore_40_with_flat_baseline",
+          "actual_record": {
+            "file": "reports/repair_2026-10-20/candidate-source-feedback-validation/supply_restore_40_with_flat_baseline.json",
+            "sha256": "179f2d6d013c8b71fbd5089b4abe730be1d08b703e29d7a3848203f202201bf4"
+          },
+          "input_sha256": "464d1b4829706e3760d34f544c7b1028ab149fdf9aae15c7c9f40febbcb66e9c",
+          "recorded_result_returned": true,
+          "passed_current_contract_and_logic": true
+        },
+        {
+          "case": "weak_exploration_no_quote",
+          "actual_record": {
+            "file": "reports/repair_2026-10-20/candidate-source-feedback-validation/weak_exploration_no_quote.json",
+            "sha256": "22b161fb55838c020c59f95c9352f4d4a569466ad0b27ff7f1a1dc49188fb98c"
+          },
+          "input_sha256": "6d252c5abf714717916f99ef8e3f038aa5a942635795825e4dfa32da25dc9cfa",
+          "recorded_result_returned": false,
+          "passed_current_contract_and_logic": false
+        },
+        {
+          "case": "weak_news_observed_market_up",
+          "actual_record": {
+            "file": "reports/repair_2026-10-20/candidate-source-feedback-validation/weak_news_observed_market_up.json",
+            "sha256": "e6da0f4433040a2f38aa64347d80f689d1d255a8e092a02bebd37a485fd975b1"
+          },
+          "input_sha256": "a0a64a5ee688b273dacc019cdfb921d8d4d92b62470c5f646b60bd5e6dc89a71",
+          "recorded_result_returned": false,
+          "passed_current_contract_and_logic": false
+        },
+        {
+          "case": "real_eni",
+          "actual_record": {
+            "file": "reports/repair_2026-10-20/candidate-source-feedback-validation/real_eni.json",
+            "sha256": "356262d6994a1c1aad8275eecb3d458f51812cf2157322b8152b1c15965efbce"
+          },
+          "input_sha256": "0dd52f2daf32aeaf1edc94d3394b0df67eba21b6f8d1b3b6ca0652c0faf8f075",
+          "recorded_result_returned": false,
+          "passed_current_contract_and_logic": false
+        },
+        {
+          "case": "supply_loss_40_with_flat_baseline",
+          "actual_record": {
+            "file": "reports/repair_2026-10-20/candidate-source-feedback-validation/supply_loss_40_with_flat_baseline.json",
+            "sha256": "012bbf3c97d931bb50f7356759d79d7d6ec323a9ba4dc50836d9c6f40de6aa92"
+          },
+          "input_sha256": "42c8e106e6a41ed1aac5d22ac7d754fd5b8a62ed28c539d0fcdf99bd07e5bf29",
+          "recorded_result_returned": false,
+          "passed_current_contract_and_logic": false
+        }
+      ],
+      "remaining_required_evidence": [
+        "Final all20 plus current isolated detail independent full-prose review and exact source/path binding.",
+        "Fresh successful final-source real manual/detail/current-live and English, exports/SSE and record preservation.",
+        "Actual resumed final-source process and final error-UI composite; old records/reviews remain preserved."
+      ],
+      "boundary": "Correctly rejected four latest no-result cases remain unavailable, not correct. New safe outputs plus old14 rejections do not establish all20 model availability or market accuracy. New isolated detail and production price claims must be independently reviewed.",
+      "resolution_evidence_to_ledger": null
+    },
+    {
+      "known_error_id": "v2_3_isolated_epcm_award_roles_reversed",
+      "status": "open_prepared_only",
+      "passed": false,
+      "real_model_validation_complete": false,
+      "current_evidence": {
+        "current_selected_briefs": {
+          "file": "reports/repair_2026-10-20/selected_bounded_risk_brief_manifest_v2_3.json",
+          "sha256": "fe467d33c23b3767aab06cc96b2ffc6d7df606a62d31542ac00421ab0eee44ca"
+        },
+        "final_unit_binding": {
+          "file": "reports/repair_2026-10-20/risk_anchor_full_unit_binding_v2_3.json",
+          "sha256": "5a74da1264334f1a1368fdd6d6527984399ee5274a60910720a74df680aea60b"
+        },
+        "old_accepted_error_current_gate_rejection": {
+          "file": "reports/repair_2026-10-20/risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json",
+          "sha256": "040ed83d91850411279ada954ec697f6c02a9d5323b0b82924d987fe2f867ab1"
+        }
+      },
+      "relevant_selected_actuals": [
+        {
+          "case": "anchor_real_manual_missing_prevday",
+          "actual_record": {
+            "file": "reports/repair_2026-10-20/candidate-source-feedback-validation/anchor_real_manual_missing_prevday.json",
+            "sha256": "993f54377a3242f27a4fc30486b05e7fe6fe1fa3bc4a431729616f1abfa6902a"
+          },
+          "input_sha256": "e55ff6ad23498905721120306597d3ae1e5c5d223a7021658c2a430913a210fb",
+          "recorded_result_returned": true,
+          "passed_current_contract_and_logic": true
+        }
+      ],
+      "remaining_required_evidence": [
+        "Final all20 plus current isolated detail independent full-prose review and exact source/path binding.",
+        "Fresh successful final-source real manual/detail/current-live and English, exports/SSE and record preservation.",
+        "Actual resumed final-source process and final error-UI composite; old records/reviews remain preserved."
+      ],
+      "boundary": "Require source parties in fresh real manual/detail/English, preserving original quote and role. New pilot flat result uses correct roles and no pricezero but first-call success does not demonstrate second-call causal improvement.",
+      "resolution_evidence_to_ledger": null
+    },
+    {
+      "known_error_id": "v2_3_supply_risk_object_scope_and_evidence_polarity",
+      "status": "open_prepared_only",
+      "passed": false,
+      "real_model_validation_complete": false,
+      "current_evidence": {
+        "current_selected_briefs": {
+          "file": "reports/repair_2026-10-20/selected_bounded_risk_brief_manifest_v2_3.json",
+          "sha256": "fe467d33c23b3767aab06cc96b2ffc6d7df606a62d31542ac00421ab0eee44ca"
+        },
+        "final_unit_binding": {
+          "file": "reports/repair_2026-10-20/risk_anchor_full_unit_binding_v2_3.json",
+          "sha256": "5a74da1264334f1a1368fdd6d6527984399ee5274a60910720a74df680aea60b"
+        },
+        "old_accepted_error_current_gate_rejection": {
+          "file": "reports/repair_2026-10-20/risk_polarity_original_accepted_defects_gate_revalidation_v2_3.json",
+          "sha256": "040ed83d91850411279ada954ec697f6c02a9d5323b0b82924d987fe2f867ab1"
+        }
+      },
+      "relevant_selected_actuals": [
+        {
+          "case": "dismissed_notice_not_verified_recovery",
+          "actual_record": {
+            "file": "reports/repair_2026-10-20/candidate-risk-polarity-validation/dismissed_notice_not_verified_recovery.json",
+            "sha256": "cdc41017c1ad917f678e1fa6e9bdbeffed9e03e896b08fed8156fae5619db4fa"
+          },
+          "input_sha256": "dc8a50f0ed4b2e64a5a97b9b3d697e61aa88afa3e25f195a97a44e8b017f36a0",
+          "recorded_result_returned": true,
+          "passed_current_contract_and_logic": true
+        }
+      ],
+      "remaining_required_evidence": [
+        "Final all20 plus current isolated detail independent full-prose review and exact source/path binding.",
+        "Fresh successful final-source real manual/detail/current-live and English, exports/SSE and record preservation.",
+        "Actual resumed final-source process and final error-UI composite; old records/reviews remain preserved."
+      ],
+      "boundary": "Source paired controls synthetic and never inserted in dataset. Their card fix is separate from actual Gassco risk-lower wrong bullish slot; current risk actual correctly classifies evidence, final production output review still required.",
+      "resolution_evidence_to_ledger": null
+    }
+  ],
+  "known_error_count": 7,
+  "no_error_closed": true,
+  "selected_brief_counts": {
+    "strict_contract_and_logic_passed": 16,
+    "returned": 16,
+    "failed_no_result": 4,
+    "independent_prose_binding_pending": true
+  },
+  "production_workflow_pending": true,
+  "all_twenty_new_final_source_calls_claimed": false,
+  "new_model_calls": 0,
+  "no_database_access": true,
+  "no_network_calls": true,
+  "original_records_or_ledger_modified": false,
+  "boundary": "Preparation only. A subsequent immutable resolution must bind actual reviews and all required evidence before a ledger entry can be marked resolved_with_real_validation. Gate refusal or unit pass alone never resolves it."
+}

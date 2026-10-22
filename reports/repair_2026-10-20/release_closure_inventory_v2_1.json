@@ -1,0 +1,153 @@
+{
+  "created_at": "2026-10-20T21:20:45.617367+00:00",
+  "status": "not_ready",
+  "source_sha256": {
+    "ttf_news/analysis.py": "3b67ad8d17b465be7f9a2e02b26ed3e3ea07ba71ccd60cba1f986b4f13e7e298",
+    "ttf_news/semantics.py": "e6c49b09507a3a272cc67773e14b8bca8b8c4d061794e54022d095f90f7d9c2b",
+    "ttf_news/context.py": "6ae94608797de98b1129f673af219bde7e88faba1f4cf73a7456058d7350b23f",
+    "ttf_news/prompts.py": "530d03e685092c9992bee59b20ce7ce4a2e34a8bcbe6805eafa024fa590d3570"
+  },
+  "prompt_version": "ttf-news-standalone-2.1",
+  "source_ledger": {
+    "file": "reports/repair_2026-10-20/release_known_accepted_errors.json",
+    "sha256": "51e279bc18e38a2fde6c77b141e8e6fa581d690f22cb609b27604c2fb08dd408"
+  },
+  "independent_review_pending": {
+    "file": "reports/repair_2026-10-20/independent_release_review_v2_1.json",
+    "sha256": "51969228da538a3c7850c071a7200d2c0ba35bddb2ac068bba9d5915a97d457c"
+  },
+  "records": [
+    {
+      "known_error_id": "v2_0_missing_previous_trading_day_anchor",
+      "status": "open",
+      "affected_analysis_ids": [
+        "6601a466-eecc-48f0-82e5-68785d8ac5be",
+        "d71df0df-25eb-4d87-9b82-adf04d90fe28",
+        "91e13e0e-ee1c-458e-ade4-26f2f2930be3"
+      ],
+      "source_fix_and_old_raw_specific_gate": {
+        "verified": true,
+        "proof": {
+          "file": "reports/repair_2026-10-20/final_19_current_binding_gate_regression_v2_1.json",
+          "sha256": "da8668fa1cea0dac21209166e79d027b8e1a5e3bdac3c68c5208e0dc0000664c"
+        },
+        "fixture": "tests/fixtures/manual_stale_previous_settlement_6601.json",
+        "fixture_sha256": "bd6cb7a52aa0307f8ec124bf5ab6574d2e492434ec58a26b0c556e372b272011"
+      },
+      "append_reviews_applied": {
+        "verified": true,
+        "proofs": [
+          {
+            "file": "reports/repair_2026-10-20/applied-analysis-reviews.json",
+            "sha256": "2e2d364da782e03b725a15e5cfdd4bd1e119f866501226d3e584b190a027a333"
+          },
+          {
+            "file": "reports/repair_2026-10-20/applied-legacy-fallback-review.json",
+            "sha256": "415ed301440e7163a1409134622dcd2dc380cc3fd064603642b74fbcdfec64b7"
+          }
+        ],
+        "canonical_analyses_modified": false
+      },
+      "current_real_model_validation": {
+        "status": "candidate_manual_anchor_validation",
+        "candidate_analysis_ids": [
+          "960d00b0-6d55-4f81-9731-5290ea07b505"
+        ],
+        "does_not_close_error": true
+      },
+      "pending": [
+        "Specific immutable real-model resolution proof with exact original/corrected source/result identities and limitations.",
+        "Final current source/API exclusion and old-record preservation confirmation.",
+        "Final successful end-to-end and public-snapshot scan."
+      ]
+    },
+    {
+      "known_error_id": "v2_1_future_abandonment_asserted_completed",
+      "status": "open",
+      "affected_analysis_ids": [
+        "b1e9c166-8851-4f7c-9803-b9c72329f6a9"
+      ],
+      "source_fix_and_old_raw_specific_gate": {
+        "verified": true,
+        "proof": {
+          "file": "reports/repair_2026-10-20/final_19_current_binding_gate_regression_v2_1.json",
+          "sha256": "da8668fa1cea0dac21209166e79d027b8e1a5e3bdac3c68c5208e0dc0000664c"
+        },
+        "fixture": "tests/fixtures/live_future_well_action_as_completed.json",
+        "fixture_sha256": "879d249bc690fb61159765d973a8e0eed55bd1e83f04cbc31d825a0a11cdaed2"
+      },
+      "append_reviews_applied": {
+        "verified": true,
+        "proofs": [
+          {
+            "file": "reports/repair_2026-10-20/applied-future-well-review.json",
+            "sha256": "e92042c7018ac1010feaefbeca69532c4fc7d599b3b3363ff6402641eef6d38a"
+          }
+        ],
+        "canonical_analyses_modified": false
+      },
+      "current_real_model_validation": {
+        "status": "candidate_qualified_well_brief_requires_explicit_scope_decision",
+        "candidate_analysis_ids": [
+          "7866a10d-fd69-4ab4-b1e4-20297a9dbc28"
+        ],
+        "does_not_close_error": true
+      },
+      "pending": [
+        "Specific immutable real-model resolution proof with exact original/corrected source/result identities and limitations.",
+        "Final current source/API exclusion and old-record preservation confirmation.",
+        "Final successful end-to-end and public-snapshot scan."
+      ]
+    },
+    {
+      "known_error_id": "v2_1_field_misidentified_as_pipeline",
+      "status": "open",
+      "affected_analysis_ids": [
+        "d2ef1250-6ed3-4a68-9396-e6ed4addbfb3",
+        "751b4cbd-7da1-4d1a-8e3a-f7f9de49031a"
+      ],
+      "source_fix_and_old_raw_specific_gate": {
+        "verified": true,
+        "proof": {
+          "file": "reports/repair_2026-10-20/final_19_current_binding_gate_regression_v2_1.json",
+          "sha256": "da8668fa1cea0dac21209166e79d027b8e1a5e3bdac3c68c5208e0dc0000664c"
+        },
+        "fixture": "tests/fixtures/live_troll_field_not_pipeline.json",
+        "fixture_sha256": "e5e18ff37ee556c30bfcb7871217d77d9e8b7c945ce83ccc69a3d0ba1e7f3345"
+      },
+      "append_reviews_applied": {
+        "verified": true,
+        "proofs": [
+          {
+            "file": "reports/repair_2026-10-20/applied-facility-type-review.json",
+            "sha256": "7ff5b1fe4a6541d97318284a2c6d1fc6e75ae340b9f813d26c5bdd6d7993cc4a"
+          },
+          {
+            "file": "reports/repair_2026-10-20/applied-facility-type-review-supplement.json",
+            "sha256": "461988e95822df1dd5baee73e7f891882fc9337384a41863fa4d98dfa0d88c0a"
+          }
+        ],
+        "canonical_analyses_modified": false
+      },
+      "current_real_model_validation": {
+        "status": "missing_valid_current_live",
+        "candidate_analysis_ids": [],
+        "does_not_close_error": true
+      },
+      "pending": [
+        "Specific immutable real-model resolution proof with exact original/corrected source/result identities and limitations.",
+        "Final current source/API exclusion and old-record preservation confirmation.",
+        "Final successful end-to-end and public-snapshot scan."
+      ]
+    }
+  ],
+  "manual_success_snapshot": {
+    "file": "reports/repair_2026-10-20/independent_live_prose_review_manual960d_snapshot.json",
+    "sha256": "12f0f2caa5a45219f83f08b35eb3c1938001625f94334863790f3e64a559fd07"
+  },
+  "no_status_or_model_result_changed": true,
+  "policy_boundary": "This inventory records existing proof and missing fields only. It resolves no accepted error, declares no failed live result passed, and makes no production-policy or availability-threshold change.",
+  "no_model_calls": true,
+  "no_database_access": true,
+  "no_network_calls": true
+}

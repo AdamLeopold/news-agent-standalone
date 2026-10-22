@@ -1,0 +1,73 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T02:53:31.247395+00:00",
+  "scope": "Finite result-only physical flow channel correction for the new hollow-evidence false positive; no source extraction/input/label mutation, model, API or DB activity.",
+  "candidate_source": {
+    ".runtime/evidence-hollow-physical-proposal/ttf_news/semantics.py": "2db667a7aa52d51956cc4c27b4b32ad97ec5ca9d98f8fc4195a330bedcba094d",
+    ".runtime/evidence-hollow-physical-proposal/proposal.patch": "7503f75c2a1c69e552978e0e11b7489250f289855eea3b86ae6b81434a9dda99",
+    ".runtime/evidence-hollow-physical-proposal/test_hollow_physical.py": "3e14fb9f7276bfe5f0337a72b803f52e257f38ddab29b890621ceb8ea252a34a",
+    ".runtime/evidence-hollow-physical-proposal/supplied_conflicting_mechanisms.json": "53837a8a80640131c4e55e473ee59db8854e3473e61f713754553425054c2758"
+  },
+  "root_source_at_review": {
+    "ttf_news/analysis.py": "f3c44838f16941e503e5a542bb8d95176e83ca2d25df7af8373cfeaefe0b0d06",
+    "ttf_news/semantics.py": "d8dbb58192b5c9fbfd04726d3309127142bfa02f2d18f11ee6de82c0a33204b9"
+  },
+  "verdict": "no_identified_material_blocker_in_requested_new_guard_false_positive_scope",
+  "finite_review_passed": true,
+  "production_ready": false,
+  "known_logic_errors": [],
+  "new_model_calls": 0,
+  "confirmed_false_positive": {
+    "file": "reports/repair_2026-10-20/candidate-bounded-output-validation/supplied_conflicting_mechanisms.json",
+    "sha256": "98b8c7e46c8963a97fd9e736d6734ed902200ef94e330c1471f2fce17c7de18a",
+    "source": "Stipulated actual pipeline flow−20 and actual LNG regasification+30mcm/d in the same window and duration. Both physical mechanisms are explicitly supplied.",
+    "correct_evidence": "[N0]管道输气减少20mcm/d → TTF看涨机制",
+    "interpretation": "A real supply-contraction channel, not a corporate fact with a hollow gas-price endpoint. Original netdown/null result remains original; corrected validation does not relabel it as a new generation."
+  },
+  "checks": {
+    "new_hollow_channel_coverage": "The new result guard reuses existing physical quantity-arrow signals and adds narrowly scoped result-side 输气/再气化 change synonyms with the existing negation matcher. It does not inject source mechanism candidates or assert actual_flow evidence kinds.",
+    "opposite_slots": "A single decrease-flow/up channel cannot move into bearish evidence or be paired with a bearish gas-price endpoint; increase-flow/down is symmetric.",
+    "true_mixed_and_net_labels": "Supplied opposite pipeline/LNG mechanisms remain separately valid and may be combined into an explained net view. The guard leaves aggregate flat/down/up and missing-anchor null fields unchanged.",
+    "expectation_difference": "Known source-supported below-expectation supply can reverse marginal flow pressure; an unsupported resource-arrow expectation claim is handled by the original quantity/source gate rather than falsely called a hollow template.",
+    "known_actual_defects": "The prior fifteen known-bad bodies plus new Eniraw/EPCM bodies remain rejected within the focused source/price/semantic regressions. The actual FP correction does not excuse corporate template, price-zero or physical state errors."
+  },
+  "evidence": {
+    "focused_tests": {
+      "file": "reports/repair_2026-10-20/independent_evidence_hollow_physical_proposal_tests_v2_3.xml",
+      "sha256": "67366a2aaae1d6f37b154553cf86d8ef9044b22dc47a046e8c2b10677caf493d",
+      "log": "reports/repair_2026-10-20/independent_evidence_hollow_physical_proposal_tests_v2_3.log",
+      "log_sha256": "7a8a9784678d51dbf594cd93d9b067b0a34feafbd3ce7dda4ed2156c2a2ecb0d",
+      "passed": 208,
+      "passed_subtests": 293,
+      "failed": 0,
+      "seconds": 5.78,
+      "execution": "Private virtualenv, candidate injected only into this test process; no source file edits."
+    },
+    "independent_controls": {
+      "file": "reports/repair_2026-10-20/independent_evidence_hollow_physical_controls_v2_3.json",
+      "sha256": "dd00a10283da02bb4d42517a460d4ad62e95da6ec091fff264dff7acc26d3d23",
+      "passed": 12,
+      "failed": 0
+    },
+    "shared_source_ast_unchanged": {
+      "_matching_mechanisms": true,
+      "extract_mechanisms": true,
+      "_source_text": true,
+      "prospective_supply_only": true,
+      "source_fact_projection": true
+    },
+    "changed_existing_functions": [
+      "_check_source_bound_evidence_slot_prices"
+    ],
+    "new_function": [
+      "_evidence_flow_change_mechanisms"
+    ]
+  },
+  "qualifications": [
+    "Finite causal/evidence parser checks are not proof of arbitrary future output correctness or market accuracy.",
+    "No model rerun is necessary merely to remove this false-positive rejection if official complete request/retry path equivalence is proved; accepted true errors still need fresh final-source actuals.",
+    "The original d8 unit failure and false-positive path proof are kept intact. This candidate changes only the new result guard, with root analysis/input unchanged.",
+    "Final source freeze, full units, official path replay and actual production live/manual/detail/English delivery remain parent-owned prerequisites."
+  ]
+}

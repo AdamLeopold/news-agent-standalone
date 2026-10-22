@@ -1,0 +1,78 @@
+{
+  "schema_version": "ttf-risk-duplicate-read-only-review-v1",
+  "created_at": "2026-10-21T00:03:41.737999+00:00",
+  "reviewer_type": "codex_subagent",
+  "record_file": "reports/repair_2026-10-20/candidate-bounded-output-validation/cold_heating_demand.json",
+  "record_sha256": "611e21b6a3cfecb0a624c6b29f6b3b0576f2b62692da43678d1159f9e78cfeb0",
+  "input_sha256": "d9df78997d786ae788e9377cc47347fd44dfd4c6695428d930717c4e26582fc0",
+  "source_sha256": {
+    "ttf_news/analysis.py": "1087340777d4a0b10883420d76f8ce142bc53dd7542c8ebc84893e317553a16f",
+    "ttf_news/semantics.py": "3efbab0f772839b2249a544c6c39aa4beb9386c1de9850dfe37a989129139e90",
+    "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d"
+  },
+  "read_only": {
+    "source_edits": false,
+    "test_edits": false,
+    "DB_API_model_or_service_calls": false,
+    "original_record_or_terminal_status_changed": false,
+    "proposed_policy_implemented": false
+  },
+  "actual_terminal": "failed retained; both real calls reached stop and were rejected by raw risk uniqueness before normal fact/semantics path",
+  "attempts": [
+    {
+      "attempt": 1,
+      "raw_content_sha256": "caf28c1c8587e25b6c2bf08411e72fbbcdd7240ffa7d05209b53aa2ff48f0902",
+      "done_reason": "stop",
+      "eval_count": 910,
+      "raw_risk_flags": [
+        "price_reference:输入缺少可用sigma60，异常等级的波动率门槛无法核验",
+        "price_reference:输入缺少可用sigma60，异常等级的波动率门槛无法核验"
+      ],
+      "raw_risk_count": 2,
+      "unique_exact_risk_count": 1,
+      "news_direction": "up",
+      "close_direction": null,
+      "close_status": "insufficient_evidence",
+      "pure_core_schema_and_fact_semantic_errors": [],
+      "manual_causal_review": {
+        "verdict": "no_identified_P2",
+        "supplied_forecast": "forecast revised lower4C; expected heating demand+15%, retained as expectation rather than observed gasflow",
+        "news_sign": "up correctly follows expected demand increase; no offset fabricated",
+        "close_status": "No previous-day same-contract price anchor; insufficient/null explicitly allowed by current contract",
+        "pricing": "unknown whether priced; no unsupported actual reaction assertion",
+        "risk": "same source-supported missing sigma60 note repeated exactly twice; cosmetic duplication only"
+      }
+    },
+    {
+      "attempt": 2,
+      "raw_content_sha256": "f8ec1211e9808499e953431034408ff666cf81128c38b15b1fa814bbb092c20f",
+      "done_reason": "stop",
+      "eval_count": 1576,
+      "raw_risk_flags": [
+        "price_reference:输入缺少可用sigma60，异常等级的波动率门槛无法核验",
+        "price_reference:输入缺少可用sigma60，异常等级的波动率门槛无法核验"
+      ],
+      "raw_risk_count": 2,
+      "unique_exact_risk_count": 1,
+      "news_direction": "up",
+      "close_direction": null,
+      "close_status": "insufficient_evidence",
+      "pure_core_schema_and_fact_semantic_errors": [],
+      "manual_causal_review": {
+        "verdict": "no_identified_P2",
+        "supplied_forecast": "forecast revised lower4C; expected heating demand+15%, retained as expectation rather than observed gasflow",
+        "news_sign": "up correctly follows expected demand increase; no offset fabricated",
+        "close_status": "No previous-day same-contract price anchor; insufficient/null explicitly allowed by current contract",
+        "pricing": "unknown whether priced; no unsupported actual reaction assertion",
+        "risk": "same source-supported missing sigma60 note repeated exactly twice; cosmetic duplication only"
+      }
+    }
+  ],
+  "proposal_only": {
+    "scope": "risk_flags exact duplicate notes only; retain raw length cap2, native unique hint, all other array duplicate rejection and all fact/semantic gates",
+    "normalization": "Reuse existing _add_known_limitations exact dict.fromkeys normalization; do not cut or edit conclusions/evidence",
+    "audit_metadata": "Record raw_model_risk_count, exact_unique_count, duplicates_removed at deterministic limitation normalization; raw_content/model_calls retain original bytes",
+    "request_compatibility": "system/input/schema/options unchanged if uniqueItems hint remains; acceptance/errors/repair/terminal may change, requiring complete path replay and actual new calls for affected cases",
+    "original_failed_case": "Never retroactively accept cold original; create separate new actual stage after authorized source freeze"
+  }
+}

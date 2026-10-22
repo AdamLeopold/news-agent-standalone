@@ -1,0 +1,263 @@
+{
+  "status": "passed_with_documented_scope",
+  "audited_at": "2026-10-20T21:40:56.573678+00:00",
+  "auditor": "independent_final_semantic_audit",
+  "version": "2.2",
+  "source_hashes": {
+    "ttf_news/analysis.py": "2268eeb7d20679149a1dd6cddf21e5fb8d048e19b0c4ef3f49ac68d154e116a0",
+    "ttf_news/semantics.py": "6338c3173559eaf377fd0366cee40415e9d250489530d3c2d7e071e5c321a1e8",
+    "ttf_news/prompts.py": "67589b80e657767d540050f664addfab399c41dccccaf50a8314001af991ab4d"
+  },
+  "scope": "Finite read-only source review and in-memory validation; no inference, network or production DB writes",
+  "no_model_calls": true,
+  "no_network": true,
+  "no_database_access": true,
+  "prior_report_preserved": {
+    "file": "reports/repair_2026-10-20/independent_final_semantic_audit.json",
+    "sha256": "4e6b9bbdef578304faa6154730fef078fa34ff5ad07761ea55f54a661fc3d8ce"
+  },
+  "original_30_controls": {
+    "file": "reports/repair_2026-10-20/independent_validator_controls_v2_2_2268.json",
+    "sha256": "a7dd0541c1a690e54dc524426b7532a9b8321b9e3d9784632f6140edb44f217f",
+    "passed": 30,
+    "total": 30
+  },
+  "additional_controls": [
+    {
+      "case": "actual_multi_number_text_without_price_fields",
+      "claim": "截至2026-10-20，Troll将于10月21-22日因年度维护导致13.0 mcm/d容量不可用，10月22-23日再有7.6 mcm/d不可用，合计约20.6 mcm/d，约占总产能9.5%，为未来供应约束。",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "diagnostics": [
+        "两项公告容量属于不重叠时段，不能相加为同一时刻mcm/d容量下降；请按各N起止分别列出，不把相邻时段的速率求和"
+      ]
+    },
+    {
+      "case": "correct_daily_listing_no_combined_rate",
+      "claim": "截至2026-10-20，Troll将于10月21-22日因年度维护导致13.0mcm/d容量不可用，10月22-23日再有7.6mcm/d不可用，为未来容量约束。",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "diagnostics": []
+    },
+    {
+      "case": "explicit_unavailable_mean",
+      "claim": "Troll两项相邻公告时段加权平均不可用容量10.3mcm/d。",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "diagnostics": []
+    },
+    {
+      "case": "explicit_available_mean",
+      "claim": "Troll两项相邻公告时段加权平均可用容量127.05mcm/d。",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "diagnostics": []
+    },
+    {
+      "case": "explicit_technical_mean",
+      "claim": "Troll两项相邻公告时段加权平均技术容量137.35mcm/d。",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "diagnostics": []
+    },
+    {
+      "case": "wrong_sum_disguised_as_mean",
+      "claim": "Troll两项相邻公告时段加权平均不可用容量20.6mcm/d。",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "diagnostics": [
+        "公告相邻时段加权平均容量应为10.3mcm/d，不是20.6；均值须用对应N时长与容量计算"
+      ]
+    },
+    {
+      "case": "wrong_field_average",
+      "claim": "Troll两项相邻公告时段加权平均可用容量10.3mcm/d。",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "diagnostics": [
+        "公告相邻时段加权平均容量应为127.05mcm/d，不是10.3；均值须用对应N时长与容量计算"
+      ]
+    },
+    {
+      "case": "integral_volume_correct_daily_units",
+      "claim": "[N0]与[N2]各24小时的公告不可用容量积分为20.6百万立方米；这是理论容量体积，不是实测流量损失或同一时刻速率。",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "diagnostics": []
+    },
+    {
+      "case": "negative_sum_warning",
+      "claim": "Troll于21-22日和22-23日分别不可用13和7.6mcm/d，不能把相邻时段相加为20.6mcm/d。",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "diagnostics": []
+    },
+    {
+      "case": "synthetic_simultaneous_independent_capacity_sum",
+      "claim": "[N0]与[N2]两项独立设施同一时段公告不可用容量合计20.6mcm/d；这不是实际供气量损失。",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "diagnostics": []
+    },
+    {
+      "case": "natural_date_values_swapped",
+      "claim": "截至2026-10-20，Troll将于10月21-22日因年度维护导致7.6mcm/d容量不可用，10月22-23日再有13.0mcm/d不可用，为未来容量约束。",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "diagnostics": [
+        "N2容量字段unavailable原值为13.0mcm/d，不是7.6；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算"
+      ]
+    },
+    {
+      "case": "natural_date_wrong_explicit_year",
+      "claim": "Troll将于2027年10月21-22日因维护导致13.0mcm/d容量不可用，2026年10月22-23日有7.6mcm/d不可用。",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "diagnostics": [
+        "逐日期列出的容量时段没有唯一N来源；不得借另一日期或年份的数值"
+      ]
+    },
+    {
+      "case": "natural_date_available_levels_correct",
+      "claim": "Troll未来10月21-22日可用容量124.3mcm/d，10月22-23日可用容量129.8mcm/d。",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "diagnostics": []
+    },
+    {
+      "case": "natural_date_available_levels_wrong_field",
+      "claim": "Troll未来10月21-22日可用容量13.0mcm/d，10月22-23日可用容量7.6mcm/d。",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "diagnostics": [
+        "N2容量字段available原值为124.3mcm/d，不是13.0；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算"
+      ]
+    },
+    {
+      "case": "natural_date_single_range_wrong_value",
+      "claim": "Troll未来10月21-22日不可用容量7.6mcm/d。",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "diagnostics": [
+        "N2容量字段unavailable原值为13.0mcm/d，不是7.6；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算"
+      ]
+    }
+  ],
+  "actual_old_pilot_offline_revalidation": {
+    "file": "reports/repair_2026-10-20/candidate-no-draft-semantic-pilot/executed_69c.json",
+    "sha256": "4b47db1aefd4e6eb6c097a71347cd1e518c18799eda700f2f117f6875aff9a3d",
+    "calls": [
+      {
+        "call_index": 0,
+        "raw_sha256": "e502aa37f86f85641aba6490c72d3542b6931f1850f02edb748ebdf2ca3e32d0",
+        "original_news_direction": "up",
+        "original_close_direction": null,
+        "source_fact_validator_errors": [
+          "两项公告容量属于不重叠时段，不能相加为同一时刻mcm/d容量下降；请按各N起止分别列出，不把相邻时段的速率求和"
+        ],
+        "sum_rejected_independently_of_risk_flags": true,
+        "original_status_preserved": true
+      },
+      {
+        "call_index": 1,
+        "raw_sha256": "a51d69bf7641bf02c38958a11ddda6452a8b7cf90d4eac80a0af6836583dc996",
+        "original_news_direction": "flat",
+        "original_close_direction": null,
+        "source_fact_validator_errors": [
+          "两项公告容量属于不重叠时段，不能相加为同一时刻mcm/d容量下降；请按各N起止分别列出，不把相邻时段的速率求和"
+        ],
+        "sum_rejected_independently_of_risk_flags": true,
+        "original_status_preserved": true
+      }
+    ],
+    "old_failed_model_calls_not_reclassified_as_success": true
+  },
+  "ledger_contract_checks": {
+    "source_unmutated": true,
+    "ids": [
+      "N0",
+      "N2"
+    ],
+    "deduplicated_current_alias": true,
+    "source_utc_instants_preserved": true,
+    "facility_types_preserved": true,
+    "same_facility_nonoverlap_explicit": true,
+    "no_direction_or_net_pressure_in_ledger": true,
+    "new_const_source_projection": true
+  },
+  "direction_contract_checks": {
+    "news_labels": [
+      "extreme_up",
+      "up",
+      "flat",
+      "down",
+      "extreme_down"
+    ],
+    "close_labels_plus_null": true,
+    "scenarios_and_extreme_move_risk_free_prose": true,
+    "risk_flags_input_observation_options": [
+      "price_reference:输入行情尚未验证为ICE官方日结算，不用于官方结算准确率评分",
+      "price_reference:输入未提供该公告前后的独立可比价格反应，无法确认是否已计价",
+      "price_reference:输入未提供可用的前一同合约价格锚点",
+      "price_reference:输入未提供当前窗口可用的同合约盘中变化基准",
+      "coverage:来源gdelt在分析时点状态为failed，本窗口覆盖可能不完整"
+    ],
+    "source_diff_no_postgeneration_direction_override": true,
+    "symmetric_supply_demand_prompt_rules_unchanged": true
+  },
+  "observations": [
+    {
+      "severity": "test_evidence_correction",
+      "file": "tests/test_fact_contract_v2_2.py",
+      "finding": "The integral example used 494.4 million m3 for two 24-hour periods at 7.6 and 13.0 mcm/d; correct theoretical capacity integral is 20.6 million m3, not another multiplication by 24. Parent and semantic agent notified. Correct 20.6 positive control passes; this gate is not a general integral arithmetic verifier.",
+      "resolution": "Only test literal corrected from494.4 to20.6; production source unchanged by this correction.",
+      "corrected_test_sha256": "212ab9dd06acdb10225bc0dfc97a950dac806c51c29f1255046cb3f9efdbd704"
+    }
+  ],
+  "limits": [
+    "Offline rejection of old failures is not a new successful model generation or forecast evaluation.",
+    "Source/rate gate validates narrow interval and field binding; volume-integral arithmetic and every possible paraphrase are not exhaustively validated.",
+    "Input risk enum constrains known observations only; trading scenarios remain conditional free text.",
+    "No official settlement accuracy or class-frequency improvement is inferred."
+  ],
+  "additional_control_counts": {
+    "total": 15,
+    "passed": 15,
+    "failed": []
+  },
+  "earlier_v2_2_checkpoint_preserved": {
+    "file": "reports/repair_2026-10-20/independent_generation_semantic_audit_v2_2_ea44.json",
+    "sha256": "cb1a5904355a8bb8cbf026603d7ceaa84de0e9124af38291a71247f0f1a3a93f",
+    "status": "needs_attention",
+    "finding": "Natural chronological capacity listing without 分别 was rejected as N0; original failed control retained in checkpoint."
+  },
+  "targeted_pure_pytest": {
+    "command": ".venv/bin/pytest -q tests/test_generation_boundaries.py tests/test_settlement_anchor.py -k 'detail_source_prefix or weak_news_without_legal_anchor or directional_news_without_anchor or operator_const or quote_occurrence'",
+    "passed": 6,
+    "deselected": 24,
+    "elapsed_seconds": 2.0,
+    "source_at_execution": "ea44b0e629f8330510bc54d58053187616f73c3d1447934ee539b8be4b56f9da",
+    "note": "Subsequent2268 difference is narrow dated-capacity validation only; direction/schema/prompt unchanged."
+  },
+  "date_binding_review": {
+    "factual_date_binding_runs_after_aggregate_validation": true,
+    "multi_number_total_still_rejected": true,
+    "separate_source_references_and_shared_unit_respectively_path_retained": true,
+    "no_model_output_rewrite": true
+  }
+}

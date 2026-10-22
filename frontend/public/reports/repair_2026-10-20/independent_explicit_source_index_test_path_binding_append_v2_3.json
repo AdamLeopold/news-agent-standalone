@@ -1,0 +1,50 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T05:47:47.539835+00:00",
+  "scope": "Append-only test-path binding after the already approved core/helper apply. No new source-semantic review or production/model claim.",
+  "applied_proof": {
+    "file": "reports/repair_2026-10-20/applied_explicit_source_index_capacity_pressure_v2_3.json",
+    "sha256": "14f4ab78f7e16f539cb9c47201c40e9206b341ab019e18144f598c83e758b24e"
+  },
+  "core_review": {
+    "file": "reports/repair_2026-10-20/independent_explicit_source_index_capacity_final_source_review_v2_3.json",
+    "sha256": "8618beda6f7c3d4867d263dc732d81900608976c760e38825fa8e36a575310f1"
+  },
+  "helper_review": {
+    "file": "reports/repair_2026-10-20/independent_explicit_source_index_helper_final_review_v2_3.json",
+    "sha256": "1bd1c492644f4a99fbc666ea11564c64055fd751951ff0ba7e498329c1a98b93"
+  },
+  "test_path_correction_proof": {
+    "file": "reports/repair_2026-10-20/output_contract_unit_collection_path_correction_v2_3.json",
+    "sha256": "669db08314ce92660c056fb9a1444483d243c9f6439fce41848b22bd85fe903b"
+  },
+  "private_preapply_test": {
+    "file": ".runtime/future-capacity-pressure-scope-proposal/revision-explicit-source-index/tests/test_future_capacity_pressure_scope.py",
+    "sha256": "fe844c0d2283b3c0294e5f6c2893fd532a51b03dc87bba72239bd211acee68f9"
+  },
+  "applied_corrected_test": {
+    "file": "tests/test_future_capacity_pressure_scope.py",
+    "sha256": "57cfb8e07c15b43bc3f46ff2c001ce544178a8a954a3a281a19aba27e3102173"
+  },
+  "only_change": {
+    "before": "R=next(p for p in D.parents if (p/'pyproject.toml').is_file())",
+    "after": "R=next(p for p in (D,*D.parents) if (p/'pyproject.toml').is_file())",
+    "exact_single_replacement_verified": true,
+    "project_root_resolves_correctly_from_real_tests_directory": true
+  },
+  "test_fixture_expectations_raws_and_assertions_unchanged": true,
+  "current_core_helper_bytes_match_reviewed_candidates": true,
+  "first_collection_failure_preserved": {
+    "log_sha256": "a2fa0888493915ad602c1d2fd2b635dbe96dc83213d4d034a32807b7a94c1db0",
+    "xml_sha256": "dc90daa465961c5b26a63a0d6d1ba020c445b6153b1883ca136df056d52793ff",
+    "not_relabelled_pass": true
+  },
+  "root_full_suite_rerun": "A separate root rerun is in progress; this append does not claim its final pass or replace the preserved initial collection failure.",
+  "verdict": "test_only_path_binding_passed",
+  "overall_release_passed": false,
+  "new_model_calls": 0,
+  "project_database_access": false,
+  "network_calls": 0,
+  "source_modification": false
+}

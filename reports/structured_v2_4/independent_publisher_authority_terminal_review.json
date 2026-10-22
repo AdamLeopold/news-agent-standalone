@@ -1,0 +1,82 @@
+{
+  "reviewed_at": "2026-10-22T16:54:11.567742+00:00",
+  "reviewer": "independent structured_review agent",
+  "scope": "Read-only authority/recovery source diff, API OR probe and saved actual two isolated collector polls. No new network/model/service/productionDB operation by this reviewer.",
+  "overall": "Earlier publisher-authority collection P2 recovery/revision-discovery concerns are resolved in this source. Actual two isolated polls show stable unchanged input across this observed interval. No new P1/P2 found in the collection/runtime dispatch diff.",
+  "source_sha256": {
+    "ttf_news/ingest.py": "51386adad216ecf3164a38aefff201fbda44ce8af05c5040b6af01075962705e",
+    "ttf_news/runtime.py": "dd24abb89c0b878e19f7d74d531e3dd0b4640cd53e372ee189bd2dd2efe2f14f",
+    "ttf_news/structured_core.py": "027bc8d862b3cc3f8eff7ea54b881a51030372009c9087dbdac2815c0582e4cc"
+  },
+  "actual_poll_proof": {
+    "file": "reports/structured_v2_4/publisher_authority/actual_two_polls/actual-two-poll-proof.json",
+    "sha256": "00ba5efb9b71bc9db107565adcae71afcd84185745f3e141e21daed1bf79ce48",
+    "model_calls": 0,
+    "production_store_constructed": false,
+    "production_db_writes": 0
+  },
+  "api_or_probe": {
+    "file": "reports/structured_v2_4/publisher_authority/recovery_v2/api_or_probe.json",
+    "sha256": "2c387a9ac39146025d7e49561360a63e97bd066109c59908045106cc0213ebc1",
+    "status": 200,
+    "passed": true,
+    "old_published_new_updated_count": 2
+  },
+  "resolved_preflight": {
+    "file": "reports/structured_v2_4/independent_publisher_authority_preflight_01.json",
+    "sha256": "b516f71f813222159bb43e1295603c8443576b45ac027003112cd6735696afd7",
+    "resolutions": [
+      "last_complete_api_success_at is separate from generic last_success_at; only a fully fetched and persisted API slice advances it. Pending api_recovery_from survives partial RSS fallback.",
+      "Live query accepts publishedAt OR updatedAt since the bounded recovery boundary, with response date validation. Real limited API probe returns old-published/new-updated records, confirming the needed filter is supported.",
+      "Bounded pagination raises on an incomplete live slice instead of advancing the cursor as complete."
+    ]
+  },
+  "preserved_contract": [
+    "API remains primary same-article body/time authority; RSS discovers URLs and cannot retract a known API body.",
+    "API/parse failures remainpartial even when RSS succeeds; the API watermark does not advance on that fallback.",
+    "Structural body extraction preserves actual source paragraphs, negation, dates and quantities while excluding presentation header/author/caption.",
+    "Only compared metadata-only revisions with unchanged trade_date skip model scheduling. Real body changes and window corrections remain candidates."
+  ],
+  "actual_polls": [
+    {
+      "poll": 1,
+      "started_at": "2026-10-22T16:42:29.591031+00:00",
+      "finished_at": "2026-10-22T16:42:34.432407+00:00",
+      "created": 20,
+      "revised": 0,
+      "source_statuses": [
+        "ok"
+      ],
+      "changed_existing_ids": [],
+      "model_dispatches_for_revisions": 0
+    },
+    {
+      "poll": 2,
+      "started_at": "2026-10-22T16:42:34.433482+00:00",
+      "finished_at": "2026-10-22T16:42:35.813393+00:00",
+      "created": 0,
+      "revised": 0,
+      "source_statuses": [
+        "ok"
+      ],
+      "changed_existing_ids": [],
+      "model_dispatches_for_revisions": 0
+    }
+  ],
+  "observed_stability": {
+    "second_poll_changed_existing_count": 0,
+    "second_poll_revisions": 0,
+    "second_poll_substantive_distribution": {},
+    "second_poll_metadata_revision_dispatches": 0,
+    "returned_statuses": [
+      "ok",
+      "ok"
+    ]
+  },
+  "limits": [
+    "The first poll20created is first discovery in an empty isolated database, not20newly published headlines or20production migrations.",
+    "The second poll0created/0revised demonstrates this actual short interval. It does not prove perpetual stability or future publisher availability.",
+    "The production collector and final website/API deployment still require final managed-service verification.",
+    "Newly discovered old publisher body updates need a separate source-version/claim-novelty contract; discovery alone must not refresh every old article fact. That contract is reviewed in the private revision-evidence proposal and is not claimed model-accepted by this collector report."
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "scope": "Pre-deployment 2.4.1 candidate, 5 real-source cases, 4 completed and 1 failed, 14 actual calls; not production acceptance or forecast accuracy.",
+  "core_sha256": "5bbf59d8f58d18ccede7c44a4b8f611313952975273f2b971db8372700049bd7",
+  "files": [
+    {
+      "source": ".runtime/structured-reasoning-v4/clause-id-v1/real_batch_01/chevron_historical.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_1/chevron_historical.json",
+      "sha256": "d576399560bcccfb2cb0de6defd5e5a7238839e9c436e8f1aa288b33da984920"
+    },
+    {
+      "source": ".runtime/structured-reasoning-v4/clause-id-v1/real_batch_01/current_mixed_live.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_1/current_mixed_live.json",
+      "sha256": "b7ceb751efca6da9ed59af7401e925dd011e2ed49d41d727195c19dd9f679a5a"
+    },
+    {
+      "source": ".runtime/structured-reasoning-v4/clause-id-v1/real_batch_01/eia_historical.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_1/eia_historical.json",
+      "sha256": "357007d2be6fcb13f04c0ca06150bc6c59beb752746d68b87280025029f80db3"
+    },
+    {
+      "source": ".runtime/structured-reasoning-v4/clause-id-v1/real_batch_01/epcm.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_1/epcm.json",
+      "sha256": "a24be066ddc74cea2834fac837d0cf76f79ea743898d70536c77fa62afd3f1ed"
+    },
+    {
+      "source": ".runtime/structured-reasoning-v4/clause-id-v1/real_batch_01/independent_review.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_1/independent_review.json",
+      "sha256": "dd64471011d0ff16cd0b52d8afa26822465859377a5b72c0bb29efcf9776fe6e"
+    },
+    {
+      "source": ".runtime/structured-reasoning-v4/clause-id-v1/real_batch_01/p12_manual.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_1/p12_manual.json",
+      "sha256": "05f3da5a612f93e9295bfa7d30afb7e22a873e2713f6e70d901c7ee93f11de80"
+    },
+    {
+      "source": ".runtime/structured-reasoning-v4/clause-id-v1/real_batch_01/summary.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_1/summary.json",
+      "sha256": "95116fd8e8c2147f4590017f52f682e35eaf3f14ff58feebab8ae05f625a9801"
+    }
+  ]
+}

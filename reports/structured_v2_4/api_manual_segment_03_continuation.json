@@ -1,0 +1,494 @@
+{
+  "status": "partial",
+  "started_at": "2026-10-22T16:13:09.939546+00:00",
+  "expected_prompt_version": "ttf-news-standalone-2.4.4",
+  "scope": "2.4.4_real_manual_detail_shared_bilingual_plan_fresh_live_and_auto_english",
+  "synthetic_live_input": false,
+  "raw_thinking_included": false,
+  "stages": [
+    {
+      "name": "preservation_before",
+      "status": "passed",
+      "started_at": "2026-10-22T16:13:09.997574+00:00",
+      "checks": {
+        "passed": true,
+        "protected_analysis_count": 602,
+        "protected_nonnull_field_count": 1014,
+        "current_analysis_count": 603,
+        "new_analysis_count": 1,
+        "protected_snapshot_count": 7,
+        "new_snapshot_count": 0,
+        "original_validation_record_count": 1,
+        "latest_baseline_unchanged": true,
+        "original_baseline": {
+          "id": 210,
+          "created_at": "2026-10-14T05:51:48.181167+00:00",
+          "type": "validation_started"
+        },
+        "failures": []
+      },
+      "finished_at": "2026-10-22T16:13:10.674630+00:00",
+      "elapsed_seconds": 0.677
+    },
+    {
+      "name": "live_api_v4_and_managed_identity",
+      "status": "passed",
+      "started_at": "2026-10-22T16:13:10.676163+00:00",
+      "checks": {
+        "analysis_generation_version": "ttf-news-standalone-2.4.4",
+        "server_pid": 59805,
+        "inference_enabled": true,
+        "collector_enabled": true,
+        "deployment": {
+          "file": ".runtime/structured-reasoning-v4/20261022T160627262875Z-resume/switch.json",
+          "sha256": "48a710c0be870b769a3e0b3ec00b355d00f8ea1c61904ade80c42eccdefbf473"
+        },
+        "health": {
+          "file": "reports/structured_v2_4/api_manual_segment_03_continuation_artifacts/health_before.json",
+          "sha256": "d5e49f65f4cd2160c77fc12bbcd5c0d1ee584f97700b2aec3cd53de5a7dec229"
+        }
+      },
+      "finished_at": "2026-10-22T16:13:10.979080+00:00",
+      "elapsed_seconds": 0.303
+    },
+    {
+      "name": "select_real_existing_manual_news",
+      "status": "passed",
+      "started_at": "2026-10-22T16:07:03.121768+00:00",
+      "checks": {
+        "news_id": "2221a75361f049315f77be94",
+        "title": "Cheniere Signs Long-Term Sale and Purchase Agreements to Supply QatarEnergy with LNG through 2054",
+        "source": "cheniere",
+        "url": "https://lngir.cheniere.com/news-events/press-releases/detail/348/cheniere-signs-long-term-sale-and-purchase-agreements-to",
+        "published_at": "2026-10-22T13:00:00+00:00",
+        "source_version": 1,
+        "body_characters": 1707,
+        "body_sha256": "e6a4a9860fa84a08831c1f255d72ed0cb79d905e04b60053e02f3335668278ea",
+        "fact_excerpt_used": true,
+        "source_record": {
+          "file": "reports/structured_v2_4/api_manual_segment_02_artifacts/selected_manual_source.json",
+          "sha256": "323aee0eef58d5b98337542461a604936fa523047d865b1c3c81a6c32b785784"
+        },
+        "submitted_payload": {
+          "file": "reports/structured_v2_4/api_manual_segment_02_artifacts/manual_payload.json",
+          "sha256": "0381516ccf506a041e2ffdd7e2842586a356e8724843867c0e4eb9704768ef66"
+        }
+      },
+      "finished_at": "2026-10-22T16:07:03.140268+00:00",
+      "elapsed_seconds": 0.019,
+      "inherited_from_original_report": {
+        "file": "reports/structured_v2_4/api_manual_segment_02.json",
+        "sha256": "1941211835967001bdb20c74b02c6190c5ed4ca946a3e9cd7d420dc928c4f2f5"
+      }
+    },
+    {
+      "name": "sse_initial_connection",
+      "status": "passed",
+      "started_at": "2026-10-22T16:07:03.140987+00:00",
+      "checks": {
+        "id": 261469,
+        "type": "stream_ready",
+        "kind": null,
+        "matched_analysis_id": null,
+        "replayed_event_count": 1,
+        "cursor_mode": "initial_ready"
+      },
+      "finished_at": "2026-10-22T16:07:03.144408+00:00",
+      "elapsed_seconds": 0.003,
+      "inherited_from_original_report": {
+        "file": "reports/structured_v2_4/api_manual_segment_02.json",
+        "sha256": "1941211835967001bdb20c74b02c6190c5ed4ca946a3e9cd7d420dc928c4f2f5"
+      }
+    },
+    {
+      "name": "manual_submit_real_news",
+      "status": "passed",
+      "started_at": "2026-10-22T16:07:03.145106+00:00",
+      "checks": {
+        "analysis_id": "12b62a61-afa4-4356-95f8-5fa16db95098",
+        "status": "queued",
+        "real_source_news_id": "2221a75361f049315f77be94"
+      },
+      "finished_at": "2026-10-22T16:07:04.769916+00:00",
+      "elapsed_seconds": 1.625,
+      "inherited_from_original_report": {
+        "file": "reports/structured_v2_4/api_manual_segment_02.json",
+        "sha256": "1941211835967001bdb20c74b02c6190c5ed4ca946a3e9cd7d420dc928c4f2f5"
+      }
+    },
+    {
+      "name": "sse_last_event_id_reconnect",
+      "status": "passed",
+      "started_at": "2026-10-22T16:07:04.770856+00:00",
+      "checks": {
+        "id": 261470,
+        "type": "analysis_queued",
+        "kind": null,
+        "matched_analysis_id": "12b62a61-afa4-4356-95f8-5fa16db95098",
+        "replayed_event_count": 1,
+        "cursor_mode": "Last-Event-ID"
+      },
+      "finished_at": "2026-10-22T16:07:04.776094+00:00",
+      "elapsed_seconds": 0.005,
+      "inherited_from_original_report": {
+        "file": "reports/structured_v2_4/api_manual_segment_02.json",
+        "sha256": "1941211835967001bdb20c74b02c6190c5ed4ca946a3e9cd7d420dc928c4f2f5"
+      }
+    },
+    {
+      "name": "sse_after_query_reconnect",
+      "status": "passed",
+      "started_at": "2026-10-22T16:07:04.776966+00:00",
+      "checks": {
+        "id": 261470,
+        "type": "analysis_queued",
+        "kind": null,
+        "matched_analysis_id": "12b62a61-afa4-4356-95f8-5fa16db95098",
+        "replayed_event_count": 1,
+        "cursor_mode": "after_query"
+      },
+      "finished_at": "2026-10-22T16:07:04.785491+00:00",
+      "elapsed_seconds": 0.009,
+      "inherited_from_original_report": {
+        "file": "reports/structured_v2_4/api_manual_segment_02.json",
+        "sha256": "1941211835967001bdb20c74b02c6190c5ed4ca946a3e9cd7d420dc928c4f2f5"
+      }
+    },
+    {
+      "name": "manual_brief_structural_identity",
+      "status": "passed",
+      "started_at": "2026-10-22T16:13:11.019699+00:00",
+      "checks": {
+        "prompt_version": "ttf-news-standalone-2.4.4",
+        "workflow_version": "ttf-structured-reasoning-2.4.4",
+        "typed_plan_sha256": "96f42f649c19dbd0866145334048962af4377702d7ee723c9bd31de8d157a33f",
+        "catalog_sha256": "ae76d7874e1c47a0a2851452c0b5f0acd5e61d492d7f2a4f6f7c5ee30bf58cdd",
+        "source_documents_sha256": "e529bc2ecfe77fb2ae7d04593f1e8d374c585f525ddcab67ef19b360ff646557",
+        "source_document_count": 1,
+        "prepared_context_sha256": "caf74b67617c1627a4499f9fe865dda14499ae5839951d138855f287df6a7c23",
+        "news_direction": "flat",
+        "close_direction": null,
+        "summary_sha256": "485db5f1e561ff358fb9ca9948d7a23a4179d3ad33bc570f7dcac62e7a5ec8de",
+        "shared_plan_body_identity": true,
+        "ordinary_classification_semantics_independently_verified": false,
+        "analysis_id": "12b62a61-afa4-4356-95f8-5fa16db95098",
+        "actual": {
+          "file": "reports/structured_v2_4/api_manual_segment_03_continuation_artifacts/manual_brief_actual.json",
+          "sha256": "7c5bebb9c62387abe25531a120483065a27449e285d3713b0a99c7cd31436bb5"
+        }
+      },
+      "finished_at": "2026-10-22T16:13:11.750290+00:00",
+      "elapsed_seconds": 0.731
+    },
+    {
+      "name": "sse_manual_completed_event",
+      "status": "passed",
+      "started_at": "2026-10-22T16:13:11.752333+00:00",
+      "checks": {
+        "id": 261494,
+        "type": "analysis_completed",
+        "kind": "short",
+        "matched_analysis_id": "12b62a61-afa4-4356-95f8-5fa16db95098",
+        "replayed_event_count": 25,
+        "cursor_mode": "Last-Event-ID"
+      },
+      "finished_at": "2026-10-22T16:13:11.765529+00:00",
+      "elapsed_seconds": 0.013
+    },
+    {
+      "name": "manual_detail_request",
+      "status": "passed",
+      "started_at": "2026-10-22T16:13:11.767791+00:00",
+      "checks": {
+        "id": "12b62a61-afa4-4356-95f8-5fa16db95098",
+        "status": "queued"
+      },
+      "finished_at": "2026-10-22T16:13:11.786763+00:00",
+      "elapsed_seconds": 0.019
+    },
+    {
+      "name": "manual_detail_structural_identity",
+      "status": "passed",
+      "started_at": "2026-10-22T16:13:11.788711+00:00",
+      "checks": {
+        "prompt_version": "ttf-news-standalone-2.4.4",
+        "workflow_version": "ttf-structured-reasoning-2.4.4",
+        "typed_plan_sha256": "96f42f649c19dbd0866145334048962af4377702d7ee723c9bd31de8d157a33f",
+        "catalog_sha256": "ae76d7874e1c47a0a2851452c0b5f0acd5e61d492d7f2a4f6f7c5ee30bf58cdd",
+        "source_documents_sha256": "e529bc2ecfe77fb2ae7d04593f1e8d374c585f525ddcab67ef19b360ff646557",
+        "source_document_count": 1,
+        "prepared_context_sha256": "caf74b67617c1627a4499f9fe865dda14499ae5839951d138855f287df6a7c23",
+        "news_direction": "flat",
+        "close_direction": null,
+        "summary_sha256": "485db5f1e561ff358fb9ca9948d7a23a4179d3ad33bc570f7dcac62e7a5ec8de",
+        "shared_plan_body_identity": true,
+        "ordinary_classification_semantics_independently_verified": false,
+        "same_original_catalog_and_plan": true,
+        "same_news_and_close_decision": true,
+        "additional_model_calls": 0,
+        "analysis_id": "12b62a61-afa4-4356-95f8-5fa16db95098",
+        "actual": {
+          "file": "reports/structured_v2_4/api_manual_segment_03_continuation_artifacts/manual_detail_actual.json",
+          "sha256": "badd94ff7fa390f0785f8932ae5675655fc1a0912dfeb55aacc75180af215242"
+        }
+      },
+      "finished_at": "2026-10-22T16:13:54.716142+00:00",
+      "elapsed_seconds": 42.927
+    },
+    {
+      "name": "manual_english_brief_same_plan",
+      "status": "passed",
+      "started_at": "2026-10-22T16:13:54.717446+00:00",
+      "checks": {
+        "same_original_catalog_and_plan": true,
+        "same_news_and_close_decision": true,
+        "additional_model_calls": 0,
+        "typed_plan_sha256": "96f42f649c19dbd0866145334048962af4377702d7ee723c9bd31de8d157a33f",
+        "catalog_sha256": "ae76d7874e1c47a0a2851452c0b5f0acd5e61d492d7f2a4f6f7c5ee30bf58cdd",
+        "same_plan_bilingual_body_identity": true,
+        "protected_labels_numbers_citations_unchanged": true,
+        "summary_sha256": "1bb1a720ee3cf1819e45726d727bbd1f0f972f19cd18017c6b5944f62e949789",
+        "ordinary_classification_semantics_independently_verified": false,
+        "translation_id": "0127badc-9785-414c-a6a7-fdb6d483a939",
+        "analysis_id": "12b62a61-afa4-4356-95f8-5fa16db95098",
+        "actual": {
+          "file": "reports/structured_v2_4/api_manual_segment_03_continuation_artifacts/manual_english_brief_actual.json",
+          "sha256": "e96fc5e10163424f5a96dccbd45c28072fb472f39a3df61864f701f61b5170a1"
+        },
+        "automatic_enqueue_verified": false
+      },
+      "finished_at": "2026-10-22T16:14:31.170004+00:00",
+      "elapsed_seconds": 36.452
+    },
+    {
+      "name": "manual_english_detail_same_plan",
+      "status": "passed",
+      "started_at": "2026-10-22T16:14:31.171971+00:00",
+      "checks": {
+        "same_original_catalog_and_plan": true,
+        "same_news_and_close_decision": true,
+        "additional_model_calls": 0,
+        "typed_plan_sha256": "96f42f649c19dbd0866145334048962af4377702d7ee723c9bd31de8d157a33f",
+        "catalog_sha256": "ae76d7874e1c47a0a2851452c0b5f0acd5e61d492d7f2a4f6f7c5ee30bf58cdd",
+        "same_plan_bilingual_body_identity": true,
+        "protected_labels_numbers_citations_unchanged": true,
+        "summary_sha256": "1bb1a720ee3cf1819e45726d727bbd1f0f972f19cd18017c6b5944f62e949789",
+        "ordinary_classification_semantics_independently_verified": false,
+        "translation_id": "041987ed-5935-4782-ace2-39022eb06618",
+        "analysis_id": "12b62a61-afa4-4356-95f8-5fa16db95098",
+        "actual": {
+          "file": "reports/structured_v2_4/api_manual_segment_03_continuation_artifacts/manual_english_detail_actual.json",
+          "sha256": "05b6727485b6ff8c2481e99ee7fcc82e57e1b61294e461139845d2b183ba50cf"
+        },
+        "automatic_enqueue_verified": false
+      },
+      "finished_at": "2026-10-22T16:15:32.604672+00:00",
+      "elapsed_seconds": 61.432
+    },
+    {
+      "name": "original_chinese_results_unchanged",
+      "status": "passed",
+      "started_at": "2026-10-22T16:15:32.606208+00:00",
+      "checks": {
+        "chinese_originals_unchanged": true
+      },
+      "finished_at": "2026-10-22T16:15:32.624024+00:00",
+      "elapsed_seconds": 0.018
+    },
+    {
+      "name": "csv_jsonl_exports",
+      "status": "passed",
+      "started_at": "2026-10-22T16:15:32.625377+00:00",
+      "checks": {
+        "news": {
+          "csv": {
+            "rows": 4006,
+            "bytes": 5030740,
+            "sha256": "a439d4776b4cd2ecec7f7396a90eb6c837fe50f16d2e65ee0bfe92e901fbd072",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 4006,
+            "bytes": 6724698,
+            "sha256": "db9b10b8be0cfb51ab3e3329848f8c07399f59229d1c34a7ee25c8331bc16175",
+            "parsed": true
+          },
+          "independent_snapshot_requests": true,
+          "row_counts_match": true
+        },
+        "daily": {
+          "csv": {
+            "rows": 630,
+            "bytes": 3936425,
+            "sha256": "d1c18c74aeee489ce86d842941f0deb777250137b723d8dd5c30061c7f23c58d",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 630,
+            "bytes": 3827706,
+            "sha256": "d49a89091f1af303ee03849a04397cdd09f5af4a679bd201afd73a6f5c2a6b5c",
+            "parsed": true
+          },
+          "independent_snapshot_requests": true,
+          "row_counts_match": true
+        },
+        "events": {
+          "csv": {
+            "rows": 1580,
+            "bytes": 5990440,
+            "sha256": "893c1335332e517684b3150af6e13e277a464562f9d3db388418f14d8a7c807b",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 1580,
+            "bytes": 6404461,
+            "sha256": "1034cf5dae96816e9a30ca57893137b6003eaaac85ae7e9e4808b5a233bef838",
+            "parsed": true
+          },
+          "independent_snapshot_requests": true,
+          "row_counts_match": true
+        },
+        "prices": {
+          "csv": {
+            "rows": 65885,
+            "bytes": 26616744,
+            "sha256": "f5388d831234ef146328e968f62866450d94c25d9b9711264fbd8ceff9bc8a00",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 65885,
+            "bytes": 43747246,
+            "sha256": "6865feba919414e763ad17e4689eeaca975bb4891a7150c049c38d3fd569adfb",
+            "parsed": true
+          },
+          "independent_snapshot_requests": true,
+          "row_counts_match": true
+        }
+      },
+      "finished_at": "2026-10-22T16:15:36.886816+00:00",
+      "elapsed_seconds": 4.261
+    },
+    {
+      "name": "deployed_source_bytes_stable",
+      "status": "passed",
+      "started_at": "2026-10-22T16:15:36.888277+00:00",
+      "checks": {
+        "current_source_bytes_unchanged": true,
+        "core_sha256": "0b15b314721e86afd9d32e191deaf939b1db30b58ec8565d0c017f38c3047c06"
+      },
+      "finished_at": "2026-10-22T16:15:36.899655+00:00",
+      "elapsed_seconds": 0.011
+    },
+    {
+      "name": "preservation_after",
+      "status": "passed",
+      "started_at": "2026-10-22T16:15:36.900907+00:00",
+      "checks": {
+        "passed": true,
+        "protected_analysis_count": 602,
+        "protected_nonnull_field_count": 1014,
+        "current_analysis_count": 603,
+        "new_analysis_count": 1,
+        "protected_snapshot_count": 7,
+        "new_snapshot_count": 0,
+        "original_validation_record_count": 1,
+        "latest_baseline_unchanged": true,
+        "original_baseline": {
+          "id": 210,
+          "created_at": "2026-10-14T05:51:48.181167+00:00",
+          "type": "validation_started"
+        },
+        "failures": []
+      },
+      "finished_at": "2026-10-22T16:15:37.291439+00:00",
+      "elapsed_seconds": 0.391
+    }
+  ],
+  "job_timeout_including_queue_seconds": 600,
+  "live_first": false,
+  "old_release_or_83_record_replay_required": false,
+  "whole_workflow_retry": false,
+  "source_sha256": {
+    "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+    "ttf_news/analysis.py": "781127633591c780709be6cc43d1a18c0c44a61a6ef873160778c82671bbe2cb",
+    "ttf_news/api.py": "afe04d7c94a1dcb40840adffb58c5a4ade76552e173b103375e88d7cd4190c48",
+    "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+    "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+    "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+    "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+    "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+    "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+    "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+    "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+    "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987",
+    "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+    "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+    "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+    "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+    "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+    "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+    "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+    "ttf_news/public_gateway.py": "08990e223d5e7d1d348967c9625fd29fc2d1e7e58bb000c964b9cfea43b59952",
+    "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+    "ttf_news/runtime.py": "bd1e951334fc9117be11f5937ac18d7262d53c3576e9fcb8b8f63fc8ac7bf239",
+    "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+    "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+    "ttf_news/semantics.py": "d054bc812a80e0d28bfc95a098731b6b556ad0304a9775db0ec4d00d660d2d9a",
+    "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+    "ttf_news/store.py": "022cb9b606ee22f01274e3673b22b58df096f60c446703deac157881e681749f",
+    "ttf_news/structured_analysis.py": "915a8920306c671e86f2a07dd592356e3930be38c4a4a43d28542db4d986b47a",
+    "ttf_news/structured_core.py": "0b15b314721e86afd9d32e191deaf939b1db30b58ec8565d0c017f38c3047c06",
+    "ttf_news/structured_core_v2_4_0.py": "e85e97d0825b01320b15e33419a283bd7ba1666f48401e78b13f34bbb4e883ab",
+    "ttf_news/structured_core_v2_4_1.py": "5bbf59d8f58d18ccede7c44a4b8f611313952975273f2b971db8372700049bd7",
+    "ttf_news/structured_core_v2_4_2.py": "6980cbafddf2d84f7ec51f9cb71660af8ed6e0f6c89d3fc1f11ce9eceb6cd372",
+    "ttf_news/structured_core_v2_4_3.py": "7b66352892b7a24d47cb2959a447425cc96d36446003e20f03f7850f1d9619ac",
+    "ttf_news/translation.py": "384072fe3139d8ece9a15915c014c683cfee91b02a2ee9ae059c073655b04d21"
+  },
+  "harness": {
+    "file": ".runtime/structured-reasoning-v4/workflow_v2_4_4_formal.py",
+    "sha256": "24b2fe3d11c78b2d9b5925c2477423a366bd5cb5f8e3f6356a34cf1c348a66fd"
+  },
+  "legacy_mechanics": {
+    "file": ".runtime/live-repair-smoke.py",
+    "sha256": "34978f56573820a44b461cc2f019d05cc77ac6665377b0043612a2e1da31eaa3"
+  },
+  "structured_core": {
+    "file": "ttf_news/structured_core.py",
+    "sha256": "0b15b314721e86afd9d32e191deaf939b1db30b58ec8565d0c017f38c3047c06"
+  },
+  "segment": "manual",
+  "whole_workflow_completed": false,
+  "manual_task_resubmitted": false,
+  "segment_harness": {
+    "file": ".runtime/structured-reasoning-v4/workflow_segments_v2_4_4_formal.py",
+    "sha256": "66735ecce3eebe68f980ae285c0765b04072f40c84f1c0c237d19577383f0833"
+  },
+  "preservation_manifest": {
+    "file": ".runtime/structured-reasoning-v4/20261022T160627262875Z-resume/preservation_manifest.json",
+    "sha256": "92cc69d1374ffa9c63d709a288a1a0a6b3259d55db75b5193fe2323466dffb57"
+  },
+  "new_analysis_id": "12b62a61-afa4-4356-95f8-5fa16db95098",
+  "brief_resubmitted": false,
+  "existing_analysis_continued": true,
+  "original_harness_failed_report": {
+    "file": "reports/structured_v2_4/api_manual_segment_02.json",
+    "sha256": "1941211835967001bdb20c74b02c6190c5ed4ca946a3e9cd7d420dc928c4f2f5"
+  },
+  "original_brief_actual": {
+    "file": "reports/structured_v2_4/api_manual_segment_02_artifacts/manual_brief_actual.json",
+    "sha256": "7c5bebb9c62387abe25531a120483065a27449e285d3713b0a99c7cd31436bb5"
+  },
+  "original_input_result_sha256": {
+    "input_snapshot": "30406d4087144adeeb6fae63287ba089800d21bac55e30a5872675d592bf9af2",
+    "result": "de800077fb23d62ac928c50491726146b1cc9aed408ec5a1a735097af7e36caa"
+  },
+  "manual_generation_started_at": "2026-10-22T16:07:02.848825+00:00",
+  "segment_completed": true,
+  "finished_at": "2026-10-22T16:15:37.293038+00:00",
+  "failed_stages": [],
+  "missing_required_stages": [],
+  "elapsed_seconds": 147.295,
+  "structural_workflow_is_market_accuracy": false,
+  "independent_ordinary_source_semantics_review_still_required": true,
+  "awaiting": "separate_real_current_window_news_live_segment"
+}

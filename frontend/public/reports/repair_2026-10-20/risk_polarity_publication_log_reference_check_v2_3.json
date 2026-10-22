@@ -1,0 +1,75 @@
+{
+  "schema_version": "ttf-publication-log-reference-check-v1",
+  "checked_at": "2026-10-21T01:38:34.284618+00:00",
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/event_retrieval",
+  "sync_tool": {
+    "file": "scripts/sync-public-evidence.py",
+    "sha256": "ab0118414021cdf6738f98bff941c8bdb2fec9b4fb2527177c3b0aa955a086fb"
+  },
+  "linked_current_control_artifact": {
+    "file": "reports/repair_2026-10-20/risk_polarity_anchor_source_controls_v2_3.json",
+    "sha256": "67d7243320820279cb7f89a911bdcbe1f4786cf661c4f189e8693a071230e0df"
+  },
+  "current_unit_binding": {
+    "file": "reports/repair_2026-10-20/risk_anchor_full_unit_binding_v2_3.json",
+    "sha256": "5a74da1264334f1a1368fdd6d6527984399ee5274a60910720a74df680aea60b"
+  },
+  "logs": [
+    {
+      "artifact": {
+        "file": "reports/repair_2026-10-20/risk-polarity-focused-tests.log",
+        "sha256": "fc2487407eac2fb65445030a4cc1ad6ef450da32c24e9943ef59acd63e5b3cb1"
+      },
+      "selected_for_public_sync": true,
+      "purpose": "preserved focused or prior-attempt evidence"
+    },
+    {
+      "artifact": {
+        "file": "reports/repair_2026-10-20/risk-polarity-focused-initial-tests.log",
+        "sha256": "b263bdd4a1e35acefcf9060620ed80b64fd9012d2b8bc5b2faf6b34be7ecdbc2"
+      },
+      "selected_for_public_sync": true,
+      "purpose": "preserved focused or prior-attempt evidence"
+    },
+    {
+      "artifact": {
+        "file": "reports/repair_2026-10-20/risk-conflict-citation-focused-tests.log",
+        "sha256": "360fca96aff8a98c3313316b85e960c9e7fd9a9bb35cf11cb5b34e816cc2cade"
+      },
+      "selected_for_public_sync": true,
+      "purpose": "preserved focused or prior-attempt evidence"
+    },
+    {
+      "artifact": {
+        "file": "reports/repair_2026-10-20/risk-polarity-report-self-tests.log",
+        "sha256": "b0698616fce5f6c525b90b2159a54c51c9a4eef02f2a3c54d4a70c15aa64fe85"
+      },
+      "selected_for_public_sync": true,
+      "purpose": "preserved focused or prior-attempt evidence"
+    },
+    {
+      "artifact": {
+        "file": "reports/repair_2026-10-20/risk-polarity-final-unit-tests.log",
+        "sha256": "06d25eaf8629c25d8f1713a4468ce038df55cd6af824adf295f47fb475c73935"
+      },
+      "selected_for_public_sync": true,
+      "purpose": "preserved focused or prior-attempt evidence"
+    },
+    {
+      "artifact": {
+        "file": "reports/repair_2026-10-20/risk-polarity-final-unit-tests-rerun.log",
+        "sha256": "2f2afaf0729e554a32c694858785a36191a5073d411f76dfbf4b21bf1c892375"
+      },
+      "selected_for_public_sync": true,
+      "purpose": "current successfully bound full suite"
+    }
+  ],
+  "all_six_explicit_logs_selected": true,
+  "publication_performed": false,
+  "source_or_tools_modified": false,
+  "new_model_calls": 0,
+  "no_database_access": true,
+  "no_network_calls": true,
+  "boundary": "Read-only allowlist inspection after root explicitly added the three focused logs. Existing failed initial full suite stays published as historical failure; final main report must bind the successful rerun XML and binding. This is not a final asset scan or publication readiness."
+}

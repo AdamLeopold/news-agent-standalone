@@ -1,0 +1,9 @@
+{
+  "change": "Fresh live smoke tests inspect their explicitly appended analysis ID and fail immediately when its status is failed, instead of polling the dashboard for an impossible successful terminal result.",
+  "scope": "Verification harness only; no product source, model call, acceptance condition, retry allowance, direction or old result changed.",
+  "previous_harness_sha256": "11df1178c30f14cdbf87487710ea49a409a63b5ab77d9b4ca8a9023e64501f0f",
+  "new_harness_sha256": "34978f56573820a44b461cc2f019d05cc77ac6665377b0043612a2e1da31eaa3",
+  "self_tests_passed": 13,
+  "new_regression": "A failed fresh record is terminal without consulting an older dashboard forecast.",
+  "previous_attempts_preserved": true
+}

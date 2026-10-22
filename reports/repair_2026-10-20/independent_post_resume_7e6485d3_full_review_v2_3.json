@@ -1,0 +1,74 @@
+{
+  "generated_at": "2026-10-21T07:57:45.194507+00:00",
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "status": "confirmed_invalid",
+  "scope": "Complete full-prose and original input review of additional automatic completed live row at root-provided completed-live checkpoint. No model or DB calls.",
+  "actual_record": {
+    "file": "reports/repair_2026-10-20/production_post_resume_7e6485d3_actual_v2_3.json",
+    "sha256": "2337d3552d01148700b5939cf4500723983925fe641fcc6eb9ca4222eb693391",
+    "analysis_id": "7e6485d3-0d43-4dc4-b7e1-1fb42c6d1640",
+    "created_at": "2026-10-21T07:34:19.557041+00:00",
+    "completed_at": "2026-10-21T07:47:39.238250+00:00",
+    "raw_sha256": "9da1d338dcea90dd2f999d1894f7430be0aec8e7cd2e9cf61dda7c52db4729fc"
+  },
+  "source_binding": {
+    "source_fact_contract": "operator-facts-2.2",
+    "captured_source_provenance": "The capture identifies an automatic live completion checkpoint; exact result _meta contains request/schema/context hashes. No claim that this is a fresh whole-workflow run.",
+    "request_context_sha256": "d36635c574a5273e9bde571c9e2f3c58091bcab4e6c27a6688ba0af39785c0d5",
+    "request_schema_sha256": "103aac1d890a2316da2b6f25ef8669e0fe3c309097a207762583c97cbb179e2e",
+    "as_of": "2026-10-21T07:34:18.180884+00:00"
+  },
+  "known_logic_errors": [
+    {
+      "priority": "P2",
+      "family": "notice_capacity_is_not_measured_supply",
+      "fields": [
+        "news_impact.summary",
+        "analysis.summary"
+      ],
+      "text": "Troll油田当前维护导致13 mcm/d供给受限，短期内可能推高TTF价格。",
+      "finding": "The unqualified quantified current statement says maintenance causes 13 mcm/d of constrained supply. The cited N3 source provides 13 mcm/d announced unavailable capacity only, not a measured actual supply restriction of that magnitude. Explicit actual-flow-unknown evidence and the copied fact table contradict this stronger summary. The statement should describe announced capacity restriction and conditional supply risk, retaining actual flow as unknown.",
+      "source": {
+        "id": "a21b1cffbd1454613a5d0793",
+        "alias": "N3",
+        "version": 4,
+        "notice_type": "Planned Other unavailability (Active)",
+        "event_start": "2026-10-21T04:00:00+00:00",
+        "event_end": "2026-10-22T04:00:00+00:00",
+        "unavailable_capacity_mcm_d": 13.0,
+        "actual_flow": "unknown"
+      },
+      "additional_source_qualification": "The same summary calls the cited facility an oil field, while the specific N3 facility category is Other/unspecified; this is an unsupported extra classification, not grounds to invent a different measured flow."
+    }
+  ],
+  "fullbody_checks": {
+    "direction_and_bucket": "news up/close up; cited announced capacity constraint in bullish evidence is directionally consistent. Labels themselves are not the defect.",
+    "price": {
+      "verdict": "known same-contract observation correctly stated, not fabricated future target",
+      "previous_price": 85.062,
+      "previous_date": "2026-10-20",
+      "latest_price": 87.48,
+      "observed_delta": 2.418,
+      "unit": "EUR/MWh",
+      "observed_at": "2026-10-21T07:23:00+00:00",
+      "available_at": "2026-10-21T07:33:58.527439+00:00",
+      "known_before_as_of": true,
+      "quote_is_before_new_N0_publication": true
+    },
+    "priced_in": "Explicitly unknown; no post-announcement reaction inferred from the pre-announcement quote.",
+    "historical_comparison": "E3 16Oct→19Oct same-contract reference delta+0.493 rounds+0.49 and was available19Oct23:42 before this asof. Text correctly disclaims causal attribution and unverified actual flow.",
+    "capacity_numbers": "No non-overlapping sum; copied N0 future unplanned13/N2 future planned13.6/N3 current planned13 are correct.",
+    "references": "Resolved real inputs N3/current source and E3; no invented source link identified.",
+    "extreme_move_risk": "Empty optional string; no guarantee asserted."
+  },
+  "qualifications": [
+    "N3 shortened end is risk-duration relief, not measured physical restoration. Omission of its opposing marginal risk effect and of Jackdaw supply expansion limits the reasoning (P3).",
+    "The absence of obvious supply-improvement signals in the close basis is not treated as proof of zero actual flow or zero price reaction.",
+    "N0 future and N2 future capacity announcements are not improperly added in the actual body.",
+    "A successful native parse or copied fact table cannot validate stronger contradictory summary prose."
+  ],
+  "recommended_action": "Root normal exact-hash append-only invalid review, preserving original input/result and automatic row. No new model retry, gate layer or generation architecture proposed.",
+  "canonical_records_modified": false,
+  "whole_workflow_success": false
+}

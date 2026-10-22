@@ -1,0 +1,13 @@
+{
+  "previous_main_report_artifacts": [
+    {
+      "file": "reports/repair_2026-10-20/main_report_before_final_risk_20_plus_1.2199f3bd6aab2fe5.json",
+      "sha256": "2199f3bd6aab2fe51b9e1dce4e8d446c767af14c25a13f470a72633bdb1829e5"
+    },
+    {
+      "file": "reports/repair_2026-10-20/main_report_before_final_risk_20_plus_1.6decab52b81c62b7.md",
+      "sha256": "6decab52b81c62b72380a04ff2a76cc8b0ca2fb75a5d6af5f942a401dc209d40"
+    }
+  ],
+  "original_evidence_unchanged": true
+}

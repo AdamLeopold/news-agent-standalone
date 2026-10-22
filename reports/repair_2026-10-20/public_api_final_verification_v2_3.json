@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "observed_at": "2026-10-20T23:07:42.711541+00:00",
+  "prompt_version": "ttf-news-standalone-2.3",
+  "server_pid": 33261,
+  "public_health_status": 200,
+  "allowed_origin": "https://adamleopold.github.io",
+  "cors_origin_exact": true,
+  "manual_preflight_status": 200,
+  "empty_manual_request_status": 422,
+  "empty_request_created_analysis": false,
+  "public_sse_received": true,
+  "sse_event_sha256": "b31d7560929a7231a5311bdea312b7c961a919a5d1db3415d97a4530747290c1",
+  "new_model_calls": 0,
+  "scope": "Public HTTPS routing, CORS, schema rejection, and SSE; full real-model workflow is separately tested through localhost."
+}

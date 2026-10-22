@@ -1,0 +1,40 @@
+{
+  "generated_at": "2026-10-22T15:27:29.992551+00:00",
+  "status": "confirmed_invalid_pending_root_preflight_and_application",
+  "scope": "Append-only review metadata for one canonical brief and inherited English validity; preserve all original SQL bytes, predictions, raw model outputs, failures and validation baseline.",
+  "evidence": {
+    "file": "reports/structured_v2_4/independent_formal_completed_e85_review.json",
+    "sha256": "8194d1b4177839b790e60ae7931c2481f8ab78e24db53af30b599eeec4854a56"
+  },
+  "actual_record": {
+    "file": "reports/structured_v2_4/formal_completed_81e9b266-73e4-4ce8-824d-e64a57ab076b.json",
+    "sha256": "91d0bdabfde25a63380cdd424be1c1b335ea391ca67a8ed84eb23b9f9c673ac1"
+  },
+  "generation_source_record": {
+    "file": ".runtime/structured-reasoning-v4/20261022T151142006907Z-resume/switch.json",
+    "sha256": "b4cd389bba78bef772086e6d8aaa770370c179ce071c4c5391554d5724461080"
+  },
+  "pending_reviews": [
+    {
+      "analysis_id": "81e9b266-73e4-4ce8-824d-e64a57ab076b",
+      "protected_hashes": {
+        "input_snapshot": "2cf6afb451a4512076fc802aecb488a2edeec9e7bce53d018662a65ec02557d2",
+        "result": "232a5b51771348076eb4d8a085bbb7c3b96f85e365f3c33699b70f4a6fde9abe",
+        "detail_result": null
+      },
+      "confirmed_invalid": true,
+      "review": {
+        "review_id": "structured-e85-technology-supply-scope-81e9b266-73e4-4ce8-824d-e64a57ab076b-brief-v1",
+        "status": "invalid",
+        "reason_code": "v2_4_technology_research_as_european_supply_expansion",
+        "affected_parts": [
+          "brief"
+        ],
+        "reviewer": "independent_structured_source_semantics_review",
+        "message_zh": "简报将OneSubsea技术联合研究进展归为欧洲上游供给开发，并计入潜在增供的看跌压力；完整来源指向Brazil技术JIP，欧洲合作方身份不能证明欧洲上游气供给扩张。原预测及中英文原文保留，本简报未通过来源机制归类复核。",
+        "message_en": "The brief treats an OneSubsea technology joint-industry research milestone as European upstream supply development and counts a bearish supply-expansion contribution. The full source describes the Brazil technology JIP; European partner nationality does not establish European upstream gas-supply expansion. The original prediction and both language versions are retained; this brief fails the source-mechanism classification review."
+      }
+    }
+  ],
+  "preflight_required": "Hashes come from the captured original SQL columns. Root must run the normal exact DB-hash read-only preflight before append-only review application. No database was opened or changed by this preparation."
+}

@@ -1,0 +1,24 @@
+{
+  "reviewed_at": "2026-10-22T16:31:32.007185+00:00",
+  "scope": "Read-only static review of proposed production2.4.5 diff; no model or production mutation.",
+  "core_sha256": "027bc8d862b3cc3f8eff7ea54b881a51030372009c9087dbdac2815c0582e4cc",
+  "overall": "Scope/conditions/renderer compatible; one required weight-prompt wiring correction before claiming the new source-link assessment instruction reaches the model.",
+  "passed": [
+    "Regional or unknown future_supply accepts expectation/longer_term with a conditional channel, not current_physical or a claim of established Europe/global-LNG linkage.",
+    "Exact lng_export retains global_lng_export_expectations.",
+    "Region-only observed raw-gas supply and end-use demand, historical facts and background corporate/technology remain background.",
+    "Direct European importance is still restricted to canonical operators or europe facts; model importance may remain0.",
+    "New channel scenarios use regional_link_required; rendering states linkage needs assessment.",
+    "Old2.4.4 core archived with exact SHA0b15b314721e86afd9d32e191deaf939b1db30b58ec8565d0c017f38c3047c06; transport dispatch selects that renderer for old saved records."
+  ],
+  "required_correction": {
+    "finding": "The generic conditional-channel market-link instruction is appended only to decision_request.system. The actual weight_request immediately overwrites the returned system string, so the instruction never enters the model weighting request.",
+    "locations": [
+      "decision_request aroundline378",
+      "weight_request aroundline444"
+    ],
+    "impact": "The future channel opens as intended, but the model is not given the proposed instruction to assess market linkage and allow0 when unsupported.",
+    "minimal_fix": "Put the general channel instruction into weight_request.system, or share a constant referenced by both request constructors. No company-specific fewshot, validator or direction override."
+  },
+  "role_error_limit": "Original engine upstream-vs-liquefaction role metadata is preserved as an independent model residual; this structural change prevents that residual from forcing a price-channel zero and does not relabel the source."
+}

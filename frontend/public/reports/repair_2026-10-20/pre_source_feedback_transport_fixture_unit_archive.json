@@ -1,0 +1,24 @@
+{
+  "created_at": "2026-10-21T00:58:29.707840+00:00",
+  "original_outcome": {
+    "passed": 863,
+    "failed": 2,
+    "subtests_passed": 375,
+    "seconds": 73.1
+  },
+  "reason": "Preserve full failed suite before updating only two transport-location test assertions. Original failures remain historical failures.",
+  "files": [
+    {
+      "original": "reports/repair_2026-10-20/final-release-unit-tests.log",
+      "archive": "reports/repair_2026-10-20/pre-source-feedback-transport-fixture-units/final-release-unit-tests.log",
+      "sha256": "a84aadb461c7910d243e52c357777e7a74a3bca8e5911d84b917e6d360e1f115",
+      "bytes": 4070
+    },
+    {
+      "original": "reports/repair_2026-10-20/final-release-unit-tests.xml",
+      "archive": "reports/repair_2026-10-20/pre-source-feedback-transport-fixture-units/final-release-unit-tests.xml",
+      "sha256": "5541871614fecbf71cb9d44c10588e1d1f7d4852aec78ee1a239bf11408f1ada",
+      "bytes": 145813
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "purpose": "Render existing real API decisions through frozen 2.4.4 after 2.4.5 source upgrade; no database writes or model calls",
+  "rows": [
+    {
+      "file": "reports/structured_v2_4/api_manual_segment_02_artifacts/manual_brief_actual.json",
+      "sha256": "7c5bebb9c62387abe25531a120483065a27449e285d3713b0a99c7cd31436bb5",
+      "preserved_workflow": "ttf-structured-reasoning-2.4.4",
+      "all_four_renders_passed": true
+    },
+    {
+      "file": "reports/structured_v2_4/api_engine_upgrade_01_artifacts/current_live_actual.json",
+      "sha256": "5090f96b7ff2405d23a3b3e4842fb7f16fdf41cb3e4a5a26f7c23b74d1b452b5",
+      "preserved_workflow": "ttf-structured-reasoning-2.4.4",
+      "all_four_renders_passed": true
+    }
+  ],
+  "model_calls": 0,
+  "old_records_modified": false
+}

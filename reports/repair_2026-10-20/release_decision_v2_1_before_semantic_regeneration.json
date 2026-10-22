@@ -1,0 +1,118 @@
+{
+  "generated_at": "2026-10-20T20:11:52.134805+00:00",
+  "policy_id": "ttf-explicit-error-release-v1",
+  "status": "not_ready",
+  "release_ready": false,
+  "strict_report_status": "needs_attention",
+  "strict_all_outputs_success": false,
+  "strict_standard_unchanged": true,
+  "availability": {
+    "effective_outputs": 13,
+    "completed_scenarios": 15,
+    "required_scenarios": 15,
+    "rejected_outputs": 2,
+    "rejected_cases": [
+      "future_planned_notice",
+      "real_eni"
+    ],
+    "rejected_counted_as_correct_predictions": false,
+    "market_accuracy": null
+  },
+  "prominent_notice": "未全通过；带已知模型可用性限制发布。拒绝输出不算正确预测。",
+  "checks": {
+    "all_scenarios_terminal": false,
+    "preservation": true,
+    "unit_regressions": true,
+    "frontend_tests": true,
+    "detail_valid_output": true,
+    "no_known_accepted_errors": false,
+    "accepted_outputs_independently_reviewed": false,
+    "accepted_detail_independently_reviewed": false,
+    "reviewed_current_source": false,
+    "real_v2_success_end_to_end": false,
+    "explicit_error_ui_without_direction": false,
+    "public_assets_scanned": false,
+    "frontend_build": false,
+    "deployed_current_backend": false
+  },
+  "blockers": [
+    "all_scenarios_terminal",
+    "no_known_accepted_errors",
+    "accepted_outputs_independently_reviewed",
+    "accepted_detail_independently_reviewed",
+    "reviewed_current_source",
+    "real_v2_success_end_to_end",
+    "explicit_error_ui_without_direction",
+    "public_assets_scanned",
+    "frontend_build",
+    "deployed_current_backend"
+  ],
+  "known_accepted_errors": [
+    {
+      "id": "v2_0_missing_previous_trading_day_anchor",
+      "analysis_id": "6601a466-eecc-48f0-82e5-68785d8ac5be",
+      "status": "open",
+      "review_evidence": {
+        "file": "reports/repair_2026-10-20/independent_live_anchor_review_v2_0.json",
+        "sha256": "72d12a2fd1d297505e9dec8dd8f13b8b35502fa69fadb66ae83f4b241c798efd"
+      },
+      "reason": "Target21/required20, reference19 used for relative-yesterday decline; accepted v2.0 wrong anchor. Structural smoke progress cannot validate it.",
+      "resolution_evidence": null,
+      "resolution_verified": false
+    }
+  ],
+  "unresolved_accepted_error_count": 1,
+  "evidence": {
+    "independent_review": {
+      "verified": false,
+      "file": "reports/repair_2026-10-20/independent_release_review.json",
+      "sha256": null,
+      "error": "Unanchored or stale evidence hash"
+    },
+    "live_smoke": {
+      "verified": false,
+      "file": "reports/repair_2026-10-20/live_smoke_test.json",
+      "sha256": null,
+      "error": "Unanchored or stale evidence hash"
+    },
+    "error_ui": {
+      "verified": false,
+      "file": "reports/repair_2026-10-20/error_ui_verification.json",
+      "sha256": null,
+      "error": "Unanchored or stale evidence hash"
+    },
+    "public_scan": {
+      "verified": false,
+      "file": "reports/repair_2026-10-20/public_scan_final.json",
+      "sha256": null,
+      "error": "Evidence file missing or outside project"
+    },
+    "frontend_build": {
+      "verified": false,
+      "file": "reports/repair_2026-10-20/frontend-build.log",
+      "sha256": null,
+      "error": "Unanchored or stale evidence hash"
+    },
+    "backend_deployment": {
+      "verified": false,
+      "file": "reports/repair_2026-10-20/backend_deployment.json",
+      "sha256": null,
+      "error": "Unanchored or stale evidence hash"
+    }
+  },
+  "error_ui_evidence_boundary": "Existing real failed-record API/UI display plus current v2 isolated rejection and state-binding regressions; not the same-record v2 end-to-end failure.",
+  "public_pages_followup_pending": false,
+  "no_model_calls": true,
+  "no_database_access": true,
+  "no_network_calls": true,
+  "policy_basis": "Original product requirement: after two validation failures show explicit error; never invent up/flat. All accepted outputs need independent causal review and real successful v2 end-to-end evidence. No minimum benchmark availability percentage is imposed.",
+  "main_report": {
+    "file": "reports/logic_repair_validation_2026-10-20.json",
+    "sha256": "ce66eb9a990689fc8a7364f3516a8b4cbe2cc62d08499f33ede920b7f70e7346"
+  },
+  "checklist": {
+    "file": "reports/repair_2026-10-20/release_readiness_checks.json",
+    "sha256": "327702d565745ba3ab7ca24946a47eb6f1b2e72ee52210da0e62f241dd69a678",
+    "anchored": false
+  }
+}

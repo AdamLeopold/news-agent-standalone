@@ -1,0 +1,203 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "audited_at": "2026-10-21T00:54:59.308451+00:00",
+  "review": "source_feedback_and_implicit_observable_scope_final_code",
+  "source_hashes": {
+    "analysis.py": "28f186ea7f11453ec42737fd82a71b47b3f29d094121911a4e12813c93d3b1b9",
+    "semantics.py": "d739882a6d6c7e38432f5d4a46f292a6a7b4e63987a3d96095b4feb5ac9982e2",
+    "prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d"
+  },
+  "comparison_source": {
+    "analysis_sha256": "d1bd8f44d4611a6f2aaee82a0e1b5255fdabdc57e34ef134f6edf0fb8bfb0b4b"
+  },
+  "verdict": "no_material_regression_identified_in_finite_review",
+  "independent_controls": [
+    {
+      "case": "supply_loss_40",
+      "check": "first_request_bytes_system_native_schema_budget_equal",
+      "passed": true
+    },
+    {
+      "case": "supply_restore_40",
+      "check": "first_request_bytes_system_native_schema_budget_equal",
+      "passed": true
+    },
+    {
+      "case": "weak_exploration_no_quote",
+      "check": "first_request_bytes_system_native_schema_budget_equal",
+      "passed": true
+    },
+    {
+      "case": "warm_heating_demand",
+      "check": "first_request_bytes_system_native_schema_budget_equal",
+      "passed": true
+    },
+    {
+      "case": "cold_heating_demand",
+      "check": "first_request_bytes_system_native_schema_budget_equal",
+      "passed": true
+    },
+    {
+      "case": "negated_outage",
+      "check": "first_request_bytes_system_native_schema_budget_equal",
+      "passed": true
+    },
+    {
+      "case": "cumulative_shock_then_weak",
+      "check": "first_request_bytes_system_native_schema_budget_equal",
+      "passed": true
+    },
+    {
+      "case": "weak_news_observed_market_up",
+      "check": "first_request_bytes_system_native_schema_budget_equal",
+      "passed": true
+    },
+    {
+      "case": "supplied_conflicting_mechanisms",
+      "check": "first_request_bytes_system_native_schema_budget_equal",
+      "passed": true
+    },
+    {
+      "case": "future_planned_notice",
+      "check": "first_request_bytes_system_native_schema_budget_equal",
+      "passed": true
+    },
+    {
+      "case": "dismissed_notice_not_verified_recovery",
+      "check": "first_request_bytes_system_native_schema_budget_equal",
+      "passed": true
+    },
+    {
+      "case": "real_nyhamna",
+      "check": "first_request_bytes_system_native_schema_budget_equal",
+      "passed": true
+    },
+    {
+      "case": "real_eni",
+      "check": "first_request_bytes_system_native_schema_budget_equal",
+      "passed": true
+    },
+    {
+      "case": "supply_loss_40_with_flat_baseline",
+      "check": "first_request_bytes_system_native_schema_budget_equal",
+      "passed": true
+    },
+    {
+      "case": "supply_restore_40_with_flat_baseline",
+      "check": "first_request_bytes_system_native_schema_budget_equal",
+      "passed": true
+    },
+    {
+      "case": "anchor_real_manual_missing_prevday",
+      "check": "first_request_bytes_system_native_schema_budget_equal",
+      "passed": true
+    },
+    {
+      "case": "anchor_gap_supply_loss_40",
+      "check": "first_request_bytes_system_native_schema_budget_equal",
+      "passed": true
+    },
+    {
+      "case": "anchor_gap_supply_restore_40",
+      "check": "first_request_bytes_system_native_schema_budget_equal",
+      "passed": true
+    },
+    {
+      "case": "anchor_legal_prevday_weak_market_up",
+      "check": "first_request_bytes_system_native_schema_budget_equal",
+      "passed": true
+    },
+    {
+      "case": "real_future_well_b1",
+      "check": "first_request_bytes_system_native_schema_budget_equal",
+      "passed": true
+    },
+    {
+      "claim": "新闻未产生可观测冲击。",
+      "price_gate_expected": "reject",
+      "observed": "reject",
+      "passed": true,
+      "physical_control_scope": ""
+    },
+    {
+      "claim": "对实际流量未产生可观测冲击。",
+      "price_gate_expected": "allow",
+      "observed": "allow",
+      "passed": true,
+      "physical_control_scope": "Price gate only; physical flow observation still requires other source/flow gates."
+    },
+    {
+      "claim": "对实际流量及价格未产生可观测冲击。",
+      "price_gate_expected": "reject",
+      "observed": "reject",
+      "passed": true,
+      "physical_control_scope": "Price gate only; physical flow observation still requires other source/flow gates."
+    },
+    {
+      "claim": "对价格及实际流量未产生可观测冲击。",
+      "price_gate_expected": "reject",
+      "observed": "reject",
+      "passed": true,
+      "physical_control_scope": "Price gate only; physical flow observation still requires other source/flow gates."
+    },
+    {
+      "claim": "缺乏实流确认，新闻未产生可观测冲击。",
+      "price_gate_expected": "reject",
+      "observed": "reject",
+      "passed": true,
+      "physical_control_scope": ""
+    },
+    {
+      "claim": "输入没有可观测冲击的数据。",
+      "price_gate_expected": "allow",
+      "observed": "allow",
+      "passed": true,
+      "physical_control_scope": ""
+    },
+    {
+      "claim": "预计新闻影响有限。",
+      "price_gate_expected": "allow",
+      "observed": "allow",
+      "passed": true,
+      "physical_control_scope": ""
+    },
+    {
+      "claim": "若新闻未产生可观测冲击，则须检查其他因素。",
+      "price_gate_expected": "allow",
+      "observed": "allow",
+      "passed": true,
+      "physical_control_scope": ""
+    }
+  ],
+  "focused_tests": {
+    "command": ".venv/bin/python -m pytest tests/test_source_only_feedback.py tests/test_implicit_observable_scope.py -q --disable-warnings --junitxml=reports/repair_2026-10-20/independent_source_feedback_code_tests_v2_3.xml",
+    "passed": 39,
+    "elapsed_seconds": 0.67,
+    "junit_path": "reports/repair_2026-10-20/independent_source_feedback_code_tests_v2_3.xml",
+    "junit_sha256": "ea98cabdd37957b48c5fe9dd3051f6a36e201cf004fe55a1e65dbb62e181d501"
+  },
+  "source_review": [
+    {
+      "topic": "routing",
+      "finding": "Only second request following successful JSON/schema/language parse and failed fact/mechanism changes to source-only. First requests20 identical. Format/language/length retain bounded draft policy."
+    },
+    {
+      "topic": "feedback",
+      "finding": "Full distinct validator errors carried as untrusted local diagnostics in user.REPAIR_FEEDBACK. No old summary/evidence slots, labels, or scores copied. Previous rawSHA/full raw remain audit. No default direction or extra model call."
+    },
+    {
+      "topic": "budget",
+      "finding": "Reserve complete feedback payload before choosing8K/16K; optional24K only budget fail, same output and1024margin. Oversize explicit failure preserves full diagnostics and does not clip sources or add third call."
+    },
+    {
+      "topic": "scope",
+      "finding": "Implicit observable-zero price object only forecastbasis/summary. Explicit前置对+physical-only object prevents accidentalprice attribution; mixedprice/flow still requires price observations. Other flow gates still validate physical claims."
+    }
+  ],
+  "limits": [
+    "No model/API/DB calls by reviewer. Unit/fake calls cannot establish actual quality improvement.",
+    "Removal of rejected draft is an anchoring hypothesis, not proven causal intervention; actual pilot and subsequent actual stages require independent body review.",
+    "Historical raw source versions and failed attempts remain unchanged."
+  ]
+}

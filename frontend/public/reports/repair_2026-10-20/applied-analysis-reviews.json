@@ -1,0 +1,22 @@
+{
+  "status": "applied",
+  "canonical_analyses_modified": false,
+  "reviews": [
+    {
+      "analysis_id": "6601a466-eecc-48f0-82e5-68785d8ac5be",
+      "affected_parts": [
+        "brief"
+      ],
+      "protected_hashes_match": true,
+      "review_id": "price-baseline-6601a466-eecc-48f0-82e5-68785d8ac5be-brief-v1"
+    },
+    {
+      "analysis_id": "d71df0df-25eb-4d87-9b82-adf04d90fe28",
+      "affected_parts": [
+        "brief"
+      ],
+      "protected_hashes_match": true,
+      "review_id": "price-baseline-d71df0df-25eb-4d87-9b82-adf04d90fe28-brief-v1"
+    }
+  ]
+}

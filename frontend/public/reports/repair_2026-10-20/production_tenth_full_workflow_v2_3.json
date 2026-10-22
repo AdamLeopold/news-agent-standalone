@@ -1,0 +1,284 @@
+{
+  "status": "failed",
+  "started_at": "2026-10-21T05:59:26.649339+00:00",
+  "expected_prompt_version": "ttf-news-standalone-2.3",
+  "scope": "real_local_manual_detail_english_exports_sse_and_preservation",
+  "synthetic_live_input": false,
+  "raw_thinking_included": false,
+  "stages": [
+    {
+      "name": "preservation_before",
+      "status": "passed",
+      "started_at": "2026-10-21T05:59:26.676186+00:00",
+      "checks": {
+        "passed": true,
+        "protected_analysis_count": 157,
+        "protected_nonnull_field_count": 291,
+        "current_analysis_count": 158,
+        "new_analysis_count": 1,
+        "protected_snapshot_count": 5,
+        "new_snapshot_count": 0,
+        "original_validation_record_count": 1,
+        "latest_baseline_unchanged": true,
+        "original_baseline": {
+          "id": 210,
+          "created_at": "2026-10-14T05:51:48.181167+00:00",
+          "type": "validation_started"
+        },
+        "failures": []
+      },
+      "finished_at": "2026-10-21T05:59:26.734555+00:00",
+      "elapsed_seconds": 0.058
+    },
+    {
+      "name": "live_api_v2_and_managed_identity",
+      "status": "passed",
+      "started_at": "2026-10-21T05:59:26.735420+00:00",
+      "checks": {
+        "prompt_version": "ttf-news-standalone-2.3",
+        "model": "gpt-oss:20b",
+        "server_pid": 64920,
+        "managed_pid_identity_verified": true,
+        "collector": {
+          "enabled": true,
+          "poll_seconds": 60
+        },
+        "counts": {
+          "news": 3996,
+          "events": 1575,
+          "legacy_daily": 3456,
+          "prices": 65882,
+          "analyses": 158
+        },
+        "monitoring_reachable": true
+      },
+      "finished_at": "2026-10-21T05:59:27.879349+00:00",
+      "elapsed_seconds": 1.144
+    },
+    {
+      "name": "select_real_existing_news",
+      "status": "passed",
+      "started_at": "2026-10-21T05:59:27.882768+00:00",
+      "checks": {
+        "news_id": "90bfbf6adb1183517cbc00ca",
+        "title": "Gassco Troll: Planned Gas production field unavailability (Active)",
+        "source": "gassco",
+        "url": "https://umm.gassco.no/details?id=f1f667ff-1ee3-45f2-bedf-7eed367ea614",
+        "published_at": "2026-10-20T20:13:18+00:00",
+        "source_version": 1,
+        "body_characters": 270,
+        "body_sha256": "0d655dfd6a6900bdb276e7a00d478b97e61cc5415ccaa234f3ff81b889b237cf",
+        "fact_excerpt_used": false
+      },
+      "finished_at": "2026-10-21T05:59:27.910093+00:00",
+      "elapsed_seconds": 0.027
+    },
+    {
+      "name": "ensure_current_v2_live_forecast",
+      "status": "passed",
+      "started_at": "2026-10-21T05:59:27.910973+00:00",
+      "checks": {
+        "analysis_id": "98061279-0f33-4a8a-b681-bde26265480b",
+        "status": "queued",
+        "created": true,
+        "trade_date": "2026-10-21",
+        "source_news_id": "90bfbf6adb1183517cbc00ca",
+        "reason": "explicit_new_source_profile_live_analysis_via_normal_news_api",
+        "old_forecasts_overwritten": false,
+        "validation_baseline_reset": false
+      },
+      "finished_at": "2026-10-21T05:59:31.637770+00:00",
+      "elapsed_seconds": 3.727
+    },
+    {
+      "name": "sse_initial_connection",
+      "status": "passed",
+      "started_at": "2026-10-21T05:59:31.638524+00:00",
+      "checks": {
+        "id": 218320,
+        "type": "stream_ready",
+        "kind": null,
+        "matched_analysis_id": null,
+        "replayed_event_count": 1,
+        "cursor_mode": "initial_ready"
+      },
+      "finished_at": "2026-10-21T05:59:31.642838+00:00",
+      "elapsed_seconds": 0.004
+    },
+    {
+      "name": "manual_submit_real_news",
+      "status": "passed",
+      "started_at": "2026-10-21T05:59:31.643507+00:00",
+      "checks": {
+        "analysis_id": "869b5b7d-6a09-4097-b23f-9a99159ad1fe",
+        "status": "queued",
+        "real_source_news_id": "90bfbf6adb1183517cbc00ca"
+      },
+      "finished_at": "2026-10-21T05:59:34.835458+00:00",
+      "elapsed_seconds": 3.192
+    },
+    {
+      "name": "sse_last_event_id_reconnect",
+      "status": "passed",
+      "started_at": "2026-10-21T05:59:34.836367+00:00",
+      "checks": {
+        "id": 218321,
+        "type": "analysis_queued",
+        "kind": null,
+        "matched_analysis_id": "869b5b7d-6a09-4097-b23f-9a99159ad1fe",
+        "replayed_event_count": 1,
+        "cursor_mode": "Last-Event-ID"
+      },
+      "finished_at": "2026-10-21T05:59:34.840950+00:00",
+      "elapsed_seconds": 0.005
+    },
+    {
+      "name": "sse_after_query_reconnect",
+      "status": "passed",
+      "started_at": "2026-10-21T05:59:34.841959+00:00",
+      "checks": {
+        "id": 218321,
+        "type": "analysis_queued",
+        "kind": null,
+        "matched_analysis_id": "869b5b7d-6a09-4097-b23f-9a99159ad1fe",
+        "replayed_event_count": 1,
+        "cursor_mode": "after_query"
+      },
+      "finished_at": "2026-10-21T05:59:34.847523+00:00",
+      "elapsed_seconds": 0.006
+    },
+    {
+      "name": "manual_real_brief",
+      "status": "failed",
+      "started_at": "2026-10-21T05:59:34.848471+00:00",
+      "error_type": "RuntimeError",
+      "error": "Brief failed: 模型JSON两次校验失败，未生成方向：N1容量字段unavailable原值为7.6mcm/d，不是13.0；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算；没有校准价格预测输入，禁止编造上涨/下跌幅度或目标价；仅可引用输入已观察的同合约参考变化",
+      "finished_at": "2026-10-21T06:01:22.208415+00:00",
+      "elapsed_seconds": 107.36
+    },
+    {
+      "name": "csv_jsonl_exports",
+      "status": "passed",
+      "started_at": "2026-10-21T06:01:22.209615+00:00",
+      "checks": {
+        "news": {
+          "csv": {
+            "rows": 3996,
+            "bytes": 5003954,
+            "sha256": "b496625bc4ee7ede5feb52e9f861d8056cb74f615fa3bee41163854ff016e57b",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 3996,
+            "bytes": 6693114,
+            "sha256": "5a704b12d7a5d06c069e4ee190e00b457032f04b2e7f02a78faeb78a5684a5e4",
+            "parsed": true
+          },
+          "row_counts_match": true,
+          "independent_snapshot_requests": true
+        },
+        "daily": {
+          "csv": {
+            "rows": 628,
+            "bytes": 3916578,
+            "sha256": "88536d2c357c6bdc92d01c2236d48f69971c072d4892d7823d415c99ac9cc339",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 628,
+            "bytes": 3808065,
+            "sha256": "8abd151fc28871df650bbd8bc6dcf3330e0d6a4f6ca9f9956a013fdb92ad9435",
+            "parsed": true
+          },
+          "row_counts_match": true,
+          "independent_snapshot_requests": true
+        },
+        "events": {
+          "csv": {
+            "rows": 1575,
+            "bytes": 5979381,
+            "sha256": "c8fa45efe424c3a98f3b5145db81d81f92f7a6ac9c49a1c20349fd3ba79fb051",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 1575,
+            "bytes": 6391644,
+            "sha256": "a6815c7f232cc4a3795c1d2e0ac34cb4cbf23b046a169dfeb9e7e6759ed156c3",
+            "parsed": true
+          },
+          "row_counts_match": true,
+          "independent_snapshot_requests": true
+        },
+        "prices": {
+          "csv": {
+            "rows": 65882,
+            "bytes": 26615025,
+            "sha256": "a779fa9fa84534e7fb39b6dcb765dc6e9e8140f2bf85e784d78a81e759790c4a",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 65882,
+            "bytes": 43744696,
+            "sha256": "f2c853323f267fb685cc234ced8f90fb89536da3472d89a90d64c21b8ad84cdf",
+            "parsed": true
+          },
+          "row_counts_match": true,
+          "independent_snapshot_requests": true
+        }
+      },
+      "finished_at": "2026-10-21T06:01:28.420601+00:00",
+      "elapsed_seconds": 6.211
+    },
+    {
+      "name": "current_live_forecast_v2",
+      "status": "failed",
+      "started_at": "2026-10-21T06:01:28.422225+00:00",
+      "error_type": "RuntimeError",
+      "error": "Explicitly appended current live analysis failed: 模型JSON两次校验失败，未生成方向：分别列出的容量字段available含无来源数值7.6mcm/d；下降额与绝对可用容量须分开并逐公告匹配；close_forecast.extreme_move_risk:缺少公告前后价格反应，不能宣称已计价/已消化；须区分计价未知",
+      "finished_at": "2026-10-21T06:02:46.024031+00:00",
+      "elapsed_seconds": 77.6
+    },
+    {
+      "name": "preservation_after",
+      "status": "passed",
+      "started_at": "2026-10-21T06:02:46.026691+00:00",
+      "checks": {
+        "passed": true,
+        "protected_analysis_count": 157,
+        "protected_nonnull_field_count": 291,
+        "current_analysis_count": 160,
+        "new_analysis_count": 3,
+        "protected_snapshot_count": 5,
+        "new_snapshot_count": 0,
+        "original_validation_record_count": 1,
+        "latest_baseline_unchanged": true,
+        "original_baseline": {
+          "id": 210,
+          "created_at": "2026-10-14T05:51:48.181167+00:00",
+          "type": "validation_started"
+        },
+        "failures": []
+      },
+      "finished_at": "2026-10-21T06:02:46.066615+00:00",
+      "elapsed_seconds": 0.04
+    }
+  ],
+  "new_live_analysis_id": "98061279-0f33-4a8a-b681-bde26265480b",
+  "new_analysis_id": "869b5b7d-6a09-4097-b23f-9a99159ad1fe",
+  "finished_at": "2026-10-21T06:02:46.067651+00:00",
+  "failed_stages": [
+    "manual_real_brief",
+    "current_live_forecast_v2"
+  ],
+  "missing_required_stages": [
+    "chinese_originals_unchanged_after_translation",
+    "current_live_forecast_v2",
+    "english_brief_actual_text_labels_numbers",
+    "english_detail_actual_text_labels_numbers",
+    "manual_detail_request",
+    "manual_real_brief",
+    "manual_real_detail",
+    "sse_completed_event_replay"
+  ],
+  "elapsed_seconds": 199.416
+}

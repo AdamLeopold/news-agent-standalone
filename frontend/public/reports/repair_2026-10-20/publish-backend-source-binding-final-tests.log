@@ -1,0 +1,165 @@
+........................................s...... [  3%]
+.....ss............................................................... [  7%]
+........................s............................................... [ 12%]
+................................................................... [ 17%]
+........................................................................ [ 21%]
+.....................................ss................................. [ 26%]
+....................................FF..FF.............................. [ 31%]
+........................................................................ [ 36%]
+........................................................................ [ 40%]
+........................................................................ [ 45%]
+...................................................................... [ 50%]
+........................................................................ [ 55%]
+........................................................................ [ 60%]
+...................................................................... [ 64%]
+..................................................... [ 68%]
+........................................................................ [ 72%]
+................................ [ 75%]
+................................................................................... [ 80%]
+........................ [ 82%]
+........................................................................ [ 87%]
+........................................................................ [ 91%]
+................................................. [ 95%]
+........................................................................ [ 99%]
+..                                                                       [100%]
+=================================== FAILURES ===================================
+_ test_actual_originals_and_pilot_wrong_bodies_remain_rejected[ninth_manual_pilot_1] _
+
+row = {'case': 'ninth_manual_pilot_1', 'record': {'file': 'reports/repair_2026-10-20/source_provenance_output_feasibility_v2...isk_flags":[],"references":[{"id":"N0","url":""},{"id":"N1","url":""},{"id":"N2","url":""}],"missing_fields":[]}', ...}
+
+    @pytest.mark.parametrize('row',FIX['records'],ids=lambda x:x['case'])
+    def test_actual_originals_and_pilot_wrong_bodies_remain_rejected(row):
+>    verified_historical_bytes(R/row['record']['file'],row['record']['sha256'],project_root=R)
+
+tests/test_future_capacity_pressure_scope.py:107: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:132: in verified_historical_bytes
+    original=path.read_bytes()
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py:1124: in read_bytes
+    with self.open(mode='rb') as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('.runtime/github-publish/reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/actual/ninth_manual/attempt-1-response.json')
+mode = 'rb', buffering = -1, encoding = None, errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: '.runtime/github-publish/reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/actual/ninth_manual/attempt-1-response.json'
+
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py:1117: FileNotFoundError
+_ test_actual_originals_and_pilot_wrong_bodies_remain_rejected[ninth_manual_pilot_2] _
+
+row = {'case': 'ninth_manual_pilot_2', 'record': {'file': 'reports/repair_2026-10-20/source_provenance_output_feasibility_v2...l_comparisons":[]},"risk_flags":[],"references":[{"id":"N0","url":""},{"id":"N2","url":""}],"missing_fields":[]}', ...}
+
+    @pytest.mark.parametrize('row',FIX['records'],ids=lambda x:x['case'])
+    def test_actual_originals_and_pilot_wrong_bodies_remain_rejected(row):
+>    verified_historical_bytes(R/row['record']['file'],row['record']['sha256'],project_root=R)
+
+tests/test_future_capacity_pressure_scope.py:107: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:132: in verified_historical_bytes
+    original=path.read_bytes()
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py:1124: in read_bytes
+    with self.open(mode='rb') as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('.runtime/github-publish/reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/actual/ninth_manual/attempt-2-response.json')
+mode = 'rb', buffering = -1, encoding = None, errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: '.runtime/github-publish/reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/actual/ninth_manual/attempt-2-response.json'
+
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py:1117: FileNotFoundError
+_ test_actual_originals_and_pilot_wrong_bodies_remain_rejected[ninth_current_pilot_1] _
+
+row = {'case': 'ninth_current_pilot_1', 'record': {'file': 'reports/repair_2026-10-20/source_provenance_output_feasibility_v...l_comparisons":[]},"risk_flags":[],"references":[{"id":"N0","url":""},{"id":"N2","url":""}],"missing_fields":[]}', ...}
+
+    @pytest.mark.parametrize('row',FIX['records'],ids=lambda x:x['case'])
+    def test_actual_originals_and_pilot_wrong_bodies_remain_rejected(row):
+>    verified_historical_bytes(R/row['record']['file'],row['record']['sha256'],project_root=R)
+
+tests/test_future_capacity_pressure_scope.py:107: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:132: in verified_historical_bytes
+    original=path.read_bytes()
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py:1124: in read_bytes
+    with self.open(mode='rb') as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('.runtime/github-publish/reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/actual/ninth_current/attempt-1-response.json')
+mode = 'rb', buffering = -1, encoding = None, errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: '.runtime/github-publish/reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/actual/ninth_current/attempt-1-response.json'
+
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py:1117: FileNotFoundError
+_ test_actual_originals_and_pilot_wrong_bodies_remain_rejected[ninth_current_pilot_2] _
+
+row = {'case': 'ninth_current_pilot_2', 'record': {'file': 'reports/repair_2026-10-20/source_provenance_output_feasibility_v...LNG差异，需核对具体供需情景"]},"risk_flags":[],"references":[{"id":"N0","url":""},{"id":"N2","url":""}],"missing_fields":[]}', ...}
+
+    @pytest.mark.parametrize('row',FIX['records'],ids=lambda x:x['case'])
+    def test_actual_originals_and_pilot_wrong_bodies_remain_rejected(row):
+>    verified_historical_bytes(R/row['record']['file'],row['record']['sha256'],project_root=R)
+
+tests/test_future_capacity_pressure_scope.py:107: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_production_price_unit_scopes.py:132: in verified_historical_bytes
+    original=path.read_bytes()
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py:1124: in read_bytes
+    with self.open(mode='rb') as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('.runtime/github-publish/reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/actual/ninth_current/attempt-2-response.json')
+mode = 'rb', buffering = -1, encoding = None, errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: '.runtime/github-publish/reports/repair_2026-10-20/source_provenance_output_feasibility_v2_3/actual/ninth_current/attempt-2-response.json'
+
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py:1117: FileNotFoundError
+=============================== warnings summary ===============================
+../../.venv/lib/python3.10/site-packages/fastapi/testclient.py:1
+  .venv/lib/python3.10/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_future_capacity_pressure_scope.py::test_actual_originals_and_pilot_wrong_bodies_remain_rejected[ninth_manual_pilot_1]
+FAILED tests/test_future_capacity_pressure_scope.py::test_actual_originals_and_pilot_wrong_bodies_remain_rejected[ninth_manual_pilot_2]
+FAILED tests/test_future_capacity_pressure_scope.py::test_actual_originals_and_pilot_wrong_bodies_remain_rejected[ninth_current_pilot_1]
+FAILED tests/test_future_capacity_pressure_scope.py::test_actual_originals_and_pilot_wrong_bodies_remain_rejected[ninth_current_pilot_2]
+4 failed, 1493 passed, 6 skipped, 1 warning, 371 subtests passed in 84.60s (0:01:24)

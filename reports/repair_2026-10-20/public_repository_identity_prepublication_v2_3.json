@@ -1,0 +1,8 @@
+{
+  "observed_at": "2026-10-20T23:59:50.639312+00:00",
+  "repository": "AdamLeopold/news-agent-standalone",
+  "origin": "https://github.com/AdamLeopold/news-agent-standalone.git",
+  "managed_checkout": ".runtime/github-publish",
+  "scope": "Read-only remote identity and branch check before final sync. No commit, push, release, or deployment performed.",
+  "remote_main_commit": "5040a1e78b10dc1cae5c72f155a1888761570d73"
+}

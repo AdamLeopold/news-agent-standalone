@@ -1,0 +1,26 @@
+{
+  "cancelled_at": "2026-10-20T17:34:14.529415+00:00",
+  "reason": "Stop superseded broad semantic-high experiment; final production policy restricts deeper retry to current operator notices. Completed raw records remain unchanged.",
+  "isolated_process_pid": 34892,
+  "verified_command": "/Library/Frameworks/Python.framework/Versions/3.10/Resources/Python.app/Contents/MacOS/Python scripts/validate-news-logic.py --engine candidate --run-id budget-validation",
+  "observed_unfinished_case": "START candidate dismissed_notice_not_verified_recovery detail False",
+  "completed_records_sha256": {
+    "future_planned_notice.json": "67b447fcd012623ad56ed7ddce5bb48d3b17979f495b0930ce16b5be37a33142",
+    "weak_exploration_no_quote.json": "43ec06f05051dbb6d3833f8ed18dbcfe3a5d8325752c9ef9d8d249606d266012",
+    "warm_heating_demand.json": "c40467e480ea1a20838b4ce7da4142ebcfb7451c4834c658a34f492a987ba334",
+    "cumulative_shock_then_weak.json": "dd39b8ad37c661c4e56a8532527728b7c615b5e6213f28ab49dbd4275a9c125f",
+    "weak_news_observed_market_up.json": "344960349a587862b0c7c4a1325f948d6943d25f8869de91c303ec922c041136",
+    "negated_outage.json": "6ec89e3a2c8bcdf8cc5a711755e8e2c3ee4eb732a948c2abafd9e93367cf45d6",
+    "supply_loss_40.json": "ff0c98ea84629a668ccc773e44b6c369f0af8a56637bfea616b0a8c5649726f3",
+    "cold_heating_demand.json": "9655771305601a185ad602e2a5dbdb9eac3cd62b2a2691dadcc1658391e858f6",
+    "supply_restore_40.json": "141993a70e870c25a5914ea8f413c1dc2aca2e54a343f44940f146cafbe4a84b",
+    "supplied_conflicting_mechanisms.json": "0e5eb1e78bf167418b06d6f1405389b3202c558a61b033755919fb4125581f57"
+  },
+  "inflight_response_saved": false,
+  "model_service_stopped": false,
+  "backend_pid_before": 36350,
+  "backend_pid_after": 36350,
+  "isolated_process_stopped": true,
+  "completed_records_unchanged": true,
+  "status": "cancelled"
+}

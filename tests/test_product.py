@@ -124,10 +124,10 @@ def test_future_price_and_other_contract_excluded(store):
     from ttf_news.calendar import next_day
     day=date(2026,7,1)
     for i in range(65):
-        store.upsert_price({"contract":"nov26","delivery_month":"2026-11-01","day":day.isoformat(),"value":30+i%3,"price_type":"reference"})
+        store.upsert_price({"contract":"nov26","delivery_month":"2026-11-01","day":day.isoformat(),"value":30+i%3,"price_type":"reference","known_at":"2026-10-14T00:00:00+00:00"})
         day=next_day(day)
-    store.upsert_price({"contract":"nov26","delivery_month":"2026-11-01","day":"2026-10-14","value":1000,"price_type":"reference"})
-    store.upsert_price({"contract":"dec26","delivery_month":"2026-12-01","day":"2026-10-13","value":1e6,"price_type":"reference"})
+    store.upsert_price({"contract":"nov26","delivery_month":"2026-11-01","day":"2026-10-14","value":1000,"price_type":"reference","known_at":"2026-10-14T00:00:00+00:00"})
+    store.upsert_price({"contract":"dec26","delivery_month":"2026-12-01","day":"2026-10-13","value":1e6,"price_type":"reference","known_at":"2026-10-14T00:00:00+00:00"})
     context=build_context(store,as_of="2026-10-14T10:00:00+00:00")
     assert context['price_reference']['contract']=='nov26'
     assert context['price_reference']['previous_price']<100
@@ -141,7 +141,7 @@ def test_volatility_window_rejects_missing_trading_day(store):
     day=date(2026,7,1)
     for i in range(70):
         if i!=50:
-            store.upsert_price({"contract":"nov26","delivery_month":"2026-11-01","day":day.isoformat(),"value":30+i%3,"price_type":"reference"})
+            store.upsert_price({"contract":"nov26","delivery_month":"2026-11-01","day":day.isoformat(),"value":30+i%3,"price_type":"reference","known_at":"2026-10-14T00:00:00+00:00"})
         day=next_day(day)
     result=price_context(store,"2026-10-14T10:00:00+00:00")
     assert result['extreme_threshold'] is None
@@ -155,7 +155,8 @@ def test_event_reaction_selects_near_month_and_excludes_unfinished_days(store):
     store.upsert_event({'id':'outage','source':'test','title':'Norway outage','event_date':'2026-10-09'})
     for contract,month,values in (('far','2027-02-01',[10,1000,2000,3000]),('near','2026-11-01',[40,41,42,9000])):
         for day,value in zip(('2026-10-08','2026-10-09','2026-10-12','2026-10-14'),values):
-            store.upsert_price({'contract':contract,'delivery_month':month,'day':day,'value':value,'price_type':'reference'})
+            store.upsert_price({'contract':contract,'delivery_month':month,'day':day,'value':value,'price_type':'reference',
+                                'known_at':day+'T15:15:00+00:00'})
     with patch('ttf_news.evaluation.iso',return_value='2026-10-14T04:00:00+00:00'):
         enrich_outcomes(store)
     reaction=store.events()[0]['outcomes']['1d']
@@ -172,10 +173,16 @@ class StubAnalyst:
 def test_manual_api_does_not_pollute_news_or_events(store):
     app=create_app(store,StubAnalyst(),workers=False)
     with TestClient(app) as client:
+        # Lifespan may import available legacy archives; manual inputs must
+        # preserve whichever formal dataset was present before submission.
+        store.upsert_news(item(title='Existing formal news fixture'))
+        store.upsert_event({'id':'existing-formal-event','source':'test',
+                            'title':'Existing formal event fixture','event_date':'2026-10-14'})
+        baseline=store.counts()
         response=client.post('/api/manual/analyze',json={"text":"手动情景：天然气供应意外中断，但天气温和。"})
         assert response.status_code==202
-        assert store.counts()['news']==0
-        assert store.counts()['events']==275  # Only the preserved legacy import in lifespan.
+        assert store.counts()['news']==baseline['news']
+        assert store.counts()['events']==baseline['events']
         aid=response.json()['id']
         analysis=client.get('/api/analyses/'+aid+'?include_input=true').json()
         assert analysis['kind']=='manual'

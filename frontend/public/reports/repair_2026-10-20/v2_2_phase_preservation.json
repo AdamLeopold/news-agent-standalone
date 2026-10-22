@@ -1,0 +1,10 @@
+{
+  "status": "preserved",
+  "actual_end_to_end_status": "failed",
+  "artifacts_sha256": {
+    "attempted_v2_2_pre_scope_health_smoke.json": "ab1da25e9a14e597e13dcbe23f4dbaff19d8eb6430087a0a3824198a74975831",
+    "attempted_v2_2_pre_scope_health_smoke.log": "51f88ebfc177b89d83c6b09e22c7c5514889298e0521fa96e208dd4e829bb6e4",
+    "v2_2_pre_scope_health_unit_tests.xml": "ac8eba7e4b714304b49a4e2141070d4c5975c9c99d9105f58593bc47696fef56"
+  },
+  "note": "Original source-bound model failures and the qualified completed live result remain canonical. Final 2.3 will use fresh records."
+}

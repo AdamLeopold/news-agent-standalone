@@ -1,0 +1,56 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T07:36:07.033236+00:00",
+  "scope": "Minimal append-only final operator-prose source binding; prior full prose reviews reused only after complete-path and immutable identity checks.",
+  "manifest": {
+    "file": "reports/repair_2026-10-20/current_operator_prose_twenty_plus_detail_manifest_v2_3.json",
+    "sha256": "014e50a823d67ad5d0653a52258f48c533b330477be4aff5c2295d5bff65285d"
+  },
+  "prior_manifest": {
+    "file": "reports/repair_2026-10-20/current_source_binding_twenty_plus_detail_manifest_v2_3.json",
+    "sha256": "4a3d6926bd9b664c28ccdfbf9740199a95a03e1a4fead48a93e9e26ba8fe6313"
+  },
+  "official83_path_proof": {
+    "file": "reports/repair_2026-10-20/full_path_equivalence_v2_3.1ea5d648e2e0f022.json",
+    "sha256": "1ea5d648e2e0f022d5e7b0f42d08fdcd6884f72db57456722413ad76846795e2"
+  },
+  "prior_full_body_binding": {
+    "file": "reports/repair_2026-10-20/independent_current_source_binding_twenty_identity_append_v2_3.json",
+    "sha256": "dc667183d06542cf49a4dbca3b75f4a64320dbb8b15a32fcff6bac50ac17d69b"
+  },
+  "new_generation_prototype_body_review": {
+    "file": "reports/repair_2026-10-20/independent_operator_factual_prose_v3_actual_review_v2_3.json",
+    "sha256": "8f4bd88d402bcd93b6d2c909272339f012f66a57bffc3a9fb7e1b7ce38d8f1eb"
+  },
+  "final_analysis_sha256": "d56e5501def567e153f587646af23891c20a5508f09c2e79ecb87500a0ac0706",
+  "semantics_sha256": "d054bc812a80e0d28bfc95a098731b6b556ad0304a9775db0ec4d00d660d2d9a",
+  "report_helper_sha256": "8fb767f83f41e559c1f3463abdc71764c367c55dc2ff133d462075e7bf05d085",
+  "all21_selected_files_and_input_generation_result_direction_strict_identities_unchanged": true,
+  "all21_complete_paths_equal": true,
+  "all_final_source_bytes_match_manifest": true,
+  "new_actual_calls_for_cohort_binding": 0,
+  "old_generation_sources_not_relabelled_as_final_source": true,
+  "selected_brief_counts": {
+    "safe_returned": 15,
+    "failed_result_null": 5,
+    "actual_historical_calls": 31
+  },
+  "isolated_detail": {
+    "returned": true,
+    "actual_historical_calls": 2,
+    "P3_qualifications_retained": true,
+    "not_a_production_workflow": true
+  },
+  "rejected_anchors_independently_checked": true,
+  "rejected_anchor_cases": [
+    "anchor_real_manual_missing_prevday"
+  ],
+  "rejected_anchor_record_sha256": "bfdd05a106d4376c5096dddcbb9eb84521fe2075853cc3f2e7c928990cbf982f",
+  "production12_full_workflow_and_CN_EN_body_reviews": "pending",
+  "prior11_workflows_remain_failed": true,
+  "all_eight_known_error_families_remain_open": true,
+  "release_ready": false,
+  "no_market_accuracy_or_label_quota_claim": true,
+  "new_model_database_or_network_access_by_auditor": false
+}

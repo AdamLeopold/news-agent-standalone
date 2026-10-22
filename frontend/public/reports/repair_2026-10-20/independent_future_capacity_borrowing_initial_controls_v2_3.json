@@ -1,0 +1,28 @@
+{
+  "candidate_semantics_sha256": "e7388b6be6994b6f1d57e7ed8fd2662777582dbf43515272a105d5058951334d",
+  "rows": [
+    {
+      "case": "exact",
+      "error": "analysis.summary:N0公告开始2026-10-22T04:00:00+00:00，截至分析时点尚未开始；目标结算窗口结束时或之后开始；开始时刻不证明实际流量损失；不能把该未来公告的容量下降写成本窗口内已发生的物理容量变化。窗口内公布计划不等于计划已生效；可分别陈述该N起止与容量安排，并讨论未来价格预期，不证明实际流量损失或指定净方向"
+    },
+    {
+      "case": "title_missing_both",
+      "error": "analysis.summary:N0公告开始2026-10-22T04:00:00+00:00，截至分析时点尚未开始；目标结算窗口结束时或之后开始；开始时刻不证明实际流量损失；不能把该未来公告的容量下降写成本窗口内已发生的物理容量变化。窗口内公布计划不等于计划已生效；可分别陈述该N起止与容量安排，并讨论未来价格预期，不证明实际流量损失或指定净方向"
+    },
+    {
+      "case": "changed_facts",
+      "error": null
+    },
+    {
+      "case": "conflicting_intervals",
+      "error": null
+    },
+    {
+      "case": "unknown_original_clock",
+      "error": null
+    }
+  ],
+  "new_model_calls": 0,
+  "database_access": false,
+  "source_modification": false
+}

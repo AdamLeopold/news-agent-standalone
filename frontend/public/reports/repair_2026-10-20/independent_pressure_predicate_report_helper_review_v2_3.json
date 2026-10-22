@@ -1,0 +1,72 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T05:55:25.766927+00:00",
+  "scope": "Finite report-only registration of the exact final affected real_eni follow-up stage and its detail counterpart. No core/model, fixture expectation or release acceptance policy change.",
+  "candidate_helper": {
+    "file": ".runtime/pressure-predicate-report-proposal/revision-markdown-final/repair-validation-report.py",
+    "sha256": "8fb767f83f41e559c1f3463abdc71764c367c55dc2ff133d462075e7bf05d085"
+  },
+  "proposal_proof": {
+    "file": ".runtime/pressure-predicate-report-proposal/revision-markdown-final/proposal-proof.json",
+    "sha256": "e0ff7641dcc6876316c8d58e755d2225ac437df613e9ea851a32cc02b27c7478"
+  },
+  "final_diff": {
+    "file": ".runtime/pressure-predicate-report-proposal/revision-markdown-final/helper.diff",
+    "sha256": "7185da454a3e9c53476fffd2432fb67c7e7f95fc250d0bc8f57b73cb62d4ea3b"
+  },
+  "preserved_previous_private_proposal": {
+    "file": ".runtime/pressure-predicate-report-proposal/repair-validation-report.py",
+    "sha256": "5179617c6b5f00f9ead701ef0089630ddbbc69af2eb18d816c33f52e7a0aae58"
+  },
+  "revision_diff": {
+    "file": ".runtime/pressure-predicate-report-proposal/revision-markdown-final/revision.diff",
+    "sha256": "501c57d495e96290953811136d7217f9aa5403696f03bf27110efb024e903158"
+  },
+  "base_helper": {
+    "file": ".runtime/explicit-source-index-helper-proposal/repair-validation-report.py",
+    "sha256": "7d051013abf0cd24d47645503410680f28f02bffc16b02a6a8b20985670689eb"
+  },
+  "fixed_execution_plan": {
+    "file": "reports/repair_2026-10-20/pressure_predicate_partial_final_execution_plan_v2_3.json",
+    "sha256": "bc3a0d205a038d14714d19519ef1607b0dc84b5dae91b71ed2df193ad2eb52d5"
+  },
+  "independent_self_tests": {
+    "log": {
+      "file": "reports/repair_2026-10-20/independent-pressure-predicate-helper-tests-v2_3.log",
+      "sha256": "23160e8f49f0857c7c0fc8cf4d937a4f69b9776e7f9f2387436e1ccea34232c0"
+    },
+    "passed": 297,
+    "failures": 0,
+    "errors": 0,
+    "elapsed_seconds_in_attached_log": true,
+    "synthetic_in_memory_database_only": true
+  },
+  "changed_top_level_function_class_ast": [
+    "VerifierSelfTests",
+    "markdown",
+    "summarize_details",
+    "summarize_semantic_regeneration"
+  ],
+  "all_other_function_class_ast_including_revalidate_result_and_release_hardgates_identical": true,
+  "stage_registration_is_exact_append": true,
+  "independent_latest_failed_overrides_prior_success_and_retains_other_case": true,
+  "four_new_partial_stage_controls_cover_missing_failed_unreadable_detail_and_no_old_fallback": true,
+  "markdown_final_stage_chain_updated": true,
+  "initial_harness_root_base_hash_check": "Root had already applied8fb during review. The initial pre-test old-root-hash assertion stopped before tests. Final source comparison uses the exact SHA7d051 private base; no source or test policy was changed by the reviewer.",
+  "verdict": "finite_report_helper_audit_passed",
+  "material_known_logic_errors": [],
+  "may_apply_exact_report_helper": true,
+  "current_root_matches_reviewed_helper": true,
+  "overall_release_passed": false,
+  "qualifications": [
+    "Stage registration does not mean a new actual run has completed.",
+    "Only the official complete-path changed real_eni receives one fresh terminal run; retained19briefs+1detail keep original generation identities and need their exact complete-path proof.",
+    "Latest failed or unreadable new output cannot fall back to an earlier success.",
+    "A safe or failed isolated real_eni terminal does not establish a successful fresh full production manual/detail/English/current workflow."
+  ],
+  "new_model_calls": 0,
+  "project_database_access": false,
+  "network_calls": 0,
+  "source_modification": false
+}

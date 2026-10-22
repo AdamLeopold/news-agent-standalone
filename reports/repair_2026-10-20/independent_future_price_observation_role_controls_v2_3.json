@@ -1,0 +1,119 @@
+{
+  "reviewer": "/root/final_semantic_audit",
+  "source_sha256": {
+    "analysis": "3a47ab408bcc26b71bb23bfaa117100e7f72454dfb8657d50b2851f55e20e66d",
+    "semantics": "e0cac7cdab33b6562ee88db528ad32114540734b2b96275d7f32e67302856623"
+  },
+  "controls": [
+    {
+      "name": "future_unqualified_pricezero",
+      "expected_allowed": false,
+      "actual_allowed": false,
+      "passed": true,
+      "error": "analysis.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应"
+    },
+    {
+      "name": "forecast_judgement",
+      "expected_allowed": true,
+      "actual_allowed": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "evidence_unknown",
+      "expected_allowed": true,
+      "actual_allowed": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "weak_pressure",
+      "expected_allowed": true,
+      "actual_allowed": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "exact_source_limited_legal_direct_statement",
+      "expected_allowed": true,
+      "actual_allowed": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "current_delta",
+      "expected_allowed": true,
+      "actual_allowed": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "prior_day_itself",
+      "expected_allowed": false,
+      "actual_allowed": false,
+      "passed": true,
+      "error": "价格时间角色不符：输入给的是当前同合约报价相对前一交易日参考价的差值，不是前一交易日自身的涨跌；请明确当前报价/前日比较基准，不把该观察差当未来目标幅度"
+    },
+    {
+      "name": "future_target_even_same_number",
+      "expected_allowed": false,
+      "actual_allowed": false,
+      "passed": true,
+      "error": "没有校准价格预测输入，禁止编造上涨/下跌幅度或目标价；仅可引用输入已观察的同合约参考变化"
+    },
+    {
+      "name": "proper_level",
+      "expected_allowed": true,
+      "actual_allowed": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "level_not_delta",
+      "expected_allowed": false,
+      "actual_allowed": false,
+      "passed": true,
+      "error": "没有校准价格预测输入，禁止编造上涨/下跌幅度或目标价；仅可引用输入已观察的同合约参考变化"
+    },
+    {
+      "name": "proper_percent",
+      "expected_allowed": true,
+      "actual_allowed": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "delta_not_percent",
+      "expected_allowed": false,
+      "actual_allowed": false,
+      "passed": true,
+      "error": "没有校准价格预测输入，禁止编造上涨/下跌幅度或目标价；仅可引用输入已观察的同合约参考变化"
+    },
+    {
+      "name": "observation_does_not_hide_target",
+      "expected_allowed": false,
+      "actual_allowed": false,
+      "passed": true,
+      "error": "没有校准价格预测输入，禁止编造上涨/下跌幅度或目标价；仅可引用输入已观察的同合约参考变化"
+    },
+    {
+      "name": "future_quote_not_source_for_known_delta",
+      "expected_allowed": false,
+      "actual_allowed": false,
+      "passed": true,
+      "error": "没有校准价格预测输入，禁止编造上涨/下跌幅度或目标价；仅可引用输入已观察的同合约参考变化"
+    }
+  ],
+  "passed": true,
+  "count": 14,
+  "context_mutation": false,
+  "changed_top_definitions": {
+    "analysis": [
+      "_validate_prediction_semantics"
+    ],
+    "semantics": [
+      "_check_observed_absence_of_price_reaction"
+    ]
+  },
+  "new_model_calls": 0
+}

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuites name="pytest tests"><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="0.220" timestamp="2026-10-21T10:20:38.355333+08:00" hostname="MacBook-Pro-8.local"><testcase classname="" name="tests.test_detail_bounded_timing_profile" time="0.000"><error message="collection failure">ImportError while importing test module 'tests/test_detail_bounded_timing_profile.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_detail_bounded_timing_profile.py:9: in &lt;module&gt;
+    from ttf_news.analysis import (prepare_context, response_schema, _parse_result,
+E   ImportError: cannot import name '_token_count' from 'ttf_news.analysis' (ttf_news/analysis.py)</error></testcase></testsuite></testsuites>

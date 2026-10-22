@@ -1,0 +1,42 @@
+{
+  "reviewed_at": "2026-10-22T16:35:46.244900+00:00",
+  "reviewer": "independent structured_review agent",
+  "scope": "Read-only candidate code/diff, tests, original12 audit and captured real OneSubsea HTML review. One pure parser evaluation, no model/network/service/productionDB action.",
+  "candidate_sha256": {
+    "ingest.py": "7f460f7a3260b685914264f3fc7638e31716d6dadde1f913580d064465395059",
+    "runtime.py": "dd24abb89c0b878e19f7d74d531e3dd0b4640cd53e372ee189bd2dd2efe2f14f"
+  },
+  "supporting_files": {
+    "proposal-proof.json": "dd039b9b409c565f1ef95b05468a4e450f00f0c58d6fe4c86c3f63202a95ec01",
+    "original-12-readonly-audit.json": "4ee98a566d02d89ff7a8ea9f2e599398a621f15d7954b1d9fc03a93c3e60628c"
+  },
+  "overall": "Basic authority, DOM and metadata dispatch boundaries are sound; P2 recovery/revision coverage concerns require correction before claiming robust ongoing API-authoritative collection.",
+  "passed": [
+    "Payload API is primary, RSS only discovers URLs; primary records override same-URL RSS records.",
+    "Known authoritative API body, precise timestamps and text are not replaced by lower-fidelity RSS/HTML; missing same-API fields retain known values.",
+    "Actual API/RSS retrieval and parse failures remain source failures and poll statuspartial even if another discovery channel succeeds.",
+    "Captured real OneSubsea HTML produces14 actual body paragraphs including Brazil,3000m,15years,5millionhours and12FramSor trees; presentation header/author/caption are excluded structurally, not by removing relative-age words or protected clauses from factual text.",
+    "Runtime suppresses model dispatch only for a compared non-substantive revision with unchangedtrade_date. Substantive changes and publication-window corrections continue to dispatch.",
+    "The10of12 prior-known authoritative replay does not imply production will immediately have zero changes: first authoritative migrations may be real newly observed body/version differences."
+  ],
+  "p2_concerns": [
+    {
+      "issue": "Partial RSS success advances the wrong recovery watermark",
+      "code_flow": "Live API begin uses state.last_success_at minus1day. poll_source writes last_success_at=now even when API fails and RSS succeeds, resulting in statuspartial. Repeated partial polls move that watermark past the original missing API interval.",
+      "effect": "After an API outage lasting multiple days, recovery scans only the most recent day and may never complete older missed API bodies/pages or corrections. A partial label preserves visibility but does not repair the missing interval.",
+      "minimal_design": "Keep a separate complete API success/recovery watermark that advances only after a complete primary API scan. RSS partial successes must not move it. Preserve sourcepartial while fallback data remains available."
+    },
+    {
+      "issue": "Published-at-only primary scan plus unconditional known-API carry can miss real older-article revisions",
+      "code_flow": "Primary API query filters publishedAt since the recent begin. If a known API article is older than that range and its RSS metadata/body changes, _preserve_publisher_authority returns the oldrecord without validating the publisher API again.",
+      "effect": "Preventing a transport downgrade can also suppress a genuine source correction or ongoing-event update.",
+      "minimal_design": "Confirm changed known-API RSS observations through a single authoritative API record lookup, or use a verified updatedAt increment in addition to bounded publication discovery. Do not blindly accept lower-fidelity text as a revision."
+    }
+  ],
+  "required_live_checks": [
+    "Two actual collector polls after deployment: first may legitimately migrate to API authority; second should be stable for unchanged source content.",
+    "A real source failure remainspartial rather than no-news/healthy.",
+    "Do not delete original12 queue/prediction artifacts or reset frozen validation baseline."
+  ],
+  "boundary": "This is a candidate preflight review, not a real deployed collector acceptance report. No failure sample, source record or original prediction was rewritten."
+}

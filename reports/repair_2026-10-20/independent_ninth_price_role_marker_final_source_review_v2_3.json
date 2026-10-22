@@ -1,0 +1,111 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T05:10:07.079255+00:00",
+  "scope": "Single finite independent review of the ninth price-time-role alias correction and the authorized same-contract marker false-positive repair. No extension into new language families, model availability, or production release.",
+  "candidate_analysis": {
+    "file": ".runtime/ninth-price-role-alias-proposal/revision-marker-scope/ttf_news/analysis.py",
+    "sha256": "8ac01ca8120def7f963cdeab8f4eb0bd2dae4c71eb921a9ab5941f70bf1fe1a5"
+  },
+  "base_analysis": {
+    "file": ".runtime/ninth-price-role-alias-proposal/analysis.before.py",
+    "sha256": "bcd240a893a87e842fc8caff8f4efa156f80cac7d8807b2c8c4c3a8599bfcdfa"
+  },
+  "candidate_semantics_unchanged_sha256": "3fcdf8708e49be0bc7060e0e97f45fbfcf5262dabdfc431d70aca0a748791ff7",
+  "candidate_proposal": {
+    "file": ".runtime/ninth-price-role-alias-proposal/revision-marker-scope/proposal-proof.json",
+    "sha256": "d47319efb6da17e8fea50675d97f194fd4fa2990724da45623d6f0c525dca815"
+  },
+  "combined_patch": {
+    "file": ".runtime/ninth-price-role-alias-proposal/revision-marker-scope/proposal.patch",
+    "sha256": "74ae2f87bcd91c2c751628ca3c581a896f8596552232aecadff3f824371892fe"
+  },
+  "marker_only_patch": {
+    "file": ".runtime/ninth-price-role-alias-proposal/revision-marker-scope/marker-only.patch",
+    "sha256": "40cac2255bf182f354b70e63b310eac07b316b07faa74b323402188e2ca718d6"
+  },
+  "portable_actual_fixture": {
+    "file": ".runtime/ninth-price-role-alias-proposal/revision-marker-scope/actual_fixture.json",
+    "sha256": "4ab95152d331515ef6a2c3b6b84f5bb9ed92ee7ed403c81fc67ee044c80cfbb6"
+  },
+  "candidate_test_module": {
+    "file": ".runtime/ninth-price-role-alias-proposal/revision-marker-scope/test_price_role_subject_aliases.py",
+    "sha256": "b2d7f1cc7364ff2816e94307090e9617f898cf728d25fd5de3407fef25e76be2"
+  },
+  "independent_final_controls": {
+    "file": "reports/repair_2026-10-20/independent_ninth_price_role_marker_final_controls_v2_3.json",
+    "sha256": "cebae04a8dcf318c6f38e39868cc4bd5ca64419a2188196a9370421e2c3074bf"
+  },
+  "independent_final_test_result": {
+    "junit": {
+      "file": "reports/repair_2026-10-20/independent-ninth-price-role-marker-final-tests-v2_3.xml",
+      "sha256": "2f84cba0f66ff3d2decf0855114e2a01cd4cb1e0426b46b64de8c9aa1670c87e"
+    },
+    "passed": 159,
+    "failures": 0,
+    "errors": 0,
+    "seconds": 3.47
+  },
+  "earlier_alias_only_independent_controls": {
+    "file": "reports/repair_2026-10-20/independent_ninth_price_role_alias_controls_v2_3.json",
+    "sha256": "1cddffff9f0fac74397f8e6aabbc84c786b8e49e48af89603af86f4d53bf60fe"
+  },
+  "earlier_alias_only_tests": {
+    "file": "reports/repair_2026-10-20/independent-ninth-price-role-alias-tests-v2_3.xml",
+    "sha256": "e650c17f984b90b129141be5e31c616b20256885df5c501adea2e5cf65f23e63"
+  },
+  "initial_legal_marker_false_positive_preserved": {
+    "file": "reports/repair_2026-10-20/independent_ninth_price_role_initial_harness_boundary_v2_3.json",
+    "sha256": "f9006fb9b219af7b22ec1dbf3ba1de992fb5f390d7ae71d178aab87512f65dd7"
+  },
+  "changed_top_level_ast_nodes": [
+    "_validate_prediction_semantics"
+  ],
+  "all_other_top_level_functions_classes_and_shared_input_ast_unchanged": true,
+  "finite_source_findings": [
+    {
+      "scope": "previous_reference_subject_role",
+      "verdict": "pass",
+      "reason": "Previous-reference/close/settlement noun aliases cannot relabel the previous level and current quote as the previous day own rise, including a nonnumeric summary. The exact ninth wrong body is rejected with its true previous date/value and current observed clock/value in feedback."
+    },
+    {
+      "scope": "legitimate_previous_day_report",
+      "verdict": "pass",
+      "reason": "A separately cited daily report must be known as_of, same contract, exact previous price_date, and explicitly describe that day own signed movement. Projected, future, foreign-contract, wrong-date, opposite, uncited and current-versus-prior comparison sources do not establish that return. Historical comparison validation remains a separate existing route."
+    },
+    {
+      "scope": "current_observed_marker",
+      "verdict": "pass_after_authorized_narrow_repair",
+      "reason": "Current/now marker permits optional同合约 and existingTTF before quotation nouns. The wording alone is not evidence: matching baseline identity/clocks, amount/precision, sign and units are still checked. The initially legitimate control now passes."
+    },
+    {
+      "scope": "observed_number_vs_target",
+      "verdict": "pass",
+      "reason": "Known current-versus-prior delta, percentage, latest level, and previous level operands remain distinct. Unsupported future target/magnitude or a price level masquerading as a delta is rejected. The existing<=0.011 absolute bound and output-decimal precision cap remain."
+    }
+  ],
+  "old_twenty_plus_auto_bad_raw_all_still_rejected": true,
+  "ninth_current_bad_original_raw_sha256": "2e07462be8969fa70485663d8aad0efe22dbe241a7ca618f93f298ce473edc78",
+  "ninth_current_bad_still_rejected": true,
+  "ninth_delivered_output_original_review": {
+    "file": "reports/repair_2026-10-20/independent_production_ninth_current_live_initial_review_v2_3.json",
+    "sha256": "6e87e04322f3c9b363025f57d84cc1c815256e1f82e577d02cf7fa28752a3562"
+  },
+  "ninth_original_terminal_workflow_review": {
+    "file": "reports/repair_2026-10-20/independent_production_ninth_terminal_review_v2_3.json",
+    "sha256": "f508f25d751dee03f31a0bbb283cfab2328748fd9adddf74b6a09cd8d0921dac"
+  },
+  "verdict": "finite_source_audit_passed_no_reproduced_blocker",
+  "may_apply_exact_candidate_source": true,
+  "material_known_logic_errors": [],
+  "overall_release_passed": false,
+  "qualifications": [
+    "All original model outputs, directions, record states and failed whole-workflow attempts remain unchanged.",
+    "This local validation proves bounded source behavior, not gpt-oss20b generation reliability, actual closing accuracy, or a successful next production workflow.",
+    "Public provenance/output-burden proposals and their actual pilots require their own later audit; this review does not approve those changes."
+  ],
+  "new_model_calls": 0,
+  "database_access": false,
+  "network_calls": false,
+  "source_modification": false
+}

@@ -1,0 +1,22 @@
+{
+  "response": {
+    "model": "gpt-oss:20b",
+    "created_at": "2026-10-21T05:13:11.982194Z",
+    "message": {
+      "role": "assistant",
+      "content": "{\"news_impact\":{\"bullish_evidence\":[\"[N0] 7.6 mcm/d 产能不可用 → 供给受限 → 价格上行\",\"[N2] 13.0 mcm/d 产能不可用（活跃公告）→ 供给受限（潜在）→ 价格上行\"],\"bearish_evidence\":[],\"neutralizing_evidence\":[],\"summary\":\"Troll油气田及其他设施因年度维护计划导致可用产能下降，形成供给约束，预期对TTF价格产生上行压力。\",\"contextual_news_score\":1.5,\"direction\":\"up\",\"confidence\":0.6,\"signal_strength\":\"moderate\"},\"close_forecast\":{\"basis\":\"已观察到TTF参考价从85.062 EUR/MWh上升至87.73 EUR/MWh，且两条新闻均为供给受限，符合价格上行逻辑。\",\"summary\":\"基于观察到的价格上升和供给约束，预计收盘价相对前一交易日继续上涨，除非出现未预料的逆转因素。\",\"evidence_status\":\"forecast\",\"direction\":\"up\",\"confidence\":0.6,\"extreme_move_risk\":\"未确认实际流量恢复，未来维护可能导致进一步供给受限\"},\"analysis\":{\"summary\":\"本窗口内Troll油气田及其他设施因年度维护计划导致可用产能下降，形成供给约束，预期对TTF价格产生上行压力。\",\"evidence\":[\"[N0] 7.6 mcm/d 产能不可用 → 供给受限 → 价格上行\",\"[N2] 13.0 mcm/d 产能不可用（活跃公告）→ 供给受限（潜在）→ 价格上行\"],\"negation_or_reversal\":[],\"priced_in_comment\":\"price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格\",\"matched_terms\":[],\"historical_comparisons\":[]},\"risk_flags\":[],\"references\":[{\"id\":\"N0\",\"url\":\"\"},{\"id\":\"N2\",\"url\":\"\"}],\"missing_fields\":[]}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 32630215042,
+    "load_duration": 6516500,
+    "prompt_eval_count": 9611,
+    "prompt_eval_cached_count": 0,
+    "prompt_eval_duration": 9817661000,
+    "eval_count": 1277,
+    "eval_duration": 22645296000
+  },
+  "raw_content": "{\"news_impact\":{\"bullish_evidence\":[\"[N0] 7.6 mcm/d 产能不可用 → 供给受限 → 价格上行\",\"[N2] 13.0 mcm/d 产能不可用（活跃公告）→ 供给受限（潜在）→ 价格上行\"],\"bearish_evidence\":[],\"neutralizing_evidence\":[],\"summary\":\"Troll油气田及其他设施因年度维护计划导致可用产能下降，形成供给约束，预期对TTF价格产生上行压力。\",\"contextual_news_score\":1.5,\"direction\":\"up\",\"confidence\":0.6,\"signal_strength\":\"moderate\"},\"close_forecast\":{\"basis\":\"已观察到TTF参考价从85.062 EUR/MWh上升至87.73 EUR/MWh，且两条新闻均为供给受限，符合价格上行逻辑。\",\"summary\":\"基于观察到的价格上升和供给约束，预计收盘价相对前一交易日继续上涨，除非出现未预料的逆转因素。\",\"evidence_status\":\"forecast\",\"direction\":\"up\",\"confidence\":0.6,\"extreme_move_risk\":\"未确认实际流量恢复，未来维护可能导致进一步供给受限\"},\"analysis\":{\"summary\":\"本窗口内Troll油气田及其他设施因年度维护计划导致可用产能下降，形成供给约束，预期对TTF价格产生上行压力。\",\"evidence\":[\"[N0] 7.6 mcm/d 产能不可用 → 供给受限 → 价格上行\",\"[N2] 13.0 mcm/d 产能不可用（活跃公告）→ 供给受限（潜在）→ 价格上行\"],\"negation_or_reversal\":[],\"priced_in_comment\":\"price_reference:未提供该公告前后的可比价格反应，无法确认消息是否已计入价格\",\"matched_terms\":[],\"historical_comparisons\":[]},\"risk_flags\":[],\"references\":[{\"id\":\"N0\",\"url\":\"\"},{\"id\":\"N2\",\"url\":\"\"}],\"missing_fields\":[]}",
+  "raw_content_sha256": "b179f6da281a7b2f183779137c2e80a6bc404fa392dc41d281b4d4a3eacbcd8f",
+  "elapsed_seconds": 32.64882650016807
+}

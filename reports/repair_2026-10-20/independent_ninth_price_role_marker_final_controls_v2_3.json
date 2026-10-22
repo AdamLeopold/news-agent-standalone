@@ -1,0 +1,192 @@
+{
+  "candidate_analysis_sha256": "8ac01ca8120def7f963cdeab8f4eb0bd2dae4c71eb921a9ab5941f70bf1fe1a5",
+  "paired_controls": [
+    {
+      "claim": "当前同合约报价较前一交易日结算价上涨2.67 EUR/MWh。",
+      "expected_reject": false,
+      "error": null
+    },
+    {
+      "claim": "目前的同合约气价较前一交易日结算价上涨2.67 EUR/MWh。",
+      "expected_reject": false,
+      "error": null
+    },
+    {
+      "claim": "当前TTF报价较前一交易日结算价上涨2.67 EUR/MWh。",
+      "expected_reject": false,
+      "error": null
+    },
+    {
+      "claim": "目前的TTF价格较前一交易日结算价上涨2.67 EUR/MWh。",
+      "expected_reject": false,
+      "error": null
+    },
+    {
+      "claim": "当前同合约报价较前一交易日结算价上涨2.00 EUR/MWh。",
+      "expected_reject": true,
+      "error": "没有校准价格预测输入，禁止编造上涨/下跌幅度或目标价；仅可引用输入已观察的同合约参考变化"
+    },
+    {
+      "claim": "当前同合约报价较前一交易日结算价下跌2.67 EUR/MWh。",
+      "expected_reject": true,
+      "error": "没有校准价格预测输入，禁止编造上涨/下跌幅度或目标价；仅可引用输入已观察的同合约参考变化"
+    },
+    {
+      "claim": "当前同合约报价较前一交易日结算价上涨2.67 EUR/mcm。",
+      "expected_reject": true,
+      "error": "close_forecast.basis:TTF报价/参考变动单位必须保留输入EUR/mwh，不能写成EUR/mcm；能源报价不是体积容量，未经已给换算依据不得替换货币或分母。不改变预测方向"
+    },
+    {
+      "claim": "预计当前同合约报价收盘上涨2.67 EUR/MWh。",
+      "expected_reject": true,
+      "error": "没有校准价格预测输入，禁止编造上涨/下跌幅度或目标价；仅可引用输入已观察的同合约参考变化"
+    },
+    {
+      "claim": "基于前一交易日参考价上涨。",
+      "expected_reject": true,
+      "error": "价格时间角色不符：前日参考(2026-10-20)为85.062 EUR/MWh；当前报价(2026-10-21T04:36:00+00:00)为87.73 EUR/MWh；已观察当前对前日差为2.668。这不是前一交易日自身的涨跌；请明确前日参考/当前观察各自时钟，不把观察差当未来目标幅度或指定预测方向"
+    },
+    {
+      "claim": "上一交易日结算价格从85.062 EUR/MWh升至87.73 EUR/MWh。",
+      "expected_reject": true,
+      "error": "价格时间角色不符：前日参考(2026-10-20)为85.062 EUR/MWh；当前报价(2026-10-21T04:36:00+00:00)为87.73 EUR/MWh；已观察当前对前日差为2.668。这不是前一交易日自身的涨跌；请明确前日参考/当前观察各自时钟，不把观察差当未来目标幅度或指定预测方向"
+    },
+    {
+      "claim": "当前同合约报价较前一交易日结算价上涨2.67 EUR/MWh。",
+      "expected_reject": true,
+      "error": "没有校准价格预测输入，禁止编造上涨/下跌幅度或目标价；仅可引用输入已观察的同合约参考变化"
+    },
+    {
+      "claim": "当前同合约报价较前一交易日结算价上涨2.67 EUR/MWh。",
+      "expected_reject": true,
+      "error": "没有校准价格预测输入，禁止编造上涨/下跌幅度或目标价；仅可引用输入已观察的同合约参考变化"
+    },
+    {
+      "claim": "当前同合约报价较前一交易日结算价上涨2.67 EUR/MWh。",
+      "expected_reject": true,
+      "error": "没有校准价格预测输入，禁止编造上涨/下跌幅度或目标价；仅可引用输入已观察的同合约参考变化"
+    },
+    {
+      "claim": "目前同合约报价较前一交易日结算价下跌2 EUR/MWh。",
+      "expected_reject": false,
+      "error": null
+    }
+  ],
+  "old_twenty_plus_auto_bad_raw_replays": [
+    {
+      "case": "weak_exploration_no_quote",
+      "raw_sha256": "6ac8df5561c98897f3663043065321959121cfc5606a32833336b8ef529eff0b",
+      "rejected": true
+    },
+    {
+      "case": "weak_news_observed_market_up",
+      "raw_sha256": "ed947244f6672f8ecf2ee878e7106d28a7830ddee4d02f75bc99d0adee7df251",
+      "rejected": true
+    },
+    {
+      "case": "supply_restore_40_with_flat_baseline",
+      "raw_sha256": "e70b1eeced61a0ca82702ee329ca6bee674dac90bc2e65abf54822c95deeffb9",
+      "rejected": true
+    },
+    {
+      "case": "anchor_legal_prevday_weak_market_up",
+      "raw_sha256": "978e0af10124b6ac118527bced66cb752c93310dd08bb7e5ac45f875cb8d1968",
+      "rejected": true
+    },
+    {
+      "case": "anchor_real_manual_missing_prevday",
+      "raw_sha256": "bdc3f17c8ff05ac997aeba24d96f987478fa8968823d0426ee030321003253cb",
+      "rejected": true
+    },
+    {
+      "case": "future_planned_notice",
+      "raw_sha256": "09d26b8dcbf07c35d44803abf0d0aee8ce3c8cc4a1e4af0a5032d30259a2b63c",
+      "rejected": true
+    },
+    {
+      "case": "supply_loss_40_with_flat_baseline",
+      "raw_sha256": "dd1f44e9ef94887f17bd051dbac3e4c282131e5bfe637ec2957c5b114f645ef5",
+      "rejected": true
+    },
+    {
+      "case": "anchor_real_manual_missing_prevday",
+      "raw_sha256": "11e4dd39600e3cac0308bf3ad4100900431e4314173de83e25cfd1b034e815b9",
+      "rejected": true
+    },
+    {
+      "case": "v2_0_missing_previous_trading_day_anchor",
+      "raw_sha256": "42094e73a35ea27e1306bf4b94f757072fa0329d4ee4515375dcb00313613770",
+      "rejected": true
+    },
+    {
+      "case": "v2_1_future_abandonment_asserted_completed",
+      "raw_sha256": "2be1a16116bf38be121aaeb0147abf35f97b6f71155de52979308245d1a87a91",
+      "rejected": true
+    },
+    {
+      "case": "v2_1_field_misidentified_as_pipeline",
+      "raw_sha256": "979e22270e7d00c609a22825a40cfd0d258e67feb7af0292bb1f14aac05d9964",
+      "rejected": true
+    },
+    {
+      "case": "dismissed_notice_not_verified_recovery",
+      "raw_sha256": "ff0860953edcff8326137e7680741f231c60ac52ca4cc792b735ecd278bb613d",
+      "rejected": true
+    },
+    {
+      "case": "dismissed_notice_not_verified_recovery",
+      "raw_sha256": "5a173dcdbcc64f841702d81853e17bc28d7f122bb27ff3e3ae3a8a154cf6c2d5",
+      "rejected": true
+    },
+    {
+      "case": "anchor_legal_prevday_weak_market_up",
+      "raw_sha256": "b1ac4f872330d717ddf0748cfa4f65f536d9ac2a7d389d2d3786ac2d69985d6f",
+      "rejected": true
+    },
+    {
+      "case": "fifth_current_wrong_price_unit",
+      "raw_sha256": "11b38edc3c6117ce32e855dd47806552f4950cbb02c7e2a146a1ac508f995124",
+      "rejected": true
+    },
+    {
+      "case": "real_eni",
+      "raw_sha256": "17fcc5caae952ca8feb2ad05892d96d6bf6c10c35c96886bfe6d2fda015fa3cf",
+      "rejected": true
+    },
+    {
+      "case": "anchor_real_manual_missing_prevday",
+      "raw_sha256": "217e26d7eec7c19e54b2c9eaed8071d1496512be83f3b2d60a49d00ed7c932e9",
+      "rejected": true
+    },
+    {
+      "case": "retained_future_price_zero",
+      "raw_sha256": "bbff4e9280b02e22641542c24941d03738d933c8093123125bc3aa0a18d4e405",
+      "rejected": true
+    },
+    {
+      "case": "manual_reaction_degree",
+      "raw_sha256": "d72b3686938aa585d99f2359ee1b3813dd13e63716169c9842f0590063038e80",
+      "rejected": true
+    },
+    {
+      "case": "current_pricing_unknown",
+      "raw_sha256": "f2ba2e925a1e4ed3b601d5b0238dfe7b81a1ef8634e42443e2a2f54101ad06ae",
+      "rejected": true
+    },
+    {
+      "case": "eighth_future_window_knowledge",
+      "raw_sha256": "2f1405df32a4f7c3931d3b15106f7b732aab66223116642ed918eba1e1f6ccc9",
+      "rejected": true
+    }
+  ],
+  "ninth_actual_raw_sha256": "2e07462be8969fa70485663d8aad0efe22dbe241a7ca618f93f298ce473edc78",
+  "ninth_actual_rejected": true,
+  "ninth_actual_error": "价格时间角色不符：前日参考(2026-10-20)为85.062 EUR/MWh；当前报价(2026-10-21T04:36:00+00:00)为87.73 EUR/MWh；已观察当前对前日差为2.668。这不是前一交易日自身的涨跌；请明确前日参考/当前观察各自时钟，不把观察差当未来目标幅度或指定预测方向",
+  "original_raw_and_direction_unchanged": true,
+  "changed_top_level_ast_nodes": [
+    "_validate_prediction_semantics"
+  ],
+  "new_model_calls": 0,
+  "database_access": false,
+  "source_modification": false
+}

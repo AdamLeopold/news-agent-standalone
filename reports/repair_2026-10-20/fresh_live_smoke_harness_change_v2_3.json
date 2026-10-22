@@ -1,0 +1,12 @@
+{
+  "old_harness_sha256": "a1584be6d3e13868f18be7c0e99d8dad2e1011ade81c07737b0f2bdb5b34db76",
+  "new_harness_sha256": "82659ddc55673b0bfd6ef48fd68d316bb587a2c6a97b1c6d18d05aaeab431d7d",
+  "previous_harness_archive": ".runtime/source-archives/live-repair-smoke-a1584be6d3e13868f18be7c0e99d8dad2e1011ade81c07737b0f2bdb5b34db76.py",
+  "change": "Optional fresh-live path appends a current-window real collected article via normal API, and requires that new ID at the dashboard check. No source code, old record, model policy, case fixture, or release criterion changes.",
+  "previous_failed_smokes_preserved": true,
+  "self_tests": {
+    "count": 9,
+    "failures": 0,
+    "log_sha256": "3ad8b0ddf5c42fd7b159ef2d06fba9dd867a8ca59a53069882b3dd7653f0bce8"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "artifacts": [
+    {
+      "file": "reports/repair_2026-10-20/semantic-regeneration-pre-price-gate-unit-tests.xml",
+      "sha256": "99658e3de1c3c521687428798c7a6f715e0dffebc22286bdb22294ae6d5b9cd6",
+      "bytes": 107190
+    },
+    {
+      "file": "reports/repair_2026-10-20/semantic-regeneration-pre-price-gate-unit-tests.log",
+      "sha256": "7fd230cbefb9a542d0e04c41335266148f25dfb954c50385c24c4e667d334f43",
+      "bytes": 1357
+    }
+  ],
+  "originals_retained": true
+}

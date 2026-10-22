@@ -1,0 +1,20 @@
+{
+  "scope": "Final 2.4.4 real mixed-news mechanism diagnostic; not historical price accuracy.",
+  "files": [
+    {
+      "source": ".runtime/structured-reasoning-v4/clause-id-v4/real_batch_01/current_mixed_live.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_4/current_mixed_live.json",
+      "sha256": "a768b452047208f5e3b981d4e65cb4810522981c77fd5366594ca36f79c2279c"
+    },
+    {
+      "source": ".runtime/structured-reasoning-v4/clause-id-v4/real_batch_01/independent_review.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_4/independent_review.json",
+      "sha256": "57f555e94f28dda5da68fe2218108edf7084c12f375389d84d1a7013c0977ffa"
+    },
+    {
+      "source": ".runtime/structured-reasoning-v4/clause-id-v4/real_batch_01/summary.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_4/summary.json",
+      "sha256": "b9605632d14e376e5d55b60944214b9cd5a9762df34ed37a5bca962486a2826b"
+    }
+  ]
+}

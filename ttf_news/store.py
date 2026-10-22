@@ -22,6 +22,43 @@ def canonical_url(url: str) -> str:
     return urlunsplit((p.scheme.lower(), p.netloc.lower(), p.path.rstrip("/"), urlencode(sorted(query)), ""))
 
 
+def _same_publisher_metadata(incoming: dict, previous: dict) -> bool:
+    """Missing feed clocks do not retract an already observed publisher clock."""
+    if any(incoming.get(key)!=previous.get(key) for key in ("title","summary")):
+        return False
+    def same_time(left,right):
+        if not left or not right:
+            return not left and not right
+        try:
+            return parse_time(left)==parse_time(right)
+        except (ValueError,TypeError):
+            return left==right
+    if incoming.get("updated_at") and not same_time(incoming["updated_at"],previous.get("updated_at")):
+        return False
+    if incoming.get("published_at"):
+        return same_time(incoming["published_at"],previous.get("published_at"))
+    if incoming.get("published_date") and incoming.get("published_date")!=previous.get("published_date"):
+        return False
+    return True
+
+
+def _price_known_at(item: dict, fallback: str) -> str:
+    """Use a recorded local observation clock, never the historical price date."""
+    for key in ('known_at','fetched_at','collected_at'):
+        if item.get(key):
+            try:
+                return iso(parse_time(item[key]))
+            except (ValueError,TypeError):
+                continue
+    return fallback
+
+
+def _price_economic_identity(item: dict) -> tuple:
+    # Verification and delivery identity affect eligibility for model input and
+    # scoring; fetch/source-description metadata does not change an observation.
+    return tuple(item.get(key) for key in ('value','verified','delivery_month','contract_month','last_trading_date','unit'))
+
+
 class Store:
     def __init__(self, path: str | Path | None = None):
         self.path = Path(path or DB_PATH)
@@ -62,6 +99,10 @@ class Store:
               CREATE TABLE IF NOT EXISTS prices (contract TEXT, day TEXT, price_type TEXT, value REAL, data TEXT NOT NULL,
                 PRIMARY KEY(contract,day,price_type));
               CREATE INDEX IF NOT EXISTS price_day ON prices(day,price_type);
+              CREATE TABLE IF NOT EXISTS price_versions (contract TEXT, day TEXT, price_type TEXT,
+                known_at TEXT, value REAL, data TEXT NOT NULL,
+                PRIMARY KEY(contract,day,price_type,known_at));
+              CREATE INDEX IF NOT EXISTS price_version_known ON price_versions(known_at,day);
               CREATE TABLE IF NOT EXISTS analyses (id TEXT PRIMARY KEY, news_id TEXT, kind TEXT, status TEXT,
                 created_at TEXT, completed_at TEXT, trade_date TEXT, input_snapshot TEXT, result TEXT, error TEXT,
                 detail_status TEXT DEFAULT 'not_requested', detail_result TEXT, detail_error TEXT, frozen INTEGER DEFAULT 0);
@@ -85,6 +126,17 @@ class Store:
                 content_hash TEXT, available_at TEXT, data TEXT,
                 PRIMARY KEY(source,contract,day,content_hash));
             ''')
+            # Seed only identities that have no history yet. Preserve the old
+            # prices rows/data exactly; absent local clocks become known now,
+            # rather than being backdated to the observation's calendar day.
+            migrated_at=iso()
+            unversioned=c.execute('''SELECT p.* FROM prices p WHERE NOT EXISTS
+              (SELECT 1 FROM price_versions v WHERE v.contract=p.contract
+               AND v.day=p.day AND v.price_type=p.price_type)''').fetchall()
+            c.executemany('INSERT OR IGNORE INTO price_versions VALUES (?,?,?,?,?,?)',
+                          [(row['contract'],row['day'],row['price_type'],
+                            _price_known_at(json.loads(row['data']),migrated_at),row['value'],row['data'])
+                           for row in unversioned])
 
     def emit(self, event_type: str, payload: dict):
         with self.connection() as c:
@@ -101,7 +153,10 @@ class Store:
             raise ValueError("Collected news requires a source URL")
         identifier = item.get("id") or hashlib.sha256(url.encode()).hexdigest()[:24]
         now = iso()
-        digest = hashlib.sha256(dumps([item.get(k) for k in ("title","summary","updated_at","source_revision","published_at","published_date","timestamp_precision","timestamp_source")]).encode()).hexdigest()
+        content_fields=[item.get(k) for k in ("title","summary","updated_at","source_revision","published_at","published_date","timestamp_precision","timestamp_source")]
+        if item.get('fact_excerpt'):
+            content_fields.append(item['fact_excerpt'])
+        digest = hashlib.sha256(dumps(content_fields).encode()).hexdigest()
         published = item.get("published_at")
         if published:
             try:
@@ -119,6 +174,14 @@ class Store:
             old = c.execute("SELECT * FROM news WHERE url=?", (url,)).fetchone()
             if old:
                 previous = json.loads(old["data"])
+                # A metadata-only poll has not retracted previously observed
+                # public paragraphs. Keep the exact enriched version when the
+                # publisher's identifying metadata is unchanged; otherwise a
+                # bare RSS poll and article fetch would alternate revisions.
+                same_metadata=_same_publisher_metadata(item,previous)
+                same_excerpt=not item.get("fact_excerpt") or item.get("fact_excerpt")==previous.get("fact_excerpt")
+                if previous.get("fact_excerpt") and same_excerpt and not item.get("is_premium") and same_metadata:
+                    return {**previous,"_created":False,"_revised":False}
                 identifier = old["id"]
                 item.update(id=identifier, first_seen_at=previous["first_seen_at"], version=previous.get("version",1))
                 revised = old["content_hash"] != digest
@@ -149,6 +212,27 @@ class Store:
         with self.connection() as c:
             row = c.execute("SELECT data FROM news WHERE id=?", (identifier,)).fetchone()
         return json.loads(row[0]) if row else None
+
+    def previous_news_version(self, identifier: str, version: int, as_of: str) -> dict | None:
+        """Read the nearest lower version actually observed by the cutoff.
+
+        Do not read the mutable latest news row or equate a publisher's revision
+        clock with local availability. Parse clocks before comparison so offset
+        representations cannot expose a later observation.
+        """
+        cutoff = parse_time(as_of)
+        with self.connection() as c:
+            c.execute("PRAGMA query_only=ON")
+            rows = c.execute("SELECT version,known_at,data FROM news_versions WHERE news_id=? AND version<? ORDER BY version DESC",
+                             (identifier, version)).fetchall()
+        for row in rows:
+            try:
+                known = parse_time(row["known_at"])
+            except (ValueError, TypeError):
+                continue
+            if known <= cutoff:
+                return {"version": row["version"], "known_at": iso(known), "data": json.loads(row["data"])}
+        return None
 
     def news(self, limit: int = 50, offset: int = 0, trade_date: str | None = None, scope: str = "all") -> list[dict]:
         with self.connection() as c:
@@ -236,48 +320,21 @@ class Store:
             row=c.execute('SELECT data FROM events WHERE id=?',(identifier,)).fetchone()
         return json.loads(row[0]) if row else None
 
-    def retrieve_events(self, text: str, as_of: str, limit: int = 6) -> list[dict]:
+    def retrieve_events(self, text: str, as_of: str, limit: int = 6, *,
+                        exclude_news_ids=None, current_event_ids=None) -> list[dict]:
+        """Retrieve known atomic analogues and separately labelled ongoing risks.
+
+        Current-window event IDs never become historical analogues. Retrieval
+        does not modify the source archive, versions or original price labels.
+        """
+        from .retrieval import rank_events
         as_of = iso(parse_time(as_of))
-        tokens = list(dict.fromkeys(re.findall(r"[a-zA-Z]{3,}|[\u4e00-\u9fff]{2,6}", text.lower())))[:24]
-        # Deterministic bilingual entities/mechanisms support Chinese manual input against English archives.
-        aliases={'挪威':['norway','norwegian','gassco'],'停产':['outage','shutdown','unavailability'],'停供':['outage','unavailability'],'中断':['disruption','outage'],'复产':['restart','resume'],
-            '温和':['mild','warm'],'暖冬':['mild','warm'],'库存':['storage','inventory'],'制裁':['sanction'],'俄罗斯':['russia'],'乌克兰':['ukraine'],'到港':['lng','cargo']}
-        for term,related in aliases.items():
-            if term in text.lower():
-                tokens.extend(related)
-        tokens=list(dict.fromkeys(tokens))
-        stop = {"the", "and", "for", "with", "that", "this", "news", "gas", "natural", "from", "will", "have"}
-        query = " OR ".join('"'+v+'"' for v in tokens if v not in stop)
         with self.connection() as c:
             versions = [json.loads(r[0]) for r in c.execute('''SELECT v.data FROM event_versions v JOIN
               (SELECT event_id,MAX(known_at) latest FROM event_versions WHERE known_at<=? GROUP BY event_id) m
               ON m.event_id=v.event_id AND m.latest=v.known_at''',(as_of,))]
-        eligible = [e for e in versions if e.get("known_at", "9999") <= as_of and e.get('state')!='superseded']
-        terms = [t for t in tokens if t not in stop]
-        def relevance(e):
-            title=str(e.get('title','')).lower()
-            content=" ".join(str(e.get(k,'')) for k in ('summary','category','entities','matched_terms')).lower()
-            score=sum(2*(t in title)+(t in content) for t in terms)
-            # Daily legacy bundles contain dozens of unrelated headlines; avoid letting length alone win.
-            if e.get('source')=='legacy_daily':
-                score*=.65
-            return score
-        active = sorted([e for e in eligible if e.get("state")=="active"],key=lambda e:(relevance(e),e.get("event_date","")),reverse=True)[:min(2,limit)]
-        # Reserve room for ongoing risks rather than filling every slot with old analogues.
-        hits = sorted([e for e in eligible if relevance(e)>0],key=lambda e:(relevance(e),e.get("event_date","")),reverse=True)[:max(0,limit-len(active))]
-        ids = {e["id"] for e in hits}
-        for event in active:
-            if event["id"] not in ids:
-                event["retrieval_role"] = "active_background"
-                hits.append(event)
-                ids.add(event['id'])
-        for event in sorted(eligible,key=lambda e:(relevance(e),e.get('event_date','')),reverse=True):
-            if len(hits)>=limit:
-                break
-            if event['id'] not in ids and relevance(event)>0:
-                hits.append(event)
-                ids.add(event['id'])
-        return hits
+        return rank_events(versions,text,parse_time(as_of),limit,
+                           exclude_news_ids=exclude_news_ids,current_event_ids=current_event_ids)
 
     def upsert_price(self, item: dict):
         contract = str(item.get("contract") or item.get("contract_id") or item.get("series_id") or "")
@@ -287,6 +344,15 @@ class Store:
             raise ValueError("A price requires contract, date and value")
         item = {**item, "contract": contract, "day": day, "value": float(value), "price_type": item.get("price_type", "reference")}
         with self.connection() as c:
+            previous=c.execute('''SELECT known_at,data FROM price_versions
+              WHERE contract=? AND day=? AND price_type=? ORDER BY known_at DESC LIMIT 1''',
+                               (contract,day,item['price_type'])).fetchone()
+            if not previous or _price_economic_identity(json.loads(previous['data']))!=_price_economic_identity(item):
+                known_at=_price_known_at(item,iso())
+                if previous and known_at<=previous['known_at']:
+                    known_at=iso(parse_time(previous['known_at'])+timedelta(microseconds=1))
+                c.execute('INSERT INTO price_versions VALUES (?,?,?,?,?,?)',
+                          (contract,day,item['price_type'],known_at,item['value'],dumps(item)))
             c.execute("INSERT OR REPLACE INTO prices VALUES (?,?,?,?,?)", (contract,day,item["price_type"],item["value"],dumps(item)))
 
     def create_analysis(self, context: dict, kind: str, news_id: str | None = None, priority: int = 10) -> dict:
@@ -308,9 +374,104 @@ class Store:
             result[key] = json.loads(result[key]) if result[key] else None
         if not include_input:
             result.pop("input_snapshot", None)
+        result['review']=self.analysis_review(identifier)
         return result
 
-    def latest_analysis(self, news_id: str | None = None, trade_date: str | None = None, completed_only: bool = False, live_only: bool = False) -> dict | None:
+    def analysis_protected_hashes(self, identifier: str) -> dict:
+        """Hash the stored bytes used to bind an additive review to a version."""
+        with self.connection() as c:
+            row=c.execute('SELECT input_snapshot,result,detail_result FROM analyses WHERE id=?',(identifier,)).fetchone()
+        if row is None:
+            raise KeyError(identifier)
+        return {key:hashlib.sha256(row[key].encode('utf-8')).hexdigest() if row[key] is not None else None
+                for key in ('input_snapshot','result','detail_result')}
+
+    def analysis_review(self, identifier: str, as_of: str | None = None) -> dict | None:
+        """Read append-only review metadata without changing canonical results.
+
+        Brief and detail applicability are independent. A detail generated
+        after a brief review neither clears that review nor acquires it.
+        """
+        cutoff=parse_time(as_of) if as_of is not None else None
+        with self.connection() as c:
+            raw=c.execute('SELECT input_snapshot,result,detail_result FROM analyses WHERE id=?',(identifier,)).fetchone()
+            sql="SELECT id,created_at,data FROM metrics WHERE type='analysis_review'"
+            rows=c.execute(sql+(' AND julianday(created_at)<=julianday(?)' if cutoff is not None else '')+' ORDER BY id DESC',
+                           (iso(cutoff),) if cutoff is not None else ()).fetchall()
+        if raw is None:
+            return None
+        hashes={key:hashlib.sha256(raw[key].encode('utf-8')).hexdigest() if raw[key] is not None else None
+                for key in ('input_snapshot','result','detail_result')}
+        parts={}
+        matched=[]
+        for row in rows:
+            if cutoff is not None:
+                # SQLite's date math rounds sub-millisecond precision; retain
+                # an exact aware-time check so post-cutoff reviews never leak.
+                try:
+                    if parse_time(row['created_at'])>cutoff:
+                        continue
+                except (ValueError,TypeError):
+                    continue
+            data=json.loads(row['data'])
+            if data.get('analysis_id')!=identifier:
+                continue
+            stored=data.get('protected_hashes') or {}
+            for part in data.get('affected_parts',[]):
+                field='result' if part=='brief' else 'detail_result'
+                if (part not in parts and stored.get('input_snapshot')==hashes['input_snapshot']
+                        and stored.get(field) is not None and stored.get(field)==hashes[field]):
+                    parts[part]={'status':data['status'],'reason_code':data['reason_code'],
+                                 'message_zh':data['message_zh'],'message_en':data['message_en'],
+                                 'review_id':data['review_id'],'metric_id':row['id'],'reviewed_at':row['created_at']}
+            matched.append({**data,'metric_id':row['id'],'reviewed_at':row['created_at']})
+        if not matched:
+            return None
+        invalid=[part for part,item in parts.items() if item['status']=='invalid']
+        primary=parts.get('brief') or parts.get('detail') or {}
+        return {'status':'invalid' if invalid else 'cleared' if parts else 'not_applicable',
+                'invalid_parts':invalid,'parts':parts,'latest_review':matched[0],
+                'reason_code':primary.get('reason_code'),'message_zh':primary.get('message_zh'),
+                'message_en':primary.get('message_en')}
+
+    def append_analysis_review(self, identifier: str, review: dict, *, expected_hashes: dict) -> dict:
+        """Append a verified review. Call locally after deployment, never via API."""
+        if review.get('status') not in ('invalid','cleared'):
+            raise ValueError('Review status must be invalid or cleared')
+        parts=review.get('affected_parts')
+        if not isinstance(parts,list) or not parts or any(part not in ('brief','detail') for part in parts):
+            raise ValueError('Review must identify brief and/or detail')
+        for key in ('review_id','reason_code','message_zh','message_en','reviewer'):
+            if not isinstance(review.get(key),str) or not review[key].strip():
+                raise ValueError('Review requires '+key)
+        if set(expected_hashes)!=set(('input_snapshot','result','detail_result')):
+            raise ValueError('Review requires the complete protected field hashes')
+        with self.connection() as c:
+            row=c.execute('SELECT input_snapshot,result,detail_result FROM analyses WHERE id=?',(identifier,)).fetchone()
+            if row is None:
+                raise KeyError(identifier)
+            actual={key:hashlib.sha256(row[key].encode('utf-8')).hexdigest() if row[key] is not None else None
+                    for key in ('input_snapshot','result','detail_result')}
+            # Only the reviewed parts must still match: a new independent
+            # detail may legitimately have appeared since a brief was reviewed.
+            required=['input_snapshot']+['result' if part=='brief' else 'detail_result' for part in parts]
+            if any(actual[key]!=expected_hashes.get(key) for key in required):
+                raise ValueError('Reviewed canonical fields changed; inspect before appending')
+            if any(actual['result' if part=='brief' else 'detail_result'] is None for part in parts):
+                raise ValueError('Cannot review a missing result')
+            data={**review,'analysis_id':identifier,'protected_hashes':dict(expected_hashes),
+                  'affected_parts':list(dict.fromkeys(parts)),'canonical_result_modified':False}
+            for old in c.execute("SELECT data FROM metrics WHERE type='analysis_review'"):
+                existing=json.loads(old[0])
+                if existing.get('review_id')==review['review_id']:
+                    if existing!=data:
+                        raise ValueError('Review ID already belongs to different metadata')
+                    return self.analysis_review(identifier)
+            c.execute("INSERT INTO metrics(created_at,type,data) VALUES (?,'analysis_review',?)",(iso(),dumps(data)))
+        self.emit('analysis_reviewed',{'id':identifier,'affected_parts':data['affected_parts'],'status':data['status']})
+        return self.analysis_review(identifier)
+
+    def latest_analysis(self, news_id: str | None = None, trade_date: str | None = None, completed_only: bool = False, live_only: bool = False, exclude_invalid: bool = False) -> dict | None:
         filters, args = [], []
         if news_id:
             filters.append("news_id=?"); args.append(news_id)
@@ -321,12 +482,16 @@ class Store:
         if live_only:
             filters.append("kind='live'")
         with self.connection() as c:
-            row = c.execute("SELECT id FROM analyses"+(" WHERE "+" AND ".join(filters) if filters else "")+" ORDER BY created_at DESC LIMIT 1", args).fetchone()
-        return self.analysis(row[0]) if row else None
+            rows = c.execute("SELECT id FROM analyses"+(" WHERE "+" AND ".join(filters) if filters else "")+" ORDER BY created_at DESC"+('' if exclude_invalid else ' LIMIT 1'), args).fetchall()
+        for row in rows:
+            record=self.analysis(row[0])
+            if not exclude_invalid or 'brief' not in ((record or {}).get('review') or {}).get('invalid_parts',[]):
+                return record
+        return None
 
     def request_detail(self, identifier: str) -> dict:
         with self.connection() as c:
-            row = c.execute("SELECT status,detail_status FROM analyses WHERE id=?", (identifier,)).fetchone()
+            row = c.execute("SELECT status,detail_status,result FROM analyses WHERE id=?", (identifier,)).fetchone()
             if not row:
                 raise KeyError(identifier)
             if row[0] != "completed":
@@ -334,7 +499,8 @@ class Store:
             if row[1] in ("queued", "running", "completed"):
                 return {"id": identifier, "status": row[1]}
             c.execute("UPDATE analyses SET detail_status='queued',detail_error=NULL WHERE id=?", (identifier,))
-            c.execute("INSERT INTO jobs VALUES (?,?,?,?,?,?,0,NULL)", (str(uuid.uuid4()),"detail",identifier,15,"queued",iso()))
+            structured = bool((json.loads(row[2] or '{}').get('_meta') or {}).get('structured'))
+            c.execute("INSERT INTO jobs VALUES (?,?,?,?,?,?,0,NULL)", (str(uuid.uuid4()),"detail",identifier,1 if structured else 15,"queued",iso()))
         return {"id": identifier, "status": "queued"}
 
     def recover_jobs(self):
@@ -396,7 +562,8 @@ class Store:
             else:
                 c.execute("INSERT INTO analysis_translations VALUES (?,?,?,?,?,'queued',NULL,NULL,?,NULL)",
                           (identifier,analysis_id,part,language,digest,iso()))
-            priority = 12 if part=='brief' and record['kind']=='live' else 30
+            structured = bool((result.get('_meta') or {}).get('structured'))
+            priority = 1 if structured else (12 if part=='brief' and record['kind']=='live' else 30)
             c.execute("INSERT INTO jobs VALUES (?,?,?,?,?,?,0,NULL)",(str(uuid.uuid4()),'translation',identifier,priority,'queued',iso()))
         return self.translation_record(identifier)
 

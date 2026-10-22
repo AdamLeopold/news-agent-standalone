@@ -1,0 +1,40 @@
+{
+  "observed_at": "2026-10-20T20:37:21.029868+00:00",
+  "status": "passed",
+  "analysis_id": "ec3f2c31-6f49-48bb-acbd-48474ce670e2",
+  "record_origin_prompt_version": "ttf-news-standalone-2.0",
+  "backend_prompt_version": "ttf-news-standalone-2.1",
+  "api_result_is_null": true,
+  "ui_error_visible": true,
+  "ui_direction_element_count": 0,
+  "default_flat_used": false,
+  "screenshot_file": "reports/repair_2026-10-20/error_ui_final.png",
+  "screenshot_sha256": "a00c87322c4a5106e6fe7c22d848db8624033cd1ee88740f76f5b2765d552ce4",
+  "api_response_sha256": "35d29f818485868fbe04305d2d1ff4b76bb214464e44f5ef73936ab58f326c89",
+  "frontend_index_sha256": "de22cf471702ee6d48466d613a9cea7d3f5c4862b3f45e93386d46c72aa69170",
+  "evidence_boundary": "Existing real failed 2.0 record observed in 2.1 API/UI; final current source-gate rejection and six runtime failure-state cases are separate current evidence, not a new current-version model failure.",
+  "evidence_kind": "existing_real_failed_record_ui_plus_current_gate_revalidation_and_state_binding",
+  "same_record_v2_end_to_end": false,
+  "ui_observation": {
+    "file": "reports/repair_2026-10-20/error_ui_current_observation.json",
+    "sha256": "234f20c65ea27add7e1510f7f0399b368b1edf81cf2c70a371702823701018eb"
+  },
+  "current_gate_revalidation": {
+    "file": "reports/repair_2026-10-20/final_19_current_binding_gate_regression_v2_1.json",
+    "sha256": "da8668fa1cea0dac21209166e79d027b8e1a5e3bdac3c68c5208e0dc0000664c"
+  },
+  "state_binding_junit": {
+    "file": "reports/repair_2026-10-20/final-release-unit-tests.xml",
+    "sha256": "f7870d2f5bec7377f64b67b4eb644869f0f3209611e685a536ef1df8e2eb969f"
+  },
+  "public_pages_followup_pending": true,
+  "assembled_at": "2026-10-20T21:07:37.605050+00:00",
+  "no_model_calls": true,
+  "no_database_access": true,
+  "no_network_calls": true,
+  "linked_evidence_verification": {
+    "linked_current_rejections_verified": true,
+    "linked_state_binding_verified": true,
+    "linked_ui_observation_verified": true
+  }
+}

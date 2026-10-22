@@ -58,7 +58,8 @@ def main():
     now = iso()
     session = session_at(now)
     articles = store.window_news(session['trade_date'], now)
-    events = store.retrieve_events(' '.join(str(n.get('title', '')) for n in articles), now)
+    events = store.retrieve_events(' '.join(str(n.get('title', '')) for n in articles), now,
+                                   exclude_news_ids=[n['id'] for n in articles])
     monitor = monitoring_report(store)
     import httpx
     with httpx.Client(timeout=30) as client:
@@ -68,8 +69,12 @@ def main():
     save('health.json', health)
     from ttf_news.market import market_view
     save('market.json', market_view(store, now))
+    newest=store.latest_analysis(trade_date=session['trade_date'],completed_only=True,live_only=True)
+    latest=store.latest_analysis(trade_date=session['trade_date'],completed_only=True,live_only=True,exclude_invalid=True)
+    excluded=({'id':newest['id'],'completed_at':newest.get('completed_at'),'review':newest.get('review')}
+              if newest and newest['id']!=(latest or {}).get('id') else None)
     save('dashboard.json', {'session': session, 'daily': aggregate(articles),
-         'latest_analysis': store.latest_analysis(trade_date=session['trade_date'], completed_only=True, live_only=True),
+         'latest_analysis': latest,'excluded_latest_analysis':excluded,
          'important_events': events, 'coverage': {'counts': store.counts(), 'sources': store.sources()},
          'price_reference': price_context(store, now), 'monitoring': monitor})
     save('events.json', {'items': store.events(1000000), 'total': store.counts()['events']})
@@ -97,7 +102,8 @@ def main():
                 'analysis_status': a['status'] if a else 'not_requested',
                 'analysis_created_at': a.get('created_at') if a else None,
                 'analysis_completed_at': a.get('completed_at') if a else None,
-                'analysis': a.get('result') if a else None})
+                'analysis': a.get('result') if a else None,
+                'review': a.get('review') if a else None})
         save('news/'+scope+'.json', {'items': enriched, 'total': store.counts()['news'], 'scope': scope})
     export(store, snap/'exports')
     compressed = raw.with_suffix('.sqlite3.gz')

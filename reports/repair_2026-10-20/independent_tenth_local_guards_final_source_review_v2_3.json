@@ -1,0 +1,79 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T06:20:15.992659+00:00",
+  "scope": "Two demonstrated tenth-production false positives only: separate per-notice quantity/state association and source-known observed price delta marker.",
+  "base_analysis": {
+    "file": ".runtime/source-archives/backend-64920/ttf_news/analysis.py",
+    "sha256": "1aebeb8971f13f61fd8bd4f9ab961b6284e811aeb773014ef7cc71874c94375c"
+  },
+  "candidate_analysis": {
+    "file": ".runtime/tenth-local-guard-proposal/ttf_news/analysis.py",
+    "sha256": "e56dcbb7ef6663152b11688040d78189fcbe678c26f2757c0873f83f18b6a983"
+  },
+  "candidate_proof": {
+    "file": ".runtime/tenth-local-guard-proposal/proposal-final-proof.json",
+    "sha256": "e69b04827fcdfb60a556e3b8141e34b76b10205b3ec04bf72e908fcca028a551"
+  },
+  "source_ast_boundary": {
+    "only_changed_functions": [
+      "_validate_notice_source_facts",
+      "_validate_prediction_semantics"
+    ],
+    "all_other_toplevel_statements_and_definitions_ast_equal": true,
+    "prepare_system_schema_profiles_unchanged": true
+  },
+  "independent_tests": {
+    "tests": 144,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 4.932,
+    "xml": {
+      "file": "reports/repair_2026-10-20/independent_tenth_local_guard_fixed_source_tests_v2_3.xml",
+      "sha256": "867dc74173f915899993f52bfa2ea4fbd4e11ea977fc877349b405aa9ef7eac7"
+    }
+  },
+  "log": {
+    "file": "reports/repair_2026-10-20/independent_tenth_local_guard_fixed_source_tests_v2_3.log",
+    "sha256": "262f2f55ca08c5a83e3e5c9c243a6226f89b3b9e233e5e5c67667c6fdf5adc28"
+  },
+  "test_source_hash_before_and_after_equal": true,
+  "original_review": {
+    "file": "reports/repair_2026-10-20/independent_production_tenth_terminal_full_review_v2_3.json",
+    "sha256": "a96f4612ee2a55c40604ec7c416197baf3fa73b420bc4e14b55768f58e047881"
+  },
+  "controls_reviewed": {
+    "positive": [
+      "Manual raw2 old captured prepared/full collector; current13 andfuture7.6 one-to-one.",
+      "Manual raw1 separate unaliased7.6 and13 capacity list has no capacity error; its price-role error remains.",
+      "Observed3.043 same-contract delta with explicit previous85.062/current88.105 pair.",
+      "观察到的价格上涨 and symmetric downward observed comparison."
+    ],
+    "negative": [
+      "Explicit wrong N1=13; reversed current/future; absolute available=7.6/13; unknown amounts; nonoverlap sum20.6; extra unbound amount; other-facility borrowing.",
+      "Future targets, wrong amount/sign/unit, swapped previous/current levels, future observed/available clock, foreign contract, missing correct prior anchor.",
+      "21 original bad raws and both current-live tenth drafts remain rejected."
+    ]
+  },
+  "bounded_mechanism": "The new capacity path requires exactly two cited notices for the named facility, separately matches each quantity/field/state to a remaining source, and does not permit aggregates. The new price marker relies on the already filtered same-contract baseline and either observation language or the immediately adjacent explicit prior/current known level pair.",
+  "original_failed_records_unchanged": true,
+  "manual_second_original_failure_not_upgraded": true,
+  "no_direction_assignment_or_accuracy_claim": true,
+  "initial_24c_version_and_transition_evidence_preserved": true,
+  "preliminary_144_test_run_not_used_as_fixed_source_proof": {
+    "file": "reports/repair_2026-10-20/independent_tenth_local_guard_tests_v2_3.xml",
+    "sha256": "cb57f154f6b607a3a7e66bcf3799fa9e636c058bb013caa44b1db7f2b40a37b3"
+  },
+  "risk_wording_P3_preserved": "无极端变动风险 is not a validated guarantee. Below-threshold observed delta does not exclude future extreme risk. This fix does not turn it into an accuracy or safety claim.",
+  "verdict": "finite_source_review_passed_no_reproduced_material_blocker",
+  "can_apply_with_conditions": [
+    "Merge only the reviewed functions; run final combined full suite and official path comparison.",
+    "Do not retroactively mark the original tenth workflow successful.",
+    "All other factual,time,flow,pricing andcausal validators must remain active."
+  ],
+  "new_model_calls": 0,
+  "database_access": false,
+  "network_calls": false,
+  "source_modified_by_this_auditor": false
+}

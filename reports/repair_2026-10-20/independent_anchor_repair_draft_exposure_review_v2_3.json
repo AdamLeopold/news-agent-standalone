@@ -1,0 +1,126 @@
+{
+  "schema_version": "ttf-independent-repair-draft-review-v1",
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/event_retrieval",
+  "reviewed_at": "2026-10-21T00:47:06.145441+00:00",
+  "source_record_file": "reports/repair_2026-10-20/candidate-final-output-scope-validation/anchor_real_manual_missing_prevday.json",
+  "source_record_sha256": "ec1a6b3aaa0702762d1f8b47e2a1fe9295eb29581069f95f519d2854f393d15e",
+  "input_sha256": "e55ff6ad23498905721120306597d3ae1e5c5d223a7021658c2a430913a210fb",
+  "generation_source_sha256": {
+    "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+    "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+    "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+    "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+    "ttf_news/public_gateway.py": "fac8fe10429bc62a6be241817491d1f35eecdaa7f8a37357cb8dbcab7f43fae5",
+    "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+    "ttf_news/analysis.py": "d1bd8f44d4611a6f2aaee82a0e1b5255fdabdc57e34ef134f6edf0fb8bfb0b4b",
+    "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+    "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+    "ttf_news/semantics.py": "f719c02ef7f2c4017d4cc9a2e428befd1f6e6dc104895e6a5776d475ea8f86d3",
+    "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+    "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+    "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+    "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+    "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+    "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+    "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+    "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+    "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+    "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+    "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+    "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+    "ttf_news/translation.py": "d47b232a5f77ea68e2d5bc5d092021e9727e555c6b1dd702922325519982d7c5",
+    "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+    "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+    "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+    "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+    "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987"
+  },
+  "recorded_contract_passed": false,
+  "recorded_run_status": "failed",
+  "valid_delivered_output": false,
+  "original_artifact_modified": false,
+  "new_model_calls": 0,
+  "network_calls": 0,
+  "database_writes": 0,
+  "actual_second_request": {
+    "system_prompt_sha256": "c1b2d1dc7489c9ccf271eb80d2f586fecb97dc0504dff58c9af8d826f930175d",
+    "context_sha256": "62815775f37e1e291242ffe7f36bcccf6e6576507a51b35cf0075dc735f1f55e",
+    "response_schema_sha256": "e5bb92178c030ef1c275d26339adb7994e2d4e64bf1d36b08f3de47c5370e8cc",
+    "appended_feedback": "重新根据同一资料生成完整JSON。不得补默认方向。错误：news_impact.summary、analysis.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱\n",
+    "repair_draft_audit": {
+      "version": "ttf-untrusted-repair-draft-1",
+      "previous_raw_sha256": "11e4dd39600e3cac0308bf3ad4100900431e4314173de83e25cfd1b034e815b9",
+      "is_evidence": false,
+      "included": true,
+      "payload_sha256": "5c20e23239b2eab7fccbbe8a37334bb2e4e0f7247f421b09f5a29811d1edb5bb",
+      "payload_tokens": 158,
+      "input_token_estimate": 7328,
+      "input_token_ceiling": 12800,
+      "source_facts_sha256": "151fcc1f95e9f061a0f9dd933ab3e3d11624cda1f6d9631d69fedab7891cfe25",
+      "summary_character_limit": 280,
+      "evidence_limit": 6
+    },
+    "untrusted_draft": {
+      "is_evidence": false,
+      "origin": "previous_model_candidate",
+      "content": {
+        "news_summary": "LNG Canada签约技术公司进行Coastal GasLink Phase 2 EPCM，属于未来供给扩张，未产生即时价格冲击。",
+        "analysis_summary": "LNG Canada签约技术公司进行Coastal GasLink Phase 2 EPCM，属于未来供给扩张，未产生即时价格冲击。",
+        "close_basis": "缺乏前一交易日参考价，无法判断价格走势。新闻为未来建设，未见即时市场反应。",
+        "evidence": [
+          {
+            "slot": "news_impact.bearish_evidence",
+            "aliases": [
+              "N0"
+            ],
+            "mechanism": "未来供给扩张"
+          }
+        ]
+      }
+    }
+  },
+  "exact_observations": {
+    "first_validation_stage": "fact_or_mechanism",
+    "first_validation_errors": [
+      "news_impact.summary、analysis.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应"
+    ],
+    "first_raw_sha256": "11e4dd39600e3cac0308bf3ad4100900431e4314173de83e25cfd1b034e815b9",
+    "second_raw_sha256": "4f250fff9a37b44c7e8c129a2d67b6a94a0def520d4958f50b6be73f69ad2781",
+    "rejected_first_analysis_summary": "LNG Canada签约技术公司进行Coastal GasLink Phase 2 EPCM，属于未来供给扩张，未产生即时价格冲击。",
+    "repeated_second_analysis_summary": "LNG Canada签约技术公司进行Coastal GasLink Phase 2 EPCM，属于未来供给扩张，未产生即时价格冲击。",
+    "rejected_summary_copied_verbatim_into_draft_twice": true,
+    "second_analysis_summary_matches_first_and_draft": true,
+    "draft_has_explicit_direction_or_numeric_score": false,
+    "draft_mechanism_slot": "news_impact.bearish_evidence",
+    "second_bullish_evidence": [
+      "[N0] LNG Canada签约技术公司进行Coastal GasLink Phase 2 EPCM → 未来供给扩张"
+    ],
+    "second_validation_stage": "fact_or_mechanism",
+    "second_validation_errors": [
+      "analysis.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应",
+      "news_impact.bullish_evidence[0]:资源发现仅支持潜在未来供给，不能因发现是公司利好就当作TTF看涨因素；潜在增供通常是预期下行机制。看涨须有来源的需求/供应反向事实或低于既有供给预期的证据，不强制净标签"
+    ],
+    "second_input_tokens": 7328,
+    "second_input_token_ceiling": 12800,
+    "no_source_truncation_indicated": true
+  },
+  "interpretation": {
+    "supported": "已判错的确定零价格冲击摘要被两次放入第二轮草稿，并在第二轮analysis.summary逐字重现；这证明重暴露和复用，支持减少错误草稿对事实纠错的干扰。",
+    "not_established": "本例无相同输入与随机状态下的无草稿反事实，不能证明草稿是错误的唯一原因或去掉必成功。原system规则、反馈长度与模型本身重复倾向也可参与。",
+    "direction_score_correction": "实际草稿没有显式方向或数值分数，且保留的是bearish槽；第二轮将未来扩供移至bullish是新增反号，不能声称是草稿中显式看涨方向或分数被照抄。",
+    "feedback_limit": "实际追加错误说明约150字，已经同时定位两个summary，但在“可保留弱”截断，完整正向修正原则没有进入该反馈段。",
+    "source_budget": "第二轮完整来源和事实仍在，7328小于12800；本次错误无证据归于输入预算裁剪。"
+  },
+  "bounded_recommendation": {
+    "fact_or_mechanism_retry": "对于已实际诊断的事实或机制错误，重试只带完整来源和具体校验反馈，移除候选摘要及机制槽，是直接对应当前暴露路径的窄改；不得强制任何方向。",
+    "format_only_retry": "纯格式或长度问题可单独保留定位草稿，但若同轮已存在事实机制诊断，不能仅凭stage名称把已知错误重新注入。",
+    "required_evidence_after_change": "首请求、所有来源、最大两次与方向标准保持；受影响第二轮必须真实新调用，未受影响仅完整路径零调用等价可保留；旧两轮failed不追认。",
+    "existing_no_draft_pilot": "此前不同上下文69c无草稿pilot失败只能说明去草稿不是通用保证，不能识别当前EPCM案例反事实。"
+  },
+  "known_logic_errors_in_final_raw": [
+    "analysis.summary无证据断言未产生即时价格冲击",
+    "news_impact.bullish_evidence将未来供给扩张列为看涨"
+  ],
+  "review_verdict": "supports_narrow_retry_input_revision_without_causal_identification_or_success_claim"
+}

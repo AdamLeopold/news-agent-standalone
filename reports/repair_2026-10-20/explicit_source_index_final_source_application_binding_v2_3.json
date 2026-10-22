@@ -1,0 +1,33 @@
+{
+  "at": "2026-10-21T05:47:26.068526+00:00",
+  "independent_source_and_helper_reviews_passed": true,
+  "references": [
+    {
+      "file": "reports/repair_2026-10-20/independent_explicit_source_index_capacity_final_source_review_v2_3.json",
+      "sha256": "8618beda6f7c3d4867d263dc732d81900608976c760e38825fa8e36a575310f1"
+    },
+    {
+      "file": "reports/repair_2026-10-20/independent_explicit_source_index_helper_final_review_v2_3.json",
+      "sha256": "1bd1c492644f4a99fbc666ea11564c64055fd751951ff0ba7e498329c1a98b93"
+    },
+    {
+      "file": "reports/repair_2026-10-20/applied_explicit_source_index_capacity_pressure_v2_3.json",
+      "sha256": "14f4ab78f7e16f539cb9c47201c40e9206b341ab019e18144f598c83e758b24e"
+    },
+    {
+      "file": "reports/repair_2026-10-20/output_contract_unit_collection_path_correction_v2_3.json",
+      "sha256": "669db08314ce92660c056fb9a1444483d243c9f6439fce41848b22bd85fe903b"
+    }
+  ],
+  "current_source_sha256": {
+    "ttf_news/analysis.py": "1aebeb8971f13f61fd8bd4f9ab961b6284e811aeb773014ef7cc71874c94375c",
+    "ttf_news/semantics.py": "d054bc812a80e0d28bfc95a098731b6b556ad0304a9775db0ec4d00d660d2d9a",
+    "scripts/repair-validation-report.py": "7d051013abf0cd24d47645503410680f28f02bffc16b02a6a8b20985670689eb",
+    "scripts/sync-public-evidence.py": "8171147a7f9d5100262b45e07d5f6f1f446a182867a9a5e6ffb403f9d012adba",
+    "tests/test_future_capacity_pressure_scope.py": "57cfb8e07c15b43bc3f46ff2c001ce544178a8a954a3a281a19aba27e3102173"
+  },
+  "test_path_only_correction": true,
+  "old_model_predictions_and_baseline_unchanged": true,
+  "production_still_requires_fresh_validation": true,
+  "no_provenance_output_simplification_adopted": true
+}

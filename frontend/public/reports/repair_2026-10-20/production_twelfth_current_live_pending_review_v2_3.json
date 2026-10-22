@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-10-21T07:54:21.792208+00:00",
+  "status": "confirmed_invalid_pending_root_preflight_and_application",
+  "scope": "Append-only review metadata for completed P12 current live brief; English inherits source review. Preserve all canonical data and twelve failed workflow attempts.",
+  "evidence": {
+    "file": "reports/repair_2026-10-20/independent_production_twelfth_current_live_review_v2_3.json",
+    "sha256": "edbe41e9a4f2d20bf9e76e75774ec3545494b4f7710a480b842015e28a868cd9"
+  },
+  "actual_record": {
+    "file": "reports/repair_2026-10-20/production_twelfth_current_live_actual_v2_3.json",
+    "sha256": "7f3de0d2ff9babf6eb619922c628b3f48b95983f200423f3519786e2b6157178"
+  },
+  "pending_reviews": [
+    {
+      "analysis_id": "e713a962-366e-4608-aec7-2a3bf032077b",
+      "protected_hashes": {
+        "input_snapshot": "5aa35ae376c112150991fcefc36fa760f07b30e1cc9074e2a3c542d8b456a50d",
+        "result": "0fda7dc23f3a46f141e81bb6488c788e519f70a2d5ab179c48c9a336ad4dcfdf",
+        "detail_result": null
+      },
+      "confirmed_invalid": true,
+      "review": {
+        "review_id": "supply-evidence-notice-state-e713a962-366e-4608-aec7-2a3bf032077b-brief-v1",
+        "status": "invalid",
+        "reason_code": "v2_3_supply_evidence_polarity_notice_state_unknown_flow",
+        "affected_parts": [
+          "brief"
+        ],
+        "reviewer": "independent_production_twelfth_current_live_review",
+        "message_zh": "简报将Jackdaw未来潜在供给增加放入TTF看涨证据，又将全部Gassco公告写成未来计划且没有当前供给损失；实际N3已开始、实流未知，N4为非计划公告。原预测与中英文原文保留，本简报未通过供需方向和公告状态复核。",
+        "message_en": "The brief places future Jackdaw supply expansion in bullish TTF evidence and describes all Gassco notices as future plans with no current supply loss. N3 has already started with unknown actual flow, and N4 is unplanned. The original prediction and both language versions are preserved; this brief fails the supply-direction and notice-state evidence review."
+      }
+    }
+  ],
+  "preflight_required": "Hashes use Store.dumps serialization of captured objects. Root must run the normal exact DB-hash preflight before appending metadata. This file performs no DB access or writes."
+}

@@ -1,0 +1,15 @@
+{
+  "source_phase": "41e559588a222c51cf7a85642bb45199476118777b9a8b2195d15bd31dff95e5 semantic gate, ca5925 report helper, before bare abandonment tense fix",
+  "passed": 729,
+  "subtests_passed": 375,
+  "artifacts": {
+    "pre-final-tense-unit-tests.xml": {
+      "sha256": "a329f463c031cf5f26e14b97a2aed5b130e99a72afb4f1a4fcaa80d7f38d3196",
+      "bytes": 115182
+    },
+    "pre-final-tense-unit-tests.log": {
+      "sha256": "804c971c194eb4d95f0270d7e1823dc5be4f2ea9669b0844772f83409a6bc7a5",
+      "bytes": 1423
+    }
+  }
+}

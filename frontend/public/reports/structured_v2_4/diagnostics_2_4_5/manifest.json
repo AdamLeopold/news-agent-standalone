@@ -1,0 +1,31 @@
+{
+  "status": "copied_immutable",
+  "rows": [
+    {
+      "source": ".runtime/structured-reasoning-v4/conditional-scope-v5/real_batch_01/current_mixed_live.json",
+      "copy": "reports/structured_v2_4/diagnostics_2_4_5/current_mixed_live.json",
+      "sha256": "c5e9b29f56efb754bb3c5ecc60bf2413692da196c4e062375b24b0510100be02"
+    },
+    {
+      "source": ".runtime/structured-reasoning-v4/conditional-scope-v5/real_batch_01/summary.json",
+      "copy": "reports/structured_v2_4/diagnostics_2_4_5/summary.json",
+      "sha256": "b9605632d14e376e5d55b60944214b9cd5a9762df34ed37a5bca962486a2826b"
+    },
+    {
+      "source": ".runtime/structured-reasoning-v4/conditional-scope-v5/real_batch_01/structured_core.py",
+      "copy": "reports/structured_v2_4/diagnostics_2_4_5/structured_core.py",
+      "sha256": "027bc8d862b3cc3f8eff7ea54b881a51030372009c9087dbdac2815c0582e4cc"
+    },
+    {
+      "source": ".runtime/structured-reasoning-v4/conditional-scope-v5/real_batch_01/structured_analysis.py",
+      "copy": "reports/structured_v2_4/diagnostics_2_4_5/structured_analysis.py",
+      "sha256": "da13165f47e0b7ac4d46b963c0ea10f8c566c9b3ce4ee341ed9cacbba0f6d1df"
+    },
+    {
+      "source": ".runtime/structured-reasoning-v4/conditional-scope-v5/real_batch_01/real_batch.py",
+      "copy": "reports/structured_v2_4/diagnostics_2_4_5/real_batch.py",
+      "sha256": "416ebeb06312ca842921be7814d23b5cfc03b521ce4005e2678c1b60b3e1bba6"
+    }
+  ],
+  "scope": "Real-source mechanism diagnostic, not contemporaneous price accuracy"
+}

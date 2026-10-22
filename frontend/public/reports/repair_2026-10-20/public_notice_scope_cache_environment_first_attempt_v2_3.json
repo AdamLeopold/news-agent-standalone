@@ -1,0 +1,19 @@
+{
+  "status": "failed_first_environment_attempt_preserved",
+  "test_record": {
+    "file": "reports/repair_2026-10-20/publish_backend_notice_scope_final_source_copy_review_v2_3.json",
+    "sha256": "65eee8c42865c671122f860523c76da92e78f12a1474e94113b3a38a39850815"
+  },
+  "cause": "The public checkout had no local tokenizer cache. The isolated runner omitted TIKTOKEN_CACHE_DIR; tests/conftest.py used the public checkout empty data/cache/tokenizer directory, causing conservative fallback token counts and context-budget failures.",
+  "first_exact_failure": "当日新闻证据及必要背景无法装入11776 token预算；需要分批汇总，禁止静默丢弃新闻",
+  "first_test_summary": "156 failed, 323 passed, 6 skipped, 1 warning, 89 errors, 22 subtests passed in 95.60s (0:01:35)",
+  "managed_test_pid_interrupted": 36038,
+  "test_process_identity_and_public_cwd_verified": true,
+  "production_process_interrupted": false,
+  "model_calls": 0,
+  "rerun_only_environment_change": {
+    "TIKTOKEN_CACHE_DIR": "existing root project data/cache/tokenizer",
+    "source_and_test_expectations_changed": false
+  },
+  "not_a_completed_full_suite": true
+}

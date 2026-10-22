@@ -1,0 +1,104 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T02:19:41.456602+00:00",
+  "review_kind": "finite_independent_read_only_private_proposal_audit",
+  "scope": "Fifth production actual false-positive flow/degree scope, explicit price unit identity, and preservation of an already supplied unit in compressed model input. No model/API/DB/service/core mutation by reviewer.",
+  "candidate_source_sha256": {
+    ".runtime/fifth-production-scope-proposal/ttf_news/analysis.py": "f3c44838f16941e503e5a542bb8d95176e83ca2d25df7af8373cfeaefe0b0d06",
+    ".runtime/fifth-production-scope-proposal/ttf_news/semantics.py": "3ed9590f39994ea29f7478439f5c0ce55e546457350e8e8fef7022631585c2c0",
+    ".runtime/fifth-production-scope-proposal/proposal.patch": "38ba3a25abfc6b1facb7029f8215078122027bad4f5fb43e0a154e573d8f67c1",
+    ".runtime/fifth-production-scope-proposal/proposal_proof.json": "7ac192091afff19b677f341bee5a3f68328e192790447ea53c03bb07abac57a1",
+    ".runtime/fifth-production-scope-proposal/test_fifth_scope.py": "56b8efbe9e68aaccc818f41946da5ac0581c77880bf13b7892a179392c1fec9c"
+  },
+  "root_source_at_review": {
+    "ttf_news/semantics.py": "932f7dd1fb44f8625685cfa0978c9294bf2c9d8817fbf71362a9813449d7edb5",
+    "ttf_news/analysis.py": "28f186ea7f11453ec42737fd82a71b47b3f29d094121911a4e12813c93d3b1b9"
+  },
+  "verdict": "no_identified_material_blocker_within_requested_finite_scope_candidate_ready_for_authorized_application_and_actual_revalidation",
+  "known_logic_errors": [],
+  "finite_review_passed": true,
+  "production_ready": false,
+  "checks": {
+    "input_unit_preservation": {
+      "passed": true,
+      "change": "Only add existing intraday unit key to prepare_context compression whitelist; never supply a default, alter a value, change quote clocks, or reintroduce a filtered future quote. This is a model input change and affected actual requests must be rerun after official complete-path comparison.",
+      "analysis_diff_existing_function": "prepare_context"
+    },
+    "per_predicate_flow_epistemic_scope": {
+      "passed": true,
+      "change": "Do not let the earlier 未开始 regex consume across a comma into 未见实际流量损失. Iterate each actual-flow predicate, so an epistemic first predicate cannot mask a later definite unchanged-flow claim. Chinese/English conditional consequents remain conditional; contrast clauses start independent assertions.",
+      "real_fifth_manual_second_gate_result": "no semantic errors in pure replay; original failed service state remains failed",
+      "real_fifth_manual_first_gate_result": "still rejected for real timing/sign/global absence errors"
+    },
+    "future_notice_degree_scope": {
+      "passed": true,
+      "change": "Only degree-marked summary/basis pressure judgments associated with known notices whose start is strictly after as_of; excludes global/actual/metered language and dismissed/cancelled/elapsed status. Explicit ASCII N aliases and known different facility subjects cannot borrow unrelated future evidence clock.",
+      "negative_examples": [
+        "N3无显著供需冲击 with N3 known active Nyhamna and only future Troll evidence",
+        "Nyhamna无显著供需冲击 with that active other facility",
+        "same-clause global actual flow no loss",
+        "same-clause unsupported zero price reaction"
+      ]
+    },
+    "price_unit_identity": {
+      "passed": true,
+      "change": "Normalize unit spelling only. A recognized observed/reference TTF numeric price/delta must preserve supplied monetary-energy unit. Same quote unit recovery requires retained exact contract/value/observed_at/available_at and known clocks. No conversion or output rewriting.",
+      "real_fifth_current": "Original accepted 1.733 EUR/mcm now rejected against EUR/MWh; original raw/body/completed status unchanged",
+      "foreign_and_nonprice_controls": "Known JKM USD/MMBtu and UK NBP GBP/therm retain their own source unit, including same numeric 1.733. A later explicit TTF bad unit in the same clause is still rejected. Known transport tariff EUR/mcm, project EUR amounts and capacity mcm/d remain permitted. Future/unsupported foreign quotes cannot borrow TTF support.",
+      "warning_scope": "Explicit unit-not-X or cannot-write-as-X statements are allowed. Negating the price direction (不是下跌而是上涨...) no longer exempts the affirmative bad unit."
+    },
+    "no_prediction_coercion": {
+      "passed": true,
+      "change": "No output class/score/confidence rewritten; no forecast quotas or default flat; shared mechanism extraction, prompt/schema and first-call budgets unchanged by this patch. Input unit preservation is explicitly acknowledged as a request change."
+    },
+    "historical_defects": {
+      "passed": true,
+      "change": "Fourteen original known-bad raw artifacts remain rejected by the complete semantic collector. Added fifth current wrong-unit record is rejected. No old strict flag, failed state, prediction or acceptance report is overwritten."
+    }
+  },
+  "independent_evidence": {
+    "focused_tests": {
+      "file": "reports/repair_2026-10-20/independent_fifth_scope_proposal_tests_v2_3.xml",
+      "sha256": "714dc0185b742574b69a9dce56e200cd4b9861062749bf45db620d969e46c21f",
+      "passed": 78,
+      "failed": 0,
+      "errors": 0,
+      "seconds": 7.19,
+      "command": "PYTHONDONTWRITEBYTECODE=1 python -m pytest .runtime/fifth-production-scope-proposal/test_fifth_scope.py -q -p no:cacheprovider --junitxml=reports/repair_2026-10-20/independent_fifth_scope_proposal_tests_v2_3.xml",
+      "warning": "Existing environment unrecognized asyncio_mode pytest option; all 78 finite checks passed."
+    },
+    "independent_controls": {
+      "file": "reports/repair_2026-10-20/independent_fifth_scope_proposal_controls_v2_3.json",
+      "sha256": "b358ef2372c20f1b9869a1330d3529159d9972c79038488e744c8f20e3bc95fe",
+      "count": 26,
+      "passed": 26
+    },
+    "changed_existing_semantic_functions": [
+      "_check_unknown_as_fact",
+      "_check_gassco_physical_state",
+      "_analysis_semantic_checks"
+    ],
+    "added_semantic_functions": [
+      "_price_unit_identity",
+      "_check_ttf_price_unit_identity"
+    ],
+    "actual_current_review": {
+      "file": "reports/repair_2026-10-20/independent_production_fifth_current_live_and_english_review_v2_3.json",
+      "sha256": "60e35775fea240c11ed1bf29940fa4118c5feb3e4acd48cb5b39eae4e2f0d7b6"
+    },
+    "actual_manual_failure_review": {
+      "file": "reports/repair_2026-10-20/independent_production_fifth_manual_failure_review_v2_3.json",
+      "sha256": "2e4e7b936d900b49e95e9b83c7fbca56e1d83aa0b9cac93c6eba6fea5abedf7d"
+    }
+  },
+  "qualifications": [
+    "This is a finite invariant and regression review, not proof that arbitrary future prose is semantically correct.",
+    "The price gate covers recognized explicit numeric price/unit assertions; it is not a universal numeric verifier, physical conversion routine, source unit price validation or official settlement score.",
+    "Known foreign-price/cost controls ensure they are not forced into the TTF unit. Cross-instrument spreads or unsupported units outside this finite task were not broadly redesigned.",
+    "Degree of future news pressure is a model judgment, distinct from measured global physical loss, verified absence of a price reaction or target settlement outcome.",
+    "A pure replay can show the old false-positive gate is corrected; it cannot retroactively turn the original fifth failed run into actual delivery success.",
+    "The current Chinese and English fifth completed result still contains its inherited material wrong unit. A new final-source real production live/manual/detail/English workflow is required before overall delivery can pass.",
+    "Official complete-path replay must identify all affected requests, including the newly visible existing unit field. Old generation-source hashes must stay distinct from final validation-source hashes."
+  ]
+}

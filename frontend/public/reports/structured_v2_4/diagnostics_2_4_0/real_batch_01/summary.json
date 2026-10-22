@@ -1,0 +1,34 @@
+[
+  {
+    "case": "p12_manual",
+    "status": "completed",
+    "error": null,
+    "calls": 4,
+    "news": "up",
+    "close": "up"
+  },
+  {
+    "case": "epcm",
+    "status": "completed",
+    "error": null,
+    "calls": 4,
+    "news": "up",
+    "close": "up"
+  },
+  {
+    "case": "chevron_historical",
+    "status": "failed",
+    "error": "AnalysisError: Structured model response failed after two attempts: Regional/background facts cannot be invented as a TTF price driver",
+    "calls": 3,
+    "news": null,
+    "close": null
+  },
+  {
+    "case": "eia_historical",
+    "status": "failed",
+    "error": "AnalysisError: Structured model response failed after two attempts: Closing drivers must be selected nonzero source mechanisms",
+    "calls": 4,
+    "news": null,
+    "close": null
+  }
+]

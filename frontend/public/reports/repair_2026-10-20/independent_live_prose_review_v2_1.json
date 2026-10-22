@@ -1,0 +1,434 @@
+{
+  "generated_at": "2026-10-20T21:17:07.215660+00:00",
+  "method": "Independent human source-and-causality review; read-only database; no model calls.",
+  "records": [
+    {
+      "analysis_id": "b1e9c166-8851-4f7c-9803-b9c72329f6a9",
+      "kind": "live",
+      "prompt_version": "ttf-news-standalone-2.1",
+      "as_of": "2026-10-20T20:03:06.675853+00:00",
+      "completed_at": "2026-10-20T20:34:57.669972+00:00",
+      "input_snapshot_sha256": "9295e8ca8ca58c9183493097e3d407a1a63d97589312df41208377f5dc233dc5",
+      "result_sha256": "fa0a68927d7bff6c7de8f55a70ad9035de9e7f2a6bfd1faf68a19a41d117dcc4",
+      "raw_model_content_sha256": "2be1a16116bf38be121aaeb0147abf35f97b6f71155de52979308245d1a87a91",
+      "verdict": "material_source_tense_error",
+      "known_logic_errors": [
+        {
+          "code": "prospective_well_action_as_completed",
+          "source_quote": "The well, which was not formation-tested, but data and samples were collected, will now be permanently plugged and abandoned.",
+          "source_quote_sha256": "c4a3610511783b9c6fc047b86a635ee217a0da1eac6e913cecbb71fdd0a5555e",
+          "generated_quote": "Vår Energi 与 Equinor 在挪威海发现气体与凝析油，但该井未进行成品测试，且已被永久封堵，未产生即时产量，因而对 TTF 供给无直接影响。",
+          "generated_quote_sha256": "9983effb1cb3174696062d595647b6d5965e36614ee8ff6d19fb1f60375465d0",
+          "reason_zh": "来源说该井将永久封堵弃置；输出却写已被永久封堵，错误把计划当作已完成事实。资源发现未给即时产量及缺锚点时Nooutlook的方向逻辑本身不因此被否定。",
+          "reason_en": "The source says the well will be permanently plugged and abandoned; the output claims it has already been permanently plugged. This is a source-time error, while the news-pressure and no-outlook conclusions are reviewed separately."
+        }
+      ],
+      "additional_language_issue": "formation-tested 应为地层测试，成品测试术语不准确。",
+      "close_summary": "由于缺少可比价格基准，无法对 2026‑10‑21 结算价相对前一交易日作出判断。",
+      "close_summary_sha256": "1c0e1ca4502362820f0732171f25a22b54af0d149f531527ea53bc2badf058f7",
+      "separate_checks": {
+        "resource_discovery_not_current_delivery": "pass",
+        "previous_day_anchor_no_outlook": "pass",
+        "unsupported_priced_in": "not_found",
+        "direction_rewritten": false
+      }
+    },
+    {
+      "analysis_id": "d2ef1250-6ed3-4a68-9396-e6ed4addbfb3",
+      "kind": "manual",
+      "prompt_version": "ttf-news-standalone-2.1",
+      "as_of": "2026-10-20T20:34:39.381852+00:00",
+      "completed_at": "2026-10-20T20:35:40.299571+00:00",
+      "input_snapshot_sha256": "00742222c3d42beed286a1a8716ac5cda0edb7c2e0983be6420c92d4b1b72005",
+      "result_sha256": "66347a76e7d9e0744aa626df9229dec527cc62a2696924585b85223523d545e4",
+      "verdict": "material_source_entity_type_error",
+      "known_logic_errors": [
+        {
+          "code": "v2_1_field_misidentified_as_pipeline",
+          "source_quote": "Gassco Troll: Planned Gas production field unavailability (Active)",
+          "source_quote_sha256": "b37b06e4b967935574b3ba7a082cca30b11448cf4291bcf89b881019ab21ff5a",
+          "generated_quote": "截至2026-10-20，已知新闻仅涉及未来Troll管道维护计划和LNG Canada的长期工程合同，未产生即时供给损失或需求变化，故对TTF价格的净影响为中性。",
+          "generated_quote_sha256": "3bcd76229b05bfc954ff69c5d097e94b35ab257a3c0e0d771a7fc1eeb636f8d0",
+          "reason_zh": "Gas production field不是管道，Other不证明管道类型；LNG Canada的pipeline不能跨N证明Troll类别。",
+          "reason_en": "A gas production field is not a pipeline; Other does not prove a pipeline type. The LNG Canada pipeline cannot establish the type of the separate Troll notice."
+        }
+      ],
+      "close_summary": "缺乏前一结算日的基准价和新闻对价格的即时反应证据，无法判断收盘价相对前一交易日的涨跌。",
+      "close_summary_sha256": "a5c7decbd47c0549de025bdc49b75b71445d49002cb563f765a5b02c07855701",
+      "separate_checks": {
+        "no_invalid_stale_daily_price_difference": true,
+        "close_no_outlook_due_missing_previous_day": true,
+        "no_unsupported_priced_in_claim": true
+      }
+    },
+    {
+      "analysis_id": "751b4cbd-7da1-4d1a-8e3a-f7f9de49031a",
+      "kind": "live",
+      "prompt_version": "ttf-news-standalone-2.1",
+      "as_of": "2026-10-20T20:11:28.514165+00:00",
+      "completed_at": "2026-10-20T20:39:31.234346+00:00",
+      "input_snapshot_sha256": "d23aabe7e16722bf34dd94abc68efe7f17780d3c95a4f0f2f74dec0425f5f426",
+      "result_sha256": "ca8910a5b62ba4e4d81a8d36403e6d491f6bd43a5cbd1573becbc6db5eb51300",
+      "verdict": "material_source_entity_type_error",
+      "known_logic_errors": [
+        {
+          "code": "v2_1_other_notice_invented_as_pipeline",
+          "source_quote": "Gassco Troll: Planned Other unavailability (Active)",
+          "source_quote_sha256": "298043a5a2bd661e618a2d4b4626e2a50b6e953c035ab9d625f25e34711798b1",
+          "generated_quote": "Troll管道计划维护导致可用容量下降13.0 mcm/d，形成轻度供应约束，可能支撑TTF价格。",
+          "generated_quote_sha256": "0cb5b84d6502b117fbd823d61ae2d686bb2d59c8c600fb1d372f40a5e3d6841a",
+          "reason_zh": "来源类别仅Other，未证明该设施是管道；输出具体声称Troll管道维护，补造了设施类别。",
+          "reason_en": "The source category is Other and supplies no pipeline classification; the output invents a specific Troll pipeline maintenance classification."
+        }
+      ],
+      "close_summary": "缺乏前一结算基准，无法判断价格走势。",
+      "close_summary_sha256": "e8c81cbc9699449509c1a970e91f6fd1dc2d45f6290d47ff9aefb583643855b6",
+      "separate_checks": {
+        "no_invalid_stale_daily_price_difference": true,
+        "close_no_outlook_due_missing_previous_day": true,
+        "no_unsupported_priced_in_claim": true,
+        "scheduled_notice_not_actual_flow_loss": "Prefix states future capacity and unknown actual flow.",
+        "revision_end_shortening": "Input preserves end shortened by one day; this output does not explain incremental revision pressure. A completeness limitation, not by itself a forced directional rejection."
+      },
+      "final_gate_revalidation": {
+        "semantics_sha256": "7e4e86e233c3d3b77c01278466a4d5a23ad5e8b233422701a08b9a272ad0a8f9",
+        "errors": [
+          "news_impact.summary:N1来源仅Other/未给设施类别，不能据此补成管道，不得称Troll等该实体为pipeline/管道维护；须保留对应N的原设施类别或泛称设施公告，不能借另一N的管道合同套类型，不改方向"
+        ]
+      }
+    },
+    {
+      "analysis_id": "4783a016-ef55-4cf5-accc-799e4584f2aa",
+      "kind": "live",
+      "prompt_version": "ttf-news-standalone-2.1",
+      "as_of": "2026-10-20T20:34:35.326422+00:00",
+      "status": "failed",
+      "verdict": "correctly_rejected_source_rate_aggregation_then_truncation",
+      "input_snapshot_sha256": "f84bf3f50ab223d827697542f5f687a57ea68336886a5e6df1c09948182f90da",
+      "result_sha256": null,
+      "failure_metric_id": 19208,
+      "failure_metric_data_sha256": "bd14f0f4f7a8214dc58ab9d616976089d8f4b07e66a2addc01ec7c52b69c0af9",
+      "raw_first_response_sha256": "e285b614ac0b978c083af7015fd5c1f42214893722032882239545b53aca129b",
+      "source_intervals": [
+        {
+          "source_alias": "N0",
+          "title": "Gassco Troll: Planned Gas production field unavailability (Active)",
+          "event_start": "2026-10-22T06:00:00+0200",
+          "event_end": "2026-10-23T06:00:00+0200",
+          "unavailable_capacity_mcmd": 7.6
+        },
+        {
+          "source_alias": "N2",
+          "title": "Gassco Troll: Planned Other unavailability (Active)",
+          "event_start": "2026-10-21T06:00:00+0200",
+          "event_end": "2026-10-22T06:00:00+0200",
+          "unavailable_capacity_mcmd": 13.0
+        }
+      ],
+      "known_logic_errors": [
+        {
+          "code": "non_overlapping_capacity_rates_added_as_one_current_rate",
+          "generated_quote": "Troll两项计划维护导致未来可用容量下降20.6 mcm/d（7.6 + 13.0），可能对TTF价格产生上行压力，但缺乏价格反应证据。",
+          "generated_quote_sha256": "b0af0d4af533fe63fbfef06671f5de736ca3652bb4dbdf8e3cb0484909a6891e",
+          "reason_zh": "7.6与13.0mcm/d属于前后相邻、并不重叠的两个时段，不能相加成20.6mcm/d单一容量下降。首轮被现有来源数值门拒绝。"
+        }
+      ],
+      "call_outcomes": [
+        {
+          "attempt": 1,
+          "done_reason": "stop",
+          "eval_count": 1893,
+          "validation_errors": [
+            "N0容量字段unavailable原值为7.6mcm/d，不是20.6；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算"
+          ]
+        },
+        {
+          "attempt": 2,
+          "done_reason": "length",
+          "eval_count": 3072,
+          "raw_content_length": 0
+        }
+      ],
+      "direction_fallback": false,
+      "canonical_result_preserved": true
+    },
+    {
+      "analysis_id": "7866a10d-fd69-4ab4-b1e4-20297a9dbc28",
+      "kind": "manual",
+      "prompt_version": "ttf-news-standalone-2.1",
+      "as_of": "2026-10-20T20:44:29.965843+00:00",
+      "completed_at": "2026-10-20T20:49:22.815534+00:00",
+      "input_snapshot_sha256": "ebf7fa489a63b4edb82bdb5b15950bef569c674db6451fc666005353cd006d1a",
+      "result_sha256": "6a4f081e590b994a02b4087feeec342312a694b3a309c20a67bdc682972c54c3",
+      "verdict": "brief_qualified_pass_detail_failed",
+      "known_logic_errors": [],
+      "checks": {
+        "window": "N0 published19Oct is earlier-window background. N1/N2 future21/22Oct notices known before asof20Oct20:44Z. No unannounced future inputs.",
+        "capacity_and_entity": "7.6/13.0 rates kept separate, both marked future capacity and measured flow unknown; Troll no longer invented as pipeline.",
+        "supply_demand": "Net weak flat on discovery/only future maintenance is permitted; no active measured loss was cancelled by absent data, and no false inverse supply increase→bullish sentence.",
+        "history": "No generated historical analogy/outcome; no later outcome leakage.",
+        "price_anchor": "86.47 absolute quote observed20:32Z is known20:42Z, retained; Oct19 daily cannot substitute missingOct20 prior trading day for target21Oct. Nooutlook/null correctly used.",
+        "pricing": "No actual response proof; output says cannot confirm priced in.",
+        "well_tense": "Source future will now be permanently plugged; generated bare 永久封井 has no 已/完成 but omits future qualifier. This is a clarity note requiring detail/English check, not independently a proven completed-fact claim."
+      },
+      "clarity_notes": [
+        {
+          "field": "analysis.evidence[0]",
+          "generated_quote": "[N0] 发现未产出，永久封井 → TTF供需无即时变化",
+          "source_quote": "The well, which was not formation-tested, but data and samples were collected, will now be permanently plugged and abandoned.",
+          "reason": "Bare action noun does not explicitly assert completion, but 将永久封井 would preserve source time more clearly."
+        }
+      ],
+      "close_summary": "缺乏前一结算价格锚点，无法判断收盘相对变化。",
+      "close_summary_sha256": "9b715472989a445bb2d18cbe8bb6f5ec0b67db5d74f5aa9a064521961d4332d5",
+      "final_gate_revalidation": {
+        "semantics_sha256": "e6c49b09507a3a272cc67773e14b8bca8b8c4d061794e54022d095f90f7d9c2b",
+        "errors": [],
+        "generation_not_replayed": true
+      },
+      "qualified_pass_limits": [
+        "Bare 永久封井 / permanent well shut-in is a nominal action phrase, not an explicit completed assertion. Its omitted future marker remains a documented clarity defect. The supply/demand conclusion does not depend on completed plugging.",
+        "Permanent well shut-in is less precise terminology than plugging and abandonment. No actual has-been/was-completed assertion is present in English."
+      ],
+      "english_brief_review": {
+        "translation_id": "69ba7875-7bb6-474b-8f96-7541ad0ccc2a",
+        "status": "completed",
+        "source_hash": "93f6a99fe318bfc99a701e7f60e51a3c4fd0d77dc94f141e4edb9bb5529bf05d",
+        "stored_result_sha256": "fcd876b8f16e2fd1b8eb3fa13c238def86f0f2c66a34a28d0a987e2e1be2748b",
+        "completed_at": "2026-10-20T20:57:27.467956+00:00",
+        "verdict": "qualified_pass",
+        "evidence_0": "[N0] discovery did not produce output, permanent well shut-in → no immediate change in TTF supply and demand.",
+        "evidence_0_sha256": "99ff003cf696109375c6096d469b9c2764f3efcbbd9a2de5a840614f5dc72da9",
+        "labels_equal_to_chinese": true,
+        "amounts_and_times_equal_to_chinese": true,
+        "completed_well_tense_assertion_found": false,
+        "close_summary": "Lacking a previous settlement price anchor, it is impossible to determine the relative change at close.",
+        "close_summary_sha256": "3529ddb68fa8104f5726aaa2986f7ab3ff1438670ae3e8c6a14070325f06e1fa",
+        "known_logic_errors": []
+      },
+      "detail_failure_review": {
+        "status": "failed",
+        "failure_metric_id": 19260,
+        "failure_metric_data_sha256": "fb2b37c6ca4b4827a4cbdd1dd150f58803b443586447ed493471b009f00b3604",
+        "calls": [
+          {
+            "attempt": 1,
+            "raw_content_sha256": "7c13eba23d43e52ac640bcfc9adc3839e5ce33b025fe255e2af647e9922e733e",
+            "original_errors": [
+              "news_impact.summary:Gassco公告撤销/结束或实际流量未确认，不能证明未形成供需冲击、供应不受影响或实际流量无变化；须有独立无变化计量事实。可写输入未显示冲击证据或恢复待核实，不能把缺测写成无冲击"
+            ],
+            "independent_findings": [
+              "The global current-window no-actual-supply-loss assertion is unsupported; this is not merely saying a specific future event has not started."
+            ]
+          },
+          {
+            "attempt": 2,
+            "raw_content_sha256": "c3f3c090e67180e940498b7d5fa89848afb96471f73e525402f22162c5378228",
+            "original_errors": [
+              "detail.invalidation_conditions[0]:N0输入仅有资源发现/勘探/许可/合作前瞻，未给已投产或实际交付事实；不能写成当前实物增供并抵消当日容量约束。可分析长期供给预期、未来投产条件及其与当前供给的时间差，不得据此补默认方向"
+            ],
+            "independent_findings": [
+              "Conditional discovery production invalidation was falsely rejected by the old prospective-supply wording gate; corrected scope now allows that premise.",
+              "new_facts narrates 随后永久封井并弃置 without a future modal although source says will now; the final source-tense gate correctly rejects this declarative sequence."
+            ]
+          }
+        ],
+        "accepted_detail_exists": false,
+        "original_failure_preserved": true
+      }
+    },
+    {
+      "analysis_id": "1508ce10-8dd8-4ab7-adb6-3e4da345b095",
+      "kind": "live",
+      "prompt_version": "ttf-news-standalone-2.1",
+      "as_of": "2026-10-20T20:45:25.588344+00:00",
+      "status": "failed",
+      "input_snapshot_sha256": "9ae4ff5983f8d303029083c76f6b652b9051f9bfc49ddd74d120a4aabab884b9",
+      "result_sha256": null,
+      "failure_metric_id": 19253,
+      "failure_metric_data_sha256": "af5be373c20d3ee6f370c0c71264719ef7ddd1a67bd3aabc0d3b10bf29db8526",
+      "verdict": "numeric_false_positive_and_independent_second_attempt_price_reaction_error",
+      "known_logic_errors": [
+        {
+          "attempt": 2,
+          "code": "unsupported_no_announcement_price_reaction",
+          "generated_quote": "缺乏前一结算基准且新闻未产生价格反应，无法判断收盘价相对前一日走势。",
+          "reason_zh": "没有公告前后可比价格反应输入，不能断言新闻未产生价格反应，也不能以无价格反应作为中和证据。"
+        }
+      ],
+      "validator_false_positives": [
+        {
+          "attempt": 1,
+          "quote": "Troll计划维护公告，未来10月22日至23日和10月21日至22日分别导致7.6和13.0 mcm/d容量不可用，但未造成当前供气损失，未见价格反应。",
+          "diagnostic": "N0容量字段未指明原值为137.4/129.8/7.6mcm/d，不是13.0；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算",
+          "reason": "分别7.6/13两个数字对应两个明确未来时段；不能把无N概述中的全部数字都绑N0。"
+        },
+        {
+          "attempt": 2,
+          "quote": "Troll计划维护导致未来可用容量分别下降7.6和13.0 mcm/d，公告为未来时间段，未造成当前供气损失，且未见价格反应，净影响为中性。",
+          "diagnostic": "N0容量字段available原值为129.8mcm/d，不是13.0；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算",
+          "reason": "可用容量分别下降7.6和13.0是在描述差额，不是绝对available level13；且顺序与N0/N2一致。"
+        }
+      ],
+      "scope_review_note": "未来维护尚未开始，因此该未来事件尚未造成当前物理损失与未知实际流量是否稳定不同；不得将此正确时点范围自动当全设施零损失断言。",
+      "calls": [
+        {
+          "attempt": 1,
+          "raw_content_sha256": "25c5f3961c49089259ae69f070cef73d216f82ad7979f34c88024551f40c6482",
+          "validation_errors": [
+            "N0容量字段未指明原值为137.4/129.8/7.6mcm/d，不是13.0；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算",
+            "news_impact.summary:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景"
+          ],
+          "done_reason": "stop",
+          "eval_count": 1441
+        },
+        {
+          "attempt": 2,
+          "raw_content_sha256": "956389fbe1b3cba4dd78b2c0c197a4d9420ed1401bedb99d25cfbb9472e19f66",
+          "validation_errors": [
+            "N0容量字段available原值为129.8mcm/d，不是13.0；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算",
+            "news_impact.summary:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景"
+          ],
+          "done_reason": "stop",
+          "eval_count": 1996
+        }
+      ],
+      "canonical_failure_preserved": true,
+      "direction_fallback": false
+    },
+    {
+      "analysis_id": "69c389a8-c205-4f97-a637-a1bc8eb1a267",
+      "kind": "live",
+      "prompt_version": "ttf-news-standalone-2.1",
+      "input_snapshot_sha256": "ad170d8edd9d89bdc36e3a1d11c9596226d618a03692c981bb75ec14f11a5c79",
+      "result_sha256": null,
+      "status": "failed",
+      "verdict": "correctly_rejected_material_source_and_pricing_errors",
+      "failure_metric_id": 19296,
+      "failure_metric_data_sha256": "27ec4558be8e12de69b82d0af546065359e49b345a1c7b23a89902ad8beeeb96",
+      "calls": [
+        {
+          "attempt": 1,
+          "raw_content_sha256": "e502aa37f86f85641aba6490c72d3542b6931f1850f02edb748ebdf2ca3e32d0",
+          "validation_errors": [
+            "两项公告容量属于不重叠时段，不能相加为同一时刻mcm/d容量下降；请按各N起止分别列出，不把相邻时段的速率求和",
+            "news_impact.summary:N1来源设施类型为Gas production field（气田/生产设施），不得称Troll等该实体为pipeline/管道维护；须保留对应N的原设施类别或泛称设施公告，不能借另一N的管道合同套类型，不改方向"
+          ],
+          "human_review": "Both notices are for adjacent nonoverlapping periods, so20.6mcm/d is not a supported aggregate rate. Troll production field is not a pipeline. The second response additionally asserts not priced in without independent reaction evidence.",
+          "summary": "两条未来维护公告导致Troll管道可用容量下降约20.6 mcm/d，可能对未来供给产生上行压力。"
+        },
+        {
+          "attempt": 2,
+          "raw_content_sha256": "49a8a65a725a0cb74d3c3a02a847dd48359f18e8a20ed2e5bd7dfdb552bdf2fa",
+          "validation_errors": [
+            "N0容量字段unavailable原值为7.6mcm/d，不是20.6；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算",
+            "news_impact.summary、close_forecast.basis、close_forecast.extreme_move_risk:缺少公告前后价格反应，不能宣称未计入价格/尚未计价；须区分计价未知",
+            "news_impact.summary:N1来源设施类型为Gas production field（气田/生产设施），不得称Troll等该实体为pipeline/管道维护；须保留对应N的原设施类别或泛称设施公告，不能借另一N的管道合同套类型，不改方向"
+          ],
+          "human_review": "Both notices are for adjacent nonoverlapping periods, so20.6mcm/d is not a supported aggregate rate. Troll production field is not a pipeline. The second response additionally asserts not priced in without independent reaction evidence.",
+          "summary": "未来维护公告导致Troll管道可用容量下降约20.6 mcm/d，可能对未来供给产生上行压力，但截至目前未计价。"
+        }
+      ],
+      "canonical_result_preserved": true,
+      "direction_fallback": false,
+      "new_gate_false_positive_found": false
+    },
+    {
+      "analysis_id": "960d00b0-6d55-4f81-9731-5290ea07b505",
+      "kind": "manual",
+      "prompt_version": "ttf-news-standalone-2.1",
+      "as_of": "2026-10-20T21:05:47.209596+00:00",
+      "completed_at": "2026-10-20T21:10:43.598829+00:00",
+      "input_snapshot_sha256": "cb8a08c0d6936d4951a62ad04212d0ebba823e7a469c7453d56166be938ddd15",
+      "result_sha256": "c7898eeff4713c5a584bbed0001f4ca3c066e980dd13726deda03ec6c4d46e3b",
+      "detail_result_sha256": "c148ff758e2b120f664b0ccf56d7a0f79d01f595f1634fc7d2549e4617cff919",
+      "verdict": "qualified_pass_brief_and_detail",
+      "known_logic_errors": [],
+      "qualified_pass_limits": [
+        "The news_impact and analysis.summary fields assess the causal pressure of supplied reporting, not a measured claim that total European flow is unchanged. No-direct-shock wording passes under this product contract, with a scope-clarity limitation.",
+        "N1/N2 are specific future maintenance periods that have not started; their rate capacities remain separate and actual flow unknown. E5/E6 are unchanged ongoing background, not newly revised current-window shocks; not discussing them in depth is a completeness limitation, not a fabricated opposing offset.",
+        "The brief does not discuss N1/N2 in depth; the detail includes them. The bearish scenario needs a clearer maintenance-completion/recovery stage. English base scenario translates 反向回吐 as reverse flow rather than price reversal/giveback; record as terminology ambiguity in a hypothetical condition."
+      ],
+      "checks": {
+        "source_and_window": "Earlier-window LNG Canada EPCM report is background, not newly published within target21Oct window. N1/N2 published/currently known before asof, event periods start21/22Oct in future.",
+        "price_anchor": "Missing20Oct prior same-contract reference correctly yields insufficient_evidence/null; quote86.39 is visible only as absolute observation.19Oct daily reference not used to fabricate prior-close difference.",
+        "supply_demand": "Future construction contract is not current production/delivery; future capacity notices are not current measured loss. Conditional actual loss→up and restoration→down signs are correct.",
+        "capacity_entity": "No rates summed; no field→pipeline misclassification; no conversion from capacity to measured losses.",
+        "history": "E1 dismissed source used only as historical analogue. No E1 unavailable future reaction invented; no old announcement membership claimed as priced in. E5/E6 ongoing background are not new-window source changes.",
+        "priced_in": "No comparable announcement reaction, and both parts expressly retain cannot confirm priced in.",
+        "english": "Both translations completed, labels/status/numbers/source chronology match; no new factual assertion introduced."
+      },
+      "parts": {
+        "brief": {
+          "verdict": "qualified_pass",
+          "close_summary": "缺乏前一交易日参考价，无法判断价格相对变化。",
+          "close_summary_sha256": "efce286107afadbf6a66c942fb3ec0a4767ae26a5bdffbe80988a419241f076b",
+          "semantic_gate_errors": [],
+          "english": {
+            "translation_id": "9c8e69ed-e1ec-499e-8f1d-acb5b66e6139",
+            "status": "completed",
+            "source_hash": "7a4ddade85c422796fa8e4801bda0cfe7a140d097164f5925b31a042916b6236",
+            "stored_result_sha256": "5a90aefcf429d50ce96f8b3c61a8dd7197538fd2074d6b720105a5eda8dfe264",
+            "close_summary": "There is no reference price from the previous trading day, so the relative price change cannot be determined.",
+            "close_summary_sha256": "05f5e88969e17902efd7b96a439d1bad7d56711584be6b78668dbbe884627ad7",
+            "known_logic_errors": []
+          }
+        },
+        "detail": {
+          "verdict": "qualified_pass",
+          "close_summary": "缺乏前一交易日参考价，无法判断价格相对变化。",
+          "close_summary_sha256": "efce286107afadbf6a66c942fb3ec0a4767ae26a5bdffbe80988a419241f076b",
+          "semantic_gate_errors": [],
+          "english": {
+            "translation_id": "ef8cd01b-c7f4-46c0-a747-fb9990672ae3",
+            "status": "completed",
+            "source_hash": "cf7757050bd2efdfd02506766376c1f25d65ff132a1e4c96f9e0f1a820d0fc50",
+            "stored_result_sha256": "dbd36344b6c3821f839423f79621b3a22e4937a2e4acece68ec44da72d6b150c",
+            "close_summary": "The lack of a reference price from the previous trading day makes it impossible to determine relative price changes.",
+            "close_summary_sha256": "69aee4422a405e25a6b17639df4fbe9410eaf3bf51ee2b2fc811b2f698f85ab6",
+            "known_logic_errors": []
+          }
+        }
+      },
+      "source_hashes": {
+        "ttf_news/analysis.py": "3b67ad8d17b465be7f9a2e02b26ed3e3ea07ba71ccd60cba1f986b4f13e7e298",
+        "ttf_news/semantics.py": "e6c49b09507a3a272cc67773e14b8bca8b8c4d061794e54022d095f90f7d9c2b",
+        "ttf_news/context.py": "6ae94608797de98b1129f673af219bde7e88faba1f4cf73a7456058d7350b23f"
+      }
+    }
+  ],
+  "live_v2_1_outputs": [
+    {
+      "role": "manual_brief",
+      "analysis_id": "960d00b0-6d55-4f81-9731-5290ea07b505",
+      "prompt_version": "ttf-news-standalone-2.1",
+      "summary_sha256": "efce286107afadbf6a66c942fb3ec0a4767ae26a5bdffbe80988a419241f076b",
+      "stored_result_sha256": "c7898eeff4713c5a584bbed0001f4ca3c066e980dd13726deda03ec6c4d46e3b",
+      "verdict": "pass",
+      "qualification": "Human source/causal pass under supplied-news-pressure scope; wording/completeness notes explicitly retained in the full record.",
+      "known_logic_errors": []
+    },
+    {
+      "role": "manual_detail",
+      "analysis_id": "960d00b0-6d55-4f81-9731-5290ea07b505",
+      "prompt_version": "ttf-news-standalone-2.1",
+      "summary_sha256": "efce286107afadbf6a66c942fb3ec0a4767ae26a5bdffbe80988a419241f076b",
+      "stored_result_sha256": "c148ff758e2b120f664b0ccf56d7a0f79d01f595f1634fc7d2549e4617cff919",
+      "verdict": "pass",
+      "qualification": "Human source/causal pass under supplied-news-pressure scope; wording/completeness notes explicitly retained in the full record.",
+      "known_logic_errors": []
+    }
+  ],
+  "review_source_hashes": {
+    "ttf_news/semantics.py": "946a72603eb705d496cc7f81d4da71d6783d7a2cd037601f93cdceabc92cb7ed",
+    "ttf_news/analysis.py": "d302ca1994621aef9ed47257b4d355a09f68905e2e3e549b5a698e05b738c449",
+    "ttf_news/context.py": "6ae94608797de98b1129f673af219bde7e88faba1f4cf73a7456058d7350b23f",
+    "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+    "ttf_news/prompts.py": "530d03e685092c9992bee59b20ce7ce4a2e34a8bcbe6805eafa024fa590d3570"
+  },
+  "final_gate_source_hashes": {
+    "ttf_news/analysis.py": "3b67ad8d17b465be7f9a2e02b26ed3e3ea07ba71ccd60cba1f986b4f13e7e298",
+    "ttf_news/semantics.py": "e6c49b09507a3a272cc67773e14b8bca8b8c4d061794e54022d095f90f7d9c2b",
+    "ttf_news/context.py": "6ae94608797de98b1129f673af219bde7e88faba1f4cf73a7456058d7350b23f"
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "audit": "fresh_production_current_live_english_full_review_v2_3",
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "audited_at": "2026-10-20T23:05:33.796219+00:00",
+  "role": "current_live_english",
+  "translation_record_path": "reports/repair_2026-10-20/production_current_live_english_actual_v2_3.json",
+  "translation_record_sha256": "922dc53c4bc2b05d399e53e1f9bbd74aca4d9f77c274e9a1ef5b45c93b25b648",
+  "translation_id": "6c838e7c-fa8f-4a16-baa3-34e7d16a611d",
+  "analysis_id": "e2285944-9e11-498e-ab62-431d7c093536",
+  "translation_status": "completed",
+  "source_chinese_record_path": "reports/repair_2026-10-20/production_current_live_actual_v2_3.json",
+  "source_chinese_record_sha256": "e53a988a5b15150fed61cdcc4ccd4c2b19f6c4c023de5c09b17aca6badaacfd9",
+  "source_result_hash_independently_recomputed": "0f6903763683a2c9347dcc4fef5eda6b802c1135cbd0e8f497caaac10c8215e0",
+  "source_hash_matches_translation_binding": true,
+  "translated_result_canonical_sha256": "af5071a5ec657c9a7dca1f6b35ac670615500670a97ca5079b9fec938b9d1101",
+  "source_chinese_full_review": {
+    "file": "reports/repair_2026-10-20/independent_production_current_live_review_v2_3.json",
+    "sha256": "7cb182da6fa108da63ee2bc47b9f6ebaf659500f33920610cb3ff3f3be929dbc"
+  },
+  "verdict": "no_P2_identified_translation_preserves_decision_and_evidence_with_P3_wording_limit",
+  "material_known_logic_errors": [],
+  "all_english_body_fields": {
+    "news_impact": {
+      "direction": "up",
+      "contextual_news_score": 1.0,
+      "confidence": 0.4,
+      "signal_strength": "moderate",
+      "summary": "Two future maintenance announcements indicate short‑term supply constraints, but there is no evidence of a price reaction, so the net impact is uncertain.",
+      "bullish_evidence": [
+        "[N0]Troll; plan; announcement of unavailable capacity 7.6mcm/d; future capacity announcement; actual flow unknown; TTF mechanism: capacity_constraint",
+        "[N2]Troll; plan; announcement of unavailable capacity 13.0mcm/d; future capacity announcement; actual flow unknown; end‑time revision: 2026-10-23T06:00:00+0200→2026-10-22T06:00:00+0200; TTF mechanism: capacity_constraint"
+      ],
+      "bearish_evidence": [],
+      "neutralizing_evidence": []
+    },
+    "close_forecast": {
+      "confidence": 0.0,
+      "summary": "Lack of comparable price benchmarks makes it impossible to determine the closing trend.",
+      "basis": "No comparable price benchmark observed, no price reaction detected.",
+      "extreme_move_risk": "Without a price benchmark, the risk of extreme movement cannot be assessed.",
+      "evidence_status": "insufficient_evidence",
+      "direction": null
+    },
+    "analysis": {
+      "summary": "Two future maintenance announcements indicate short‑term supply constraints, but there is no evidence of a price reaction, so the net impact is uncertain.",
+      "evidence": [
+        "[N0]Troll; plan; announcement of unavailable capacity 7.6mcm/d; future capacity announcement; actual flow unknown; TTF mechanism: capacity_constraint",
+        "[N2]Troll; plan; announcement of unavailable capacity 13.0mcm/d; future capacity announcement; actual flow unknown; end‑time revision: 2026-10-23T06:00:00+0200→2026-10-22T06:00:00+0200; TTF mechanism: capacity_constraint"
+      ],
+      "negation_or_reversal": [],
+      "priced_in_comment": "price_reference: no comparable price reaction before or after the announcement was provided, so it cannot be confirmed whether the news has been priced in.",
+      "matched_terms": [],
+      "historical_comparisons": []
+    },
+    "risk_flags": [
+      "Missing available market data from the previous trading day; the closing forecast is driven solely by news evidence.",
+      "The market has not yet been verified as ICE official daily settlement, so it does not participate in official settlement accuracy scoring.",
+      "The price type has not yet been verified as ICE official daily settlement, so it is not used for official settlement scoring.",
+      "The most recent price is not from the last full trading day, creating a market gap.",
+      "The model's confidence level has not been statistically calibrated, so it does not represent verified accuracy.",
+      "Source gdelt: recent collection failed; waiting to retry after error."
+    ],
+    "references": [
+      {
+        "id": "90bfbf6adb1183517cbc00ca",
+        "url": "https://umm.gassco.no/details?id=f1f667ff-1ee3-45f2-bedf-7eed367ea614",
+        "title": "Gassco Troll: Planned Gas production field unavailability (Active)"
+      },
+      {
+        "id": "a21b1cffbd1454613a5d0793",
+        "url": "https://umm.gassco.no/details?id=345ca395-a74a-4c9d-9c6c-abf24a16aaf8",
+        "title": "Gassco Troll: Planned Other unavailability (Active)"
+      }
+    ],
+    "missing_fields": [
+      "previous_contract_price",
+      "settlement_verification",
+      "confidence_calibration",
+      "source_coverage:gdelt"
+    ],
+    "source_fact_checks": {
+      "fact_contract_version": "operator-facts-2.2",
+      "operator_notices": [
+        {
+          "id": "N0",
+          "facility": "Troll",
+          "facility_type": "气田/生产设施",
+          "notice_type": "计划",
+          "unavailable_capacity": "7.6",
+          "period_utc": [
+            "2026-10-22T04:00Z",
+            "2026-10-23T04:00Z"
+          ],
+          "state_description": "未来公告",
+          "cause_original": "Yearly maintenance"
+        },
+        {
+          "id": "N2",
+          "facility": "Troll",
+          "facility_type": "类别未给",
+          "notice_type": "计划",
+          "unavailable_capacity": "13.0",
+          "period_utc": [
+            "2026-10-21T04:00Z",
+            "2026-10-22T04:00Z"
+          ],
+          "state_description": "未来公告",
+          "cause_original": "Yearly maintenance"
+        }
+      ],
+      "capacity_scope": "公告不可用容量，非实际流量计量",
+      "pricing_observation": {
+        "observed_at": "2026-10-20T20:59:00+00:00",
+        "available_at": "2026-10-20T21:09:54.498786+00:00",
+        "clock_roles": {
+          "observed_at": "报价发生时刻",
+          "available_at": "本机获知时刻；不是报价发生时刻"
+        },
+        "current_news_timing": {
+          "id": "N0",
+          "publication_time": "2026-10-20T20:13:18+00:00",
+          "quote_relation": "at_or_after_publication",
+          "quote_role": "已观察市场基准；单个报价不证明公告反应"
+        },
+        "reaction_evidence_available": false,
+        "pricing_status": "无法确认是否已计价；不是尚未计价或价格无反应"
+      },
+      "non_overlapping_notice_ids": [
+        [
+          "N0",
+          "N2"
+        ]
+      ]
+    }
+  },
+  "checks": {
+    "english_analysis_prose": "All active narrative strings outside metadata, preserved source_fact_checks and original references are English. Structured fact audit object is preserved Chinese by design and is not directly rendered by frontend source search; it is not an untranslated analysis narrative.",
+    "numbers_dates_citations": "7.6 and13.0mcm/d, N0/N2 aliases, Oct23→Oct22 timestamp revision, confidence/score/direction and all source references exactly preserved. No20.6sum or physicalloss claim introduced.",
+    "price_anchor_and_decision": "Newsup1 and closeNone/insufficient_evidence exactly match Chinese. Translation does not replace missing previous-day baseline with an older quote or turn null into broadlyflat.",
+    "reaction_observations": "News/analysis explicitly say no evidence of price reaction and priced-in comment says before/after observations were not provided. Basis no price reaction detected is interpreted in this missing-observation context, not proof that reaction measuredzero; mildly stronger phrasing than Chinese未观察到 is recorded below.",
+    "marginal_revision": "The exact end-time shortening is preserved, as is the Chinese limitation: no explicit explanation of its marginal risk relief versus continuing constraints. Translation does not newly fix or worsen the chosen direction.",
+    "identity": "Translation.source_hash and _meta.translation_source_sha256 independently match the exact completed Chinese source result; this is a translation of that result, not a second closing forecast."
+  },
+  "qualifications": [
+    {
+      "severity": "P3",
+      "id": "translation_reaction_detection_wording",
+      "field": "close_forecast.basis",
+      "source": "无可比价格基准，未观察到价格反应。",
+      "translation": "No comparable price benchmark observed, no price reaction detected.",
+      "assessment": "In context of explicit missing reaction observations this remains epistemic. Wording no comparable before/after reaction observations available would convey the boundary more clearly; do not describe it as measuredzero response."
+    },
+    {
+      "severity": "P3",
+      "id": "inherited_revision_marginal_explanation_limit",
+      "assessment": "Inherited from Chinese current_live review: N2earlierend is marginal easing and N0is continued/new later constraint; netup remains an analytical judgement with short explanation, not observed direction accuracy."
+    }
+  ],
+  "read_only_provenance_checks": {
+    "source_reference_equal": true,
+    "source_fact_checks_equal": true,
+    "all_decision_fields_unchanged": true,
+    "narrative_CJK_count": 0
+  },
+  "no_model_calls_by_reviewer": true,
+  "no_network_calls": true,
+  "no_database_access": true,
+  "no_tests_run": true,
+  "no_core_edits": true,
+  "limits": [
+    "Manual/detail English roles are not covered by this current_live English artifact.",
+    "Successful translation is not forecast accuracy or full product acceptance."
+  ]
+}

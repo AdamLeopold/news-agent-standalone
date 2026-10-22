@@ -1,0 +1,794 @@
+{
+  "created_at": "2026-10-20T18:39:14.414149+00:00",
+  "source_sha256": {
+    "ttf_news/analysis.py": "e1713b640a6c232e35d71d7c2199683154715faf3e0fb2396f8501ca7cfde234",
+    "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56",
+    "ttf_news/semantics.py": "59babcd94d9369ce37f1677ba1fb38c43a7830a2adfca95cd19cf5783d79e88f",
+    "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987",
+    "scripts/repair-validation-report.py": "c27435ab81027101171101251055bde77496f0b31360422ec6bc21bd2b58d7b5"
+  },
+  "records": [
+    {
+      "review_key": "dismissed_notice_not_verified_recovery",
+      "case": "dismissed_notice_not_verified_recovery",
+      "stage": "candidate-scopeguard-validation",
+      "file": "reports/repair_2026-10-20/candidate-scopeguard-validation/dismissed_notice_not_verified_recovery.json",
+      "file_sha256": "e5e68e64312e7175b45253b65252f99312d04e5f051ccc9d9e6718beb17b6420",
+      "input_sha256": "dc8a50f0ed4b2e64a5a97b9b3d697e61aa88afa3e25f195a97a44e8b017f36a0",
+      "final_raw_sha256": "8321e7fb87c20cf75536bc6060fbc9d4c6f9a6e2a4a7d678dd96804798f267d3",
+      "has_final_result": true,
+      "recorded_contract_passed": true,
+      "model_call_count": 1,
+      "generation_source_sha256": {
+        "ttf_news/analysis.py": "023c3cf9ea183696d619f2257220a0755e264899c4b4fd446416abc316967e28",
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56",
+        "ttf_news/semantics.py": "ee139952d35baf6b7ec8fc58c39974057276cebd9d762a016e4a94e0690946e4",
+        "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987",
+        "scripts/repair-validation-report.py": null
+      },
+      "current_offline_inspection": {
+        "case": "dismissed_notice_not_verified_recovery",
+        "file": "reports/repair_2026-10-20/candidate-scopeguard-validation/dismissed_notice_not_verified_recovery.json",
+        "stage": "candidate-scopeguard-validation",
+        "engine": "candidate",
+        "synthetic": true,
+        "passed": true,
+        "analysis_kind": "brief",
+        "has_detail_result": false,
+        "status": "passed",
+        "recorded_error": null,
+        "recorded_contract_passed": true,
+        "recorded_run_succeeded": true,
+        "revalidation_input": "final_result",
+        "revalidation_context_source": "record.input_snapshot",
+        "prompt_version": "ttf-news-standalone-2.0",
+        "model": {
+          "available": true,
+          "model": "gpt-oss:20b",
+          "digest": "17052f91a42e97930aa6e28a6c6c06a983e6a58dbb00434885a0cf5313e376f7",
+          "error": null
+        },
+        "reasoning": "medium",
+        "expectation_checks": {
+          "passed": true,
+          "expected_news": null,
+          "news_direction": "down",
+          "news_direction_checked": false,
+          "news_direction_passed": true,
+          "close_contract_checked": false,
+          "expected_close": null,
+          "expected_status": null,
+          "expected_close_sign": null,
+          "close_sign_checked": false,
+          "close_sign_passed": true,
+          "close_direction": null,
+          "close_evidence_status": "insufficient_evidence",
+          "close_contract_passed": true
+        },
+        "current_logic_revalidation": {
+          "passed": true,
+          "prepared_context_sha256": "7b673618894a5d587a269c2d4aef8ec3d2013a1dee4f07d44e238d34b6fa6ad7",
+          "source_reference_count": 2,
+          "context_window": 8192
+        },
+        "current_generation_policy_compatibility": {
+          "current_semantic_high_retry_enabled": false,
+          "current_semantic_high_scope": "operator_notice",
+          "recorded_semantic_high_scope": "operator_notice",
+          "semantic_high_independent_regeneration_used": false,
+          "compatible": true,
+          "current_news_is_operator_notice": null,
+          "reason": "no_independent_high_path_used"
+        },
+        "generation_source_files_changed": [
+          "ttf_news/schemas.py",
+          "ttf_news/analysis.py",
+          "ttf_news/semantics.py",
+          "ttf_news/retrieval.py",
+          "ttf_news/context.py"
+        ],
+        "generated_with_current_prompt": true,
+        "input_sha256": "dc8a50f0ed4b2e64a5a97b9b3d697e61aa88afa3e25f195a97a44e8b017f36a0",
+        "attempts": 1,
+        "retries": 0,
+        "analyst_elapsed_seconds": 73.534,
+        "wall_seconds": 73.536,
+        "model_total_seconds": 73.489,
+        "truncated_attempts": 0,
+        "recorded_validation_failures": 0
+      },
+      "verdict": "pass",
+      "notes": [
+        "旧‘供应风险已消除’已改为‘公告已撤销，容量风险消除，但未确认实际流量恢复’；事实卡进一步限定仅本公告约束撤销、实流与整体供应风险是否消除未知。",
+        "弱down来自该公告容量风险缓解，未宣称实际恢复、全部供应风险消失或市场已计价；缺价格基准close=null。",
+        "一轮medium成功，没有独立high实际路径；即使生成实例旧配置True，也与现默认False的执行路径兼容。"
+      ]
+    },
+    {
+      "review_key": "future_planned_notice",
+      "case": "future_planned_notice",
+      "stage": "candidate-scopeguard-validation",
+      "file": "reports/repair_2026-10-20/candidate-scopeguard-validation/future_planned_notice.json",
+      "file_sha256": "44888b55fac46ce05b45d88212ed11d28a7627296c0838f3903e06d02c4fcaf6",
+      "input_sha256": "99aa1883186e4c7746647f781489670cf07addc2c015b7bbd5f4d28310eef1e8",
+      "final_raw_sha256": null,
+      "has_final_result": false,
+      "recorded_contract_passed": false,
+      "model_call_count": 2,
+      "generation_source_sha256": {
+        "ttf_news/analysis.py": "023c3cf9ea183696d619f2257220a0755e264899c4b4fd446416abc316967e28",
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56",
+        "ttf_news/semantics.py": "ee139952d35baf6b7ec8fc58c39974057276cebd9d762a016e4a94e0690946e4",
+        "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987",
+        "scripts/repair-validation-report.py": null
+      },
+      "current_offline_inspection": {
+        "case": "future_planned_notice",
+        "file": "reports/repair_2026-10-20/candidate-scopeguard-validation/future_planned_notice.json",
+        "stage": "candidate-scopeguard-validation",
+        "engine": "candidate",
+        "synthetic": true,
+        "passed": false,
+        "analysis_kind": "brief",
+        "has_detail_result": false,
+        "status": "needs_attention",
+        "recorded_error": "模型JSON两次校验失败，未生成方向：模型生成达到输出额度上限；重新生成简洁完整JSON，每个风险只写一句，不重复情景",
+        "recorded_contract_passed": false,
+        "recorded_run_succeeded": false,
+        "revalidation_input": "last_raw_response",
+        "revalidation_context_source": "record.input_snapshot",
+        "prompt_version": "ttf-news-standalone-2.0",
+        "model": {
+          "available": true,
+          "model": "gpt-oss:20b",
+          "digest": "17052f91a42e97930aa6e28a6c6c06a983e6a58dbb00434885a0cf5313e376f7",
+          "error": null
+        },
+        "reasoning": "high",
+        "expectation_checks": {
+          "passed": false,
+          "reason": "no_final_result"
+        },
+        "current_logic_revalidation": {
+          "passed": false,
+          "error_type": "ValueError",
+          "reason": "模型未返回JSON正文（可能输出额度不足）"
+        },
+        "current_generation_policy_compatibility": {
+          "current_semantic_high_retry_enabled": false,
+          "current_semantic_high_scope": "operator_notice",
+          "recorded_semantic_high_scope": "operator_notice",
+          "semantic_high_independent_regeneration_used": true,
+          "compatible": false,
+          "current_news_is_operator_notice": true,
+          "reason": "independent_high_disabled_by_current_default"
+        },
+        "generation_source_files_changed": [
+          "ttf_news/schemas.py",
+          "ttf_news/analysis.py",
+          "ttf_news/semantics.py",
+          "ttf_news/retrieval.py",
+          "ttf_news/context.py"
+        ],
+        "generated_with_current_prompt": true,
+        "input_sha256": "99aa1883186e4c7746647f781489670cf07addc2c015b7bbd5f4d28310eef1e8",
+        "attempts": 2,
+        "retries": 1,
+        "analyst_elapsed_seconds": null,
+        "wall_seconds": 356.716,
+        "model_total_seconds": 356.454,
+        "truncated_attempts": 1,
+        "recorded_validation_failures": 2
+      },
+      "verdict": "failed_safely",
+      "notes": [
+        "无最终有效分析。首轮medium仍将不可用20mcm/d写为计划停产量，正确因容量≠实流被拒。",
+        "独立high16K/12288输出额度耗尽，raw_content为空且done_reason=length；不得把旧symmetric有效结果回退当成本阶段通过，保留全部失败。"
+      ]
+    },
+    {
+      "review_key": "real_eni",
+      "case": "real_eni",
+      "stage": "candidate-scopeguard-validation",
+      "file": "reports/repair_2026-10-20/candidate-scopeguard-validation/real_eni.json",
+      "file_sha256": "d11361901006ea411089acf948c6631fb046c01ebe98b0f0411b5668c20aec22",
+      "input_sha256": "0dd52f2daf32aeaf1edc94d3394b0df67eba21b6f8d1b3b6ca0652c0faf8f075",
+      "final_raw_sha256": "3de8dbbdccea6cd9e72327fa568f773fa9cacc62c0cdf90afccc3b84a68fcc2c",
+      "has_final_result": true,
+      "recorded_contract_passed": true,
+      "model_call_count": 1,
+      "generation_source_sha256": {
+        "ttf_news/analysis.py": "023c3cf9ea183696d619f2257220a0755e264899c4b4fd446416abc316967e28",
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56",
+        "ttf_news/semantics.py": "ee139952d35baf6b7ec8fc58c39974057276cebd9d762a016e4a94e0690946e4",
+        "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987",
+        "scripts/repair-validation-report.py": null
+      },
+      "current_offline_inspection": {
+        "case": "real_eni",
+        "file": "reports/repair_2026-10-20/candidate-scopeguard-validation/real_eni.json",
+        "stage": "candidate-scopeguard-validation",
+        "engine": "candidate",
+        "synthetic": false,
+        "passed": false,
+        "analysis_kind": "brief",
+        "has_detail_result": false,
+        "status": "needs_attention",
+        "recorded_error": null,
+        "recorded_contract_passed": true,
+        "recorded_run_succeeded": true,
+        "revalidation_input": "final_result",
+        "revalidation_context_source": "record.input_snapshot",
+        "prompt_version": "ttf-news-standalone-2.0",
+        "model": {
+          "available": true,
+          "model": "gpt-oss:20b",
+          "digest": "17052f91a42e97930aa6e28a6c6c06a983e6a58dbb00434885a0cf5313e376f7",
+          "error": null
+        },
+        "reasoning": "medium",
+        "expectation_checks": {
+          "passed": true,
+          "expected_news": null,
+          "news_direction": "up",
+          "news_direction_checked": false,
+          "news_direction_passed": true,
+          "close_contract_checked": false,
+          "expected_close": null,
+          "expected_status": null,
+          "expected_close_sign": null,
+          "close_sign_checked": false,
+          "close_sign_passed": true,
+          "close_direction": "up",
+          "close_evidence_status": "forecast",
+          "close_contract_passed": true
+        },
+        "current_logic_revalidation": {
+          "passed": false,
+          "error_type": "ValueError",
+          "reason": "source_fact_checks与本次已知输入的公告/行情事实表不一致；须逐项复制输入原值，不能修改类型、时态或把行情变化当公告已计价"
+        },
+        "current_generation_policy_compatibility": {
+          "current_semantic_high_retry_enabled": false,
+          "current_semantic_high_scope": "operator_notice",
+          "recorded_semantic_high_scope": "operator_notice",
+          "semantic_high_independent_regeneration_used": false,
+          "compatible": true,
+          "current_news_is_operator_notice": null,
+          "reason": "no_independent_high_path_used"
+        },
+        "generation_source_files_changed": [
+          "ttf_news/schemas.py",
+          "ttf_news/analysis.py",
+          "ttf_news/semantics.py",
+          "ttf_news/retrieval.py",
+          "ttf_news/context.py"
+        ],
+        "generated_with_current_prompt": true,
+        "input_sha256": "0dd52f2daf32aeaf1edc94d3394b0df67eba21b6f8d1b3b6ca0652c0faf8f075",
+        "attempts": 1,
+        "retries": 0,
+        "analyst_elapsed_seconds": 91.252,
+        "wall_seconds": 91.257,
+        "model_total_seconds": 91.137,
+        "truncated_attempts": 0,
+        "recorded_validation_failures": 0
+      },
+      "verdict": "needs_attention",
+      "notes": [
+        "原风险bucket错误已修，N3/N7的5.2/19.8产能不可用正确列于bullish；没有旧扩供看涨或已计价断言，未来E1仍排除，flat基准也可支持条件性up，不按标签本身判错。",
+        "新正文两次称‘两项活跃的非计划停产’，但N3 Åsgard为Unplanned、N7 Nyhamna为Planned，结构化事实表也逐项正确；统称两个非计划与来源矛盾，不能因contract_passed=True计通过。",
+        "close基础写两项‘活跃停产’，仍需保持公告容量与实流未知的区分。已报告父任务，不修改raw或强改方向。"
+      ]
+    },
+    {
+      "review_key": "real_nyhamna",
+      "case": "real_nyhamna",
+      "stage": "candidate-scopeguard-validation",
+      "file": "reports/repair_2026-10-20/candidate-scopeguard-validation/real_nyhamna.json",
+      "file_sha256": "7ab0ad69d2173e0f3250333427a6e58b6bf536df0e8aefc206fe4f2e0524921f",
+      "input_sha256": "4ba9dbdac43a9ce84acad5d9dde536a9d5e5a5fa02b6e1a3d65fc64ad7c7990a",
+      "final_raw_sha256": "87dc318f2d6ec3c322b276de4d411d9be2ef6de8af5cc2ab410a7e862889b22b",
+      "has_final_result": false,
+      "recorded_contract_passed": false,
+      "model_call_count": 2,
+      "generation_source_sha256": {
+        "ttf_news/analysis.py": "023c3cf9ea183696d619f2257220a0755e264899c4b4fd446416abc316967e28",
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56",
+        "ttf_news/semantics.py": "ee139952d35baf6b7ec8fc58c39974057276cebd9d762a016e4a94e0690946e4",
+        "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987",
+        "scripts/repair-validation-report.py": null
+      },
+      "current_offline_inspection": {
+        "case": "real_nyhamna",
+        "file": "reports/repair_2026-10-20/candidate-scopeguard-validation/real_nyhamna.json",
+        "stage": "candidate-scopeguard-validation",
+        "engine": "candidate",
+        "synthetic": false,
+        "passed": false,
+        "analysis_kind": "brief",
+        "has_detail_result": false,
+        "status": "needs_attention",
+        "recorded_error": "模型JSON两次校验失败，未生成方向：全部正文用中文；N3公告类型为Unplanned（非计划），不能写计划停机/计划检修；年检可作为原文原因，须区分类型并重新分析",
+        "recorded_contract_passed": false,
+        "recorded_run_succeeded": false,
+        "revalidation_input": "last_raw_response",
+        "revalidation_context_source": "record.input_snapshot",
+        "prompt_version": "ttf-news-standalone-2.0",
+        "model": {
+          "available": true,
+          "model": "gpt-oss:20b",
+          "digest": "17052f91a42e97930aa6e28a6c6c06a983e6a58dbb00434885a0cf5313e376f7",
+          "error": null
+        },
+        "reasoning": "medium",
+        "expectation_checks": {
+          "passed": true,
+          "expected_news": null,
+          "news_direction": "up",
+          "news_direction_checked": false,
+          "news_direction_passed": true,
+          "close_contract_checked": false,
+          "expected_close": null,
+          "expected_status": null,
+          "expected_close_sign": null,
+          "close_sign_checked": false,
+          "close_sign_passed": true,
+          "close_direction": "up",
+          "close_evidence_status": "forecast",
+          "close_contract_passed": true
+        },
+        "current_logic_revalidation": {
+          "passed": false,
+          "error_type": "ValueError",
+          "reason": "N3公告类型为Unplanned（非计划），不能写计划停机/计划检修；年检可作为原文原因，须区分类型并重新分析"
+        },
+        "current_generation_policy_compatibility": {
+          "current_semantic_high_retry_enabled": false,
+          "current_semantic_high_scope": "operator_notice",
+          "recorded_semantic_high_scope": "operator_notice",
+          "semantic_high_independent_regeneration_used": false,
+          "compatible": true,
+          "current_news_is_operator_notice": null,
+          "reason": "no_independent_high_path_used"
+        },
+        "generation_source_files_changed": [
+          "ttf_news/schemas.py",
+          "ttf_news/analysis.py",
+          "ttf_news/semantics.py",
+          "ttf_news/retrieval.py",
+          "ttf_news/context.py"
+        ],
+        "generated_with_current_prompt": true,
+        "input_sha256": "4ba9dbdac43a9ce84acad5d9dde536a9d5e5a5fa02b6e1a3d65fc64ad7c7990a",
+        "attempts": 2,
+        "retries": 1,
+        "analyst_elapsed_seconds": null,
+        "wall_seconds": 238.441,
+        "model_total_seconds": 238.04,
+        "truncated_attempts": 0,
+        "recorded_validation_failures": 2
+      },
+      "verdict": "failed_safely",
+      "notes": [
+        "两轮medium均将N3 Åsgard明确的Unplanned公告写成计划停产/停机，混淆类型与原因Yearly maintenance，正确被现有源事实检查拒绝，无有效final。",
+        "第二轮还把公告不可用19.8/5.2写为停机流失数量并合称约25供应缺口，未有实流计量支持；即使up方向可成立，也不能通过改label/弱化gate把此原文计通过。"
+      ]
+    },
+    {
+      "review_key": "supply_restore_40_with_flat_baseline",
+      "case": "supply_restore_40_with_flat_baseline",
+      "stage": "candidate-scopeguard-validation",
+      "file": "reports/repair_2026-10-20/candidate-scopeguard-validation/supply_restore_40_with_flat_baseline.json",
+      "file_sha256": "919732977fa71a7d75ca0eeea6419e3fe281bdba71d6b99fa711ad0defc4d014",
+      "input_sha256": "464d1b4829706e3760d34f544c7b1028ab149fdf9aae15c7c9f40febbcb66e9c",
+      "final_raw_sha256": "88d243b1e367d43f4c414a40234d251937edcdcf6c769e9809bd4342e337faca",
+      "has_final_result": true,
+      "recorded_contract_passed": false,
+      "model_call_count": 1,
+      "generation_source_sha256": {
+        "ttf_news/analysis.py": "023c3cf9ea183696d619f2257220a0755e264899c4b4fd446416abc316967e28",
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56",
+        "ttf_news/semantics.py": "ee139952d35baf6b7ec8fc58c39974057276cebd9d762a016e4a94e0690946e4",
+        "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987",
+        "scripts/repair-validation-report.py": null
+      },
+      "current_offline_inspection": {
+        "case": "supply_restore_40_with_flat_baseline",
+        "file": "reports/repair_2026-10-20/candidate-scopeguard-validation/supply_restore_40_with_flat_baseline.json",
+        "stage": "candidate-scopeguard-validation",
+        "engine": "candidate",
+        "synthetic": true,
+        "passed": false,
+        "analysis_kind": "brief",
+        "has_detail_result": false,
+        "status": "needs_attention",
+        "recorded_error": null,
+        "recorded_contract_passed": false,
+        "recorded_run_succeeded": true,
+        "revalidation_input": "final_result",
+        "revalidation_context_source": "record.input_snapshot",
+        "prompt_version": "ttf-news-standalone-2.0",
+        "model": {
+          "available": true,
+          "model": "gpt-oss:20b",
+          "digest": "17052f91a42e97930aa6e28a6c6c06a983e6a58dbb00434885a0cf5313e376f7",
+          "error": null
+        },
+        "reasoning": "medium",
+        "expectation_checks": {
+          "passed": false,
+          "expected_news": "down",
+          "news_direction": "down",
+          "news_direction_checked": true,
+          "news_direction_passed": true,
+          "close_contract_checked": true,
+          "expected_close": null,
+          "expected_status": null,
+          "expected_close_sign": "down",
+          "close_sign_checked": true,
+          "close_sign_passed": false,
+          "close_direction": null,
+          "close_evidence_status": "insufficient_evidence",
+          "close_contract_passed": false
+        },
+        "current_logic_revalidation": {
+          "passed": false,
+          "error_type": "ValueError",
+          "reason": "close_forecast:已有可用同合约价格基准及方向性新闻；缺少公告前后反应或未知是否已计价，不能单独作为拒绝收盘预判的理由。请相对已给前价和当前基准，依据有来源机制给条件性forecast；可选择任一有依据的方向，不得自动复制新闻方向。若确有冲突须明确引用具体反向事实"
+        },
+        "current_generation_policy_compatibility": {
+          "current_semantic_high_retry_enabled": false,
+          "current_semantic_high_scope": "operator_notice",
+          "recorded_semantic_high_scope": "operator_notice",
+          "semantic_high_independent_regeneration_used": false,
+          "compatible": true,
+          "current_news_is_operator_notice": null,
+          "reason": "no_independent_high_path_used"
+        },
+        "generation_source_files_changed": [
+          "ttf_news/schemas.py",
+          "ttf_news/analysis.py",
+          "ttf_news/semantics.py",
+          "ttf_news/retrieval.py",
+          "ttf_news/context.py"
+        ],
+        "generated_with_current_prompt": true,
+        "input_sha256": "464d1b4829706e3760d34f544c7b1028ab149fdf9aae15c7c9f40febbcb66e9c",
+        "attempts": 1,
+        "retries": 0,
+        "analyst_elapsed_seconds": 56.417,
+        "wall_seconds": 56.419,
+        "model_total_seconds": 56.377,
+        "truncated_attempts": 0,
+        "recorded_validation_failures": 0
+      },
+      "verdict": "needs_attention",
+      "notes": [
+        "同合约有效flat基准88.04、实测供给恢复40mcm/d且无反向新闻，news down正确。",
+        "close=null的理由仅‘基准flat，且无价格反应证据，故无法判断是否已计价’，没有来源支持的冲突或其他不能形成条件预判的理由；是既有未知计价不能独自拒绝条件forecast规则的同义漏检。",
+        "contract_passed=False如实保留；应按诊断重生，不默认flat或用代码补down。该轮只有medium，无独立high。"
+      ]
+    },
+    {
+      "review_key": "detail:supply_restore_40",
+      "case": "supply_restore_40",
+      "stage": "candidate-scopeguard-validation-detail",
+      "file": "reports/repair_2026-10-20/candidate-scopeguard-validation-detail/supply_restore_40.json",
+      "file_sha256": "dcaa76d55f139c974d6412ca2698d849e3a1c9324a12edf9696a69a6190eb0ca",
+      "input_sha256": "34528870d8c93ae88245489993d0a452b219603f455aebefe082e48742003c94",
+      "final_raw_sha256": "2bb67020d0284ef5b73e51d498f1c2f1185f702adc97cd14d07de5c4629f73ad",
+      "has_final_result": false,
+      "recorded_contract_passed": false,
+      "model_call_count": 2,
+      "generation_source_sha256": {
+        "ttf_news/analysis.py": "32034a3a9eed7983f57667158f56a0e29d12c618dac8e04075e531ae4b9b3753",
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56",
+        "ttf_news/semantics.py": "ee139952d35baf6b7ec8fc58c39974057276cebd9d762a016e4a94e0690946e4",
+        "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987",
+        "scripts/repair-validation-report.py": null
+      },
+      "current_offline_inspection": {
+        "case": "supply_restore_40",
+        "file": "reports/repair_2026-10-20/candidate-scopeguard-validation-detail/supply_restore_40.json",
+        "stage": "candidate-scopeguard-validation-detail",
+        "engine": "candidate",
+        "synthetic": true,
+        "passed": false,
+        "analysis_kind": "detail",
+        "has_detail_result": false,
+        "status": "needs_attention",
+        "recorded_error": "模型JSON两次校验失败，未生成方向：全部正文用中文；detail.limitations[1]:输入已明确提供实际流量变化的量化原值（如40mcm/d），不能声称未提供实际流量量化资料；可说明独立核验、连续序列或后续恢复状态尚缺失，不得把核验不足混成数；detail.scenarios.base须写基于输入事实的条件情景（若某事实改变或持续→TTF机制），不能用“无”或重复结论代替",
+        "recorded_contract_passed": false,
+        "recorded_run_succeeded": false,
+        "revalidation_input": "last_raw_response",
+        "revalidation_context_source": "record.input_snapshot",
+        "prompt_version": "ttf-news-standalone-2.0",
+        "model": {
+          "available": true,
+          "model": "gpt-oss:20b",
+          "digest": "17052f91a42e97930aa6e28a6c6c06a983e6a58dbb00434885a0cf5313e376f7",
+          "error": null
+        },
+        "reasoning": "medium",
+        "expectation_checks": {
+          "passed": true,
+          "expected_news": "down",
+          "news_direction": "down",
+          "news_direction_checked": true,
+          "news_direction_passed": true,
+          "close_contract_checked": false,
+          "expected_close": null,
+          "expected_status": null,
+          "expected_close_sign": null,
+          "close_sign_checked": false,
+          "close_sign_passed": true,
+          "close_direction": null,
+          "close_evidence_status": "insufficient_evidence",
+          "close_contract_passed": true
+        },
+        "current_logic_revalidation": {
+          "passed": false,
+          "error_type": "ValueError",
+          "reason": "detail.scenarios.base须写基于输入事实的条件情景（若某事实改变或持续→TTF机制），不能用“无”或重复结论代替"
+        },
+        "current_generation_policy_compatibility": {
+          "current_semantic_high_retry_enabled": false,
+          "current_semantic_high_scope": "operator_notice",
+          "recorded_semantic_high_scope": "operator_notice",
+          "semantic_high_independent_regeneration_used": false,
+          "compatible": true,
+          "current_news_is_operator_notice": null,
+          "reason": "no_independent_high_path_used"
+        },
+        "generation_source_files_changed": [
+          "ttf_news/schemas.py",
+          "ttf_news/analysis.py",
+          "ttf_news/semantics.py",
+          "ttf_news/retrieval.py",
+          "ttf_news/context.py"
+        ],
+        "generated_with_current_prompt": true,
+        "input_sha256": "34528870d8c93ae88245489993d0a452b219603f455aebefe082e48742003c94",
+        "attempts": 2,
+        "retries": 1,
+        "analyst_elapsed_seconds": null,
+        "wall_seconds": 188.88,
+        "model_total_seconds": 188.634,
+        "truncated_attempts": 0,
+        "recorded_validation_failures": 2
+      },
+      "verdict": "failed_safely",
+      "notes": [
+        "两轮medium后没有有效详析。末轮已写实际流量增加40mcm/d，却在limitations称未提供实流量化，与明确输入矛盾。",
+        "第一轮bullish情景曾写单向供增机制，正确被拒；末轮base/bearish只重复供应增加→下行而非条件情景，未达到详析契约。",
+        "实际未使用独立high，执行策略兼容也不能替代结果通过。"
+      ]
+    }
+  ],
+  "retained_current_revalidation": [
+    {
+      "case": "cold_heating_demand",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/cold_heating_demand.json",
+      "file_sha256": "18b1d8f926c9a737f1c7586c45ee48755999f97893d97bd962ccf8181bd11180",
+      "passed": true,
+      "current_logic_revalidation": {
+        "passed": true,
+        "prepared_context_sha256": "8ca0629316c224bb2aeaf8d844ee4d1f8272354ea48ece67fd5adb534ebb7216",
+        "source_reference_count": 2,
+        "context_window": 8192
+      },
+      "current_generation_policy_compatibility": {
+        "current_semantic_high_retry_enabled": false,
+        "current_semantic_high_scope": "operator_notice",
+        "recorded_semantic_high_scope": "operator_notice",
+        "semantic_high_independent_regeneration_used": false,
+        "compatible": true,
+        "current_news_is_operator_notice": null,
+        "reason": "no_independent_high_path_used"
+      }
+    },
+    {
+      "case": "cumulative_shock_then_weak",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/cumulative_shock_then_weak.json",
+      "file_sha256": "c52aea14465011166b0aa7b6d0e1020923eef5874d90d03ebc81bc5bc238cf25",
+      "passed": true,
+      "current_logic_revalidation": {
+        "passed": true,
+        "prepared_context_sha256": "4114bd58362b18bd03dab548cc78056070e9d7099f8c307cf60905762508a0a1",
+        "source_reference_count": 3,
+        "context_window": 8192
+      },
+      "current_generation_policy_compatibility": {
+        "current_semantic_high_retry_enabled": false,
+        "current_semantic_high_scope": "operator_notice",
+        "recorded_semantic_high_scope": "operator_notice",
+        "semantic_high_independent_regeneration_used": false,
+        "compatible": true,
+        "current_news_is_operator_notice": null,
+        "reason": "no_independent_high_path_used"
+      }
+    },
+    {
+      "case": "negated_outage",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/negated_outage.json",
+      "file_sha256": "e0869eaf2ac442d6a92a5b60e82c9a89a9c3faa27b893988632e41e18e6106d8",
+      "passed": true,
+      "current_logic_revalidation": {
+        "passed": true,
+        "prepared_context_sha256": "fa7ef616ec4169bb0ea6145289314fd63ba45d2a3a57b12d2d58f1a4805d5699",
+        "source_reference_count": 2,
+        "context_window": 8192
+      },
+      "current_generation_policy_compatibility": {
+        "current_semantic_high_retry_enabled": false,
+        "current_semantic_high_scope": "operator_notice",
+        "recorded_semantic_high_scope": "operator_notice",
+        "semantic_high_independent_regeneration_used": false,
+        "compatible": true,
+        "current_news_is_operator_notice": null,
+        "reason": "no_independent_high_path_used"
+      }
+    },
+    {
+      "case": "supplied_conflicting_mechanisms",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/supplied_conflicting_mechanisms.json",
+      "file_sha256": "d8a75ccbcb121b79a71660b0d257afdb5993d1a462907479a06e6c888500eab8",
+      "passed": true,
+      "current_logic_revalidation": {
+        "passed": true,
+        "prepared_context_sha256": "58b43a42b5c1ca640585112d015573b193218ff229be87e0f4c558e7af94b84e",
+        "source_reference_count": 2,
+        "context_window": 8192
+      },
+      "current_generation_policy_compatibility": {
+        "current_semantic_high_retry_enabled": false,
+        "current_semantic_high_scope": "operator_notice",
+        "recorded_semantic_high_scope": "operator_notice",
+        "semantic_high_independent_regeneration_used": false,
+        "compatible": true,
+        "current_news_is_operator_notice": null,
+        "reason": "no_independent_high_path_used"
+      }
+    },
+    {
+      "case": "supply_loss_40",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/supply_loss_40.json",
+      "file_sha256": "b98e8729352dea3641479ac9be1cc92b12f64050dc1a539eb84e5abefc25f7fd",
+      "passed": true,
+      "current_logic_revalidation": {
+        "passed": true,
+        "prepared_context_sha256": "207c924346ac13387bf7b77da6b33fbb98dd48e12b8b189b65316fcfca4186bf",
+        "source_reference_count": 2,
+        "context_window": 8192
+      },
+      "current_generation_policy_compatibility": {
+        "current_semantic_high_retry_enabled": false,
+        "current_semantic_high_scope": "operator_notice",
+        "recorded_semantic_high_scope": "operator_notice",
+        "semantic_high_independent_regeneration_used": false,
+        "compatible": true,
+        "current_news_is_operator_notice": null,
+        "reason": "no_independent_high_path_used"
+      }
+    },
+    {
+      "case": "supply_loss_40_with_flat_baseline",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/supply_loss_40_with_flat_baseline.json",
+      "file_sha256": "d354125ed2997f9c4b1f5c7f34511f31b3e765a312c7dc7eaec29270dda80e44",
+      "passed": true,
+      "current_logic_revalidation": {
+        "passed": true,
+        "prepared_context_sha256": "bbab53f9e413ede4733d71eb3da2875ed161f37085f74c0ef7d04f0664df87e3",
+        "source_reference_count": 2,
+        "context_window": 8192
+      },
+      "current_generation_policy_compatibility": {
+        "current_semantic_high_retry_enabled": false,
+        "current_semantic_high_scope": "operator_notice",
+        "recorded_semantic_high_scope": "operator_notice",
+        "semantic_high_independent_regeneration_used": false,
+        "compatible": true,
+        "current_news_is_operator_notice": null,
+        "reason": "no_independent_high_path_used"
+      }
+    },
+    {
+      "case": "supply_restore_40",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/supply_restore_40.json",
+      "file_sha256": "804b8c86f82a73cbc420d492d6223d004ab74c3bbf9507cb4d694f713a0006c1",
+      "passed": true,
+      "current_logic_revalidation": {
+        "passed": true,
+        "prepared_context_sha256": "de2e70245eabc10b39640feec6de0aeae6b6eb67cb254b9c85535baf657f59b6",
+        "source_reference_count": 2,
+        "context_window": 8192
+      },
+      "current_generation_policy_compatibility": {
+        "current_semantic_high_retry_enabled": false,
+        "current_semantic_high_scope": "operator_notice",
+        "recorded_semantic_high_scope": "operator_notice",
+        "semantic_high_independent_regeneration_used": false,
+        "compatible": true,
+        "current_news_is_operator_notice": null,
+        "reason": "no_independent_high_path_used"
+      }
+    },
+    {
+      "case": "warm_heating_demand",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/warm_heating_demand.json",
+      "file_sha256": "9ef336c549af09adb54396811ee20f433f066f188261e55ee9954c7f120066f1",
+      "passed": true,
+      "current_logic_revalidation": {
+        "passed": true,
+        "prepared_context_sha256": "a768f87774a226403f319a39611e78cbfed00e4a618733a9e775e8db3778c1cf",
+        "source_reference_count": 2,
+        "context_window": 8192
+      },
+      "current_generation_policy_compatibility": {
+        "current_semantic_high_retry_enabled": false,
+        "current_semantic_high_scope": "operator_notice",
+        "recorded_semantic_high_scope": "operator_notice",
+        "semantic_high_independent_regeneration_used": false,
+        "compatible": true,
+        "current_news_is_operator_notice": null,
+        "reason": "no_independent_high_path_used"
+      }
+    },
+    {
+      "case": "weak_exploration_no_quote",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/weak_exploration_no_quote.json",
+      "file_sha256": "250f8e8932eae89462d1bda85a784dfd5e8604caff03a6bc6612d739c1eb08a0",
+      "passed": true,
+      "current_logic_revalidation": {
+        "passed": true,
+        "prepared_context_sha256": "6b4636e7a1389214c2d707b9154e3f6df62b3ffbcaa392a63ccf5fd4a05560c0",
+        "source_reference_count": 2,
+        "context_window": 8192
+      },
+      "current_generation_policy_compatibility": {
+        "current_semantic_high_retry_enabled": false,
+        "current_semantic_high_scope": "operator_notice",
+        "recorded_semantic_high_scope": "operator_notice",
+        "semantic_high_independent_regeneration_used": false,
+        "compatible": true,
+        "current_news_is_operator_notice": null,
+        "reason": "no_independent_high_path_used"
+      }
+    },
+    {
+      "case": "weak_news_observed_market_up",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/weak_news_observed_market_up.json",
+      "file_sha256": "043e2b241432c05cdf84e38c8697935fe0781a44fce05fabe3d9aca1e79f5805",
+      "passed": true,
+      "current_logic_revalidation": {
+        "passed": true,
+        "prepared_context_sha256": "f9eeb9a9a3a48635a6a20b5b119881065a0d74a3260bb528866060b6387a003f",
+        "source_reference_count": 2,
+        "context_window": 8192
+      },
+      "current_generation_policy_compatibility": {
+        "current_semantic_high_retry_enabled": false,
+        "current_semantic_high_scope": "operator_notice",
+        "recorded_semantic_high_scope": "operator_notice",
+        "semantic_high_independent_regeneration_used": false,
+        "compatible": true,
+        "current_news_is_operator_notice": null,
+        "reason": "no_independent_high_path_used"
+      }
+    }
+  ],
+  "review_method": "逐句人工比较原始input_snapshot、最后原始回答与失败尝试；独立review不以生成时contract_passed代替语义通过，未请求模型或修改数据库。",
+  "model_calls_requested_by_reviewer": 0,
+  "database_access": false,
+  "stage_status": "needs_attention",
+  "scope": "五条scopeguard简报与一条详析；保留早前symmetric独立失败证据；当前默认反馈策略后续实测另行复核。",
+  "review_summary": {
+    "brief_pass": 1,
+    "brief_needs_attention": 2,
+    "brief_failed_safely": 2,
+    "detail_failed_safely": 1,
+    "retained_revalidated_count": 10,
+    "retained_revalidated_pass": 10
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T05:42:51.479635+00:00",
+  "scope": "One finite final review of the two observed defects: future capacity timing promoted into current window and abstract supply-pressure increase mistaken for physical supply increase. The explicit metadata source-index route closes the earlier compressed-facts identity false positive.",
+  "candidate_analysis": {
+    "file": ".runtime/future-capacity-pressure-scope-proposal/revision-explicit-source-index/ttf_news/analysis.py",
+    "sha256": "1aebeb8971f13f61fd8bd4f9ab961b6284e811aeb773014ef7cc71874c94375c"
+  },
+  "candidate_semantics": {
+    "file": ".runtime/future-capacity-pressure-scope-proposal/revision-explicit-source-index/ttf_news/semantics.py",
+    "sha256": "d054bc812a80e0d28bfc95a098731b6b556ad0304a9775db0ec4d00d660d2d9a"
+  },
+  "proposal_proof": {
+    "file": ".runtime/future-capacity-pressure-scope-proposal/revision-explicit-source-index/proposal-proof.json",
+    "sha256": "22dc319569e4e19f00379c57605970a9cf219114ca9f24ed7a53f79cd134584f"
+  },
+  "proposal_patch": {
+    "file": ".runtime/future-capacity-pressure-scope-proposal/revision-explicit-source-index/proposal.patch",
+    "sha256": "b29a1edb245f6fdf78a4d07e06d63de102f718c555e6c03237e52d6b6ec9a348"
+  },
+  "new_finite_tests": {
+    "file": ".runtime/future-capacity-pressure-scope-proposal/revision-explicit-source-index/tests/test_future_capacity_pressure_scope.py",
+    "sha256": "fe844c0d2283b3c0294e5f6c2893fd532a51b03dc87bba72239bd211acee68f9"
+  },
+  "portable_actual_fixture": {
+    "file": ".runtime/future-capacity-pressure-scope-proposal/revision-explicit-source-index/tests/fixtures/future_capacity_pressure_actual_v2_3.json",
+    "sha256": "1f0d667ce3b6d6be7c0d28f2dd10f1820cdedfe8ce084b6ce12417aa50f1e5ad"
+  },
+  "portable_old_bad_fixture": {
+    "file": ".runtime/future-capacity-pressure-scope-proposal/revision-explicit-source-index/tests/fixtures/future_capacity_pressure_old_bad_v2_3.json",
+    "sha256": "a9fcc207d8ca4583d68cf23e23bb8acadc96a5efd4f5c5c29cf8dcda3bb64c2e"
+  },
+  "independent_controls": {
+    "file": "reports/repair_2026-10-20/independent_explicit_source_index_capacity_controls_v2_3.json",
+    "sha256": "43f23b519e2e78d381ba77d2f7980f554cf6c0e4161385ccdba8a39550e4f6d9"
+  },
+  "independent_test_result": {
+    "junit": {
+      "file": "reports/repair_2026-10-20/independent-explicit-source-index-capacity-tests-v2_3.xml",
+      "sha256": "5e9d898d45fa01268d841e9c56aafbe732e44bae94355bd04c204b02ea024bd0"
+    },
+    "pytest_cases_passed": 308,
+    "subtests_passed": 293,
+    "junit_total": 601,
+    "failures": 0,
+    "errors": 0,
+    "seconds": 7.466
+  },
+  "analysis_ast_exactly_two_existing_validation_calls_add_source_index_keyword": true,
+  "analysis_added_keyword_values": [
+    "Subscript(value=Name(id='meta', ctx=Load()), slice=Constant(value='source_index'), ctx=Load())",
+    "Subscript(value=Name(id='meta', ctx=Load()), slice=Constant(value='source_index'), ctx=Load())"
+  ],
+  "semantics_changed_existing_function_ast": [
+    "_analysis_semantic_checks",
+    "_check_notice_settlement_timing",
+    "_matching_mechanisms",
+    "collect_analysis_semantic_errors",
+    "validate_analysis_semantics"
+  ],
+  "earlier_failed_identity_implementation_preserved": [
+    {
+      "file": "reports/repair_2026-10-20/independent_future_capacity_borrowing_initial_controls_v2_3.json",
+      "sha256": "2989eb4e5dcddab889fe2f26eef38132fee128899c5adeea145d2c24e6998d9c"
+    },
+    {
+      "file": "reports/repair_2026-10-20/independent_future_capacity_borrowing_distinct_notice_control_v2_3.json",
+      "sha256": "ad89ff3da42c3715b0ae14d6a5c229b0443252dbe61ad0149b84bdbcac3d54a0"
+    }
+  ],
+  "finite_assessments": [
+    {
+      "scope": "explicit_source_identity",
+      "verdict": "pass",
+      "reason": "An alias is resolved only through one trusted metadata source_index entry to its unique original context record and matching version when present. Nonempty original title and full uncompressed notice text containing MessageID/Event must exactly match before borrowing. Compressed reason/remarks, same facility, same capacity, alias order, hidden attributes and model fields are not identity evidence."
+    },
+    {
+      "scope": "clock_borrow_bounds",
+      "verdict": "pass",
+      "reason": "Both sources must be known by as_of and the matching originals must have one complete normalized UTC interval with end after start. Missing index/title/summary/fullnotice, altered message/current interval, future-known source, or conflicting intervals cannot lend a clock. Reordering the context rows does not alter source-ID binding. The exact original manual copy can borrow its real original future interval."
+    },
+    {
+      "scope": "time_roles_and_modality",
+      "verdict": "pass",
+      "reason": "The future7.6notice cannot physically reduce current-window capacity, including a plan explicitly put inside the wrong window. Publication/forecast occurring in the window and an effect explicitly dated届时 remain distinct and allowed. A future capacity risk may affect current futures pricing; this rule does not requireflat."
+    },
+    {
+      "scope": "pressure_object_vs_quantity",
+      "verdict": "pass",
+      "reason": "The new abstract supply-pressure/constraint object mask removes the spurious physical increase hint while retaining genuine later supply/demand/inventory changes. It introduces no flow quantity, direction enum or result assignment. The original correct bullish constraint phrase no longer receives that false physical-sign diagnostic; its unrelated true flow-zero error still rejects the draft."
+    },
+    {
+      "scope": "runtime_parameter_path",
+      "verdict": "pass_for_core",
+      "reason": "Fresh analyze and complete diagnostic collection explicitly pass the existing meta.source_index. It is not added to model JSON. The three-argument public validator API remains compatible and conservatively does not borrow a clock without index."
+    }
+  ],
+  "independent_control_counts": {
+    "identity_and_timing": 12,
+    "physical_pressure": 6,
+    "original_actual_raw_bodies": 8,
+    "old_bad_raws_in_focused_tests": 21
+  },
+  "first_request_equivalence_proof": {
+    "reviewed_claim_scope": "20 fixed first requests only; not complete multi-attempt paths",
+    "twenty_prepared_system_schema_profile_and_metadata_index_equal": true,
+    "model_source_hints_shared_change_requires_official_replay": true
+  },
+  "offline_helper_source_index_propagation": "Must be reviewed/applied separately with this core before claiming final offline result revalidation or official complete-path proof. This report does not silently assume an old helper passes the new metadata.",
+  "material_known_logic_errors": [],
+  "verdict": "finite_core_source_audit_passed_no_reproduced_blocker",
+  "may_apply_exact_core_with_reviewed_explicit_index_helper": true,
+  "overall_release_passed": false,
+  "qualifications": [
+    "No new actual model generation was performed by this audit. All earlier failed/invalid actual outputs and nine whole production failures remain unchanged.",
+    "The private output-copy reduction pilot remainsNO-GO; source_fact_checks native table, long operator prefixes and existing history enums are retained.",
+    "The shared pressure matcher is an explicit input mechanism-hint correction; first-request equality in20 fixtures does not establish blanket complete-path equivalence.",
+    "A fresh successful production manual/detail/English/current workflow and independent full-text evidence review remain unfulfilled requirements."
+  ],
+  "new_model_calls": 0,
+  "database_access": false,
+  "network_calls": false,
+  "source_modification": false
+}

@@ -1,0 +1,46 @@
+{
+  "policy_id": "ttf-explicit-error-release-v1",
+  "expected_prompt_version": "ttf-news-standalone-2.3",
+  "status": "not_ready_new_bounded_cohort_and_fifth_production_pending",
+  "main_report_sha256": null,
+  "evidence": {
+    "independent_review": {
+      "file": "reports/repair_2026-10-20/independent_release_review_v2_3.json",
+      "sha256": null
+    },
+    "live_smoke": {
+      "file": "reports/repair_2026-10-20/live_smoke_test.json",
+      "sha256": null
+    },
+    "error_ui": {
+      "file": "reports/repair_2026-10-20/error_ui_composite_final_binding_v2_3.json",
+      "sha256": null
+    },
+    "public_scan": {
+      "file": "reports/repair_2026-10-20/public_scan_final.json",
+      "sha256": null
+    },
+    "frontend_build": {
+      "file": "reports/repair_2026-10-20/frontend-build.log",
+      "sha256": null
+    },
+    "backend_deployment": {
+      "file": "reports/repair_2026-10-20/backend_conditional_scope_deployment_v2_3.json",
+      "sha256": "63e4c2a89b18a1489973cbe9f8ea581401d32639424de24926253689ed945eab"
+    }
+  },
+  "note": "The brief decoder schema changed, requiring all twenty new actual bounded-output cases plus one new actual detail. Missing current cases never borrow older results. The service is temporarily inference-paused while collection continues. All four preceding production smoke attempts remain failed; a genuinely successful fifth fresh manual/detail/English/current/SSE/export workflow plus full independent review, preservation and final snapshot scan remains required. No final resumed backend identity has yet been bound.",
+  "production_attempt_history": {
+    "file": "reports/repair_2026-10-20/production_e2e_attempt_history_v2_3.json",
+    "sha256": "1e1f1357dd6ccb30df4eb4d55594aea9aae5ef64037ec0bfd06880b7b6092722"
+  },
+  "updated_at": "2026-10-20T23:54:07.906728+00:00",
+  "current_maintenance_deployment": {
+    "file": "reports/repair_2026-10-20/backend_detail_grounding_paused.json",
+    "sha256": "d5a316cfa5577a7d9a67306ee3786b60368738658e149dc36de2bbc8909c95f2"
+  },
+  "previous_readiness": {
+    "file": "reports/repair_2026-10-20/release_readiness_checks_v2_3.b9c1aacfd09c3353.json",
+    "sha256": "b9c1aacfd09c3353f384c14fe3ee4ee6b2923b904e815624143531e1f7cbd319"
+  }
+}

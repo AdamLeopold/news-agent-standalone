@@ -1,0 +1,246 @@
+{
+  "created_at": "2026-10-20T19:42:08.997519+00:00",
+  "no_model_calls": true,
+  "no_database_access": true,
+  "no_network_calls": true,
+  "scope": "Recheck pre-revision selected records against current actual bounded untrusted-draft retry policy, keeping all original outcomes and files unchanged.",
+  "source_sha256": {
+    "ttf_news/analysis.py": "598e991481b10dac6faaab11769a638f9ad6517b2bd02b4bde0553513e8ff6b9",
+    "ttf_news/semantics.py": "43837a2fb1fed9b91d48def0ae51975f1e9dc7cec179eb1911cc4ec027de9f75",
+    "scripts/repair-validation-report.py": "c7f9f768ab110119107cdfbeb151f9d64268f2dd1409d0492c32520c1a26a25e"
+  },
+  "incompatible_cases": [
+    "future_planned_notice",
+    "real_eni",
+    "supply_loss_40_with_flat_baseline",
+    "supply_restore_40_with_flat_baseline"
+  ],
+  "compatible_count": 11,
+  "records": [
+    {
+      "case": "cold_heating_demand",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/cold_heating_demand.json",
+      "file_sha256": "18b1d8f926c9a737f1c7586c45ee48755999f97893d97bd962ccf8181bd11180",
+      "model_call_count": 1,
+      "compatible": true,
+      "reason": "no_independent_high_path_used",
+      "repair_draft_policy": {
+        "version": "ttf-untrusted-repair-draft-1",
+        "actual_call_count": 1,
+        "required": false,
+        "compatible": true,
+        "reason": "first_pass_no_repair_draft_needed"
+      }
+    },
+    {
+      "case": "cumulative_shock_then_weak",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/cumulative_shock_then_weak.json",
+      "file_sha256": "c52aea14465011166b0aa7b6d0e1020923eef5874d90d03ebc81bc5bc238cf25",
+      "model_call_count": 1,
+      "compatible": true,
+      "reason": "no_independent_high_path_used",
+      "repair_draft_policy": {
+        "version": "ttf-untrusted-repair-draft-1",
+        "actual_call_count": 1,
+        "required": false,
+        "compatible": true,
+        "reason": "first_pass_no_repair_draft_needed"
+      }
+    },
+    {
+      "case": "dismissed_notice_not_verified_recovery",
+      "file": "reports/repair_2026-10-20/candidate-contract-validation/dismissed_notice_not_verified_recovery.json",
+      "file_sha256": "4aefabe50ea4cde0d3f6b74bc67b92932ff6db935e0dead45f9a0c2f15bccf6b",
+      "model_call_count": 1,
+      "compatible": true,
+      "reason": "no_independent_high_path_used",
+      "repair_draft_policy": {
+        "version": "ttf-untrusted-repair-draft-1",
+        "actual_call_count": 1,
+        "required": false,
+        "compatible": true,
+        "reason": "first_pass_no_repair_draft_needed"
+      }
+    },
+    {
+      "case": "future_planned_notice",
+      "file": "reports/repair_2026-10-20/candidate-contract-validation/future_planned_notice.json",
+      "file_sha256": "e203be0624c1502f0c584b8dfd26e57443366f38572b1c4f22fc77477f0e0483",
+      "model_call_count": 2,
+      "compatible": false,
+      "reason": "readable_candidate_retry_without_current_draft_policy",
+      "repair_draft_policy": {
+        "version": "ttf-untrusted-repair-draft-1",
+        "actual_call_count": 2,
+        "required": true,
+        "compatible": false,
+        "reason": "readable_candidate_retry_without_current_draft_policy"
+      }
+    },
+    {
+      "case": "negated_outage",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/negated_outage.json",
+      "file_sha256": "e0869eaf2ac442d6a92a5b60e82c9a89a9c3faa27b893988632e41e18e6106d8",
+      "model_call_count": 1,
+      "compatible": true,
+      "reason": "no_independent_high_path_used",
+      "repair_draft_policy": {
+        "version": "ttf-untrusted-repair-draft-1",
+        "actual_call_count": 1,
+        "required": false,
+        "compatible": true,
+        "reason": "first_pass_no_repair_draft_needed"
+      }
+    },
+    {
+      "case": "real_eni",
+      "file": "reports/repair_2026-10-20/candidate-provenance-validation/real_eni.json",
+      "file_sha256": "5456f082bf109ff04bd5f032a7c49699fbcdf883c100f4e332ec329f7a30bafe",
+      "model_call_count": 2,
+      "compatible": false,
+      "reason": "readable_candidate_retry_without_current_draft_policy",
+      "repair_draft_policy": {
+        "version": "ttf-untrusted-repair-draft-1",
+        "actual_call_count": 2,
+        "required": true,
+        "compatible": false,
+        "reason": "readable_candidate_retry_without_current_draft_policy"
+      }
+    },
+    {
+      "case": "real_nyhamna",
+      "file": "reports/repair_2026-10-20/candidate-binding-validation/real_nyhamna.json",
+      "file_sha256": "aea850f53c16043fd7b65fb01d1712ab9bc32e7ce9e9521a95ea0f75f02ac46d",
+      "model_call_count": 1,
+      "compatible": true,
+      "reason": "no_independent_high_path_used",
+      "repair_draft_policy": {
+        "version": "ttf-untrusted-repair-draft-1",
+        "actual_call_count": 1,
+        "required": false,
+        "compatible": true,
+        "reason": "first_pass_no_repair_draft_needed"
+      }
+    },
+    {
+      "case": "supplied_conflicting_mechanisms",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/supplied_conflicting_mechanisms.json",
+      "file_sha256": "d8a75ccbcb121b79a71660b0d257afdb5993d1a462907479a06e6c888500eab8",
+      "model_call_count": 1,
+      "compatible": true,
+      "reason": "no_independent_high_path_used",
+      "repair_draft_policy": {
+        "version": "ttf-untrusted-repair-draft-1",
+        "actual_call_count": 1,
+        "required": false,
+        "compatible": true,
+        "reason": "first_pass_no_repair_draft_needed"
+      }
+    },
+    {
+      "case": "supply_loss_40",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/supply_loss_40.json",
+      "file_sha256": "b98e8729352dea3641479ac9be1cc92b12f64050dc1a539eb84e5abefc25f7fd",
+      "model_call_count": 1,
+      "compatible": true,
+      "reason": "no_independent_high_path_used",
+      "repair_draft_policy": {
+        "version": "ttf-untrusted-repair-draft-1",
+        "actual_call_count": 1,
+        "required": false,
+        "compatible": true,
+        "reason": "first_pass_no_repair_draft_needed"
+      }
+    },
+    {
+      "case": "supply_loss_40_with_flat_baseline",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/supply_loss_40_with_flat_baseline.json",
+      "file_sha256": "d354125ed2997f9c4b1f5c7f34511f31b3e765a312c7dc7eaec29270dda80e44",
+      "model_call_count": 2,
+      "compatible": false,
+      "reason": "readable_candidate_retry_without_current_draft_policy",
+      "repair_draft_policy": {
+        "version": "ttf-untrusted-repair-draft-1",
+        "actual_call_count": 2,
+        "required": true,
+        "compatible": false,
+        "reason": "readable_candidate_retry_without_current_draft_policy"
+      }
+    },
+    {
+      "case": "supply_restore_40",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/supply_restore_40.json",
+      "file_sha256": "804b8c86f82a73cbc420d492d6223d004ab74c3bbf9507cb4d694f713a0006c1",
+      "model_call_count": 1,
+      "compatible": true,
+      "reason": "no_independent_high_path_used",
+      "repair_draft_policy": {
+        "version": "ttf-untrusted-repair-draft-1",
+        "actual_call_count": 1,
+        "required": false,
+        "compatible": true,
+        "reason": "first_pass_no_repair_draft_needed"
+      }
+    },
+    {
+      "case": "supply_restore_40_with_flat_baseline",
+      "file": "reports/repair_2026-10-20/candidate-contract-validation/supply_restore_40_with_flat_baseline.json",
+      "file_sha256": "614ab0cb16b58b81e9d61e614324ed61724db736466cdf502717b3f5cea0689f",
+      "model_call_count": 2,
+      "compatible": false,
+      "reason": "readable_candidate_retry_without_current_draft_policy",
+      "repair_draft_policy": {
+        "version": "ttf-untrusted-repair-draft-1",
+        "actual_call_count": 2,
+        "required": true,
+        "compatible": false,
+        "reason": "readable_candidate_retry_without_current_draft_policy"
+      }
+    },
+    {
+      "case": "warm_heating_demand",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/warm_heating_demand.json",
+      "file_sha256": "9ef336c549af09adb54396811ee20f433f066f188261e55ee9954c7f120066f1",
+      "model_call_count": 1,
+      "compatible": true,
+      "reason": "no_independent_high_path_used",
+      "repair_draft_policy": {
+        "version": "ttf-untrusted-repair-draft-1",
+        "actual_call_count": 1,
+        "required": false,
+        "compatible": true,
+        "reason": "first_pass_no_repair_draft_needed"
+      }
+    },
+    {
+      "case": "weak_exploration_no_quote",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/weak_exploration_no_quote.json",
+      "file_sha256": "250f8e8932eae89462d1bda85a784dfd5e8604caff03a6bc6612d739c1eb08a0",
+      "model_call_count": 1,
+      "compatible": true,
+      "reason": "no_independent_high_path_used",
+      "repair_draft_policy": {
+        "version": "ttf-untrusted-repair-draft-1",
+        "actual_call_count": 1,
+        "required": false,
+        "compatible": true,
+        "reason": "first_pass_no_repair_draft_needed"
+      }
+    },
+    {
+      "case": "weak_news_observed_market_up",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/weak_news_observed_market_up.json",
+      "file_sha256": "043e2b241432c05cdf84e38c8697935fe0781a44fce05fabe3d9aca1e79f5805",
+      "model_call_count": 1,
+      "compatible": true,
+      "reason": "no_independent_high_path_used",
+      "repair_draft_policy": {
+        "version": "ttf-untrusted-repair-draft-1",
+        "actual_call_count": 1,
+        "required": false,
+        "compatible": true,
+        "reason": "first_pass_no_repair_draft_needed"
+      }
+    }
+  ]
+}

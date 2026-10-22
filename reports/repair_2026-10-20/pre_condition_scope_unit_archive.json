@@ -1,0 +1,15 @@
+{
+  "source_phase": "a0b8 semantics / e6c508 translation / 3f15016 report helper; before fixing invalidation condition scope and Chinese adjacent identifiers",
+  "passed": 749,
+  "subtests_passed": 375,
+  "files": {
+    "pre-condition-scope-final-unit-tests.xml": {
+      "sha256": "0f1ac617dea98553bcbf4b0884851436f592bf86a725d7bd7ad5e6b862418285",
+      "bytes": 119517
+    },
+    "pre-condition-scope-final-unit-tests.log": {
+      "sha256": "9960610a353625856285c36cbf93dc28ab88d218c1e48b512812bc8f4dbc33a5",
+      "bytes": 1429
+    }
+  }
+}

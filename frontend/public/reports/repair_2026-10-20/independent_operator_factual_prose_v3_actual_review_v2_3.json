@@ -1,0 +1,155 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T07:34:51.507148+00:00",
+  "scope": "Final finite source-grammarv3 three real raw attempts, native branch consistency, complete prose, and1-linepartial-call integration.",
+  "actual_generation_source": {
+    "file": ".runtime/operator-factual-grammar-proposal-v3/ttf_news/analysis.py",
+    "sha256": "a8e8e0125f3174bc1298b0a58b4aa5690dd3fab2c06c56162529c998cd1a5803"
+  },
+  "adoption_integration_source": {
+    "file": ".runtime/operator-factual-grammar-proposal-v3-integration/ttf_news/analysis.py",
+    "sha256": "d56e5501def567e153f587646af23891c20a5508f09c2e79ecb87500a0ac0706"
+  },
+  "actual_generation_analysis_sha256": "a8e8e0125f3174bc1298b0a58b4aa5690dd3fab2c06c56162529c998cd1a5803",
+  "final_integration_analysis_sha256": "d56e5501def567e153f587646af23891c20a5508f09c2e79ecb87500a0ac0706",
+  "prior_v2_nogo_review_preserved": {
+    "file": "reports/repair_2026-10-20/independent_operator_factual_prose_feasibility_v2_3.json",
+    "sha256": "fe54c640975d3fd4787047896a998434d4777f977f0135833d7d4893adc43b90"
+  },
+  "independently_checked_static_scope": {
+    "Gassco_only_active_or_scheduled_1_to2_source_notices_unknown_flow": true,
+    "original_source_fact_table_long_prefix_and_history_retained": true,
+    "model_selects_five_labels_or_explicit_insufficient_null_branch": true,
+    "confidence_score_not_assigned_by_backend": true,
+    "direction_status_main_summary_and_basis_joint_branch_choice": true,
+    "no_post_generation_direction_or_text_rewrite": true,
+    "all_original_fact_flow_price_timing_andcausality_gates_retained": true,
+    "no_revision_relief_claim_without_known_valid_comparison": true,
+    "noneligible_mixed_or_measured_flow_context_falls_back_to_original_schema": true,
+    "independent_portable_controls_passed": 20,
+    "independent_seconds": 3.64
+  },
+  "actual_reviews": [
+    {
+      "case": "eleventh_manual",
+      "result": {
+        "file": ".runtime/operator-factual-grammar-proposal-v3/actual/eleventh_manual/result.json",
+        "sha256": "b8fcb0860bda46c95f76522119b699e1f18d9961cf34e39caf168741da901db2"
+      },
+      "actual_model_calls": 2,
+      "elapsed_seconds": 99.516,
+      "attempts": [
+        {
+          "raw_response": {
+            "file": ".runtime/operator-factual-grammar-proposal-v3/actual/eleventh_manual/attempt-1-response.json",
+            "sha256": "3dcbce5fc6bc6eccf72cb176dd451194d1dbb46f857c0a96ee5f93e742602ef1"
+          },
+          "request": {
+            "file": ".runtime/operator-factual-grammar-proposal-v3/actual/eleventh_manual/attempt-1-request.json",
+            "sha256": "413c938bba63411352205d52c44401e17ba6fa4031e5055b00b3b612d1d628a7"
+          },
+          "raw_sha256": "bf5d4500d3b42c7f2744c771c0569f65d3e1e1f82d1c25c82663f61f3bdf87ec",
+          "exactly_one_native_main_forecast_branch_matched": true,
+          "factual_prose_enum_const_membership_passed": true,
+          "all_original_gates_passed": false,
+          "first_original_rejection_preserved": true,
+          "native_unique_risk_flag_duplicate_exception": false,
+          "P2_identified_by_full_body_review": false,
+          "news_direction": "flat",
+          "close_direction": null,
+          "close_evidence_status": "insufficient_evidence"
+        },
+        {
+          "raw_response": {
+            "file": ".runtime/operator-factual-grammar-proposal-v3/actual/eleventh_manual/attempt-2-response.json",
+            "sha256": "d6feecbeed5f4988abebe492223de8347bc7187ec9058564d9143e8f0391d553"
+          },
+          "request": {
+            "file": ".runtime/operator-factual-grammar-proposal-v3/actual/eleventh_manual/attempt-2-request.json",
+            "sha256": "edfbf3a7d834c2c67f3d8d5bd20df2378fb6ea7abccd797ce6f2ca04fac39fee"
+          },
+          "raw_sha256": "17559e6dcb511285c87eb4b54717b0de430170162d96ccdb4d4d7fce9b02aed8",
+          "exactly_one_native_main_forecast_branch_matched": true,
+          "factual_prose_enum_const_membership_passed": true,
+          "all_original_gates_passed": true,
+          "first_original_rejection_preserved": false,
+          "native_unique_risk_flag_duplicate_exception": false,
+          "P2_identified_by_full_body_review": false,
+          "news_direction": "up",
+          "close_direction": null,
+          "close_evidence_status": "insufficient_evidence"
+        }
+      ],
+      "final_full_body_review": "no_identified_P2_with_P3_qualifications",
+      "final_close_is_abstention_not_a_five_class_forecast": true
+    },
+    {
+      "case": "eleventh_current",
+      "result": {
+        "file": ".runtime/operator-factual-grammar-proposal-v3/actual/eleventh_current/result.json",
+        "sha256": "b9a9034018638cbce34d58be5a9b14ca85f216f72df7e8c60431fb383dce6248"
+      },
+      "actual_model_calls": 1,
+      "elapsed_seconds": 47.56,
+      "attempts": [
+        {
+          "raw_response": {
+            "file": ".runtime/operator-factual-grammar-proposal-v3/actual/eleventh_current/attempt-1-response.json",
+            "sha256": "83a8f500cb9237ce84b57e8f858f96dac7ad7abf980da17d55e8ec3e9d86723b"
+          },
+          "request": {
+            "file": ".runtime/operator-factual-grammar-proposal-v3/actual/eleventh_current/attempt-1-request.json",
+            "sha256": "562056569595aeabd70aa77e130661cd758f2e79848bcb926ee716e05b422a0c"
+          },
+          "raw_sha256": "5cdc17d5ab5917c27055afb0e7302ece4f2362fbdfdb0d51cf955aedc65c3cba",
+          "exactly_one_native_main_forecast_branch_matched": true,
+          "factual_prose_enum_const_membership_passed": true,
+          "all_original_gates_passed": true,
+          "first_original_rejection_preserved": false,
+          "native_unique_risk_flag_duplicate_exception": true,
+          "P2_identified_by_full_body_review": false,
+          "news_direction": "up",
+          "close_direction": null,
+          "close_evidence_status": "insufficient_evidence"
+        }
+      ],
+      "final_full_body_review": "no_identified_P2_with_P3_qualifications",
+      "final_close_is_abstention_not_a_five_class_forecast": true
+    }
+  ],
+  "source_and_price_findings": [
+    "N0future22→23Oct unavailable7.6 andN2current21→22Oct unavailable13 remain distinct. No20.6 rate sum or absoluteavailable confusion.",
+    "N2end shortened23→22Oct is compared with the known previous announcement version and described as potential risk relief, not confirmed actual-flow recovery.",
+    "Previous-day reference85.062 andcurrent88.28 EUR/MWh, observed06:23/known06:33 beforeas_of, are kept as separate clocks.3.218 is observed same-contract delta, not prior-day own return or an invented target.",
+    "Neither absent independent flow nor reaction evidence is presented aszero flowloss, zero price response, priced-in or unpriced fact.",
+    "The finalnullmain branch explicitly cites the known upward reference baseline versus source-supportedN2shortening relief. This is an abstention under real source conflict, not a report of missingprice data alone."
+  ],
+  "qualifications": [
+    "Both finalclose outputs arenull; this pilot does not demonstrate delivered five-class closeforecasts or restore directional-forecast availability.",
+    "Manual attempt1 was rejected by the existing baseline/weak-news guard; its raw/error remain preserved. Model regeneration2 is an actual separate response, not a rewritten first result.",
+    "The current raw hasexact2 repeatedrisk_flags, which violates nativeuniqueItems but remains within the prior deterministic exact-duplicate policy. Do not claim full nativeunique enforcement.",
+    "News evidence buckets do not fully elaborate all opposing mechanisms andN0/N2marginal timing; trader-level detail has not been generated in these pilots.",
+    "No real detail, English translation, SSE or full product workflow is proven by this private brief-only trial.",
+    "NewsupwithcloseNone is not a known true market outcome or a reason to count this as directionally correct."
+  ],
+  "integration_review": {
+    "zero_new_model_calls_proof": {
+      "file": ".runtime/operator-factual-grammar-proposal-v3-integration/v3-integration-zero-call-equivalence.json",
+      "sha256": "9744493c69989f9dcce0248717d9308aabf915cf8c8d6fb947d93f6f091682bc"
+    },
+    "only_code_difference": "if not _date_checked and 'close_forecast' in result",
+    "meaning": "Preserve original analysis-only capacity-validator calls. Complete parsed actualresults still receive the same atomic main-forecast check.",
+    "requests_schema_system_context_feedback_andresult_equal_except_elapsed": true,
+    "actual_generation_source_is_not_relabelled_as_integration_source": true
+  },
+  "adoption_verdict": "approved_for_limited_Gassco_eligible_generation_scope_subject_to_final_full_suite_and_live_workflow",
+  "whole_product_release_ready": false,
+  "known_nonGassco_or_mixed_generation_limits_remain": true,
+  "prior_eleven_production_workflows_not_upgraded": true,
+  "no_market_or_official_settlement_accuracy_claim": true,
+  "audit_new_model_calls": 0,
+  "audit_database_access": false,
+  "audit_network_calls": false,
+  "audit_root_source_edits": false
+}

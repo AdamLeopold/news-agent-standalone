@@ -1,0 +1,375 @@
+{
+  "created_at": "2026-10-20T19:33:55.381151+00:00",
+  "scope": "Current report selected fifteen brief records; retries counted from actual attempts/meta model_calls, not configured maximum. No model/database/network calls.",
+  "no_model_calls": true,
+  "no_database_access": true,
+  "no_network_calls": true,
+  "selected_case_count": 15,
+  "multiple_call_cases": [
+    "future_planned_notice",
+    "real_eni",
+    "supply_loss_40_with_flat_baseline",
+    "supply_restore_40_with_flat_baseline"
+  ],
+  "single_call_cases": [
+    "cold_heating_demand",
+    "cumulative_shock_then_weak",
+    "dismissed_notice_not_verified_recovery",
+    "negated_outage",
+    "real_nyhamna",
+    "supplied_conflicting_mechanisms",
+    "supply_loss_40",
+    "supply_restore_40",
+    "warm_heating_demand",
+    "weak_exploration_no_quote",
+    "weak_news_observed_market_up"
+  ],
+  "unknown_call_count_cases": [],
+  "records": [
+    {
+      "case": "cold_heating_demand",
+      "stage": "candidate-symmetric-validation",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/cold_heating_demand.json",
+      "file_sha256": "18b1d8f926c9a737f1c7586c45ee48755999f97893d97bd962ccf8181bd11180",
+      "model_call_count": 1,
+      "attempt_count": 1,
+      "meta_model_calls": 1,
+      "has_final_result": true,
+      "recorded_contract_passed": true,
+      "recorded_error": null,
+      "model_call_configuration": {
+        "model": "gpt-oss:20b",
+        "reasoning": "medium",
+        "semantic_high_retry": true,
+        "semantic_high_scope": "operator_notice"
+      },
+      "source_hashes": {
+        "ttf_news/analysis.py": "c36cf90ee8c798d82e06aa20f4940e07b284d086f2fecc6113956c0015e07dd3",
+        "ttf_news/semantics.py": "2d4e2013e6dec27ad05fad824c9b32af2c3594bb98384ec3c660e6194cbc441e",
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56"
+      }
+    },
+    {
+      "case": "cumulative_shock_then_weak",
+      "stage": "candidate-symmetric-validation",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/cumulative_shock_then_weak.json",
+      "file_sha256": "c52aea14465011166b0aa7b6d0e1020923eef5874d90d03ebc81bc5bc238cf25",
+      "model_call_count": 1,
+      "attempt_count": 1,
+      "meta_model_calls": 1,
+      "has_final_result": true,
+      "recorded_contract_passed": true,
+      "recorded_error": null,
+      "model_call_configuration": {
+        "model": "gpt-oss:20b",
+        "reasoning": "medium",
+        "semantic_high_retry": true,
+        "semantic_high_scope": "operator_notice"
+      },
+      "source_hashes": {
+        "ttf_news/analysis.py": "c36cf90ee8c798d82e06aa20f4940e07b284d086f2fecc6113956c0015e07dd3",
+        "ttf_news/semantics.py": "2d4e2013e6dec27ad05fad824c9b32af2c3594bb98384ec3c660e6194cbc441e",
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56"
+      }
+    },
+    {
+      "case": "dismissed_notice_not_verified_recovery",
+      "stage": "candidate-contract-validation",
+      "file": "reports/repair_2026-10-20/candidate-contract-validation/dismissed_notice_not_verified_recovery.json",
+      "file_sha256": "4aefabe50ea4cde0d3f6b74bc67b92932ff6db935e0dead45f9a0c2f15bccf6b",
+      "model_call_count": 1,
+      "attempt_count": 1,
+      "meta_model_calls": 1,
+      "has_final_result": true,
+      "recorded_contract_passed": true,
+      "recorded_error": null,
+      "model_call_configuration": {
+        "model": "gpt-oss:20b",
+        "reasoning": "medium",
+        "semantic_high_retry": false,
+        "semantic_high_scope": "operator_notice"
+      },
+      "source_hashes": {
+        "ttf_news/analysis.py": "6f5f01523cfaba60c4f0e7bca42d833a78228d8efe62b72e5169ea1168de081d",
+        "ttf_news/semantics.py": "59babcd94d9369ce37f1677ba1fb38c43a7830a2adfca95cd19cf5783d79e88f",
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56"
+      }
+    },
+    {
+      "case": "future_planned_notice",
+      "stage": "candidate-contract-validation",
+      "file": "reports/repair_2026-10-20/candidate-contract-validation/future_planned_notice.json",
+      "file_sha256": "e203be0624c1502f0c584b8dfd26e57443366f38572b1c4f22fc77477f0e0483",
+      "model_call_count": 2,
+      "attempt_count": 2,
+      "meta_model_calls": 2,
+      "has_final_result": true,
+      "recorded_contract_passed": true,
+      "recorded_error": null,
+      "model_call_configuration": {
+        "model": "gpt-oss:20b",
+        "reasoning": "medium",
+        "semantic_high_retry": false,
+        "semantic_high_scope": "operator_notice"
+      },
+      "source_hashes": {
+        "ttf_news/analysis.py": "6f5f01523cfaba60c4f0e7bca42d833a78228d8efe62b72e5169ea1168de081d",
+        "ttf_news/semantics.py": "59babcd94d9369ce37f1677ba1fb38c43a7830a2adfca95cd19cf5783d79e88f",
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56"
+      }
+    },
+    {
+      "case": "negated_outage",
+      "stage": "candidate-symmetric-validation",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/negated_outage.json",
+      "file_sha256": "e0869eaf2ac442d6a92a5b60e82c9a89a9c3faa27b893988632e41e18e6106d8",
+      "model_call_count": 1,
+      "attempt_count": 1,
+      "meta_model_calls": 1,
+      "has_final_result": true,
+      "recorded_contract_passed": true,
+      "recorded_error": null,
+      "model_call_configuration": {
+        "model": "gpt-oss:20b",
+        "reasoning": "medium",
+        "semantic_high_retry": true,
+        "semantic_high_scope": "operator_notice"
+      },
+      "source_hashes": {
+        "ttf_news/analysis.py": "c36cf90ee8c798d82e06aa20f4940e07b284d086f2fecc6113956c0015e07dd3",
+        "ttf_news/semantics.py": "2d4e2013e6dec27ad05fad824c9b32af2c3594bb98384ec3c660e6194cbc441e",
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56"
+      }
+    },
+    {
+      "case": "real_eni",
+      "stage": "candidate-provenance-validation",
+      "file": "reports/repair_2026-10-20/candidate-provenance-validation/real_eni.json",
+      "file_sha256": "5456f082bf109ff04bd5f032a7c49699fbcdf883c100f4e332ec329f7a30bafe",
+      "model_call_count": 2,
+      "attempt_count": 2,
+      "meta_model_calls": 2,
+      "has_final_result": false,
+      "recorded_contract_passed": false,
+      "recorded_error": "模型JSON两次校验失败，未生成方向：analysis.summary:缺少公告前后价格反应，不能宣称未计入价格/尚未计价；价格反应未知与未计价不同，未来容量公告也可经预期影响当前价格",
+      "model_call_configuration": {
+        "model": "gpt-oss:20b",
+        "reasoning": "medium",
+        "semantic_high_retry": false,
+        "semantic_high_scope": "operator_notice"
+      },
+      "source_hashes": {
+        "ttf_news/analysis.py": "16b8e1433a87ae38f6a7306fe9841fdf2f14e592f8fc64dfc8280e9203f03bd4",
+        "ttf_news/semantics.py": "7bf1c7017c15ff2b2b80a0986ef91001d7670e8cfe211f20270f6a1b155cb8e9",
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56"
+      }
+    },
+    {
+      "case": "real_nyhamna",
+      "stage": "candidate-binding-validation",
+      "file": "reports/repair_2026-10-20/candidate-binding-validation/real_nyhamna.json",
+      "file_sha256": "aea850f53c16043fd7b65fb01d1712ab9bc32e7ce9e9521a95ea0f75f02ac46d",
+      "model_call_count": 1,
+      "attempt_count": 1,
+      "meta_model_calls": 1,
+      "has_final_result": true,
+      "recorded_contract_passed": true,
+      "recorded_error": null,
+      "model_call_configuration": {
+        "model": "gpt-oss:20b",
+        "reasoning": "medium",
+        "semantic_high_retry": false,
+        "semantic_high_scope": "operator_notice"
+      },
+      "source_hashes": {
+        "ttf_news/analysis.py": "4609312cf537a13e95e8a4fecb7f520a877d044ee19290c5cd74f376b8115f63",
+        "ttf_news/semantics.py": "eebce0b1180eccf6914877e10fccf32eaa67c5b15c043150260a8a0c550d52d6",
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56"
+      }
+    },
+    {
+      "case": "supplied_conflicting_mechanisms",
+      "stage": "candidate-symmetric-validation",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/supplied_conflicting_mechanisms.json",
+      "file_sha256": "d8a75ccbcb121b79a71660b0d257afdb5993d1a462907479a06e6c888500eab8",
+      "model_call_count": 1,
+      "attempt_count": 1,
+      "meta_model_calls": 1,
+      "has_final_result": true,
+      "recorded_contract_passed": true,
+      "recorded_error": null,
+      "model_call_configuration": {
+        "model": "gpt-oss:20b",
+        "reasoning": "medium",
+        "semantic_high_retry": true,
+        "semantic_high_scope": "operator_notice"
+      },
+      "source_hashes": {
+        "ttf_news/analysis.py": "c36cf90ee8c798d82e06aa20f4940e07b284d086f2fecc6113956c0015e07dd3",
+        "ttf_news/semantics.py": "2d4e2013e6dec27ad05fad824c9b32af2c3594bb98384ec3c660e6194cbc441e",
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56"
+      }
+    },
+    {
+      "case": "supply_loss_40",
+      "stage": "candidate-symmetric-validation",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/supply_loss_40.json",
+      "file_sha256": "b98e8729352dea3641479ac9be1cc92b12f64050dc1a539eb84e5abefc25f7fd",
+      "model_call_count": 1,
+      "attempt_count": 1,
+      "meta_model_calls": 1,
+      "has_final_result": true,
+      "recorded_contract_passed": true,
+      "recorded_error": null,
+      "model_call_configuration": {
+        "model": "gpt-oss:20b",
+        "reasoning": "medium",
+        "semantic_high_retry": true,
+        "semantic_high_scope": "operator_notice"
+      },
+      "source_hashes": {
+        "ttf_news/analysis.py": "c36cf90ee8c798d82e06aa20f4940e07b284d086f2fecc6113956c0015e07dd3",
+        "ttf_news/semantics.py": "2d4e2013e6dec27ad05fad824c9b32af2c3594bb98384ec3c660e6194cbc441e",
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56"
+      }
+    },
+    {
+      "case": "supply_loss_40_with_flat_baseline",
+      "stage": "candidate-symmetric-validation",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/supply_loss_40_with_flat_baseline.json",
+      "file_sha256": "d354125ed2997f9c4b1f5c7f34511f31b3e765a312c7dc7eaec29270dda80e44",
+      "model_call_count": 2,
+      "attempt_count": 2,
+      "meta_model_calls": 2,
+      "has_final_result": true,
+      "recorded_contract_passed": true,
+      "recorded_error": null,
+      "model_call_configuration": {
+        "model": "gpt-oss:20b",
+        "reasoning": "medium",
+        "semantic_high_retry": true,
+        "semantic_high_scope": "operator_notice"
+      },
+      "source_hashes": {
+        "ttf_news/analysis.py": "c36cf90ee8c798d82e06aa20f4940e07b284d086f2fecc6113956c0015e07dd3",
+        "ttf_news/semantics.py": "2d4e2013e6dec27ad05fad824c9b32af2c3594bb98384ec3c660e6194cbc441e",
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56"
+      }
+    },
+    {
+      "case": "supply_restore_40",
+      "stage": "candidate-symmetric-validation",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/supply_restore_40.json",
+      "file_sha256": "804b8c86f82a73cbc420d492d6223d004ab74c3bbf9507cb4d694f713a0006c1",
+      "model_call_count": 1,
+      "attempt_count": 1,
+      "meta_model_calls": 1,
+      "has_final_result": true,
+      "recorded_contract_passed": true,
+      "recorded_error": null,
+      "model_call_configuration": {
+        "model": "gpt-oss:20b",
+        "reasoning": "medium",
+        "semantic_high_retry": true,
+        "semantic_high_scope": "operator_notice"
+      },
+      "source_hashes": {
+        "ttf_news/analysis.py": "c36cf90ee8c798d82e06aa20f4940e07b284d086f2fecc6113956c0015e07dd3",
+        "ttf_news/semantics.py": "2d4e2013e6dec27ad05fad824c9b32af2c3594bb98384ec3c660e6194cbc441e",
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56"
+      }
+    },
+    {
+      "case": "supply_restore_40_with_flat_baseline",
+      "stage": "candidate-contract-validation",
+      "file": "reports/repair_2026-10-20/candidate-contract-validation/supply_restore_40_with_flat_baseline.json",
+      "file_sha256": "614ab0cb16b58b81e9d61e614324ed61724db736466cdf502717b3f5cea0689f",
+      "model_call_count": 2,
+      "attempt_count": 2,
+      "meta_model_calls": 2,
+      "has_final_result": true,
+      "recorded_contract_passed": false,
+      "recorded_error": null,
+      "model_call_configuration": {
+        "model": "gpt-oss:20b",
+        "reasoning": "medium",
+        "semantic_high_retry": false,
+        "semantic_high_scope": "operator_notice"
+      },
+      "source_hashes": {
+        "ttf_news/analysis.py": "6f5f01523cfaba60c4f0e7bca42d833a78228d8efe62b72e5169ea1168de081d",
+        "ttf_news/semantics.py": "59babcd94d9369ce37f1677ba1fb38c43a7830a2adfca95cd19cf5783d79e88f",
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56"
+      }
+    },
+    {
+      "case": "warm_heating_demand",
+      "stage": "candidate-symmetric-validation",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/warm_heating_demand.json",
+      "file_sha256": "9ef336c549af09adb54396811ee20f433f066f188261e55ee9954c7f120066f1",
+      "model_call_count": 1,
+      "attempt_count": 1,
+      "meta_model_calls": 1,
+      "has_final_result": true,
+      "recorded_contract_passed": true,
+      "recorded_error": null,
+      "model_call_configuration": {
+        "model": "gpt-oss:20b",
+        "reasoning": "medium",
+        "semantic_high_retry": true,
+        "semantic_high_scope": "operator_notice"
+      },
+      "source_hashes": {
+        "ttf_news/analysis.py": "c36cf90ee8c798d82e06aa20f4940e07b284d086f2fecc6113956c0015e07dd3",
+        "ttf_news/semantics.py": "2d4e2013e6dec27ad05fad824c9b32af2c3594bb98384ec3c660e6194cbc441e",
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56"
+      }
+    },
+    {
+      "case": "weak_exploration_no_quote",
+      "stage": "candidate-symmetric-validation",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/weak_exploration_no_quote.json",
+      "file_sha256": "250f8e8932eae89462d1bda85a784dfd5e8604caff03a6bc6612d739c1eb08a0",
+      "model_call_count": 1,
+      "attempt_count": 1,
+      "meta_model_calls": 1,
+      "has_final_result": true,
+      "recorded_contract_passed": true,
+      "recorded_error": null,
+      "model_call_configuration": {
+        "model": "gpt-oss:20b",
+        "reasoning": "medium",
+        "semantic_high_retry": true,
+        "semantic_high_scope": "operator_notice"
+      },
+      "source_hashes": {
+        "ttf_news/analysis.py": "c36cf90ee8c798d82e06aa20f4940e07b284d086f2fecc6113956c0015e07dd3",
+        "ttf_news/semantics.py": "2d4e2013e6dec27ad05fad824c9b32af2c3594bb98384ec3c660e6194cbc441e",
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56"
+      }
+    },
+    {
+      "case": "weak_news_observed_market_up",
+      "stage": "candidate-symmetric-validation",
+      "file": "reports/repair_2026-10-20/candidate-symmetric-validation/weak_news_observed_market_up.json",
+      "file_sha256": "043e2b241432c05cdf84e38c8697935fe0781a44fce05fabe3d9aca1e79f5805",
+      "model_call_count": 1,
+      "attempt_count": 1,
+      "meta_model_calls": 1,
+      "has_final_result": true,
+      "recorded_contract_passed": true,
+      "recorded_error": null,
+      "model_call_configuration": {
+        "model": "gpt-oss:20b",
+        "reasoning": "medium",
+        "semantic_high_retry": true,
+        "semantic_high_scope": "operator_notice"
+      },
+      "source_hashes": {
+        "ttf_news/analysis.py": "c36cf90ee8c798d82e06aa20f4940e07b284d086f2fecc6113956c0015e07dd3",
+        "ttf_news/semantics.py": "2d4e2013e6dec27ad05fad824c9b32af2c3594bb98384ec3c660e6194cbc441e",
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56"
+      }
+    }
+  ]
+}

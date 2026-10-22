@@ -1,0 +1,54 @@
+{
+  "started_at": "2026-10-20T16:10:43.335524+00:00",
+  "kind": "isolated_schema_compatibility_probe",
+  "synthetic": true,
+  "format": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "text": {
+        "type": "string",
+        "pattern": "^[^\"\\\\\\x7F\\x00-\\x1F]*[一-鿿][^\"\\\\\\x7F\\x00-\\x1F]*[一-鿿][^\"\\\\\\x7F\\x00-\\x1F]*[一-鿿][^\"\\\\\\x7F\\x00-\\x1F]*[一-鿿][^\"\\\\\\x7F\\x00-\\x1F]*[一-鿿][^\"\\\\\\x7F\\x00-\\x1F]*[一-鿿][^\"\\\\\\x7F\\x00-\\x1F]*[一-鿿][^\"\\\\\\x7F\\x00-\\x1F]*[一-鿿][^\"\\\\\\x7F\\x00-\\x1F]*$",
+        "maxLength": 100
+      },
+      "chosen": {
+        "type": "string",
+        "enum": [
+          "ok"
+        ]
+      },
+      "optional_note": {
+        "anyOf": [
+          {
+            "maxLength": 300,
+            "type": "string",
+            "pattern": "^([^\"\\\\\\x7F\\x00-\\x1F]*[一-鿿][^\"\\\\\\x7F\\x00-\\x1F]*[一-鿿][^\"\\\\\\x7F\\x00-\\x1F]*)?$"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Extreme Move Risk"
+      }
+    },
+    "required": [
+      "text",
+      "chosen",
+      "optional_note"
+    ]
+  },
+  "production_database_modified": false,
+  "done_reason": "stop",
+  "prompt_eval_count": 128,
+  "eval_count": 325,
+  "raw_content": "{\"text\":\"这是一个事实说明，包含八个以上汉字。\",\"chosen\":\"ok\",\"optional_note\":\"\"}",
+  "thinking_char_count": 1182,
+  "status": "passed",
+  "result": {
+    "text": "这是一个事实说明，包含八个以上汉字。",
+    "chosen": "ok",
+    "optional_note": ""
+  },
+  "finished_at": "2026-10-20T16:10:51.003450+00:00"
+}

@@ -1,12 +1,19 @@
 import React from 'react';
 
 export const translations = Object.freeze({
+  '推理已暂停；新闻与行情继续更新。': 'Inference paused; news and market prices continue updating.',
+  '价格基准复核未通过': 'Price baseline review failed',
+  '来源事实复核未通过': 'Source facts review failed',
+  '查看原始分析': 'View original analysis',
+  '暂缺收盘判断': 'No closing outlook yet',
   '当前收盘预测': 'Current close forecast',
   '当日收盘': 'TODAY’S CLOSE',
   '分析中': 'Analyzing',
   '等待更新': 'Awaiting update',
   '查看分析': 'View analysis',
   '日价基准': 'Daily reference',
+  '历史日价参考': 'Historical daily reference',
+  '上一交易日日价': 'Previous-session reference',
   '价格来源': 'Price source',
   '波动阈值 ±': 'Move threshold ±',
   '更新于': 'As of',

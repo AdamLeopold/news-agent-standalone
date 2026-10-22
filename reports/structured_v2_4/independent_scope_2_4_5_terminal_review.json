@@ -1,0 +1,91 @@
+{
+  "reviewed_at": "2026-10-22T16:32:18.325421+00:00",
+  "reviewer": "independent structured_review agent",
+  "scope": "Read-only terminal static and pure-function review of2.4.5 scope change. No model call, prediction regeneration, service/database mutation or source edit.",
+  "core_sha256": "027bc8d862b3cc3f8eff7ea54b881a51030372009c9087dbdac2815c0582e4cc",
+  "transport_sha256": "da13165f47e0b7ac4d46b963c0ea10f8c566c9b3ce4ee341ed9cacbba0f6d1df",
+  "archived2_4_4_sha256": "0b15b314721e86afd9d32e191deaf939b1db30b58ec8565d0c017f38c3047c06",
+  "supersedes_preflight_issue_only": {
+    "file": "independent_scope_2_4_5_preflight_01.json",
+    "sha256": "39e35eec582a5097fe34b7b8ae17c82740504f4a93af3fb7b3e6c807728e1f09",
+    "resolution": "The necessary source-link assessment instruction is now appended to the actual weight_request.system, confirmed by constructing that model request without invoking a model."
+  },
+  "overall": "Passed requested generic scope contract. No confirmed P1/P2 in this diff. Current role metadata is preserved as a model residual, not corrected. Real2.4.5 output and final running API/collector verification remain separate.",
+  "scope_contrasts": [
+    {
+      "case": "regional future upstream",
+      "actual_scopes": [
+        "expectation",
+        "longer_term"
+      ],
+      "actual_channel": "conditional_regional_future_supply_expectations",
+      "passed": true
+    },
+    {
+      "case": "unknown future upstream",
+      "actual_scopes": [
+        "expectation",
+        "longer_term"
+      ],
+      "actual_channel": "conditional_regional_future_supply_expectations",
+      "passed": true
+    },
+    {
+      "case": "precise regional LNG export",
+      "actual_scopes": [
+        "expectation",
+        "longer_term"
+      ],
+      "actual_channel": "global_lng_export_expectations",
+      "passed": true
+    },
+    {
+      "case": "regional observed upstream",
+      "actual_scopes": [
+        "background"
+      ],
+      "actual_channel": "regional_background",
+      "passed": true
+    },
+    {
+      "case": "regional observed end-use",
+      "actual_scopes": [
+        "background"
+      ],
+      "actual_channel": "regional_background",
+      "passed": true
+    },
+    {
+      "case": "historical future project",
+      "actual_scopes": [
+        "background"
+      ],
+      "actual_channel": "background_only",
+      "passed": true
+    },
+    {
+      "case": "regional technology",
+      "actual_scopes": [
+        "background"
+      ],
+      "actual_channel": "background_only",
+      "passed": true
+    }
+  ],
+  "weight_prompt": {
+    "actual_request_contains_conditional_channel_instruction": true,
+    "model_may_choose_zero": true,
+    "zero_is_not_forced_by_fine_role_metadata": true,
+    "no_company_specific_fewshot": true
+  },
+  "source_boundary": [
+    "New regional/unspecified future supply can express conditional expectations or longer-term transmission only; it does not assert Europe physical supply or an established global-LNG channel.",
+    "Exact LNG-export role retains the more precise global export-chain expectation channel.",
+    "Regional observed US raw-gas supply/end-use and all historical facts remain background.",
+    "Background contracts, technology and generic import-capacity alone are not upgraded to demand/physical supply.",
+    "New conditional channel uses regional_link_required scenarios, with wording that source evidence must support the market link.",
+    "Europe direct-channel importance restriction remains; no weight/direction/output is rewritten and no nonzero target is imposed.",
+    "Archived2.4.4 renderer byte identity and version dispatch preserve old saved brief/detail/English decisions."
+  ],
+  "acceptance_boundary": "Pure contrast checks and exact request construction are not a real model result, full API run or website deployment claim."
+}

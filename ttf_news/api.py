@@ -35,9 +35,10 @@ class ManualInput(BaseModel):
 
 def create_app(store: Store | None = None, analyst=None, workers: bool = True) -> FastAPI:
     store = store or Store()
+    inference_enabled=workers and os.environ.get('TTF_NEWS_INFER','1')!='0'
     if analyst is None:
-        from .analysis import NewsAnalyst
-        analyst = NewsAnalyst(model=MODEL,base_url=OLLAMA_URL)
+        from .structured_analysis import StructuredNewsAnalyst
+        analyst = StructuredNewsAnalyst(model=MODEL,base_url=OLLAMA_URL)
 
     @asynccontextmanager
     async def lifespan(app):
@@ -48,7 +49,8 @@ def create_app(store: Store | None = None, analyst=None, workers: bool = True) -
         if workers:
             from .runtime import inference_worker,collection_worker,maintenance_worker
             from .market import market_worker
-            tasks.append(asyncio.create_task(inference_worker(store,analyst)))
+            if inference_enabled:
+                tasks.append(asyncio.create_task(inference_worker(store,analyst)))
             tasks.append(asyncio.create_task(market_worker(store)))
             if os.environ.get("TTF_NEWS_COLLECT","1") != "0":
                 tasks.append(asyncio.create_task(collection_worker(store)))
@@ -84,15 +86,20 @@ def create_app(store: Store | None = None, analyst=None, workers: bool = True) -
     async def health():
         from .prompts import PROMPT_VERSION
         model = await analyst.health()
-        return {"status":"ok" if model.get("available") else "model_unavailable", "server_pid":os.getpid(),"prompt_version":PROMPT_VERSION,"model":model,"counts":store.counts(),"sources":store.sources(),"collector":{"enabled":os.environ.get("TTF_NEWS_COLLECT","1")!="0","poll_seconds":int(os.environ.get("TTF_NEWS_POLL_SECONDS","60"))},"server_time":iso()}
+        return {"status":"ok" if model.get("available") else "model_unavailable", "server_pid":os.getpid(),"prompt_version":getattr(analyst,'prompt_version',PROMPT_VERSION),"model":model,"counts":store.counts(),"sources":store.sources(),"collector":{"enabled":os.environ.get("TTF_NEWS_COLLECT","1")!="0","poll_seconds":int(os.environ.get("TTF_NEWS_POLL_SECONDS","60"))},'inference':{'enabled':inference_enabled},"server_time":iso()}
 
     @app.get("/api/dashboard")
     def dashboard():
         now = iso()
         session = session_at(now)
         articles = store.window_news(session["trade_date"],now)
-        events = store.retrieve_events(" ".join(str(n.get("title","")) for n in articles),now)
-        return {"session":session,"daily":aggregate(articles),"latest_analysis":store.latest_analysis(trade_date=session["trade_date"],completed_only=True,live_only=True),
+        events = store.retrieve_events(" ".join(str(n.get("title","")) for n in articles),now,
+                                      exclude_news_ids=[n["id"] for n in articles])
+        newest=store.latest_analysis(trade_date=session['trade_date'],completed_only=True,live_only=True)
+        latest=store.latest_analysis(trade_date=session['trade_date'],completed_only=True,live_only=True,exclude_invalid=True)
+        excluded=({'id':newest['id'],'completed_at':newest.get('completed_at'),'review':newest.get('review')}
+                  if newest and newest['id']!=(latest or {}).get('id') else None)
+        return {"session":session,"daily":aggregate(articles),"latest_analysis":latest,'excluded_latest_analysis':excluded,
             "important_events":events,"coverage":{"counts":store.counts(),"sources":store.sources()},"price_reference":price_context(store,now),"monitoring":monitoring_report(store)}
 
     @app.get('/api/market')
@@ -102,7 +109,7 @@ def create_app(store: Store | None = None, analyst=None, workers: bool = True) -
 
     def news_with_analysis(n):
         analysis = store.latest_analysis(news_id=n["id"])
-        return {**n,"analysis_id":analysis["id"] if analysis else None,"analysis_status":analysis["status"] if analysis else "not_requested","analysis_created_at":analysis.get("created_at") if analysis else None,"analysis_completed_at":analysis.get("completed_at") if analysis else None,"analysis":analysis.get("result") if analysis else None}
+        return {**n,"analysis_id":analysis["id"] if analysis else None,"analysis_status":analysis["status"] if analysis else "not_requested","analysis_created_at":analysis.get("created_at") if analysis else None,"analysis_completed_at":analysis.get("completed_at") if analysis else None,"analysis":analysis.get("result") if analysis else None,'review':analysis.get('review') if analysis else None}
 
     @app.get("/api/news")
     def news_list(limit:int=50,offset:int=0,trade_date:str|None=None,scope:str="recent"):

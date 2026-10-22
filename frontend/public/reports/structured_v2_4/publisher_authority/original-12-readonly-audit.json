@@ -1,0 +1,735 @@
+{
+  "schema_version": "publisher-representation-audit-v1",
+  "model_calls": 0,
+  "production_writes": 0,
+  "store_constructed_on_production": false,
+  "snapshot": {
+    "file": "data/backups/structured-v4-20261022T160627262875Z-resume.sqlite3",
+    "sha256": "d5a0f9ab57e9837ec07d40d50ce4860a17d05f68555064c583e0338d786bb5ba"
+  },
+  "counts": {
+    "metadata_only": 3,
+    "api_html_representation_switch": 7,
+    "excerpt_removed": 1,
+    "excerpt_restored": 1
+  },
+  "exact_queued_cohort": 12,
+  "unique_articles": 6,
+  "old_publication_empty_window_inputs": 12,
+  "prior_known_api_replays": 10,
+  "prior_known_api_replays_without_substantive_change": 10,
+  "first_authoritative_body_observations": 2,
+  "rows": [
+    {
+      "job_id": "d8ce3381-5bbb-4901-b907-8f62199bf49b",
+      "analysis_id": "c469fbe6-d52d-48e0-9f74-afc42fcac46a",
+      "priority": 10,
+      "created_at": "2026-10-22T15:54:11.268899+00:00",
+      "live_status_at_audit": "completed",
+      "input_snapshot_raw_sha256": "d3cc93c050701ddcc350cfb71cfd251757cf94e8d79e0adf608c9686172e01a1",
+      "live_input_unchanged": true,
+      "news_id": "01e33681b572879a4262fff0",
+      "title": "North Sea gas field cleared for take-off: UK greenlights Jackdaw after legal storms",
+      "published_at": "2026-10-21T06:58:56.480000+00:00",
+      "window_news_count": 0,
+      "version": 46,
+      "previous_version": 45,
+      "before_record_raw_sha256": "2c762cdbd826160381a7e48fbb2aa1b8d06dbb1493a6a76a5f5ffee2bf120f95",
+      "after_record_raw_sha256": "0cbca80c25370e3d6e1e569757c84e95c339e5c5620b78d81ce51aa64bbe55fa",
+      "before_excerpt_sha256": "4f1420a57b964fb8be8745b6136d9114bf5a9c7f0acfa9feb6510036bcfcd03a",
+      "after_excerpt_sha256": "4f1420a57b964fb8be8745b6136d9114bf5a9c7f0acfa9feb6510036bcfcd03a",
+      "before_excerpt": "Jackdaw has the potential to deliver around 6% of projected UK North Sea gas production, which is considered to be enough fuel to heat the equivalent of 1.4 million homes at a time when older gas fields are reaching the end of their production.\n\nThe field, located approximately 250 kilometers east of Aberdeen, is expected to be among the lowest-emission developments on the UK Continental Shelf (UKCS), while supporting jobs and bolstering Britain’s energy security.\n\nThe field is located in the Central North Sea (CNS), 30 kilometers southeast of the Shearwater platform and adjacent to the UK/Norway median line. Jackdaw is a gas/condensate development comprising a not permanently attended wellhead platform with four wells, tied back to the Shearwater hub via a 31-kilometer pipeline.\n\nWhile the latest approval marks a major turning point, the environmental battles are not entirely over since environmental groups like Greenpeace remain strongly opposed to the development of the North Sea oil and gas projects, which have become a primary battleground for climate litigation.\n\nResponding to the government giving the Jackdaw gas field the go-ahead, Sam Richards , CEO of Britain Remade, said: “Britain is going to need gas for decades to come, as even the Climate Change Committee recognises. The choice is not between gas and no gas, but between gas produced in British waters and gas shipped in from abroad at higher cost and with higher emissions.",
+      "after_excerpt": "Jackdaw has the potential to deliver around 6% of projected UK North Sea gas production, which is considered to be enough fuel to heat the equivalent of 1.4 million homes at a time when older gas fields are reaching the end of their production.\n\nThe field, located approximately 250 kilometers east of Aberdeen, is expected to be among the lowest-emission developments on the UK Continental Shelf (UKCS), while supporting jobs and bolstering Britain’s energy security.\n\nThe field is located in the Central North Sea (CNS), 30 kilometers southeast of the Shearwater platform and adjacent to the UK/Norway median line. Jackdaw is a gas/condensate development comprising a not permanently attended wellhead platform with four wells, tied back to the Shearwater hub via a 31-kilometer pipeline.\n\nWhile the latest approval marks a major turning point, the environmental battles are not entirely over since environmental groups like Greenpeace remain strongly opposed to the development of the North Sea oil and gas projects, which have become a primary battleground for climate litigation.\n\nResponding to the government giving the Jackdaw gas field the go-ahead, Sam Richards , CEO of Britain Remade, said: “Britain is going to need gas for decades to come, as even the Climate Change Committee recognises. The choice is not between gas and no gas, but between gas produced in British waters and gas shipped in from abroad at higher cost and with higher emissions.",
+      "revision_delta": {
+        "previous_version": 45,
+        "previous_known_at": "2026-10-22T08:02:28.580076+00:00",
+        "changed_fields": {},
+        "substantive_change": false,
+        "comparison_status": "compared",
+        "metadata_changed_fields": [
+          "source_revision",
+          "updated_at",
+          "published_at",
+          "timestamp_source",
+          "version_seen_at",
+          "summary_created_at",
+          "fact_excerpt_created_at"
+        ]
+      },
+      "classification": "metadata_only",
+      "before_transport": "rss.pubDate",
+      "after_transport": "publisher API publishedAt",
+      "before_published_at": "2026-10-21T06:58:56+00:00",
+      "after_published_at": "2026-10-21T06:58:56.480000+00:00",
+      "prior_known_api_version": 44,
+      "prior_known_api_record_sha256": "c1bb77fdd544dcf421a07ee81c6dba0eb6290c302b51b09ae48dad0382052f25",
+      "candidate_replay_against_prior_api": {
+        "available": true,
+        "remaining_fact_changes": [],
+        "would_dispatch_price_revision": false,
+        "interpretation": "API/HTML representation cannot replace known API content; metadata-only revision is not a price event"
+      },
+      "after_authority_initialized_repeat_has_fact_changes": false
+    },
+    {
+      "job_id": "a337e7a9-a1a1-4a4e-bce4-f1bab031803e",
+      "analysis_id": "2a12d5b0-41df-45c2-91df-f8cc7985e8e5",
+      "priority": 10,
+      "created_at": "2026-10-22T15:54:12.706731+00:00",
+      "live_status_at_audit": "completed",
+      "input_snapshot_raw_sha256": "4f6f28f83f85f7964371845019be6aef27934bc5f33f4814d68ff45fcd3d75dc",
+      "live_input_unchanged": true,
+      "news_id": "8329f9016a909f09a3a63ca4",
+      "title": "Norway set on tapping into Arctic gas potential: New study to unlock 1988 Barents Sea discovery",
+      "published_at": "2026-10-21T08:51:43.720000+00:00",
+      "window_news_count": 0,
+      "version": 45,
+      "previous_version": 44,
+      "before_record_raw_sha256": "ec839465bdd6231c5c7b074ab282249fcaa9aa822ae7d796173aef531e1ffdc8",
+      "after_record_raw_sha256": "31dfce16da537a82b478a7c200e065ea4b6245a6c790ba47a0c7a7f3fd144ca8",
+      "before_excerpt_sha256": "cb3d1c5da5515cf810fc3398b8981e146e4ec0073d8e3910c3ec0b02b9e02d93",
+      "after_excerpt_sha256": "caf94fb84316f5697131d68afe11ad750707e56d7c7f15d8a99b5434e493668b",
+      "before_excerpt": "Norway is targeting untapped Arctic energy by commissioning a new study to shed more light on the 1988 gas discovery in the Barents Sea.\n\nDecades after being left behind in the frozen depths of the High North, a forgotten 1980s gas find in the Barents Sea is getting a second look. As Europe hungers for new energy sources and low-carbon reserves, Norway is launching a fresh push to unlock the untapped potential of the Arctic, starting with a neglected discovery 200 kilometers north of the Arctic Circle.\n\nThe Barents Sea is home to a number of discoveries that could hold vast volumes of gas but remains less explored than other parts of the Norwegian Continental Shelf (NCS), with several discoveries in these waters potentially containing significant volumes of gas, according to the Norwegian Offshore Directorate, which emphasizes that a new study could uncover major opportunities for one of these discoveries.\n\nThe gas discovery that this study will aim to gain more insight into is Norselhøgda (the well 7226/11-1 ), which is situated about 200 kilometers north of Hammerfest and was made in 1988. The discovery was production-tested, but the acreage was subsequently relinquished to the authorities.\n\nSeveral comparable discoveries have been made in the area, which include production license 1313 , located to the north of the Norselhøgda discovery and awarded in APA 2025 . The Gro discovery in the Norwegian Sea is another discovery the Norwegian Offshore Directorate hopes to revive, along with the Linerle discovery in the Norwegian Sea.",
+      "after_excerpt": "Decades after being left behind in the frozen depths of the High North, a forgotten 1980s gas find in the Barents Sea is getting a second look. As Europe hungers for new energy sources and low-carbon reserves, Norway is launching a fresh push to unlock the untapped potential of the Arctic, starting with a neglected discovery 200 kilometers north of the Arctic Circle.\n\nThe Barents Sea is home to a number of discoveries that could hold vast volumes of gas but remains less explored than other parts of the Norwegian Continental Shelf (NCS), with several discoveries in these waters potentially containing significant volumes of gas, according to the Norwegian Offshore Directorate, which emphasizes that a new study could uncover major opportunities for one of these discoveries.\n\nThe gas discovery that this study will aim to gain more insight into is Norselhøgda (the well 7226/11-1 ), which is situated about 200 kilometers north of Hammerfest and was made in 1988. The discovery was production-tested, but the acreage was subsequently relinquished to the authorities.\n\nSeveral comparable discoveries have been made in the area, which include production license 1313 , located to the north of the Norselhøgda discovery and awarded in APA 2025 . The Gro discovery in the Norwegian Sea is another discovery the Norwegian Offshore Directorate hopes to revive, along with the Linerle discovery in the Norwegian Sea.",
+      "revision_delta": {
+        "previous_version": 44,
+        "previous_known_at": "2026-10-22T08:02:28.577609+00:00",
+        "changed_fields": {
+          "fact_excerpt": {
+            "before": "Norway is targeting untapped Arctic energy by commissioning a new study to shed more light on the 1988 gas discovery in the Barents Sea.\n\nDecades after being left behind in the frozen depths of the High North, a forgotten 1980s gas find in the Barents Sea is getting a second look. As Europe hungers for new energy sources and low-carbon reserves, Norway is launching a fresh push to unlock the untapped potential of the Arctic, starting with a neglected discovery 200 kilometers north of the Arctic Circle.\n\nThe Barents Sea is home to a number of discoveries that could hold vast volumes of gas but remains less explored than other parts of the Norwegian Continental Shelf (NCS), with several discoveries in these waters potentially containing significant volumes of gas, according to the Norwegian Offshore Directorate, which emphasizes that a new study could uncover major opportunities for one of these discoveries.\n\nThe gas discovery that this study will aim to gain more insight into is Norselhøgda (the well 7226/11-1 ), which is situated about 200 kilometers north of Hammerfest and was made in 1988. The discovery was production-tested, but the acreage was subsequently relinquished to the authorities.\n\nSeveral comparable discoveries have been made in the area, which include production license 1313 , located to the north of the Norselhøgda discovery and awarded in APA 2025 . The Gro discovery in the Norwegian Sea is another discovery the Norwegian Offshore Directorate hopes to revive, along with the Linerle discovery in the Norwegian Sea.",
+            "after": "Decades after being left behind in the frozen depths of the High North, a forgotten 1980s gas find in the Barents Sea is getting a second look. As Europe hungers for new energy sources and low-carbon reserves, Norway is launching a fresh push to unlock the untapped potential of the Arctic, starting with a neglected discovery 200 kilometers north of the Arctic Circle.\n\nThe Barents Sea is home to a number of discoveries that could hold vast volumes of gas but remains less explored than other parts of the Norwegian Continental Shelf (NCS), with several discoveries in these waters potentially containing significant volumes of gas, according to the Norwegian Offshore Directorate, which emphasizes that a new study could uncover major opportunities for one of these discoveries.\n\nThe gas discovery that this study will aim to gain more insight into is Norselhøgda (the well 7226/11-1 ), which is situated about 200 kilometers north of Hammerfest and was made in 1988. The discovery was production-tested, but the acreage was subsequently relinquished to the authorities.\n\nSeveral comparable discoveries have been made in the area, which include production license 1313 , located to the north of the Norselhøgda discovery and awarded in APA 2025 . The Gro discovery in the Norwegian Sea is another discovery the Norwegian Offshore Directorate hopes to revive, along with the Linerle discovery in the Norwegian Sea."
+          }
+        },
+        "substantive_change": true,
+        "comparison_status": "compared",
+        "metadata_changed_fields": [
+          "source_revision",
+          "updated_at",
+          "published_at",
+          "timestamp_source",
+          "version_seen_at",
+          "summary_created_at",
+          "fact_excerpt_created_at"
+        ]
+      },
+      "classification": "api_html_representation_switch",
+      "before_transport": "rss.pubDate",
+      "after_transport": "publisher API publishedAt",
+      "before_published_at": "2026-10-21T08:51:43+00:00",
+      "after_published_at": "2026-10-21T08:51:43.720000+00:00",
+      "prior_known_api_version": 43,
+      "prior_known_api_record_sha256": "ab4c6c35ce9de7eb05d435979199518b4e382788064614afe67ac44eeca21dab",
+      "candidate_replay_against_prior_api": {
+        "available": true,
+        "remaining_fact_changes": [],
+        "would_dispatch_price_revision": false,
+        "interpretation": "API/HTML representation cannot replace known API content; metadata-only revision is not a price event"
+      },
+      "after_authority_initialized_repeat_has_fact_changes": false
+    },
+    {
+      "job_id": "dfafe89f-3d04-433b-b4f6-c0b184a29107",
+      "analysis_id": "38f5821c-f2c0-4d66-8ea9-0180a5238984",
+      "priority": 10,
+      "created_at": "2026-10-22T15:54:14.130407+00:00",
+      "live_status_at_audit": "completed",
+      "input_snapshot_raw_sha256": "fc01a747f10afff1ed8b2b46400dd17086cd32ae5262958863dbfe3c3dcf7ed7",
+      "live_input_unchanged": true,
+      "news_id": "33dbd11f64fe4ad7b5145237",
+      "title": "Australian gas project enters home stretch as developments in Mexico and US Gulf make new inroads",
+      "published_at": "2026-10-21T12:24:53.578000+00:00",
+      "window_news_count": 0,
+      "version": 42,
+      "previous_version": 41,
+      "before_record_raw_sha256": "a16acdc3800d0dc9b35676576ce5d88469ab4a37f9cfa69d790f8cd53eb8f1cd",
+      "after_record_raw_sha256": "e65ba9e530dea8d0a4cb0dfbe86b9a6b9f8e6d71868bc0114cc24344b422159d",
+      "before_excerpt_sha256": "e826b105e850ef997761eca7277be594aff872e7555cbad4409ce1ee3816ffb5",
+      "after_excerpt_sha256": "e826b105e850ef997761eca7277be594aff872e7555cbad4409ce1ee3816ffb5",
+      "before_excerpt": "The operator emphasizes that well clean-up results are in line with reservoir and well performance expectations. The company completed all mechanical runs of Pluto Train 2 compressors, and, subsequent to the period, Scarborough gas was introduced to the warm end (gas pre-treatment) of the LNG train.\n\nActivities in the cold end continue to progress, which will enable the start of gas liquefaction. Following the Pluto Train 1 planned major maintenance campaign in Q2, modifications to Pluto Train 1, which will allow processing of Scarborough gas, continued. The final module arrived on-site with activities focused on module hook-up and integration. The first LNG cargo is on track for Q4 2026.\n\n“We delivered quarterly production of 46.2 million barrels of oil equivalent, up 12% from the previous quarter following the successful completion of the Pluto LNG turnaround in the second quarter and the NWS turnaround in the third quarter.”\n\nThe Louisiana LNG project remains on budget and was 32% complete at the end of the quarter, as LNG terminal construction advanced across marine, site works, and LNG tanks, with LNG Tank 1 wall concrete reaching 50% completion.\n\nCurrently, ongoing engagement with high-quality counterparties for equity participation and LNG offtake continues. The project is targeting the first LNG in 2029. The Australian energy giant claims that structural steel supply challenges associated with ongoing disruptions in the Middle East continue to be mitigated through alternative logistics routes and fabrication sources.",
+      "after_excerpt": "The operator emphasizes that well clean-up results are in line with reservoir and well performance expectations. The company completed all mechanical runs of Pluto Train 2 compressors, and, subsequent to the period, Scarborough gas was introduced to the warm end (gas pre-treatment) of the LNG train.\n\nActivities in the cold end continue to progress, which will enable the start of gas liquefaction. Following the Pluto Train 1 planned major maintenance campaign in Q2, modifications to Pluto Train 1, which will allow processing of Scarborough gas, continued. The final module arrived on-site with activities focused on module hook-up and integration. The first LNG cargo is on track for Q4 2026.\n\n“We delivered quarterly production of 46.2 million barrels of oil equivalent, up 12% from the previous quarter following the successful completion of the Pluto LNG turnaround in the second quarter and the NWS turnaround in the third quarter.”\n\nThe Louisiana LNG project remains on budget and was 32% complete at the end of the quarter, as LNG terminal construction advanced across marine, site works, and LNG tanks, with LNG Tank 1 wall concrete reaching 50% completion.\n\nCurrently, ongoing engagement with high-quality counterparties for equity participation and LNG offtake continues. The project is targeting the first LNG in 2029. The Australian energy giant claims that structural steel supply challenges associated with ongoing disruptions in the Middle East continue to be mitigated through alternative logistics routes and fabrication sources.",
+      "revision_delta": {
+        "previous_version": 41,
+        "previous_known_at": "2026-10-22T08:02:28.575394+00:00",
+        "changed_fields": {},
+        "substantive_change": false,
+        "comparison_status": "compared",
+        "metadata_changed_fields": [
+          "source_revision",
+          "updated_at",
+          "published_at",
+          "timestamp_source",
+          "version_seen_at",
+          "summary_created_at",
+          "fact_excerpt_created_at"
+        ]
+      },
+      "classification": "metadata_only",
+      "before_transport": "rss.pubDate",
+      "after_transport": "publisher API publishedAt",
+      "before_published_at": "2026-10-21T12:24:53+00:00",
+      "after_published_at": "2026-10-21T12:24:53.578000+00:00",
+      "prior_known_api_version": 40,
+      "prior_known_api_record_sha256": "4f3de555836245800cdd3b85f3a126e970696c9062c5c388e3e03a6b8582ae97",
+      "candidate_replay_against_prior_api": {
+        "available": true,
+        "remaining_fact_changes": [],
+        "would_dispatch_price_revision": false,
+        "interpretation": "API/HTML representation cannot replace known API content; metadata-only revision is not a price event"
+      },
+      "after_authority_initialized_repeat_has_fact_changes": false
+    },
+    {
+      "job_id": "0c92774a-6415-41bb-9343-620751865515",
+      "analysis_id": "8b6f4f07-7bae-4384-83a9-a2a438f67ee2",
+      "priority": 10,
+      "created_at": "2026-10-22T15:54:15.464579+00:00",
+      "live_status_at_audit": "completed",
+      "input_snapshot_raw_sha256": "22d8b41ed3bda16d14150627267eb84d676cfa5a4daf74897e1aa50e76c2c2fb",
+      "live_input_unchanged": true,
+      "news_id": "d47edb232331902fb4926fc0",
+      "title": "Over 500 piles lay the foundation for Poland’s floating LNG terminal (Gallery)",
+      "published_at": "2026-10-21T14:34:01.208000+00:00",
+      "window_news_count": 0,
+      "version": 41,
+      "previous_version": 40,
+      "before_record_raw_sha256": "3f304ac62c1994d8928b3c20139be4bae47677c0acd65bba30003aec220e9d81",
+      "after_record_raw_sha256": "c9566b4d943e3d36893d3358ce36b48f954e638fce1e01a6ede26f62362d44c6",
+      "before_excerpt_sha256": "0742925bbb42a9f9489098f46c92d50cfff08f5aa16d56c36f5498ab284ce357",
+      "after_excerpt_sha256": "7f0d75dd343a2685c1a97ddc7ee49911dd87c76a3a8825dbe0531486c6273bee",
+      "before_excerpt": "Miłosz Motyka , Minister for Energy, commented: “Developing LNG infrastructure directly strengthens Poland by securing its energy supply, boosting the economy, and upgrading the country’s position across Europe. The FSRU terminal in Gdańsk will increase our capacity to import natural gas from global markets and bolster Poland’s role in the regional supply system.\n\n“This initiative will effectively increase our gas import capacity by sea, reinforce supply diversification, and create additional opportunities for adaptable response to domestic energy demand. We remain committed to delivering investment projects that enhance the resilience and competitiveness of the Polish economy, thereby reinforcing our energy independence .”\n\nInstallation of over 500 piles forming the foundation of the quay for the floating LNG terminal in Gdańsk Bay\n\n“Nevertheless, owing to the determination of the contractors and meticulous coordination of the works, we have reached this critical milestone within the planned timeline. Now, the terminal features a robust physical foundation. Next, we will be assembling the platforms and preparing for the construction of the subsea gas pipeline .”\n\nAccording to Gaz-System, the FSRU program is a strategic project aimed at strengthening Poland’s energy security, enabling the European country to gain an additional entry point for natural gas, increasing the diversification of supplies and system robustness.",
+      "after_excerpt": "Miłosz Motyka , Minister for Energy, commented: “Developing LNG infrastructure directly strengthens Poland by securing its energy supply, boosting the economy, and upgrading the country’s position across Europe. The FSRU terminal in Gdańsk will increase our capacity to import natural gas from global markets and bolster Poland’s role in the regional supply system.\n\n“This initiative will effectively increase our gas import capacity by sea, reinforce supply diversification, and create additional opportunities for adaptable response to domestic energy demand. We remain committed to delivering investment projects that enhance the resilience and competitiveness of the Polish economy, thereby reinforcing our energy independence .”\n\n“Nevertheless, owing to the determination of the contractors and meticulous coordination of the works, we have reached this critical milestone within the planned timeline. Now, the terminal features a robust physical foundation. Next, we will be assembling the platforms and preparing for the construction of the subsea gas pipeline .”\n\nThe work on the onshore section is also well advanced, as the Gdańsk–Gustorzyn gas pipeline underwent tests in September, which is reported to have confirmed a high standard of work and the pipeline’s good working order.\n\nAccording to Gaz-System, the FSRU program is a strategic project aimed at strengthening Poland’s energy security, enabling the European country to gain an additional entry point for natural gas, increasing the diversification of supplies and system robustness.",
+      "revision_delta": {
+        "previous_version": 40,
+        "previous_known_at": "2026-10-22T08:02:28.571613+00:00",
+        "changed_fields": {
+          "fact_excerpt": {
+            "before": "Miłosz Motyka , Minister for Energy, commented: “Developing LNG infrastructure directly strengthens Poland by securing its energy supply, boosting the economy, and upgrading the country’s position across Europe. The FSRU terminal in Gdańsk will increase our capacity to import natural gas from global markets and bolster Poland’s role in the regional supply system.\n\n“This initiative will effectively increase our gas import capacity by sea, reinforce supply diversification, and create additional opportunities for adaptable response to domestic energy demand. We remain committed to delivering investment projects that enhance the resilience and competitiveness of the Polish economy, thereby reinforcing our energy independence .”\n\nInstallation of over 500 piles forming the foundation of the quay for the floating LNG terminal in Gdańsk Bay\n\n“Nevertheless, owing to the determination of the contractors and meticulous coordination of the works, we have reached this critical milestone within the planned timeline. Now, the terminal features a robust physical foundation. Next, we will be assembling the platforms and preparing for the construction of the subsea gas pipeline .”\n\nAccording to Gaz-System, the FSRU program is a strategic project aimed at strengthening Poland’s energy security, enabling the European country to gain an additional entry point for natural gas, increasing the diversification of supplies and system robustness.",
+            "after": "Miłosz Motyka , Minister for Energy, commented: “Developing LNG infrastructure directly strengthens Poland by securing its energy supply, boosting the economy, and upgrading the country’s position across Europe. The FSRU terminal in Gdańsk will increase our capacity to import natural gas from global markets and bolster Poland’s role in the regional supply system.\n\n“This initiative will effectively increase our gas import capacity by sea, reinforce supply diversification, and create additional opportunities for adaptable response to domestic energy demand. We remain committed to delivering investment projects that enhance the resilience and competitiveness of the Polish economy, thereby reinforcing our energy independence .”\n\n“Nevertheless, owing to the determination of the contractors and meticulous coordination of the works, we have reached this critical milestone within the planned timeline. Now, the terminal features a robust physical foundation. Next, we will be assembling the platforms and preparing for the construction of the subsea gas pipeline .”\n\nThe work on the onshore section is also well advanced, as the Gdańsk–Gustorzyn gas pipeline underwent tests in September, which is reported to have confirmed a high standard of work and the pipeline’s good working order.\n\nAccording to Gaz-System, the FSRU program is a strategic project aimed at strengthening Poland’s energy security, enabling the European country to gain an additional entry point for natural gas, increasing the diversification of supplies and system robustness."
+          }
+        },
+        "substantive_change": true,
+        "comparison_status": "compared",
+        "metadata_changed_fields": [
+          "source_revision",
+          "updated_at",
+          "published_at",
+          "timestamp_source",
+          "version_seen_at",
+          "summary_created_at",
+          "fact_excerpt_created_at"
+        ]
+      },
+      "classification": "api_html_representation_switch",
+      "before_transport": "rss.pubDate",
+      "after_transport": "publisher API publishedAt",
+      "before_published_at": "2026-10-21T14:34:01+00:00",
+      "after_published_at": "2026-10-21T14:34:01.208000+00:00",
+      "prior_known_api_version": 39,
+      "prior_known_api_record_sha256": "707a40db74b4ae2110d894a038bb94fb040efda7a645d7905f5293725002f1bd",
+      "candidate_replay_against_prior_api": {
+        "available": true,
+        "remaining_fact_changes": [],
+        "would_dispatch_price_revision": false,
+        "interpretation": "API/HTML representation cannot replace known API content; metadata-only revision is not a price event"
+      },
+      "after_authority_initialized_repeat_has_fact_changes": false
+    },
+    {
+      "job_id": "d3f4754b-520a-46b9-9ebc-6158680e25b0",
+      "analysis_id": "0e35f8b4-99a7-421b-bb40-f80fdeee2c9e",
+      "priority": 10,
+      "created_at": "2026-10-22T15:54:16.806643+00:00",
+      "live_status_at_audit": "completed",
+      "input_snapshot_raw_sha256": "ee1151a98b5ffd9d210f1cd00ef5ef3c54584494e97148269f7444208ac33182",
+      "live_input_unchanged": true,
+      "news_id": "2e2ab65c24ca66af4363548a",
+      "title": "OneSubsea and oil & gas giants are unlocking deeper waters with all-electric subsea tech",
+      "published_at": "2026-10-22T08:26:10.508000+00:00",
+      "window_news_count": 0,
+      "version": 3,
+      "previous_version": 2,
+      "before_record_raw_sha256": "d98b050c24a7949cada3a98c9fbfe70a5a39efd116c40814886d722547e2dc09",
+      "after_record_raw_sha256": "a91016474358ba2962a9683c646d702dce2d66e87a15709453ac0221f6d17301",
+      "before_excerpt_sha256": "10f05727bae4cada2bc66e93b240d6e777a787d31b06dfbbdb788ae92995db5e",
+      "after_excerpt_sha256": "c174d300950852756220b1b24016e0435244dd9ed5f218b41ab3e34f7154ac37",
+      "before_excerpt": "October 22, 2026 · 6 hours ago\n\nOut with hydraulics, in with electric: OneSubsea, TotalEnergies, Equinor, BP, and Chevron have tested all-electric tech at depths up to 3,000 meters.\n\nPushing deeper into offshore frontiers, OneSubsea, a joint venture backed by SLB, Aker Solutions and Subsea7, has cleared a critical path for deepwater development through a joint industry project with France’s TotalEnergies, Norway’s Equinor, the UK’s BP, and the U.S.-headquartered Chevron to master all-electric subsea technology designed to operate 3,000 meters below the surface.\n\nOneSubsea has completed the Brazil All-Electric Joint Industry Project (JIP) , a collaboration with TotalEnergies, Equinor, BP, and Chevron, supported through the National Petroleum Agency (ANP) research and development regulation, to advance fully electric subsea production technologies for applications at water depths of up to 3,000 meters.\n\nThe firm’s all-electric portfolio is advancing along two complementary paths, with all-electric subsea production technology moving toward commercial deployment through Equinor’s Fram Sør project in Norway, which includes 12 all-electric subsea trees .",
+      "after_excerpt": "Pushing deeper into offshore frontiers, OneSubsea, a joint venture backed by SLB, Aker Solutions and Subsea7, has cleared a critical path for deepwater development through a joint industry project with France’s TotalEnergies, Norway’s Equinor, the UK’s BP, and the U.S.-headquartered Chevron to master all-electric subsea technology designed to operate 3,000 meters below the surface.\n\nOneSubsea has completed the Brazil All-Electric Joint Industry Project (JIP) , a collaboration with TotalEnergies, Equinor, BP, and Chevron, supported through the National Petroleum Agency (ANP) research and development regulation, to advance fully electric subsea production technologies for applications at water depths of up to 3,000 meters.\n\nAside from qualifying components for applications at depths of up to 3,000 meters, the project pinpointed interfaces with newly developed and qualified SLB electric completion technologies.\n\nThe company states that the completion of the project builds on more than 15 years of experience in subsea electrification and more than 5 million operating hours with electrified subsea systems.\n\nThe firm’s all-electric portfolio is advancing along two complementary paths, with all-electric subsea production technology moving toward commercial deployment through Equinor’s Fram Sør project in Norway, which includes 12 all-electric subsea trees .",
+      "revision_delta": {
+        "previous_version": 2,
+        "previous_known_at": "2026-10-22T15:13:47.064076+00:00",
+        "changed_fields": {
+          "fact_excerpt": {
+            "before": "October 22, 2026 · 6 hours ago\n\nOut with hydraulics, in with electric: OneSubsea, TotalEnergies, Equinor, BP, and Chevron have tested all-electric tech at depths up to 3,000 meters.\n\nPushing deeper into offshore frontiers, OneSubsea, a joint venture backed by SLB, Aker Solutions and Subsea7, has cleared a critical path for deepwater development through a joint industry project with France’s TotalEnergies, Norway’s Equinor, the UK’s BP, and the U.S.-headquartered Chevron to master all-electric subsea technology designed to operate 3,000 meters below the surface.\n\nOneSubsea has completed the Brazil All-Electric Joint Industry Project (JIP) , a collaboration with TotalEnergies, Equinor, BP, and Chevron, supported through the National Petroleum Agency (ANP) research and development regulation, to advance fully electric subsea production technologies for applications at water depths of up to 3,000 meters.\n\nThe firm’s all-electric portfolio is advancing along two complementary paths, with all-electric subsea production technology moving toward commercial deployment through Equinor’s Fram Sør project in Norway, which includes 12 all-electric subsea trees .",
+            "after": "Pushing deeper into offshore frontiers, OneSubsea, a joint venture backed by SLB, Aker Solutions and Subsea7, has cleared a critical path for deepwater development through a joint industry project with France’s TotalEnergies, Norway’s Equinor, the UK’s BP, and the U.S.-headquartered Chevron to master all-electric subsea technology designed to operate 3,000 meters below the surface.\n\nOneSubsea has completed the Brazil All-Electric Joint Industry Project (JIP) , a collaboration with TotalEnergies, Equinor, BP, and Chevron, supported through the National Petroleum Agency (ANP) research and development regulation, to advance fully electric subsea production technologies for applications at water depths of up to 3,000 meters.\n\nAside from qualifying components for applications at depths of up to 3,000 meters, the project pinpointed interfaces with newly developed and qualified SLB electric completion technologies.\n\nThe company states that the completion of the project builds on more than 15 years of experience in subsea electrification and more than 5 million operating hours with electrified subsea systems.\n\nThe firm’s all-electric portfolio is advancing along two complementary paths, with all-electric subsea production technology moving toward commercial deployment through Equinor’s Fram Sør project in Norway, which includes 12 all-electric subsea trees ."
+          }
+        },
+        "substantive_change": true,
+        "comparison_status": "compared",
+        "metadata_changed_fields": [
+          "source_revision",
+          "updated_at",
+          "published_at",
+          "timestamp_source",
+          "version_seen_at",
+          "summary_created_at",
+          "fact_excerpt_created_at"
+        ]
+      },
+      "classification": "api_html_representation_switch",
+      "before_transport": "rss.pubDate",
+      "after_transport": "publisher API publishedAt",
+      "before_published_at": "2026-10-22T08:26:10+00:00",
+      "after_published_at": "2026-10-22T08:26:10.508000+00:00",
+      "prior_known_api_version": null,
+      "prior_known_api_record_sha256": null,
+      "candidate_replay_against_prior_api": {
+        "available": false,
+        "remaining_fact_changes": null,
+        "would_dispatch_price_revision": null,
+        "interpretation": "First captured authoritative API body: migration may legitimately create one newly observed version; no historical full payload permits proving this body was already known"
+      },
+      "after_authority_initialized_repeat_has_fact_changes": false
+    },
+    {
+      "job_id": "b86d6e9a-44af-4c26-8c7a-9dc72a7bb19f",
+      "analysis_id": "26938e91-0828-4aaa-9c5f-386e78f22302",
+      "priority": 10,
+      "created_at": "2026-10-22T15:54:18.129113+00:00",
+      "live_status_at_audit": "completed",
+      "input_snapshot_raw_sha256": "44981212eaa14bb158349adf38c3403d609897b295b4eb9488340d15b0ba510d",
+      "live_input_unchanged": true,
+      "news_id": "7960d36f60b81a2a03b774a0",
+      "title": "Cook Inlet LNG steps up Alaska energy push with TDI-Brooks survey",
+      "published_at": "2026-10-22T12:30:00+00:00",
+      "window_news_count": 0,
+      "version": 2,
+      "previous_version": 1,
+      "before_record_raw_sha256": "b7da07859625b22094c8f4f87e74e7d81322da932fefff9137fa61d6dfd51e6c",
+      "after_record_raw_sha256": "efc49808ecb597cb5cea084057f977fe02f9dbd2b967fee560d593dbadbc300e",
+      "before_excerpt_sha256": "c0ca086e440b4e99d867e7040a0c94ebc97c06be10936d0363867a7de9c76fc3",
+      "after_excerpt_sha256": "309bd69f147571e47172f61b219b596218d7b2e51d40bc9d359c31403658546d",
+      "before_excerpt": "October 22, 2026 · 34 minutes ago\n\nU.S.-headquartered geotechnical and offshore survey research and service company TDI-Brooks has wrapped up a critical geotechnical campaign for Cook Inlet LNG, a strategic initiative designed to secure natural gas supplies for Southcentral Alaska, delivering vital subsurface data to support the project's anchor selection and helping bring the developer’s floating import terminal aspirations closer to reality.\n\nTDI-Brooks has concluded a geotechnical project for the Cook Inlet LNG project (CI LNG) in Cook Inlet, Alaska, providing its Neptune N5K cone penetration testing (CPT) system for an anchor site characterization study. The work supported the project developer by collecting subsurface soil data to inform anchor selection.\n\nAccording to the U.S. player, the study covered different locations within the project site with a scope of 16 CPTs in water depths ranging from 10 to 25 meters. Operations were conducted from the R/V Poseidon , a third-party vessel working in the region, demonstrating the firm’s ability to deploy specialized geotechnical equipment aboard locally available vessels.\n\nThe Cook Inlet LNG project is an energy security initiative designed to address declining natural gas reserves in the Cook Inlet basin of Southcentral Alaska to stave off a potential energy shortfall for heating and electricity by serving as a near-term bridge solution to import gas.",
+      "after_excerpt": "U.S.-headquartered geotechnical and offshore survey research and service company TDI-Brooks has wrapped up a critical geotechnical campaign for Cook Inlet LNG, a strategic initiative designed to secure natural gas supplies for Southcentral Alaska, delivering vital subsurface data to support the project's anchor selection and helping bring the developer’s floating import terminal aspirations closer to reality.\n\nTDI-Brooks has concluded a geotechnical project for the Cook Inlet LNG project (CI LNG) in Cook Inlet, Alaska, providing its Neptune N5K cone penetration testing (CPT) system for an anchor site characterization study. The work supported the project developer by collecting subsurface soil data to inform anchor selection.\n\nAccording to the U.S. player, the study covered different locations within the project site with a scope of 16 CPTs in water depths ranging from 10 to 25 meters. Operations were conducted from the R/V Poseidon , a third-party vessel working in the region, demonstrating the firm’s ability to deploy specialized geotechnical equipment aboard locally available vessels.\n\nThe Cook Inlet LNG project is an energy security initiative designed to address declining natural gas reserves in the Cook Inlet basin of Southcentral Alaska to stave off a potential energy shortfall for heating and electricity by serving as a near-term bridge solution to import gas.\n\nThe completion of this study comes months after the U.S. firm was hired by Delfin LNG to provide offshore geophysical and geotechnical survey services for the Delfin deepwater port project offshore Louisiana.",
+      "revision_delta": {
+        "previous_version": 1,
+        "previous_known_at": "2026-10-22T13:14:09.078872+00:00",
+        "changed_fields": {
+          "fact_excerpt": {
+            "before": "October 22, 2026 · 34 minutes ago\n\nU.S.-headquartered geotechnical and offshore survey research and service company TDI-Brooks has wrapped up a critical geotechnical campaign for Cook Inlet LNG, a strategic initiative designed to secure natural gas supplies for Southcentral Alaska, delivering vital subsurface data to support the project's anchor selection and helping bring the developer’s floating import terminal aspirations closer to reality.\n\nTDI-Brooks has concluded a geotechnical project for the Cook Inlet LNG project (CI LNG) in Cook Inlet, Alaska, providing its Neptune N5K cone penetration testing (CPT) system for an anchor site characterization study. The work supported the project developer by collecting subsurface soil data to inform anchor selection.\n\nAccording to the U.S. player, the study covered different locations within the project site with a scope of 16 CPTs in water depths ranging from 10 to 25 meters. Operations were conducted from the R/V Poseidon , a third-party vessel working in the region, demonstrating the firm’s ability to deploy specialized geotechnical equipment aboard locally available vessels.\n\nThe Cook Inlet LNG project is an energy security initiative designed to address declining natural gas reserves in the Cook Inlet basin of Southcentral Alaska to stave off a potential energy shortfall for heating and electricity by serving as a near-term bridge solution to import gas.",
+            "after": "U.S.-headquartered geotechnical and offshore survey research and service company TDI-Brooks has wrapped up a critical geotechnical campaign for Cook Inlet LNG, a strategic initiative designed to secure natural gas supplies for Southcentral Alaska, delivering vital subsurface data to support the project's anchor selection and helping bring the developer’s floating import terminal aspirations closer to reality.\n\nTDI-Brooks has concluded a geotechnical project for the Cook Inlet LNG project (CI LNG) in Cook Inlet, Alaska, providing its Neptune N5K cone penetration testing (CPT) system for an anchor site characterization study. The work supported the project developer by collecting subsurface soil data to inform anchor selection.\n\nAccording to the U.S. player, the study covered different locations within the project site with a scope of 16 CPTs in water depths ranging from 10 to 25 meters. Operations were conducted from the R/V Poseidon , a third-party vessel working in the region, demonstrating the firm’s ability to deploy specialized geotechnical equipment aboard locally available vessels.\n\nThe Cook Inlet LNG project is an energy security initiative designed to address declining natural gas reserves in the Cook Inlet basin of Southcentral Alaska to stave off a potential energy shortfall for heating and electricity by serving as a near-term bridge solution to import gas.\n\nThe completion of this study comes months after the U.S. firm was hired by Delfin LNG to provide offshore geophysical and geotechnical survey services for the Delfin deepwater port project offshore Louisiana."
+          }
+        },
+        "substantive_change": true,
+        "comparison_status": "compared",
+        "metadata_changed_fields": [
+          "source_revision",
+          "updated_at",
+          "timestamp_source",
+          "version_seen_at",
+          "summary_created_at",
+          "fact_excerpt_created_at"
+        ]
+      },
+      "classification": "api_html_representation_switch",
+      "before_transport": "rss.pubDate",
+      "after_transport": "publisher API publishedAt",
+      "before_published_at": "2026-10-22T12:30:00+00:00",
+      "after_published_at": "2026-10-22T12:30:00+00:00",
+      "prior_known_api_version": null,
+      "prior_known_api_record_sha256": null,
+      "candidate_replay_against_prior_api": {
+        "available": false,
+        "remaining_fact_changes": null,
+        "would_dispatch_price_revision": null,
+        "interpretation": "First captured authoritative API body: migration may legitimately create one newly observed version; no historical full payload permits proving this body was already known"
+      },
+      "after_authority_initialized_repeat_has_fact_changes": false
+    },
+    {
+      "job_id": "85f311f8-4b85-41f8-8c97-f8a63c3a8486",
+      "analysis_id": "4282ee68-6392-4318-9b5a-12ff552a177c",
+      "priority": 10,
+      "created_at": "2026-10-22T15:54:58.130980+00:00",
+      "live_status_at_audit": "completed",
+      "input_snapshot_raw_sha256": "93afd9d92a3cba7a33e57af1698e61ee00b2ee3e840c002066cb875c001c206f",
+      "live_input_unchanged": true,
+      "news_id": "2e2ab65c24ca66af4363548a",
+      "title": "OneSubsea and oil & gas giants are unlocking deeper waters with all-electric subsea tech",
+      "published_at": "2026-10-22T08:26:10+00:00",
+      "window_news_count": 0,
+      "version": 4,
+      "previous_version": 3,
+      "before_record_raw_sha256": "a91016474358ba2962a9683c646d702dce2d66e87a15709453ac0221f6d17301",
+      "after_record_raw_sha256": "bec019f84d56930a0e24b2d0b38cf50673110bab9903145968900524cb40dcca",
+      "before_excerpt_sha256": "c174d300950852756220b1b24016e0435244dd9ed5f218b41ab3e34f7154ac37",
+      "after_excerpt_sha256": "44b010779764e2b25937bb17bdae1888697aa5effb994f968de643ddbeff97eb",
+      "before_excerpt": "Pushing deeper into offshore frontiers, OneSubsea, a joint venture backed by SLB, Aker Solutions and Subsea7, has cleared a critical path for deepwater development through a joint industry project with France’s TotalEnergies, Norway’s Equinor, the UK’s BP, and the U.S.-headquartered Chevron to master all-electric subsea technology designed to operate 3,000 meters below the surface.\n\nOneSubsea has completed the Brazil All-Electric Joint Industry Project (JIP) , a collaboration with TotalEnergies, Equinor, BP, and Chevron, supported through the National Petroleum Agency (ANP) research and development regulation, to advance fully electric subsea production technologies for applications at water depths of up to 3,000 meters.\n\nAside from qualifying components for applications at depths of up to 3,000 meters, the project pinpointed interfaces with newly developed and qualified SLB electric completion technologies.\n\nThe company states that the completion of the project builds on more than 15 years of experience in subsea electrification and more than 5 million operating hours with electrified subsea systems.\n\nThe firm’s all-electric portfolio is advancing along two complementary paths, with all-electric subsea production technology moving toward commercial deployment through Equinor’s Fram Sør project in Norway, which includes 12 all-electric subsea trees .",
+      "after_excerpt": "October 22, 2026 · 7 hours ago\n\nOut with hydraulics, in with electric: OneSubsea, TotalEnergies, Equinor, BP, and Chevron have tested all-electric tech at depths up to 3,000 meters.\n\nPushing deeper into offshore frontiers, OneSubsea, a joint venture backed by SLB, Aker Solutions and Subsea7, has cleared a critical path for deepwater development through a joint industry project with France’s TotalEnergies, Norway’s Equinor, the UK’s BP, and the U.S.-headquartered Chevron to master all-electric subsea technology designed to operate 3,000 meters below the surface.\n\nOneSubsea has completed the Brazil All-Electric Joint Industry Project (JIP) , a collaboration with TotalEnergies, Equinor, BP, and Chevron, supported through the National Petroleum Agency (ANP) research and development regulation, to advance fully electric subsea production technologies for applications at water depths of up to 3,000 meters.\n\nThe firm’s all-electric portfolio is advancing along two complementary paths, with all-electric subsea production technology moving toward commercial deployment through Equinor’s Fram Sør project in Norway, which includes 12 all-electric subsea trees .",
+      "revision_delta": {
+        "previous_version": 3,
+        "previous_known_at": "2026-10-22T15:54:09.372904+00:00",
+        "changed_fields": {
+          "fact_excerpt": {
+            "before": "Pushing deeper into offshore frontiers, OneSubsea, a joint venture backed by SLB, Aker Solutions and Subsea7, has cleared a critical path for deepwater development through a joint industry project with France’s TotalEnergies, Norway’s Equinor, the UK’s BP, and the U.S.-headquartered Chevron to master all-electric subsea technology designed to operate 3,000 meters below the surface.\n\nOneSubsea has completed the Brazil All-Electric Joint Industry Project (JIP) , a collaboration with TotalEnergies, Equinor, BP, and Chevron, supported through the National Petroleum Agency (ANP) research and development regulation, to advance fully electric subsea production technologies for applications at water depths of up to 3,000 meters.\n\nAside from qualifying components for applications at depths of up to 3,000 meters, the project pinpointed interfaces with newly developed and qualified SLB electric completion technologies.\n\nThe company states that the completion of the project builds on more than 15 years of experience in subsea electrification and more than 5 million operating hours with electrified subsea systems.\n\nThe firm’s all-electric portfolio is advancing along two complementary paths, with all-electric subsea production technology moving toward commercial deployment through Equinor’s Fram Sør project in Norway, which includes 12 all-electric subsea trees .",
+            "after": "October 22, 2026 · 7 hours ago\n\nOut with hydraulics, in with electric: OneSubsea, TotalEnergies, Equinor, BP, and Chevron have tested all-electric tech at depths up to 3,000 meters.\n\nPushing deeper into offshore frontiers, OneSubsea, a joint venture backed by SLB, Aker Solutions and Subsea7, has cleared a critical path for deepwater development through a joint industry project with France’s TotalEnergies, Norway’s Equinor, the UK’s BP, and the U.S.-headquartered Chevron to master all-electric subsea technology designed to operate 3,000 meters below the surface.\n\nOneSubsea has completed the Brazil All-Electric Joint Industry Project (JIP) , a collaboration with TotalEnergies, Equinor, BP, and Chevron, supported through the National Petroleum Agency (ANP) research and development regulation, to advance fully electric subsea production technologies for applications at water depths of up to 3,000 meters.\n\nThe firm’s all-electric portfolio is advancing along two complementary paths, with all-electric subsea production technology moving toward commercial deployment through Equinor’s Fram Sør project in Norway, which includes 12 all-electric subsea trees ."
+          }
+        },
+        "substantive_change": true,
+        "comparison_status": "compared",
+        "metadata_changed_fields": [
+          "source_revision",
+          "updated_at",
+          "published_at",
+          "timestamp_source",
+          "version_seen_at",
+          "summary_created_at",
+          "fact_excerpt_created_at"
+        ]
+      },
+      "classification": "api_html_representation_switch",
+      "before_transport": "publisher API publishedAt",
+      "after_transport": "rss.pubDate",
+      "before_published_at": "2026-10-22T08:26:10.508000+00:00",
+      "after_published_at": "2026-10-22T08:26:10+00:00",
+      "prior_known_api_version": 3,
+      "prior_known_api_record_sha256": "a91016474358ba2962a9683c646d702dce2d66e87a15709453ac0221f6d17301",
+      "candidate_replay_against_prior_api": {
+        "available": true,
+        "remaining_fact_changes": [],
+        "would_dispatch_price_revision": false,
+        "interpretation": "API/HTML representation cannot replace known API content; metadata-only revision is not a price event"
+      },
+      "after_authority_initialized_repeat_has_fact_changes": false
+    },
+    {
+      "job_id": "064d2d3f-1292-4a79-bb5e-80f748eee747",
+      "analysis_id": "1a7ce8c6-78a9-4bcf-b977-6c7d7363a40f",
+      "priority": 10,
+      "created_at": "2026-10-22T15:54:59.446384+00:00",
+      "live_status_at_audit": "completed",
+      "input_snapshot_raw_sha256": "da8855e136ea182f1d16a180500dfe373da629478cb5758e56a97734785b2211",
+      "live_input_unchanged": true,
+      "news_id": "d47edb232331902fb4926fc0",
+      "title": "Over 500 piles lay the foundation for Poland’s floating LNG terminal (Gallery)",
+      "published_at": "2026-10-21T14:34:01+00:00",
+      "window_news_count": 0,
+      "version": 42,
+      "previous_version": 41,
+      "before_record_raw_sha256": "c9566b4d943e3d36893d3358ce36b48f954e638fce1e01a6ede26f62362d44c6",
+      "after_record_raw_sha256": "ce0bed67c61df3df7cccc69387915bf6bf41a7102d03aebd1c995a4e70578c9e",
+      "before_excerpt_sha256": "7f0d75dd343a2685c1a97ddc7ee49911dd87c76a3a8825dbe0531486c6273bee",
+      "after_excerpt_sha256": "0742925bbb42a9f9489098f46c92d50cfff08f5aa16d56c36f5498ab284ce357",
+      "before_excerpt": "Miłosz Motyka , Minister for Energy, commented: “Developing LNG infrastructure directly strengthens Poland by securing its energy supply, boosting the economy, and upgrading the country’s position across Europe. The FSRU terminal in Gdańsk will increase our capacity to import natural gas from global markets and bolster Poland’s role in the regional supply system.\n\n“This initiative will effectively increase our gas import capacity by sea, reinforce supply diversification, and create additional opportunities for adaptable response to domestic energy demand. We remain committed to delivering investment projects that enhance the resilience and competitiveness of the Polish economy, thereby reinforcing our energy independence .”\n\n“Nevertheless, owing to the determination of the contractors and meticulous coordination of the works, we have reached this critical milestone within the planned timeline. Now, the terminal features a robust physical foundation. Next, we will be assembling the platforms and preparing for the construction of the subsea gas pipeline .”\n\nThe work on the onshore section is also well advanced, as the Gdańsk–Gustorzyn gas pipeline underwent tests in September, which is reported to have confirmed a high standard of work and the pipeline’s good working order.\n\nAccording to Gaz-System, the FSRU program is a strategic project aimed at strengthening Poland’s energy security, enabling the European country to gain an additional entry point for natural gas, increasing the diversification of supplies and system robustness.",
+      "after_excerpt": "Miłosz Motyka , Minister for Energy, commented: “Developing LNG infrastructure directly strengthens Poland by securing its energy supply, boosting the economy, and upgrading the country’s position across Europe. The FSRU terminal in Gdańsk will increase our capacity to import natural gas from global markets and bolster Poland’s role in the regional supply system.\n\n“This initiative will effectively increase our gas import capacity by sea, reinforce supply diversification, and create additional opportunities for adaptable response to domestic energy demand. We remain committed to delivering investment projects that enhance the resilience and competitiveness of the Polish economy, thereby reinforcing our energy independence .”\n\nInstallation of over 500 piles forming the foundation of the quay for the floating LNG terminal in Gdańsk Bay\n\n“Nevertheless, owing to the determination of the contractors and meticulous coordination of the works, we have reached this critical milestone within the planned timeline. Now, the terminal features a robust physical foundation. Next, we will be assembling the platforms and preparing for the construction of the subsea gas pipeline .”\n\nAccording to Gaz-System, the FSRU program is a strategic project aimed at strengthening Poland’s energy security, enabling the European country to gain an additional entry point for natural gas, increasing the diversification of supplies and system robustness.",
+      "revision_delta": {
+        "previous_version": 41,
+        "previous_known_at": "2026-10-22T15:54:09.366985+00:00",
+        "changed_fields": {
+          "fact_excerpt": {
+            "before": "Miłosz Motyka , Minister for Energy, commented: “Developing LNG infrastructure directly strengthens Poland by securing its energy supply, boosting the economy, and upgrading the country’s position across Europe. The FSRU terminal in Gdańsk will increase our capacity to import natural gas from global markets and bolster Poland’s role in the regional supply system.\n\n“This initiative will effectively increase our gas import capacity by sea, reinforce supply diversification, and create additional opportunities for adaptable response to domestic energy demand. We remain committed to delivering investment projects that enhance the resilience and competitiveness of the Polish economy, thereby reinforcing our energy independence .”\n\n“Nevertheless, owing to the determination of the contractors and meticulous coordination of the works, we have reached this critical milestone within the planned timeline. Now, the terminal features a robust physical foundation. Next, we will be assembling the platforms and preparing for the construction of the subsea gas pipeline .”\n\nThe work on the onshore section is also well advanced, as the Gdańsk–Gustorzyn gas pipeline underwent tests in September, which is reported to have confirmed a high standard of work and the pipeline’s good working order.\n\nAccording to Gaz-System, the FSRU program is a strategic project aimed at strengthening Poland’s energy security, enabling the European country to gain an additional entry point for natural gas, increasing the diversification of supplies and system robustness.",
+            "after": "Miłosz Motyka , Minister for Energy, commented: “Developing LNG infrastructure directly strengthens Poland by securing its energy supply, boosting the economy, and upgrading the country’s position across Europe. The FSRU terminal in Gdańsk will increase our capacity to import natural gas from global markets and bolster Poland’s role in the regional supply system.\n\n“This initiative will effectively increase our gas import capacity by sea, reinforce supply diversification, and create additional opportunities for adaptable response to domestic energy demand. We remain committed to delivering investment projects that enhance the resilience and competitiveness of the Polish economy, thereby reinforcing our energy independence .”\n\nInstallation of over 500 piles forming the foundation of the quay for the floating LNG terminal in Gdańsk Bay\n\n“Nevertheless, owing to the determination of the contractors and meticulous coordination of the works, we have reached this critical milestone within the planned timeline. Now, the terminal features a robust physical foundation. Next, we will be assembling the platforms and preparing for the construction of the subsea gas pipeline .”\n\nAccording to Gaz-System, the FSRU program is a strategic project aimed at strengthening Poland’s energy security, enabling the European country to gain an additional entry point for natural gas, increasing the diversification of supplies and system robustness."
+          }
+        },
+        "substantive_change": true,
+        "comparison_status": "compared",
+        "metadata_changed_fields": [
+          "source_revision",
+          "updated_at",
+          "published_at",
+          "timestamp_source",
+          "version_seen_at",
+          "summary_created_at",
+          "fact_excerpt_created_at"
+        ]
+      },
+      "classification": "api_html_representation_switch",
+      "before_transport": "publisher API publishedAt",
+      "after_transport": "rss.pubDate",
+      "before_published_at": "2026-10-21T14:34:01.208000+00:00",
+      "after_published_at": "2026-10-21T14:34:01+00:00",
+      "prior_known_api_version": 41,
+      "prior_known_api_record_sha256": "c9566b4d943e3d36893d3358ce36b48f954e638fce1e01a6ede26f62362d44c6",
+      "candidate_replay_against_prior_api": {
+        "available": true,
+        "remaining_fact_changes": [],
+        "would_dispatch_price_revision": false,
+        "interpretation": "API/HTML representation cannot replace known API content; metadata-only revision is not a price event"
+      },
+      "after_authority_initialized_repeat_has_fact_changes": false
+    },
+    {
+      "job_id": "08bc9ea3-8781-4c7d-afb4-8bf447c758a8",
+      "analysis_id": "b4707325-a98a-480f-a351-47394932240f",
+      "priority": 10,
+      "created_at": "2026-10-22T15:55:00.870969+00:00",
+      "live_status_at_audit": "completed",
+      "input_snapshot_raw_sha256": "8650af224456b638e272414a41cd43a5a995e4fc484b98b64792d78492f68485",
+      "live_input_unchanged": true,
+      "news_id": "33dbd11f64fe4ad7b5145237",
+      "title": "Australian gas project enters home stretch as developments in Mexico and US Gulf make new inroads",
+      "published_at": "2026-10-21T12:24:53+00:00",
+      "window_news_count": 0,
+      "version": 43,
+      "previous_version": 42,
+      "before_record_raw_sha256": "e65ba9e530dea8d0a4cb0dfbe86b9a6b9f8e6d71868bc0114cc24344b422159d",
+      "after_record_raw_sha256": "c113fcf438fe3a481bf0fefb43d38fb96e39d3fd2549916744640a52193a5ba8",
+      "before_excerpt_sha256": "e826b105e850ef997761eca7277be594aff872e7555cbad4409ce1ee3816ffb5",
+      "after_excerpt_sha256": "e826b105e850ef997761eca7277be594aff872e7555cbad4409ce1ee3816ffb5",
+      "before_excerpt": "The operator emphasizes that well clean-up results are in line with reservoir and well performance expectations. The company completed all mechanical runs of Pluto Train 2 compressors, and, subsequent to the period, Scarborough gas was introduced to the warm end (gas pre-treatment) of the LNG train.\n\nActivities in the cold end continue to progress, which will enable the start of gas liquefaction. Following the Pluto Train 1 planned major maintenance campaign in Q2, modifications to Pluto Train 1, which will allow processing of Scarborough gas, continued. The final module arrived on-site with activities focused on module hook-up and integration. The first LNG cargo is on track for Q4 2026.\n\n“We delivered quarterly production of 46.2 million barrels of oil equivalent, up 12% from the previous quarter following the successful completion of the Pluto LNG turnaround in the second quarter and the NWS turnaround in the third quarter.”\n\nThe Louisiana LNG project remains on budget and was 32% complete at the end of the quarter, as LNG terminal construction advanced across marine, site works, and LNG tanks, with LNG Tank 1 wall concrete reaching 50% completion.\n\nCurrently, ongoing engagement with high-quality counterparties for equity participation and LNG offtake continues. The project is targeting the first LNG in 2029. The Australian energy giant claims that structural steel supply challenges associated with ongoing disruptions in the Middle East continue to be mitigated through alternative logistics routes and fabrication sources.",
+      "after_excerpt": "The operator emphasizes that well clean-up results are in line with reservoir and well performance expectations. The company completed all mechanical runs of Pluto Train 2 compressors, and, subsequent to the period, Scarborough gas was introduced to the warm end (gas pre-treatment) of the LNG train.\n\nActivities in the cold end continue to progress, which will enable the start of gas liquefaction. Following the Pluto Train 1 planned major maintenance campaign in Q2, modifications to Pluto Train 1, which will allow processing of Scarborough gas, continued. The final module arrived on-site with activities focused on module hook-up and integration. The first LNG cargo is on track for Q4 2026.\n\n“We delivered quarterly production of 46.2 million barrels of oil equivalent, up 12% from the previous quarter following the successful completion of the Pluto LNG turnaround in the second quarter and the NWS turnaround in the third quarter.”\n\nThe Louisiana LNG project remains on budget and was 32% complete at the end of the quarter, as LNG terminal construction advanced across marine, site works, and LNG tanks, with LNG Tank 1 wall concrete reaching 50% completion.\n\nCurrently, ongoing engagement with high-quality counterparties for equity participation and LNG offtake continues. The project is targeting the first LNG in 2029. The Australian energy giant claims that structural steel supply challenges associated with ongoing disruptions in the Middle East continue to be mitigated through alternative logistics routes and fabrication sources.",
+      "revision_delta": {
+        "previous_version": 42,
+        "previous_known_at": "2026-10-22T15:54:09.359510+00:00",
+        "changed_fields": {},
+        "substantive_change": false,
+        "comparison_status": "compared",
+        "metadata_changed_fields": [
+          "source_revision",
+          "updated_at",
+          "published_at",
+          "timestamp_source",
+          "version_seen_at",
+          "summary_created_at",
+          "fact_excerpt_created_at"
+        ]
+      },
+      "classification": "metadata_only",
+      "before_transport": "publisher API publishedAt",
+      "after_transport": "rss.pubDate",
+      "before_published_at": "2026-10-21T12:24:53.578000+00:00",
+      "after_published_at": "2026-10-21T12:24:53+00:00",
+      "prior_known_api_version": 42,
+      "prior_known_api_record_sha256": "e65ba9e530dea8d0a4cb0dfbe86b9a6b9f8e6d71868bc0114cc24344b422159d",
+      "candidate_replay_against_prior_api": {
+        "available": true,
+        "remaining_fact_changes": [],
+        "would_dispatch_price_revision": false,
+        "interpretation": "API/HTML representation cannot replace known API content; metadata-only revision is not a price event"
+      },
+      "after_authority_initialized_repeat_has_fact_changes": false
+    },
+    {
+      "job_id": "86b6f2d0-f897-43ac-b47d-ea4f6729d480",
+      "analysis_id": "5174ba87-cd95-4105-b80a-a2eb2b4ba0ae",
+      "priority": 10,
+      "created_at": "2026-10-22T15:55:02.343813+00:00",
+      "live_status_at_audit": "completed",
+      "input_snapshot_raw_sha256": "f63e0509d23beeca7591d465133070cb93036c78cc7c16ad927d1edb1c0c8ba5",
+      "live_input_unchanged": true,
+      "news_id": "8329f9016a909f09a3a63ca4",
+      "title": "Norway set on tapping into Arctic gas potential: New study to unlock 1988 Barents Sea discovery",
+      "published_at": "2026-10-21T08:51:43+00:00",
+      "window_news_count": 0,
+      "version": 46,
+      "previous_version": 45,
+      "before_record_raw_sha256": "31dfce16da537a82b478a7c200e065ea4b6245a6c790ba47a0c7a7f3fd144ca8",
+      "after_record_raw_sha256": "5bf051ab03a69610e41ab05c73d1002d7003ec3b02b3f23a56f0e992d4c5fa4e",
+      "before_excerpt_sha256": "caf94fb84316f5697131d68afe11ad750707e56d7c7f15d8a99b5434e493668b",
+      "after_excerpt_sha256": "cb3d1c5da5515cf810fc3398b8981e146e4ec0073d8e3910c3ec0b02b9e02d93",
+      "before_excerpt": "Decades after being left behind in the frozen depths of the High North, a forgotten 1980s gas find in the Barents Sea is getting a second look. As Europe hungers for new energy sources and low-carbon reserves, Norway is launching a fresh push to unlock the untapped potential of the Arctic, starting with a neglected discovery 200 kilometers north of the Arctic Circle.\n\nThe Barents Sea is home to a number of discoveries that could hold vast volumes of gas but remains less explored than other parts of the Norwegian Continental Shelf (NCS), with several discoveries in these waters potentially containing significant volumes of gas, according to the Norwegian Offshore Directorate, which emphasizes that a new study could uncover major opportunities for one of these discoveries.\n\nThe gas discovery that this study will aim to gain more insight into is Norselhøgda (the well 7226/11-1 ), which is situated about 200 kilometers north of Hammerfest and was made in 1988. The discovery was production-tested, but the acreage was subsequently relinquished to the authorities.\n\nSeveral comparable discoveries have been made in the area, which include production license 1313 , located to the north of the Norselhøgda discovery and awarded in APA 2025 . The Gro discovery in the Norwegian Sea is another discovery the Norwegian Offshore Directorate hopes to revive, along with the Linerle discovery in the Norwegian Sea.",
+      "after_excerpt": "Norway is targeting untapped Arctic energy by commissioning a new study to shed more light on the 1988 gas discovery in the Barents Sea.\n\nDecades after being left behind in the frozen depths of the High North, a forgotten 1980s gas find in the Barents Sea is getting a second look. As Europe hungers for new energy sources and low-carbon reserves, Norway is launching a fresh push to unlock the untapped potential of the Arctic, starting with a neglected discovery 200 kilometers north of the Arctic Circle.\n\nThe Barents Sea is home to a number of discoveries that could hold vast volumes of gas but remains less explored than other parts of the Norwegian Continental Shelf (NCS), with several discoveries in these waters potentially containing significant volumes of gas, according to the Norwegian Offshore Directorate, which emphasizes that a new study could uncover major opportunities for one of these discoveries.\n\nThe gas discovery that this study will aim to gain more insight into is Norselhøgda (the well 7226/11-1 ), which is situated about 200 kilometers north of Hammerfest and was made in 1988. The discovery was production-tested, but the acreage was subsequently relinquished to the authorities.\n\nSeveral comparable discoveries have been made in the area, which include production license 1313 , located to the north of the Norselhøgda discovery and awarded in APA 2025 . The Gro discovery in the Norwegian Sea is another discovery the Norwegian Offshore Directorate hopes to revive, along with the Linerle discovery in the Norwegian Sea.",
+      "revision_delta": {
+        "previous_version": 45,
+        "previous_known_at": "2026-10-22T15:54:09.352731+00:00",
+        "changed_fields": {
+          "fact_excerpt": {
+            "before": "Decades after being left behind in the frozen depths of the High North, a forgotten 1980s gas find in the Barents Sea is getting a second look. As Europe hungers for new energy sources and low-carbon reserves, Norway is launching a fresh push to unlock the untapped potential of the Arctic, starting with a neglected discovery 200 kilometers north of the Arctic Circle.\n\nThe Barents Sea is home to a number of discoveries that could hold vast volumes of gas but remains less explored than other parts of the Norwegian Continental Shelf (NCS), with several discoveries in these waters potentially containing significant volumes of gas, according to the Norwegian Offshore Directorate, which emphasizes that a new study could uncover major opportunities for one of these discoveries.\n\nThe gas discovery that this study will aim to gain more insight into is Norselhøgda (the well 7226/11-1 ), which is situated about 200 kilometers north of Hammerfest and was made in 1988. The discovery was production-tested, but the acreage was subsequently relinquished to the authorities.\n\nSeveral comparable discoveries have been made in the area, which include production license 1313 , located to the north of the Norselhøgda discovery and awarded in APA 2025 . The Gro discovery in the Norwegian Sea is another discovery the Norwegian Offshore Directorate hopes to revive, along with the Linerle discovery in the Norwegian Sea.",
+            "after": "Norway is targeting untapped Arctic energy by commissioning a new study to shed more light on the 1988 gas discovery in the Barents Sea.\n\nDecades after being left behind in the frozen depths of the High North, a forgotten 1980s gas find in the Barents Sea is getting a second look. As Europe hungers for new energy sources and low-carbon reserves, Norway is launching a fresh push to unlock the untapped potential of the Arctic, starting with a neglected discovery 200 kilometers north of the Arctic Circle.\n\nThe Barents Sea is home to a number of discoveries that could hold vast volumes of gas but remains less explored than other parts of the Norwegian Continental Shelf (NCS), with several discoveries in these waters potentially containing significant volumes of gas, according to the Norwegian Offshore Directorate, which emphasizes that a new study could uncover major opportunities for one of these discoveries.\n\nThe gas discovery that this study will aim to gain more insight into is Norselhøgda (the well 7226/11-1 ), which is situated about 200 kilometers north of Hammerfest and was made in 1988. The discovery was production-tested, but the acreage was subsequently relinquished to the authorities.\n\nSeveral comparable discoveries have been made in the area, which include production license 1313 , located to the north of the Norselhøgda discovery and awarded in APA 2025 . The Gro discovery in the Norwegian Sea is another discovery the Norwegian Offshore Directorate hopes to revive, along with the Linerle discovery in the Norwegian Sea."
+          }
+        },
+        "substantive_change": true,
+        "comparison_status": "compared",
+        "metadata_changed_fields": [
+          "source_revision",
+          "updated_at",
+          "published_at",
+          "timestamp_source",
+          "version_seen_at",
+          "summary_created_at",
+          "fact_excerpt_created_at"
+        ]
+      },
+      "classification": "api_html_representation_switch",
+      "before_transport": "publisher API publishedAt",
+      "after_transport": "rss.pubDate",
+      "before_published_at": "2026-10-21T08:51:43.720000+00:00",
+      "after_published_at": "2026-10-21T08:51:43+00:00",
+      "prior_known_api_version": 45,
+      "prior_known_api_record_sha256": "31dfce16da537a82b478a7c200e065ea4b6245a6c790ba47a0c7a7f3fd144ca8",
+      "candidate_replay_against_prior_api": {
+        "available": true,
+        "remaining_fact_changes": [],
+        "would_dispatch_price_revision": false,
+        "interpretation": "API/HTML representation cannot replace known API content; metadata-only revision is not a price event"
+      },
+      "after_authority_initialized_repeat_has_fact_changes": false
+    },
+    {
+      "job_id": "1028875e-6d45-41ea-be79-c34ebf939b5a",
+      "analysis_id": "186114ab-4584-4be6-a112-2ba63f016e95",
+      "priority": 10,
+      "created_at": "2026-10-22T15:55:03.826303+00:00",
+      "live_status_at_audit": "completed",
+      "input_snapshot_raw_sha256": "e6c64e64b031d3d5df689f183980a876aeeb0fb2d1c3a325af1053b859ebe809",
+      "live_input_unchanged": true,
+      "news_id": "01e33681b572879a4262fff0",
+      "title": "North Sea gas field cleared for take-off: UK greenlights Jackdaw after legal storms",
+      "published_at": "2026-10-21T06:58:56+00:00",
+      "window_news_count": 0,
+      "version": 47,
+      "previous_version": 46,
+      "before_record_raw_sha256": "0cbca80c25370e3d6e1e569757c84e95c339e5c5620b78d81ce51aa64bbe55fa",
+      "after_record_raw_sha256": "ae33bcc82b0ad5cc2a6ac1f16a7367ff7cc7ec09f8d3e353cd5f8bb45c6f0f9f",
+      "before_excerpt_sha256": "4f1420a57b964fb8be8745b6136d9114bf5a9c7f0acfa9feb6510036bcfcd03a",
+      "after_excerpt_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "before_excerpt": "Jackdaw has the potential to deliver around 6% of projected UK North Sea gas production, which is considered to be enough fuel to heat the equivalent of 1.4 million homes at a time when older gas fields are reaching the end of their production.\n\nThe field, located approximately 250 kilometers east of Aberdeen, is expected to be among the lowest-emission developments on the UK Continental Shelf (UKCS), while supporting jobs and bolstering Britain’s energy security.\n\nThe field is located in the Central North Sea (CNS), 30 kilometers southeast of the Shearwater platform and adjacent to the UK/Norway median line. Jackdaw is a gas/condensate development comprising a not permanently attended wellhead platform with four wells, tied back to the Shearwater hub via a 31-kilometer pipeline.\n\nWhile the latest approval marks a major turning point, the environmental battles are not entirely over since environmental groups like Greenpeace remain strongly opposed to the development of the North Sea oil and gas projects, which have become a primary battleground for climate litigation.\n\nResponding to the government giving the Jackdaw gas field the go-ahead, Sam Richards , CEO of Britain Remade, said: “Britain is going to need gas for decades to come, as even the Climate Change Committee recognises. The choice is not between gas and no gas, but between gas produced in British waters and gas shipped in from abroad at higher cost and with higher emissions.",
+      "after_excerpt": "",
+      "revision_delta": {
+        "previous_version": 46,
+        "previous_known_at": "2026-10-22T15:54:09.342113+00:00",
+        "changed_fields": {
+          "fact_excerpt": {
+            "before": "Jackdaw has the potential to deliver around 6% of projected UK North Sea gas production, which is considered to be enough fuel to heat the equivalent of 1.4 million homes at a time when older gas fields are reaching the end of their production.\n\nThe field, located approximately 250 kilometers east of Aberdeen, is expected to be among the lowest-emission developments on the UK Continental Shelf (UKCS), while supporting jobs and bolstering Britain’s energy security.\n\nThe field is located in the Central North Sea (CNS), 30 kilometers southeast of the Shearwater platform and adjacent to the UK/Norway median line. Jackdaw is a gas/condensate development comprising a not permanently attended wellhead platform with four wells, tied back to the Shearwater hub via a 31-kilometer pipeline.\n\nWhile the latest approval marks a major turning point, the environmental battles are not entirely over since environmental groups like Greenpeace remain strongly opposed to the development of the North Sea oil and gas projects, which have become a primary battleground for climate litigation.\n\nResponding to the government giving the Jackdaw gas field the go-ahead, Sam Richards , CEO of Britain Remade, said: “Britain is going to need gas for decades to come, as even the Climate Change Committee recognises. The choice is not between gas and no gas, but between gas produced in British waters and gas shipped in from abroad at higher cost and with higher emissions.",
+            "after": null
+          },
+          "entities": {
+            "before": [
+              "Shell",
+              "Norway"
+            ],
+            "after": [
+              "Shell"
+            ]
+          }
+        },
+        "substantive_change": true,
+        "comparison_status": "compared",
+        "metadata_changed_fields": [
+          "source_revision",
+          "updated_at",
+          "published_at",
+          "timestamp_source",
+          "version_seen_at",
+          "summary_created_at",
+          "fact_excerpt_created_at"
+        ]
+      },
+      "classification": "excerpt_removed",
+      "before_transport": "publisher API publishedAt",
+      "after_transport": "rss.pubDate",
+      "before_published_at": "2026-10-21T06:58:56.480000+00:00",
+      "after_published_at": "2026-10-21T06:58:56+00:00",
+      "prior_known_api_version": 46,
+      "prior_known_api_record_sha256": "0cbca80c25370e3d6e1e569757c84e95c339e5c5620b78d81ce51aa64bbe55fa",
+      "candidate_replay_against_prior_api": {
+        "available": true,
+        "remaining_fact_changes": [],
+        "would_dispatch_price_revision": false,
+        "interpretation": "API/HTML representation cannot replace known API content; metadata-only revision is not a price event"
+      },
+      "after_authority_initialized_repeat_has_fact_changes": false
+    },
+    {
+      "job_id": "0c496e2e-6f79-4aeb-9aec-da69538fe9c5",
+      "analysis_id": "302bad78-c64f-49b8-85d6-c2e34bf4dd01",
+      "priority": 10,
+      "created_at": "2026-10-22T15:55:59.608759+00:00",
+      "live_status_at_audit": "completed",
+      "input_snapshot_raw_sha256": "72e28d095d1de705f59ae56df6b2482cfdfaea98630daac3379b1513a672e869",
+      "live_input_unchanged": true,
+      "news_id": "01e33681b572879a4262fff0",
+      "title": "North Sea gas field cleared for take-off: UK greenlights Jackdaw after legal storms",
+      "published_at": "2026-10-21T06:58:56+00:00",
+      "window_news_count": 0,
+      "version": 48,
+      "previous_version": 47,
+      "before_record_raw_sha256": "ae33bcc82b0ad5cc2a6ac1f16a7367ff7cc7ec09f8d3e353cd5f8bb45c6f0f9f",
+      "after_record_raw_sha256": "b1edb14bcf6af477a0071acffeb66c371b4a0a63d42d435de7656223ad6ff139",
+      "before_excerpt_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "after_excerpt_sha256": "4f1420a57b964fb8be8745b6136d9114bf5a9c7f0acfa9feb6510036bcfcd03a",
+      "before_excerpt": "",
+      "after_excerpt": "Jackdaw has the potential to deliver around 6% of projected UK North Sea gas production, which is considered to be enough fuel to heat the equivalent of 1.4 million homes at a time when older gas fields are reaching the end of their production.\n\nThe field, located approximately 250 kilometers east of Aberdeen, is expected to be among the lowest-emission developments on the UK Continental Shelf (UKCS), while supporting jobs and bolstering Britain’s energy security.\n\nThe field is located in the Central North Sea (CNS), 30 kilometers southeast of the Shearwater platform and adjacent to the UK/Norway median line. Jackdaw is a gas/condensate development comprising a not permanently attended wellhead platform with four wells, tied back to the Shearwater hub via a 31-kilometer pipeline.\n\nWhile the latest approval marks a major turning point, the environmental battles are not entirely over since environmental groups like Greenpeace remain strongly opposed to the development of the North Sea oil and gas projects, which have become a primary battleground for climate litigation.\n\nResponding to the government giving the Jackdaw gas field the go-ahead, Sam Richards , CEO of Britain Remade, said: “Britain is going to need gas for decades to come, as even the Climate Change Committee recognises. The choice is not between gas and no gas, but between gas produced in British waters and gas shipped in from abroad at higher cost and with higher emissions.",
+      "revision_delta": {
+        "previous_version": 47,
+        "previous_known_at": "2026-10-22T15:54:52.438172+00:00",
+        "changed_fields": {
+          "fact_excerpt": {
+            "before": null,
+            "after": "Jackdaw has the potential to deliver around 6% of projected UK North Sea gas production, which is considered to be enough fuel to heat the equivalent of 1.4 million homes at a time when older gas fields are reaching the end of their production.\n\nThe field, located approximately 250 kilometers east of Aberdeen, is expected to be among the lowest-emission developments on the UK Continental Shelf (UKCS), while supporting jobs and bolstering Britain’s energy security.\n\nThe field is located in the Central North Sea (CNS), 30 kilometers southeast of the Shearwater platform and adjacent to the UK/Norway median line. Jackdaw is a gas/condensate development comprising a not permanently attended wellhead platform with four wells, tied back to the Shearwater hub via a 31-kilometer pipeline.\n\nWhile the latest approval marks a major turning point, the environmental battles are not entirely over since environmental groups like Greenpeace remain strongly opposed to the development of the North Sea oil and gas projects, which have become a primary battleground for climate litigation.\n\nResponding to the government giving the Jackdaw gas field the go-ahead, Sam Richards , CEO of Britain Remade, said: “Britain is going to need gas for decades to come, as even the Climate Change Committee recognises. The choice is not between gas and no gas, but between gas produced in British waters and gas shipped in from abroad at higher cost and with higher emissions."
+          },
+          "entities": {
+            "before": [
+              "Shell"
+            ],
+            "after": [
+              "Shell",
+              "Norway"
+            ]
+          }
+        },
+        "substantive_change": true,
+        "comparison_status": "compared",
+        "metadata_changed_fields": [
+          "source_revision",
+          "version_seen_at",
+          "summary_created_at",
+          "fact_excerpt_created_at"
+        ]
+      },
+      "classification": "excerpt_restored",
+      "before_transport": "rss.pubDate",
+      "after_transport": "rss.pubDate",
+      "before_published_at": "2026-10-21T06:58:56+00:00",
+      "after_published_at": "2026-10-21T06:58:56+00:00",
+      "prior_known_api_version": 46,
+      "prior_known_api_record_sha256": "0cbca80c25370e3d6e1e569757c84e95c339e5c5620b78d81ce51aa64bbe55fa",
+      "candidate_replay_against_prior_api": {
+        "available": true,
+        "remaining_fact_changes": [],
+        "would_dispatch_price_revision": false,
+        "interpretation": "API/HTML representation cannot replace known API content; metadata-only revision is not a price event"
+      },
+      "after_authority_initialized_repeat_has_fact_changes": false
+    }
+  ],
+  "onesubsea_extra_v1_v2_not_in_12": {
+    "versions": [
+      1,
+      2
+    ],
+    "first_paragraph_before": "October 22, 2026 · 2 minutes ago",
+    "first_paragraph_after": "October 22, 2026 · 6 hours ago",
+    "remaining_excerpt_byte_equal": true,
+    "remaining_excerpt_sha256": "26caf1a6a416e65b1db66a35cde1117fe34d176b0479f348b730d4608c13776e"
+  },
+  "current_dom_control": {
+    "file": "source-html-onesubsea.html",
+    "sha256": "967d3ff1085d9f57c5a30e82944cb2617eda8b416ef2e2aae5024f2dda2f47be",
+    "limitation": "Current read-only public DOM capture, not historical full HTML payload",
+    "body_container": ".article-content",
+    "previous_extractor_excerpt": "Pushing deeper into offshore frontiers, OneSubsea, a joint venture backed by SLB, Aker Solutions and Subsea7, has cleared a critical path for deepwater development through a joint industry project with France’s TotalEnergies, Norway’s Equinor, the UK’s BP, and the U.S.-headquartered Chevron to master all-electric subsea technology designed to operate 3,000 meters below the surface.\n\nOneSubsea has completed the Brazil All-Electric Joint Industry Project (JIP) , a collaboration with TotalEnergies, Equinor, BP, and Chevron, supported through the National Petroleum Agency (ANP) research and development regulation, to advance fully electric subsea production technologies for applications at water depths of up to 3,000 meters.\n\nAside from qualifying components for applications at depths of up to 3,000 meters, the project pinpointed interfaces with newly developed and qualified SLB electric completion technologies.\n\nThe company states that the completion of the project builds on more than 15 years of experience in subsea electrification and more than 5 million operating hours with electrified subsea systems.\n\nThe firm’s all-electric portfolio is advancing along two complementary paths, with all-electric subsea production technology moving toward commercial deployment through Equinor’s Fram Sør project in Norway, which includes 12 all-electric subsea trees .",
+    "candidate_excerpt": "Pushing deeper into offshore frontiers, OneSubsea, a joint venture backed by SLB, Aker Solutions and Subsea7, has cleared a critical path for deepwater development through a joint industry project with France’s TotalEnergies, Norway’s Equinor, the UK’s BP, and the U.S.-headquartered Chevron to master all-electric subsea technology designed to operate 3,000 meters below the surface.\n\nOneSubsea has completed the Brazil All-Electric Joint Industry Project (JIP) , a collaboration with TotalEnergies, Equinor, BP, and Chevron, supported through the National Petroleum Agency (ANP) research and development regulation, to advance fully electric subsea production technologies for applications at water depths of up to 3,000 meters.\n\nAside from qualifying components for applications at depths of up to 3,000 meters, the project pinpointed interfaces with newly developed and qualified SLB electric completion technologies.\n\nThe company states that the completion of the project builds on more than 15 years of experience in subsea electrification and more than 5 million operating hours with electrified subsea systems.\n\nThe firm’s all-electric portfolio is advancing along two complementary paths, with all-electric subsea production technology moving toward commercial deployment through Equinor’s Fram Sør project in Norway, which includes 12 all-electric subsea trees .",
+    "body_paragraphs": [
+      "Pushing deeper into offshore frontiers, OneSubsea, a joint venture backed by SLB, Aker Solutions and Subsea7, has cleared a critical path for deepwater development through a joint industry project with France’s TotalEnergies, Norway’s Equinor, the UK’s BP, and the U.S.-headquartered Chevron to master all-electric subsea technology designed to operate 3,000 meters below the surface.",
+      "OneSubsea has completed the Brazil All-Electric Joint Industry Project (JIP) , a collaboration with TotalEnergies, Equinor, BP, and Chevron, supported through the National Petroleum Agency (ANP) research and development regulation, to advance fully electric subsea production technologies for applications at water depths of up to 3,000 meters.",
+      "The subsea player emphasizes that electrification can create new options for designing and operating future deepwater fields by replacing hydraulic actuation with electric systems and connecting subsea equipment, well completion technology, topside controls, and digital capabilities.",
+      "The Brazilian project qualified electric components and control systems for deepwater applications and demonstrated an integrated architecture extending electrification beyond the subsea tree, connecting subsea production equipment with electric well completion technology, topside controls, and digital capabilities.",
+      "Representatives from the participating companies recently gathered at the OneSubsea manufacturing facility in São José dos Pinhais, Brazil, to celebrate the completion of the project through technical presentations, demonstrations of subsea and downhole all-electric technologies, and a tour of the facility where electrified subsea equipment will be assembled.",
+      "Darcy Ryan , Product Manager at OneSubsea, commented: “Completing this project is an important step toward expanding the role of fully electric technology in future deepwater developments. By working closely with operators to define requirements and qualify the technology, we are creating new possibilities to simplify subsea infrastructure while providing greater control, monitoring and access to data.”",
+      "As subsea developments move into deeper water and increasingly complex environments, OneSubsea points out that operators are looking for new ways to simplify infrastructure, improve control, and create greater flexibility in how future fields are designed. Since traditional hydraulic systems require extensive distribution infrastructure to operate subsea equipment, adding complexity as developments extend farther from existing facilities, the company believes that this is where all-electric can make a difference.",
+      "“Conventional subsea production systems use hydraulic pressure to actuate valves and chokes, requiring hydraulic distribution infrastructure across the field. All-electric technology replaces hydraulic actuation with electric motors, eliminating the need for hydraulic fluids and reducing associated infrastructure,” elaborated OneSubsea.",
+      "The firm explains that the Brazilian project demonstrates how electrification can move beyond individual components toward an integrated production architecture that connects subsea equipment, well completion technology, topside controls, and digital systems.",
+      "Aside from qualifying components for applications at depths of up to 3,000 meters, the project pinpointed interfaces with newly developed and qualified SLB electric completion technologies.",
+      "OneSubsea underlined: “A purpose-built master control station connects the subsea equipment with topside control and digital systems, enabling an integrated approach to monitoring and operating the production system.",
+      "“This architecture can simplify field layouts and reduce overall system complexity while giving operators greater flexibility when developing longer tiebacks, more remote fields, and increasingly autonomous operations.”",
+      "The company states that the completion of the project builds on more than 15 years of experience in subsea electrification and more than 5 million operating hours with electrified subsea systems.",
+      "The firm’s all-electric portfolio is advancing along two complementary paths, with all-electric subsea production technology moving toward commercial deployment through Equinor’s Fram Sør project in Norway, which includes 12 all-electric subsea trees ."
+    ]
+  },
+  "timestamp_policy": "Equivalent zone/ISO representations normalize to the same instant. API subsecond precision is preserved; .480 and .000 are distinct instants and are not rounded to suppress revisions. Lower-fidelity RSS clocks never overwrite known API clocks.",
+  "limits": [
+    "Cross-transport paragraph differences are not all UI-only; no historical full API/HTML responses prove publishers never edited body facts.",
+    "This is offline source/dispatch replay, not prediction accuracy evidence. Newly observed authoritative facts may create a genuine first migration revision.",
+    "Original 12 jobs, versions, analyses, inputs and naturally progressing statuses remain unchanged. No queue deletion or retroactive result changes."
+  ]
+}

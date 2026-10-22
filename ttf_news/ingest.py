@@ -6,6 +6,7 @@ dates without a clock stay date-only; Store decides their uncertain day bucket.
 from __future__ import annotations
 
 import asyncio
+import copy
 import hashlib
 import json
 import logging
@@ -24,13 +25,91 @@ import feedparser
 import httpx
 from bs4 import BeautifulSoup
 
-from .store import Store
+from .store import Store, _same_publisher_metadata
 
 LOG = logging.getLogger(__name__)
 UTC = timezone.utc
 USER_AGENT = "TTFNewsResearch/1.0 (public news metadata and short summaries; local research)"
 CONFIG_PATH = Path(__file__).resolve().parents[1] / "data" / "sources.json"
 GAS_PATTERN = re.compile(r"\b(natural gas|liquefied natural gas|lng|ttf|gas|gassco|gullfaks|troll|snohvit|snøhvit|hammerfest|henry hub|freeport|sabine pass|corpus christi|regasification|fsru|methane emissions)\b", re.I)
+FACT_EXCERPT_LIMIT = 1600
+_FACT_TERMS = re.compile(r"\b(?:gas|LNG|TTF|supply|flows?|outage|restart|restor\w*|demand|storage|inventor\w*|pipeline|export\w*|import\w*|weather|capacity)\b|供气|天然气|供应|流量|需求|库存|复产|中断",re.I)
+_EUROPE_TERMS = re.compile(r"\b(?:Europe\w*|TTF|Dutch|Netherlands|Germany|Norway|Norwegian|Britain|UK|North Sea|Mediterranean)\b|欧洲|荷兰|挪威|德国|英国",re.I)
+_QUALIFIER_TERMS = re.compile(r"\b(?:not|no|without|unlikely|however|but|although|despite|until|only|expected|planned)\b|未|不|没有|但|预计|计划",re.I)
+
+
+def relevance_metadata(title: str, summary: str, excerpt: str = "") -> dict:
+    """Source-term scope, never a prediction or a reason to discard a news item."""
+    text=" ".join((title,summary,excerpt))
+    europe=sorted({match.group(0) for match in _EUROPE_TERMS.finditer(text)})
+    channels=sorted({match.group(0) for match in _FACT_TERMS.finditer(text)})
+    denied_channel=bool(re.search(r"\bno\s+(?:confirmed\s+)?European\s+(?:supply|delivery|export)\b|"
+                                 r"\b(?:does|do|will)\s+not\s+(?:supply|export|deliver).{0,25}\bEurope\b|"
+                                 r"\bnot\s+(?:destined|bound)\s+for\s+Europe\b|没有.{0,15}(?:欧洲供气|向欧洲供气)|不向欧洲供气",text,re.I))
+    scope="direct" if europe and channels and not denied_channel else "indirect" if re.search(r"\bLNG\b|regas|liquef|pipeline|export|import|supply|液化天然气|供气|供应",text,re.I) and not denied_channel else "background"
+    return {"scope":scope,"basis":"explicit_source_terms_not_price_direction",
+            "evidence_terms":(europe+channels)[:20],"european_channel_explicitly_denied":denied_channel,
+            "scope_is_not_verified_price_impact":True}
+
+
+def bounded_fact_excerpt(paragraphs: list[str], limit: int = FACT_EXCERPT_LIMIT) -> tuple[str,dict]:
+    """Choose complete source paragraphs; never truncate away a negation tail."""
+    candidates=[]
+    seen=set()
+    oversized=0
+    for index,raw in enumerate(paragraphs):
+        paragraph=clean_text(raw,limit=1_000_000)
+        if not paragraph or paragraph in seen or re.match(r"^(?:Read also|Related|Subscribe|Sign up|Advertisement)\b",paragraph,re.I):
+            continue
+        seen.add(paragraph)
+        if len(paragraph)>limit:
+            oversized+=1
+            continue
+        if len(paragraph)<25:
+            continue
+        score=min(8,len(_FACT_TERMS.findall(paragraph)))+5*bool(_EUROPE_TERMS.search(paragraph))+3*bool(_QUALIFIER_TERMS.search(paragraph))+2*bool(re.search(r"\d",paragraph))
+        candidates.append((index,paragraph,score))
+    selected=[];used=0
+    for index,paragraph,score in sorted(candidates,key=lambda p:(-p[2],p[0])):
+        if len(selected)>=5:
+            break
+        required=len(paragraph)+(2 if selected else 0)
+        if used+required<=limit:
+            selected.append((index,paragraph));used+=required
+    selected.sort()
+    text="\n\n".join(paragraph for _,paragraph in selected)
+    return text,{"paragraph_indices":[index+1 for index,_ in selected],"selection":"bounded_complete_source_paragraphs",
+                 "omitted_paragraph_count":len(candidates)+oversized-len(selected),
+                 "oversized_paragraph_count":oversized,"character_limit":limit}
+
+
+def _refresh_fact_identity(item: dict) -> None:
+    stamp={key:item.get(key) for key in ("published_at","published_date","timestamp_precision")}
+    base=item["title"]+"\n"+item["summary"]+"\n"+json.dumps(stamp,sort_keys=True)
+    if item.get("fact_excerpt"):
+        base+="\n"+item["fact_excerpt"]
+    digest=hashlib.sha256(base.encode()).hexdigest()
+    item.update(content_hash=digest,source_revision=digest[:16])
+
+
+def attach_fact_excerpt(item: dict, paragraphs: list[str], *, method: str, is_premium: bool = False) -> dict:
+    if is_premium:
+        for field in ("fact_excerpt","fact_excerpt_created_at","fact_excerpt_provenance"):
+            item.pop(field,None)
+        item.update(is_premium=True,fact_excerpt_status="premium_metadata_only")
+        item["category"],item["entities"]=classify(item["title"],item["summary"])
+        item["relevance_metadata"]=relevance_metadata(item["title"],item["summary"])
+        _refresh_fact_identity(item)
+        return item
+    excerpt,selection=bounded_fact_excerpt(paragraphs)
+    if excerpt:
+        observed=now_iso()
+        item.update(fact_excerpt=excerpt,fact_excerpt_created_at=observed,fact_excerpt_status="public_excerpt",
+                    fact_excerpt_provenance={"url":item["url"],"method":method,"retrieved_at":observed,"access":"public",**selection})
+        item["category"],item["entities"]=classify(item["title"],item["summary"]+" "+excerpt)
+        _refresh_fact_identity(item)
+    item["relevance_metadata"]=relevance_metadata(item["title"],item["summary"],excerpt)
+    return item
 
 
 def now_iso() -> str:
@@ -125,7 +204,7 @@ def news_item(source: str, url: str, title: str, summary: str, timestamp: str | 
             "first_seen_at": now_iso(), "summary_created_at": now_iso(), "category": category,
             "entities": entities, "source_revision": content_hash[:16], "content_hash": content_hash,
             "discovered_via": discovered_via or url, "ingestion_kind": "backfill" if historical else "live",
-            "is_relevant": relevant(title, summary)}
+            "is_relevant": relevant(title, summary),"relevance_metadata":relevance_metadata(title,summary)}
 
 
 def parse_feed(content: str, source: dict, *, historical: bool = False) -> list[dict]:
@@ -142,6 +221,23 @@ def parse_feed(content: str, source: dict, *, historical: bool = False) -> list[
                          discovered_via=source.get("feed_url"))
         if source["id"] == "eu_energy" and item["published_date"]:
             item.update(published_at=None, timestamp_precision="date", timestamp_source="RSS publication date (CMS clock unverified)")
+        premium=(any(str(raw_entry.get(key,"")).lower() in {"true","1","yes"} for key in ("ispremium","is_premium","premium")) or
+                 str(raw_entry.get("isaccessibleforfree","")).lower() in {"false","0","no"} or
+                 any(str(tag.get("term","")).lower() in {"premium","subscriber-only","paid"} for tag in raw_entry.get("tags",[]) if isinstance(tag,dict)))
+        if premium:
+            item.update(is_premium=True,fact_excerpt_status="premium_metadata_only")
+        else:
+            content_values=[block.get("value","") for block in raw_entry.get("content",[]) if isinstance(block,dict)]
+            if content_values:
+                paragraphs=[]
+                for value in content_values:
+                    document=BeautifulSoup(value,"html.parser")
+                    blocks=document.find_all("p")
+                    if blocks:
+                        paragraphs.extend(block.get_text(" ",strip=True) for block in blocks)
+                    else:
+                        paragraphs.append(document.get_text(" ",strip=True))
+                attach_fact_excerpt(item,paragraphs,method="public_rss_content")
         if item["url"] and item["title"] and item["is_relevant"]:
             items.append(item)
     return items
@@ -161,6 +257,7 @@ class Fetcher:
     revised_items: list[dict] = field(default_factory=list)
     request_lock: asyncio.Lock = field(default_factory=asyncio.Lock)
     live_incremental: bool = False
+    completed_api_at: str | None = None
 
     async def get(self, url: str, **kwargs) -> httpx.Response:
         # At most one request per second to each source, including detail fetches.
@@ -198,6 +295,59 @@ class Fetcher:
         return saved
 
 
+def _article_paragraphs(soup: BeautifulSoup) -> list[str]:
+    """Read publisher body containers, excluding structural presentation UI."""
+    selectors = ('[itemprop="articleBody"]', '.article-content', '.entry-content',
+                 '.article-body', '.payload-richtext', '.nwd_html', '.wysiwyg')
+    roots = next((nodes for selector in selectors if (nodes := soup.select(selector))), None)
+    if roots is None:
+        roots = soup.select('article, .article, .main-content, #article, .tie-article, main')
+    paragraphs, seen = [], set()
+    for root in roots:
+        for paragraph in root.find_all('p'):
+            if id(paragraph) in seen or paragraph.find('p'):
+                continue
+            seen.add(id(paragraph))
+            ancestors = []
+            for ancestor in paragraph.parents:
+                ancestors.append(ancestor)
+                if ancestor is root:
+                    break
+            if any(node.name in {'header', 'footer', 'nav', 'aside', 'figcaption'} or
+                   node.get('itemprop') in {'author', 'datePublished', 'dateModified', 'caption'} or
+                   node.get('rel') == ['author'] for node in ancestors):
+                continue
+            paragraphs.append(paragraph.get_text(' ', strip=True))
+    return paragraphs
+
+
+def _publisher_api_record(item: dict) -> bool:
+    return (item.get('source') == 'offshore_energy' and
+            item.get('timestamp_source') == 'publisher API publishedAt')
+
+
+def _preserve_publisher_authority(item: dict, previous: dict | None) -> dict:
+    """A lower-fidelity transport cannot retract an already observed API body."""
+    if not previous or not _publisher_api_record(previous) or item.get('url') != previous.get('url'):
+        return item
+    if not _publisher_api_record(item):
+        return {key: copy.deepcopy(value) for key, value in previous.items() if not key.startswith('_')}
+    item = copy.deepcopy(item)
+    for field in ('updated_at', 'published_at', 'published_date'):
+        if not item.get(field) and previous.get(field):
+            item[field] = previous[field]
+    if not item.get('summary'):
+        item['summary'] = previous.get('summary', '')
+    if not item.get('fact_excerpt') and not item.get('is_premium'):
+        for field in ('fact_excerpt', 'fact_excerpt_created_at', 'fact_excerpt_status', 'fact_excerpt_provenance'):
+            if field in previous:
+                item[field] = copy.deepcopy(previous[field])
+    item['category'], item['entities'] = classify(item['title'], item['summary']+' '+item.get('fact_excerpt', ''))
+    item['relevance_metadata'] = relevance_metadata(item['title'], item['summary'], item.get('fact_excerpt', ''))
+    _refresh_fact_identity(item)
+    return item
+
+
 def extract_article(content: str, url: str, source: dict, *, historical: bool,
                     fallback_title: str = "", fallback_date: str | None = None) -> dict:
     soup = BeautifulSoup(content, "html.parser")
@@ -211,14 +361,21 @@ def extract_article(content: str, url: str, source: dict, *, historical: bool,
     summary = meta("description", "og:description") or ""
     timestamp = meta("article:published_time", "datePublished", "date")
     updated = meta("article:modified_time", "dateModified")
+    premium=(str(meta("isPremium") or "").lower() in {"true","1","yes"} or
+             str(meta("isAccessibleForFree") or "").lower() in {"false","0","no"})
+    premium=premium or bool(soup.select_one('.paywall, .subscription-wall, [data-paywall="true"]'))
     timestamp_source = "article.metadata" if timestamp else "archive.date"
     for script in soup.find_all("script", attrs={"type": "application/ld+json"}):
         try:
             blocks = json.loads(script.string or script.get_text())
             blocks = blocks if isinstance(blocks, list) else [blocks]
             for block in blocks:
+                if not isinstance(block,dict):
+                    continue
                 if "@graph" in block:
                     blocks.extend(block["@graph"])
+                if str(block.get("isAccessibleForFree","")).lower() in {"false","0","no"} or str(block.get("isPremium","")).lower() in {"true","1","yes"}:
+                    premium=True
                 if block.get("datePublished"):
                     timestamp = block["datePublished"]
                     timestamp_source = "jsonld.datePublished"
@@ -227,16 +384,15 @@ def extract_article(content: str, url: str, source: dict, *, historical: bool,
                         summary = block.get("description", "")
         except (ValueError, TypeError, AttributeError):
             continue
-    if not summary:
-        # Keep a short first paragraph from the article body, with source provenance.
-        paragraphs = soup.select("article p, .article p, .main-content p, #article p, .tie-article p")
-        summary = next((p.get_text(" ", strip=True) for p in paragraphs
-                        if len(p.get_text()) > 80 and not p.find("p")
-                        and not p.get_text(" ", strip=True).startswith(("Data source:", "Source:", "Note:"))), "")
-    return news_item(source["id"], url, title or fallback_title, summary,
+    paragraphs = [] if premium else _article_paragraphs(soup)
+    if not summary and not premium:
+        summary = next((paragraph for paragraph in paragraphs if len(paragraph) > 80
+                        and not paragraph.startswith(("Data source:", "Source:", "Note:"))), "")
+    item=news_item(source["id"], url, title or fallback_title, summary,
                      timestamp or fallback_date, historical=historical,
                      timestamp_source=timestamp_source, default_zone=source.get("timezone"),
                      updated_at=updated, discovered_via=source.get("archive_url"))
+    return attach_fact_excerpt(item,paragraphs,method="public_article_paragraphs",is_premium=premium)
 
 
 async def ingest_eia(fetch: Fetcher, start: date) -> list[dict]:
@@ -370,6 +526,118 @@ async def ingest_feed_source(fetch: Fetcher, start: date) -> list[dict]:
     return [i for i in items if not fetch.historical or not i["published_date"] or i["published_date"] >= start.isoformat()]
 
 
+def _feed_fingerprint(item: dict) -> str:
+    values={key:item.get(key) for key in ("title","summary","published_at","published_date","updated_at","timestamp_precision")}
+    return hashlib.sha256(json.dumps(values,sort_keys=True,ensure_ascii=False).encode()).hexdigest()
+
+
+def _publisher_article_url(url: str, source: dict) -> bool:
+    host=(urlsplit(url).hostname or "").lower().removeprefix("www.")
+    configured={(urlsplit(str(source.get(key,""))).hostname or "").lower().removeprefix("www.") for key in ("feed_url","archive_url","live_url","api_url")}
+    return urlsplit(url).scheme in {"https","http"} and bool(host) and host in configured
+
+
+async def enrich_live_facts(fetch: Fetcher, items: list[dict]) -> list[dict]:
+    """Enrich a bounded recent RSS delta and carry known excerpts forward.
+
+    All detail requests share Fetcher's per-source rate limiter. Cache entries
+    hold fingerprints/timers only; source text lives in immutable news versions.
+    A failed detail request never discards the feed headline or invents facts.
+    """
+    if fetch.historical or fetch.source["id"] not in {"offshore_energy","eia","eu_energy","equinor","cheniere"} or not items:
+        return items
+    urls=[item["url"] for item in items if item.get("url")]
+    with fetch.store.connection() as conn:
+        placeholders=",".join("?" for _ in urls)
+        previous={row["url"]:json.loads(row["data"]) for row in conn.execute(f"SELECT url,data FROM news WHERE url IN ({placeholders})",urls)} if urls else {}
+    cache=dict(fetch.state.get("fact_excerpt_cache") or {})
+    limit=max(0,min(8,int(fetch.source.get("fact_excerpt_max_articles_per_poll",4))))
+    attempts=0
+    result=list(items)
+    now=datetime.now(UTC)
+    order=sorted(range(len(items)),key=lambda i:str(items[i].get("published_at") or items[i].get("published_date") or ""),reverse=True)
+    for index in order:
+        item=copy.deepcopy(items[index]);url=item.get("url","");old=previous.get(url)
+        item = _preserve_publisher_authority(item, old)
+        result[index] = item
+        # Payload API is authoritative for this publisher. Do not alternate its
+        # body/precise clocks with an RSS description or a different HTML view.
+        if _publisher_api_record(item):
+            continue
+        fingerprint=_feed_fingerprint(item)
+        key=hashlib.sha256(url.encode()).hexdigest()[:24]
+        entry=cache.get(key,{})
+        unchanged=old is not None and _same_publisher_metadata(item,old)
+        cache_valid=entry.get("feed_digest")==fingerprint or bool(unchanged and old.get("fact_excerpt"))
+        carried=copy.deepcopy(old) if unchanged else item
+        if unchanged:
+            for field in ("updated_at","published_at","published_date"):
+                if not item.get(field) and old.get(field):
+                    item[field]=old[field]
+        if item.get("fact_excerpt") or item.get("is_premium"):
+            if unchanged and item.get("fact_excerpt")==old.get("fact_excerpt") and bool(item.get("is_premium"))==bool(old.get("is_premium")):
+                result[index]=carried
+            else:
+                item["fact_excerpt_feed_digest"]=fingerprint
+                result[index]=item
+            cache[key]={"feed_digest":fingerprint,"checked_at":now_iso(),"status":"premium" if item.get("is_premium") else "enriched",
+                        "next_check_at":None if item.get("is_premium") else (now+timedelta(hours=6)).isoformat()}
+            continue
+        if unchanged and old.get("fact_excerpt"):
+            result[index]=carried
+        if unchanged and (old.get("is_premium") or cache_valid and entry.get("status")=="premium"):
+            result[index]=carried
+            continue
+        next_check=entry.get("next_check_at")
+        if unchanged and cache_valid and next_check:
+            try:
+                if datetime.fromisoformat(next_check.replace("Z","+00:00"))>now:
+                    continue
+            except (ValueError,TypeError):
+                pass
+        publication=item.get("published_at") or item.get("published_date")
+        recent=True
+        if publication:
+            try:
+                recent=date.fromisoformat(str(publication)[:10])>=(now-timedelta(days=3)).date()
+            except ValueError:
+                pass
+        if attempts>=limit or not recent or not _publisher_article_url(url,fetch.source):
+            continue
+        attempts+=1
+        status="no_public_facts"
+        try:
+            response=await fetch.get(url,timeout=httpx.Timeout(12,connect=6))
+            article=extract_article(response.text,url,fetch.source,historical=False,
+                                    fallback_title=item["title"],fallback_date=item.get("published_date"))
+            if article.get("is_premium"):
+                item.update(is_premium=True,fact_excerpt_status="premium_metadata_only")
+                status="premium"
+            elif article.get("fact_excerpt"):
+                for field in ("fact_excerpt","fact_excerpt_created_at","fact_excerpt_status","fact_excerpt_provenance"):
+                    item[field]=copy.deepcopy(article[field])
+                item["fact_excerpt_provenance"]["publisher_updated_at"]=article.get("updated_at")
+                item["category"],item["entities"]=classify(item["title"],item["summary"]+" "+item["fact_excerpt"])
+                item["relevance_metadata"]=relevance_metadata(item["title"],item["summary"],item["fact_excerpt"])
+                _refresh_fact_identity(item)
+                status="enriched"
+            item["fact_excerpt_feed_digest"]=fingerprint
+            # Re-reading identical source text changes neither version nor its
+            # original discovery time, even when the HTML observation is later.
+            result[index]=carried if unchanged and old.get("fact_excerpt")==item.get("fact_excerpt") and bool(old.get("is_premium"))==bool(item.get("is_premium")) else item
+        except Exception as exc:
+            status="failed"
+            fetch.state["last_fact_excerpt_error"]=(str(exc) or type(exc).__name__)[:400]
+            result[index]=carried if unchanged else item
+        cache[key]={"feed_digest":fingerprint,"checked_at":now_iso(),"status":status,
+                    "next_check_at":None if status=="premium" else (now+timedelta(hours=6 if status=="enriched" else 1)).isoformat()}
+        if fetch.state.get("next_poll_at"):
+            break
+    fetch.state["fact_excerpt_cache"]={key:value for key,value in sorted(cache.items(),key=lambda p:p[1].get("checked_at",""),reverse=True)[:64]}
+    fetch.state["last_fact_excerpt_requests"]=attempts
+    return result
+
+
 def lexical_text(node: Any) -> str:
     if isinstance(node, dict):
         if node.get("type") == "text":
@@ -380,51 +648,77 @@ def lexical_text(node: Any) -> str:
     return ""
 
 
+def lexical_paragraphs(node: Any) -> list[str]:
+    if isinstance(node,dict):
+        if node.get("type")=="paragraph":
+            return [lexical_text(node)]
+        return [paragraph for key,value in node.items() if key in {"root","children","content"}
+                for paragraph in lexical_paragraphs(value)]
+    if isinstance(node,list):
+        return [paragraph for value in node for paragraph in lexical_paragraphs(value)]
+    return []
+
+
 async def ingest_offshore(fetch: Fetcher, start: date) -> list[dict]:
     if not fetch.historical:
-        latest = []
-        rss_error = None
-        failures_before = len(fetch.failures)
-        try:
-            latest = await ingest_feed_source(fetch, start)
-            fetch.state["live_transport"] = "rss"
-        except Exception as exc:
-            rss_error = (str(exc) or type(exc).__name__)[:800]
-            if len(fetch.failures) == failures_before:
-                fetch.failures.append({"url": fetch.source["feed_url"], "at": now_iso(), "error": rss_error,
-                                       "operation": "rss_parse"})
-            fetch.state["last_rss_error"] = rss_error
-        last_success = fetch.state.get("last_success_at")
-        gap_start = None
-        if last_success:
+        now = datetime.now(UTC)
+        # Source last_success_at also advances after partial RSS discovery.
+        # Only a fully fetched AND persisted API slice may advance this cursor.
+        def known_clock(value):
             try:
-                gap_start = datetime.fromisoformat(last_success.replace("Z", "+00:00"))
-                if gap_start.tzinfo is None or gap_start > datetime.now(UTC):
-                    gap_start = None
+                clock = datetime.fromisoformat(value.replace("Z", "+00:00")) if value else None
+                return clock if clock and clock.tzinfo and clock <= now else None
             except (ValueError, TypeError):
-                gap_start = None
-        gap = gap_start and (datetime.now(UTC) - gap_start).total_seconds() > 12 * 3600
-        if rss_error or gap:
-            # A broken publisher RSS redirect must not stop the verified public
-            # API. Use only the missed interval (or two recent days at startup).
-            begin = (gap_start - timedelta(days=1)).date() if gap_start else (datetime.now(UTC) - timedelta(days=2)).date()
-            saved_state = {key: fetch.state.get(key) for key in ["archive_cursor", "historical_pages", "archive_candidate_count", "historical_limited"]}
-            previous_live_incremental = fetch.live_incremental
-            fetch.historical = True
-            fetch.live_incremental = True
+                return None
+        complete = known_clock(fetch.state.get("last_complete_api_success_at"))
+        if complete:
+            begin = (complete-timedelta(days=1)).date()
+        elif fetch.state.get("api_recovery_from"):
+            begin = date.fromisoformat(fetch.state["api_recovery_from"])
+        else:
+            # One-time migration can reuse a recorded successful legacy API
+            # recovery. General RSS success is only a conservative lower bound.
+            legacy_api = known_clock(fetch.state.get("last_gap_recovery_at")) or known_clock(fetch.state.get("last_api_fallback_at"))
+            legacy_success = known_clock(fetch.state.get("last_success_at"))
+            begin = (legacy_api-timedelta(days=1)).date() if legacy_api else min((now-timedelta(days=2)).date(), (legacy_success-timedelta(days=1)).date()) if legacy_success else (now-timedelta(days=2)).date()
+        fetch.state["api_recovery_from"] = begin.isoformat()
+        saved_state = {key: fetch.state.get(key) for key in ("archive_cursor", "historical_pages", "archive_candidate_count", "historical_limited")}
+        old_incremental = fetch.live_incremental
+        primary = []
+        api_succeeded = False
+        try:
+            fetch.historical, fetch.live_incremental = True, True
             fetch.state["archive_cursor"] = 1
-            try:
-                recovered = await ingest_offshore(fetch, begin)
-                latest.extend(recovered)
-                fetch.state.update(last_gap_recovery_at=now_iso(), gap_recovered_from=begin.isoformat(),
-                                   gap_recovered_count=len(recovered))
-                if rss_error:
-                    fetch.state.update(live_transport="api_fallback", last_api_fallback_at=now_iso())
-            finally:
-                fetch.historical = False
-                fetch.live_incremental = previous_live_incremental
-                fetch.state.update(saved_state)
-        return latest
+            primary = await ingest_offshore(fetch, begin)
+            api_succeeded = True
+            fetch.completed_api_at = now_iso()
+            fetch.state.update(live_transport="api_primary", last_gap_recovery_at=now_iso(),
+                               gap_recovered_from=begin.isoformat(), gap_recovered_count=len(primary))
+        except Exception as exc:
+            fetch.state.update(live_transport="rss_fallback", last_api_error=(str(exc) or type(exc).__name__)[:800])
+            # Fetcher preserves HTTP failures; JSON/parse failures also remain
+            # visible even if RSS can still discover genuinely new URLs.
+            if not fetch.failures or fetch.failures[-1].get("url") != fetch.source.get("api_url"):
+                fetch.failures.append({"url": fetch.source.get("api_url"), "at": now_iso(),
+                                       "error": fetch.state["last_api_error"], "operation": "publisher_api"})
+        finally:
+            fetch.historical, fetch.live_incremental = False, old_incremental
+            fetch.state.update(saved_state)
+        # RSS remains a discovery channel, never a same-article body authority.
+        failures_before_rss = len(fetch.failures)
+        try:
+            discovered = await ingest_feed_source(fetch, start)
+        except Exception as exc:
+            fetch.state["last_rss_error"] = (str(exc) or type(exc).__name__)[:800]
+            if len(fetch.failures) == failures_before_rss:
+                fetch.failures.append({"url": fetch.source["feed_url"], "at": now_iso(),
+                                       "error": fetch.state["last_rss_error"], "operation": "rss_parse"})
+            if not api_succeeded:
+                raise
+            discovered = []
+        merged = {item["url"]: item for item in discovered}
+        merged.update({item["url"]: item for item in primary})
+        return list(merged.values())
     # The public Payload articles endpoint and its date/OR-title filtering were
     # verified with a two-item request: 2,718 candidates since 2024-05-15.
     # Collect only this bounded natural-gas/LNG slice, never all 417k articles.
@@ -433,6 +727,11 @@ async def ingest_offshore(fetch: Fetcher, start: date) -> list[dict]:
               "where[and][1][or][0][title][like]": "gas",
               "where[and][1][or][1][title][like]": "LNG",
               "where[and][1][or][2][title][like]": "FSRU"}
+    if fetch.live_incremental:
+        # Publisher supports this bounded OR filter (verified limit-2 probe).
+        boundary = params.pop("where[and][0][publishedAt][greater_than_equal]")
+        params["where[and][0][or][0][publishedAt][greater_than_equal]"] = boundary
+        params["where[and][0][or][1][updatedAt][greater_than_equal]"] = boundary
     for field in ["title", "slug", "content", "meta", "publishedAt", "updatedAt", "isPremium", "_status"]:
         params[f"select[{field}]"] = "true"
     page = int(fetch.state.get("archive_cursor", 1)) if not fetch.state.get("backfill_completed_at") else 1
@@ -449,8 +748,12 @@ async def ingest_offshore(fetch: Fetcher, start: date) -> list[dict]:
                 continue
             published = article.get("publishedAt")
             stamp = parse_timestamp(published)
-            if not stamp["published_date"] or stamp["published_date"] < start.isoformat():
-                raise ValueError("Publisher date filter is not respected; refusing unbounded import")
+            updated_stamp = parse_timestamp(article.get("updatedAt"))
+            recent_publication = stamp["published_date"] and stamp["published_date"] >= start.isoformat()
+            recent_update = (fetch.live_incremental and updated_stamp["published_at"] and
+                             updated_stamp["published_date"] >= start.isoformat())
+            if not stamp["published_date"] or not (recent_publication or recent_update):
+                raise ValueError("Publisher publication/update date filter is not respected; refusing unbounded import")
             day = stamp["published_date"]
             article_url = "https://offshore-energy.biz/" + day.replace("-", "/") + "/" + article["slug"]
             summary = (article.get("meta") or {}).get("description") or ""
@@ -469,13 +772,18 @@ async def ingest_offshore(fetch: Fetcher, start: date) -> list[dict]:
                              updated_at=article.get("updatedAt"), discovered_via=str(response.url))
             item["publisher_article_id"] = article.get("id")
             item["is_premium"] = bool(article.get("isPremium"))
+            attach_fact_excerpt(item,[] if item["is_premium"] else lexical_paragraphs(article.get("content") or []),
+                                method="public_publisher_payload_paragraphs",is_premium=item["is_premium"])
             if item["is_relevant"]:
                 items.append(item)
-                fetch.save(item)
+                if not fetch.live_incremental:
+                    fetch.save(item)
         fetch.checkpoint(archive_cursor=page + 1, historical_pages=page,
                          archive_candidate_count=payload.get("totalDocs"), historical_limited=False)
         if not payload.get("hasNextPage"):
             break
+        if fetch.live_incremental and page >= 500:
+            raise ValueError("Publisher API slice incomplete at bounded page limit; cursor not advanced")
         page = int(payload.get("nextPage") or page + 1)
     return items
 
@@ -707,6 +1015,8 @@ async def poll_sources(store: Store, *, historical: bool = False,
             items = []
             try:
                 items = await adapters[source["id"]](fetch, start)
+                if not historical:
+                    items=await enrich_live_facts(fetch,items)
                 for item in items:
                     saved = store.upsert_news(item)
                     if saved.get("_created"):
@@ -715,11 +1025,18 @@ async def poll_sources(store: Store, *, historical: bool = False,
                         revised.append(saved)
                 created.extend(fetch.created_items)
                 revised.extend(fetch.revised_items)
+                if fetch.completed_api_at:
+                    state.update(last_complete_api_success_at=fetch.completed_api_at, api_recovery_from=None)
                 limited = historical and bool(state.get("historical_limited"))
                 state.update({"status": "partial" if failures or limited else "ok", "last_success_at": now_iso(),
                               "last_count": len(items), "last_created": len(created), "last_revised": len(revised),
                               "last_error": failures[-1]["error"] if failures else None})
-                state.pop("next_poll_at", None)
+                if state.get("next_poll_at"):
+                    try:
+                        if datetime.fromisoformat(state["next_poll_at"].replace("Z","+00:00"))<=datetime.now(UTC):
+                            state.pop("next_poll_at",None)
+                    except (ValueError,TypeError):
+                        state.pop("next_poll_at",None)
                 if historical and not failures and not limited:
                     state["backfill_completed_at"] = now_iso()
                 elif historical:

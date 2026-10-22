@@ -1,0 +1,85 @@
+{
+  "scope": "Finite real-source diagnostics before the 2.4.1 source-evidence-ID change; failures and earlier passes remain separate from final validation. No forecast accuracy claim.",
+  "files": [
+    {
+      "source": ".runtime/structured-reasoning-v4/real_batch_01/chevron_historical.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_0/real_batch_01/chevron_historical.json",
+      "sha256": "67879246bbe5d6bd764841eee48d61fdefe87f7efd0db5b2163f8e3ee4bcc39c"
+    },
+    {
+      "source": ".runtime/structured-reasoning-v4/real_batch_01/eia_historical.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_0/real_batch_01/eia_historical.json",
+      "sha256": "185e384d192384887bab6f5b3e4cd0dbca37dcc6cbdb32e8b6b10ed4c8109a1c"
+    },
+    {
+      "source": ".runtime/structured-reasoning-v4/real_batch_01/epcm.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_0/real_batch_01/epcm.json",
+      "sha256": "8907af9ae48be1c842cf0f3cf31ef7419e4484d1e373d51522805895b89b573e"
+    },
+    {
+      "source": ".runtime/structured-reasoning-v4/real_batch_01/independent_review.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_0/real_batch_01/independent_review.json",
+      "sha256": "e04419777dd5523d43676f211bf78ec7819a441a8120455a6820996489ca557d"
+    },
+    {
+      "source": ".runtime/structured-reasoning-v4/real_batch_01/p12_manual.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_0/real_batch_01/p12_manual.json",
+      "sha256": "06a00bdb05814d69ed59fc5724739e0d2b7ec2d4f533963f547c493987624a85"
+    },
+    {
+      "source": ".runtime/structured-reasoning-v4/real_batch_01/summary.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_0/real_batch_01/summary.json",
+      "sha256": "cf557e5e143e205aaf0b29d06b2cd8879ff04b971b6b48f86764c4a4faea6779"
+    },
+    {
+      "source": ".runtime/structured-reasoning-v4/real_batch_02/chevron_historical.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_0/real_batch_02/chevron_historical.json",
+      "sha256": "5aa79a4d7d9df97ca9ec2979b2ecf38b56ead429f9fa069b3461849922c50e6c"
+    },
+    {
+      "source": ".runtime/structured-reasoning-v4/real_batch_02/eia_historical.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_0/real_batch_02/eia_historical.json",
+      "sha256": "3d6c80be95ce375e588d5e044e0067b8a53e7488f938c08baf6a73ab0e3fcade"
+    },
+    {
+      "source": ".runtime/structured-reasoning-v4/real_batch_02/epcm.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_0/real_batch_02/epcm.json",
+      "sha256": "52d965dbaf43d94abc3b914322a0efe2c057ba55bb6f7f9fdcd6a665ffce6eed"
+    },
+    {
+      "source": ".runtime/structured-reasoning-v4/real_batch_02/independent_review.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_0/real_batch_02/independent_review.json",
+      "sha256": "9d17d606b6c32a291a3a82b2b5a6e770e0d6503a2bb101a1d5a1a8f5da37e6f8"
+    },
+    {
+      "source": ".runtime/structured-reasoning-v4/real_batch_02/p12_manual.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_0/real_batch_02/p12_manual.json",
+      "sha256": "33926b65674d066db89b03e07b45a78ea7548625faf5baa4acf05beb8c626b10"
+    },
+    {
+      "source": ".runtime/structured-reasoning-v4/real_batch_02/summary.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_0/real_batch_02/summary.json",
+      "sha256": "23ed681600fd288c079352be2d6ffbd25d4c5cbc9c086ff84ec879f15a8cb019"
+    },
+    {
+      "source": ".runtime/structured-reasoning-v4/p12_current_pilot_01.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_0/p12_current_pilot_01.json",
+      "sha256": "d633eaee46ec9ec92cc16e0c838bc7b552edf22c72de6614129c90b6ff07b21a"
+    },
+    {
+      "source": ".runtime/structured-reasoning-v4/p12_current_pilot_02.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_0/p12_current_pilot_02.json",
+      "sha256": "dc332b92bad1fe2759955b522b0528c5c761345c918abcb4189c3648a9dd642c"
+    },
+    {
+      "source": ".runtime/structured-reasoning-v4/p12_current_pilot_03.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_0/p12_current_pilot_03.json",
+      "sha256": "7d8ff4272efe2739a72d15159f985d293dc136b530f40917bfae412879f14f31"
+    },
+    {
+      "source": ".runtime/structured-reasoning-v4/review_p12_03.json",
+      "evidence": "reports/structured_v2_4/diagnostics_2_4_0/review_p12_03.json",
+      "sha256": "007f71dd05927824f91e4f19d95dd2a88d2f49cccff3b90a3c6cf216a127463a"
+    }
+  ]
+}

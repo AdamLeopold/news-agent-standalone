@@ -1,0 +1,76 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T06:23:13.871733+00:00",
+  "scope": "Independent finite diagnosis of2 of6 failed old unit controls after authorized input projection; no assertion that original full suite passed.",
+  "old_analysis": {
+    "file": ".runtime/source-archives/backend-64920/ttf_news/analysis.py",
+    "sha256": "1aebeb8971f13f61fd8bd4f9ab961b6284e811aeb773014ef7cc71874c94375c"
+  },
+  "current_analysis_sha256": "5fbbadb4a01a8a4390ddc27f5c9958e79f13da9cf974c86390c2271a1b22e1f6",
+  "original_failed_full_log": {
+    "file": "reports/repair_2026-10-20/source-binding-final-unit-tests.log",
+    "sha256": "0fae2a59fd2e3dc5cfc1cf4d8b4df369d6a8e8eab1c5cef7df1ef60b0e17df50"
+  },
+  "records": [
+    {
+      "case": "eighth_detail_const_table",
+      "original_fixture": {
+        "file": "tests/fixtures/eighth_output_scope_actual_v2_3.json",
+        "sha256": "4257821205395fe7dc66123e93b04db7a0c9ca9849f23130a0bda6bfc78f4987"
+      },
+      "original_detail_record": {
+        "file": "reports/repair_2026-10-20/production_eighth_manual_detail_failed_actual_v2_3.json",
+        "sha256": "7c1d93061d8274d3c08db2c10bfdd07d3209cc3e1e420521a83238ef27ef73d9"
+      },
+      "original_raw_sha256": [
+        "b07bf109d9071e6610b6f9cf5de45415a13c2ac91b9378ae6ad8379b63ccaa45",
+        "0b1c7a33657edaec269ddc30c9dbcfacdd7cd19d47b2938977d954b3cfcf26d9"
+      ],
+      "old_prepared_sha256": "99db698d0d37e81c13e932d382254553427b724a7c1f767f1eab6fec1c54486f",
+      "new_prepared_sha256": "3ed2cdc6c555605b63e39001acd65e786d5e9f69e16a16a6c72e47858ccc9149",
+      "old_notice_count": 3,
+      "new_notice_count": 2,
+      "original_raw_matches_old_fact_contract": true,
+      "original_raw_matches_new_fact_contract": false,
+      "old_prepared_complete_collector_errors": [],
+      "diagnosis": "Frozen original raw is not a fresh generation against projected input. Guard-isolation test must preserve the old3-notice prepared facts, not splice old raw into new2-notice const schema. New prepared should reject old const table."
+    },
+    {
+      "case": "seventh_full_card_duplicate_alias",
+      "original_fixture": {
+        "file": "tests/fixtures/seventh_source_scope_actual_v2_3.json",
+        "sha256": "52772b9e9a36d5a2978f7a6b675c06cfb7cb0d6fd615c47ad0bc3d894d8a0355"
+      },
+      "original_detail_record": {
+        "file": "reports/repair_2026-10-20/production_seventh_manual_detail_failed_actual_v2_3.json",
+        "sha256": "04300a13120d592d761d6b920d0799604108262ec3d833a78496aebe21a766af"
+      },
+      "original_raw_sha256": [
+        "729d15c499c91c913d849f9c2dfcf62f9127b5c2fd7913009787cb02c44139dd",
+        "769d8f1738ceecc738d798e4e7469fdd6b98cdf23f70e5749d958c8f0c2db180"
+      ],
+      "old_prepared_sha256": "6a251c30443d7463574e1c7aaae4131a7fcdcafe7b5edca65b394085c6deeebf",
+      "new_prepared_sha256": "14570c58bcac7fed3a0a8a4b7a3a445c13728ec9f5f254a89e0f2dad6995fca6",
+      "old_notice_count": 3,
+      "new_notice_count": 2,
+      "old_prepared_exact_duplicate_positive_passed": true,
+      "old_prepared_conflicting_capacity_rejected": "逐日期列出的容量时段没有唯一N来源；须保留日期/年份及对应容量，不得借另一公告原值",
+      "new_window_alias_is_short_pointer": true,
+      "diagnosis": "Copying the new N1 pointer over N0 destroys the only canonical full notice. This is a test fixture mutation, not failure to deduplicate two full identical source cards."
+    }
+  ],
+  "recommended_minimal_test_fix": [
+    "Freeze the exact1aeb reconstructed prepared/source-index snapshots as portable validator-isolation fixture, with original input/raw/source provenance and hashes.",
+    "Use that fixture only for controls whose intended subject is historical guard behavior or absence of borrowed clocks. Keep original raw and expected outcomes.",
+    "Retain new17 end-to-end projection tests, and explicitly check that old source_fact_checks is rejected against new projected const schema.",
+    "Do not import private source archives at runtime in public tests; portable snapshots must be exact byte-bound with provenance."
+  ],
+  "other_four_failures_owned_by": "/root/event_retrieval and /root/semantic_checks",
+  "core_bug_reproduced_in_these_two": false,
+  "original_failed_unit_log_preserved": true,
+  "no_root_source_test_or_fixture_modifications_by_reviewer": true,
+  "new_model_calls": 0,
+  "database_access": false,
+  "network_calls": false
+}

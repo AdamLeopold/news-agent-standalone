@@ -1,0 +1,197 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T04:34:34.219567+00:00",
+  "scope": "Complete independent eighth workflow available CN/English prose and both terminal failed raw cohorts, plus the separately queued automatic live review. No new model or translation requests, no DB write.",
+  "generation_source_sha256": {
+    "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+    "ttf_news/analysis.py": "baec41f3ee2f67949264bcb3790365bf2ce9270071a0923ed8a39cb078d62dfb",
+    "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+    "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+    "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+    "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+    "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+    "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+    "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+    "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+    "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+    "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987",
+    "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+    "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+    "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+    "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+    "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+    "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+    "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+    "ttf_news/public_gateway.py": "08990e223d5e7d1d348967c9625fd29fc2d1e7e58bb000c964b9cfea43b59952",
+    "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+    "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+    "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+    "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+    "ttf_news/semantics.py": "07632831d7335b0138203b78f55e4bc221c92d761628a40f09a4330834049028",
+    "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+    "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+    "ttf_news/translation.py": "d47b232a5f77ea68e2d5bc5d092021e9727e555c6b1dd702922325519982d7c5"
+  },
+  "manual_brief": {
+    "record": {
+      "file": "reports/repair_2026-10-20/production_eighth_manual_brief_actual_v2_3.json",
+      "sha256": "d4dc3a14b3e10b957a699e5761e55f69b66fddcaef636bba7afb714cecff07be"
+    },
+    "analysis_id": "a137f38d-4bf5-41de-9f81-df0eaa1443fc",
+    "verdict": "qualified_no_identified_P2_final_manual_brief",
+    "full_source_review": {
+      "file": "reports/repair_2026-10-20/independent_production_eighth_manual_brief_initial_review_v2_3.json",
+      "sha256": "5d48fd697d2259067fae5fa8b4537e57067770af4a5d46b92340b891230a539f"
+    },
+    "english": {
+      "record": {
+        "file": "reports/repair_2026-10-20/production_eighth_manual_brief_english_actual_v2_3.json",
+        "sha256": "75138a9868893052bdba7412cc6cbc2aa71f6d2602373ac28ef96117e31f2dac"
+      },
+      "id": "35b6d89c-4952-4955-baec-2b0aeb0f05f4",
+      "source_result_sha256": "36d275f4cf3b1c9959b86e413df71decae3ca5038dfdc9e08d9e2090654693ff",
+      "exact_source_hash_bound": true,
+      "scores_directions_citations_ledger_equal": true,
+      "all_rendered_free_prose_read_and_english": true,
+      "verdict": "faithful_translation_no_identified_new_P2",
+      "qualifications": [
+        "“10 month22 day” is awkward but retains22Oct rather than changing its source date.",
+        "The approximately11.5hours value is faithfully translated; exact target-window overlap is11.25hours.",
+        "Translation preserves the source P3 limited revision explanation rather than improving it."
+      ]
+    }
+  },
+  "current_live": {
+    "record": {
+      "file": "reports/repair_2026-10-20/production_eighth_current_live_failed_actual_v2_3.json",
+      "sha256": "2e9929000a56349d10b3572ed98723d412493221d3e90796d797cf9cf60da20c"
+    },
+    "analysis_id": "ecd35fc0-409c-4306-a88d-71e5ee074d4b",
+    "status": "failed",
+    "result_returned": false,
+    "raw_reviews": [
+      {
+        "attempt": 1,
+        "raw_sha256": "4563605895b6060c4f15d8132e6c87986f4b994509c89f1de256e97749c57f0f",
+        "all_prose_read": true,
+        "verdict": "genuine_invalid_draft",
+        "material_errors": [
+          {
+            "priority": "P2",
+            "quote": "基于基准上行与未计价的计划维护",
+            "reason": "No comparable announcement response evidence establishes unpriced status. Correct observed+2.688 baseline is not evidence of unpriced maintenance."
+          },
+          {
+            "priority": "P2",
+            "quote": "13mcm/d…公告仅为未来计划，未产生实际流量损失",
+            "reason": "The13.0N2 interval has already begun at04:00Z beforeas_of04:23Z. Unknown actual flow is not evidence that it has not caused a loss; the future-only physical negation cannot be borrowed from different7.6N0."
+          }
+        ]
+      },
+      {
+        "attempt": 2,
+        "raw_sha256": "487e7d1dcea77b952a987aba77ecfbaae6658e721f213a4382e149e52784a896",
+        "all_prose_read": true,
+        "verdict": "genuine_invalid_draft",
+        "material_errors": [
+          {
+            "priority": "P2",
+            "field": "close_forecast.basis",
+            "quote": "新闻未产生即时价格反应，故预计收盘价相对前一日继续上涨",
+            "reason": "The actual isolated announcement reaction is unobserved. It cannot be asserted as zero or used as an observed causal premise."
+          }
+        ],
+        "secondary_diagnostics": [
+          "The source capacity list is7.6/13 at separate intervals, not an aggregate; defaulting all values toN0 is not the primary reason this draft is invalid. No additional alias-validator expansion is requested here.",
+          "“供应约束上升，价格可能继续上涨” is a logically consistent upward-pressure relation in ordinary prose; the generic polarity diagnostic should not be cited as proof that this particular clause is economically reversed. The independent price-reaction error still suffices to reject the draft."
+        ]
+      }
+    ],
+    "original_failed_not_reclassified": true,
+    "english_result_available": false
+  },
+  "manual_detail": {
+    "record": {
+      "file": "reports/repair_2026-10-20/production_eighth_manual_detail_failed_actual_v2_3.json",
+      "sha256": "7c1d93061d8274d3c08db2c10bfdd07d3209cc3e1e420521a83238ef27ef73d9"
+    },
+    "analysis_id": "a137f38d-4bf5-41de-9f81-df0eaa1443fc",
+    "status": "failed",
+    "result_returned": false,
+    "raw_reviews": [
+      {
+        "attempt": 1,
+        "raw_sha256": "b07bf109d9071e6610b6f9cf5de45415a13c2ac91b9378ae6ad8379b63ccaa45",
+        "all_prose_read": true,
+        "verdict": "no_additional_identified_P2_local_capacity_binding_false_positive",
+        "actual_error": [
+          "N1容量字段unavailable原值为7.6mcm/d，不是13.0；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算"
+        ],
+        "local_false_positive": "Two comma-connected source-supported capacities are described for the sameTroll announcement set, explicitly matched byN0/N2 evidence. The13.0 rate must not be forced onto firstTrollN1=7.6. It is neither an invented amount nor a simultaneous20.6 sum.",
+        "checks": [
+          "N0 not yet started/N2 started inside the window but actual flow unconfirmed are correct at frozen04:23Z.",
+          "Source-known baseline85.062→87.75/+2.688 is correctly described as observed current-vs-prior reference.",
+          "Pricing remains unknown; current factual zero flow or zero announcement reaction is not asserted.",
+          "HistoricalE1 -2.98 reference is source-known and explicitly non-causal."
+        ],
+        "qualifications": [
+          "Other facility is imprecise; sourceN2 categoryOther does not establish a separate location.",
+          "Full trader explanation omits the easing from N2 shortened end versus N0/N1 later new maintenance, P3 completeness limitation.",
+          "Correctable failed draft is not a delivered production detail."
+        ]
+      },
+      {
+        "attempt": 2,
+        "raw_sha256": "0b1c7a33657edaec269ddc30c9dbcfacdd7cd19d47b2938977d954b3cfcf26d9",
+        "all_prose_read": true,
+        "verdict": "genuine_invalid_quantity_with_a_separate_scenario_false_positive",
+        "material_errors": [
+          {
+            "priority": "P2",
+            "quote": "可用容量分别为7.6和13.0mcm/d",
+            "reason": "Those are unavailable capacities. Supplied absolute available capacities are129.8 and124.3; changing the field label changes the source fact and remains a true rejection."
+          }
+        ],
+        "local_false_positive": {
+          "field": "detail.scenarios.bullish",
+          "quote": "若实际流量未恢复，供应约束持续，价格上升",
+          "reason": "In this explicitly conditional scenario, negated restoration and continuing supply constraint imply upward rather than downward price pressure. Do not parse未恢复 as confirmed supply recovery or move the scenario tobearish."
+        }
+      }
+    ],
+    "original_failed_not_reclassified": true,
+    "english_result_available": false
+  },
+  "additional_queued_automatic_live": {
+    "record": {
+      "file": "reports/repair_2026-10-20/production_eighth_queued_automatic_live_actual_v2_3.json",
+      "sha256": "794cc6962a49d0e8c021c6073c860d1c58ad791ee2b20ec0c026ce7b34b57b99"
+    },
+    "independent_P2_review": {
+      "file": "reports/repair_2026-10-20/independent_production_eighth_queued_automatic_live_review_v2_3.json",
+      "sha256": "238883927fa256282c9df4e5be183e61e20e96a08c48ed0be4a715c49709c8aa"
+    },
+    "append_only_quality_review_payload": {
+      "file": "reports/repair_2026-10-20/production_eighth_auto_future_window_pending_review_v2_3.json",
+      "sha256": "421017818649e1be1809f472cd1193a61c00e5f32453d0bbed336fe5a1a3083c"
+    },
+    "root_applied_metadata_evidence": {
+      "file": "reports/repair_2026-10-20/production_eighth_auto_future_window_applied_review_v2_3.json",
+      "sha256": "650f044f9fd4b3b4f8167b92440f75e6e1109b64fb715d46deec2c2830377421"
+    },
+    "canonical_prediction_preserved": true,
+    "not_qualified_as_safe_result": true
+  },
+  "all_required_production_roles_passed": false,
+  "production_detail_delivered": false,
+  "production_current_live_delivered": false,
+  "all_prior_eight_whole_runs_remain_separate": true,
+  "overall_release_passed": false,
+  "boundary": [
+    "Only manualbrief and its English returned safe qualified outputs. Failed current/detail have no delivered analyses or successful translations to certify.",
+    "The auto future-window epistemic error is independent of the current/detail terminal failures and is preserved with an append-only invalid metadata review.",
+    "Local false-positive corrections must retain explicit wrongN/field/numeric/sum and price-causality rejections; they never upgrade these original failed terminals.",
+    "No market accuracy, verified settlement result or blanket model stability is established by this workflow."
+  ]
+}

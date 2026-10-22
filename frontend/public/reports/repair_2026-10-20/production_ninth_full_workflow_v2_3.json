@@ -1,0 +1,295 @@
+{
+  "status": "failed",
+  "started_at": "2026-10-21T04:47:00.352587+00:00",
+  "expected_prompt_version": "ttf-news-standalone-2.3",
+  "scope": "real_local_manual_detail_english_exports_sse_and_preservation",
+  "synthetic_live_input": false,
+  "raw_thinking_included": false,
+  "stages": [
+    {
+      "name": "preservation_before",
+      "status": "passed",
+      "started_at": "2026-10-21T04:47:00.365442+00:00",
+      "checks": {
+        "passed": true,
+        "protected_analysis_count": 155,
+        "protected_nonnull_field_count": 288,
+        "current_analysis_count": 155,
+        "new_analysis_count": 0,
+        "protected_snapshot_count": 5,
+        "new_snapshot_count": 0,
+        "original_validation_record_count": 1,
+        "latest_baseline_unchanged": true,
+        "original_baseline": {
+          "id": 210,
+          "created_at": "2026-10-14T05:51:48.181167+00:00",
+          "type": "validation_started"
+        },
+        "failures": []
+      },
+      "finished_at": "2026-10-21T04:47:00.398184+00:00",
+      "elapsed_seconds": 0.033
+    },
+    {
+      "name": "live_api_v2_and_managed_identity",
+      "status": "passed",
+      "started_at": "2026-10-21T04:47:00.398575+00:00",
+      "checks": {
+        "prompt_version": "ttf-news-standalone-2.3",
+        "model": "gpt-oss:20b",
+        "server_pid": 43774,
+        "managed_pid_identity_verified": true,
+        "collector": {
+          "enabled": true,
+          "poll_seconds": 60
+        },
+        "counts": {
+          "news": 3996,
+          "events": 1575,
+          "legacy_daily": 3456,
+          "prices": 65882,
+          "analyses": 155
+        },
+        "monitoring_reachable": true
+      },
+      "finished_at": "2026-10-21T04:47:00.543572+00:00",
+      "elapsed_seconds": 0.145
+    },
+    {
+      "name": "select_real_existing_news",
+      "status": "passed",
+      "started_at": "2026-10-21T04:47:00.544190+00:00",
+      "checks": {
+        "news_id": "90bfbf6adb1183517cbc00ca",
+        "title": "Gassco Troll: Planned Gas production field unavailability (Active)",
+        "source": "gassco",
+        "url": "https://umm.gassco.no/details?id=f1f667ff-1ee3-45f2-bedf-7eed367ea614",
+        "published_at": "2026-10-20T20:13:18+00:00",
+        "source_version": 1,
+        "body_characters": 270,
+        "body_sha256": "0d655dfd6a6900bdb276e7a00d478b97e61cc5415ccaa234f3ff81b889b237cf",
+        "fact_excerpt_used": false
+      },
+      "finished_at": "2026-10-21T04:47:00.550383+00:00",
+      "elapsed_seconds": 0.006
+    },
+    {
+      "name": "ensure_current_v2_live_forecast",
+      "status": "passed",
+      "started_at": "2026-10-21T04:47:00.550835+00:00",
+      "checks": {
+        "analysis_id": "ff3fdde7-4f67-487b-92ea-b612da62941a",
+        "status": "queued",
+        "created": true,
+        "trade_date": "2026-10-21",
+        "source_news_id": "90bfbf6adb1183517cbc00ca",
+        "reason": "explicit_new_source_profile_live_analysis_via_normal_news_api",
+        "old_forecasts_overwritten": false,
+        "validation_baseline_reset": false
+      },
+      "finished_at": "2026-10-21T04:47:05.058305+00:00",
+      "elapsed_seconds": 4.507
+    },
+    {
+      "name": "sse_initial_connection",
+      "status": "passed",
+      "started_at": "2026-10-21T04:47:05.058941+00:00",
+      "checks": {
+        "id": 216809,
+        "type": "stream_ready",
+        "kind": null,
+        "matched_analysis_id": null,
+        "replayed_event_count": 1,
+        "cursor_mode": "initial_ready"
+      },
+      "finished_at": "2026-10-21T04:47:05.061417+00:00",
+      "elapsed_seconds": 0.002
+    },
+    {
+      "name": "manual_submit_real_news",
+      "status": "passed",
+      "started_at": "2026-10-21T04:47:05.061895+00:00",
+      "checks": {
+        "analysis_id": "c4fd5ed5-ae2c-4e43-8ae5-c75faa314810",
+        "status": "queued",
+        "real_source_news_id": "90bfbf6adb1183517cbc00ca"
+      },
+      "finished_at": "2026-10-21T04:47:09.464275+00:00",
+      "elapsed_seconds": 4.402
+    },
+    {
+      "name": "sse_last_event_id_reconnect",
+      "status": "passed",
+      "started_at": "2026-10-21T04:47:09.465018+00:00",
+      "checks": {
+        "id": 216810,
+        "type": "analysis_queued",
+        "kind": null,
+        "matched_analysis_id": "c4fd5ed5-ae2c-4e43-8ae5-c75faa314810",
+        "replayed_event_count": 1,
+        "cursor_mode": "Last-Event-ID"
+      },
+      "finished_at": "2026-10-21T04:47:09.467940+00:00",
+      "elapsed_seconds": 0.003
+    },
+    {
+      "name": "sse_after_query_reconnect",
+      "status": "passed",
+      "started_at": "2026-10-21T04:47:09.468472+00:00",
+      "checks": {
+        "id": 216810,
+        "type": "analysis_queued",
+        "kind": null,
+        "matched_analysis_id": "c4fd5ed5-ae2c-4e43-8ae5-c75faa314810",
+        "replayed_event_count": 1,
+        "cursor_mode": "after_query"
+      },
+      "finished_at": "2026-10-21T04:47:09.473504+00:00",
+      "elapsed_seconds": 0.005
+    },
+    {
+      "name": "manual_real_brief",
+      "status": "failed",
+      "started_at": "2026-10-21T04:47:09.474162+00:00",
+      "error_type": "RuntimeError",
+      "error": "Brief failed: 模型JSON两次校验失败，未生成方向：news_impact.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，；analysis.summary:N1公告开始2026-10-22T04:00:00+00:00，截至分析时点尚未开始；目标结算窗口结束时或之后开始；开始时刻不证明实际流量损失；未来于as_of不等于",
+      "finished_at": "2026-10-21T04:50:09.781717+00:00",
+      "elapsed_seconds": 180.307
+    },
+    {
+      "name": "csv_jsonl_exports",
+      "status": "passed",
+      "started_at": "2026-10-21T04:50:09.783186+00:00",
+      "checks": {
+        "news": {
+          "csv": {
+            "rows": 3996,
+            "bytes": 5003954,
+            "sha256": "b496625bc4ee7ede5feb52e9f861d8056cb74f615fa3bee41163854ff016e57b",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 3996,
+            "bytes": 6693114,
+            "sha256": "5a704b12d7a5d06c069e4ee190e00b457032f04b2e7f02a78faeb78a5684a5e4",
+            "parsed": true
+          },
+          "row_counts_match": true,
+          "independent_snapshot_requests": true
+        },
+        "daily": {
+          "csv": {
+            "rows": 628,
+            "bytes": 3916578,
+            "sha256": "88536d2c357c6bdc92d01c2236d48f69971c072d4892d7823d415c99ac9cc339",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 628,
+            "bytes": 3808065,
+            "sha256": "8abd151fc28871df650bbd8bc6dcf3330e0d6a4f6ca9f9956a013fdb92ad9435",
+            "parsed": true
+          },
+          "row_counts_match": true,
+          "independent_snapshot_requests": true
+        },
+        "events": {
+          "csv": {
+            "rows": 1575,
+            "bytes": 5979381,
+            "sha256": "c8fa45efe424c3a98f3b5145db81d81f92f7a6ac9c49a1c20349fd3ba79fb051",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 1575,
+            "bytes": 6391644,
+            "sha256": "a6815c7f232cc4a3795c1d2e0ac34cb4cbf23b046a169dfeb9e7e6759ed156c3",
+            "parsed": true
+          },
+          "row_counts_match": true,
+          "independent_snapshot_requests": true
+        },
+        "prices": {
+          "csv": {
+            "rows": 65882,
+            "bytes": 26612997,
+            "sha256": "8d95fcf341bbda9f52720198f7050e6221b6a0d61be9b4218c82743c2181ec98",
+            "parsed": true
+          },
+          "jsonl": {
+            "rows": 65882,
+            "bytes": 43742464,
+            "sha256": "a1bf37107496d8795b69442a1e7966bf35780f2cb902a5743cb25459f52fdf96",
+            "parsed": true
+          },
+          "row_counts_match": true,
+          "independent_snapshot_requests": true
+        }
+      },
+      "finished_at": "2026-10-21T04:50:18.764849+00:00",
+      "elapsed_seconds": 8.982
+    },
+    {
+      "name": "current_live_forecast_v2",
+      "status": "passed",
+      "started_at": "2026-10-21T04:50:18.767111+00:00",
+      "checks": {
+        "prompt_version": "ttf-news-standalone-2.3",
+        "news_direction": "up",
+        "close_direction": "up",
+        "close_evidence_status": "forecast",
+        "english_close_label": "Up",
+        "summary_sha256": "647d0b7a73e4c09d72e5d6d0ab0b269352311d2fa4ca99cbdcde272f6aec199b",
+        "summary_characters": 37,
+        "model_seconds": 79.3,
+        "as_of": "2026-10-21T04:47:03.624559+00:00",
+        "raw_evidence_validated": true,
+        "analysis_id": "ff3fdde7-4f67-487b-92ea-b612da62941a",
+        "trade_date": "2026-10-21",
+        "dashboard_current_window_verified": true
+      },
+      "finished_at": "2026-10-21T04:50:24.637141+00:00",
+      "elapsed_seconds": 5.87
+    },
+    {
+      "name": "preservation_after",
+      "status": "passed",
+      "started_at": "2026-10-21T04:50:24.639132+00:00",
+      "checks": {
+        "passed": true,
+        "protected_analysis_count": 155,
+        "protected_nonnull_field_count": 288,
+        "current_analysis_count": 157,
+        "new_analysis_count": 2,
+        "protected_snapshot_count": 5,
+        "new_snapshot_count": 0,
+        "original_validation_record_count": 1,
+        "latest_baseline_unchanged": true,
+        "original_baseline": {
+          "id": 210,
+          "created_at": "2026-10-14T05:51:48.181167+00:00",
+          "type": "validation_started"
+        },
+        "failures": []
+      },
+      "finished_at": "2026-10-21T04:50:24.734027+00:00",
+      "elapsed_seconds": 0.095
+    }
+  ],
+  "new_live_analysis_id": "ff3fdde7-4f67-487b-92ea-b612da62941a",
+  "new_analysis_id": "c4fd5ed5-ae2c-4e43-8ae5-c75faa314810",
+  "finished_at": "2026-10-21T04:50:24.736928+00:00",
+  "failed_stages": [
+    "manual_real_brief"
+  ],
+  "missing_required_stages": [
+    "chinese_originals_unchanged_after_translation",
+    "english_brief_actual_text_labels_numbers",
+    "english_detail_actual_text_labels_numbers",
+    "manual_detail_request",
+    "manual_real_brief",
+    "manual_real_detail",
+    "sse_completed_event_replay"
+  ],
+  "elapsed_seconds": 204.384
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "ttf-public-log-allowlist-name-correction-v1",
+  "created_at": "2026-10-21T03:22:51.002290+00:00",
+  "change": "Only add the exact produced price-zero-observed-role-focused-tests.log filename to LOGS; keep the previous spelling and all raw/sanitization/publication-manifest logic unchanged.",
+  "previous_sync_sha256": "4c1528dc30ec03b089ee8777edbfeb2b7d4fcbd2f2f31d115d5c8ed6483dfec8",
+  "sync_sha256": "06dbb62a8a9cbf0f6b7c1c858086b6f932ee92467c5c9feffdc29de257db2e49",
+  "helper_sha256": "07e49fbc82c5acc6987a9a6890e2cce34869895c67f5f2c210c2580a5260747c",
+  "self_tests": {
+    "passed": 23,
+    "log": "reports/repair_2026-10-20/public-sync-observed-role-log-self-tests.log",
+    "sha256": "13ad51f4473edc186841d426f267d357287cf727ee4cf8d692684e67064ac399"
+  },
+  "core_source_unchanged": {
+    "analysis.py": "6d46d6dcee4899ea7426222014ee84dc6d9b56f8144789561ba11a02adace72d",
+    "semantics.py": "e0cac7cdab33b6562ee88db528ad32114540734b2b96275d7f32e67302856623"
+  },
+  "new_model_calls": 0,
+  "git_database_service_network_actions": false
+}

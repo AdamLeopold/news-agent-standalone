@@ -1,0 +1,30 @@
+{
+  "created_at": "2026-10-20T23:36:37.439990+00:00",
+  "reviewer_type": "codex_subagent",
+  "scope": "Append-only independent review binding for the fourth failed 2.3 production smoke. The attempt history and original model records are unchanged.",
+  "production_history": {
+    "file": "reports/repair_2026-10-20/production_e2e_attempt_history_v2_3.json",
+    "sha256": "1e1f1357dd6ccb30df4eb4d55594aea9aae5ef64037ec0bfd06880b7b6092722"
+  },
+  "original_fourth_attempt": {
+    "file": "reports/repair_2026-10-20/attempted_v2_3_epcm_conditional_scope_smoke.json",
+    "sha256": "4c941d6320a00cdf7c3fdcd8b267a3831a215b60f6119359224b3f63d656e95c"
+  },
+  "full_prose_review": {
+    "file": "reports/repair_2026-10-20/independent_production_epcm_conditional_detail_failed_review_v2_3.json",
+    "sha256": "f63564b7f018b72dd790b221a3d2937681dd144441fef29004cc2d254d617b97"
+  },
+  "conclusions": {
+    "whole_run_remains_failed": true,
+    "detail_delivered": false,
+    "original_diagnostic_contains_conditional_scope_false_positives": true,
+    "independent_material_error_exists": true,
+    "material_error": "The second raw says both planned notices begin after the target settlement window, but N2 begins 2026-10-21T04:00Z inside 2026-10-20T15:15Z ≤ t < 2026-10-21T15:15Z. Only N1 begins after the window.",
+    "new_success_claim": false,
+    "accepted_error_closed": false
+  },
+  "no_model_calls": true,
+  "no_database_access": true,
+  "no_network_calls": true,
+  "no_source_edits": true
+}

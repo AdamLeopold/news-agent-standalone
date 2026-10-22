@@ -1,0 +1,94 @@
+{
+  "schema_version": "ttf-seventh-production-terminal-append-v1",
+  "created_at": "2026-10-21T04:12:06.709587+00:00",
+  "reviewer_type": "codex_subagent",
+  "compiled_by": "/root/event_retrieval",
+  "production_history": {
+    "file": "reports/repair_2026-10-20/production_e2e_attempt_history_v2_3.json",
+    "sha256": "52bd39bbef8a1d8c04249e527622e7fceb9b8c679f752b7fb5794a6d148cfbfc"
+  },
+  "seventh_production": {
+    "file": "reports/repair_2026-10-20/production_seventh_full_workflow_v2_3.json",
+    "sha256": "2a9a9520202225f450ed95a76a9924a9cefc7169371a88c482a0c85028bc2fd0"
+  },
+  "independent_reviews": [
+    {
+      "file": "reports/repair_2026-10-20/independent_production_seventh_initial_cn_review_v2_3.json",
+      "sha256": "74fe00bd1a0d0cb31e0b237e19de250f7735f7c09304aed7f27f5d8c6870cc47"
+    },
+    {
+      "file": "reports/repair_2026-10-20/independent_production_seventh_completed_records_review_v2_3.json",
+      "sha256": "c90e8ac5ead23deb37ee35296d448b00f62f4049b0ed574a8504ecad053cd523"
+    }
+  ],
+  "failed_actual_stages": [
+    {
+      "role": "manual_detail",
+      "record": {
+        "file": "reports/repair_2026-10-20/production_seventh_manual_detail_failed_actual_v2_3.json",
+        "sha256": "04300a13120d592d761d6b920d0799604108262ec3d833a78496aebe21a766af"
+      },
+      "analysis_id": "e444cb07-a3d1-402d-868d-dcb98a91f586",
+      "status": "failed",
+      "result_is_null": true,
+      "detail_result_is_null": true,
+      "actual_model_calls": 2,
+      "raw_sha256": [
+        "729d15c499c91c913d849f9c2dfcf62f9127b5c2fd7913009787cb02c44139dd",
+        "769d8f1738ceecc738d798e4e7469fdd6b98cdf23f70e5749d958c8f0c2db180"
+      ],
+      "failure_metric_id": 20186,
+      "failure_data_sha256": "0fce75848329194988fba626402e54d956329ecadfee20177df51bcaac5497e6",
+      "error": "模型JSON两次校验失败，未生成方向：逐日期列出的容量时段没有唯一N来源；须保留日期/年份及对应容量，不得借另一公告原值；detail.invalidation_conditions[0]:Gassco公告撤销/结束或实际流量未确认，不能证明未形成供需冲击、供应不受影响或实际流量无变化；须有独立无变化计量事实。可写输入未；detail.invalidation_conditions[0]:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景",
+      "local_false_positives_identified_by_independent_review": true,
+      "independent_material_errors_in_rejected_raw_also_identified": true,
+      "not_reclassified_success_after_false_positive_correction": true
+    },
+    {
+      "role": "current_live",
+      "record": {
+        "file": "reports/repair_2026-10-20/production_seventh_current_live_failed_actual_v2_3.json",
+        "sha256": "da2615e78a97a4fff4e7a8baa202bde550e11da34a61b26f67aeda1a860854e2"
+      },
+      "analysis_id": "d7628bcf-d68a-4d14-8ce0-20bc21beaa42",
+      "status": "failed",
+      "result_is_null": true,
+      "detail_result_is_null": true,
+      "actual_model_calls": 2,
+      "raw_sha256": [
+        "d608115d4370e28cdac94157afbf6bb10ef310f2de298850b85da4eb2dbc84ac",
+        "6dc52549fcfa076601b4d6b4ec595bb6d0f1c0ae4af0a02a69ee07cc35b7a1ed"
+      ],
+      "failure_metric_id": 20178,
+      "failure_data_sha256": "b9fc1e0de7122600d8ab33e7af183672d7eda520adad7b86294afff81aaff0b3",
+      "error": "模型JSON两次校验失败，未生成方向：news_impact.summary、close_forecast.basis、analysis.summary:缺少公告前后价格反应，不能宣称已计价/已消化；须区分计价未知；news_impact.summary:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景；核心分析文案必须为中文句子；用中文概括具体事实和TTF机制，不复制完整英文标题，专有名称/单位可保留英文",
+      "local_false_positives_identified_by_independent_review": true,
+      "independent_material_errors_in_rejected_raw_also_identified": true,
+      "not_reclassified_success_after_false_positive_correction": true
+    }
+  ],
+  "seven_attempt_totals": {
+    "well": 2,
+    "epcm": 4,
+    "gassco": 1,
+    "complete_success": 0
+  },
+  "manual_brief_and_english_only_qualified": true,
+  "failed_stages_not_upgraded_by_false_positive_correction": true,
+  "existing_accepted_error_families": 8,
+  "accepted_error_families_closed": 0,
+  "new_accepted_error_family_added": false,
+  "gateway_public_stream_incident": {
+    "status": "separately_fixed_and_root_verified",
+    "evidence": {
+      "file": "reports/repair_2026-10-20/public_gateway_stream_cleanup_live_verification_v2_3.json",
+      "sha256": "dddc26cb5f77dff4e3bd4b3da2645eb8e8a9612dad591e81983d94ee4fd4a720"
+    }
+  },
+  "no_model_calls": true,
+  "no_database_access": true,
+  "no_network_calls": true,
+  "no_source_helper_sync_git_modification": true,
+  "release_ready": false,
+  "boundary": "Summary and exact references only. Original seven workflows, rejected raw content, frozen model source, baseline and public gateway observations are not rewritten. Await final scoped source and one official zero-call path rebind."
+}

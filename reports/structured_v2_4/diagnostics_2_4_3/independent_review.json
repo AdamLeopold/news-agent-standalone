@@ -1,0 +1,69 @@
+{
+  "reviewed_at": "2026-10-22T15:54:32.906682+00:00",
+  "reviewer": "independent structured_review agent",
+  "scope": "Read-only semantic review of actual current_mixed_live Chinese brief/detail and English brief/detail, full source/catalog/plan. No services/models/database touched.",
+  "artifact": ".runtime/structured-reasoning-v4/clause-id-v3/real_batch_01/current_mixed_live.json",
+  "artifact_sha256": "1666044923acb667d3032c7e729d4f3afc601f288bbd8fabfb33e05c9a128517",
+  "core_sha256": "7b66352892b7a24d47cb2959a447425cc96d36446003e20f03f7850f1d9619ac",
+  "workflow_version": "ttf-news-standalone-2.4.3",
+  "status": "completed",
+  "model_calls": 5,
+  "source_and_variant_binding_errors": [],
+  "catalog_sha256": "e712804aa2ea0e3ece562085619b826e027a81b9593b1e4b5b922c232898983f",
+  "typed_plan_sha256": "66cc49a71ef2ba38bb38d17894b60ff0e26cf13ac99517ab0cee64b50de48ff9",
+  "overall": "Not accepted as a semantically complete mixed-news workflow: one P2 transmission-channel omission, despite successful source binding, consistent bilingual renderings and a supported aggregate upward direction.",
+  "confirmed_p2": [
+    {
+      "source_id": "N2",
+      "fact_id": "F5",
+      "evidence_id": "N2.76e929b3",
+      "issue": "Explicit future Sabine Pass LNG liquefaction/export expansion is normalized as region_scope=unspecified, and the structural scope table therefore hard-vetoes all non-background transmission.",
+      "source_quote": "Through Cheniere Energy Partners, L.P. (NYSE: CQP), we are developing an expansion of the existing Sabine Pass Liquefaction Project (“SPL Project”) with an expected total peak production capacity of up to approximately 20 mtpa of LNG (the “SPL Expansion Project”), inclusive of estimated debottlenecking opportunities, which would grow the total production capacity of the SPL Project to over 50 mtpa of LNG. We expect to execute the SPL Expansion Project in a phased approach. The first phase is expected to include a single train, Train 7, and a boil-off gas re-liquefaction unit, along with supporting infrastructure and tie-ins to the existing Sabine Pass LNG terminal, and has an expected total production capacity of over 6 mtpa of LNG, inclusive of estimated debottlenecking opportunities. In May 2026, the lump sum, turnkey engineering, procurement, and construction (EPC) contract with Bechtel Energy, Inc. (“Bechtel”) for the first phase of the SPL Expansion Project was signed, and Bechtel was released to commence early engineering and procurement under a limited notice to proceed (LNTP).\n",
+      "actual_fact": {
+        "kind": "future_project_development",
+        "region_scope": "unspecified",
+        "realization": "future",
+        "supply_chain_role": "lng_export"
+      },
+      "actual_mechanism": {
+        "id": "M7",
+        "fact_id": "F5",
+        "source_id": "N2",
+        "kind": "future_supply",
+        "sign": -1,
+        "allowed_scopes": [
+          "background"
+        ],
+        "group": "2221a75361f049315f77be94:future_supply",
+        "description_zh": "潜在未来供给增加",
+        "description_en": "potential future supply expansion",
+        "attributes": {}
+      },
+      "actual_use": {
+        "mechanism_id": "M7",
+        "weight": 0,
+        "confidence": 0.3,
+        "scope": "background",
+        "importance_reason": "low_window_materiality"
+      },
+      "severity_basis": "Unlike the preceding 2.4.2 Europe-vs-global_LNG metadata error, this unspecified label changes allowed_scopes to background and removes a source-established future LNG-export supply channel before the model can judge its window relevance. A specific European destination is not required to identify a global tradeable LNG export-supply project. This finding does not require a nonzero importance weight: a justified zero model judgement remains permissible once the actual economic channel is available.",
+      "observed_effect": "Future downside supply mechanism is visible only as background and contributes -0.0. Final news and close remain up from operator constraints; an unchanged final direction does not cure omitted countervailing analysis."
+    }
+  ],
+  "p3": [
+    {
+      "source_id": "N5",
+      "issue": "Cook Inlet completed geotechnical survey is technology_test plus a coarse corporate_contract from the same paragraph; proposed import-capacity context is still not separately normalized.",
+      "effect": "No new gas production, current import flow or incremental final demand asserted; zero background, original source paragraph retained."
+    }
+  ],
+  "passed": [
+    "All selected ordinary facts restore exact source title/paragraph, full quote hashes and original source ID/version.",
+    "Cheniere LNG export role is now correctly lng_export, future; SPA/May EPC are corporate background rather than global incremental consumption or current production.",
+    "OneSubsea remains technology background rather than unsupported European physical production expansion.",
+    "Gassco current/future capacity, revision relief and correlated Åsgard group maximum remain distinct; announced capacity is not claimed as measured lost flow.",
+    "Chinese, English and detail share the same catalog/plan and direction, with zero additional explanation/translation inference calls.",
+    "Current and prior-price observations are same-contract reference anchors; no official settlement accuracy claim."
+  ],
+  "boundary": "This report applies only to the frozen 2.4.3 private mixed run. It does not rewrite or supersede the independent 2.4.2 five-case report, formal original prediction rows, failed attempts or acceptance baseline."
+}

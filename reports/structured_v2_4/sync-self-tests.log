@@ -1,0 +1,29 @@
+test_allowlist_script_names_and_detail_stages (__main__.SelfTests) ... ok
+test_arbitrary_or_incomplete_image_is_rejected (__main__.SelfTests) ... ok
+test_archives_and_runtime_are_forbidden (__main__.SelfTests) ... ok
+test_broken_json_fails (__main__.SelfTests) ... ok
+test_credentials_in_text (__main__.SelfTests) ... ok
+test_embedded_thinking_is_rejected_if_not_json_parseable (__main__.SelfTests) ... ok
+test_encoded_json_keeps_reasoning_configuration_under_public_alias (__main__.SelfTests) ... ok
+test_encoded_json_requires_both_recursive_and_original_text_identity (__main__.SelfTests) ... ok
+test_encoded_model_json_is_still_redacted_when_private_fields_exist (__main__.SelfTests) ... ok
+test_exact_reasoning_configuration_is_preserved_without_mutation (__main__.SelfTests) ... ok
+test_frozen_generation_fixture_is_published_with_its_test (__main__.SelfTests) ... ok
+test_local_path_keys_are_sanitized (__main__.SelfTests) ... ok
+test_nested_and_encoded_reasoning_configuration (__main__.SelfTests) ... ok
+test_non_configuration_think_values_are_removed (__main__.SelfTests) ... ok
+test_only_four_verified_ui_images_are_published_byte_exact (__main__.SelfTests) ... ok
+test_partial_private_key_is_rejected (__main__.SelfTests) ... ok
+test_provenance_trial_nested_evidence_is_explicit_and_complete (__main__.SelfTests) ... ok
+test_publication_manifest_distinguishes_source_and_derived_bytes (__main__.SelfTests) ... ok
+test_publication_manifest_excludes_self_and_paths_outside_allowlist (__main__.SelfTests) ... ok
+test_publication_manifest_rejects_missing_stale_changed_and_duplicate_maps (__main__.SelfTests) ... ok
+test_reasoning_configuration_conflict_never_overwrites (__main__.SelfTests) ... ok
+test_recursive_and_encoded_fields (__main__.SelfTests) ... ok
+test_safe_encoded_model_json_preserves_exact_original_bytes_and_hash (__main__.SelfTests) ... ok
+test_xml_paths_are_redacted (__main__.SelfTests) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.198s
+
+OK

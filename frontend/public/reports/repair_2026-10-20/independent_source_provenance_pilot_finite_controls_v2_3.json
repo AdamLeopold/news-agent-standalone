@@ -1,0 +1,57 @@
+{
+  "candidate_analysis_sha256": "f5ae74f4c5aaab81c8c40e9db737aab2b9baaf6d716d51eae18510df8131792a",
+  "base_analysis_sha256": "8ac01ca8120def7f963cdeab8f4eb0bd2dae4c71eb921a9ab5941f70bf1fe1a5",
+  "copied_base_is_exact_byte_prefix": true,
+  "plan_sha256": "dc6875635339a6d462879ca62030956ce213e4efcbe2874f47aaa33dd8679c62",
+  "independent_existing_tests_run": 7,
+  "independent_test_log": {
+    "file": "reports/repair_2026-10-20/independent-source-provenance-pilot-finite-tests-v2_3.log",
+    "sha256": "2f48e606759699adc9dfd0d37ee68411b8dfe46ed092f88833361ae9b1ed8e12"
+  },
+  "four_original_ninth_raw_bodies_still_rejected_after_table_removal": [
+    {
+      "case": "ninth_manual",
+      "attempt": 1,
+      "raw_sha256": "f06a20f96d14b0a9526753b691c0635195146aff9221105f952e54940b17001b",
+      "only_source_fact_checks_removed": true,
+      "still_rejected": true,
+      "error": "N0容量字段未指明原值为137.4/129.8/7.6mcm/d，不是13.0；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算"
+    },
+    {
+      "case": "ninth_manual",
+      "attempt": 2,
+      "raw_sha256": "8c7d220ba66d7ddaed0d84c89c35bce563092066420b222e6a0e5db046810592",
+      "only_source_fact_checks_removed": true,
+      "still_rejected": true,
+      "error": "news_impact.summary:输入未提供该消息的独立价格反应观测，不能断言未产生可观测价格反应/即时价格变动或可测市场影响；未见资料不等于观测为零。可保留弱传导/影响有限判断并明确反应未知，单个报价或消息前报价不是公告反应"
+    },
+    {
+      "case": "ninth_current",
+      "attempt": 1,
+      "raw_sha256": "863eb2979c2da33aa490255db341b8292dfd60e4a37cf5b52bb9bc6f22c6053a",
+      "only_source_fact_checks_removed": true,
+      "still_rejected": true,
+      "error": "N0容量字段available原值为129.8mcm/d，不是7.6；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算"
+    },
+    {
+      "case": "ninth_current",
+      "attempt": 2,
+      "raw_sha256": "2e07462be8969fa70485663d8aad0efe22dbe241a7ca618f93f298ce473edc78",
+      "only_source_fact_checks_removed": true,
+      "still_rejected": true,
+      "error": "价格时间角色不符：前日参考(2026-10-20)为85.062 EUR/MWh；当前报价(2026-10-21T04:36:00+00:00)为87.73 EUR/MWh；已观察当前对前日差为2.668。这不是前一交易日自身的涨跌；请明确前日参考/当前观察各自时钟，不把观察差当未来目标幅度或指定预测方向"
+    }
+  ],
+  "synthetic_corrected_time_role_control": {
+    "clearly_synthetic_not_actual": true,
+    "all_candidate_free_prose_gates_passed": true,
+    "model_output_source_table_not_injected": true,
+    "not_counted_as_accuracy_or_model_delivery": true
+  },
+  "backend_projection_flags_and_prepared_no_mutation_checked": true,
+  "all_current_root_source_hashes_match_plan": true,
+  "new_model_calls": 0,
+  "network_calls": 0,
+  "database_access": false,
+  "source_modification": false
+}

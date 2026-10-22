@@ -1,0 +1,15 @@
+{
+  "tests": 729,
+  "subtests": 375,
+  "report_helper_sha256": "d419de91bd6eed03a47b2adb594cd59d9c1d3aa00b3df747fe6695a7accfbcd8",
+  "artifacts": [
+    {
+      "file": "reports/repair_2026-10-20/pre-real-anchor-label-split-unit-tests.xml",
+      "sha256": "631f3aca480aa883cae46e4612c60411c4135cf80a8d4376b30889b0575edbfe"
+    },
+    {
+      "file": "reports/repair_2026-10-20/pre-real-anchor-label-split-unit-tests.log",
+      "sha256": "97ad5d3dfa559e15ee7d08afb3b69469f528c8c6d66220d677a3b9051ef57cb6"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "created_at": "2026-10-20T21:04:56.359041+00:00",
+  "source_sha256": {
+    "ttf_news/analysis.py": "3b67ad8d17b465be7f9a2e02b26ed3e3ea07ba71ccd60cba1f986b4f13e7e298",
+    "ttf_news/semantics.py": "e6c49b09507a3a272cc67773e14b8bca8b8c4d061794e54022d095f90f7d9c2b",
+    "ttf_news/context.py": "6ae94608797de98b1129f673af219bde7e88faba1f4cf73a7456058d7350b23f",
+    "ttf_news/prompts.py": "530d03e685092c9992bee59b20ce7ce4a2e34a8bcbe6805eafa024fa590d3570"
+  },
+  "scope": "Only post-generation notice-capacity source binding, measured-flow assertion scope, zero-announcement-reaction assertions, hypothetical prospective supply and future well action tense. No model requests or direction labels rewritten.",
+  "generation_changes": {
+    "prepare_context": false,
+    "system_prompt": false,
+    "response_schema": false,
+    "decoder_prefix": false,
+    "model_request_payload": false,
+    "inference_budget_or_attempts": false,
+    "retry_diagnostics_can_change": true
+  },
+  "tests": {
+    "command": ".venv/bin/python -m pytest -q tests/test_notice_capacity_binding.py tests/test_detail_source_scope.py tests/test_semantics.py tests/test_reviewed_prose.py tests/test_generation_boundaries.py tests/test_settlement_anchor.py --tb=short",
+    "passed": 223,
+    "subtests_passed": 313,
+    "elapsed_seconds": 12.24
+  },
+  "no_model_calls": true,
+  "no_network_calls": true,
+  "production_database_mutations": false,
+  "records": [
+    {
+      "analysis_id": "1508ce10-8dd8-4ab7-adb6-3e4da345b095",
+      "part": "brief",
+      "attempt": 1,
+      "fixture": "tests/fixtures/live_same_facility_paired_capacity_1508.json",
+      "fixture_sha256": "a15659550038b2b238708654e857e5253385bb9448e7f47efbc0af63e1950d84",
+      "raw_content_sha256": "25c5f3961c49089259ae69f070cef73d216f82ad7979f34c88024551f40c6482",
+      "original_validation_errors": [
+        "N0容量字段未指明原值为137.4/129.8/7.6mcm/d，不是13.0；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算",
+        "news_impact.summary:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景"
+      ],
+      "current_errors": [],
+      "result_unchanged": true,
+      "original_terminal_status_not_rewritten": true
+    },
+    {
+      "analysis_id": "1508ce10-8dd8-4ab7-adb6-3e4da345b095",
+      "part": "brief",
+      "attempt": 2,
+      "fixture": "tests/fixtures/live_same_facility_paired_capacity_1508.json",
+      "fixture_sha256": "a15659550038b2b238708654e857e5253385bb9448e7f47efbc0af63e1950d84",
+      "raw_content_sha256": "956389fbe1b3cba4dd78b2c0c197a4d9420ed1401bedb99d25cfbb9472e19f66",
+      "original_validation_errors": [
+        "N0容量字段available原值为129.8mcm/d，不是13.0；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算",
+        "news_impact.summary:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景"
+      ],
+      "current_errors": [
+        "news_impact.neutralizing_evidence[0]:输入没有这条公告的价格反应观测，不能断言未影响当前价格或价格未受影响；可判断当前新闻压力较弱、未来公告不计作当前停供，并说明价格反应未知"
+      ],
+      "result_unchanged": true,
+      "original_terminal_status_not_rewritten": true
+    },
+    {
+      "analysis_id": "7866a10d-fd69-4ab4-b1e4-20297a9dbc28",
+      "part": "detail",
+      "attempt": 1,
+      "fixture": "tests/fixtures/live_detail_scope_and_future_sequence_7866.json",
+      "fixture_sha256": "880ce33ccee986c43a6a974f04c8c1648abb39658d4d40f0deb0b49616ae68f1",
+      "raw_content_sha256": "7c13eba23d43e52ac640bcfc9adc3839e5ce33b025fe255e2af647e9922e733e",
+      "original_validation_errors": [
+        "news_impact.summary:Gassco公告撤销/结束或实际流量未确认，不能证明未形成供需冲击、供应不受影响或实际流量无变化；须有独立无变化计量事实。可写输入未显示冲击证据或恢复待核实，不能把缺测写成无冲击"
+      ],
+      "current_errors": [
+        "news_impact.summary:Gassco公告撤销/结束或实际流量未确认，不能证明未形成供需冲击、供应不受影响或实际流量无变化；须有独立无变化计量事实。可写输入未显示冲击证据或恢复待核实，不能把缺测写成无冲击"
+      ],
+      "result_unchanged": true,
+      "original_terminal_status_not_rewritten": true
+    },
+    {
+      "analysis_id": "7866a10d-fd69-4ab4-b1e4-20297a9dbc28",
+      "part": "detail",
+      "attempt": 2,
+      "fixture": "tests/fixtures/live_detail_scope_and_future_sequence_7866.json",
+      "fixture_sha256": "880ce33ccee986c43a6a974f04c8c1648abb39658d4d40f0deb0b49616ae68f1",
+      "raw_content_sha256": "c3f3c090e67180e940498b7d5fa89848afb96471f73e525402f22162c5378228",
+      "original_validation_errors": [
+        "detail.invalidation_conditions[0]:N0输入仅有资源发现/勘探/许可/合作前瞻，未给已投产或实际交付事实；不能写成当前实物增供并抵消当日容量约束。可分析长期供给预期、未来投产条件及其与当前供给的时间差，不得据此补默认方向"
+      ],
+      "current_errors": [
+        "detail.new_facts[0]:N0来源仅说该井将封堵/弃置（will now be plugged and abandoned），不能写已被永久封堵/已完成封井，事实叙述的随后封井须有将/计划/下一步等未来标记；实际has been/was plugged完成事实须有相应来源，不改新闻或收盘方向"
+      ],
+      "result_unchanged": true,
+      "original_terminal_status_not_rewritten": true
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "policy_id": "ttf-explicit-error-release-v1",
+  "expected_prompt_version": "ttf-news-standalone-2.3",
+  "status": "not_ready_production_detail_not_delivered",
+  "main_report_sha256": null,
+  "evidence": {
+    "independent_review": {
+      "file": "reports/repair_2026-10-20/independent_release_review_v2_3.json",
+      "sha256": null
+    },
+    "live_smoke": {
+      "file": "reports/repair_2026-10-20/live_smoke_test.json",
+      "sha256": null
+    },
+    "error_ui": {
+      "file": "reports/repair_2026-10-20/error_ui_composite_final_binding_v2_3.json",
+      "sha256": null
+    },
+    "public_scan": {
+      "file": "reports/repair_2026-10-20/public_scan_final.json",
+      "sha256": null
+    },
+    "frontend_build": {
+      "file": "reports/repair_2026-10-20/frontend-build.log",
+      "sha256": null
+    },
+    "backend_deployment": {
+      "file": "reports/repair_2026-10-20/backend_conditional_scope_deployment_v2_3.json",
+      "sha256": "63e4c2a89b18a1489973cbe9f8ea581401d32639424de24926253689ed945eab"
+    }
+  },
+  "note": "Final 7715/d47b deployment and 774+375 test evidence are available, but all four actual production E2E attempts remained failed. Fourth EPCM brief and English-3 passed; its detail is unavailable. Required complete production workflow and independent three-role review are absent. Preserve every prior failure; do not mark isolated failed detail or production errors as valid predictions. No publication approval/ready decision is implied.",
+  "production_attempt_history": {
+    "file": "reports/repair_2026-10-20/production_e2e_attempt_history_v2_3.json",
+    "sha256": "1e1f1357dd6ccb30df4eb4d55594aea9aae5ef64037ec0bfd06880b7b6092722"
+  },
+  "updated_at": "2026-10-20T23:35:27.794130+00:00"
+}

@@ -1,0 +1,27 @@
+{
+  "applied": true,
+  "files": [
+    {
+      "file": "ttf_news/analysis.py",
+      "sha256": "bcd240a893a87e842fc8caff8f4efa156f80cac7d8807b2c8c4c3a8599bfcdfa"
+    },
+    {
+      "file": "ttf_news/semantics.py",
+      "sha256": "3fcdf8708e49be0bc7060e0e97f45fbfcf5262dabdfc431d70aca0a748791ff7"
+    },
+    {
+      "file": "tests/test_eighth_output_scope.py",
+      "sha256": "883452ffb99481b6b70b49fe66861b8cb1f94fb0436d1567ee94f7fc28ecb1ce"
+    },
+    {
+      "file": "tests/fixtures/eighth_output_scope_actual_v2_3.json",
+      "sha256": "4257821205395fe7dc66123e93b04db7a0c9ca9849f23130a0bda6bfc78f4987"
+    }
+  ],
+  "candidate_proof_sha256": "60ef555a3045f8bd09b70958d7d69cca6b3a2e38b89935de97f9f4a0ea122afa",
+  "model_calls": 0,
+  "previous_runtime_source_archived": true,
+  "canonical_predictions_modified": false,
+  "shared_input_change": "Physical mechanism candidates cannot borrow a verb across a comma or from a price predicate; complete per-input path replay will determine actual affected model cases.",
+  "scope": "Code/test application only, no running-backend or real-model pass claimed."
+}

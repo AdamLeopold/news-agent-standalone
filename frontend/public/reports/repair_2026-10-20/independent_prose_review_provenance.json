@@ -1,0 +1,41 @@
+{
+  "created_at": "2026-10-20T19:34:33.989830+00:00",
+  "review_method": "Independent full input and prose review; diagnostic-target false positive and actual causal error recorded separately. No current-policy validation is claimed.",
+  "no_model_calls": true,
+  "no_network_calls": true,
+  "no_database_access": true,
+  "original_files_unchanged": true,
+  "records": [
+    {
+      "case": "real_eni",
+      "file": "reports/repair_2026-10-20/candidate-provenance-validation/real_eni.json",
+      "file_sha256": "5456f082bf109ff04bd5f032a7c49699fbcdf883c100f4e332ec329f7a30bafe",
+      "input_sha256": "0dd52f2daf32aeaf1edc94d3394b0df67eba21b6f8d1b3b6ca0652c0faf8f075",
+      "generation_source_sha256": {
+        "ttf_news/analysis.py": "16b8e1433a87ae38f6a7306fe9841fdf2f14e592f8fc64dfc8280e9203f03bd4",
+        "ttf_news/semantics.py": "7bf1c7017c15ff2b2b80a0986ef91001d7670e8cfe211f20270f6a1b155cb8e9",
+        "ttf_news/prompts.py": "c4bd1b92bfcacf2d2239c33ddccce2d3a7bd97c87eaf288355de916237ef2c56"
+      },
+      "recorded_contract_passed": false,
+      "has_final_result": false,
+      "recorded_error": "模型JSON两次校验失败，未生成方向：analysis.summary:缺少公告前后价格反应，不能宣称未计入价格/尚未计价；价格反应未知与未计价不同，未来容量公告也可经预期影响当前价格",
+      "verdict": "failed_real_unknown_flow_zero_impact_with_misclassified_pricing_diagnostic",
+      "notes": [
+        "首轮仍将当前项目无来源写成尚未投产，应拒；引用来源元数据恢复没有改变这项实质事实错误。",
+        "第二轮N3/N7仍为当前有效的容量约束且实流未知，news.summary直接写“但缺乏实际流量证据，故不计入价格冲击”，bullish为空、score为0，抹去了有条件供应风险。问题是缺测推无冲击，不是因为flat标签。",
+        "analysis.summary同样写“缺乏实际流量确认，故未计入价格冲击”，这里是分析者的影响计算，不是断言市场未计价；原机器报错将该句当市场计价判断，诊断对象不准确。纠正诊断不意味着该回答因果有效。",
+        "全JSON重生在纠正投产断言时引入新的风险丢失；后续定位草稿修复策略需另做实际调用，并记录旧两次路径与新策略不同。原失败、raw、fixture与预测记录不改写。"
+      ],
+      "attempts": [
+        {
+          "attempt": 1,
+          "raw_sha256": "94e6a1433a9de34904eb23fdaf83f2ec269040ecc6db38efaaf84c424521bcce"
+        },
+        {
+          "attempt": 2,
+          "raw_sha256": "2b3d5100dc9e06c76109b9fefa9aca659d669a78f084246c2091774099be3384"
+        }
+      ]
+    }
+  ]
+}

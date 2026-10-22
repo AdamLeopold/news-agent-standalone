@@ -1,0 +1,31 @@
+{
+  "policy_id": "ttf-explicit-error-release-v1",
+  "main_report_sha256": null,
+  "evidence": {
+    "independent_review": {
+      "file": "reports/repair_2026-10-20/independent_release_review_v2_1.json",
+      "sha256": null
+    },
+    "live_smoke": {
+      "file": "reports/repair_2026-10-20/live_smoke_test.json",
+      "sha256": null
+    },
+    "error_ui": {
+      "file": "reports/repair_2026-10-20/error_ui_composite_final_binding_v2_1.json",
+      "sha256": "a9dde58f08fc80283f1e12e3ef3aaa9dd97d71a70c3044a814ffaf876a59afad"
+    },
+    "public_scan": {
+      "file": "reports/repair_2026-10-20/public_scan_final.json",
+      "sha256": null
+    },
+    "frontend_build": {
+      "file": "reports/repair_2026-10-20/frontend-build.log",
+      "sha256": "ba87b57b151b0abc9e47bea40a091f9c930524c9bbcfeebd5ca88f1015ff0be8"
+    },
+    "backend_deployment": {
+      "file": "reports/repair_2026-10-20/backend_numeric_scope_deployment.json",
+      "sha256": "6b47f8566bad5cb964f778bb85b9de8a8e6b2437cbc8834e0a4bf1913b49a190"
+    }
+  },
+  "note": "Pending full v2.1 manual/detail/English/current-live independent review, final snapshot scan and known-error closures. Current completed UI composite and final backend proofs are anchored; this is not release approval. Rebuild/anchor main report only after all actual evidence is complete."
+}

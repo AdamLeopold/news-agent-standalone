@@ -1,0 +1,14 @@
+{
+  "status": "applied",
+  "canonical_analyses_modified": false,
+  "reviews": [
+    {
+      "analysis_id": "341746e5-d870-42ad-8034-97eba9f389d2",
+      "affected_parts": [
+        "brief"
+      ],
+      "protected_hashes_match": true,
+      "review_id": "price-denomination-341746e5-d870-42ad-8034-97eba9f389d2-brief-v1"
+    }
+  ]
+}

@@ -1,0 +1,468 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T06:14:06.167779+00:00",
+  "scope": "Complete four raw Chinese attempts, immutable source/price clocks, original failure diagnostics, and terminal workflow; no score-only review.",
+  "manual_record": {
+    "file": "reports/repair_2026-10-20/production_tenth_manual_brief_actual_v2_3.json",
+    "sha256": "67d4081b36e18224d32c72abff7d4dff7e64d38d4c13cbc54495a475c03cb2d8"
+  },
+  "current_record": {
+    "file": "reports/repair_2026-10-20/production_tenth_current_live_actual_v2_3.json",
+    "sha256": "e64ff7e0db32b865251822f5046456291ad331a677ff975adbae2e1757114b9d"
+  },
+  "workflow": {
+    "file": "reports/repair_2026-10-20/production_tenth_full_workflow_v2_3.json",
+    "sha256": "a1c2e21381f4876ba303c775a53e07a48507276d8172a724398b49cb4f3a2841"
+  },
+  "actual_generation_deployment": {
+    "file": "reports/repair_2026-10-20/backend_output_contract_resumed.json",
+    "sha256": "fde9a2422153122be617f53f8af031368482f73349127131d75471af43b3a50e"
+  },
+  "actual_generation_pid": 64920,
+  "actual_generation_source_sha256": {
+    "ttf_news/__init__.py": "8c8cd11a26b7ab448afd21fac31ccab3a58c0fedf9387cd878bd2a055f5a575c",
+    "ttf_news/analysis.py": "1aebeb8971f13f61fd8bd4f9ab961b6284e811aeb773014ef7cc71874c94375c",
+    "ttf_news/api.py": "bb7233f3e48df6ff5b9022483d5ab6163864349e9902b7e9f93dbe7a64d2eb75",
+    "ttf_news/backfill.py": "2816165f0b7fcd59b978493d062cdcce921e0007a1694653c7e7fc2fdbdc7f4a",
+    "ttf_news/calendar.py": "f4eadecdf8c15a9d4aae6fd4d1a7a3a264854e7c79cfe339c0b56bea0ba7daf4",
+    "ttf_news/candles.py": "d7d2d9200e1e6c8280a494dd2851cabde7fcd9393e77a42d71fd1ff2e30f5fa4",
+    "ttf_news/cli.py": "d249383774dbf67dfcb0df25566266106f05c701e72c1f2b701305d584185edd",
+    "ttf_news/config.py": "d62b597155bfacf4e14f4df0605eaf263824e3ed8bbd0be929911bec02d944e2",
+    "ttf_news/context.py": "c916f34c0ebd12279f53f729a5652ccabd3e937044174cefdf0f82149450f181",
+    "ttf_news/coverage.py": "8f276bae6e953543bd16e2807558c6ae4d5932cc4309eee498d691718c25262f",
+    "ttf_news/evaluation.py": "0dfe6651fbe434f83c97c33a4415ca7a76e72bc38b3479dc4f8731c9b91fdbb7",
+    "ttf_news/evidence.py": "20aafc8058367d62a3652ed9ae32d6662c5c68ae00fe982df9f35c9bafec6987",
+    "ttf_news/export.py": "4ee37332f1396d1a104b1915b67f781e7136b755833b9e75f8788b710a100825",
+    "ttf_news/ingest.py": "ba39126f1315be269b7fc7a2d90259fb2d64e5122da8c34732816db25b41b195",
+    "ttf_news/labels.py": "27d286878df545a59b24ab3544adc7ffb33050dd190b100c08044e5ce00a2d81",
+    "ttf_news/legacy.py": "bfe2edc2c2c980b7b7b99d72370a06009c3eb6ce16fe0c526001c03feabdfa7e",
+    "ttf_news/market.py": "13c3aa76c01536c15f2ca88e44f5e8ddebef89428b8fcf101d4ee69335b3e68a",
+    "ttf_news/prices.py": "7c200a96203cea2f402c885755a60133742ed6edd9736e0db826ef4458488918",
+    "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d",
+    "ttf_news/public_gateway.py": "08990e223d5e7d1d348967c9625fd29fc2d1e7e58bb000c964b9cfea43b59952",
+    "ttf_news/retrieval.py": "817013b956c219b7a1f97614257f9bb056174291e57f5f65b82e7d681230ae8e",
+    "ttf_news/runtime.py": "014c710240b6ac32d4acced1969492e4f6ff4b45bc9d949dbd752771e7fa7aa1",
+    "ttf_news/schemas.py": "236c50d747bb3e284774a0a26051a2910679c8b9740752610236b530037eefa0",
+    "ttf_news/score_report.py": "31db50860069cf9647084b7ad27ec97472a3697d449577fbff4ad104270103b1",
+    "ttf_news/semantics.py": "d054bc812a80e0d28bfc95a098731b6b556ad0304a9775db0ec4d00d660d2d9a",
+    "ttf_news/source_facts.py": "6d35dd1c816d47e20aa44825f9c9d0d4bd0965f2476af9a8c5200a9a7a94d2e9",
+    "ttf_news/store.py": "1dfed0e276625f72a8f3022cf666f0b09e3747bad7285a51740cb9f3f7811b89",
+    "ttf_news/translation.py": "d47b232a5f77ea68e2d5bc5d092021e9727e555c6b1dd702922325519982d7c5"
+  },
+  "model_digest": "17052f91a42e97930aa6e28a6c6c06a983e6a58dbb00434885a0cf5313e376f7",
+  "prompt_version": "ttf-news-standalone-2.3",
+  "actual_profile": {
+    "num_ctx": 16384,
+    "num_predict": 3072,
+    "original_source_fact_table_and_long_prefix_retained": true,
+    "request_reasoning": "medium"
+  },
+  "source_facts": {
+    "target_window": [
+      "2026-10-20T15:15:00+00:00",
+      "2026-10-21T15:15:00+00:00"
+    ],
+    "manual_as_of": "2026-10-21T05:59:31.647581+00:00",
+    "current_as_of": "2026-10-21T05:59:29.549589+00:00",
+    "future_notice": {
+      "manual_aliases": [
+        "N0",
+        "N1"
+      ],
+      "current_alias": "N0",
+      "news_id": "90bfbf6adb1183517cbc00ca",
+      "message_id": "2026-252-A________________001",
+      "utc_interval": [
+        "2026-10-22T04:00:00+00:00",
+        "2026-10-23T04:00:00+00:00"
+      ],
+      "unavailable_mcm_d": 7.6,
+      "available_mcm_d": 129.8,
+      "facility_type": "Gas production field",
+      "actual_flow": "unknown"
+    },
+    "current_notice": {
+      "alias": "N2",
+      "news_id": "a21b1cffbd1454613a5d0793",
+      "version": 4,
+      "utc_interval": [
+        "2026-10-21T04:00:00+00:00",
+        "2026-10-22T04:00:00+00:00"
+      ],
+      "unavailable_mcm_d": 13.0,
+      "available_mcm_d": 124.3,
+      "facility_type": "Other / specific type not provided",
+      "end_revision": "2026-10-23T04:00Z to2026-10-22T04:00Z",
+      "actual_flow": "unknown"
+    },
+    "price": {
+      "available": true,
+      "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+      "contract_name": "Nov26",
+      "price_type": "reference",
+      "intraday": {
+        "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+        "contract_id": "6277389",
+        "contract_name": "Nov26",
+        "value": 88.105,
+        "observed_at": "2026-10-21T05:48:00+00:00",
+        "available_at": "2026-10-21T05:59:11.663366+00:00",
+        "unit": "EUR/MWh",
+        "source": "ICE public delayed market data",
+        "source_url": "https://www.ice.com/products/27996665/Dutch-TTF-Gas-Futures/data",
+        "price_type": "delayed_last_trade",
+        "verified_settlement": false,
+        "minimum_delay_minutes": 15,
+        "volume": 177360,
+        "age_seconds": 691,
+        "stale": false
+      },
+      "verified": false,
+      "previous_price": 85.062,
+      "price_date": "2026-10-20",
+      "price_known_at": "2026-10-20T23:27:31.613875+00:00",
+      "reference_source": "ICE public chart",
+      "source_url": "https://www.ice.com/marketdata/api/productguide/charting/data/historical?marketId=6277389&historicalSpan=3",
+      "extreme_threshold": 4.546830435110782,
+      "sigma60": 2.273415217555391,
+      "threshold_frozen_as_of": "2026-10-21T05:59:31.647581+00:00",
+      "flat_delta": 0.3,
+      "observation_count": 702,
+      "risk_flags": [
+        "价格类型尚未验证为ICE官方日结算，不用于官方结算评分"
+      ],
+      "market_baseline": {
+        "available": true,
+        "kind": "observed_reference_move",
+        "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+        "as_of": "2026-10-21T05:59:31.647581+00:00",
+        "verified_settlement": false,
+        "flat_band": 0.3,
+        "interpretation": "已观察同合约参考变化；延续或反转均为待验证情景，不是目标日已实现结算",
+        "previous_price": 85.062,
+        "previous_date": "2026-10-20",
+        "latest_price": 88.105,
+        "observed_delta": 3.043,
+        "observed_direction": "up",
+        "observed_at": "2026-10-21T05:48:00+00:00",
+        "available_at": "2026-10-21T05:59:11.663366+00:00",
+        "price_type": "delayed_last_trade",
+        "source_url": "https://www.ice.com/products/27996665/Dutch-TTF-Gas-Futures/data",
+        "reference_source_url": "https://www.ice.com/marketdata/api/productguide/charting/data/historical?marketId=6277389&historicalSpan=3",
+        "minimum_delay_minutes": 15,
+        "extreme_threshold": 4.546830435110782
+      },
+      "settlement_anchor": {
+        "available": true,
+        "target_trade_date": "2026-10-21",
+        "expected_previous_trade_date": "2026-10-20",
+        "reference_date": "2026-10-20",
+        "contract": "ICE:DUTCH_TTF_GAS_FUTURES:D.6277389",
+        "known_time_precision": "exact",
+        "scope": "仅目标日前一交易日同合约参考价可作前结算比较；其他日价不是昨收",
+        "reason": "exact_previous_trading_day_same_contract"
+      }
+    },
+    "manual_input_sha256_store_serialization": "49c9f2cc5b536460c5edf1ce195e13d38d5502cb4b2f0c4f489569249a7fd210",
+    "current_input_sha256_store_serialization": "30df99b0b9989bef047024aec0274cbd1abcd9527fcf4c0107f8faa37feb73b0"
+  },
+  "manual": {
+    "id": "869b5b7d-6a09-4097-b23f-9a99159ad1fe",
+    "original_status": "failed",
+    "result_is_null": true,
+    "actual_attempts": 2,
+    "call_reviews": [
+      {
+        "raw_sha256": "835f1593517ada79f6eddc62b32d217a209a35c18294a8937f4449c817334f79",
+        "body_canonical_sha256": "0fa8c714fc85d424a573ec1a19ab140391da04bccfc7ffdba23cc8c0f65f4c1d",
+        "all_fields_reviewed": [
+          "source_fact_checks",
+          "news_impact",
+          "close_forecast",
+          "analysis",
+          "risk_flags",
+          "references",
+          "missing_fields"
+        ],
+        "original_validation_errors": [
+          "N1容量字段未指明原值为137.4/129.8/7.6mcm/d，不是13.0；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算",
+          "价格时间角色不符：前日参考(2026-10-20)为85.062 EUR/MWh；当前报价(2026-10-21T05:48:00+00:00)为88.105 EUR/MWh；已观察当前对前日差为3.043。这不是前一交易日自身的涨跌；请明确前日参考/当前观察各自时钟，不把观察差当未来目标幅度或指定预测方向"
+        ],
+        "directions_as_generated": {
+          "news": "flat",
+          "close": "up"
+        },
+        "done_reason": "stop",
+        "eval_count": 1714,
+        "risk_note_duplicate_facts_do_not_validate_free_prose": true,
+        "verdict": "true_error_rejected_with_secondary_false_positive",
+        "material_known_logic_errors": [
+          {
+            "path": "close_forecast.basis",
+            "exact_text": "前一交易日参考价从85.062升至88.105，观察到上涨3.043",
+            "verdict": "unsupported_temporal_role",
+            "severity": "P2",
+            "reason": "85.062 is the previous-day reference;88.105 is the current21Oct05:48 quote. The previous reference did not itself rise to today’s value."
+          },
+          {
+            "path": "close_forecast.summary",
+            "exact_text": "基于前一交易日参考价上涨",
+            "verdict": "reinforces_wrong_temporal_role",
+            "severity": "P2",
+            "reason": "This conclusion repeats the wrong observed-price time role."
+          }
+        ],
+        "false_positive_diagnostics": [
+          {
+            "diagnostic": "N1容量字段未指明原值为137.4/129.8/7.6mcm/d，不是13.0；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算",
+            "scope": "news_impact.summary / analysis.summary multi-notice capacity binding",
+            "reason": "7.6 and13.0 are separate sourced unavailable-capacity rates, source prefixes distinguish N0/N2, and no aggregation or explicit N1=13 occurs. Defaulting the whole Troll statement to N1 creates the mismatch."
+          }
+        ],
+        "qualifications": [
+          "The brief lists N2’s shortened end but does not explain its marginal easing versus the new subsequent7.6 notice; retain P3 mechanism-completeness limitation.",
+          "news flat with weak positive pressure is not itself an error or verified market label."
+        ]
+      },
+      {
+        "raw_sha256": "f2724706fd925357cb4da7138c08d986067b9a252147afd7dd13a5f8f38aafa9",
+        "body_canonical_sha256": "dc9232b0d492529f292e1d02aaaa5d3fb903a3c21d11fa39e5c85c11a7f573a3",
+        "all_fields_reviewed": [
+          "source_fact_checks",
+          "news_impact",
+          "close_forecast",
+          "analysis",
+          "risk_flags",
+          "references",
+          "missing_fields"
+        ],
+        "original_validation_errors": [
+          "N1容量字段unavailable原值为7.6mcm/d，不是13.0；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算",
+          "没有校准价格预测输入，禁止编造上涨/下跌幅度或目标价；仅可引用输入已观察的同合约参考变化"
+        ],
+        "directions_as_generated": {
+          "news": "up",
+          "close": "up"
+        },
+        "done_reason": "stop",
+        "eval_count": 2137,
+        "risk_note_duplicate_facts_do_not_validate_free_prose": true,
+        "verdict": "no_confirmed_P2_original_failed_due_to_two_false_positives",
+        "material_known_logic_errors": [],
+        "false_positive_diagnostics": [
+          {
+            "diagnostic": "N1容量字段unavailable原值为7.6mcm/d，不是13.0；仅用该N编号的技术/可用/不可用原值，不能串用其他公告或重算",
+            "exact_text": "Troll气田计划维护导致可用容量下降13.0 mcm/d（当前）和7.6 mcm/d（未来），形成供应约束，推高TTF价格。",
+            "reason": "The summary expressly binds13.0 to current and7.6 to future. N2 andN1 evidence support those states. A decline in available capacity by13 is not an assertion that absolute available capacity is13."
+          },
+          {
+            "diagnostic": "没有校准价格预测输入，禁止编造上涨/下跌幅度或目标价；仅可引用输入已观察的同合约参考变化",
+            "exact_text": "市场基准显示前日参考价85.062 EUR/MWh，当前报价88.105 EUR/MWh，涨幅3.043 EUR/MWh，未见新闻对价格产生即时反应，预计价格将继续维持在前日水平之上。",
+            "reason": "85.062 previous reference and88.105 current quote are explicitly separated.3.043 is the observed same-contract delta known before as_of; the second summary says观察到的. It is not an invented future price target/magnitude."
+          }
+        ],
+        "paired_scope_requirements": [
+          "Do not allow explicit N1=13, reversed current/future assignment, absolute available=13, future-target3.043, wrong contract/unit/sign, or a quote unavailable at as_of.",
+          "A corrected diagnostic gate must still run every other source,flow,pricing,time anddirection check before acceptance."
+        ],
+        "qualifications": [
+          {
+            "path": "close_forecast.extreme_move_risk",
+            "exact_text": "无极端变动风险；价格变动在正常波动范围内。",
+            "verdict": "overly_absolute_tail_risk_wording",
+            "severity": "P3",
+            "reason": "The observed delta3.043 is below the frozen4.546830435110782 threshold. This supports a nonextreme observed move, not a guarantee of no future extreme risk. Retain P3; do not present this as a safety guarantee."
+          },
+          "推高TTF价格 is read in news_impact as a directional mechanism/pressure judgment, not evidence of a measured announcement-price reaction. priced_in_comment explicitly remains unknown.",
+          "未见新闻即时反应 is an epistemic statement under the established review boundary; it does not independently prove measured zero reaction.",
+          "The future7.6 notice has not yet physically reduced current supply; that does not prove it cannot affect current futures expectations.",
+          "The brief does not fully explain the N2 end-shortening marginal relief and N1 subsequent maintenance; retain P3 completeness limitation."
+        ],
+        "original_terminal_not_upgraded": true,
+        "prediction_accuracy_not_established": true
+      }
+    ],
+    "original_failed_not_reclassified": true
+  },
+  "current_live": {
+    "id": "98061279-0f33-4a8a-b681-bde26265480b",
+    "original_status": "failed",
+    "result_is_null": true,
+    "actual_attempts": 2,
+    "call_reviews": [
+      {
+        "raw_sha256": "9bbb0c87f89f45d9ec1eb29d8e1ec9cdd275d1e97718af058816b1757e405aab",
+        "body_canonical_sha256": "e6b13f4c6217cd3678950fe04f7da07a1d00d44a572b7867777d518bf79fc00a",
+        "all_fields_reviewed": [
+          "source_fact_checks",
+          "news_impact",
+          "close_forecast",
+          "analysis",
+          "risk_flags",
+          "references",
+          "missing_fields"
+        ],
+        "original_validation_errors": [
+          "该设施所述容量字段/数值没有匹配的N公告来源；下降额、绝对可用容量及公告类型须按同一来源核对",
+          "news_impact.neutralizing_evidence[0]、analysis.evidence[1]:缺少公告前后价格反应，不能宣称未计入价格/尚未计价；须区分计价未知",
+          "news_impact.neutralizing_evidence[0]:Gassco公告撤销/结束或实际流量未确认，不能证明未形成供需冲击、供应不受影响或实际流量无变化；须有独立无变化计量事实。可写输入未显示冲击证据或恢复待核实，不能把缺测写成无冲击"
+        ],
+        "directions_as_generated": {
+          "news": "flat",
+          "close": "up"
+        },
+        "done_reason": "stop",
+        "eval_count": 1536,
+        "risk_note_duplicate_facts_do_not_validate_free_prose": true,
+        "verdict": "true_errors_rejected",
+        "material_known_logic_errors": [
+          {
+            "path": "analysis.summary",
+            "exact_text": "Troll计划维护导致约20.6 mcm/d容量不可用",
+            "verdict": "nonoverlapping_rates_aggregated",
+            "severity": "P2",
+            "reason": "13 applies21Oct04→22Oct04Z;7.6 applies22Oct04→23Oct04Z. They cannot be summed as a simultaneous20.6mcm/d constraint."
+          },
+          {
+            "path": "news_impact.neutralizing_evidence[0] / analysis.evidence[1]",
+            "exact_text": "TTF机制：无实际流量损失，未计价",
+            "verdict": "unknown_to_zero_flow_and_unpriced",
+            "severity": "P2",
+            "reason": "Input provides neither independent zero-loss flow measurement nor announcement price-reaction evidence. Both conclusions exceed the source."
+          },
+          {
+            "path": "news_impact.summary",
+            "exact_text": "未提供独立流量计量，故未形成即时供给缺口",
+            "verdict": "missing_measurement_as_zero_gap",
+            "severity": "P2",
+            "reason": "Absence of measurement cannot establish a zero supply gap."
+          },
+          {
+            "path": "analysis.summary",
+            "exact_text": "市场基准价已上升但无明显反应",
+            "verdict": "unsupported_reaction_degree_observation",
+            "severity": "P2",
+            "reason": "A market baseline move does not identify announcement-specific reaction; reaction evidence is absent."
+          }
+        ],
+        "qualifications": [
+          "The risk-field statement无法排除价格已计价或未计价的可能 is two-sided uncertainty and is not itself a priced-in fact.",
+          "A generic capacity diagnostic does not identify every true defect, but the20.6 aggregate provides a substantive capacity error.",
+          "The news-flat label is not the reason this body fails."
+        ]
+      },
+      {
+        "raw_sha256": "d59f8c0a2e5aa0ec6ea239fedd9b5e82591d0ff499ff50f6689670ea16e9de82",
+        "body_canonical_sha256": "3ff54215df848d198f1486d7606dd72c617dd0fe2b9ea1ea15b876956607620c",
+        "all_fields_reviewed": [
+          "source_fact_checks",
+          "news_impact",
+          "close_forecast",
+          "analysis",
+          "risk_flags",
+          "references",
+          "missing_fields"
+        ],
+        "original_validation_errors": [
+          "分别列出的容量字段available含无来源数值7.6mcm/d；下降额与绝对可用容量须分开并逐公告匹配",
+          "close_forecast.extreme_move_risk:缺少公告前后价格反应，不能宣称已计价/已消化；须区分计价未知"
+        ],
+        "directions_as_generated": {
+          "news": "up",
+          "close": "up"
+        },
+        "done_reason": "stop",
+        "eval_count": 1475,
+        "risk_note_duplicate_facts_do_not_validate_free_prose": true,
+        "verdict": "true_capacity_field_error_rejected",
+        "material_known_logic_errors": [
+          {
+            "path": "news_impact.summary / analysis.summary",
+            "exact_text": "两天内可用容量分别为7.6和13.0 mcm/d",
+            "verdict": "unavailable_as_absolute_available",
+            "severity": "P2",
+            "reason": "7.6/13.0 are unavailable capacities. The actual absolute available values are129.8/124.3mcm/d. Correct copied prefixes do not cure the wrong free prose."
+          }
+        ],
+        "secondary_diagnostic_scope": [
+          {
+            "diagnostic": "close_forecast.extreme_move_risk:缺少公告前后价格反应，不能宣称已计价/已消化；须区分计价未知",
+            "exact_text": "缺乏独立流量确认，价格上升可能部分已计入；无显著反向回吐或新冲击",
+            "assessment": "Modal risk hypothesis is distinct from categorical已计价 or use of unknown pricing as a neutralizing directional premise. Prefer explicit conditional wording; do not claim every original diagnostic is independently true. The capacity-field P2 alone preserves the failed terminal."
+          }
+        ],
+        "qualifications": [
+          "The source-based observed85.062→88.105 comparison is legitimate and is not yesterday’s own return.",
+          "No20.6 rate aggregate appears in the second raw.",
+          "No measured announcement reaction is supplied; retain pricing unknown."
+        ]
+      }
+    ],
+    "original_failed_not_reclassified": true
+  },
+  "concrete_generation_and_validation_actions": [
+    {
+      "priority": 1,
+      "action": "Correct the two demonstrated validator false positives with source-bound paired controls, without bypassing any other guard.",
+      "boundaries": "Separate per-notice state/quantity association; recognize observed same-contract delta without accepting future targets or wrong time roles."
+    },
+    {
+      "priority": 2,
+      "action": "Canonicalize only an exact manual copy of a known official notice before preparing model facts.",
+      "reason": "The current manual source duplicates N1 but lacks structured clocks, producing N0reported_fact plus N1future while sharing the full MessageID/Event body.",
+      "boundaries": "Require exact nonempty full original title/body/MessageID, unique known interval, explicit source-index ID/version, and as_of filtering. Preserve original manual input and backend provenance; never match compressed reasons/facility/amount alone."
+    },
+    {
+      "priority": 3,
+      "action": "If studying typed fact pointers and renderer-composed source facts, isolate a versioned pilot and keep all free-prose/causal/time/price checks.",
+      "reason": "The prior simple copy-table/prefix-removal pilot was NO-GO and is not evidence that generative load reduction is effective.",
+      "must_not": "No automatic label assignment, no replacing original failed calls, no unsupported backend fact presented as model verification."
+    }
+  ],
+  "manual_detail_delivered": false,
+  "manual_english_delivered": false,
+  "current_english_delivered_or_reviewed": false,
+  "workflow_original_status": "failed",
+  "failed_stages": [
+    "manual_real_brief",
+    "current_live_forecast_v2"
+  ],
+  "missing_required_stages": [
+    "chinese_originals_unchanged_after_translation",
+    "current_live_forecast_v2",
+    "english_brief_actual_text_labels_numbers",
+    "english_detail_actual_text_labels_numbers",
+    "manual_detail_request",
+    "manual_real_brief",
+    "manual_real_detail",
+    "sse_completed_event_replay"
+  ],
+  "preservation_after": {
+    "passed": true,
+    "protected_analysis_count": 157,
+    "protected_nonnull_field_count": 291,
+    "current_analysis_count": 160,
+    "new_analysis_count": 3,
+    "protected_snapshot_count": 5,
+    "new_snapshot_count": 0,
+    "original_validation_record_count": 1,
+    "latest_baseline_unchanged": true,
+    "original_baseline": {
+      "id": 210,
+      "created_at": "2026-10-14T05:51:48.181167+00:00",
+      "type": "validation_started"
+    },
+    "failures": []
+  },
+  "release_ready": false,
+  "successful_complete_production_workflows_to_date": 0,
+  "attempt_count_to_date": 10,
+  "all_eight_known_error_families_remain_open": true,
+  "no_prediction_accuracy_claim": true,
+  "all_originals_preserved": true,
+  "new_model_calls": 0,
+  "database_access": false,
+  "network_calls": false,
+  "source_modification": false
+}

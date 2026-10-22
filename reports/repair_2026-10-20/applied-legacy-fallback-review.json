@@ -1,0 +1,14 @@
+{
+  "status": "applied",
+  "canonical_analyses_modified": false,
+  "reviews": [
+    {
+      "analysis_id": "91e13e0e-ee1c-458e-ade4-26f2f2930be3",
+      "affected_parts": [
+        "brief"
+      ],
+      "protected_hashes_match": true,
+      "review_id": "price-baseline-91e13e0e-ee1c-458e-ade4-26f2f2930be3-brief-v1"
+    }
+  ]
+}

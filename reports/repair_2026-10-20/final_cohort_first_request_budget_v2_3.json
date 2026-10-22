@@ -1,0 +1,217 @@
+{
+  "prompt_version": "ttf-news-standalone-2.3",
+  "method": "Pure first-request preparation and tokenizer estimate; no model/HTTP/DB calls. All original candidate contexts unchanged.",
+  "records": [
+    {
+      "id": "supply_loss_40",
+      "detail": false,
+      "estimated_request_tokens": 3459,
+      "input_ceiling": 4800,
+      "output_budget": 3072,
+      "fits": true,
+      "retained_window_news": 1,
+      "retained_history": 0
+    },
+    {
+      "id": "supply_restore_40",
+      "detail": false,
+      "estimated_request_tokens": 3460,
+      "input_ceiling": 4800,
+      "output_budget": 3072,
+      "fits": true,
+      "retained_window_news": 1,
+      "retained_history": 0
+    },
+    {
+      "id": "weak_exploration_no_quote",
+      "detail": false,
+      "estimated_request_tokens": 3380,
+      "input_ceiling": 4800,
+      "output_budget": 3072,
+      "fits": true,
+      "retained_window_news": 1,
+      "retained_history": 0
+    },
+    {
+      "id": "warm_heating_demand",
+      "detail": false,
+      "estimated_request_tokens": 3375,
+      "input_ceiling": 4800,
+      "output_budget": 3072,
+      "fits": true,
+      "retained_window_news": 1,
+      "retained_history": 0
+    },
+    {
+      "id": "cold_heating_demand",
+      "detail": false,
+      "estimated_request_tokens": 3376,
+      "input_ceiling": 4800,
+      "output_budget": 3072,
+      "fits": true,
+      "retained_window_news": 1,
+      "retained_history": 0
+    },
+    {
+      "id": "negated_outage",
+      "detail": false,
+      "estimated_request_tokens": 3316,
+      "input_ceiling": 4800,
+      "output_budget": 3072,
+      "fits": true,
+      "retained_window_news": 1,
+      "retained_history": 0
+    },
+    {
+      "id": "cumulative_shock_then_weak",
+      "detail": false,
+      "estimated_request_tokens": 3685,
+      "input_ceiling": 4800,
+      "output_budget": 3072,
+      "fits": true,
+      "retained_window_news": 2,
+      "retained_history": 0
+    },
+    {
+      "id": "weak_news_observed_market_up",
+      "detail": false,
+      "estimated_request_tokens": 3949,
+      "input_ceiling": 4800,
+      "output_budget": 3072,
+      "fits": true,
+      "retained_window_news": 1,
+      "retained_history": 0
+    },
+    {
+      "id": "supplied_conflicting_mechanisms",
+      "detail": false,
+      "estimated_request_tokens": 3326,
+      "input_ceiling": 4800,
+      "output_budget": 3072,
+      "fits": true,
+      "retained_window_news": 1,
+      "retained_history": 0
+    },
+    {
+      "id": "future_planned_notice",
+      "detail": false,
+      "estimated_request_tokens": 3635,
+      "input_ceiling": 4800,
+      "output_budget": 3072,
+      "fits": true,
+      "retained_window_news": 1,
+      "retained_history": 0
+    },
+    {
+      "id": "dismissed_notice_not_verified_recovery",
+      "detail": false,
+      "estimated_request_tokens": 3678,
+      "input_ceiling": 4800,
+      "output_budget": 3072,
+      "fits": true,
+      "retained_window_news": 1,
+      "retained_history": 0
+    },
+    {
+      "id": "real_nyhamna",
+      "detail": false,
+      "estimated_request_tokens": 12269,
+      "input_ceiling": 12800,
+      "output_budget": 3072,
+      "fits": true,
+      "retained_window_news": 9,
+      "retained_history": 5
+    },
+    {
+      "id": "real_eni",
+      "detail": false,
+      "estimated_request_tokens": 12502,
+      "input_ceiling": 12800,
+      "output_budget": 3072,
+      "fits": true,
+      "retained_window_news": 11,
+      "retained_history": 5
+    },
+    {
+      "id": "supply_loss_40_with_flat_baseline",
+      "detail": false,
+      "estimated_request_tokens": 3994,
+      "input_ceiling": 4800,
+      "output_budget": 3072,
+      "fits": true,
+      "retained_window_news": 1,
+      "retained_history": 0
+    },
+    {
+      "id": "supply_restore_40_with_flat_baseline",
+      "detail": false,
+      "estimated_request_tokens": 3995,
+      "input_ceiling": 4800,
+      "output_budget": 3072,
+      "fits": true,
+      "retained_window_news": 1,
+      "retained_history": 0
+    },
+    {
+      "id": "anchor_real_manual_missing_prevday",
+      "detail": false,
+      "estimated_request_tokens": 6898,
+      "input_ceiling": 12800,
+      "output_budget": 3072,
+      "fits": true,
+      "retained_window_news": 0,
+      "retained_history": 0
+    },
+    {
+      "id": "anchor_gap_supply_loss_40",
+      "detail": false,
+      "estimated_request_tokens": 4243,
+      "input_ceiling": 4800,
+      "output_budget": 3072,
+      "fits": true,
+      "retained_window_news": 1,
+      "retained_history": 0
+    },
+    {
+      "id": "anchor_gap_supply_restore_40",
+      "detail": false,
+      "estimated_request_tokens": 4268,
+      "input_ceiling": 4800,
+      "output_budget": 3072,
+      "fits": true,
+      "retained_window_news": 1,
+      "retained_history": 0
+    },
+    {
+      "id": "anchor_legal_prevday_weak_market_up",
+      "detail": false,
+      "estimated_request_tokens": 3950,
+      "input_ceiling": 4800,
+      "output_budget": 3072,
+      "fits": true,
+      "retained_window_news": 1,
+      "retained_history": 0
+    },
+    {
+      "id": "real_future_well_b1",
+      "detail": false,
+      "estimated_request_tokens": 8140,
+      "input_ceiling": 12800,
+      "output_budget": 3072,
+      "fits": true,
+      "retained_window_news": 0,
+      "retained_history": 4
+    },
+    {
+      "id": "supply_restore_40_with_flat_baseline",
+      "detail": true,
+      "estimated_request_tokens": 4375,
+      "input_ceiling": 4800,
+      "output_budget": 3072,
+      "fits": true,
+      "retained_window_news": 1,
+      "retained_history": 0
+    }
+  ],
+  "all_fit": true
+}

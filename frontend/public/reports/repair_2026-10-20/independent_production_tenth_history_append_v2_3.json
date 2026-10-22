@@ -1,0 +1,71 @@
+{
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "created_at": "2026-10-21T06:14:06.167779+00:00",
+  "scope": "Immutable tenth-attempt append; shared nine-attempt history is not overwritten.",
+  "previous_nine_history": {
+    "file": "reports/repair_2026-10-20/production_e2e_attempt_history_v2_3.json",
+    "sha256": "15ba0c3beebc9b57fe2dcac8d9b76798f948bb7b85a64e449fe6fe93bdc7e0d9"
+  },
+  "previous_attempts_canonical_sha256": "11d86ea6a1202a7e612986b6f3923a7b55e3c76c83d8618990b98f1896f2808f",
+  "previous_attempt_count": 9,
+  "previous_nine_statuses": [
+    "failed",
+    "failed",
+    "failed",
+    "failed",
+    "failed",
+    "failed",
+    "failed",
+    "failed",
+    "failed"
+  ],
+  "append_only_attempt": {
+    "attempt": 10,
+    "actual_report": {
+      "file": "reports/repair_2026-10-20/production_tenth_full_workflow_v2_3.json",
+      "sha256": "a1c2e21381f4876ba303c775a53e07a48507276d8172a724398b49cb4f3a2841"
+    },
+    "status": "failed",
+    "started_at": "2026-10-21T05:59:26.649339+00:00",
+    "finished_at": "2026-10-21T06:02:46.067651+00:00",
+    "server_pid": 64920,
+    "source_news_id": "90bfbf6adb1183517cbc00ca",
+    "manual_analysis_id": "869b5b7d-6a09-4097-b23f-9a99159ad1fe",
+    "current_live_analysis_id": "98061279-0f33-4a8a-b681-bde26265480b",
+    "manual_result_is_null": true,
+    "current_result_is_null": true,
+    "manual_detail_delivered": false,
+    "manual_english_delivered": false,
+    "actual_manual_calls": 2,
+    "actual_current_calls": 2,
+    "manual_raw_sha256": [
+      "835f1593517ada79f6eddc62b32d217a209a35c18294a8937f4449c817334f79",
+      "f2724706fd925357cb4da7138c08d986067b9a252147afd7dd13a5f8f38aafa9"
+    ],
+    "current_raw_sha256": [
+      "9bbb0c87f89f45d9ec1eb29d8e1ec9cdd275d1e97718af058816b1757e405aab",
+      "d59f8c0a2e5aa0ec6ea239fedd9b5e82591d0ff499ff50f6689670ea16e9de82"
+    ],
+    "interpretation": "The tenth workflow is failed. Manual attempt1 contains a real price-role error plus a capacity-binding false positive; attempt2 has two demonstrated false-positive diagnostics and no additional confirmed P2, with risk/completeness P3 qualifications. Both current-live attempts contain true source errors. No original state is upgraded and no failed result is a forecast class.",
+    "independent_full_review": {
+      "file": "reports/repair_2026-10-20/independent_production_tenth_terminal_full_review_v2_3.json",
+      "sha256": "a96f4612ee2a55c40604ec7c416197baf3fa73b420bc4e14b55768f58e047881"
+    },
+    "failed_stages": [
+      "manual_real_brief",
+      "current_live_forecast_v2"
+    ],
+    "original_preservation_verified_by_workflow": true,
+    "counts_as_successful_end_to_end": false
+  },
+  "resulting_whole_workflow_counts": {
+    "attempt_count": 10,
+    "successful_complete_attempt_count": 0,
+    "failed_complete_attempt_count": 10
+  },
+  "all_prior_nine_entries_untouched": true,
+  "shared_history_overwritten": false,
+  "database_or_model_writes": false,
+  "release_ready": false
+}

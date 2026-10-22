@@ -1,0 +1,318 @@
+{
+  "audit": "independent_bounded_output_and_notice_window_code_review_v2_3",
+  "reviewer_type": "codex_subagent",
+  "reviewer": "/root/final_semantic_audit",
+  "audited_at": "2026-10-20T23:50:10.592401+00:00",
+  "verdict": "no_P2_identified_in_frozen_narrow_change_and_selected_in_memory_boundaries",
+  "source_sha256": {
+    "ttf_news/analysis.py": "1087340777d4a0b10883420d76f8ce142bc53dd7542c8ebc84893e317553a16f",
+    "ttf_news/semantics.py": "3efbab0f772839b2249a544c6c39aa4beb9386c1de9850dfe37a989129139e90",
+    "ttf_news/prompts.py": "0ffe08b9f860ed67e6599392a1d3ff114f8d089cd895103647784ff9b403689d"
+  },
+  "archive_compared": {
+    "file": ".runtime/source-archives/backend-43554/ttf_news/analysis.py",
+    "sha256": "79061b8e132a456fc80fa6f067dc057bdcb681261d68bb1e93769a16069d0d03"
+  },
+  "fixture": {
+    "file": "tests/fixtures/production_detail_bounded_timing_v2_3.json",
+    "sha256": "c035bf96bcb4e6f30d488f50a6b4f5a197fd41a72e57e5ecffeacd88ee28bc48"
+  },
+  "method": "Read exact source diff against backend43554; independently execute pure preparedcontext/schema/timing/flow/bounds checks in memory, with no model/API/DB and no testcode edits. No broad new rule exploration after specified boundaryfix.",
+  "boundary_controls": [
+    {
+      "name": "subject_switch",
+      "text": "Troll未来维护公告已经公布，另一处气田故障尚未导致实际流量损失。",
+      "expected": "reject",
+      "observed": "reject",
+      "passed": true,
+      "error": "analysis.summary:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景"
+    },
+    {
+      "name": "collective_described_aliases",
+      "text": "N2所述维护和N1所述维护均在本窗口之后生效。",
+      "expected": "reject",
+      "observed": "reject",
+      "passed": true,
+      "error": "analysis.summary:N2公告开始2026-10-21T04:00:00+00:00，截至分析时点尚未开始；目标结算窗口内开始；开始时刻不证明实际流量损失；未来于as_of不等于目标窗口之后，须按该N起止和目标窗口分别判断，不改变价格方向"
+    },
+    {
+      "name": "correct_separate_times",
+      "text": "N2在本窗口内开始，N1在本窗口之后生效。",
+      "expected": "allow",
+      "observed": "allow",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "actual_wrong_both_after",
+      "text": "Troll两项计划维护均在本窗口之后生效。",
+      "expected": "reject",
+      "observed": "reject",
+      "passed": true,
+      "error": "analysis.summary:N2公告开始2026-10-21T04:00:00+00:00，截至分析时点尚未开始；目标结算窗口内开始；开始时刻不证明实际流量损失；未来于as_of不等于目标窗口之后，须按该N起止和目标窗口分别判断，不改变价格方向"
+    },
+    {
+      "name": "future_scoped_no_causal_loss",
+      "text": "Troll两项未来维护尚未开始，尚未导致实际流量损失。",
+      "expected": "allow",
+      "observed": "allow",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "global_no_loss",
+      "text": "Troll整体实际流量没有损失。",
+      "expected": "reject",
+      "observed": "reject",
+      "passed": true,
+      "error": "analysis.summary:输入未提供可验证的实际流量状态，不能把缺失资料写成温和/稳定/无损失的事实；请明确缺失或使用条件情景"
+    },
+    {
+      "name": "CJK_adjacent_N2",
+      "text": "N2均在本窗口之后生效。",
+      "expected": "reject",
+      "observed": "reject",
+      "passed": true,
+      "error": "analysis.summary:N2公告开始2026-10-21T04:00:00+00:00，截至分析时点尚未开始；目标结算窗口内开始；开始时刻不证明实际流量损失；未来于as_of不等于目标窗口之后，须按该N起止和目标窗口分别判断，不改变价格方向"
+    },
+    {
+      "name": "end_after_window_is_true",
+      "text": "[N2]维护在本窗口之后结束。",
+      "expected": "allow",
+      "observed": "allow",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "hypothetical_timing",
+      "text": "若[N2]改期至本窗口之后才开始，则须重新判断。",
+      "expected": "allow",
+      "observed": "allow",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "negated_wrong_time",
+      "text": "[N2]不能认定在本窗口之后生效。",
+      "expected": "allow",
+      "observed": "allow",
+      "passed": true,
+      "error": null
+    }
+  ],
+  "brief_contract_checks": [
+    {
+      "case": "supply_loss_40",
+      "same_input": true,
+      "same_system": true,
+      "same_budget": true,
+      "schema_only_adds_risk_limit_unique": true
+    },
+    {
+      "case": "supply_restore_40",
+      "same_input": true,
+      "same_system": true,
+      "same_budget": true,
+      "schema_only_adds_risk_limit_unique": true
+    },
+    {
+      "case": "weak_exploration_no_quote",
+      "same_input": true,
+      "same_system": true,
+      "same_budget": true,
+      "schema_only_adds_risk_limit_unique": true
+    },
+    {
+      "case": "warm_heating_demand",
+      "same_input": true,
+      "same_system": true,
+      "same_budget": true,
+      "schema_only_adds_risk_limit_unique": true
+    },
+    {
+      "case": "cold_heating_demand",
+      "same_input": true,
+      "same_system": true,
+      "same_budget": true,
+      "schema_only_adds_risk_limit_unique": true
+    },
+    {
+      "case": "negated_outage",
+      "same_input": true,
+      "same_system": true,
+      "same_budget": true,
+      "schema_only_adds_risk_limit_unique": true
+    },
+    {
+      "case": "cumulative_shock_then_weak",
+      "same_input": true,
+      "same_system": true,
+      "same_budget": true,
+      "schema_only_adds_risk_limit_unique": true
+    },
+    {
+      "case": "weak_news_observed_market_up",
+      "same_input": true,
+      "same_system": true,
+      "same_budget": true,
+      "schema_only_adds_risk_limit_unique": true
+    },
+    {
+      "case": "supplied_conflicting_mechanisms",
+      "same_input": true,
+      "same_system": true,
+      "same_budget": true,
+      "schema_only_adds_risk_limit_unique": true
+    },
+    {
+      "case": "future_planned_notice",
+      "same_input": true,
+      "same_system": true,
+      "same_budget": true,
+      "schema_only_adds_risk_limit_unique": true
+    },
+    {
+      "case": "dismissed_notice_not_verified_recovery",
+      "same_input": true,
+      "same_system": true,
+      "same_budget": true,
+      "schema_only_adds_risk_limit_unique": true
+    },
+    {
+      "case": "real_nyhamna",
+      "same_input": true,
+      "same_system": true,
+      "same_budget": true,
+      "schema_only_adds_risk_limit_unique": true
+    },
+    {
+      "case": "real_eni",
+      "same_input": true,
+      "same_system": true,
+      "same_budget": true,
+      "schema_only_adds_risk_limit_unique": true
+    },
+    {
+      "case": "supply_loss_40_with_flat_baseline",
+      "same_input": true,
+      "same_system": true,
+      "same_budget": true,
+      "schema_only_adds_risk_limit_unique": true
+    },
+    {
+      "case": "supply_restore_40_with_flat_baseline",
+      "same_input": true,
+      "same_system": true,
+      "same_budget": true,
+      "schema_only_adds_risk_limit_unique": true
+    },
+    {
+      "case": "anchor_real_manual_missing_prevday",
+      "same_input": true,
+      "same_system": true,
+      "same_budget": true,
+      "schema_only_adds_risk_limit_unique": true
+    },
+    {
+      "case": "anchor_gap_supply_loss_40",
+      "same_input": true,
+      "same_system": true,
+      "same_budget": true,
+      "schema_only_adds_risk_limit_unique": true
+    },
+    {
+      "case": "anchor_gap_supply_restore_40",
+      "same_input": true,
+      "same_system": true,
+      "same_budget": true,
+      "schema_only_adds_risk_limit_unique": true
+    },
+    {
+      "case": "anchor_legal_prevday_weak_market_up",
+      "same_input": true,
+      "same_system": true,
+      "same_budget": true,
+      "schema_only_adds_risk_limit_unique": true
+    },
+    {
+      "case": "real_future_well_b1",
+      "same_input": true,
+      "same_system": true,
+      "same_budget": true,
+      "schema_only_adds_risk_limit_unique": true
+    }
+  ],
+  "bounded_output_controls": [
+    {
+      "name": "raw2distinct",
+      "expected": "allow",
+      "observed": "allow",
+      "passed": true,
+      "input_not_mutated": true,
+      "error": null
+    },
+    {
+      "name": "raw3risks",
+      "expected": "reject",
+      "observed": "reject",
+      "passed": true,
+      "input_not_mutated": true,
+      "error": "risk_flags:最多2项，请只保留有依据且不同的要点，不重复填充"
+    },
+    {
+      "name": "rawduplicate",
+      "expected": "reject",
+      "observed": "reject",
+      "passed": true,
+      "input_not_mutated": true,
+      "error": "risk_flags:不得重复相同条目，请只保留不同的事实或风险"
+    },
+    {
+      "name": "detail3paragraphs",
+      "expected": "reject",
+      "observed": "reject",
+      "passed": true,
+      "input_not_mutated": true,
+      "error": "detail.new_facts:最多2项，请只保留有依据且不同的要点，不重复填充"
+    },
+    {
+      "name": "three_source_refs_allowed",
+      "expected": "allow",
+      "observed": "allow",
+      "passed": true,
+      "input_not_mutated": true,
+      "error": null
+    }
+  ],
+  "detail_checks": {
+    "all_two_operator_fact_rows_retained": true,
+    "N2_future_asof_but_inside_target_window": true,
+    "N1_future_outside_target_window": true,
+    "references_allow_all_three_sources": true,
+    "raw_and_native_risk_limit_2_unique": true,
+    "detail_paragraph_arrays_limit_2_and_280_chars": true,
+    "full_five_news_directions_unchanged": true,
+    "detail_budget": {
+      "context_window": 16384,
+      "input_token_ceiling": 11776,
+      "output_token_limit": 4096,
+      "input_token_estimate": 11248
+    },
+    "budget_margin_at_least_512": true
+  },
+  "code_assessment": [
+    "Rawrepetition/bounds are rejected, notsilentlytruncated; deterministicbackendrisk fields may stillappend independently after rawvalidation.",
+    "Briefprepared input/system/budget unchanged onall20 fixedcases; schema intentionallychanges onlyrawriskmaxItems/unique, so newactual20 is required and oldgenerations are not rebranded.",
+    "Detailonly adds boundedparagraphs and two-axis timing while retaining allNfactcards and16references. Asofnotstarted doesnot imply aftertargetcutoff, and UTCstart/end remain sourcefacts.",
+    "Future-specific negativecausal exception stillrequires allboundedsources start>asof and excludes broadglobalzero or a differentpostcommasubject.",
+    "Targetwindow timing gate retains negation/hypothetical conditions, distinguishes endfromstart and binds explicit collectiveNclaims in onecommaclause. No forcedprice/newsdirection or classratio wasadded."
+  ],
+  "material_known_logic_errors": [],
+  "remaining_limit": "Only boundedcode/input integrity and selected purecontrols certified. Newreal20+1 and productionE2E must verify actualmodeldelivery and fullsource-consistent reasoning. Oldwholefailedruns remain failed, including fourthdetail originalwindowerror.",
+  "no_model_calls_by_reviewer": true,
+  "no_network_calls": true,
+  "no_database_access": true,
+  "no_core_edits": true,
+  "no_pytest_run": true,
+  "in_memory_controls_executed": true
+}

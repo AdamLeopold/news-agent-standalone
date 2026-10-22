@@ -1,0 +1,10 @@
+{
+  "scope": "Strict model-body validation excludes only API transport _meta, then validates that metadata separately. Every other unexpected model key remains rejected; original API response remains unchanged.",
+  "meaning": "Harness transport correction only; fifth current prediction still has genuine energy-unit defect and its append-only invalid review remains. No failed production attempt upgraded.",
+  "self_tests": 12,
+  "files": {
+    ".runtime/live-repair-smoke.py": "11df1178c30f14cdbf87487710ea49a409a63b5ab77d9b4ca8a9023e64501f0f",
+    ".runtime/source-archives/live-repair-smoke-before-api-meta-82659ddc55673b0bfd6ef48fd68d316bb587a2c6a97b1c6d18d05aaeab431d7d.py": "82659ddc55673b0bfd6ef48fd68d316bb587a2c6a97b1c6d18d05aaeab431d7d",
+    "reports/repair_2026-10-20/production-api-metadata-harness-self-tests-rerun.log": "17c0555d0c75084f4958672fa3b366e655d553e0761d101b4d22a1125d6fabae"
+  }
+}

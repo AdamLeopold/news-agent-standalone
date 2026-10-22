@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-10-21T04:56:49.879703+00:00",
+  "status": "confirmed_invalid_pending_root_preflight_and_application",
+  "scope": "Append-only review metadata for one already completed ninth current-live brief with a prior-reference/current-quote temporal role error; preserve original prediction, input and failed workflow.",
+  "evidence": {
+    "file": "reports/repair_2026-10-20/independent_production_ninth_current_live_initial_review_v2_3.json",
+    "sha256": "6e87e04322f3c9b363025f57d84cc1c815256e1f82e577d02cf7fa28752a3562"
+  },
+  "actual_record": {
+    "file": "reports/repair_2026-10-20/production_ninth_current_live_actual_v2_3.json",
+    "sha256": "4b8231a5e400b83a2cd872e9294bfe58c2b6b0c7871d6952c56d986b65272ab0"
+  },
+  "pending_reviews": [
+    {
+      "analysis_id": "ff3fdde7-4f67-487b-92ea-b612da62941a",
+      "protected_hashes": {
+        "input_snapshot": "a4c314b618e6be0c4bdf4ce76c9138a86439489ee2ca3da997452593a34c3e0f",
+        "result": "db15a405c83c724c170064d65d6f54473ee75f5fdd207b72f367fcaaa6a9183c",
+        "detail_result": null
+      },
+      "confirmed_invalid": true,
+      "review": {
+        "review_id": "observed-price-role-ff3fdde7-4f67-487b-92ea-b612da62941a-brief-v1",
+        "status": "invalid",
+        "reason_code": "v2_3_observed_price_baseline_temporal_role",
+        "affected_parts": [
+          "brief"
+        ],
+        "reviewer": "independent_production_ninth_current_live_initial_review",
+        "message_zh": "简报把今日盘中87.73与前一交易日参考85.062的比较，写成“前一交易日参考价从85.062升至87.73”，并以“前一交易日参考价上涨”推导。原预测保留，这条简报未通过报价时间角色复核。",
+        "message_en": "The brief describes the move from the previous-day reference85.062 to the current intraday quote87.73 as a rise in the previous-day reference itself. The original prediction is preserved; this brief fails the quote time-role evidence review."
+      }
+    }
+  ],
+  "preflight_required": "Hashes use existing Store.dumps serialization of captured API objects. Root must perform normal exact DB-hash preflight before appending metadata. This file does not access or write the DB, change canonical input/result, or mark the workflow successful."
+}

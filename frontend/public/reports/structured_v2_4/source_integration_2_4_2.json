@@ -1,0 +1,18 @@
+{
+  "created_at": "2026-10-22T15:43:25.818650+00:00",
+  "scope": "Local source integration while project inference is paused; not a service restart or website deployment.",
+  "files": [
+    {
+      "path": "ttf_news/structured_core.py",
+      "before_sha256": "e85e97d0825b01320b15e33419a283bd7ba1666f48401e78b13f34bbb4e883ab",
+      "after_sha256": "6980cbafddf2d84f7ec51f9cb71660af8ed6e0f6c89d3fc1f11ce9eceb6cd372"
+    },
+    {
+      "path": "ttf_news/structured_analysis.py",
+      "before_sha256": "eded54d937532bc6eef54bb13de8ab316c73ed686edf6626050432ea167daa3a",
+      "after_sha256": "dbf8b58cb162b6406e52c8622f1196b2a5b874d62f58fbe4884dbc80f16c0e80"
+    }
+  ],
+  "candidate_transport_sha256": "b142dc11264d015c8b0dd9e0ff685b42cc3557fd54f1d7770f7e9d7fe562caaa",
+  "transport_changes": "Package import paths only; same messages, parameters and source-evidence contract."
+}

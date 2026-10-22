@@ -1,0 +1,11 @@
+{
+  "at": "2026-10-21T05:46:18.837269+00:00",
+  "first_run_log_sha256": "a2fa0888493915ad602c1d2fd2b635dbe96dc83213d4d034a32807b7a94c1db0",
+  "first_run_xml_sha256": "dc90daa465961c5b26a63a0d6d1ba020c445b6153b1883ca136df056d52793ff",
+  "failure": "New regression test searched parent directories but omitted the current project root; collection StopIteration before any test/model ran.",
+  "fix": "Include D itself before D.parents when locating pyproject.toml",
+  "changed_test_sha256": "57cfb8e07c15b43bc3f46ff2c001ce544178a8a954a3a281a19aba27e3102173",
+  "core_model_source_changed": false,
+  "first_failure_preserved": true,
+  "rerun_separate_files": true
+}

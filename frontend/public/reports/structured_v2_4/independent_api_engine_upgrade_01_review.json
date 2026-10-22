@@ -1,0 +1,47 @@
+{
+  "reviewed_at": "2026-10-22T16:21:54.105130+00:00",
+  "reviewer": "independent structured_review agent",
+  "scope": "Read-only source/input/catalog/plan and actual engine_upgrade brief plus automatically queued English semantic review; transport/preservation checks read from harness evidence. No model/API/service/database action.",
+  "harness_report": "reports/structured_v2_4/api_engine_upgrade_01.json",
+  "harness_report_sha256": "a460d18461212f2a6a19c7949504df84ef02d165c018dd761fa6b2d53d6ee821",
+  "analysis_id": "eea9e279-ea05-4d4f-87c9-0eb46839f30d",
+  "actual_artifact": "reports/structured_v2_4/api_engine_upgrade_01_artifacts/current_live_actual.json",
+  "actual_artifact_sha256": "5090f96b7ff2405d23a3b3e4842fb7f16fdf41cb3e4a5a26f7c23b74d1b452b5",
+  "english_artifact": "reports/structured_v2_4/api_engine_upgrade_01_artifacts/engine_english_actual.json",
+  "english_artifact_sha256": "dedae5863aa3546d76574b712ef408724990e6a5c71c8e3fc2831e5cb8fa2659",
+  "workflow_version": "ttf-structured-reasoning-2.4.4",
+  "overall": "Passed this existing-news engine_upgrade API segment with no confirmed P1/P2 rendered economic or temporal inconsistency; retain one P3 supply-chain-role error. This is not a fresh-news-discovery test or exhaustive normalization correctness.",
+  "actual_model_calls": 3,
+  "automatic_english_additional_calls": 0,
+  "binding_errors": [],
+  "same_catalog_and_plan": true,
+  "english_cjk_fields": [],
+  "catalog_sha256": "73abfc735825c752e81f22399794d31fe6fbc7b7b4d9d4c89ced2f5daa91b7be",
+  "typed_plan_sha256": "91ea110a0b591bcb4170c731a9869cc373198f5770d0892dac7d15d0f2ac8a52",
+  "semantic_checks": [
+    "The stored SPA paragraph is corporate_contract; the expansion paragraph separately supports future_project_development and an old EPC contract. No contract amount becomes new gas output or new final LNG consumption.",
+    "The future expansion mechanism sign is downside. There is no source-derived current production figure or observed European cargo asserted.",
+    "The original source publication at13:00Z belongs to the previous October22 window; analysis16:16Z is for October23. It remains historical/background rather than a freshly discovered shock.",
+    "The required October22 previous-day same-contract price anchor is unavailable. close=null is maintained instead of using the October21 reference as yesterday close.",
+    "Automatic English result is complete English analytical text and retains original direction, numbers, quotes and IDs from the same typed plan; zero extra model calls.",
+    "Historical reference reactions retain state and available_at fields without asserting that they identify the cause of the present market move."
+  ],
+  "p3_findings": [
+    {
+      "fact_id": "F1",
+      "issue": "The selected Sabine Pass liquefaction-expansion paragraph is tagged supply_chain_role=upstream instead of lng_export.",
+      "source_evidence_id": "N0.76e929b3",
+      "actual_region_scope": "region_only",
+      "severity_reason": "For this actual prior-window source, historical_report=true sets the channel to background regardless of role; correcting the role would not change current-window scope, score or displayed decision. The output uses the generic future upstream/export description and does not falsely locate a field in Europe or assert current raw-gas extraction. This remains a real metadata error and is not declared correct because the contribution is zero.",
+      "residual_limit": "Ordinary model normalization can still mislabel fine role metadata; do not claim all fine classifications are ground truth."
+    }
+  ],
+  "fresh_news_discovery_exercised": false,
+  "trigger": "engine_upgrade",
+  "harness_boundary": "The harness reports automatic enqueue, SSE events, queue progression and preservation. This independent agent checked its saved actual output/context rather than independently invoking the live endpoints.",
+  "remaining": [
+    "Collector input metadata/body alternation fix and its actual collector test remain independently owned.",
+    "Final deployed website/API/UI verification is still required before declaring the current site updated.",
+    "Price remains reference; no official settlement scoring or verified trading performance claim."
+  ]
+}

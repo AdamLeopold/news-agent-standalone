@@ -1,0 +1,17 @@
+test_english_chinese_prose_is_rejected (__main__.SelfTests) ... ok
+test_english_numbers_and_enums_are_protected (__main__.SelfTests) ... ok
+test_forecast_accepts_api_metadata_without_mutating_the_response (__main__.SelfTests) ... ok
+test_forecast_still_rejects_an_unexpected_model_body_field (__main__.SelfTests) ... ok
+test_forecast_still_rejects_incompatible_api_metadata (__main__.SelfTests) ... ok
+test_fresh_profile_does_not_accept_an_old_dashboard_record (__main__.SelfTests) ... ok
+test_fresh_profile_live_uses_the_normal_real_news_api (__main__.SelfTests) ... ok
+test_null_has_no_flat_label (__main__.SelfTests) ... ok
+test_real_source_payload_keeps_exact_article_facts (__main__.SelfTests) ... ok
+test_sse_parser_retains_replay_id_and_payload (__main__.SelfTests) ... ok
+test_synthetic_article_rejected (__main__.SelfTests) ... ok
+test_version_update_never_opens_store_under_old_backend (__main__.SelfTests) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.003s
+
+OK

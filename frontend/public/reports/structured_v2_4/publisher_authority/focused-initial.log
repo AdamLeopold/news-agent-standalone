@@ -1,0 +1,74 @@
+................FF................................                       [100%]
+=================================== FAILURES ===================================
+___ test_offshore_broken_rss_redirect_uses_bounded_api_and_preserves_failure ___
+
+tmp_path = PosixPath('[local path]')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x10aa14f10>
+
+    def test_offshore_broken_rss_redirect_uses_bounded_api_and_preserves_failure(tmp_path, monkeypatch):
+        from datetime import datetime, timedelta, timezone
+        now = datetime.now(timezone.utc)
+        previous_success = now - timedelta(hours=4)
+        requests = []
+        def handler(request):
+            requests.append(request.url)
+            if request.url.path == '/feed':
+                if request.url.host == 'offshore.example.org':
+                    return httpx.Response(308, headers={'Location': 'https://www.offshore.example.org/feed'})
+                return httpx.Response(404, text='Unknown domain')
+            return httpx.Response(200, json={'docs': [{'id': 42, 'title': 'LNG supply update after RSS failure', 'slug': 'lng-after-feed-failure',
+                                                       'publishedAt': now.isoformat(), 'updatedAt': None, '_status': 'published',
+                                                       'meta': {'description': 'Source LNG supply summary.'}}],
+                                                   'hasNextPage': False, 'totalDocs': 1})
+        original_client = httpx.AsyncClient
+        monkeypatch.setattr(ingest.httpx, 'AsyncClient', lambda **kwargs: original_client(transport=httpx.MockTransport(handler), follow_redirects=True))
+        monkeypatch.setattr(ingest, 'load_sources', lambda: [{'id': 'offshore_energy', 'name': 'Offshore',
+                                                           'feed_url': 'https://offshore.example.org/feed',
+                                                           'api_url': 'https://offshore.example.org/api/articles'}])
+        store = Store(tmp_path / 'rss-fallback.db')
+        store.set_source_state('offshore_energy', {'last_success_at': previous_success.isoformat(), 'archive_cursor': 29,
+                                                  'historical_pages': 28, 'historical_status': 'ok', 'backfill_completed_at': previous_success.isoformat()})
+        result = asyncio.run(ingest.poll_sources(store))
+        state = store.get_source_state('offshore_energy')
+        assert result['total_created'] == 1 and result['sources'][0]['status'] == 'partial'
+>       assert state['live_transport'] == 'api_fallback' and state['last_success_at']
+E       AssertionError: assert ('api_primary' == 'api_fallback'
+E         
+E         - api_fallback
+E         + api_primary)
+
+tests/test_ingest.py:200: AssertionError
+______ test_offshore_first_start_rss_failure_only_queries_two_recent_days ______
+
+tmp_path = PosixPath('[local path]')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x10aa97d90>
+
+    def test_offshore_first_start_rss_failure_only_queries_two_recent_days(tmp_path, monkeypatch):
+        from datetime import datetime, timedelta, timezone
+        now = datetime.now(timezone.utc)
+        api_calls = []
+        def handler(request):
+            if request.url.path == '/feed':
+                return httpx.Response(503, text='Temporary publisher RSS error')
+            api_calls.append(request.url)
+            return httpx.Response(200, json={'docs': [], 'hasNextPage': False, 'totalDocs': 0})
+        original_client = httpx.AsyncClient
+        monkeypatch.setattr(ingest.httpx, 'AsyncClient', lambda **kwargs: original_client(transport=httpx.MockTransport(handler)))
+        monkeypatch.setattr(ingest, 'load_sources', lambda: [{'id': 'offshore_energy', 'name': 'Offshore',
+                                                           'feed_url': 'https://example.org/feed', 'api_url': 'https://example.org/api/articles'}])
+        store = Store(tmp_path / 'first-rss-failure.db')
+        result = asyncio.run(ingest.poll_sources(store))
+>       assert result['sources'][0]['status'] == 'partial'
+E       AssertionError: assert 'failed' == 'partial'
+E         
+E         - partial
+E         + failed
+
+tests/test_ingest.py:227: AssertionError
+------------------------------ Captured log call -------------------------------
+WARNING  ttf_news.ingest:ingest.py:1017 Source offshore_energy failed: Server error '503 Service Unavailable' for url 'https://example.org/feed'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+=========================== short test summary info ============================
+FAILED tests/test_ingest.py::test_offshore_broken_rss_redirect_uses_bounded_api_and_preserves_failure
+FAILED tests/test_ingest.py::test_offshore_first_start_rss_failure_only_queries_two_recent_days
+2 failed, 48 passed in 11.53s

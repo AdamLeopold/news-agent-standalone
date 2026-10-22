@@ -1,0 +1,113 @@
+......FF..........F.................................                     [100%]
+=================================== FAILURES ===================================
+_ test_api_complete_cursor_survives_partial_rss_success_and_recovers_old_updated_article _
+
+tmp_path = PosixPath('[local path]')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x104db07c0>
+
+    def test_api_complete_cursor_survives_partial_rss_success_and_recovers_old_updated_article(tmp_path,monkeypatch):
+        now=datetime.now(UTC);old_complete=now-timedelta(days=5);published=now-timedelta(days=30)
+        db=Store(tmp_path/'cursor.sqlite3');source={'id':'offshore_energy','name':'Offshore','feed_url':'https://publisher.test/feed','api_url':'https://publisher.test/api/articles'}
+        db.set_source_state('offshore_energy',{'last_complete_api_success_at':old_complete.isoformat(),'last_success_at':now.isoformat()})
+        api_calls=[];attempts=0
+        def handler(request):
+            nonlocal attempts
+            if request.url.path=='/api/articles':
+                attempts+=1;api_calls.append(request.url)
+                if attempts<=2:return httpx.Response(503,text='API outage; RSS discovery still available')
+                return httpx.Response(200,json={'docs':[{'id':1,'title':'Old gas article with genuine body revision','slug':'old-gas','publishedAt':published.isoformat(),'updatedAt':now.isoformat(),'_status':'published','meta':{'description':'A genuine new source body observation.'},'content':[{'type':'paragraph','children':[{'type':'text','text':'European actual gas supply increased by 40 mcm/d after a confirmed restart.'}]}]}],'hasNextPage':False,'totalDocs':1})
+            return httpx.Response(200,text='<rss><channel></channel></rss>')
+        original=httpx.AsyncClient
+        monkeypatch.setattr(ingest,'load_sources',lambda:[source])
+        monkeypatch.setattr(ingest.httpx,'AsyncClient',lambda **kwargs:original(transport=httpx.MockTransport(handler)))
+        async def no_sleep(_):pass
+        monkeypatch.setattr(ingest.asyncio,'sleep',no_sleep)
+        for _ in range(2):
+            result=asyncio.run(ingest.poll_sources(db));state=db.get_source_state('offshore_energy')
+>           assert result['sources'][0]['status']=='partial' and state['last_api_error']
+E           AssertionError: assert ('failed' == 'partial'
+E             
+E             - partial
+E             + failed)
+
+.runtime/publisher-extraction-proposal/recovery-v2/tests/test_publisher_authority.py:108: AssertionError
+------------------------------ Captured log call -------------------------------
+WARNING  ttf_news.ingest:ingest.py:1048 Source offshore_energy failed: RSS/Atom response contains no entries
+___ test_failed_initial_api_cursor_latches_and_bad_date_rows_do_not_advance ____
+
+tmp_path = PosixPath('[local path]')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x104db3c70>
+
+    def test_failed_initial_api_cursor_latches_and_bad_date_rows_do_not_advance(tmp_path,monkeypatch):
+        now=datetime.now(UTC);db=Store(tmp_path/'invalid-slice.sqlite3')
+        source={'id':'offshore_energy','name':'Offshore','feed_url':'https://publisher.test/feed','api_url':'https://publisher.test/api/articles'}
+        db.set_source_state('offshore_energy',{'api_recovery_from':(now-timedelta(days=8)).date().isoformat(),'last_success_at':now.isoformat()})
+        calls=[]
+        def handler(request):
+            if request.url.path=='/api/articles':
+                calls.append(request.url)
+                return httpx.Response(200,json={'docs':[{'id':1,'title':'Old gas report outside both filter arms','slug':'old-gas','publishedAt':(now-timedelta(days=30)).isoformat(),'updatedAt':(now-timedelta(days=20)).isoformat(),'_status':'published','meta':{'description':'Not a valid incremental result.'}}],'hasNextPage':False})
+            return httpx.Response(200,text='<rss><channel></channel></rss>')
+        original=httpx.AsyncClient
+        monkeypatch.setattr(ingest,'load_sources',lambda:[source]);monkeypatch.setattr(ingest.httpx,'AsyncClient',lambda **kwargs:original(transport=httpx.MockTransport(handler)))
+        async def no_sleep(_):pass
+        monkeypatch.setattr(ingest.asyncio,'sleep',no_sleep)
+        result=asyncio.run(ingest.poll_sources(db));state=db.get_source_state('offshore_energy')
+>       assert result['sources'][0]['status']=='partial' and state['last_api_error']
+E       AssertionError: assert ('failed' == 'partial'
+E         
+E         - partial
+E         + failed)
+
+.runtime/publisher-extraction-proposal/recovery-v2/tests/test_publisher_authority.py:137: AssertionError
+------------------------------ Captured log call -------------------------------
+WARNING  ttf_news.ingest:ingest.py:1048 Source offshore_energy failed: RSS/Atom response contains no entries
+___ test_offshore_broken_rss_redirect_uses_bounded_api_and_preserves_failure ___
+
+tmp_path = PosixPath('[local path]')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x104e0b550>
+
+    def test_offshore_broken_rss_redirect_uses_bounded_api_and_preserves_failure(tmp_path, monkeypatch):
+        from datetime import datetime, timedelta, timezone
+        now = datetime.now(timezone.utc)
+        previous_success = now - timedelta(hours=4)
+        requests = []
+        def handler(request):
+            requests.append(request.url)
+            if request.url.path == '/feed':
+                if request.url.host == 'offshore.example.org':
+                    return httpx.Response(308, headers={'Location': 'https://www.offshore.example.org/feed'})
+                return httpx.Response(404, text='Unknown domain')
+            return httpx.Response(200, json={'docs': [{'id': 42, 'title': 'LNG supply update after RSS failure', 'slug': 'lng-after-feed-failure',
+                                                       'publishedAt': now.isoformat(), 'updatedAt': None, '_status': 'published',
+                                                       'meta': {'description': 'Source LNG supply summary.'}}],
+                                                   'hasNextPage': False, 'totalDocs': 1})
+        original_client = httpx.AsyncClient
+        monkeypatch.setattr(ingest.httpx, 'AsyncClient', lambda **kwargs: original_client(transport=httpx.MockTransport(handler), follow_redirects=True))
+        monkeypatch.setattr(ingest, 'load_sources', lambda: [{'id': 'offshore_energy', 'name': 'Offshore',
+                                                           'feed_url': 'https://offshore.example.org/feed',
+                                                           'api_url': 'https://offshore.example.org/api/articles'}])
+        store = Store(tmp_path / 'rss-fallback.db')
+        store.set_source_state('offshore_energy', {'last_success_at': previous_success.isoformat(), 'archive_cursor': 29,
+                                                  'historical_pages': 28, 'historical_status': 'ok', 'backfill_completed_at': previous_success.isoformat()})
+        result = asyncio.run(ingest.poll_sources(store))
+        state = store.get_source_state('offshore_energy')
+        assert result['total_created'] == 1 and result['sources'][0]['status'] == 'partial'
+        assert state['live_transport'] == 'api_primary' and state['last_success_at']
+        assert state['failures'] and 'www.offshore.example.org/feed' in state['failures'][-1]['error']
+        api = next(url for url in requests if url.path == '/api/articles')
+        expected_start = (previous_success - timedelta(days=1)).date().isoformat() + 'T00:00:00.000Z'
+>       assert api.params['where[and][0][or][0][publishedAt][greater_than_equal]'] == expected_start
+E       AssertionError: assert '2026-10-20T00:00:00.000Z' == '2026-10-21T00:00:00.000Z'
+E         
+E         - 2026-10-21T00:00:00.000Z
+E         ?          ^
+E         + 2026-10-20T00:00:00.000Z
+E         ?          ^
+
+.runtime/publisher-extraction-proposal/recovery-v2/tests/test_ingest.py:204: AssertionError
+=========================== short test summary info ============================
+FAILED .runtime/publisher-extraction-proposal/recovery-v2/tests/test_publisher_authority.py::test_api_complete_cursor_survives_partial_rss_success_and_recovers_old_updated_article
+FAILED .runtime/publisher-extraction-proposal/recovery-v2/tests/test_publisher_authority.py::test_failed_initial_api_cursor_latches_and_bad_date_rows_do_not_advance
+FAILED .runtime/publisher-extraction-proposal/recovery-v2/tests/test_ingest.py::test_offshore_broken_rss_redirect_uses_bounded_api_and_preserves_failure
+3 failed, 49 passed in 11.46s

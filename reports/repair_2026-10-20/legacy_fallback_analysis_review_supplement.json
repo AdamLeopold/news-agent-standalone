@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-10-20T20:27:12.273317+00:00",
+  "status": "confirmed_invalid_pending_application",
+  "production_reviews_applied": false,
+  "scope": "Only the individually reviewed 1.8 dashboard fallback record; no general invalidation of legacy results.",
+  "original_review_manifest": "post_restart_analysis_review.json",
+  "original_review_manifest_sha256": "b64dfa38bace01079e618959ab9f0f4b65b38eb9714f845d1dab823beb7b00c1",
+  "confirmed_record": {
+    "analysis_id": "91e13e0e-ee1c-458e-ade4-26f2f2930be3",
+    "prompt_version": "ttf-news-v6-standalone-1.8",
+    "created_at": "2026-10-20T15:15:03.089124+00:00",
+    "as_of": "2026-10-20T15:15:02.586785+00:00",
+    "target_trade_date": "2026-10-21",
+    "required_previous_trade_date": "2026-10-20",
+    "provided_price_date": "2026-10-19",
+    "intraday_observed_at": "2026-10-20T15:04:00+00:00",
+    "close_forecast": {
+      "direction": "flat",
+      "confidence": 0.4,
+      "summary": "基于当前无直接欧洲供需冲击，预计TTF结算价相对前一结算价基本维持。",
+      "basis": "无欧洲供应中断或LNG流入变化，价格受限于历史波动与季节性需求。",
+      "extreme_move_risk": "缺乏直接欧洲供需冲击，极端波动风险低。"
+    },
+    "news_impact_direction": "flat",
+    "news_impact_reviewed_invalid": false,
+    "review_scope": "Closing baseline and inference only; original weak-news impact is not relabelled."
+  },
+  "pending_reviews": [
+    {
+      "analysis_id": "91e13e0e-ee1c-458e-ade4-26f2f2930be3",
+      "protected_hashes": {
+        "input_snapshot": "3014e152ec52d3c743b476be14125ba7960a8050a106aee3ad990f39eb23be3e",
+        "result": "9c484dd7216fc04b1c429c28ebb54ab9be555df297828ead54113936024b46d7",
+        "detail_result": null
+      },
+      "review": {
+        "review_id": "price-baseline-91e13e0e-ee1c-458e-ade4-26f2f2930be3-brief-v1",
+        "status": "invalid",
+        "reason_code": "price_baseline_review_failed",
+        "affected_parts": [
+          "brief"
+        ],
+        "reviewer": "local_source_time_review",
+        "message_zh": "目标交易日为2026-10-21，输入缺少2026-10-20同合约日价；原分析在未建立前结算基准时，由“无直接欧洲供需冲击”直接判定收盘基本维持，该收盘判断不成立。",
+        "message_en": "The target trade date is 2026-10-21, but the same-contract daily reference for 2026-10-20 is missing. The original analysis inferred a broadly flat close from the absence of a direct European supply-demand shock without a valid previous-session baseline; that closing outlook is invalid."
+      }
+    }
+  ],
+  "canonical_records_modified": false,
+  "application_command": "python scripts/apply-analysis-reviews.py --manifest reports/repair_2026-10-20/legacy_fallback_analysis_review_supplement.json --apply"
+}
